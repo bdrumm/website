@@ -1,0 +1,13 @@
+{
+ "name":"parametric-space-checkout",
+ "main":"worker.mjs",
+ "compatibility_date":"2026-09-08",
+ "workers_dev":true,
+ "vars":{
+  "SITE_URL":"https://parametric.space",
+  "ALLOWED_ORIGINS":"https://parametric.space,https://www.parametric.space",
+  "LIVE_CHECKOUT_ENABLED":"false",
+  "PRICE_CATALOG_JSON":"{}"
+ },
+ "ratelimits":[{"name":"CHECKOUT_RATE_LIMITER","namespace_id":"1002","simple":{"limit":10,"period":60}}]
+}
