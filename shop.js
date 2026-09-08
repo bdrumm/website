@@ -22,8 +22,7 @@ function detail(){const p=projects.find(p=>p.id===new URLSearchParams(location.s
  if(p.modelUrl){
   content.classList.add('has-model');
   const viewer=el('section',undefined,'model-viewer');viewer.setAttribute('aria-label',p.title+' interactive 3D concept');viewer.append(el('span','001 / PHOTO → FORM','section-number'));content.append(viewer);
-  import('./assets/model-viewer.js').then(({mountModelViewer})=>mountModelViewer(viewer,p.modelUrl)).catch(()=>viewer.append(el('p','The 3D viewer is unavailable. View the reference photo below.')));
-  if(visual){const figure=el('figure',undefined,'project-reference');figure.append(visual,el('figcaption','SOURCE / Original reference photograph'));content.append(figure);}
+  import('./assets/model-viewer.js').then(({mountModelViewer})=>mountModelViewer(viewer,p.modelUrl)).catch(()=>viewer.append(el('p','The 3D viewer is unavailable. Try reloading, or download the model below.')));
  }else if(visual)content.append(visual);
  const info=el('div');for(const paragraph of p.description||[])info.append(el('p',paragraph));
  if(p.available){info.append(el('p',money(p.unitAmount,p.currency),'project-price'));const button=el('button','Add to cart →','send-button');button.type='button';button.addEventListener('click',()=>add(p));info.append(button,link('View cart','cart.html','secondary-button'));}else info.append(el('p','Not currently available to purchase.','muted'));
