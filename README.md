@@ -40,8 +40,6 @@ The homepage uses the 3D PS logo and locally hosted Geist fonts in `assets/`.
 
 ## DNS
 
-`parametric.space` is registered at GoDaddy. The apex points at GitHub Pages
-via four A records (185.199.108–111.153); `www` is a CNAME to
-`bdrumm.github.io` and GitHub redirects it to the apex. Google Workspace MX
-and SPF/DMARC records are untouched — changing the A records does not affect
-email.
+GitHub Pages is configured for `parametric.space`, with a valid certificate and HTTPS enforced. However, the live apex A records verified on 2026-09-08 were `76.223.105.230` and `13.248.243.5`, and the domain served the GoDaddy Website Builder site. `www` is a CNAME to `bdrumm.github.io` and redirects to the apex. The GitHub Pages origin was separately verified to serve the updated Parametric Space site.
+
+The apex DNS needs to be pointed at GitHub Pages through the domain's DNS provider. Preserve email-related MX, TXT, SPF, DKIM, and DMARC records. No DNS settings were changed in this update.
