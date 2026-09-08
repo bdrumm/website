@@ -110,34 +110,35 @@
 
 .site-nav{display:flex;gap:24px;align-items:center;font-size:15px}.site-nav a,footer a{color:inherit;text-decoration:none}.site-nav a:hover{color:var(--primary)}[data-cart-count]{display:inline-block;background:#293321;color:var(--primary);padding:2px 7px;border-radius:4px;margin-left:5px}.shop-main{display:block;min-height:calc(100svh - 191px);padding:64px 0 80px}.shop-heading{margin-bottom:48px}.shop-heading h1{font-size:clamp(48px,7vw,96px);line-height:1.05;margin:22px 0;letter-spacing:-.05em}.shop-heading p,.project-card p,.empty-state p,.project-detail p{color:#abb5ac;font-size:17px;line-height:1.65}.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}.project-card{border-top:1px solid var(--border);padding-top:24px}.project-card h2{font-size:26px}.project-image{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:4px;margin-bottom:24px}.secondary-button{display:inline-block;color:var(--primary);text-decoration:none;margin:18px 22px 0 0;font-size:16px}.secondary-button:hover{text-decoration:underline}.empty-state{border:1px solid var(--border);padding:32px;max-width:800px}.empty-state h2{margin-top:0}.project-detail{display:grid;grid-template-columns:1fr 1fr;gap:48px}.project-detail:not(:has(>img)){grid-template-columns:minmax(0,700px)}.project-price{font-size:28px!important;color:var(--foreground)!important}.cart-list{max-width:900px}.cart-row{display:grid;grid-template-columns:1fr auto 120px;gap:24px;align-items:center;border-bottom:1px solid var(--border);padding:24px 0}.cart-row a{font-size:20px;color:var(--foreground)}.quantity-controls{display:flex;align-items:end;gap:20px}.quantity-controls label{font-size:14px}.quantity-controls input{display:block;width:70px;background:var(--card);color:var(--foreground);border:1px solid var(--border);padding:8px;margin-top:8px}.text-button{background:transparent;color:var(--primary);text-decoration:underline;padding:8px 0;cursor:pointer}.cart-summary{display:flex;justify-content:space-between;max-width:900px;font-size:24px;margin-top:32px}.checkout-button{max-width:450px;margin-top:26px}.muted,#shop-status{font-size:15px;color:#abb5ac;line-height:1.6}.shop-main .send-button{max-width:450px}#shop-status{min-height:24px;margin-top:24px}@media(max-width:760px){header{flex-wrap:wrap;padding:16px 0}.site-nav{gap:20px}.project-grid,.project-detail{grid-template-columns:1fr}.cart-row{grid-template-columns:1fr auto}.cart-row>strong{grid-column:2;grid-row:1}.quantity-controls{grid-column:1/-1;grid-row:2}.shop-main{padding-top:38px}.empty-state{padding:24px}}
 
-/* Cosmic direction: dark observatory surfaces, cool light, lime PS signature. */
-:root,.dark{--background:#040611;--foreground:#f0f5ff;--card:#0b1225;--card-foreground:#f0f5ff;--primary:#a9e9ff;--primary-foreground:#071423;--secondary:#16213a;--muted:#111a2e;--muted-foreground:#aab8d3;--accent:#a9e9ff;--border:#809bd42e;--input:#7ba2d33b;--ring:#a9e9ff}
+/* Iridescent palette inspired by coral, mint, and violet printed material. */
+:root,.dark{--background:#120e19;--foreground:#fff4f8;--card:#23192d;--card-foreground:#fff4f8;--primary:#aff5c3;--primary-foreground:#17241b;--secondary:#38253e;--muted:#291e33;--muted-foreground:#c3afca;--accent:#ff9abd;--border:#e6b6ed3d;--input:#bb8cc54f;--ring:#aff5c3}
 body{background-color:var(--background);color:var(--foreground);isolation:isolate}
 .site-shell{position:relative;max-width:1640px}
-header{border-color:#93b7e326;min-height:116px}
-.brand{font-weight:450;letter-spacing:-.7px}.brand-dot{color:#d6fb78}
-.logo-3d{border:1px solid #a9c8ff26;border-radius:14px;background:#111413;padding:5px;margin-right:15px}
-.site-nav{font-family:var(--font-geist-mono),monospace;font-size:14px;letter-spacing:.035em;gap:30px}
-.site-nav a{padding:10px 0}.site-nav a:hover{color:#b9edff}
-[data-cart-count]{background:#a8d9ff14;color:#bcefff;border:1px solid #a8d9ff2b;border-radius:50%;min-width:26px;text-align:center}
+header{border-color:#efc2ec2e;min-height:116px}
+.brand{font-weight:500;letter-spacing:-.7px}.brand-dot{color:#ff9abd}
+.logo-3d{border:1px solid #e6b6ed4d;border-radius:20px;background:#111413;padding:5px;margin-right:15px}
+.site-nav{font-size:15px;gap:12px}.site-nav a{padding:10px 17px;border:1px solid #e6b6ed33;border-radius:100px;background:#28162c60}.site-nav a:hover{background:#b986df30;color:#d9b5ff}
+[data-cart-count]{background:#aff5c3;color:#17241b;border-radius:50%;min-width:25px;text-align:center}
 main{gap:6vw;padding-top:76px;padding-bottom:76px}
-.eyebrow,.section-number{color:#b7d4f5;letter-spacing:.17em;font-size:12px}
-.eyebrow>span{background:#bdedff;box-shadow:0 0 16px #84d7ff,0 0 0 5px #84d7ff0b}
-h1{font-weight:350;letter-spacing:-.065em;text-shadow:0 0 65px #94bdff24;line-height:.96}
-h1 .accent{color:#a9e9ff;text-shadow:0 0 32px #7cd6ff66}
-.intro-copy{color:#b7c5dc;font-size:18px}.coordinate{color:#a0b7d0;font-size:12px;letter-spacing:.14em;margin-top:82px}.coordinate>div{background:linear-gradient(90deg,#8cd9ff80,#8cd9ff10)}
-.contact{border:1px solid #99c8ff30;border-radius:16px;padding:32px;max-width:470px;background:#07101edb;box-shadow:0 24px 70px #0006,inset 0 1px 0 #d5e8ff0c;backdrop-filter:blur(18px)}
-h2{font-weight:400}.contact>p,.form-status{color:#aabbd3}.form-status{font-size:13px}
-.field label{color:#d3dff2}.field input,.field textarea{background:#0209169c;border:1px solid #739ac33d;border-radius:7px;color:#eff7ff}.field input::placeholder,.field textarea::placeholder{color:#92a4bf}
-.field input:focus-visible,.field textarea:focus-visible{outline-color:#b3eaff;border-color:#b3eaff}
-.send-button{background:#baeaff;color:#08162b;border-radius:7px;font-weight:550;box-shadow:0 4px 24px #67c8ff12;transition:background .18s,box-shadow .18s}
-.send-button:hover{background:#d6f3ff;box-shadow:0 4px 30px #67c8ff26}.send-button:disabled{box-shadow:none;cursor:not-allowed}
-footer{color:#9dafc9;border-color:#93b7e326}footer .accent{color:#b9e7ff}
-.shop-heading h1{font-weight:350}.shop-heading p,.project-card p,.empty-state p,.project-detail p,.muted,#shop-status{color:#b2c3dc}
-.empty-state,.project-card{background:#07101edb;border:1px solid #99c8ff30;border-radius:12px;padding:28px;backdrop-filter:blur(16px)}
-.cart-list{background:#07101eed;border:1px solid #99c8ff30;border-radius:12px;padding:0 26px}.cart-row:last-child{border-bottom:0}.cart-summary{padding:0 4px}.quantity-controls input{border-radius:6px}
-@media(max-width:760px){header{min-height:92px}.site-nav{gap:22px}main{padding:50px 0;gap:46px}.contact{padding:26px;max-width:none}.coordinate{margin-top:48px}.shop-main{padding-top:40px}.cart-list{padding:0 18px}.logo-3d{width:58px;height:58px}.eyebrow{font-size:11px;letter-spacing:.1em}}
+.eyebrow,.section-number{color:#e2baff;letter-spacing:.13em;font-size:12px}.eyebrow>span{background:#aff5c3;box-shadow:0 0 16px #aff5c377,0 0 0 5px #aff5c314}
+h1{font-weight:450;letter-spacing:-.07em;line-height:.96;text-shadow:0 8px 44px #130c2466}
+h1 .accent{color:#aff5c3;text-shadow:0 0 30px #b0ffbd44}
+.intro h1{color:#ffd2e4}.intro-copy{color:#eed7e9;font-size:18px;text-shadow:0 2px 14px #130c24}
+.coordinate{color:#d4b6dd;font-size:12px;letter-spacing:.12em;margin-top:82px}.coordinate>div{background:linear-gradient(90deg,#ff91b9,#c190ff,#adf5c1)}
+.contact{border:1px solid #edbdf160;border-radius:28px;padding:34px;max-width:470px;background:#201628eb;box-shadow:0 30px 90px #10061866,inset 0 1px 0 #f4ccff1a;backdrop-filter:blur(24px)}
+h2{font-weight:430}.contact>p,.form-status{color:#d0b8d5}.form-status{font-size:13px}
+.field label{color:#f0ddee}.field input,.field textarea{background:#110c1ba8;border:1px solid #b98ac44f;border-radius:12px;color:#fff4f8}.field input::placeholder,.field textarea::placeholder{color:#b69cbd}
+.field input:focus-visible,.field textarea:focus-visible{outline-color:#aff5c3;border-color:#aff5c3}
+.send-button{background:linear-gradient(110deg,#adf5c1,#d8f3b4 65%,#f2c7c1);color:#19261b;border-radius:100px;font-weight:600;box-shadow:0 5px 26px #b2f4c00c;padding:16px 22px;transition:filter .18s,box-shadow .18s}
+.send-button:hover{background:linear-gradient(110deg,#c7ffda,#ecffd0 65%,#ffd8d3);box-shadow:0 7px 30px #b2f4c024}.send-button:disabled{box-shadow:none;cursor:not-allowed}
+footer{color:#c6accd;border-color:#efc2ec2e}footer .accent{color:#ff9abd}
+.shop-heading h1{font-weight:450;color:#ffd2e4}.shop-heading p,.project-card p,.empty-state p,.project-detail p,.muted,#shop-status{color:#d5bedb}
+.empty-state,.project-card{background:#201628ed;border:1px solid #edbdf147;border-radius:24px;padding:30px;backdrop-filter:blur(20px)}
+.project-image{border-radius:16px}.cart-list{background:#201628ed;border:1px solid #edbdf147;border-radius:24px;padding:0 26px}.cart-row:last-child{border-bottom:0}.cart-summary{padding:0 4px}.quantity-controls input{border-radius:10px}
+.secondary-button,.text-button{color:#b4f8c7}
+@media(max-width:760px){header{min-height:92px}.site-nav{gap:10px}.site-nav a{padding:8px 13px}main{padding:50px 0;gap:46px}.contact{padding:26px;max-width:none;border-radius:24px}.coordinate{margin-top:48px}.shop-main{padding-top:40px}.cart-list{padding:0 18px}.logo-3d{width:58px;height:58px}.eyebrow{font-size:11px;letter-spacing:.1em}}
 @media(prefers-reduced-motion:reduce){.send-button{transition:none}}
-body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#03061022,#03061033 48%,#03061099),linear-gradient(0deg,#030610aa,transparent 42%,#03061022),url('assets/cosmos.png') center center/cover no-repeat}
-body[data-page]::before{background:linear-gradient(#03061066,#030610bb),url('assets/cosmos.png') center center/cover no-repeat}
-@media(max-width:760px){body::before{background:linear-gradient(180deg,#03061011,#03061088 70%),url('assets/cosmos.png') 32% top/auto 100svh no-repeat}body[data-page]::before{background:linear-gradient(#03061077,#030610cc),url('assets/cosmos.png') 30% top/auto 100svh no-repeat}}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#160c22aa,#160c2266 48%,#160c2233),linear-gradient(180deg,#160c2233,transparent 50%,#160c2277),url('assets/iridescent.png') center/cover no-repeat}
+body[data-page]::before{background:linear-gradient(#160c2288,#160c22cc),url('assets/iridescent.png') center/cover no-repeat}
+.intro h1{color:#fff1f8;text-shadow:0 4px 40px #170b25aa}
+@media(max-width:760px){body::before{background:linear-gradient(180deg,#160c2288,#160c2255 45%,#160c22bb),url('assets/iridescent.png') 36% top/auto 100svh no-repeat}body[data-page]::before{background:linear-gradient(#160c2299,#160c22dd),url('assets/iridescent.png') 36% top/auto 100svh no-repeat}}
