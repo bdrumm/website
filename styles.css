@@ -149,3 +149,20 @@ footer{border-top:2px solid var(--border)}
 .send-button{border:2px solid var(--border)}
 .cart-row{border-bottom:1px solid var(--border)}
 .cart-row:last-child{border-bottom:0}
+
+/* Sculptural studies: a solid-color stage and an honest source reference. */
+.project-detail.has-model{grid-template-columns:1fr 1fr;gap:32px}
+.model-viewer{grid-column:1/-1;background:var(--mint);border:2px solid var(--border);padding:24px;min-width:0}
+.model-viewer .section-number{padding-bottom:0}
+.model-stage{width:100%;height:clamp(300px,48vw,600px)}
+.model-stage canvas{display:block;width:100%;height:100%;touch-action:none}
+.model-stage canvas:focus-visible,.model-controls button:focus-visible{outline:3px solid var(--foreground);outline-offset:4px}
+.model-controls{display:flex;flex-wrap:wrap;gap:10px}
+.model-controls button{font:inherit;font-size:13px;text-transform:uppercase;border:2px solid var(--border);background:var(--violet);color:var(--foreground);padding:12px 18px;cursor:pointer;border-radius:0}
+.model-controls button:first-child{background:var(--coral)}
+.model-controls button:hover{background:#fff}
+.viewer-status,.project-reference figcaption{font-family:var(--font-geist-mono),monospace;font-size:12px!important}
+.project-reference{margin:0;background:var(--coral);padding:20px;border:2px solid var(--border);align-self:start}
+.project-reference .project-image{margin-bottom:16px;aspect-ratio:auto}
+.project-detail.has-model>div:last-child h2{margin-top:0}
+@media(max-width:760px){.project-detail.has-model{grid-template-columns:1fr}.model-viewer{padding:16px}.model-controls button{padding:10px 12px}.project-reference{padding:16px}}

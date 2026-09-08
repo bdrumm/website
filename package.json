@@ -1,0 +1,31 @@
+{
+  "name": "parametric-space",
+  "version": "1.0.0",
+  "description": "Static site for **Parametric Space**, served by GitHub Pages.",
+  "main": "script.js",
+  "scripts": {
+    "build:model": "node scripts/build-arowana.mjs",
+    "build:viewer": "esbuild src/model-viewer.js --bundle --format=esm --minify --outfile=assets/model-viewer.js",
+    "build": "npm run build:model && npm run build:viewer",
+    "test": "node --test shop-core.test.mjs services/checkout/worker.test.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdrumm/website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/bdrumm/website/issues"
+  },
+  "homepage": "https://github.com/bdrumm/website#readme",
+  "dependencies": {
+    "three": "0.186.0"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  },
+  "private": true
+}

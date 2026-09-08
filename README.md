@@ -50,3 +50,9 @@ Tests: `node --test shop-core.test.mjs services/checkout/worker.test.mjs`.
 GitHub Pages is configured for `parametric.space`, with a valid certificate and HTTPS enforced. However, the live apex A records verified on 2026-09-08 were `76.223.105.230` and `13.248.243.5`, and the domain served the GoDaddy Website Builder site. `www` is a CNAME to `bdrumm.github.io` and redirects to the apex. The GitHub Pages origin was separately verified to serve the updated Parametric Space site.
 
 The apex DNS needs to be pointed at GitHub Pages through the domain's DNS provider. Preserve email-related MX, TXT, SPF, DKIM, and DMARC records. No DNS settings were changed in this update.
+
+## Arowana 3D study
+
+`project.html?id=arowana` displays a procedural, photo-inspired GLB model with auto rotation, orbit/zoom controls, reduced-motion support, and the original reference photograph. It is an approximation from one image, not a scan or a manufacturing model. The project is not enabled for purchase.
+
+Run `npm ci` and `npm run build` to regenerate the model and the self-hosted Three.js viewer. Run `npm test` for cart and checkout checks. Generated assets are committed so GitHub Pages needs no build service. The viewer module loads only on model project pages.

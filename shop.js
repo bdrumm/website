@@ -18,9 +18,16 @@ function catalogue(){if(!projects.length){empty('Projects are on their way.','Ch
 }
 function detail(){const p=projects.find(p=>p.id===new URLSearchParams(location.search).get('id'));if(!p){empty('Project not found.','Choose a project from the project list.');root.append(link('All projects →','projects.html','secondary-button'));return;}
  document.title=p.title+' — Parametric Space';document.getElementById('page-heading').textContent=p.title;document.getElementById('page-intro').textContent=p.summary||'';
- const content=el('div',undefined,'project-detail');const visual=image(p);if(visual)content.append(visual);
+ const content=el('div',undefined,'project-detail');const visual=image(p);
+ if(p.modelUrl){
+  content.classList.add('has-model');
+  const viewer=el('section',undefined,'model-viewer');viewer.setAttribute('aria-label',p.title+' interactive 3D concept');viewer.append(el('span','001 / PHOTO → FORM','section-number'));content.append(viewer);
+  import('./assets/model-viewer.js').then(({mountModelViewer})=>mountModelViewer(viewer,p.modelUrl)).catch(()=>viewer.append(el('p','The 3D viewer is unavailable. View the reference photo below.')));
+  if(visual){const figure=el('figure',undefined,'project-reference');figure.append(visual,el('figcaption','SOURCE / Original reference photograph'));content.append(figure);}
+ }else if(visual)content.append(visual);
  const info=el('div');for(const paragraph of p.description||[])info.append(el('p',paragraph));
  if(p.available){info.append(el('p',money(p.unitAmount,p.currency),'project-price'));const button=el('button','Add to cart →','send-button');button.type='button';button.addEventListener('click',()=>add(p));info.append(button,link('View cart','cart.html','secondary-button'));}else info.append(el('p','Not currently available to purchase.','muted'));
+ if(p.modelUrl){info.prepend(el('h2','Photo → form'));info.append(link('Download 3D concept ↗',p.modelUrl,'secondary-button'),link('Enquire about this project →','mailto:info@parametric.space?subject='+encodeURIComponent(p.title+' enquiry'),'secondary-button'));}
  const shop=shopLink(p);if(shop)info.append(shop);content.append(info);root.append(content);
 }
 function renderCart(){root.replaceChildren();if(!cart.length){empty('Your cart is empty.','Explore the projects to find something you like.');root.append(link('Explore projects →','projects.html','secondary-button'));return;}
