@@ -32,7 +32,7 @@ python3 -m http.server 8000
 
 ## Contact form
 
-The contact form is visibly marked coming soon and disabled until the form service is configured. It does not currently send or store messages.
+The contact form is visibly marked coming soon and disabled until the form service is configured. It does not currently send or store messages. Visitors can email info@parametric.space directly. The service implementation and activation steps are in [services/contact](services/contact/README.md); set `contact-config.js` only after live delivery is verified.
 
 ## Design
 
