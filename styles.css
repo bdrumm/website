@@ -103,7 +103,7 @@
   size-adjust: 134.59%;
 }
 /* Solid pigment, exposed structure, oversized type. */
-:root{--font-geist-sans:Geist;--font-geist-mono:"Geist Mono";--background:#b18bea;--foreground:#201329;--primary:#201329;--accent:#201329;--card:#b9efb8;--border:#201329;--coral:#f88d9e;--mint:#b9efb8;--violet:#b18bea}
+:root{--font-geist-sans:Geist;--font-geist-mono:"Geist Mono";--background:#ffffff;--foreground:#201329;--primary:#201329;--accent:#201329;--card:#b9efb8;--border:#201329;--coral:#f88d9e;--mint:#b9efb8;--violet:#b18bea}
 *{box-sizing:border-box}body{margin:0;background:var(--background);color:var(--foreground);font-family:Geist,Arial,sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit}button,input,textarea{font:inherit}button,a,input,textarea{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible{outline:3px dashed currentColor;outline-offset:5px}button:disabled{opacity:.5;cursor:not-allowed}svg{flex-shrink:0}
 .site-shell{max-width:1800px;margin:auto;padding:0 30px}
 header{display:flex;align-items:stretch;justify-content:space-between;min-height:108px;border-bottom:2px solid var(--border);gap:20px}
@@ -128,3 +128,10 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:20px;mi
 @media(min-width:1500px){.intro{min-height:760px}}
 @media(max-width:1050px){.site-shell{padding:0 20px}.intro{padding:28px 24px}.contact{padding:24px}h1{font-size:clamp(64px,8.5vw,100px)}.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){.site-shell{padding:0 16px}header{min-height:92px;flex-wrap:wrap;gap:0;padding-top:15px}.brand{font-size:22px;margin-bottom:15px}.logo-3d{width:54px;height:54px}.site-nav{width:100%;min-height:48px;border-top:2px solid var(--border)}.site-nav a{flex:1;padding:0 16px;justify-content:space-between}main{display:block}.intro{min-height:540px;padding:26px 22px}.intro h1{font-size:clamp(66px,16.5vw,120px);margin-top:48px}.intro-copy{font-size:16px;margin-bottom:30px}.contact{margin:0 0 30px 0;width:100%;border-top:0;padding:26px 22px}.coordinate{gap:12px}.coordinate>span:first-child{font-size:20px}.coordinate>span:last-child{font-size:11px}footer{padding:22px 0;flex-direction:column;align-items:start;gap:12px}.shop-heading{grid-template-columns:1fr}.shop-heading h1{font-size:64px}.shop-heading p{margin:24px 0 0}.project-grid,.project-detail{grid-template-columns:1fr}.cart-row{grid-template-columns:1fr auto}.cart-row>strong{grid-column:2;grid-row:1}.quantity-controls{grid-column:1/-1;grid-row:2}.cart-list{padding:0 18px}.empty-state{padding:24px}}
+
+/* White canvas with distinct blocks of pigment. */
+body{background:#fff}
+.shop-heading{background:var(--violet);border:2px solid var(--border);padding:26px 28px 32px}
+.shop-heading .section-number{background:transparent}
+.cart-summary{background:var(--coral);border:2px solid var(--border);padding:20px 24px}
+@media(max-width:760px){.shop-heading{padding:24px 22px}.cart-summary{padding:18px}}
