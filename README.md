@@ -1,6 +1,6 @@
 # website
 
-Static site for **Company Name**, served by GitHub Pages.
+Static site for **Parametric Space**, served by GitHub Pages.
 
 **Live:** https://parametric.space
 
@@ -30,13 +30,13 @@ python3 -m http.server 8000
 # then open http://localhost:8000
 ```
 
-## Things to replace
+## Contact form
 
-- "Company Name" and the tagline throughout `index.html`
-- `hello@example.com` in the contact section and footer
-- The `<meta name="description">` and `og:` tags in `<head>`
-- Add `og-image.png` (1200×630) to the repo root and reference it with an
-  `og:image` meta tag for link previews
+The contact form is visibly marked coming soon and disabled until the form service is configured. It does not currently send or store messages.
+
+## Design
+
+The homepage uses the 3D PS logo and locally hosted Geist fonts in `assets/`.
 
 ## DNS
 
