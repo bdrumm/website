@@ -2,7 +2,10 @@
 
 Static site for **Company Name**, served by GitHub Pages.
 
-**Live:** https://bdrumm.github.io/website/
+**Live:** https://parametric.space
+
+Served from the `main` branch at the repo root. The `CNAME` file pins the
+custom domain — do not delete it, or Pages reverts to `bdrumm.github.io/website/`.
 
 ## Layout
 
@@ -12,6 +15,7 @@ styles.css    design tokens at the top; change those six colors first
 script.js     footer year + mobile nav toggle; page works without it
 404.html      custom not-found page
 .nojekyll     tells Pages to serve files as-is (no Jekyll build)
+CNAME         pins the custom domain (parametric.space)
 ```
 
 ## Editing
@@ -34,10 +38,10 @@ python3 -m http.server 8000
 - Add `og-image.png` (1200×630) to the repo root and reference it with an
   `og:image` meta tag for link previews
 
-## Custom domain
+## DNS
 
-Add a file named `CNAME` at the repo root containing just the domain
-(e.g. `example.com`), then point DNS at GitHub per
-[their docs](https://docs.github.com/pages/configuring-a-custom-domain-for-your-github-pages-site).
-With a custom domain, change the `/website/` paths in `404.html` and the
-brand/homepage links to plain `/`.
+`parametric.space` is registered at GoDaddy. The apex points at GitHub Pages
+via four A records (185.199.108–111.153); `www` is a CNAME to
+`bdrumm.github.io` and GitHub redirects it to the apex. Google Workspace MX
+and SPF/DMARC records are untouched — changing the A records does not affect
+email.
