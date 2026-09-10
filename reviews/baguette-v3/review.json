@@ -1,10 +1,17 @@
 {
-  "revision": "V3.1 inset hinge engineering prototype",
+  "revision": "V3.2 simple internal hinge engineering prototype",
   "parameters": {
-    "hinge_axis_x": -39.5,
-    "hinge_housing_radius": 26.0,
-    "hinge_radius": 4.6,
-    "pin_radius": 2.0,
+    "hinge_axis_x": -36.0,
+    "hinge_axis_z": 7.0,
+    "hinge_radius": 2.8,
+    "pin_radius": 1.0,
+    "hinge_centers": [
+      -150.0,
+      150.0
+    ],
+    "max_open_angle": 100,
+    "rim_inset": 3.0,
+    "rim_clearance": 0.45,
     "radial_clearance": 0.4,
     "axial_clearance": 0.45,
     "seam_gap": 0.3,
@@ -23,106 +30,106 @@
     "layer_mm": 0.2
   },
   "hinge_axis": [
-    -39.5,
+    -36.0,
     0,
-    0
+    7.0
   ],
   "printables": {
     "segment_A": {
-      "triangles": 24376,
+      "triangles": 37474,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 336955.7771737843,
-      "mass_g_at_1_24": 417.82516369549256,
+      "volume_mm3": 296212.8829193061,
+      "mass_g_at_1_24": 367.3039748199396,
       "components": 2,
       "component_volumes_mm3": [
-        139829.0548599099,
-        197126.72231387446
+        164508.70049401486,
+        131704.18242529122
       ],
       "bounds_mm": [
-        -94.47009414061904,
-        -34.73686562500001,
+        -71.16004642068486,
+        -68.78636291506663,
         0.0,
-        94.47009414061904,
-        34.73686562500001,
-        306.7755509778857
+        71.16004642068486,
+        68.78636291506663,
+        306.7755493164062
       ],
       "size_mm": [
-        188.94018828123808,
-        69.47373125000001,
-        306.7755509778857
+        142.32009284136973,
+        137.57272583013327,
+        306.7755493164062
       ]
     },
     "segment_B": {
-      "triangles": 24596,
+      "triangles": 37262,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 343172.7978788491,
-      "mass_g_at_1_24": 425.53426936977286,
+      "volume_mm3": 301201.4289785703,
+      "mass_g_at_1_24": 373.48977193342716,
       "components": 2,
       "component_volumes_mm3": [
-        139996.7658736678,
-        203176.03200518125
+        133654.25202214133,
+        167547.1769564289
       ],
       "bounds_mm": [
-        -94.41579784825444,
-        -34.73686562500001,
+        -71.08902775054952,
+        -68.75407805308056,
         0.0,
-        94.41579784825444,
-        34.73686562500001,
-        314.7755113407969
+        71.08902775054952,
+        68.75407805308056,
+        314.7755187988281
       ],
       "size_mm": [
-        188.83159569650888,
-        69.47373125000001,
-        314.7755113407969
+        142.17805550109904,
+        137.50815610616112,
+        314.7755187988281
       ]
     },
     "sleeve_base": {
-      "triangles": 240,
+      "triangles": 276,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 21483.00713008171,
-      "mass_g_at_1_24": 26.638928841301322,
+      "volume_mm3": 26825.92263992677,
+      "mass_g_at_1_24": 33.2641440735092,
       "components": 1,
       "component_volumes_mm3": [
-        21483.00713008171
+        26825.92263992677
       ],
       "bounds_mm": [
-        -34.26802585585321,
+        -36.75559762865305,
         -17.997327701747416,
         0.0,
-        34.26802585585321,
+        36.75559762865305,
         17.997327701747416,
         32.0
       ],
       "size_mm": [
-        68.53605171170642,
+        73.5111952573061,
         35.99465540349483,
         32.0
       ]
     },
     "sleeve_lid_1": {
-      "triangles": 116,
+      "triangles": 148,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 2602.7654937383622,
-      "mass_g_at_1_24": 3.227429212235569,
+      "volume_mm3": 4487.887101754149,
+      "mass_g_at_1_24": 5.564980006175144,
       "components": 1,
       "component_volumes_mm3": [
-        2602.7654937383622
+        4487.887101754149
       ],
       "bounds_mm": [
-        -8.952912504335892,
-        -5.949818674472283,
+        -12.554299525862213,
+        -12.1161390542984,
         0.0,
-        8.952912504335892,
-        5.9498186744722865,
+        12.55429952586221,
+        12.1161390542984,
         32.0
       ],
       "size_mm": [
-        17.905825008671783,
-        11.89963734894457,
+        25.108599051724422,
+        24.2322781085968,
         32.0
       ]
     },
@@ -153,113 +160,113 @@
   },
   "parts": {
     "base_A": {
-      "triangles": 13710,
+      "triangles": 27262,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 197126.72231387443,
-      "mass_g_at_1_24": 244.43713566920428,
+      "volume_mm3": 164508.70049401486,
+      "mass_g_at_1_24": 203.99078861257843,
       "components": 1,
       "component_volumes_mm3": [
-        197126.72231387443
-      ],
-      "bounds_mm": [
-        -47.98748457316317,
-        -310.8755509778857,
-        -43.47373125000001,
-        61.800984278321266,
-        -4.100000000000023,
-        25.580342141221045
-      ],
-      "size_mm": [
-        109.78846885148444,
-        306.7755509778857,
-        69.05407339122105
-      ]
-    },
-    "lid_A": {
-      "triangles": 10666,
-      "watertight": true,
-      "consistent_winding": true,
-      "volume_mm3": 139829.05485990987,
-      "mass_g_at_1_24": 173.38802802628823,
-      "components": 1,
-      "component_volumes_mm3": [
-        139829.05485990987
+        164508.70049401486
       ],
       "bounds_mm": [
         -48.01068115234375,
-        -310.8755509778857,
-        -26.0,
-        48.13920400291681,
+        -310.87554931640625,
+        -43.473731994628906,
+        61.80098342895508,
         -4.100000000000023,
-        43.47373125000001
+        9.8
       ],
       "size_mm": [
-        96.14988515526056,
-        306.7755509778857,
-        69.47373125000001
+        109.81166458129883,
+        306.7755493164062,
+        53.2737319946289
+      ]
+    },
+    "lid_A": {
+      "triangles": 10212,
+      "watertight": true,
+      "consistent_winding": true,
+      "volume_mm3": 131704.18242529128,
+      "mass_g_at_1_24": 163.31318620736118,
+      "components": 1,
+      "component_volumes_mm3": [
+        131704.18242529128
+      ],
+      "bounds_mm": [
+        -46.32318115234375,
+        -310.87554931640625,
+        -18.0,
+        48.13920400291681,
+        -4.100000000000023,
+        43.473731994628906
+      ],
+      "size_mm": [
+        94.46238515526056,
+        306.7755493164062,
+        61.473731994628906
       ]
     },
     "base_B": {
-      "triangles": 13678,
+      "triangles": 26744,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 203176.03200518125,
-      "mass_g_at_1_24": 251.93827968642475,
+      "volume_mm3": 167547.17695642894,
+      "mass_g_at_1_24": 207.75849942597188,
       "components": 1,
       "component_volumes_mm3": [
-        203176.03200518125
+        167547.17695642894
       ],
       "bounds_mm": [
-        -48.03653335571289,
+        -48.038475036621094,
         -3.9,
-        -43.47373125000001,
-        61.75795751065016,
-        310.87551134079695,
-        25.562151060316193
+        -43.473731994628906,
+        61.757957458496094,
+        310.8755187988281,
+        9.8
       ],
       "size_mm": [
-        109.79449086636305,
-        314.7755113407969,
-        69.0358823103162
+        109.79643249511719,
+        314.7755187988281,
+        53.2737319946289
       ]
     },
     "lid_B": {
-      "triangles": 10918,
+      "triangles": 10518,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 139996.7658736678,
-      "mass_g_at_1_24": 173.59598968334808,
+      "volume_mm3": 133654.25202214136,
+      "mass_g_at_1_24": 165.7312725074553,
       "components": 1,
       "component_volumes_mm3": [
-        139996.7658736678
+        133654.25202214136
       ],
       "bounds_mm": [
-        -48.038476787507534,
+        -46.350975036621094,
         -3.9,
-        -26.0,
+        -18.0,
         48.07363818585873,
-        310.87551134079695,
-        43.47373125000001
+        310.8755187988281,
+        43.473731994628906
       ],
       "size_mm": [
-        96.11211497336626,
-        314.7755113407969,
-        69.47373125000001
+        94.42461322247982,
+        314.7755187988281,
+        61.473731994628906
       ]
     },
     "sleeve_base": {
-      "triangles": 240,
+      "triangles": 276,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 21483.00713008171,
-      "mass_g_at_1_24": 26.638928841301322,
+      "volume_mm3": 26825.922639926768,
+      "mass_g_at_1_24": 33.26414407350919,
       "components": 1,
       "component_volumes_mm3": [
-        21483.00713008171
+        26825.922639926768
       ],
       "bounds_mm": [
-        -31.733035272626186,
+        -36.70817881822586,
         -20.0,
         -36.694655403494835,
         36.80301643908024,
@@ -267,33 +274,33 @@
         -0.7000000000000028
       ],
       "size_mm": [
-        68.53605171170642,
+        73.5111952573061,
         32.0,
         35.99465540349483
       ]
     },
     "sleeve_lid_1": {
-      "triangles": 116,
+      "triangles": 148,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 2602.7654937383622,
-      "mass_g_at_1_24": 3.227429212235569,
+      "volume_mm3": 4487.887101754149,
+      "mass_g_at_1_24": 5.564980006175144,
       "components": 1,
       "component_volumes_mm3": [
-        2602.7654937383622
+        4487.887101754149
       ],
       "bounds_mm": [
-        -26.4443841444785,
+        -33.64715818753114,
         -20.0,
-        20.832640759652232,
+        8.5,
         -8.538559135806718,
         12.0,
         32.7322781085968
       ],
       "size_mm": [
-        17.905825008671783,
+        25.108599051724422,
         32.0,
-        11.89963734894457
+        24.2322781085968
       ]
     },
     "sleeve_lid_2": {
@@ -405,70 +412,6 @@
     {
       "angle_degrees": 100,
       "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 105,
-      "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 110,
-      "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 115,
-      "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 120,
-      "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 125,
-      "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 130,
-      "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 135,
-      "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 140,
-      "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 145,
-      "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 150,
-      "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 155,
-      "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 160,
-      "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 165,
-      "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 170,
-      "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 175,
-      "released_overlap_mm3": 0.0
-    },
-    {
-      "angle_degrees": 180,
-      "released_overlap_mm3": 0.0
     }
   ],
   "joinery": "Separate keyed internal bonding sleeves; adhesives require material compatibility and physical validation.",
@@ -551,8 +494,8 @@
         "name": "segment_A fits a 300 x 320 x 325 mm envelope including 8 mm brim",
         "passed": true,
         "detail": [
-          188.9401874318719,
-          69.4737319946289,
+          142.32009284136973,
+          137.57272583013327,
           306.7755493164062
         ]
       },
@@ -565,8 +508,8 @@
         "name": "segment_B fits a 300 x 320 x 325 mm envelope including 8 mm brim",
         "passed": true,
         "detail": [
-          188.83159564435482,
-          69.4737319946289,
+          142.17805550109904,
+          137.50815610616112,
           314.7755187988281
         ]
       },
@@ -579,7 +522,7 @@
         "name": "sleeve_base fits a 300 x 320 x 325 mm envelope including 8 mm brim",
         "passed": true,
         "detail": [
-          68.53605171170642,
+          73.5111952573061,
           35.99465540349483,
           32.0
         ]
@@ -593,8 +536,8 @@
         "name": "sleeve_lid_1 fits a 300 x 320 x 325 mm envelope including 8 mm brim",
         "passed": true,
         "detail": [
-          17.905825008671783,
-          11.89963734894457,
+          25.108599051724422,
+          24.2322781085968,
           32.0
         ]
       },
@@ -618,18 +561,18 @@
         "detail": 0.0
       },
       {
-        "name": "released hinge sweep clears 0 to 180 degrees with sleeves installed",
+        "name": "released hinge sweep clears 0 to 100 degrees with sleeves installed",
         "passed": true,
         "detail": {
           "maximum_overlap_mm3": 0.0,
           "angle": 0,
-          "step_degrees": 2
+          "step_degrees": 1
         }
       },
       {
         "name": "62 mm x 600 mm capsule clearance is retained",
         "passed": true,
-        "detail": 1.2554752266562259e-05
+        "detail": 1.726041400061244e-05
       },
       {
         "name": "sleeve_base fits its socket without interference",
@@ -653,107 +596,58 @@
         }
       },
       {
-        "name": "hinge bearings are fully inside the original exterior",
+        "name": "both compact barrels are fully inside the original exterior",
         "passed": true,
         "detail": 0.0
       },
       {
-        "name": "hinge side follows the original exterior without added protrusions",
+        "name": "hinge side has no added exterior structure",
         "passed": true,
         "detail": {
-          "absolute_boolean_residue_mm3": 0.0012414078691325523,
+          "absolute_boolean_residue_mm3": 0.00024634253844979385,
           "tolerance_mm3": 0.05
         }
       },
       {
-        "name": "hinge axis is recessed from the previous revision",
+        "name": "segment A retains printable running clearance",
         "passed": true,
         "detail": {
-          "inward_shift_mm": 4.73847678735865
+          "minimum_gap_mm": 0.3999987153426282
+        }
+      },
+      {
+        "name": "segment B retains printable running clearance",
+        "passed": true,
+        "detail": {
+          "minimum_gap_mm": 0.3999997385986838
         }
       }
     ],
-    "passed": 26,
+    "passed": 27,
     "failed": 0,
     "physical_print_tested": false,
     "continuous_sweep_proven": false
   },
   "slicing": {
     "A": {
+      "input_stl_sha256": "133dba1349a824c7ea212becb670c4cc634a32d5aaa9ac1fcb2ec136bf4e6847",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "15h 10m 50s",
-      "filament_g": 474.86,
+      "estimated_time": "15h 21m 27s",
+      "filament_g": 468.26,
       "max_z_mm": 306.8,
       "supports_enabled": true,
-      "sent_to_printer": false,
-      "input_stl_sha256": "96aaaa6d95e765b8cbd19cf865d3703b5a178d581e960772aa8db2773282c555"
+      "sent_to_printer": false
     },
     "B": {
+      "input_stl_sha256": "b63fcf475d1350b04a32fa1f3b8fe467706ab69cd61cae2018f0a891531972c5",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "15h 32m 25s",
-      "filament_g": 490.43,
+      "estimated_time": "15h 32m 1s",
+      "filament_g": 479.96,
       "max_z_mm": 314.8,
       "supports_enabled": true,
-      "sent_to_printer": false,
-      "input_stl_sha256": "dec43d3bcbb10ff283bc74c138f1dc668b9636275195c8112c4716febe13f2bd"
-    }
-  },
-  "wall_sampling": {
-    "base_A": {
-      "region_minimum_mm": {
-        "hinge trim": 3.1996508977126794,
-        "crust": 1.5283231201363507
-      },
-      "crust_minimum_mm": 1.5283231201363507,
-      "crust_samples": 1113,
-      "samples": 1115,
-      "minimum_mm": 1.5283231201363507,
-      "p05_mm": 2.03937235329384,
-      "median_mm": 3.1247129436880687,
-      "scope": "Normal ray samples of outward radial faces. Crust statistics exclude the hinge trim zone within 1.5 mm of its motion clearance boundary. Hinge-trim and latch-tip samples are reported separately. Sampling omits the end tips, center joint, central parting seam, and small faces. Not a global minimum-wall proof."
-    },
-    "base_B": {
-      "region_minimum_mm": {
-        "hinge trim": 3.2101608540594713,
-        "crust": 1.5283164610694866
-      },
-      "crust_minimum_mm": 1.5283164610694866,
-      "crust_samples": 1155,
-      "samples": 1157,
-      "minimum_mm": 1.5283164610694866,
-      "p05_mm": 2.0113759397195996,
-      "median_mm": 3.1292335244061076,
-      "scope": "Normal ray samples of outward radial faces. Crust statistics exclude the hinge trim zone within 1.5 mm of its motion clearance boundary. Hinge-trim and latch-tip samples are reported separately. Sampling omits the end tips, center joint, central parting seam, and small faces. Not a global minimum-wall proof."
-    },
-    "lid_A": {
-      "region_minimum_mm": {
-        "hinge trim": 0.9966988774201626,
-        "crust": 1.5792674161215958,
-        "latch tongue": 1.3010786263681782
-      },
-      "crust_minimum_mm": 1.5792674161215958,
-      "crust_samples": 1070,
-      "samples": 1128,
-      "minimum_mm": 0.9966988774201626,
-      "p05_mm": 1.8424684894328682,
-      "median_mm": 2.7912892455350367,
-      "scope": "Normal ray samples of outward radial faces. Crust statistics exclude the hinge trim zone within 1.5 mm of its motion clearance boundary. Hinge-trim and latch-tip samples are reported separately. Sampling omits the end tips, center joint, central parting seam, and small faces. Not a global minimum-wall proof."
-    },
-    "lid_B": {
-      "region_minimum_mm": {
-        "hinge trim": 1.1462356126541307,
-        "crust": 1.5791097186509189,
-        "latch tongue": 1.301078799818443
-      },
-      "crust_minimum_mm": 1.5791097186509189,
-      "crust_samples": 1118,
-      "samples": 1176,
-      "minimum_mm": 1.1462356126541307,
-      "p05_mm": 1.858643779075309,
-      "median_mm": 2.809625777981606,
-      "scope": "Normal ray samples of outward radial faces. Crust statistics exclude the hinge trim zone within 1.5 mm of its motion clearance boundary. Hinge-trim and latch-tip samples are reported separately. Sampling omits the end tips, center joint, central parting seam, and small faces. Not a global minimum-wall proof."
+      "sent_to_printer": false
     }
   }
 }
