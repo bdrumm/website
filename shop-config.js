@@ -62,6 +62,16 @@ window.PARAMETRIC_SHOP = {
       ['Make the room respond','Timers, lights and scenes with focused, on-screen confirmations.']
     ],
     modelUrl: 'assets/models/station.glb',
+    available: false  }, {
+    id: 'csi-presence',
+    experience: 'radar',
+    title: 'CSI Presence',
+    section: 'hardware',
+    category: 'HARDWARE / 002',
+    image: 'assets/csi-topology.svg',
+    imageAlt: 'Schematic of eight ESP32 sensing nodes, crossing radio links, and two rooms. An illustrative diagram.',
+    summary: 'Presence across every level. Explore a simulated sensor network across two to four floors.',
+    description: ['Compare six hardware configurations, sensors at multiple heights, independent presence on each floor, and stairwell transitions in a simulated building.'],
     available: false
   }]
 };

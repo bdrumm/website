@@ -140,3 +140,12 @@ Station’s navigation model is generated with `npm run build:home-station`: a r
 The display renders at 1024 × 1024, with gradient voice animation, a thicker brightness arc, and no bottom callout pills or perimeter ticks. Data and interactions are simulated. `npm run build:station-model` rebuilds the device; `npm run build:station-viewer` bundles its viewer. The existing project viewers remain separate. `station.css` is loaded only for the Station route.
 
 The project catalogue renders the individual garage from `assets/models/home/modular-garage.glb` in the shared interactive viewer. It starts from a three-quarter angle and supports rotation, dragging and keyboard controls. The garage detail page retains its full multi-module experience.
+
+
+## CSI Presence — multi-floor sensing demonstration
+
+`project.html?id=csi-presence` presents a simulated sensor network across two to four floors, with independent presence and room holds, sensor heights, global Z coordinates and stairwell transitions. It is linked from the homepage project index and the catalogue. Six hardware presets compare CSI, camera/range hybrid, 3D mmWave, tagged UWB, depth plus radar and optical marker tracking.
+
+The demo is source-reviewed browser code, with synthetic observations and explicit accuracy assumptions. It does not connect to physical ESP32 devices or configure the firmware/Python host. The original RTI reconstruction remains per floor; the simulated precision observations supply building-wide XYZ. See `docs/csi-presence-review.md`, `docs/csi-hardware-research.md` and `docs/csi-building-presence.md` for source review, hardware options and multi-floor setup. The hardware survey remains a single-floor benchmark, not measured hardware or cross-floor validation.
+
+The radar modules in `src/radar-*.js` load directly as browser modules on the project page. `npm test` includes their geometry, scenario, hardware and building checks. Normal GitHub Pages publication uses the `main` branch at the repository root, preserving `CNAME` and `.nojekyll`.

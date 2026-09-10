@@ -1,0 +1,133 @@
+{
+  "simulation": true,
+  "units": "meters",
+  "conditions": "distributed heights, surveyed geometry, precision observations only",
+  "results": [
+    {
+      "id": "csi",
+      "version": "V0",
+      "name": "ESP32 / CSI",
+      "trackedObject": "Unlabeled radio disturbance",
+      "layout": "multi",
+      "condition": "surveyed",
+      "simulation": true,
+      "assumptions": "Source-derived 2D RTI on a ~15 cm grid. No camera, range, or depth observations.",
+      "total": 144,
+      "resolved": 0,
+      "median": null,
+      "p95": null,
+      "max": null,
+      "within1cm": 0,
+      "bias": [
+        null,
+        null,
+        null
+      ]
+    },
+    {
+      "id": "hybrid",
+      "version": "V1",
+      "name": "ESP32 / hybrid",
+      "trackedObject": "One associated synthetic centroid",
+      "layout": "multi",
+      "condition": "surveyed",
+      "simulation": true,
+      "assumptions": "Assumed range noise scale 25 cm; azimuth 0.7°; elevation 0.9°. Ideal single-target association and known sensor poses.",
+      "total": 144,
+      "resolved": 136,
+      "median": 0.04406190954476592,
+      "p95": 0.13275595713998353,
+      "max": 0.1946359351044852,
+      "within1cm": 1,
+      "bias": [
+        -0.0014947021830985336,
+        0.01635628925578312,
+        -0.003513212759512141
+      ]
+    },
+    {
+      "id": "radar",
+      "version": "V2",
+      "name": "3D mmWave",
+      "trackedObject": "Associated radar track centroid",
+      "layout": "multi",
+      "condition": "surveyed",
+      "simulation": true,
+      "assumptions": "Each visible radar supplies an associated XYZ point with 12 cm noise scale per axis. Demonstration cones: 120° × 40°; capped at 8 m.",
+      "total": 144,
+      "resolved": 144,
+      "median": 0.08894567735583431,
+      "p95": 0.1623938601599198,
+      "max": 0.16993757488156905,
+      "within1cm": 0,
+      "bias": [
+        -0.019363432238057435,
+        0.00445633006691414,
+        0.023706616697271553
+      ]
+    },
+    {
+      "id": "uwb",
+      "version": "V3",
+      "name": "UWB / tagged",
+      "trackedObject": "A worn or attached UWB tag",
+      "layout": "multi",
+      "condition": "surveyed",
+      "simulation": true,
+      "assumptions": "Assumed 10 cm line-of-sight range noise; 1 mm numeric quantization. Four noncoplanar visible anchors are needed for range-only Z.",
+      "total": 144,
+      "resolved": 144,
+      "median": 0.107073806110855,
+      "p95": 0.21234528867630673,
+      "max": 0.37450506988403404,
+      "within1cm": 0,
+      "bias": [
+        0.00028066903765464675,
+        0.0017453553809691274,
+        -0.004303221627363931
+      ]
+    },
+    {
+      "id": "depth",
+      "version": "V4",
+      "name": "Depth + mmWave",
+      "trackedObject": "One matched visible keypoint",
+      "layout": "multi",
+      "condition": "surveyed",
+      "simulation": true,
+      "assumptions": "Optical point noise scale = 10 mm + 4 mm × distance² (meters); optical range 0.6–4 m. Point noise is isotropic in this simplified model. Radar XYZ noise scale 12 cm.",
+      "total": 144,
+      "resolved": 144,
+      "median": 0.034968535643451086,
+      "p95": 0.16137984965806332,
+      "max": 0.16993757488156905,
+      "within1cm": 11,
+      "bias": [
+        -0.011416254665918628,
+        -0.0005243481456210917,
+        0.01074331799913539
+      ]
+    },
+    {
+      "id": "optical",
+      "version": "V5",
+      "name": "Optical / reference",
+      "trackedObject": "A reflective marker or rigid marker cluster",
+      "layout": "multi",
+      "condition": "surveyed",
+      "simulation": true,
+      "assumptions": "Assumed 0.02° azimuth/elevation noise; 2 mm camera residual floor; 8 m demo optical cutoff; 65° × 51° wide lenses.",
+      "total": 144,
+      "resolved": 144,
+      "median": 0.0009931670929386835,
+      "p95": 0.003781728585731236,
+      "max": 0.004521190597056979,
+      "within1cm": 144,
+      "bias": [
+        0.00021006820060367408,
+        -0.00007213708606506238,
+        -0.00015789469487979515
+      ]
+    }
+  ]
+}
