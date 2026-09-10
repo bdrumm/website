@@ -35,12 +35,13 @@ window.PARAMETRIC_SHOP = {
     category: 'PRINT STUDY / 003',
     summary: 'A rolling door. A folding roof. Room to grow.',
     description: [
-      'A 3D printed garage with twelve articulated door slats, a bottom handle and a folding roof with simple hinges. Open the workshop, separate its parts, or arrange the garage, kitchen and dining modules together.',
+      'The latest garage design combines each floor, rear wall and side walls into one continuous structural shell. Twelve articulated door slats and a two-part roof open the workshop; the roof folds underneath itself and stows behind the rear wall.',
       'Based on the supplied Garage_Simple_Roof_Hinges.blend. The original geometry and animation are retained, with physically based materials and studio lighting.'
     ],
-    modelUrl: 'assets/models/garage-simple-hinges.glb',
-    image: 'assets/garage/simple-garage-thumbnail.jpg',
-    imageAlt: 'The modular garage with its folding roof open and rolling door partly raised, rendered from the original model.',
+    modelUrl: 'assets/models/garage-simplified-structure.glb',
+    previewModelUrl: 'assets/models/home/modular-garage-simplified.glb',
+    image: 'assets/garage/simplified-garage.jpg',
+    imageAlt: 'The latest garage with its roof half open and rolling door raised, rendered from the September 10 Blender model.',
     available: false
   }, {
     id: 'station',

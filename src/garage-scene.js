@@ -1,3 +1,4 @@
+import {createGarageModelMotion} from './garage-model.js';
 import {configureRotationControls,rotateModelWithKey} from './model-rotation-controls.js';
 import {createConfigurationMotion, rowExplosionOffset, explodedRowView} from './garage-configuration.js';
 import * as THREE from "three";
@@ -8,7 +9,7 @@ import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
 import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
 import { SSAOPass } from "three/addons/postprocessing/SSAOPass.js";
 import { OutputPass } from "three/addons/postprocessing/OutputPass.js";
-async function createGarageScene(host, getSettings, modelUrl = "assets/models/garage-simple-hinges.glb", onConfigurationChange = () => {}) {
+async function createGarageScene(host, getSettings, modelUrl = "assets/models/garage-simplified-structure.glb", onConfigurationChange = () => {}) {
   const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: false, powerPreference: "high-performance" });
   renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.8));
   renderer.shadowMap.enabled = true;
@@ -117,30 +118,9 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
     group.add(unit);
     return group;
   });
-  const clips = gltf.animations;
-  const mixer = new THREE.AnimationMixer(model);
-  const actions = clips.map((clip) => {
-    const action = mixer.clipAction(clip);
-    action.setLoop(THREE.LoopOnce, 1);
-    action.clampWhenFinished = true;
-    action.play();
-    action.paused = true;
-    return { action, kind: (clip.name.startsWith("PIP_Door_Slat_") || clip.name.endsWith("_DOOR_PIVOT")) ? "door" : "roof" };
-  });
-  const original = /* @__PURE__ */ new Map();
-  const exploding = [];
-  const sideClips = [];
+  const modelMotion = createGarageModelMotion(model, gltf.animations);
   const printMaterials = /* @__PURE__ */ new Set();
   model.traverse((object) => {
-    original.set(object, object.position.clone());
-    const name = object.name;
-    if (name.startsWith("Universal_side_clip")) sideClips.push(object);
-    if (name.includes("_Left_side_")) exploding.push({ object, offset: new THREE.Vector3(-65, 12, 0) });
-    else if (name.includes("_Right_side_")) exploding.push({ object, offset: new THREE.Vector3(65, 12, 0) });
-    else if (name.startsWith("Rear_wall_")) exploding.push({ object, offset: new THREE.Vector3(0, 12, -65) });
-    else if (/_roof_(front|rear)$/.test(name)) exploding.push({ object, offset: new THREE.Vector3(0, 110, 0), animated: true, appliedOffset: new THREE.Vector3() });
-    else if (name.includes("removable_storefront") || name.includes("shop_removable_front")) exploding.push({ object, offset: new THREE.Vector3(0, 10, 65) });
-    else if (name.startsWith("Floor_")) exploding.push({ object, offset: new THREE.Vector3(0, 0, name.endsWith("_1") ? 26 : -26) });
     if (object instanceof THREE.Mesh) {
       object.castShadow = true;
       object.receiveShadow = true;
@@ -274,22 +254,9 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
     spacingGroups.forEach((group, index) => {
       group.position.x = rowExplosionOffset(index, spreadRow ? exploded / 100 : 0);
     });
-    sideClips.forEach(clip => { clip.visible = s.layout === "row" && !configuration.active && exploded < .1; });
-    actions.forEach(({ action, kind }) => {
-      action.time = kind === "door" ? (1 + 39 * door / 100) / 24 : (1 + 79 * roof / 100) / 24;
-    });
-    // PropertyMixer may skip unchanged poses; first remove last frame's overlay.
-    exploding.forEach(({object, animated, appliedOffset}) => {
-      if (animated) object.position.sub(appliedOffset);
-    });
-    mixer.update(0);
-    exploding.forEach(({ object, offset, animated, appliedOffset }) => {
-      // The replacement roofs animate their own position. Add separation after the mixer,
-      // preserving the sampled hinge path rather than restoring the closed location.
-      if (!animated) object.position.copy(original.get(object));
-      else appliedOffset.copy(offset).multiplyScalar(exploded / 100);
-      object.position.addScaledVector(offset, exploded / 100);
-    });
+    modelMotion.update({door, roof, explode: exploded,
+      detachLowerRoofs: s.layout === "stack" || (configuration.active && closingFrom.layout === "stack"),
+      showConnectors: s.layout === "row" && !configuration.active && exploded < .1});
     if (cameraTransition) {
       const extra = exploded / 100;
       const currentCameraGoal = cameraDestination.clone().add(new THREE.Vector3(extra * 0.8, extra * 1.5, extra * 1.8));
@@ -322,8 +289,7 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
     intersection.disconnect();
     controls.dispose();
     motionPreference.removeEventListener('change', updateMotionPreference);
-    mixer.stopAllAction();
-    mixer.uncacheRoot(model);
+    modelMotion.dispose();
     model.traverse((object) => {
       if (object instanceof THREE.Mesh) object.geometry.dispose();
     });

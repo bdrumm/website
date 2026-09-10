@@ -105,15 +105,15 @@ The Station screen uses independently drawn canvas UI elements (`station-app-ui.
 
 ## Modular garage 3D print project
 
-`project.html?id=modular-garage` is Print Study / 003 in `projects-3d.html`. The page uses Parametric Space’s shared navigation, palette, typography and project routing, with scoped styles in `garage.css`. `src/garage-project.js` builds the controls and configuration cards; `src/garage-scene.js` renders the original separate meshes and 20 Blender animation clips. `npm run build` bundles both the existing viewer and the garage viewer; the garage bundle loads only on its own project page.
+`project.html?id=modular-garage` displays the September 10 `Garage_Simplified_Structure.blend` revision from the 3D prints project. Its continuous structural shells, tapered rear supports, inset fronts and underfolding roofs replace the older simple-hinge export. The matching source SHA-256 is recorded in `assets/models/garage-simplified-structure-audit.json` and embedded in both published GLBs.
 
-Derived from `Garage_Simple_Roof_Hinges.blend`, `assets/models/garage-simple-hinges.glb` retains the garage, kitchen and dining module roots, twelve door slats, and the replacement simple-hinge roof meshes. Six roof clips drive both translation and rotation directly; the two additional entry-door clips share the rolling-door opening interval. It is a display model rather than a sliced print file. The model has a nominal 200 × 240 mm footprint per module and a 200 × 261.7 × 132.6 mm closed garage envelope including the handle and hinges. The 128 mm stacked arrangement is a visualization study; physical fit is untested. Original source files remain unchanged.
+`assets/models/garage-simplified-structure.glb` packages all 60 source objects (47 printable objects and 13 display references) and 21 animation tracks. `scripts/build-garage-snapshot.mjs` packages the verified `garage-preview.glb` and `garage-preview.json` from the 3D prints project without editing the Blender file or changing its geometry. Its 80 sampled transforms are embedded as standard glTF animations. Source-meter geometry sits beneath millimeter module controls, preserving the existing configuration planner. Run `node scripts/build-garage-snapshot.mjs /path/to/preview-assets` to refresh both the full model and individual preview together.
 
-Door controls sample source frames 1–40 at 24 fps; roof controls sample frames 1–80. Module positions use the source millimetres inside the `.01`-scaled SYSTEM_ROOT. Closed roofs and assembled parts are enforced in the stacked view. Studio renders in `assets/garage/` remain available if WebGL cannot initialize. Dragging or keyboard arrows rotate the interactive model at a fixed viewing distance. Wheel and vertical touch gestures scroll the page; model zoom and pan are disabled across the project catalogue and detail viewers.
+Door controls use source frames 1–40; roofs use 1–80, including the raise, underfold, half-open and rear-stowed sequence. The 128 mm stack detaches the lower garage and kitchen roofs, matching the source assembly. Exploded inspection separates removable fronts and roofs while keeping each structural shell whole. Studio renders in `assets/garage/simplified-*.jpg` come from the same source revision. The structural shells measure approximately 200 × 244.4 × 130 mm; physical fit still requires test printing.
 
-Configuration changes use `src/garage-configuration.js`: modules close before moving, lift vertically, travel horizontally, lower, then make a small positive landing bounce. The source root stays fixed and the camera frames each arrangement. Unstacking removes the top module first; hidden modules enter from outboard storage positions. New selections continue from the current pose, and reduced-motion mode settles immediately. `npm test` covers the phased motion alongside the existing checkout checks. Updated studio images are the `simple-*` assets in `assets/garage/`.
+Configuration changes close the model before lifting, moving and lowering modules, with a small landing bounce. The base garage remains anchored. Reduced-motion mode settles immediately. Dragging or keyboard arrows rotate the interactive model at a fixed viewing distance; wheel and vertical touch gestures scroll the page. Model zoom and pan remain disabled.
 
-The faster configuration moves finish in approximately 1.8 seconds. In the side-by-side exploded view, each module moves onto a 400 mm pitch, leaving 70 mm gaps between the 330 mm expanded assemblies. Separate display carrier groups keep this spacing out of the transport coordinates. The camera adopts a near-frontal, aspect-fitted view and fog starts beyond the assemblies.
+`npm test` verifies source identity, all 80 motion frames, independent doors and roofs, reversible exploded inspection, stack alignment and the single-garage preview. `npm run build:garage` bundles the renderer.
 
 ## Shared themes and project space
 
@@ -123,7 +123,7 @@ The home page now opens with the four catalogue models in one interactive Three.
 
 `projects.html` lists all projects together. The previous `projects-3d.html` and `projects-hardware.html` URLs also show the complete catalogue, and project back links return to `projects.html`.
 
-`src/home-space.js` renders the navigation scene; `src/home-physics.js` supplies its motion and collision response. `npm run build` also produces `assets/home-space.js`, and `npm test` includes motion checks. `scripts/build-home-models.py` creates simplified navigation-only GLBs with Blender; the home assets total approximately 6 MB. The detailed project models are unchanged.
+`src/home-space.js` renders the navigation scene; `src/home-physics.js` supplies its motion and collision response. `npm run build` also produces `assets/home-space.js`, and `npm test` includes motion checks. `scripts/build-home-models.py` creates the legacy navigation GLBs with Blender. The current garage snapshot is packaged separately with `scripts/build-garage-snapshot.mjs`, retaining its full mesh detail.
 
 The transparent logo is `assets/logo-ps-transparent.png` (RGBA, transparent background). It was edited with the built-in imagegen tool using this prompt: “Remove only the black background and make it truly transparent, including the negative space between and inside the letters. Preserve the existing lime-green and dark metallic extruded PS geometry, perspective, colors, surface texture, highlights, spacing and composition.” The original raster remains available as `assets/logo-ps-3d.png`.
 
@@ -139,7 +139,7 @@ Station’s navigation model is generated with `npm run build:home-station`: a r
 
 The display renders at 1024 × 1024, with gradient voice animation, a thicker brightness arc, and no bottom callout pills or perimeter ticks. Data and interactions are simulated. `npm run build:station-model` rebuilds the device; `npm run build:station-viewer` bundles its viewer. The existing project viewers remain separate. `station.css` is loaded only for the Station route.
 
-The project catalogue renders the individual garage from `assets/models/home/modular-garage.glb` in the shared interactive viewer. It starts from a three-quarter angle and supports rotation, dragging and keyboard controls. The garage detail page retains its full multi-module experience.
+The home page and project catalogue render the individual garage from `assets/models/home/modular-garage-simplified.glb`, with the September 10 roof and rolling door in their half-open source pose. The catalogue supports rotation and keyboard controls; the garage detail page retains the complete three-module experience.
 
 
 ## CSI Presence — multi-floor sensing demonstration

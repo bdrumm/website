@@ -1,4 +1,4 @@
-import {buildGarageProject} from './src/garage-project.js?v=07e92f224e';
+import {buildGarageProject} from './src/garage-project.js?v=9fe13390b6';
 import {buildStationStory} from './src/station-story.js?v=seamless-1';
 import {normalizeCart,cartTotal,money,MAX_QUANTITY} from './shop-core.mjs';
 const {projects=[],checkoutEndpoint=''}=window.PARAMETRIC_SHOP||{};
@@ -22,7 +22,7 @@ function catalogue(){
   if(p.modelUrl){
    const preview=el('div',undefined,'catalogue-model');card.append(preview);
    const isGarage=p.experience==='garage';
-   const modelUrl=isGarage?'assets/models/home/modular-garage.glb':p.modelUrl;
+   const modelUrl=p.previewModelUrl||p.modelUrl;
    const options=isGarage?{cameraPosition:[8,5,12]}:{};
    import('./assets/model-viewer.js?v=25ddd9c98a')
     .then(({mountModelViewer})=>mountModelViewer(preview,modelUrl,p.title,isGarage?'':p.action,options))

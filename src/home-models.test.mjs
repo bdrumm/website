@@ -39,7 +39,7 @@ test('Station navigation retains a smooth circular screen and valid geometry dur
 });
 
 test('the catalogue garage model contains only the individual garage',async()=>{
-  const bytes=await readFile(new URL('../assets/models/home/modular-garage.glb',import.meta.url));
+  const bytes=await readFile(new URL('../assets/models/home/modular-garage-simplified.glb',import.meta.url));
   const gltf=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
   assert.ok(gltf.scene.getObjectByName('UNIT_Garage'));
   assert.equal(gltf.scene.getObjectByName('UNIT_Kitchen'),undefined);
