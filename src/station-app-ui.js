@@ -42,7 +42,7 @@ export class StationAppUI{
   if(name==='lock'){c.beginPath();c.roundRect(-7,-1,14,12,3);c.stroke();this.arc(0,-1,4.5,Math.PI,TAU,color,1.7);this.circle(0,5,1,color);}
   c.restore();
  }
- background(app,clock){const c=this.ctx,[a,b]=THEMES[app];c.fillStyle='#030812';c.fillRect(0,0,512,512);this.glow(110+Math.sin(clock*.16)*24,154,300,a,app==='night'?.08:.13);this.glow(402,344+Math.cos(clock*.2)*20,264,b,.13);this.arc(256,256,238,0,TAU,'#b9dfff13',.8);
+ background(app,clock){const c=this.ctx,[a,b]=THEMES[app];c.fillStyle='#030812';c.fillRect(0,0,512,512);this.glow(110+Math.sin(clock*.16)*24,154,300,a,app==='night'?.08:.13);this.glow(402,344+Math.cos(clock*.2)*20,264,b,.13);if(app==='timer')return;this.arc(256,256,238,0,TAU,'#b9dfff13',.8);
   const sweep=c.createConicGradient(clock*.09-Math.PI/2,256,256);sweep.addColorStop(0,alpha(a,0));sweep.addColorStop(.15,alpha(a,.12));sweep.addColorStop(.28,alpha(a,.65));sweep.addColorStop(.38,alpha(a,.04));sweep.addColorStop(.65,alpha(b,.02));sweep.addColorStop(.82,alpha(b,.42));sweep.addColorStop(1,alpha(a,0));this.arc(256,256,239,0,TAU,sweep,1.5);
  }
  header(name,color=MINT){this.circle(199,67,2.5,color);this.label(name,263,67,color);}
@@ -82,10 +82,10 @@ export class StationAppUI{
  transit(id,clock,part){const due=id==='arriving',brooklyn=id==='brooklyn';part(0,()=>this.header('TRANSIT',MINT));part(.1,()=>{this.text('4 Av – 9 St',256,111,28,INK,'center',500);this.label(brooklyn?'BROOKLYN BOUND':'MANHATTAN BOUND',256,147,MUTED,undefined,12);});
   [['F','#f47c38','10 · 15 min'],['G','#7dc874','8 · 12 min'],['A/C','#659eee','11 · 18 min']].forEach(([line,color,next],i)=>part(.22+i*.1,()=>{const y=176+i*76;this.card(83,y,346,66,i===0&&due?MINT:color);this.circle(115,y+32,21,color);this.text(line,115,y+33,line==='A/C'?14:25,'#07111b','center',600);this.text(i===0&&due?'Arriving now':i===0?'Coney Island / F':i===1?'Crosstown':'8 Avenue express',149,y+22,14,i===0&&due?MINT:INK,'left');this.label('THEN '+next,149,y+45,MUTED,'left',11);this.text(i===0&&due?'DUE':String((brooklyn?[6,3,8]:[4,2,4])[i]),392,y+24,i===0&&due?22:31,i===0&&due?MINT:INK);this.label(i===0&&due?'':'MIN',392,y+48,MUTED,undefined,10);if(i===0&&due){this.glow(393,y+27,38,MINT,.14+.05*Math.sin(clock*2));this.line(105,y+65,105+302*(.7+.3*Math.sin(clock*.8)),y+65,alpha(MINT,.6),1.5);}}));
  }
- timer(id,t,clock,part){const c=this.ctx,done=id==='done',left=id==='set'?300:done?0:Math.max(0,300-Math.floor(t)),progress=done?1:left/300;part(0,()=>this.header('TIMER',MINT));
-  part(.1,()=>{this.glow(256,235,150,MINT,done?.19:.10);for(let i=0;i<60;i++){const a=i*TAU/60-Math.PI/2,r=i%5===0?133:138;this.line(256+Math.cos(a)*r,236+Math.sin(a)*r,256+Math.cos(a)*144,236+Math.sin(a)*144,'#9edfd338',i%5===0?2:1);}
-   this.arc(256,236,119,0,TAU,'#a2e5df12',7);const ring=c.createLinearGradient(146,123,368,340);ring.addColorStop(0,MINT);ring.addColorStop(.5,BLUE);ring.addColorStop(1,'#e3fbff');c.save();c.shadowColor=alpha(MINT,.6);c.shadowBlur=14;this.arc(256,236,119,-Math.PI/2,-Math.PI/2+TAU*progress,ring,5);c.restore();
-   if(!done){const a=-Math.PI/2+TAU*progress;this.circle(256+Math.cos(a)*119,236+Math.sin(a)*119,5,INK);this.text(`${Math.floor(left/60)}:${String(left%60).padStart(2,'0')}`,256,234,73,INK,'center',300);this.label(id==='set'?'READY WHEN YOU ARE':'TIME REMAINING',256,286,MUTED,undefined,12);}else{this.circle(256,204,26,'#83f2d019');this.icon('check',256,204,26,MINT);this.text('All done',256,264,40);this.label('A MOMENT WELL SPENT',256,306,MUTED,undefined,11);}
+ timer(id,t,clock,part){const c=this.ctx,done=id==='done',left=id==='set'?300:done?0:Math.max(0,300-Math.floor(t)),progress=done?1:left/300,radius=232;part(0,()=>this.header('TIMER',MINT));
+  part(.1,()=>{this.glow(256,256,210,MINT,done?.19:.10);
+   this.arc(256,256,radius,0,TAU,'#a2e5df12',7);const ring=c.createLinearGradient(24,24,488,488);ring.addColorStop(0,MINT);ring.addColorStop(.5,BLUE);ring.addColorStop(1,'#e3fbff');c.save();c.shadowColor=alpha(MINT,.6);c.shadowBlur=14;this.arc(256,256,radius,-Math.PI/2,-Math.PI/2+TAU*progress,ring,6);c.restore();
+   if(!done){const a=-Math.PI/2+TAU*progress;this.circle(256+Math.cos(a)*radius,256+Math.sin(a)*radius,5,INK);this.text(`${Math.floor(left/60)}:${String(left%60).padStart(2,'0')}`,256,254,73,INK,'center',300);this.label(id==='set'?'READY WHEN YOU ARE':'TIME REMAINING',256,306,MUTED,undefined,12);}else{this.circle(256,224,26,'#83f2d019');this.icon('check',256,224,26,MINT);this.text('All done',256,284,40);this.label('A MOMENT WELL SPENT',256,326,MUTED,undefined,11);}
   });
   part(.3,()=>this.text(done?'Your timer is complete':id==='set'?'A little time to focus.':'We’ll keep an eye on the time.',256,394,16,MUTED));
  }
