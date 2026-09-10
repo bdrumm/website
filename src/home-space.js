@@ -230,7 +230,7 @@ async function mountSpace(stage) {
   let loaded = 0, failed = 0;
   await Promise.allSettled(bodies.map(async body => {
     try {
-      const gltf = await loader.loadAsync(`assets/models/home/${body.project.id}.glb${body.project.id==='station'?'?v=clean-shell-3':''}`);
+      const gltf = await loader.loadAsync(`assets/models/home/${body.project.id}.glb${body.project.id==='station'?'?v=clean-shell-3':body.project.id==='baguette-holder'?'?v=contiguous-1':''}`);
       if (disposed) { disposeObject(gltf.scene); return; }
       const size = new THREE.Box3().setFromObject(gltf.scene).getSize(new THREE.Vector3());
       const center = new THREE.Box3().setFromObject(gltf.scene).getCenter(new THREE.Vector3());

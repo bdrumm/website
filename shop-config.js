@@ -22,8 +22,8 @@ window.PARAMETRIC_SHOP = {
     category: 'PRINT STUDY / 002',
     summary: 'Two printed segments. One complete form.',
     description: [
-      'The completed baguette holder, with both printed segments joined and the hinged case closed. Rotate the model to explore the sculpted shell, central joint and closure details.',
-      'Assembled from the matching design source, verified against baguette_v2.3mf. Shown in a warm gold silk finish using the same lighting and material treatment as Trout.'
+      'The completed baguette holder, with both printed segments joined and the hinged case closed. Rotate the model to explore the continuous sculpted shell and closure details.',
+      'Based on the matching baguette_v2.3mf design, with the center join blended into a continuous display shell. Shown in a warm gold silk finish with soft studio reflections.'
     ],
     modelUrl: 'assets/models/baguette-holder.glb',
     available: false

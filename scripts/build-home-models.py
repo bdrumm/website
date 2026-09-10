@@ -6,15 +6,20 @@ Detailed project viewers and original models are unchanged.
 import bpy
 from pathlib import Path
 import subprocess
+import sys
+
+selected = set(sys.argv[sys.argv.index('--') + 1:]) if '--' in sys.argv else set()
 
 root = Path(__file__).resolve().parents[1]
 destination = root / 'assets/models/home'
 destination.mkdir(exist_ok=True)
 for source, name, budget in [
     ('trout-v10', 'trout', 55000),
-    ('baguette-holder', 'baguette-holder', 18000),
+    ('baguette-holder', 'baguette-holder', 24000),
     ('garage-simple-hinges', 'modular-garage', 32000),
 ]:
+    if selected and name not in selected:
+        continue
     bpy.ops.wm.read_factory_settings(use_empty=True)
     bpy.ops.import_scene.gltf(filepath=str(root / f'assets/models/{source}.glb'))
     if name == 'modular-garage':
@@ -41,4 +46,5 @@ for source, name, budget in [
     print(name, (destination / f'{name}.glb').stat().st_size, 'bytes')
 
 # Station needs intact circular topology, rather than generic decimation.
-subprocess.run(['node', str(root / 'scripts/build-home-station.mjs')], check=True)
+if not selected or 'station' in selected:
+    subprocess.run(['node', str(root / 'scripts/build-home-station.mjs')], check=True)

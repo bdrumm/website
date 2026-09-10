@@ -81,7 +81,17 @@ blender --background --factory-startup --disable-autoexec /path/to/Articulated_T
 
 ## Baguette holder
 
-`project.html?id=baguette-holder` shows the closed assembly from the matching `baguette_case_v2.py` design source. Both generated print segments were compared with the supplied 3MF: maximum vertex discrepancy below 0.002 mm (source rounding). The 66,384-triangle closed mesh retains millimetre dimensions and uses a gold silk visualization finish. Generate the GLB with `node scripts/build-baguette.mjs /path/to/closed.json`, using vertices and triangles from the closed design assembly mapped from XYZ to YZX.
+`project.html?id=baguette-holder` shows a continuous display assembly from the matching `baguette_case_v2.py` design source. The lid and base each span the center with one watertight shell. The display geometry is extracted before the print-segment spigot, socket and backward joint chamfer, eliminating the deep center reveal while retaining the original dimensions, ribs, hinge axis, latches and strap lugs. This is presentation geometry; the original 3MF and manufacturing source are unchanged.
+
+Crease-aware normals keep the curved shell smooth and the mechanical edges crisp. The gold silk material uses broad studio reflections without per-vertex high-frequency color stripes. Both the detailed model and the lightweight homepage model share this continuous geometry.
+
+Regenerate using the source design's Python environment (with its existing manifold3d, trimesh and shapely dependencies):
+
+```sh
+python scripts/extract-baguette-display.py /path/to/baguette_case_v2.py /tmp/baguette-display.json
+node scripts/build-baguette.mjs /tmp/baguette-display.json
+blender --background --factory-startup --python scripts/build-home-models.py -- baguette-holder
+```
 
 ## Station hardware project
 
