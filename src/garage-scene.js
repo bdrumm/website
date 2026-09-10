@@ -20,7 +20,7 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
   host.appendChild(renderer.domElement);
   renderer.domElement.setAttribute("role", "img");
   renderer.domElement.tabIndex = 0;
-  renderer.domElement.setAttribute("aria-label", "Garage 3D model. Drag or use arrow keys to rotate. Scroll to move the page.");
+  renderer.domElement.setAttribute("aria-label", "Garage 3D model. Drag or use arrow keys to rotate; use the zoom buttons or plus and minus keys to zoom. Scroll to move the page.");
   const world = new THREE.Scene();
   world.background = new THREE.Color("#d8dcd7");
   world.fog = new THREE.Fog("#d8dcd7", 20, 50);
@@ -31,7 +31,7 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
   controls.enableDamping = true;
   controls.dampingFactor = 0.07;
   controls.enablePan = false;
-  controls.minDistance = 2.8;
+  controls.minDistance = 1.2;
   controls.maxDistance = 18;
   controls.maxPolarAngle = Math.PI / 2 - 0.035;
   controls.autoRotateSpeed = 0.65;
@@ -195,8 +195,18 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
     cameraTransition = false;
   };
   controls.addEventListener("start", stopCameraTransition);
+  const zoom = factor => {
+    if (!Number.isFinite(factor) || factor <= 0) return;
+    cameraTransition = false;
+    const offset = camera.position.clone().sub(controls.target);
+    const distance = THREE.MathUtils.clamp(offset.length() * factor, controls.minDistance, controls.maxDistance);
+    camera.position.copy(controls.target).add(offset.setLength(distance));
+    controls.update();
+  };
   renderer.domElement.addEventListener("keydown", (event) => {
-    if (!rotateModelWithKey(camera, controls, event.key)) return;
+    if (event.ctrlKey || event.metaKey || event.altKey) return;
+    if (["+", "=", "-"].includes(event.key)) zoom(event.key === "-" ? 1.25 : .8);
+    else if (!rotateModelWithKey(camera, controls, event.key)) return;
     event.preventDefault();
     cameraTransition = false;
   });
@@ -282,7 +292,7 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
     frame = requestAnimationFrame(update);
   };
   frame = requestAnimationFrame(update);
-  return { dispose() {
+  return { zoom, dispose() {
     window.removeEventListener('themechange', updateTheme);
     cancelAnimationFrame(frame);
     observer.disconnect();

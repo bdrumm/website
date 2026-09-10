@@ -1,4 +1,4 @@
-import {buildGarageProject} from './src/garage-project.js?v=9fe13390b6';
+import {buildGarageProject} from './src/garage-project.js?v=c657ac64c0';
 import {buildStationStory} from './src/station-story.js?v=seamless-1';
 import {normalizeCart,cartTotal,money,MAX_QUANTITY} from './shop-core.mjs';
 const {projects=[],checkoutEndpoint=''}=window.PARAMETRIC_SHOP||{};
