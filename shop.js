@@ -38,7 +38,7 @@ function detail(){const p=projects.find(p=>p.id===({arowana:'trout'}[new URLSear
  root.append(link('← All projects','projects.html','secondary-button category-back'));
  const content=el('div',undefined,'project-detail');const visual=image(p);
  if(p.id==='station'){root.append(content);import('./src/station-project.js?v=ba39a3a338').then(({buildStationProject})=>buildStationProject(root,content,p)).catch(()=>content.append(el('p','The Station viewer is unavailable. Please reload to try again.')));return;}
- if(p.experience==='radar'){document.documentElement.classList.add('radar-project-page');import('./src/radar-project.js?v=csi-tabs-1').then(({buildRadarProject})=>buildRadarProject(content,p)).catch(()=>{content.textContent='The simulation could not load. Please reload the page.';});root.append(content);document.querySelector('meta[name="description"]')?.setAttribute('content',p.summary);return;}
+ if(p.experience==='radar'){document.documentElement.classList.add('radar-project-page');import('./src/radar-project.js?v=csi-display-1').then(({buildRadarProject})=>buildRadarProject(content,p)).catch(()=>{content.textContent='The simulation could not load. Please reload the page.';});root.append(content);document.querySelector('meta[name="description"]')?.setAttribute('content',p.summary);return;}
  if(p.experience==='garage'){content.classList.add('has-model','garage-detail');buildGarageProject(content,p);root.append(content);document.querySelector('meta[name="description"]')?.setAttribute('content',p.summary);return;}
  if(p.modelUrl){
   content.classList.add('has-model');

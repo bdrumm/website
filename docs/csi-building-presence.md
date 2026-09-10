@@ -13,20 +13,20 @@ The demo opens with three independently instrumented floors and one synthetic re
 | Level 2 | 6.6 m | 6.6–9.6 m |
 | Level 3, optional | 9.9 m | 9.9–12.9 m |
 
-The floor plan displays X/Y on the selected floor. The building section displays X/global Z for every floor, with Y collapsed. Pink markers are fitted measurements; white rings show optional synthetic ground truth. The section highlights the selected floor and shows optical mounts in blue and radar/UWB mounts in violet.
+The main floor plan displays X/Y on the active floor, which defaults to ground. White rings show optional synthetic ground truth and pink markers show fitted positions. The Live readings tab reports local height and global building Z. The separate building-section visualization and headline metrics panel have been removed.
 
 `global Z = surveyed floor elevation + height above that floor`
 
-Selecting a floor changes the display only. It does not move references, choose their inferred floor, reset their timers or alter another floor's failed nodes. Height controls always refer to the selected floor. The separate building-Z readout includes its base elevation.
+The main view starts on the ground floor. Height controls refer to the active floor; the building-Z readout includes its base elevation. The underlying simulation still maintains independent references, presence timers and failed nodes across floors.
 
 ## Controls and scenarios
 
-The selected-floor plan and whole-building elevation share the main visualization. Floor selection sits to its right on desktop and above it on narrow screens. The “A shared picture” component summary follows the visualization and metrics. Hardware versions, live readings, signal pipeline, system/recovery, accuracy research and evidence are separate tabs below the summary; switching tabs preserves simulation and walkthrough state. Detailed mounting, height and measurement controls are under “Measurement & sensor settings.”
+The main visualization has four display choices in its right sidebar: Hybrid evidence, Wi-Fi / RTI, Camera evidence and RF × camera agreement. They replace the floor-selection menu and move above the visualization on narrow screens. The “A shared picture” component summary follows the main view. Hardware versions, live readings, signal pipeline, system/recovery, accuracy research and evidence remain in tabs below the summary. Switching display modes or tabs preserves simulation and walkthrough state. Detailed mounting, height and measurement controls are under “Measurement & sensor settings.”
 
 - **Across all floors:** one synthetic reference on each floor, with offset paths and a shared clock.
 - **Stairwell handoff:** one reference approaches the shaft, climbs to the top floor, visits the landing and returns along a continuous loop.
 - **Empty building:** removes all references; each room's hold expires independently.
-- **Within-floor walk / height sweep:** runs on the floor selected when the scenario starts. Looking at another floor does not move it.
+- **Within-floor walk / height sweep:** runs on the active floor when the scenario starts.
 - **Stillness:** freezes current references and drains the illustrative motion signal over two seconds. Precision modalities may retain observations according to their existing model.
 - **Place target here / map / XYZ controls:** places one persistent synthetic reference on the selected floor and preserves references already on other floors.
 - **Clear target:** removes only the selected floor's manual reference.
