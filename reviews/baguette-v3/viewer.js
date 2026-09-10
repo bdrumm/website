@@ -17,8 +17,8 @@ export async function mountReview(root, buffer) {
  const {scene:model}=await new GLTFLoader().parseAsync(buffer,'');scene.add(model);
  const hinge=model.getObjectByName('LidHinge'),meshes=[];model.traverse(o=>{if(o.isMesh){o.material=o.material.clone();o.material.side=T.DoubleSide;meshes.push({mesh:o,rest:o.position.clone()});}});
  const angle=root.querySelector('[data-angle]'),angleValue=root.querySelector('[data-angle-value]'),exploded=root.querySelector('[data-explode]'),cutaway=root.querySelector('[data-cutaway]');
- let view='overall',halfWidth=350,disposed=false;
- const presets={overall:{target:[0,0,-20],position:[120,180,680],width:350},hinge:{target:[-60,0,-44.24],position:[-60,75,-200],width:82},latch:{target:[90,-7,46],position:[105,25,225],width:40},joint:{target:[-4,0,0],position:[28,80,190],width:85}};
+ let view=root.dataset.defaultView||'overall',halfWidth=350,disposed=false;
+ const presets={overall:{target:[0,0,-20],position:[120,180,680],width:350},hinge:{target:[-60,0,-39.5],position:[-60,75,-200],width:82},latch:{target:[90,-7,46],position:[105,25,225],width:40},joint:{target:[-4,0,0],position:[28,80,190],width:85}};
  function resize(){const w=host.clientWidth,h=host.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.left=-halfWidth;camera.right=halfWidth;camera.top=halfWidth*h/w;camera.bottom=-halfWidth*h/w;camera.updateProjectionMatrix();}
  function pose(){const degrees=Number(angle.value);hinge.rotation.x=-T.MathUtils.degToRad(degrees);angleValue.textContent=degrees+'°';
   for(const {mesh,rest} of meshes){mesh.position.copy(rest);if(mesh.name.endsWith('_A'))mesh.position.x-=exploded.checked?58:0;else if(mesh.name.endsWith('_B'))mesh.position.x+=exploded.checked?58:0;
