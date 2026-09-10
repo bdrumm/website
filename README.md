@@ -51,11 +51,47 @@ GitHub Pages is configured for `parametric.space`, with a valid certificate and 
 
 The apex DNS needs to be pointed at GitHub Pages through the domain's DNS provider. Preserve email-related MX, TXT, SPF, DKIM, and DMARC records. No DNS settings were changed in this update.
 
-## Arowana 3D study
+## Arowana print model
 
-`project.html?id=arowana` displays a procedural, photo-inspired GLB model with auto rotation, orbit/zoom controls, reduced-motion support, and the original reference photograph. It is an approximation from one image, not a scan or a manufacturing model. The project is not enabled for purchase.
+`project.html?id=arowana` displays the supplied ArowanaFixedEyes.3mf geometry, designed by HappyFish, assembled from its two printable halves. Colors and silk surface material are estimated from the reference photo. The GLB retains millimetre dimensions; the viewer scales it for display. The original 3MF is unchanged. The project is not enabled for purchase.
 
-Run `npm ci` and `npm run build` to regenerate the model and the self-hosted Three.js viewer. Run `npm test` for cart and checkout checks. Generated assets are committed so GitHub Pages needs no build service. The viewer module loads only on model project pages.
+Run `npm ci` and `npm run build` to bundle the self-hosted viewer. To regenerate the colored model from your source file:
+
+```sh
+python3 scripts/extract-arowana.py /path/to/ArowanaFixedEyes.3mf /tmp/arowana-geometry.json
+npm run build:model -- /tmp/arowana-geometry.json
+```
+
+Run `npm test` for cart and checkout checks. Generated assets are committed for GitHub Pages.
+
+## Trout V10
+
+`project.html?id=trout` and the 3D catalogue use `assets/models/trout-v10.glb`, including the rebuilt dorsal attachment and rounded rear fin. The existing coral, mint and violet display finish and swim action are preserved. The colored-model download uses the same V10 asset.
+
+The matching `Articulated_Trout_V10.blend` assembly was verified against the supplied `Articulated_Trout_V10.3mf`: all 2,580,594 vertices match within 0.0000005 mm of export rounding, with identical indices for all 5,163,156 triangles after the print-plate transforms. Both 57-island halves are assembled before reducing geometry for the web. The mirrored half's winding is corrected when baking its transform. The original 3MF and Blender files are unchanged; source provenance is recorded in `assets/models/trout-v10.provenance.json` and the GLB metadata. Colors are visualization styling.
+
+Regenerate using the verified matching assembly:
+
+```sh
+blender --background --factory-startup --disable-autoexec /path/to/Articulated_Trout_V10.blend \
+  --python scripts/export-trout.py -- \
+  --source-3mf /path/to/Articulated_Trout_V10.3mf \
+  --output assets/models/trout-v10.glb
+```
+
+## Baguette holder
+
+`project.html?id=baguette-holder` shows the closed assembly from the matching `baguette_case_v2.py` design source. Both generated print segments were compared with the supplied 3MF: maximum vertex discrepancy below 0.002 mm (source rounding). The 66,384-triangle closed mesh retains millimetre dimensions and uses a gold silk visualization finish. Generate the GLB with `node scripts/build-baguette.mjs /path/to/closed.json`, using vertices and triangles from the closed design assembly mapped from XYZ to YZX.
+
+## Station hardware project
+
+`project.html?id=station` adapts the existing rotary-display Station promotion site into the Hardware section. Geometry in `src/station-model.js` is derived from that site's centimetre-scale device reconstruction (51 mm diameter, 12.1 mm shell). It is visual geometry, not manufacturing CAD. Rebuild with `node scripts/build-station.mjs`. Screen assets in `assets/station/` were extracted from that same local promotion site and represent Station OS demo captures, not live device state. No hardware commands, accounts, voice APIs or home automation services are connected to the public preview. Eight app controls select animated screen walkthroughs; device interactions elsewhere remain unchanged. The preview enclosure omits the keychain attachment, left-side port detail and right-side grille. The project preview presents the bottom-right rim closer to the camera, with a gentle horizontal sway, a small bounded drag tilt and native page scrolling over the canvas.
+
+Station now uses eight scroll chapters with a sticky device viewer and particle dematerialization/reassembly between states. Chapter buttons remain available as navigation, Voice plays its walkthrough on entry, and reduced-motion mode skips the transporter transition. The standalone catalogue viewer retains manual app selection.
+
+### Live Station UI showcase
+
+The Station screen uses independently drawn canvas UI elements (`station-app-ui.js`), with walkthroughs for all eight apps. The 512-unit circular layout renders into a 1024 × 1024 texture for sharper close-up detail. The showcase adds luminous edge accents, gradient cards, animated rain forecasts, a flowing gradient voice animation, a glowing countdown ring, warm brightness controls and scene confirmations. These are enhanced web demo visuals, not pixel-exact reproductions of the reference UI. The screenshot-slice renderer is no longer used. The voice field adapts mode palettes, attack/release smoothing, the 1.15-second thinking heartbeat, 0.30-second onset decay, 0.55-second mode easing and rotating 2/3/5-harmonic rim waves from `station/libraries/voiceui/src/voice_blob.c`; transcript reveal follows `voice_ui.c`'s 260 ms word fade. Demo audio envelopes are scripted; no microphone, speech service or home device is connected. Other apps use representative demo data and state sequences; this is a web reimplementation rather than the embedded firmware itself.
 
 ## Modular garage 3D print project
 
@@ -69,7 +105,22 @@ Configuration changes use `src/garage-configuration.js`: modules close before mo
 
 The faster configuration moves finish in approximately 1.8 seconds. In the side-by-side exploded view, each module moves onto a 400 mm pitch, leaving 70 mm gaps between the 330 mm expanded assemblies. Separate display carrier groups keep this spacing out of the transport coordinates. The camera adopts a near-frontal, aspect-fitted view and fog starts beyond the assemblies.
 
+## Shared themes and project space
+
+The home page now opens with the four catalogue models in one interactive Three.js scene. Select a model or its label to open the project; drag to nudge the objects through their shared spring and collision field. The fixed project index provides ordinary links for keyboard, touch, unavailable WebGL, or failed model loads. Motion can be paused and follows reduced-motion preferences. The contact form remains below the scene.
+
+`theme.js` applies a saved light/dark preference before paint, defaults to the operating system, and synchronizes tabs. Dark colors come from Station’s navy, mint, blue and violet palette. Station’s story layout now works in either theme, and the garage floor, fog and controls switch with the rest of the site.
+
+`projects.html` lists all projects together. The previous `projects-3d.html` and `projects-hardware.html` URLs also show the complete catalogue, and project back links return to `projects.html`.
+
+`src/home-space.js` renders the navigation scene; `src/home-physics.js` supplies its motion and collision response. `npm run build` also produces `assets/home-space.js`, and `npm test` includes motion checks. `scripts/build-home-models.py` creates simplified navigation-only GLBs with Blender; the home assets total approximately 6 MB. The detailed project models are unchanged.
+
+The transparent logo is `assets/logo-ps-transparent.png` (RGBA, transparent background). It was edited with the built-in imagegen tool using this prompt: “Remove only the black background and make it truly transparent, including the negative space between and inside the letters. Preserve the existing lime-green and dark metallic extruded PS geometry, perspective, colors, surface texture, highlights, spacing and composition.” The original raster remains available as `assets/logo-ps-3d.png`.
+
 The page opens in Side by side. All three modules enter in sequence using the same lift, horizontal travel, drop and bounce; normal configuration changes keep the settled garage anchored. Entrance progress waits for a visible 3D canvas, and reduced-motion mode shows the assembled row immediately. Reset all returns to Side by side.
+
+
+Station’s navigation model is generated with `npm run build:home-station`: a regular 360-segment shell and the complete circular screen, bezel and exterior details replace the decimated mesh. The home display uses the same Station UI as the project page, drawn at 1024 × 1024 with anisotropic filtering. It makes a full turn every 24 seconds with a slight tilt; hovering, pausing, or reduced-motion preferences freeze the turn. The center monogram and tagline have been removed, and the larger models use a closer, staggered arrangement.
 
 
 ## Station preview

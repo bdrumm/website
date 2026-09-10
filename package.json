@@ -4,11 +4,13 @@
   "description": "Static site for **Parametric Space**, served by GitHub Pages.",
   "main": "script.js",
   "scripts": {
-    "build:model": "node scripts/build-arowana.mjs",
+    "build:model": "node scripts/color-arowana.mjs",
     "build:viewer": "esbuild src/model-viewer.js --bundle --format=esm --minify --outfile=assets/model-viewer.js",
-    "build": "npm run build:model && npm run build:viewer && npm run build:garage && npm run build:station-viewer",
-    "test": "node --test shop-core.test.mjs services/checkout/worker.test.mjs src/garage-configuration.test.mjs",
+    "build": "npm run build:viewer && npm run build:garage && npm run build:home && npm run build:station-viewer",
+    "test": "node --test shop-core.test.mjs services/checkout/worker.test.mjs src/garage-configuration.test.mjs src/home-physics.test.mjs src/home-models.test.mjs",
     "build:garage": "esbuild src/garage-scene.js --bundle --format=esm --minify --outfile=assets/garage-viewer.js",
+    "build:home": "esbuild src/home-space.js --bundle --format=esm --minify --outfile=assets/home-space.js",
+    "build:home-station": "node scripts/build-home-station.mjs",
     "build:station-model": "node scripts/build-station.mjs",
     "build:station-viewer": "esbuild src/station-viewer.js --bundle --format=esm --minify --outfile=assets/station-viewer.js"
   },

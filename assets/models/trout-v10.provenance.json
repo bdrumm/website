@@ -1,0 +1,25 @@
+{
+  "sources": {
+    "Articulated_Trout_V10.3mf": {
+      "sha256": "10bfa4eda1863a4cc82222274421bbe30f1f016106d4735ad2902aed87d015db",
+      "bytes": 65648590
+    },
+    "Articulated_Trout_V10.blend": {
+      "sha256": "60ae80e15b8e92e8a2d51b20ae23fef5f999113ca2e43c191dd07b67cbe0cdc9",
+      "bytes": 54411272
+    }
+  },
+  "assembly_scene": "Trout V10 \u2014 assembled",
+  "source_verification": {
+    "vertices_checked": 2580594,
+    "triangles_checked": 5163156,
+    "maximum_coordinate_error_mm": 5.000000005139782e-07,
+    "triangle_index_mismatches": 0,
+    "assembled_parts": 114
+  },
+  "web_model": "trout-v10.glb",
+  "web_triangles": 1109594,
+  "colors": "Coral, mint and violet visualization finish; original source color is neutral.",
+  "web_bytes": 37696136,
+  "web_sha256": "b5884477233ad56ce33c15c95c9d83f774b6ed6c8e3caf2220e8b0279cbd186a"
+}
