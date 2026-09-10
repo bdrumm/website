@@ -13,16 +13,16 @@ const ease = t => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 const lerp = (a, b, t) => a + (b - a) * t;
 const samePosition = (a, b) => a.every((value, axis) => Math.abs(value - b[axis]) < .001);
 
-export function planConfiguration(snapshot, layout, { pitch = 128 } = {}) {
+export function planConfiguration(snapshot, layout, { pitch = 128, entrance = false } = {}) {
   if (!layouts.has(layout)) throw new Error('Unknown garage configuration.');
   const destinations = snapshot.map((_, index) => targetFor(layout, index, pitch));
-  const candidates = snapshot.map((unit, index) => ({ index, from: unit.position.slice(), to: destinations[index], wasVisible: unit.visible, visible: layout !== 'garage' || index === 0 })).filter(move => move.index !== 0 && (move.wasVisible || move.visible) && !samePosition(move.from, move.to));
+  const candidates = snapshot.map((unit, index) => ({ index, from: unit.position.slice(), to: destinations[index], wasVisible: unit.visible, visible: layout !== 'garage' || index === 0 })).filter(move => (move.wasVisible || move.visible) && !samePosition(move.from, move.to));
   // Clear the top of a stack first; assemble a new stack from its base upward.
-  candidates.sort((a, b) => layout === 'stack' ? a.to[1] - b.to[1] : b.from[1] - a.from[1] || b.index - a.index);
+  candidates.sort((a, b) => entrance ? a.index - b.index : layout === 'stack' ? a.to[1] - b.to[1] : b.from[1] - a.from[1] || b.index - a.index);
   const settled = snapshot.map(unit => ({ position: unit.position.slice(), visible: unit.visible }));
   let cursor = CONFIGURATION_TIMING.prepare;
   const moves = candidates.map(move => {
-    const from = move.wasVisible ? move.from : parked(move.index);
+    const from = move.from;
     const pathMin = Math.min(from[0], move.to[0]);
     const pathMax = Math.max(from[0], move.to[0]);
     const obstacles = settled.filter((unit, index) => index !== move.index && unit.visible && unit.position[0] + 200 > pathMin && unit.position[0] < pathMax + 200);
@@ -59,7 +59,7 @@ export function sampleModuleMove(move, elapsed) {
   return { position: move.to.slice(), phase: 'settled', done: true };
 }
 
-export function createConfigurationMotion(units, { pitch = 128, onChange = () => {} } = {}) {
+export function createConfigurationMotion(units, { pitch = 128, animateEntrance = false, onChange = () => {} } = {}) {
   let layout = '', plan = null, elapsed = 0;
   function settle(destination) {
     units.forEach((unit, index) => { unit.position.fromArray(targetFor(destination, index, pitch)); unit.visible = destination !== 'garage' || index === 0; });
@@ -76,9 +76,13 @@ export function createConfigurationMotion(units, { pitch = 128, onChange = () =>
       }
       const initial = layout === '';
       layout = destination;
-      if (initial || reduced) { plan = null; settle(destination); onChange(false); return; }
+      if ((initial && !animateEntrance) || reduced) { plan = null; settle(destination); onChange(false); return; }
+      if (initial) {
+        // Start beyond the completed row, then build from the garage outwards.
+        units.forEach((unit, index) => { unit.position.set(650 + index * 250, 0, 0); unit.visible = false; });
+      }
       const snapshot = units.map(unit => ({ position: unit.position.toArray(), visible: unit.visible }));
-      plan = planConfiguration(snapshot, destination, { pitch }); elapsed = 0;
+      plan = planConfiguration(snapshot, destination, { pitch, entrance: initial }); elapsed = 0;
       if (!plan.duration) { settle(destination); plan = null; }
       onChange(!!plan);
     },

@@ -91,3 +91,44 @@ test('exploded row leaves clearance between the measured 330 mm assemblies',()=>
   assert(narrow.camera[2]>wide.camera[2]);
   assert.deepEqual(narrow.target,wide.target);
 });
+
+test('page entrance brings all three modules into the row one by one',()=>{
+  const units=makeUnits(),events=[],motion=createConfigurationMotion(units,{animateEntrance:true,onChange:active=>events.push(active)});
+  motion.setLayout('row');
+  assert(motion.active);
+  assert(units.every(unit=>!unit.visible&&unit.position.x>600));
+  const waiting=snapshot(units);
+  motion.update(0);assert.deepEqual(snapshot(units),waiting);
+  const arrivals=[],lifted=new Set();
+  for(let frame=0;frame<200&&motion.active;frame++){
+    motion.update(.016);
+    units.forEach((unit,index)=>{
+      if(unit.visible&&!arrivals.includes(index))arrivals.push(index);
+      if(unit.visible&&unit.position.y>1)lifted.add(index);
+    });
+  }
+  assert.deepEqual(arrivals,[0,1,2]);
+  assert.equal(lifted.size,3);
+  assert(!motion.active);assertLayout(units,'row');
+  assert.deepEqual(events,[true,false]);
+});
+
+test('entrance can be reselected or interrupted without snapping the moving garage',()=>{
+  for(const time of [.1,.35,.6,1.1,1.8])for(const destination of names){
+    const units=makeUnits(),motion=createConfigurationMotion(units,{animateEntrance:true});
+    motion.setLayout('row');motion.update(time);
+    const before=snapshot(units);
+    motion.setLayout(destination);motion.update(0);
+    assert.deepEqual(snapshot(units),before);
+    complete(motion);assertLayout(units,destination);
+  }
+});
+
+test('reduced motion bypasses the page entrance and can settle an entrance already underway',()=>{
+  for(const halfway of [false,true]){
+    const units=makeUnits(),motion=createConfigurationMotion(units,{animateEntrance:true});
+    if(halfway){motion.setLayout('row');motion.update(.5);}
+    motion.setLayout('row',true);
+    assert(!motion.active);assertLayout(units,'row');
+  }
+});

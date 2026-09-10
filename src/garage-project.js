@@ -18,15 +18,15 @@ export function buildGarageProject(container, project) {
     <div class="garage-workbench">
       <section class="garage-stage" aria-label="Garage model viewer">
         <div class="garage-canvas"></div>
-        <img class="garage-poster" src="assets/garage/simple-garage-studio.jpg" width="1600" height="1100" alt="Single garage studio render with its roof open and rolling door partly raised.">
+        <img class="garage-poster" src="assets/garage/simple-row-studio.jpg" width="1600" height="1100" alt="Garage, kitchen, and dining modules arranged side by side in a studio render.">
         <div class="garage-stage-top"><span class="section-number" data-view-label>INTERACTIVE 3D</span><div class="garage-view-mode" role="group" aria-label="Viewing mode"><button type="button" data-view="3d" aria-pressed="true">3D view</button><button type="button" data-view="studio" aria-pressed="false">Studio</button></div></div>
         <p class="garage-load-status" role="status" aria-live="polite">Preparing interactive model…</p>
-        <div class="garage-stage-bottom"><div class="garage-caption"><span class="section-number" data-figure>FIG. 01</span><strong data-layout-name>Single garage</strong><span data-view-hint>Drag to orbit · scroll or pinch to zoom</span></div><div class="garage-camera-controls"><button type="button" data-reset-camera aria-label="Reset camera" title="Reset camera">↺</button><button type="button" data-fullscreen aria-label="Expand viewer" title="Expand viewer">⛶</button></div></div>
+        <div class="garage-stage-bottom"><div class="garage-caption"><span class="section-number" data-figure>FIG. 02</span><strong data-layout-name>Side by side</strong><span data-view-hint>Drag to orbit · scroll or pinch to zoom</span></div><div class="garage-camera-controls"><button type="button" data-reset-camera aria-label="Reset camera" title="Reset camera">↺</button><button type="button" data-fullscreen aria-label="Expand viewer" title="Expand viewer">⛶</button></div></div>
       </section>
       <aside class="garage-controls" aria-label="Garage controls">
         <div class="garage-controls-title"><h2>Make it yours</h2><span class="section-number">01—03</span></div>
         <fieldset class="garage-control-section garage-layouts"><legend><span>01</span> Configuration</legend>
-          ${layouts.map(l => `<label class="garage-layout-option"><input type="radio" name="garage-layout" value="${l.id}"${l.id === 'garage' ? ' checked' : ''}><span class="garage-layout-number">${l.number}</span><span><strong>${l.name}</strong><small>${l.modules}</small></span></label>`).join('')}
+          ${layouts.map(l => `<label class="garage-layout-option"><input type="radio" name="garage-layout" value="${l.id}"${l.id === 'row' ? ' checked' : ''}><span class="garage-layout-number">${l.number}</span><span><strong>${l.name}</strong><small>${l.modules}</small></span></label>`).join('')}
         </fieldset>
         <fieldset class="garage-control-section"><legend><span>02</span> In motion</legend>
           <div class="garage-presets" role="group" aria-label="Model state"><button type="button" data-preset="closed" aria-pressed="false" disabled>Closed</button><button type="button" data-preset="door" aria-pressed="false" disabled>Door open</button><button type="button" data-preset="roof" aria-pressed="false" disabled>Roof open</button><button type="button" data-preset="exploded" aria-pressed="false" disabled>Exploded</button></div>
@@ -40,7 +40,7 @@ export function buildGarageProject(container, project) {
     </div>
     <dl class="garage-facts"><div><dt>MODULE FOOTPRINT</dt><dd>200 × 240 <small>mm</small></dd></div><div><dt>STACK PITCH</dt><dd>128 <small>mm</small></dd></div><div><dt>ROLLING DOOR</dt><dd>12 <small>articulated slats</small></dd></div><div><dt>SOURCE</dt><dd>Original <small>Blender geometry</small></dd></div></dl>
     <section class="garage-configurations" aria-labelledby="garage-config-title"><div class="garage-section-heading"><div><span class="section-number">THE MODULAR SYSTEM</span><h2 id="garage-config-title">Build out. Stack up.</h2></div><p>The garage, kitchen, and dining modules share a common footprint. Explore how the original parts come together.</p></div><div class="garage-config-grid">
-      ${layouts.map(l => `<button type="button" class="garage-config-card" data-configuration="${l.id}" aria-pressed="${l.id === 'garage'}"><div class="garage-card-visual"><img src="assets/garage/${l.thumbnail}" width="720" height="540" alt="${l.name} configuration, rendered from the original model." loading="lazy"><span class="garage-card-number">${l.number}</span><span class="garage-card-arrow" aria-hidden="true">↗</span></div><div class="garage-card-copy"><h3>${l.name}</h3><p>${l.copy}</p></div></button>`).join('')}
+      ${layouts.map(l => `<button type="button" class="garage-config-card" data-configuration="${l.id}" aria-pressed="${l.id === 'row'}"><div class="garage-card-visual"><img src="assets/garage/${l.thumbnail}" width="720" height="540" alt="${l.name} configuration, rendered from the original model." loading="lazy"><span class="garage-card-number">${l.number}</span><span class="garage-card-arrow" aria-hidden="true">↗</span></div><div class="garage-card-copy"><h3>${l.name}</h3><p>${l.copy}</p></div></button>`).join('')}
     </div></section>
     <section class="garage-about" aria-labelledby="garage-about-title"><div><span class="section-number">PRINT STUDY / 003</span><h2 id="garage-about-title">A garage with room to grow.</h2><div data-project-description></div></div><div class="garage-source-note"><h3>From the original model</h3><p>Nominal module footprint: 200 × 240 mm. The closed garage exterior is 200 × 261.7 × 132.6 mm, including its handle and roof hinges.</p><p>Stacking uses the source’s 128 mm pitch. Configurations are visualization studies; physical fit has not been tested.</p><a class="secondary-button" data-model-download>Download display model ↗</a><p class="muted">Display geometry in GLB format. Not a sliced print file.</p></div></section>
   `;
@@ -60,7 +60,7 @@ export function buildGarageProject(container, project) {
   const playButton = q('.garage-play');
   const orbit = q('[data-orbit]');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const initial = () => ({ layout: 'garage', door: 45, roof: 0, explode: 0, rotate: false, reset: 0, visible: true });
+  const initial = () => ({ layout: 'row', door: 45, roof: 0, explode: 0, rotate: false, reset: 0, visible: true });
   let state = initial(), mode = '3d', activePreset = '', ready = false, failed = false, playing = false, configuring = false;
   let disposed = false, scene, tourFrame = 0, tourTime = 0, lastTime = 0, inView = true;
   const intersection = new IntersectionObserver(entries => { inView = entries[0].isIntersecting; });
@@ -142,7 +142,7 @@ export function buildGarageProject(container, project) {
     catch { status.hidden = false; status.textContent = 'Fullscreen is unavailable in this browser.'; }
   });
   sync();
-  import('../assets/garage-viewer.js?v=fc5abaca34').then(async ({ createGarageScene }) => {
+  import('../assets/garage-viewer.js?v=c5e9e4f71d').then(async ({ createGarageScene }) => {
     if (disposed) return;
     const result = await createGarageScene(canvas, () => state, project.modelUrl, active => { configuring = active; sync(); });
     if (disposed) { result.dispose(); return; }

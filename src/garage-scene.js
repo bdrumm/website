@@ -161,7 +161,7 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
   ao.maxDistance = 0.1;
   composer.addPass(ao);
   composer.addPass(new OutputPass());
-  let inViewport = true;
+  let inViewport = false;
   const intersection = new IntersectionObserver((entries) => {
     inViewport = entries[0].isIntersecting;
   });
@@ -193,7 +193,7 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
   let cameraTransition = true;
   const cameraDestination = new THREE.Vector3();
   const targetDestination = new THREE.Vector3();
-  const configuration = createConfigurationMotion(units, { onChange: onConfigurationChange });
+  const configuration = createConfigurationMotion(units, { animateEntrance: true, onChange: onConfigurationChange });
   const updateMotionPreference = event => {
     motionReduced = event.matches;
     if (motionReduced) configuration.setLayout(getSettings().layout, true);
@@ -222,11 +222,13 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
     controls.update();
   });
   const update = (now) => {
-    const dt = Math.min((now - previousTime) / 1e3, 0.05);
-    previousTime = now;
     const s = getSettings();
+    const canRender = !document.hidden && inViewport && s.visible;
+    const dt = canRender ? Math.min((now - previousTime) / 1e3, 0.05) : 0;
+    previousTime = now;
     const blend = motionReduced ? 1 : 1 - Math.exp(-dt * 8);
     if (needsFraming || s.layout !== previousLayout || s.reset !== previousReset) {
+      const initialLayout = previousLayout === "";
       needsFraming = false;
       if (s.layout !== previousLayout) closingFrom = {door, roof, exploded, layout: previousLayout};
       previousLayout = s.layout;
@@ -247,6 +249,10 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
       const aspectFit = Math.max(1, 1.15 / camera.aspect);
       cameraDestination.sub(targetDestination).multiplyScalar(aspectFit).add(targetDestination);
       controls.maxDistance = Math.max(18, cameraDestination.distanceTo(targetDestination) * 1.6);
+      if (initialLayout) {
+        camera.position.copy(cameraDestination);
+        controls.target.copy(targetDestination);
+      }
       cameraTransition = true;
     }
     if (s.explode !== previousExplode) {
@@ -306,7 +312,7 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
     world.fog.far = viewDistance + 45;
     const far = Math.max(80, viewDistance + 60);
     if (camera.far !== far) { camera.far = far; camera.updateProjectionMatrix(); }
-    if (!document.hidden && inViewport && s.visible) composer.render();
+    if (canRender) composer.render();
     frame = requestAnimationFrame(update);
   };
   frame = requestAnimationFrame(update);
