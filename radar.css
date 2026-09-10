@@ -83,3 +83,15 @@
 }
 
 @media(max-width:380px){.radar-display-options,.radar-fix-panel dl{grid-template-columns:1fr}}
+
+/* Source signal schematics for the shared-picture component cards. */
+.radar-schematic{margin:24px 0;min-width:0}
+.radar-schematic-art{overflow:auto;border-radius:6px;background:#091525}
+.radar-schematic img{display:block;width:100%;height:auto;min-width:300px;max-width:380px;margin:0 auto}
+.radar-schematic figcaption{font:13px/1.6 var(--font-geist-mono),monospace;color:var(--muted);margin-top:12px}
+.radar-component-grid article{min-width:0}
+.radar-host-schematic{grid-template-columns:1.2fr 1fr;align-items:center}
+.radar-host-schematic .radar-schematic{margin:0}
+.radar-host-schematic h3{font-size:30px;line-height:1.2;margin:18px 0 24px}
+@media(max-width:1150px) and (min-width:901px){.radar-component-grid{grid-template-columns:1fr}.radar-component-grid article{border-right:0;border-bottom:1px solid var(--r-line)}.radar-component-number{float:right;font-size:40px;margin:0}.radar-schematic-art{max-width:480px}.radar-component-grid dl{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}}
+@media(max-width:620px){.radar-host-schematic{grid-template-columns:1fr}.radar-host-schematic h3{font-size:26px}.radar-schematic{margin:20px 0}}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 300" role="img" aria-labelledby="range-title range-desc">
+<title id="range-title">LD2410 range reporting schematic</title><desc id="range-desc">The 24 GHz radar reports moving and stationary distance and energy over UART. The ESP32 reads these reports and forwards them to the host over UDP port 5566. The reading defines a range arc, not a bearing or height.</desc>
+<defs><marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L8 4L0 8" fill="#d5aaff"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#e4eef6;font-size:16px}.small{font-size:13px;fill:#aec4d6}.box{fill:#132b3c;stroke:#587287;stroke-width:1.2}.flow{fill:none;stroke:#d5aaff;stroke-width:1.8;marker-end:url(#arrow)}.line{fill:none;stroke:#d5aaff;stroke-width:1.5}.accent{fill:#d5aaff}</style>
+<rect width="320" height="300" rx="6" fill="#091525"/>
+<text x="160" y="25" text-anchor="middle" class="small">24 GHz / RANGE WITHOUT BEARING</text>
+<rect x="22" y="51" width="120" height="57" rx="4" class="box"/><text x="82" y="75" text-anchor="middle">LD2410</text><text x="82" y="96" text-anchor="middle" class="small">moving + still</text>
+<path d="M170 57Q188 80 170 103M194 42Q225 80 194 118M220 30Q263 80 220 130" class="line"/>
+<text x="270" y="83" text-anchor="middle" class="small">range</text>
+<path d="M82 109V137" class="flow"/><rect x="22" y="144" width="276" height="43" rx="4" class="box"/><text x="160" y="171" text-anchor="middle">Distance + energy reports</text>
+<path d="M160 188V218" class="flow"/><text x="180" y="207" class="small">UART · 256000 baud</text>
+<rect x="22" y="225" width="276" height="43" rx="4" class="box"/><text x="160" y="252" text-anchor="middle">ESP32 report parser</text>
+<text x="160" y="290" text-anchor="middle" class="small">UDP 5566 → host range display</text>
+</svg>

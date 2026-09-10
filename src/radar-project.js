@@ -1,5 +1,5 @@
 import {GRID,CAMERAS,FLOOR,clamp} from './radar-simulation.js';
-import {engineeringContent} from './radar-overview.js';
+import {engineeringContent} from './radar-overview.js?v=csi-schematics-1';
 import {HARDWARE_PRESETS,hardwarePreset,formatError} from './radar-hardware.js';
 import {hardwareContent,presetDetail,hardwareResearchContent} from './radar-hardware-content.js';
 import {surveyHardware} from './radar-survey.js';

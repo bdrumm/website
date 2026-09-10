@@ -151,3 +151,5 @@ The demo is source-reviewed browser code, with synthetic observations and explic
 The radar modules in `src/radar-*.js` load directly as browser modules on the project page. `npm test` includes their geometry, scenario, hardware and building checks. Normal GitHub Pages publication uses the `main` branch at the repository root, preserving `CNAME` and `.nojekyll`.
 
 CSI Presence presents one main floor plan with Hybrid, Wi-Fi / RTI, Camera evidence and agreement display modes in the right sidebar. The floor-selection menu, lower building-level visualization and headline metrics panel have been removed. The “A shared picture” component summary follows the visualization. Hardware versions, live readings, signal pipeline, system/recovery, accuracy research and evidence remain in keyboard-accessible tabs, preserving controls, comparisons and walkthrough state.
+
+The “A shared picture” section includes source-based signal schematics for the Wi-Fi CSI mesh, LD2410 reports, both camera capture paths and the Python host. They show data interfaces and processing stages, not electrical wiring. SVG sources are in `assets/csi-*-schematic.svg`.

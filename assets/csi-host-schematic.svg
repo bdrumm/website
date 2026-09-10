@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 346" role="img" aria-labelledby="host-title host-desc">
+<title id="host-title">Python host processing schematic</title><desc id="host-desc">CSI records produce an RTI field. Camera JPEGs produce motion evidence. These combine through RF and camera fusion and room holds before display. Radar reports follow a separate range-display path to the operator console.</desc>
+<defs><marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L8 4L0 8" fill="#83f2d2"/></marker></defs>
+<style>text{font-family:Arial,sans-serif;fill:#e4eef6;font-size:16px}.small{font-size:13px;fill:#aec4d6}.box{fill:#132b3c;stroke:#587287;stroke-width:1.2}.flow{fill:none;stroke:#83f2d2;stroke-width:1.8;marker-end:url(#arrow)}.line{fill:none;stroke:#83f2d2;stroke-width:1.5}.accent{fill:#83f2d2}</style>
+<rect width="320" height="346" rx="6" fill="#091525"/>
+<text x="160" y="25" text-anchor="middle" class="small">PYTHON HOST / SOURCE PIPELINE</text>
+<rect x="20" y="44" width="84" height="42" rx="4" class="box"/><rect x="118" y="44" width="84" height="42" rx="4" class="box"/><rect x="216" y="44" width="84" height="42" rx="4" class="box"/>
+<g text-anchor="middle"><text x="62" y="71">CSI</text><text x="160" y="71">JPEG</text><text x="258" y="71">Radar</text></g>
+<path d="M62 87V115M160 87V115M258 87V115" class="flow"/>
+<rect x="20" y="122" width="84" height="42" rx="4" class="box"/><rect x="118" y="122" width="84" height="42" rx="4" class="box"/><rect x="216" y="122" width="84" height="42" rx="4" class="box"/>
+<g text-anchor="middle"><text x="62" y="149">RTI field</text><text x="160" y="149">Motion</text><text x="258" y="149">Ranges</text></g>
+<path d="M62 165V184H110M160 165V184H110V196" class="flow"/>
+<rect x="20" y="203" width="182" height="56" rx="4" class="box"/><text x="111" y="227" text-anchor="middle">RF / camera fusion</text><text x="111" y="247" text-anchor="middle" class="small">Room thresholds + holds</text>
+<path d="M110 260V285M258 165V285" class="flow"/>
+<rect x="20" y="292" width="280" height="38" rx="4" class="box"/><text x="160" y="317" text-anchor="middle">Operator console</text>
+</svg>
