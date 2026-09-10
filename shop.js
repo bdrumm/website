@@ -22,6 +22,7 @@ function detail(){const p=projects.find(p=>p.id===new URLSearchParams(location.s
  document.title=p.title+' — Parametric Space';document.getElementById('page-heading').textContent=p.title;document.getElementById('page-intro').textContent=p.summary||'';
  const content=el('div',undefined,'project-detail');const visual=image(p);
  if(p.experience==='garage'){root.append(link('← 3D projects','projects-3d.html','secondary-button category-back'));content.classList.add('has-model','garage-detail');buildGarageProject(content,p);root.append(content);document.querySelector('meta[name="description"]')?.setAttribute('content',p.summary);return;}
+ if(p.id==='station'){root.append(link('← All projects','projects.html','secondary-button category-back'));root.append(content);import('./src/station-project.js?v=635eee1818').then(({buildStationProject})=>buildStationProject(root,content,p)).catch(()=>content.append(el('p','Station could not load. Please try refreshing.')));return;}
  if(p.modelUrl){
   content.classList.add('has-model');
   const viewer=el('section',undefined,'model-viewer');viewer.setAttribute('aria-label',p.title+' interactive 3D concept');viewer.append(el('span','001 / PHOTO → FORM','section-number'));content.append(viewer);

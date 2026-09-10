@@ -6,9 +6,11 @@
   "scripts": {
     "build:model": "node scripts/build-arowana.mjs",
     "build:viewer": "esbuild src/model-viewer.js --bundle --format=esm --minify --outfile=assets/model-viewer.js",
-    "build": "npm run build:model && npm run build:viewer && npm run build:garage",
+    "build": "npm run build:model && npm run build:viewer && npm run build:garage && npm run build:station-viewer",
     "test": "node --test shop-core.test.mjs services/checkout/worker.test.mjs src/garage-configuration.test.mjs",
-    "build:garage": "esbuild src/garage-scene.js --bundle --format=esm --minify --outfile=assets/garage-viewer.js"
+    "build:garage": "esbuild src/garage-scene.js --bundle --format=esm --minify --outfile=assets/garage-viewer.js",
+    "build:station-model": "node scripts/build-station.mjs",
+    "build:station-viewer": "esbuild src/station-viewer.js --bundle --format=esm --minify --outfile=assets/station-viewer.js"
   },
   "repository": {
     "type": "git",

@@ -29,6 +29,73 @@ window.PARAMETRIC_SHOP = {
       "image": "assets/garage/simple-garage-thumbnail.jpg",
       "imageAlt": "The modular garage with its folding roof open and rolling door partly raised, rendered from the original model.",
       "available": false
+    },
+    {
+      "id": "station",
+      "title": "Station",
+      "section": "hardware",
+      "category": "HARDWARE / 001",
+      "action": "station",
+      "summary": "A pocket companion for the minute you’re in.",
+      "description": [
+        "A small aluminum companion for the clock, the weather and the next train. Station brings useful information into the room, with a round AMOLED display, touch and voice.",
+        "From the bedside to the kitchen: glance at your commute, start a timer, change a light or settle into a quiet night clock. Station OS brings these everyday interactions together on the Waveshare ESP32-S3-Touch-AMOLED-1.75C.",
+        "Explore the app states above. The interactive screen demos pair sample data with expressive lighting and motion, imagining what Station can feel like in everyday use. The device is a visual reconstruction; small exterior details are illustrative, not manufacturing CAD."
+      ],
+      "specs": [
+        [
+          "Body",
+          "Aluminum · Ø 51 × 12.1 mm"
+        ],
+        [
+          "Display",
+          "1.75″ AMOLED · 466 × 466"
+        ],
+        [
+          "Interaction",
+          "Two-point touch · dual microphones"
+        ],
+        [
+          "Audio",
+          "ES7210 input · ES8311 playback"
+        ],
+        [
+          "Compute",
+          "ESP32-S3R8 · 8 MB PSRAM · 16 MB flash"
+        ],
+        [
+          "Connectivity",
+          "2.4 GHz Wi-Fi · Bluetooth LE · USB-C"
+        ],
+        [
+          "Sensors",
+          "Six-axis IMU · real-time clock"
+        ],
+        [
+          "Carry",
+          "Pocket-sized circular enclosure"
+        ]
+      ],
+      "features": [
+        [
+          "Wake to the day",
+          "Time, weather and transit share a glanceable home screen."
+        ],
+        [
+          "Know your next train",
+          "Saved subway lines and arrival countdowns, without reaching for your phone."
+        ],
+        [
+          "A voice in the room",
+          "Listening, thinking and response states make the conversation visible."
+        ],
+        [
+          "Make the room respond",
+          "Timers, lights and scenes with focused, on-screen confirmations."
+        ]
+      ],
+      "modelUrl": "assets/models/station.glb",
+      "available": false
     }
   ]
 };

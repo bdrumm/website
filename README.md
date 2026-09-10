@@ -70,3 +70,10 @@ Configuration changes use `src/garage-configuration.js`: modules close before mo
 The faster configuration moves finish in approximately 1.8 seconds. In the side-by-side exploded view, each module moves onto a 400 mm pitch, leaving 70 mm gaps between the 330 mm expanded assemblies. Separate display carrier groups keep this spacing out of the transport coordinates. The camera adopts a near-frontal, aspect-fitted view and fog starts beyond the assemblies.
 
 The page opens in Side by side. All three modules enter in sequence using the same lift, horizontal travel, drop and bounce; normal configuration changes keep the settled garage anchored. Entrance progress waits for a visible 3D canvas, and reduced-motion mode shows the assembled row immediately. Reset all returns to Side by side.
+
+
+## Station preview
+
+`project.html?id=station` presents eight animated screen demos on a circular aluminum device. The model omits the keychain attachment, left-side port detail and right-side grille. It uses a closer camera with the bottom-right rim forward, a gentle left-to-right sway, limited drag tilt and native page scrolling over the preview. Reduced-motion preferences and pause controls are respected.
+
+The display renders at 1024 × 1024, with gradient voice animation, a thicker brightness arc, and no bottom callout pills or perimeter ticks. Data and interactions are simulated. `npm run build:station-model` rebuilds the device; `npm run build:station-viewer` bundles its viewer. The existing project viewers remain separate. `station.css` is loaded only for the Station route.
