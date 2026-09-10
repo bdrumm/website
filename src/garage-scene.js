@@ -1,3 +1,4 @@
+import {configureRotationControls,rotateModelWithKey} from './model-rotation-controls.js';
 import {createConfigurationMotion, rowExplosionOffset, explodedRowView} from './garage-configuration.js';
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
@@ -16,16 +17,16 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
   renderer.toneMappingExposure = 1.22;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   host.appendChild(renderer.domElement);
-  renderer.domElement.setAttribute("aria-label", "3D garage model. Drag to rotate, scroll or pinch to zoom.");
   renderer.domElement.setAttribute("role", "img");
   renderer.domElement.tabIndex = 0;
-  renderer.domElement.setAttribute("aria-label", "Garage 3D model. Drag or use arrow keys to orbit; scroll, pinch, or use plus and minus to zoom.");
+  renderer.domElement.setAttribute("aria-label", "Garage 3D model. Drag or use arrow keys to rotate. Scroll to move the page.");
   const world = new THREE.Scene();
   world.background = new THREE.Color("#d8dcd7");
   world.fog = new THREE.Fog("#d8dcd7", 20, 50);
   const camera = new THREE.PerspectiveCamera(33, 1, 0.04, 80);
   camera.position.set(4.3, 3.4, 5.9);
   const controls = new OrbitControls(camera, renderer.domElement);
+  configureRotationControls(controls);
   controls.enableDamping = true;
   controls.dampingFactor = 0.07;
   controls.enablePan = false;
@@ -215,20 +216,9 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
   };
   controls.addEventListener("start", stopCameraTransition);
   renderer.domElement.addEventListener("keydown", (event) => {
-    if (!["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "+", "=", "-"].includes(event.key)) return;
+    if (!rotateModelWithKey(camera, controls, event.key)) return;
     event.preventDefault();
     cameraTransition = false;
-    const offset = camera.position.clone().sub(controls.target);
-    const spherical = new THREE.Spherical().setFromVector3(offset);
-    if (event.key === "ArrowLeft") spherical.theta -= 0.14;
-    else if (event.key === "ArrowRight") spherical.theta += 0.14;
-    else if (event.key === "ArrowUp") spherical.phi -= 0.12;
-    else if (event.key === "ArrowDown") spherical.phi += 0.12;
-    else spherical.radius *= event.key === "-" ? 1.1 : 0.9;
-    spherical.phi = THREE.MathUtils.clamp(spherical.phi, 0.1, controls.maxPolarAngle);
-    spherical.radius = THREE.MathUtils.clamp(spherical.radius, controls.minDistance, controls.maxDistance);
-    camera.position.copy(controls.target).add(offset.setFromSpherical(spherical));
-    controls.update();
   });
   const update = (now) => {
     const s = getSettings();

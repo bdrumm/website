@@ -21,7 +21,7 @@ export function buildGarageProject(container, project) {
         <img class="garage-poster" src="assets/garage/simple-row-studio.jpg" width="1600" height="1100" alt="Garage, kitchen, and dining modules arranged side by side in a studio render.">
         <div class="garage-stage-top"><span class="section-number" data-view-label>INTERACTIVE 3D</span><div class="garage-view-mode" role="group" aria-label="Viewing mode"><button type="button" data-view="3d" aria-pressed="true">3D view</button><button type="button" data-view="studio" aria-pressed="false">Studio</button></div></div>
         <p class="garage-load-status" role="status" aria-live="polite">Preparing interactive model…</p>
-        <div class="garage-stage-bottom"><div class="garage-caption"><span class="section-number" data-figure>FIG. 02</span><strong data-layout-name>Side by side</strong><span data-view-hint>Drag to orbit · scroll or pinch to zoom</span></div><div class="garage-camera-controls"><button type="button" data-reset-camera aria-label="Reset camera" title="Reset camera">↺</button><button type="button" data-fullscreen aria-label="Expand viewer" title="Expand viewer">⛶</button></div></div>
+        <div class="garage-stage-bottom"><div class="garage-caption"><span class="section-number" data-figure>FIG. 02</span><strong data-layout-name>Side by side</strong><span data-view-hint>Drag to orbit · Scroll to move the page</span></div><div class="garage-camera-controls"><button type="button" data-reset-camera aria-label="Reset camera" title="Reset camera">↺</button><button type="button" data-fullscreen aria-label="Expand viewer" title="Expand viewer">⛶</button></div></div>
       </section>
       <aside class="garage-controls" aria-label="Garage controls">
         <div class="garage-controls-title"><h2>Make it yours</h2><span class="section-number">01—03</span></div>
@@ -80,7 +80,7 @@ export function buildGarageProject(container, project) {
     q('label[for="garage-door"]').textContent = state.layout === 'garage' ? 'Rolling door' : 'Rolling + entry doors';
     q('[data-figure]').textContent = `FIG. ${layout.number}`;
     q('[data-view-label]').textContent = mode === 'studio' || failed ? 'STUDIO RENDER' : 'INTERACTIVE 3D';
-    q('[data-view-hint]').textContent = mode === 'studio' || failed ? 'Cycles render · fixed studio pose' : 'Drag to orbit · scroll or pinch to zoom';
+    q('[data-view-hint]').textContent = mode === 'studio' || failed ? 'Cycles render · fixed studio pose' : 'Drag to orbit · Scroll to move the page';
     qa('[data-view]').forEach(button => { button.setAttribute('aria-pressed', String(button.dataset.view === mode)); button.disabled = failed && button.dataset.view === '3d'; });
     qa('[name="garage-layout"]').forEach(input => { input.checked = input.value === state.layout; });
     qa('[data-configuration]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.configuration === state.layout)));
@@ -142,7 +142,7 @@ export function buildGarageProject(container, project) {
     catch { status.hidden = false; status.textContent = 'Fullscreen is unavailable in this browser.'; }
   });
   sync();
-  import('../assets/garage-viewer.js?v=ca1e1f40c1').then(async ({ createGarageScene }) => {
+  import('../assets/garage-viewer.js?v=68e73feecc').then(async ({ createGarageScene }) => {
     if (disposed) return;
     const result = await createGarageScene(canvas, () => state, project.modelUrl, active => { configuring = active; sync(); });
     if (disposed) { result.dispose(); return; }

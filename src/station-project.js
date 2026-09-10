@@ -1,5 +1,5 @@
 import {buildStationStory} from './station-story.js';
-import {mountModelViewer} from '../assets/station-viewer.js?v=9f96005905';
+import {mountModelViewer} from '../assets/station-viewer.js?v=faeb2d8871';
 
 const element=(tag,text,className)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(className)node.className=className;return node;};
 const link=(label,url)=>{const node=element('a',label,'secondary-button');node.href=url;return node;};

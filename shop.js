@@ -1,4 +1,4 @@
-import {buildGarageProject} from './src/garage-project.js?v=7b06b169ed';
+import {buildGarageProject} from './src/garage-project.js?v=07e92f224e';
 import {buildStationStory} from './src/station-story.js?v=seamless-1';
 import {normalizeCart,cartTotal,money,MAX_QUANTITY} from './shop-core.mjs';
 const {projects=[],checkoutEndpoint=''}=window.PARAMETRIC_SHOP||{};
@@ -24,7 +24,7 @@ function catalogue(){
    const isGarage=p.experience==='garage';
    const modelUrl=isGarage?'assets/models/home/modular-garage.glb':p.modelUrl;
    const options=isGarage?{cameraPosition:[8,5,12]}:{};
-   import('./assets/model-viewer.js?v=6d64ef9877')
+   import('./assets/model-viewer.js?v=25ddd9c98a')
     .then(({mountModelViewer})=>mountModelViewer(preview,modelUrl,p.title,isGarage?'':p.action,options))
     .catch(()=>preview.append(el('p','Open the project to explore the model.')));
   }else{const visual=image(p);if(visual)card.append(visual);}
@@ -37,13 +37,13 @@ function detail(){const p=projects.find(p=>p.id===({arowana:'trout'}[new URLSear
  document.title=p.title+' — Parametric Space';document.getElementById('page-heading').textContent=p.title;document.getElementById('page-intro').textContent=p.summary||'';
  root.append(link('← All projects','projects.html','secondary-button category-back'));
  const content=el('div',undefined,'project-detail');const visual=image(p);
- if(p.id==='station'){root.append(content);import('./src/station-project.js?v=13aed9776c').then(({buildStationProject})=>buildStationProject(root,content,p)).catch(()=>content.append(el('p','The Station viewer is unavailable. Please reload to try again.')));return;}
+ if(p.id==='station'){root.append(content);import('./src/station-project.js?v=ba39a3a338').then(({buildStationProject})=>buildStationProject(root,content,p)).catch(()=>content.append(el('p','The Station viewer is unavailable. Please reload to try again.')));return;}
  if(p.experience==='radar'){document.documentElement.classList.add('radar-project-page');import('./src/radar-project.js?v=csi-4').then(({buildRadarProject})=>buildRadarProject(content,p)).catch(()=>{content.textContent='The simulation could not load. Please reload the page.';});root.append(content);document.querySelector('meta[name="description"]')?.setAttribute('content',p.summary);return;}
  if(p.experience==='garage'){content.classList.add('has-model','garage-detail');buildGarageProject(content,p);root.append(content);document.querySelector('meta[name="description"]')?.setAttribute('content',p.summary);return;}
  if(p.modelUrl){
   content.classList.add('has-model');
   const viewer=el('section',undefined,'model-viewer');viewer.setAttribute('aria-label',p.title+' interactive 3D print model');viewer.append(el('span',p.category||'3D PRINT','section-number'));if(p.id==='station')buildStationStory(content,viewer);else content.append(viewer);
-  import('./assets/model-viewer.js?v=6d64ef9877').then(({mountModelViewer})=>mountModelViewer(viewer,p.modelUrl,p.title,p.action)).catch(()=>viewer.append(el('p','The 3D viewer is unavailable. Try reloading, or download the model below.')));
+  import('./assets/model-viewer.js?v=25ddd9c98a').then(({mountModelViewer})=>mountModelViewer(viewer,p.modelUrl,p.title,p.action)).catch(()=>viewer.append(el('p','The 3D viewer is unavailable. Try reloading, or download the model below.')));
  }else if(visual)content.append(visual);
  const info=el('div');for(const paragraph of p.description||[])info.append(el('p',paragraph));
  if(p.available){info.append(el('p',money(p.unitAmount,p.currency),'project-price'));const button=el('button','Add to cart →','send-button');button.type='button';button.addEventListener('click',()=>add(p));info.append(button,link('View cart','cart.html','secondary-button'));}else info.append(el('p','Not currently available to purchase.','muted'));
