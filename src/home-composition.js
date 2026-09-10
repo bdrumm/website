@@ -10,5 +10,5 @@ export function homePlacement(id,mobile,index=0){
   return {position:item[mobile?'mobile':'desktop'],size:item.size};
 }
 export function stationRotation(time){
-  return [.16+Math.sin(time*.42)*.20,-.32+time*Math.PI/12,-.10+Math.sin(time*.31)*.12];
+  return [.14+Math.sin(time*.42)*.16,-.12+Math.sin(time*.30)*.60,-.10+Math.sin(time*.31)*.12];
 }

@@ -5,7 +5,7 @@ import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {Euler,Vector3} from 'three';
 import {stationRotation} from './home-composition.js';
 
-test('Station navigation retains a smooth circular screen and valid geometry through a full turn',async()=>{
+test('Station navigation retains a smooth circular screen and valid geometry during a front-facing sway',async()=>{
   const bytes=await readFile(new URL('../assets/models/home/station.glb',import.meta.url));
   const gltf=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
   const screen=gltf.scene.getObjectByName('StationScreen');
@@ -29,9 +29,19 @@ test('Station navigation retains a smooth circular screen and valid geometry thr
     for(const index of geometry.index?.array||[])assert.ok(index<geometry.attributes.position.count);
   });
   assert.ok(vertices>30000,'Preserve smooth shell and exterior detail.');
-  const initial=stationRotation(0),final=stationRotation(24);
-  assert.ok(Math.abs(final[1]-initial[1]-2*Math.PI)<.00001,'Station should make a complete turn.');
-  const normal=new Vector3(0,0,1),front=[];
-  for(let t=0;t<=24;t+=.5)front.push(normal.clone().applyEuler(new Euler(...stationRotation(t))).z);
-  assert.ok(Math.min(...front)<-.9&&Math.max(...front)>.9,'The turn exposes both the screen and back.');
+  const normal=new Vector3(0,0,1),front=[],yaw=[];
+  for(let t=0;t<=600;t+=.25){
+    const rotation=stationRotation(t);yaw.push(rotation[1]);
+    front.push(normal.clone().applyEuler(new Euler(...rotation)).z);
+  }
+  assert.ok(Math.min(...front)>.65,'Station must keep its display facing the viewer throughout the sway.');
+  assert.ok(Math.max(...yaw)-Math.min(...yaw)>1,'Station should still show a visible side-to-side sway.');
+});
+
+test('the catalogue garage model contains only the individual garage',async()=>{
+  const bytes=await readFile(new URL('../assets/models/home/modular-garage.glb',import.meta.url));
+  const gltf=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
+  assert.ok(gltf.scene.getObjectByName('UNIT_Garage'));
+  assert.equal(gltf.scene.getObjectByName('UNIT_Kitchen'),undefined);
+  assert.equal(gltf.scene.getObjectByName('UNIT_Dining'),undefined);
 });

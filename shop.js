@@ -14,9 +14,24 @@ function shopLink(p){if(!p.shopUrl)return null;try{const u=new URL(p.shopUrl);if
 function projectHref(id){return 'project.html?id='+encodeURIComponent(id);}
 function empty(title,copy){const box=el('div',undefined,'empty-state');box.append(el('h2',title),el('p',copy));root.append(box);}
 function add(p){cart=normalizeCart([...cart,{id:p.id,quantity:1}],projects);save();document.getElementById('shop-status').textContent=`${p.title} added to your cart.`;}
-function catalogue(){const selected=projects;if(!selected.length){empty('Projects are on their way.','Get in touch to discuss a project.');root.append(link('Get in touch →','index.html#contact-title','secondary-button'));return;}
+function catalogue(){
+ if(!projects.length){empty('Projects are on their way.','Get in touch to discuss a project.');root.append(link('Get in touch →','index.html#contact-title','secondary-button'));return;}
  const grid=el('div',undefined,'project-grid');
- for(const p of selected){const card=el('article',undefined,'project-card');const visual=image(p);if(p.modelUrl&&p.experience!=='garage'){const preview=el('div',undefined,'catalogue-model');card.append(preview);import('./assets/model-viewer.js?v=33272705ca').then(({mountModelViewer})=>mountModelViewer(preview,p.modelUrl,p.title,p.action)).catch(()=>preview.append(el('p','Open the project to download the model.')));}else if(visual){if(p.experience==='garage'){const cover=link('',projectHref(p.id),'garage-catalogue-cover');cover.setAttribute('aria-label','Explore '+p.title);cover.append(visual);card.append(cover);}else card.append(visual);}card.append(el('span','PROJECT / '+String(projects.indexOf(p)+1).padStart(2,'0'),'section-number'),el('h2',p.title),el('p',p.summary));card.append(link('Explore project →',projectHref(p.id),'secondary-button'));grid.append(card);}root.append(grid);
+ for(const [index,p] of projects.entries()){
+  const card=el('article',undefined,'project-card');card.dataset.projectId=p.id;
+  if(p.modelUrl){
+   const preview=el('div',undefined,'catalogue-model');card.append(preview);
+   const isGarage=p.experience==='garage';
+   const modelUrl=isGarage?'assets/models/home/modular-garage.glb':p.modelUrl;
+   const options=isGarage?{cameraPosition:[8,5,12]}:{};
+   import('./assets/model-viewer.js?v=1d677ceab5')
+    .then(({mountModelViewer})=>mountModelViewer(preview,modelUrl,p.title,isGarage?'':p.action,options))
+    .catch(()=>preview.append(el('p','Open the project to explore the model.')));
+  }else{const visual=image(p);if(visual)card.append(visual);}
+  card.append(el('span','PROJECT / '+String(index+1).padStart(2,'0'),'section-number'),el('h2',p.title),el('p',p.summary));
+  card.append(link('Explore project →',projectHref(p.id),'secondary-button'));grid.append(card);
+ }
+ root.append(grid);
 }
 function detail(){const p=projects.find(p=>p.id===({arowana:'trout'}[new URLSearchParams(location.search).get('id')]||new URLSearchParams(location.search).get('id')));if(!p){empty('Project not found.','Choose a project from the project list.');root.append(link('All projects →','projects.html','secondary-button'));return;}
  document.title=p.title+' — Parametric Space';document.getElementById('page-heading').textContent=p.title;document.getElementById('page-intro').textContent=p.summary||'';
@@ -27,7 +42,7 @@ function detail(){const p=projects.find(p=>p.id===({arowana:'trout'}[new URLSear
  if(p.modelUrl){
   content.classList.add('has-model');
   const viewer=el('section',undefined,'model-viewer');viewer.setAttribute('aria-label',p.title+' interactive 3D print model');viewer.append(el('span',p.category||'3D PRINT','section-number'));if(p.id==='station')buildStationStory(content,viewer);else content.append(viewer);
-  import('./assets/model-viewer.js?v=33272705ca').then(({mountModelViewer})=>mountModelViewer(viewer,p.modelUrl,p.title,p.action)).catch(()=>viewer.append(el('p','The 3D viewer is unavailable. Try reloading, or download the model below.')));
+  import('./assets/model-viewer.js?v=1d677ceab5').then(({mountModelViewer})=>mountModelViewer(viewer,p.modelUrl,p.title,p.action)).catch(()=>viewer.append(el('p','The 3D viewer is unavailable. Try reloading, or download the model below.')));
  }else if(visual)content.append(visual);
  const info=el('div');for(const paragraph of p.description||[])info.append(el('p',paragraph));
  if(p.available){info.append(el('p',money(p.unitAmount,p.currency),'project-price'));const button=el('button','Add to cart →','send-button');button.type='button';button.addEventListener('click',()=>add(p));info.append(button,link('View cart','cart.html','secondary-button'));}else info.append(el('p','Not currently available to purchase.','muted'));

@@ -130,7 +130,7 @@ The transparent logo is `assets/logo-ps-transparent.png` (RGBA, transparent back
 The page opens in Side by side. All three modules enter in sequence using the same lift, horizontal travel, drop and bounce; normal configuration changes keep the settled garage anchored. Entrance progress waits for a visible 3D canvas, and reduced-motion mode shows the assembled row immediately. Reset all returns to Side by side.
 
 
-Station’s navigation model is generated with `npm run build:home-station`: a regular 360-segment shell and the complete circular screen, bezel and exterior details replace the decimated mesh. The home display uses the same Station UI as the project page, drawn at 1024 × 1024 with anisotropic filtering. It makes a full turn every 24 seconds with a slight tilt; hovering, pausing, or reduced-motion preferences freeze the turn. The center monogram and tagline have been removed, and the larger models use a closer, staggered arrangement.
+Station’s navigation model is generated with `npm run build:home-station`: a regular 360-segment shell and the complete circular screen, bezel and exterior details replace the decimated mesh. The home display uses the same Station UI as the project page, drawn at 1024 × 1024 with anisotropic filtering. It sways from side to side while keeping its screen facing forward; hovering, pausing, or reduced-motion preferences freeze the turn. The center monogram and tagline have been removed, and the larger models use a closer, staggered arrangement.
 
 
 ## Station preview
@@ -138,3 +138,5 @@ Station’s navigation model is generated with `npm run build:home-station`: a r
 `project.html?id=station` presents eight animated screen demos on a circular aluminum device. The model omits the keychain attachment, left-side port detail and right-side grille. It uses a closer camera with the bottom-right rim forward, a gentle left-to-right sway, limited drag tilt and native page scrolling over the preview. Reduced-motion preferences and pause controls are respected.
 
 The display renders at 1024 × 1024, with gradient voice animation, a thicker brightness arc, and no bottom callout pills or perimeter ticks. Data and interactions are simulated. `npm run build:station-model` rebuilds the device; `npm run build:station-viewer` bundles its viewer. The existing project viewers remain separate. `station.css` is loaded only for the Station route.
+
+The project catalogue renders the individual garage from `assets/models/home/modular-garage.glb` in the shared interactive viewer. It starts from a three-quarter angle and supports rotation, dragging and keyboard controls. The garage detail page retains its full multi-module experience.

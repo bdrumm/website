@@ -7,14 +7,14 @@ import {configureStationPreview,tiltStationWithKey} from './station-preview-cont
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
-export async function mountModelViewer(host,modelUrl,title="3D print",actionKind=""){
+export async function mountModelViewer(host,modelUrl,title="3D print",actionKind="",options={}){
  const isStation=actionKind==='station';
  const canvas=document.createElement('canvas');canvas.setAttribute('aria-label',title+(isStation?' model. Drag or use arrow keys to tilt slightly. Scroll to move the page.':' model. Use drag, scroll, or the action controls below.'));canvas.tabIndex=0;
  const stage=document.createElement('div');stage.className='model-stage';stage.append(canvas);host.append(stage);
  const status=document.createElement('p');status.className='viewer-status';status.setAttribute('role','status');status.textContent='Loading 3D model…';host.append(status);
  let renderer;try{renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});}catch{status.textContent='3D is unavailable in this browser. Try another browser to view the model.';stage.remove();return;}
  renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.25;
- const scene=new THREE.Scene();const camera=new THREE.PerspectiveCamera(36,1,.1,100);camera.position.set(-.1,1.8,12.5);
+ const scene=new THREE.Scene();const camera=new THREE.PerspectiveCamera(36,1,.1,100);camera.position.set(...(options.cameraPosition||[-.1,1.8,12.5]));
  scene.add(new THREE.HemisphereLight(0xffffff,0xa1a5bf,2.5));for(const [x,y,z,power] of [[-5,7,6,3],[5,2,-5,2],[0,-3,5,1]]){const light=new THREE.DirectionalLight(0xffffff,power);light.position.set(x,y,z);scene.add(light);}
  const baguetteStudio=actionKind==='open'?installBaguetteStudio(renderer,scene,camera):null;
  const reducedMotion=matchMedia('(prefers-reduced-motion: reduce)').matches;
