@@ -10,7 +10,7 @@ export function buildRadarProject(container){
  container.className='radar-experience';
  container.innerHTML=`
  <div class="radar-title"><div><span class="radar-kicker">HARDWARE / 002 · ESP32 SENSOR MESH</span><h1>Presence across<br>every level.</h1></div><p>A sensor network on each floor. Explore simultaneous presence, move through the stairwell, and compare floor-local evidence with a shared building position.</p></div>
- <nav class="radar-nav" aria-label="Project sections"><a href="#simulation">Simulation ↗</a><a href="#hardware">Hardware versions ↓</a><a href="#accuracy">Accuracy research ↓</a><a href="#components">Components ↓</a><a href="#engineering">Signal pipeline ↓</a><a href="#evidence">Evidence & limits ↓</a><span>SYNTHETIC DATA · NO LIVE DEVICES</span></nav>
+ <nav class="radar-nav" aria-label="Project sections"><a href="#simulation">Visualization ↓</a><a href="#components">A shared picture ↓</a><a href="#project-details">Project details ↓</a><span>SYNTHETIC DATA · NO LIVE DEVICES</span></nav>
  <section id="simulation" aria-label="Interactive presence-sensing simulation">
  <div class="radar-building-panel"><div class="radar-building-heading"><div><span class="radar-kicker">BUILDING / INDEPENDENT FLOOR NETWORKS</span><h2>Presence on every level.</h2></div><label>Building size <select data-building-count aria-label="Number of building floors"><option value="2">2 floors</option><option value="3" selected>3 floors</option><option value="4">4 floors</option></select></label></div><div class="radar-building-scenes" role="group" aria-label="Building scenarios"><button type="button" data-building-scene="distributed">Across all floors</button><button type="button" data-building-scene="stairs">Stairwell handoff</button><button type="button" data-building-scene="empty">Empty building</button></div><div class="radar-level-cards" data-level-cards role="group" aria-label="Select a floor to inspect"></div><div class="radar-building-status"><span data-building-summary></span><span data-building-inventory></span></div><div class="radar-level-actions"><strong data-active-level></strong><button type="button" data-place-level>Place target here</button><button type="button" data-clear-level>Clear target</button><button type="button" data-toggle-level>Take floor sensors offline</button></div><div class="radar-stair-status"><span class="radar-kicker">STAIRWELL</span><strong data-stair-state></strong><span data-stair-position></span></div><p class="radar-building-note">Each floor is 10 × 6 m, with a 3.3 m floor-to-floor height and 3 m clear space. Solid slabs block observations in this model; only the marked stair opening connects levels. Selecting a floor changes the view, not the targets.</p></div>
  <div class="radar-console"><div class="radar-map">
@@ -41,6 +41,7 @@ export function buildRadarProject(container){
  ${engineeringContent()}
  `;
  const q=s=>container.querySelector(s),qa=s=>[...container.querySelectorAll(s)];
+ const layout=arrangeProjectContent(container);
  const sim=new BuildingSimulation();let snap=sim.snapshot,layer='hybrid',showLinks=true,showTruth=true,selected='A',isolated=false,linkId='',playing=!matchMedia('(prefers-reduced-motion: reduce)').matches,speed=1,history=[],lastSummary=-1;
  const canvas=q('[data-floor]'),ctx=canvas.getContext('2d'),trace=q('[data-trace]'),tx=trace.getContext('2d');
  const elevation=q('[data-elevation]'),ez=elevation.getContext('2d');
@@ -138,7 +139,7 @@ export function buildRadarProject(container){
  elevation.addEventListener('keydown',e=>{const step={ArrowLeft:[-.2,0],ArrowRight:[.2,0],ArrowUp:[0,.1],ArrowDown:[0,-.1]}[e.key];if(step){e.preventDefault();sim.move(snap.target.x+step[0],snap.target.y,snap.target.z+step[1]);refresh();}});
  let surveyUrl=null;
  q('[data-survey]').onclick=async()=>{const button=q('[data-survey]'),layout=sim.mountLayout,condition=sim.condition;button.disabled=true;q('[data-survey-results]').innerHTML='';const results=[];try{for(const p of HARDWARE_PRESETS){q('[data-survey-status]').textContent='Calculating '+p.version+' / '+p.name+'…';await new Promise(r=>setTimeout(r,20));const r=surveyHardware(p.id,layout,condition);results.push(r);q('[data-survey-results]').insertAdjacentHTML('beforeend',`<tr><td>${r.version} / ${r.name}</td><td>${r.resolved} / ${r.total}</td><td>${formatError(r.median)}</td><td>${formatError(r.p95)}</td><td>${formatError(r.max)}</td><td>${(100*r.within1cm/r.total).toFixed(1)}%</td></tr>`);}q('[data-survey-status]').textContent='Single-floor comparison completed · '+(layout==='multi'?'distributed heights':'single mounting level')+' · '+condition+'. Results are from assumed sensor noise, not measured hardware.';if(surveyUrl)URL.revokeObjectURL(surveyUrl);surveyUrl=URL.createObjectURL(new Blob([JSON.stringify({simulation:true,units:'meters',reference:'same 144 points; precision observations only; no RF prior',results},null,2)],{type:'application/json'}));const link=q('[data-survey-download]');link.href=surveyUrl;link.hidden=false;}catch(error){q('[data-survey-status]').textContent='Comparison could not complete: '+error.message;}finally{button.disabled=false;}};
- let visible=true,disposed=false,last=performance.now(),acc=0;const ro=new ResizeObserver(resize);ro.observe(canvas);const io=new IntersectionObserver(e=>visible=e[0].isIntersecting);io.observe(q('#simulation'));
+ let visible=true,disposed=false,last=performance.now(),acc=0;const ro=new ResizeObserver(resize);ro.observe(canvas);const inView=new Set();const io=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting)inView.add(entry.target);else inView.delete(entry.target);}visible=inView.size>0;});io.observe(q('#simulation'));io.observe(q('#readings'));
  function frame(now){if(disposed)return;const delta=Math.min((now-last)/1000,.25);last=now;if(playing&&visible&&!document.hidden){acc+=delta;if(acc>=.1){snap=sim.update(acc*speed);acc=0;const l=snap.links.find(l=>l.id===linkId);history.push({t:sim.time,v:l?.score||0});history=history.filter(h=>h.t>=sim.time-20);render();}}requestAnimationFrame(frame);}
  window.addEventListener('themechange',()=>{drawTrace();});
  const motionPreference=matchMedia('(prefers-reduced-motion: reduce)');motionPreference.addEventListener('change',e=>{if(e.matches){playing=false;syncControls();}});
@@ -148,5 +149,61 @@ export function buildRadarProject(container){
  if(context?.registerTool){const tools=[{name:'configure_presence_simulation',description:'Configure the visible educational CSI demo. Changes only synthetic browser state.',inputSchema:{type:'object',properties:{scenario:{type:'string',enum:scenarios.map(s=>s[0])},nodes:{type:'integer',enum:[4,6,8,10,12]},playing:{type:'boolean'},hardware:{type:'string',enum:HARDWARE_PRESETS.map(p=>p.id)},height:{type:'number',minimum:.2,maximum:2.7},viewedLevel:{type:'integer',minimum:0,maximum:3},levelCount:{type:'integer',enum:[2,3,4]},mountLayout:{type:'string',enum:['multi','flat']},condition:{type:'string',enum:['surveyed','drift','occluded']}},additionalProperties:false},annotations:{readOnlyHint:false,untrustedContentHint:false},execute(input){if(!input||typeof input!=='object'||Array.isArray(input))throw Error('Expected an object');if(Object.keys(input).some(k=>!['scenario','nodes','playing','hardware','height','mountLayout','condition','viewedLevel','levelCount'].includes(k)))throw Error('Unknown setting');if(input.scenario!==undefined&&!scenarios.some(s=>s[0]===input.scenario))throw Error('Unknown scenario');if(input.nodes!==undefined&&![4,6,8,10,12].includes(input.nodes))throw Error('Invalid node count');if(input.playing!==undefined&&typeof input.playing!=='boolean')throw Error('Invalid playing value');if(input.hardware!==undefined)hardwarePreset(input.hardware);if(input.height!==undefined&&(!Number.isFinite(input.height)||input.height<.2||input.height>2.7))throw Error('Invalid height');if(input.mountLayout!==undefined&&!['multi','flat'].includes(input.mountLayout))throw Error('Invalid mount layout');if(input.condition!==undefined&&!['surveyed','drift','occluded'].includes(input.condition))throw Error('Invalid condition');if(input.levelCount!==undefined&&![2,3,4].includes(input.levelCount))throw Error('Invalid floor count');if(input.viewedLevel!==undefined&&(!Number.isInteger(input.viewedLevel)||input.viewedLevel<0||input.viewedLevel>=(input.levelCount??sim.levelCount)))throw Error('Invalid viewed floor');if(input.levelCount!==undefined)sim.configure({levelCount:input.levelCount});if(input.viewedLevel!==undefined)sim.setViewedLevel(input.viewedLevel);if(input.scenario!==undefined)sim.setScenario(input.scenario);if(input.nodes!==undefined)sim.configure({count:input.nodes});const settings=Object.fromEntries(['hardware','mountLayout','condition'].filter(k=>input[k]!==undefined).map(k=>[k,input[k]]));if(Object.keys(settings).length)sim.configure(settings);if(input.height!==undefined)sim.move(sim.target.x,sim.target.y,input.height);if(input.playing!==undefined)playing=input.playing;refresh(true);return{scenario:sim.scenario,nodes:sim.count,hardware:sim.hardware,height:sim.target.z,viewedLevel:sim.viewedLevel,levelCount:sim.levelCount,mountLayout:sim.mountLayout,condition:sim.condition,playing,simulation:true};}},{name:'read_presence_simulation',description:'Read synthetic room states, link count, and settings from the visible demo.',inputSchema:{type:'object',properties:{},additionalProperties:false},annotations:{readOnlyHint:true,untrustedContentHint:false},execute(input){if(!input||typeof input!=='object'||Array.isArray(input)||Object.keys(input).length)throw Error('Expected empty object');return{simulation:true,scenario:sim.scenario,nodes:sim.count,links:snap.links.length,playing,hardware:sim.hardware,condition:sim.condition,mountLayout:sim.mountLayout,trackedObject:hardwarePreset(sim.hardware).target,estimatedLocalXYZ:snap.fusion.estimate,estimatedGlobalXYZ:snap.worldEstimate,simulatedError3d:snap.worldError,viewedLevel:sim.viewedLevel,levels:sim.levels.map(l=>({name:l.name,baseZ:l.baseZ,state:l.state,sensorsEnabled:l.enabled,precisionObservations:l.snapshot.rawObservationCount})),stairwell:sim.building.stairState,rooms:snap.zones.map(z=>({name:z.name,heat:z.level,occupied:z.occupied,coverage:z.coverage}))};}}];for(const tool of tools)try{Promise.resolve(context.registerTool(tool,{signal:lifecycle.signal})).catch(()=>{});}catch{}}
  const stages=[['Queued','One node is selected. Its neighbors keep sensing.'],['Download','The node downloads an image into its spare application slot.'],['Boot & verify','The new image boots pending verification. The host expects the correct ELF hash.'],['Rollback','In this failure scenario the new image does not verify. The prior slot is restored.'],['Rollout halted','The host stops the staged rollout. Remaining nodes keep their previous firmware.']];let ota=0;
  q('[data-ota-next]').onclick=()=>{ota=(ota+1)%stages.length;q('[data-ota-stage]').textContent=stages[ota][0];q('[data-ota-copy]').textContent=stages[ota][1];q('[data-ota-progress]').value=ota;q('[data-ota-next]').textContent=ota===4?'Restart walkthrough ↺':'Next stage →';};
- refresh(true);resize();requestAnimationFrame(frame);
+ refresh(true);resize();bindProjectTabs(container,layout,()=>drawTrace(),lifecycle.signal);requestAnimationFrame(frame);
+}
+
+// Move the existing controls and content once; tab changes preserve their state.
+function arrangeProjectContent(container){
+ const q=selector=>container.querySelector(selector);
+ const make=(tag,className)=>{const node=document.createElement(tag);node.className=className;return node;};
+ const simulation=q('#simulation'),console=q('.radar-console'),controls=q('.radar-controls');
+ const visuals=make('div','radar-visuals');console.prepend(visuals);visuals.append(q('.radar-map'),q('.radar-spatial'));
+ const sidebar=make('aside','radar-sidebar');sidebar.setAttribute('aria-label','Floor selection and simulation settings');console.append(sidebar);
+ const floors=make('section','radar-floor-picker');floors.setAttribute('aria-labelledby','radar-floor-picker-title');
+ const floorTitle=make('h2','radar-kicker');floorTitle.id='radar-floor-picker-title';floorTitle.textContent='SELECT A FLOOR';
+ floors.append(floorTitle,q('[data-level-cards]'),q('.radar-level-actions'));sidebar.append(floors,controls);
+ const settings=make('details','radar-settings'),settingsTitle=document.createElement('summary');settingsTitle.textContent='Measurement & sensor settings';settings.append(settingsTitle);
+ for(const selector of ['label[for="radar-condition"]','[data-condition]','[data-condition-copy]','.radar-control-pair','.radar-range:has([data-threshold])','.radar-toggles','.radar-height-controls','.radar-tuning'])settings.append(q(selector));
+ controls.append(settings);
+ // The canvas description stays available even when the live-readings tab is hidden.
+ simulation.append(q('#radar-accessible-summary'));
+ const readings=make('section','radar-readings');readings.id='readings';
+ const fix=q('.radar-spatial aside');fix.classList.add('radar-fix-panel');
+ readings.append(fix,q('.radar-mount-table'),q('.radar-evidence-row'),q('.radar-inspect-row'),...simulation.querySelectorAll(':scope > .radar-detail, :scope > .radar-model-note'));
+ const components=q('#components');simulation.after(components);
+ q('#hardware').append(components.querySelector('.radar-detail'));
+ const details=make('section','radar-project-details');details.id='project-details';details.setAttribute('aria-labelledby','radar-details-title');
+ const title=make('h2','radar-kicker');title.id='radar-details-title';title.textContent='PROJECT DETAILS';
+ const tablist=make('div','radar-tab-list');tablist.setAttribute('role','tablist');tablist.setAttribute('aria-label','Project details');
+ const body=make('div','radar-tab-panels');details.append(title,tablist,body);components.after(details);
+ const entries=[['hardware','Hardware versions'],['readings','Live readings'],['engineering','Signal pipeline'],['system','System & recovery'],['accuracy','Accuracy research'],['evidence','Evidence & limits']];
+ const tabs=entries.map(([id,label],index)=>{
+  const panel=id==='readings'?readings:q('#'+id),button=document.createElement('button');
+  button.type='button';button.id='radar-tab-'+id;button.textContent=label;button.setAttribute('role','tab');button.setAttribute('aria-controls',id);button.setAttribute('aria-selected',String(index===0));button.tabIndex=index===0?0:-1;
+  panel.classList.add('radar-tab-panel');panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby',button.id);panel.tabIndex=0;panel.hidden=index!==0;
+  tablist.append(button);body.append(panel);return{button,panel};
+ });
+ return{tabs};
+}
+function bindProjectTabs(container,{tabs},onChange,signal){
+ const select=(tab,{focus=false,writeHash=false}={})=>{
+  for(const entry of tabs){const active=entry===tab;entry.button.setAttribute('aria-selected',String(active));entry.button.tabIndex=active?0:-1;entry.panel.hidden=!active;}
+  if(writeHash&&location.hash!=='#'+tab.panel.id)history.pushState(history.state,'','#'+tab.panel.id);
+  if(focus){tab.button.focus({preventScroll:true});tab.button.scrollIntoView({block:'nearest',inline:'nearest'});}
+  requestAnimationFrame(onChange);
+ };
+ for(const [index,tab] of tabs.entries()){
+  tab.button.addEventListener('click',()=>select(tab,{writeHash:true}),{signal});
+  tab.button.addEventListener('keydown',event=>{
+   const next=event.key==='ArrowRight'?(index+1)%tabs.length:event.key==='ArrowLeft'?(index+tabs.length-1)%tabs.length:event.key==='Home'?0:event.key==='End'?tabs.length-1:null;
+   if(next===null)return;event.preventDefault();select(tabs[next],{focus:true,writeHash:true});
+  },{signal});
+ }
+ const revealHash=()=>{
+  let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}
+  const target=[...container.querySelectorAll('[id]')].find(node=>node.id===id);if(!target)return;
+  const tab=tabs.find(entry=>entry.panel===target||entry.panel.contains(target));if(tab)select(tab);
+  requestAnimationFrame(()=>(tab&&target===tab.panel?tab.button.parentElement:target).scrollIntoView({block:'start'}));
+ };
+ window.addEventListener('hashchange',revealHash,{signal});revealHash();
 }

@@ -21,6 +21,8 @@ Selecting a floor changes the display only. It does not move references, choose 
 
 ## Controls and scenarios
 
+The selected-floor plan and whole-building elevation share the main visualization. Floor selection sits to its right on desktop and above it on narrow screens. The “A shared picture” component summary follows the visualization and metrics. Hardware versions, live readings, signal pipeline, system/recovery, accuracy research and evidence are separate tabs below the summary; switching tabs preserves simulation and walkthrough state. Detailed mounting, height and measurement controls are under “Measurement & sensor settings.”
+
 - **Across all floors:** one synthetic reference on each floor, with offset paths and a shared clock.
 - **Stairwell handoff:** one reference approaches the shaft, climbs to the top floor, visits the landing and returns along a continuous loop.
 - **Empty building:** removes all references; each room's hold expires independently.
