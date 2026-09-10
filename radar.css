@@ -95,3 +95,31 @@
 .radar-host-schematic h3{font-size:30px;line-height:1.2;margin:18px 0 24px}
 @media(max-width:1150px) and (min-width:901px){.radar-component-grid{grid-template-columns:1fr}.radar-component-grid article{border-right:0;border-bottom:1px solid var(--r-line)}.radar-component-number{float:right;font-size:40px;margin:0}.radar-schematic-art{max-width:480px}.radar-component-grid dl{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}}
 @media(max-width:620px){.radar-host-schematic{grid-template-columns:1fr}.radar-host-schematic h3{font-size:26px}.radar-schematic{margin:20px 0}}
+
+/* Abstract signal fields retain the diagrams' technical meaning. */
+.radar-schematic-art{overflow:hidden}
+.radar-schematic img{width:100%;height:auto;min-width:0;max-width:none}
+.radar-schematic figcaption{font-family:var(--font-geist),Arial,sans-serif;font-size:14px}
+.radar-precision-example{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:36px;padding:28px;background:var(--r-soft);border:1px solid var(--r-line);border-radius:6px;margin:0 0 30px;align-items:center}
+.radar-precision-visual{min-width:0}
+.radar-precision-visual svg{width:100%;max-width:480px;height:auto;display:block;margin:0 auto}
+.radar-precision-visual svg text{fill:#bdcfde;font:15px Arial,sans-serif}
+.radar-precision-legend{display:flex;justify-content:center;gap:10px 18px;flex-wrap:wrap;margin-top:16px;font-size:13px;line-height:1.5}
+.radar-precision-legend span{display:flex;align-items:center;gap:7px}
+.radar-precision-legend i{display:inline-block;width:9px;height:9px;border-radius:50%}
+.radar-precision-legend .sample{background:#78a7e4}
+.radar-precision-legend .tolerance{background:transparent;border:1.5px solid #2f9b7e;width:14px;height:14px}
+.radar-precision-legend b{font-weight:500;font-size:20px;line-height:1}
+.radar-precision-legend .mean{color:#a87530}
+.radar-precision-copy h3{font-size:clamp(26px,2.8vw,38px);margin:15px 0 18px}
+.radar-precision-copy p{font-size:16px;line-height:1.65}
+.radar-precision-choices{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0}
+.radar-precision-choices button{border:1px solid var(--r-line);border-radius:4px;background:var(--background);color:var(--foreground);font:inherit;font-size:14px;cursor:pointer;padding:10px 14px;min-height:44px}
+.radar-precision-choices button[aria-pressed=true]{background:var(--foreground);color:var(--background)}
+.radar-precision-metrics{display:grid;grid-template-columns:1fr 1fr;gap:0 24px;margin:24px 0}
+.radar-precision-metrics>div{padding:17px 0;border-top:1px solid var(--r-line)}
+.radar-precision-metrics dt{font-size:14px;color:var(--muted);line-height:1.5}
+.radar-precision-metrics dd{font:500 26px/1.3 var(--font-geist-mono),monospace;margin:8px 0 0}
+.radar-precision-copy p.radar-precision-note{font-size:13px;color:var(--muted);margin-bottom:0}
+@media(max-width:850px){.radar-precision-example{grid-template-columns:1fr;gap:28px}.radar-precision-visual{max-width:480px;margin:0 auto;width:100%}}
+@media(max-width:620px){.radar-precision-example{padding:18px}.radar-precision-metrics{gap:0 14px}.radar-precision-metrics dd{font-size:23px}}

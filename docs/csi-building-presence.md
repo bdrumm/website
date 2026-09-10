@@ -21,7 +21,7 @@ The main view starts on the ground floor. Height controls refer to the active fl
 
 ## Controls and scenarios
 
-The main visualization has four display choices in its right sidebar: Hybrid evidence, Wi-Fi / RTI, Camera evidence and RF × camera agreement. They replace the floor-selection menu and move above the visualization on narrow screens. The “A shared picture” component summary follows the main view. Hardware versions, live readings, signal pipeline, system/recovery, accuracy research and evidence remain in tabs below the summary. Switching display modes or tabs preserves simulation and walkthrough state. Detailed mounting, height and measurement controls are under “Measurement & sensor settings.”
+The top-level building summary, floor-count control and stairwell status are removed from the interface; the underlying multi-level model and detailed readings remain. The main visualization has four display choices in its right sidebar: Hybrid evidence, Wi-Fi / RTI, Camera evidence and RF × camera agreement. They replace the floor-selection menu and move above the visualization on narrow screens. The “A shared picture” component summary follows the main view. Hardware versions, live readings, signal pipeline, system/recovery, accuracy research and evidence remain in tabs below the summary. Switching display modes or tabs preserves simulation and walkthrough state. Detailed mounting, height and measurement controls are under “Measurement & sensor settings.”
 
 - **Across all floors:** one synthetic reference on each floor, with offset paths and a shared clock.
 - **Stairwell handoff:** one reference approaches the shaft, climbs to the top floor, visits the landing and returns along a continuous loop.
