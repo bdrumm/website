@@ -75,6 +75,14 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
   grain.repeat.set(90, 90);
   grain.needsUpdate = true;
   const floorMaterial = new THREE.MeshStandardMaterial({ color: "#d1d7cb", roughness: 0.88, bumpMap: grain, bumpScale: 0.012 });
+  function updateTheme() {
+    const dark = document.documentElement.dataset.theme === 'dark';
+    world.background.set(dark ? '#0a1328' : '#d8dcd7');
+    world.fog.color.copy(world.background);
+    floorMaterial.color.set(dark ? '#13243a' : '#d1d7cb');
+  }
+  updateTheme();
+  window.addEventListener('themechange', updateTheme);
   const floor = new THREE.Mesh(new THREE.PlaneGeometry(200, 200), floorMaterial);
   floor.rotation.x = -Math.PI / 2;
   floor.position.y = -0.012;
@@ -84,6 +92,7 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
   try {
     gltf = await new GLTFLoader().loadAsync(modelUrl);
   } catch (error) {
+    window.removeEventListener('themechange', updateTheme);
     controls.dispose();
     renderer.dispose();
     renderer.domElement.remove();
@@ -317,6 +326,7 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
   };
   frame = requestAnimationFrame(update);
   return { dispose() {
+    window.removeEventListener('themechange', updateTheme);
     cancelAnimationFrame(frame);
     observer.disconnect();
     intersection.disconnect();

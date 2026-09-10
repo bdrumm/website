@@ -1,4 +1,4 @@
-import {buildGarageProject} from './src/garage-project.js?v=77378b8554';
+import {buildGarageProject} from './src/garage-project.js?v=7b06b169ed';
 import {normalizeCart,cartTotal,money,MAX_QUANTITY} from './shop-core.mjs';
 const {projects=[],checkoutEndpoint=''}=window.PARAMETRIC_SHOP||{};
 const KEY='parametric-space-cart-v1';

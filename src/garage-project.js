@@ -142,7 +142,7 @@ export function buildGarageProject(container, project) {
     catch { status.hidden = false; status.textContent = 'Fullscreen is unavailable in this browser.'; }
   });
   sync();
-  import('../assets/garage-viewer.js?v=c5e9e4f71d').then(async ({ createGarageScene }) => {
+  import('../assets/garage-viewer.js?v=ca1e1f40c1').then(async ({ createGarageScene }) => {
     if (disposed) return;
     const result = await createGarageScene(canvas, () => state, project.modelUrl, active => { configuring = active; sync(); });
     if (disposed) { result.dispose(); return; }
