@@ -1,3 +1,4 @@
+import {buildGarageProject} from './src/garage-project.js?v=706b4c1541';
 import {normalizeCart,cartTotal,money,MAX_QUANTITY} from './shop-core.mjs';
 const {projects=[],checkoutEndpoint=''}=window.PARAMETRIC_SHOP||{};
 const KEY='parametric-space-cart-v1';
@@ -12,13 +13,15 @@ function shopLink(p){if(!p.shopUrl)return null;try{const u=new URL(p.shopUrl);if
 function projectHref(id){return 'project.html?id='+encodeURIComponent(id);}
 function empty(title,copy){const box=el('div',undefined,'empty-state');box.append(el('h2',title),el('p',copy));root.append(box);}
 function add(p){cart=normalizeCart([...cart,{id:p.id,quantity:1}],projects);save();document.getElementById('shop-status').textContent=`${p.title} added to your cart.`;}
-function catalogue(){if(!projects.length){empty('Projects are on their way.','Check back soon, or get in touch about a project.');root.append(link('Get in touch →','index.html#contact-title','secondary-button'));return;}
+function catalogue(){const section=document.body.dataset.section;const selected=projects.filter(p=>!section||(p.section||'3d')===section);if(!selected.length){empty('Projects are on their way.','Check back soon, or get in touch about a project.');root.append(link('Get in touch →','index.html#contact-title','secondary-button'));return;}
+ if(!section)root.append(link('3D prints →','projects-3d.html','secondary-button category-back'));
  const grid=el('div',undefined,'project-grid');
- for(const p of projects){const card=el('article',undefined,'project-card');const visual=image(p);if(visual)card.append(visual);card.append(el('span',p.category||'PROJECT','section-number'),el('h2',p.title),el('p',p.summary));card.append(link('Explore project →',projectHref(p.id),'secondary-button'));grid.append(card);}root.append(grid);
+ for(const p of selected){const card=el('article',undefined,'project-card');const visual=image(p);if(visual){if(p.experience==='garage'){const cover=link('',projectHref(p.id),'garage-catalogue-cover');cover.setAttribute('aria-label','Explore '+p.title);cover.append(visual);card.append(cover);}else card.append(visual);}card.append(el('span',p.category||'PROJECT','section-number'),el('h2',p.title),el('p',p.summary));card.append(link('Explore project →',projectHref(p.id),'secondary-button'));grid.append(card);}root.append(grid);
 }
 function detail(){const p=projects.find(p=>p.id===new URLSearchParams(location.search).get('id'));if(!p){empty('Project not found.','Choose a project from the project list.');root.append(link('All projects →','projects.html','secondary-button'));return;}
  document.title=p.title+' — Parametric Space';document.getElementById('page-heading').textContent=p.title;document.getElementById('page-intro').textContent=p.summary||'';
  const content=el('div',undefined,'project-detail');const visual=image(p);
+ if(p.experience==='garage'){root.append(link('← 3D projects','projects-3d.html','secondary-button category-back'));content.classList.add('has-model','garage-detail');buildGarageProject(content,p);root.append(content);document.querySelector('meta[name="description"]')?.setAttribute('content',p.summary);return;}
  if(p.modelUrl){
   content.classList.add('has-model');
   const viewer=el('section',undefined,'model-viewer');viewer.setAttribute('aria-label',p.title+' interactive 3D concept');viewer.append(el('span','001 / PHOTO → FORM','section-number'));content.append(viewer);
