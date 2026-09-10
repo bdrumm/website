@@ -1,5 +1,5 @@
 {
-  "revision": "V3.2 simple internal hinge engineering prototype",
+  "revision": "V3.3 two shell-contoured latches engineering prototype",
   "parameters": {
     "hinge_axis_x": -36.0,
     "hinge_axis_z": 7.0,
@@ -19,12 +19,21 @@
     "sleeve_clearance": 0.25,
     "sleeve_wall": 2.0,
     "sleeve_length": 32.0,
-    "latch_thickness": 1.6,
-    "latch_length": 26.0,
-    "latch_width": 16.0,
-    "latch_hook": 0.65,
+    "latch_thickness": 1.8,
+    "latch_length": 18.0,
+    "latch_width": 20.0,
+    "latch_hook": 1.6,
     "latch_relief": 0.45,
-    "release_travel": 1.05,
+    "latch_centers": [
+      -150.0,
+      150.0
+    ],
+    "latch_root_thickness": 3.2,
+    "catch_backing": 5.2,
+    "catch_pocket_extra": 0.4,
+    "catch_shoulder_gap": 0.35,
+    "thumb_lip": 0.8,
+    "release_travel": 2.1,
     "material": "PLA",
     "nozzle_mm": 0.4,
     "layer_mm": 0.2
@@ -36,52 +45,52 @@
   ],
   "printables": {
     "segment_A": {
-      "triangles": 37474,
+      "triangles": 37520,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 296212.8829193061,
-      "mass_g_at_1_24": 367.3039748199396,
+      "volume_mm3": 294254.74709974934,
+      "mass_g_at_1_24": 364.87588640368915,
       "components": 2,
       "component_volumes_mm3": [
-        164508.70049401486,
-        131704.18242529122
+        164504.85750325056,
+        129749.88959649878
       ],
       "bounds_mm": [
         -71.16004642068486,
-        -68.78636291506663,
+        -67.21352438582268,
         0.0,
         71.16004642068486,
-        68.78636291506663,
+        67.21352438582268,
         306.7755493164062
       ],
       "size_mm": [
         142.32009284136973,
-        137.57272583013327,
+        134.42704877164536,
         306.7755493164062
       ]
     },
     "segment_B": {
-      "triangles": 37262,
+      "triangles": 37338,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 301201.4289785703,
-      "mass_g_at_1_24": 373.48977193342716,
+      "volume_mm3": 299246.4444730571,
+      "mass_g_at_1_24": 371.0655911465908,
       "components": 2,
       "component_volumes_mm3": [
-        133654.25202214133,
-        167547.1769564289
+        131703.17542070826,
+        167543.26905234886
       ],
       "bounds_mm": [
         -71.08902775054952,
-        -68.75407805308056,
+        -67.21677021215707,
         0.0,
         71.08902775054952,
-        68.75407805308056,
+        67.21677021215707,
         314.7755187988281
       ],
       "size_mm": [
         142.17805550109904,
-        137.50815610616112,
+        134.43354042431415,
         314.7755187988281
       ]
     },
@@ -160,14 +169,14 @@
   },
   "parts": {
     "base_A": {
-      "triangles": 27262,
+      "triangles": 27180,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 164508.70049401486,
-      "mass_g_at_1_24": 203.99078861257843,
+      "volume_mm3": 164504.85750325056,
+      "mass_g_at_1_24": 203.9860233040307,
       "components": 1,
       "component_volumes_mm3": [
-        164508.70049401486
+        164504.85750325056
       ],
       "bounds_mm": [
         -48.01068115234375,
@@ -184,38 +193,38 @@
       ]
     },
     "lid_A": {
-      "triangles": 10212,
+      "triangles": 10340,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 131704.18242529128,
-      "mass_g_at_1_24": 163.31318620736118,
+      "volume_mm3": 129749.88959649883,
+      "mass_g_at_1_24": 160.88986309965856,
       "components": 1,
       "component_volumes_mm3": [
-        131704.18242529128
+        129749.88959649883
       ],
       "bounds_mm": [
         -46.32318115234375,
         -310.87554931640625,
-        -18.0,
-        48.13920400291681,
+        -10.0,
+        48.040592193603516,
         -4.100000000000023,
         43.473731994628906
       ],
       "size_mm": [
-        94.46238515526056,
+        94.36377334594727,
         306.7755493164062,
-        61.473731994628906
+        53.473731994628906
       ]
     },
     "base_B": {
-      "triangles": 26744,
+      "triangles": 26660,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 167547.17695642894,
-      "mass_g_at_1_24": 207.75849942597188,
+      "volume_mm3": 167543.26905234886,
+      "mass_g_at_1_24": 207.75365362491257,
       "components": 1,
       "component_volumes_mm3": [
-        167547.17695642894
+        167543.26905234886
       ],
       "bounds_mm": [
         -48.038475036621094,
@@ -232,27 +241,27 @@
       ]
     },
     "lid_B": {
-      "triangles": 10518,
+      "triangles": 10678,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 133654.25202214136,
-      "mass_g_at_1_24": 165.7312725074553,
+      "volume_mm3": 131703.17542070828,
+      "mass_g_at_1_24": 163.31193752167826,
       "components": 1,
       "component_volumes_mm3": [
-        133654.25202214136
+        131703.17542070828
       ],
       "bounds_mm": [
         -46.350975036621094,
         -3.9,
-        -18.0,
-        48.07363818585873,
+        -10.0,
+        48.047183990478516,
         310.8755187988281,
         43.473731994628906
       ],
       "size_mm": [
-        94.42461322247982,
+        94.39815902709961,
         314.7755187988281,
-        61.473731994628906
+        53.473731994628906
       ]
     },
     "sleeve_base": {
@@ -417,28 +426,26 @@
   "joinery": "Separate keyed internal bonding sleeves; adhesives require material compatibility and physical validation.",
   "latches": [
     {
-      "y": -205.0,
-      "x": 48.139203999690096,
-      "root_z": 10.0,
-      "tip_z": -18.0
+      "y": -150.0,
+      "x": 45.975556565453545,
+      "root_z": 8.0,
+      "tip_z": -10.0,
+      "release_min_x": 31.9,
+      "hook_shoulder_z": -5.5,
+      "engagement_mm": 1.1500000000000001,
+      "receiver_lip_projection_mm": 1.55,
+      "receiver_back_wall_mm": 3.6500000000000004
     },
     {
-      "y": -90.0,
-      "x": 47.97325966778356,
-      "root_z": 10.0,
-      "tip_z": -18.0
-    },
-    {
-      "y": 90.0,
-      "x": 47.956005174764904,
-      "root_z": 10.0,
-      "tip_z": -18.0
-    },
-    {
-      "y": 205.0,
-      "x": 48.07363818364667,
-      "root_z": 10.0,
-      "tip_z": -18.0
+      "y": 150.0,
+      "x": 46.011130509180674,
+      "root_z": 8.0,
+      "tip_z": -10.0,
+      "release_min_x": 31.9,
+      "hook_shoulder_z": -5.5,
+      "engagement_mm": 1.1500000000000001,
+      "receiver_lip_projection_mm": 1.55,
+      "receiver_back_wall_mm": 3.6500000000000004
     }
   ],
   "closed_overlap_mm3": 0.0,
@@ -447,7 +454,7 @@
     "sleeve_lid_1": 0.0,
     "sleeve_lid_2": 0.0
   },
-  "approx_latch_strain_at_release": 0.0037278106508875745,
+  "approx_latch_strain_at_release": 0.0175,
   "validation": {
     "checks": [
       {
@@ -495,7 +502,7 @@
         "passed": true,
         "detail": [
           142.32009284136973,
-          137.57272583013327,
+          134.42704877164536,
           306.7755493164062
         ]
       },
@@ -509,7 +516,7 @@
         "passed": true,
         "detail": [
           142.17805550109904,
-          137.50815610616112,
+          134.43354042431415,
           314.7755187988281
         ]
       },
@@ -572,7 +579,7 @@
       {
         "name": "62 mm x 600 mm capsule clearance is retained",
         "passed": true,
-        "detail": 1.726041400061244e-05
+        "detail": 1.7260413989954298e-05
       },
       {
         "name": "sleeve_base fits its socket without interference",
@@ -621,30 +628,102 @@
         "detail": {
           "minimum_gap_mm": 0.3999997385986838
         }
+      },
+      {
+        "name": "exactly two latches, one per printed half",
+        "passed": true,
+        "detail": [
+          -150.0,
+          150.0
+        ]
+      },
+      {
+        "name": "latch at -150.0 blocks opening without release",
+        "passed": true,
+        "detail": {
+          "rigid_interference_at_half_degree_mm3": 4.953579280744055
+        }
+      },
+      {
+        "name": "latch at -150.0 has at least 1 mm of measured retaining overlap",
+        "passed": true,
+        "detail": {
+          "local_overlap_x_mm": 1.1203876628908844
+        }
+      },
+      {
+        "name": "latch at -150.0 has a reinforced catch back wall",
+        "passed": true,
+        "detail": {
+          "local_back_wall_x_mm": 3.66978638888817
+        }
+      },
+      {
+        "name": "latch at -150.0 follows the original outer surface except the thumb lip",
+        "passed": true,
+        "detail": {
+          "exterior_residue_mm3": 8.847045300475368e-05
+        }
+      },
+      {
+        "name": "latch at 150.0 blocks opening without release",
+        "passed": true,
+        "detail": {
+          "rigid_interference_at_half_degree_mm3": 4.98540714006455
+        }
+      },
+      {
+        "name": "latch at 150.0 has at least 1 mm of measured retaining overlap",
+        "passed": true,
+        "detail": {
+          "local_overlap_x_mm": 1.1234817152091097
+        }
+      },
+      {
+        "name": "latch at 150.0 has a reinforced catch back wall",
+        "passed": true,
+        "detail": {
+          "local_back_wall_x_mm": 3.6682730540568755
+        }
+      },
+      {
+        "name": "latch at 150.0 follows the original outer surface except the thumb lip",
+        "passed": true,
+        "detail": {
+          "exterior_residue_mm3": 0.00015688033017247972
+        }
+      },
+      {
+        "name": "outward latch release clears the stationary closed base",
+        "passed": true,
+        "detail": {
+          "maximum_overlap_mm3": 0.0,
+          "sample_step_mm": 0.1
+        }
       }
     ],
-    "passed": 27,
+    "passed": 37,
     "failed": 0,
     "physical_print_tested": false,
     "continuous_sweep_proven": false
   },
   "slicing": {
     "A": {
-      "input_stl_sha256": "133dba1349a824c7ea212becb670c4cc634a32d5aaa9ac1fcb2ec136bf4e6847",
+      "input_stl_sha256": "1a0b2763bf157c99095ef5305d52969633d52b025fb4c37ccc9f44024351f234",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "15h 21m 27s",
-      "filament_g": 468.26,
+      "estimated_time": "14h 56m 40s",
+      "filament_g": 461.83,
       "max_z_mm": 306.8,
       "supports_enabled": true,
       "sent_to_printer": false
     },
     "B": {
-      "input_stl_sha256": "b63fcf475d1350b04a32fa1f3b8fe467706ab69cd61cae2018f0a891531972c5",
+      "input_stl_sha256": "76ca677a12489d7d3b5f125c8344d939381ecec9f8b54de1f40a60eed535a260",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "15h 32m 1s",
-      "filament_g": 479.96,
+      "estimated_time": "15h 20m 12s",
+      "filament_g": 472.21,
       "max_z_mm": 314.8,
       "supports_enabled": true,
       "sent_to_printer": false

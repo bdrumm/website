@@ -15,22 +15,23 @@ export async function mountReview(root, buffer) {
  scene.add(new T.HemisphereLight(0xffffff,0x778496,1.6));const key=new T.DirectionalLight(0xfff4e4,2.2);key.position.set(-200,450,500);scene.add(key);
  const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.minZoom=.4;controls.maxZoom=8;
  const {scene:model}=await new GLTFLoader().parseAsync(buffer,'');scene.add(model);
- const hinge=model.getObjectByName('LidHinge'),meshes=[];model.traverse(o=>{if(o.isMesh){o.material=o.material.clone();o.material.side=T.DoubleSide;meshes.push({mesh:o,rest:o.position.clone()});}});
+ const hinge=model.getObjectByName('LidHinge'),meshes=[];model.traverse(o=>{if(o.isMesh){o.material=o.material.clone();o.material.side=T.DoubleSide;meshes.push({mesh:o,rest:o.position.clone(),color:o.material.color.clone()});}});
  const maxAngle=model.getObjectByName('BaguetteV3').userData.maxOpenAngle;
  const angle=root.querySelector('[data-angle]'),angleValue=root.querySelector('[data-angle-value]'),exploded=root.querySelector('[data-explode]'),cutaway=root.querySelector('[data-cutaway]');
  angle.max=String(maxAngle);
  let view=root.dataset.defaultView||'overall',halfWidth=350,disposed=false;
- const presets={overall:{target:[0,0,-20],position:[120,180,680],width:350},hinge:{target:[150,7,-36],position:[190,135,10],width:42},latch:{target:[90,-7,46],position:[105,25,225],width:40},joint:{target:[-4,0,0],position:[28,80,190],width:85}};
+ const presets={overall:{target:[0,0,-20],position:[120,180,680],width:350},hinge:{target:[150,7,-36],position:[190,135,10],width:42},latch:{target:[150,0,43],position:[170,30,225],width:35},catch:{target:[150,-4,42],position:[245,5,45],width:18},joint:{target:[-4,0,0],position:[28,80,190],width:85}};
  function resize(){const w=host.clientWidth,h=host.clientHeight;if(!w||!h)return;renderer.setSize(w,h,false);camera.left=-halfWidth;camera.right=halfWidth;camera.top=halfWidth*h/w;camera.bottom=-halfWidth*h/w;camera.updateProjectionMatrix();}
  function pose(){const degrees=Number(angle.value);hinge.rotation.x=-T.MathUtils.degToRad(degrees);angleValue.textContent=degrees+'°';
-  for(const {mesh,rest} of meshes){mesh.position.copy(rest);if(mesh.name.endsWith('_A'))mesh.position.x-=exploded.checked?58:0;else if(mesh.name.endsWith('_B'))mesh.position.x+=exploded.checked?58:0;
+  for(const {mesh,rest,color} of meshes){mesh.position.copy(rest);if(mesh.name.endsWith('_A'))mesh.position.x-=exploded.checked?58:0;else if(mesh.name.endsWith('_B'))mesh.position.x+=exploded.checked?58:0;
    if(mesh.morphTargetInfluences)mesh.morphTargetInfluences[0]=degrees>0?1:0;
-   mesh.material.clippingPlanes=cutaway.checked?[new T.Plane(new T.Vector3(0,-1,0),0)]:[];
+   mesh.material.color.copy(color);if(view==='catch'&&mesh.name.startsWith('base'))mesh.material.color.set('#638c9a');
+   mesh.material.clippingPlanes=cutaway.checked?(view==='catch'?[new T.Plane(new T.Vector3(-1,0,0),150),new T.Plane(new T.Vector3(1,0,0),-136),new T.Plane(new T.Vector3(0,0,1),-30)]:[new T.Plane(new T.Vector3(0,-1,0),0)]):[];
   }
-  status.textContent=degrees>0?'Latches shown released · '+degrees+'° open':'Closed assembly';
+  status.textContent=degrees>0?'Latches shown released · '+degrees+'° open':(view==='catch'?'Blue: catch · Gold: latch':'Closed assembly');
  }
- function select(name){view=name;const p=presets[name];controls.target.fromArray(p.target);camera.position.fromArray(p.position);camera.zoom=1;halfWidth=p.width;root.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===name)));resize();controls.update();}
- root.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.view==='hinge'&&Number(angle.value)===0){angle.value=String(maxAngle);pose();}select(b.dataset.view);}));
+ function select(name){if(view==='catch'&&name!=='catch')cutaway.checked=false;view=name;if(name==='catch'){angle.value='0';cutaway.checked=true;}pose();const p=presets[name];controls.target.fromArray(p.target);camera.position.fromArray(p.position);camera.zoom=1;halfWidth=p.width;root.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===name)));resize();controls.update();}
+ root.querySelectorAll('[data-view]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.view==='hinge'&&Number(angle.value)===0){angle.value=String(maxAngle);pose();}if(b.dataset.view==='latch'){angle.value='0';pose();}select(b.dataset.view);}));
  for(const input of [angle,exploded,cutaway])input.addEventListener('input',pose);
  const params=new URLSearchParams(location.search);if(root.dataset.remote==='true'){angle.value=String(Math.max(0,Math.min(maxAngle,params.has('angle')?Number(params.get('angle')):Number(angle.value))));exploded.checked=params.get('explode')==='1';cutaway.checked=params.get('cut')==='1';view=presets[params.get('view')]?params.get('view'):view;}
  pose();select(view);const observer=new ResizeObserver(resize);observer.observe(host);

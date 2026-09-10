@@ -1,6 +1,25 @@
-# Baguette holder V3.2 — engineering review
+# Baguette holder V3.3 — engineering review
 
-V3.2 replaces the large interleaved shell hinge with two compact internal print-in-place hinges. It is a printable prototype for fit testing; it has not been physically printed or fatigue-tested.
+V3.3 replaces four long latch tabs with **two shorter latches formed from the outer shell**, one per printed half. Each has a deeper retaining hook, a reinforced internal catch and a small thumb lip. The compact internal hinges from V3.2 are retained. This is a printable prototype; it has not been physically printed or fatigue-tested.
+
+## Revised latch design
+
+| Feature | V3.2 | V3.3 |
+|---|---:|---:|
+| Latches | 4 | 2, at Y = −150 and +150 mm |
+| Nominal flexible length | 26 mm | 18 mm |
+| Tongue width | 16 mm | 20 mm |
+| Nominal tongue skin | 1.6 mm | 1.8 mm |
+| Inward hook projection | 0.65 mm | 1.60 mm |
+| Commanded release travel | 1.05 mm | 2.10 mm |
+
+The tongues follow the actual outer crust and belt contour. Their thicker roots join directly into the lid. A 0.8 mm thumb lip is the only intentional outward addition in each latch region. The surrounding shell no longer has the four long rectangular latch recesses.
+
+Each fixed catch has a nominal 5.2 mm reinforcement depth behind the running clearance, a 1.55 mm projecting ledge relative to its pocket, and a nominal 3.65 mm back wall. The actual sampled sections measure **1.12 mm of hook-to-ledge overlap** and **3.67 mm behind the recess**. The hook includes a sloped entry face and a positive retaining shoulder, with a nominal 0.35 mm vertical gap in the unloaded closed state.
+
+The geometry tests confirm that both latches block a 0.5° attempted opening without release, that the 0–2.1 mm modeled outward release path is clear, and that the released lid opens through its reviewed range. These tests establish geometric engagement, not retention force or durability. The preview's **Catch section** view and the static section render expose the actual hook and ledge.
+
+Shorter, deeper hooks require more release flex. A straight-beam screening calculation gives about **1.75% nominal strain**, versus 0.37% for the prior dimensions. The actual tongue is curved and varies in section, so this is not a stress analysis or a strength prediction. Print and cycle the new latch coupons before the complete case; check comfortable release, retention and cracking at the root.
 
 ## Hinge design
 
@@ -12,11 +31,15 @@ The reviewed opening range is **0–100°**. This compact arrangement is not des
 
 ## Geometry review
 
-All **27 checks pass**:
+All **37 checks pass**:
 
 - Each of the four shells and three internal joiners is one watertight, consistently wound solid.
 - Each main print segment contains exactly two separate solids: the base and captured moving lid.
 - The closed assembly has zero detected overlap.
+- There are exactly two latches, one per printed half; both block unreleased opening.
+- Each tested catch section has over 1 mm of retaining overlap and over 3.5 mm of back-wall thickness.
+- The latch surfaces follow the original exterior except for the thumb lips.
+- The modeled release path is clear at 0.1 mm increments from 0 to 2.1 mm.
 - Released motion has zero detected overlap at every 1° increment from 0° to 100°, including the installed joiners.
 - Each open print segment retains approximately 0.400 mm minimum base-to-lid clearance.
 - The original 62 mm diameter × 600 mm capsule clearance is retained within the Boolean tolerance.
@@ -26,11 +49,9 @@ All **27 checks pass**:
 
 These are sampled CAD and mesh checks, not a continuous-motion proof, structural simulation, or physical print test. Full measurements and test names are in `review.json`.
 
-## Other retained improvements
+## Center joint and retained improvements
 
-Four tapered 26 mm latch tongues use a nominal 1.6 mm thickness, 0.65 mm retaining hook, lead-in ramp, defined retaining shoulder, reinforced root and finger lip. They are unloaded in the closed CAD state. Motion checks model 1.05 mm outward tip release; actual force and fatigue life remain untested. A simple straight-beam screening estimate is about 0.37% nominal strain, not a prediction for the actual tapered printed arm.
-
-The two main segments meet across flat center faces with a 0.20 mm working seam. One base sleeve and two distinct lid keys align the halves internally. The hinge-side joiners are trimmed to clear the revised rim and motion. **Use the V3.2 joiners with this model.** They require a filament-compatible adhesive after dry fitting, and replace the old snap-together center coupling. Keep adhesive away from the base/lid seam and bearings.
+The two main segments meet across flat center faces with a 0.20 mm working seam. One base sleeve and two distinct lid keys align the halves internally. The hinge-side joiners are trimmed to clear the revised rim and motion. **Use the joiners supplied with this revision; their geometry is unchanged from V3.2.** They require a filament-compatible adhesive after dry fitting, and replace the old snap-together center coupling. Keep adhesive away from the base/lid seam and bearings.
 
 The cleaned rib-to-shell unions remain. The sculpted outer crust is preserved apart from the hinge-side rim taper; no display-only center repair is used.
 
@@ -38,13 +59,13 @@ The cleaned rib-to-shell unions remain. The sculpted outer crust is preserved ap
 
 | Object | Supplied X × Y × Z envelope (mm) |
 |---|---:|
-| Segment A | 142.32 × 137.57 × 306.78 |
-| Segment B | 142.18 × 137.51 × 314.78 |
+| Segment A | 142.32 × 134.43 × 306.78 |
+| Segment B | 142.18 × 134.43 × 314.78 |
 | Base sleeve | 73.51 × 35.99 × 32.00 |
 | Lid key 1 | 25.11 × 24.23 × 32.00 |
 | Lid key 2 | 25.05 × 30.42 × 32.00 |
 
-Both main segments slice successfully offline in Bambu Studio 02.08.02.61, using the installed Bambu H2C / Generic PLA presets, 0.4 mm nozzle, 0.20 mm layers, four walls, 15% infill, an 8 mm brim and automatic supports. Segment A estimates **15 h 21 m / 468 g**; B estimates **15 h 32 m / 480 g**. These estimates include supports and brim, and exclude joiners and coupons. No job was sent to a printer. Input STL hashes in `review.json` tie the results to these exports.
+Both main segments slice successfully offline in Bambu Studio 02.08.02.61, using the installed Bambu H2C / Generic PLA presets, 0.4 mm nozzle, 0.20 mm layers, four walls, 15% infill, an 8 mm brim and automatic supports. Segment A estimates **14 h 57 m / 462 g**; B estimates **15 h 20 m / 472 g**. These estimates include supports and brim, and exclude joiners and coupons. No job was sent to a printer. Input STL hashes in `review.json` tie the results to these exports.
 
 Keep the supplied upright, open orientation. Inspect supports under the latch undercuts and internal mounts, and keep them out of working bearings. This complete object is not claimed to print without supports. The STL units are millimetres. The 3MF files contain oriented geometry, not prepared printer jobs or G-code.
 
@@ -57,9 +78,9 @@ Keep the supplied upright, open orientation. Inspect supports under the latch un
 
 ## Physical checks still needed
 
-Test hinge freedom, the small pin and mount strength, latch cycling, carrying loads, adhesive compatibility and joint strength. The smaller internal hinge trades the previous bulky reinforcement for compactness; coupon handling and load tests are required before carrying use.
+Test hinge freedom, the small pin and mount strength, latch cycling, carrying loads, adhesive compatibility and joint strength. Coupon handling and load tests are required before carrying use, including the revised latch roots and catch ledges.
 
-Across 3,375 normal-ray wall samples, the retained crust measures at least 1.53 mm on the base and 1.58 mm on the lid; tapered latch-tip samples reach 1.30 mm. The sample set omits end tips, the center joint, central parting seam, small faces and much of the left rim. It does not establish the global minimum wall or strength of the small hinge mounts. Region minima and sample locations are recorded in `wall-samples.json`.
+Across 2,893 normal-ray wall samples, the retained crust measures at least 1.53 mm on the base and 1.58 mm on the lid. The sample set does not measure the new latch tongues. It also omits end tips, the center joint, central parting seam, small faces and much of the left rim. It does not establish the global minimum wall or strength of the small hinge mounts. Region minima and sample locations are recorded in `wall-samples.json`.
 
 ## Preview and reproducibility
 
