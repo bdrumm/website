@@ -1,6 +1,6 @@
-# Baguette holder V3.8 — engineering review
+# Baguette holder V3.9 — engineering review
 
-V3.8 reinforces the thin shell and internal hinge, enlarges the two latch finger grips, blends the center attachment into the inner shell and removes the recessed channels around Half A’s snap roots. All six interior ribs remain removed. Physical print fit, retention force, carrying loads and durability remain untested.
+V3.9 rounds the two latch tongues and integrates a shallow underside finger catch into each one. The reinforced shell, flush internal hinge, solid center-snap roots and blended rib-free cavity are retained. Physical fit, release force and durability remain untested.
 
 ## Reinforced shell and hinge
 
@@ -8,7 +8,7 @@ The nominal cavity-wall parameter increases from 3.0 to 3.6 mm. A 2.45 mm geomet
 
 The captured hinge pin increases from 2 to 3 mm diameter. Its internal bearing radius increases from 3.3 to 4.3 mm, with a thicker rear wall. The new bearing is clipped to the previous exterior rim profile, so the extra material grows inward and the outside remains equally flush. The hinge remains direct and print-in-place, with no support arms. Radial clearance is 0.4 mm and axial gaps are 0.45 mm. The reviewed opening range is 0–100°, without a mechanical hard stop.
 
-The two exterior latches retain their short 18 × 20 mm shell-contoured tongues, 1.8 mm nominal skin, thicker roots and 1.6 mm inward hooks. Each release grip is now 3 mm tall and projects 2 mm, replacing the smaller 1.2 mm tall / 0.8 mm projection. Measured retaining overlap remains about 1.12 mm, with about 3.67 mm behind the catch recess. Release travel is modeled at 2.1 mm.
+The two exterior latches retain their short 18 × 20 mm shell-contoured tongues, 1.8 mm nominal skin, thicker roots and 1.6 mm inward hooks. The tongue outline has 1.5 mm corner radii and its exposed edges are eased with a 0.45 mm radius. Each grip projects 2 mm and blends into the tongue with a 0.8 mm concave transition. Its rounded lower edge extends 0.8 mm beneath the original tip for finger purchase, while the upper grip height remains 3 mm. The receiver is relieved around the final rounded face to preserve running clearance. The internal retaining shoulder remains square for positive engagement. Measured retaining overlap remains about 1.12 mm, with about 3.67 mm behind the catch recess. Release travel is modeled at 2.1 mm.
 
 ## Flush snap roots and blended interior
 
@@ -36,24 +36,24 @@ Insertion is modeled with 1.2 mm of inward tip deflection. A straight-beam scree
 
 ## Geometry and sliced-path review
 
-All **98 geometry checks pass**, covering four watertight shells, two print objects with two captured moving solids each, the retained 62 mm × 600 mm capsule clearance, zero interior ribs, covered sockets, solid male roots, removal of the old transverse ledges, snap insertion and return, retaining engagement, and released hinge/latch movement.
+All **100 geometry checks pass**, covering four watertight shells, two print objects with two captured moving solids each, the retained 62 mm × 600 mm capsule clearance, zero interior ribs, covered sockets, solid male roots, removal of the old transverse ledges, snap insertion and return, retaining engagement, and released hinge/latch movement.
 
 The continuous rotation certificate uses 501 poses at 0.2° spacing. It subtracts a bound on movement between poses and a 0.002 mm numerical allowance from the measured gaps, certifying at least **0.1408 mm** clearance over 0–100°. The center-joint insertion and spring-return certificates each retain at least **0.1480 mm** clearance. These are CAD motion bounds, not printer-tolerance guarantees.
 
 A separate enclosure diagnostic temporarily caps designed vents and bridges working seams to check one enclosed bread cavity without changing the printed vents or seams. The extrusion helper preserves polygon holes, preventing hidden pocket cuts from removing their inner covers.
 
-The review includes closed, rear, open and intermediate hinge renders, capped hinge and catch sections, a separated center joint, and a capped covered-socket section. Four actual sliced cross-sections at former thin-wall stations were also inspected: A at print Z 55.6 and 180.0 mm; B at 47.6 and 172.0 mm. Their shell extrusion paths are continuous, with the expected two separate base/lid material regions. `slice-walls.jpg` shows the planned paths with supports hidden. This is a regional review, not an all-layer or physical defect proof.
+The review includes closed, rear, open and intermediate hinge renders, capped hinge and catch sections, a separated center joint, a capped covered-socket section, and a dedicated underside latch view. Four actual sliced cross-sections at former thin-wall stations were also inspected: A at print Z 55.6 and 180.0 mm; B at 47.6 and 172.0 mm. Their shell extrusion paths are continuous, with the expected two separate base/lid material regions. `slice-walls.jpg` shows the planned paths with supports hidden. This is a regional review, not an all-layer or physical defect proof.
 
 ## Print files and assembly
 
 | Main object | Supplied X × Y × Z envelope (mm) |
 |---|---:|
-| Section A, integral tongues | 154.38 × 131.29 × 322.88 |
-| Section B, covered sockets | 154.24 × 131.29 × 314.78 |
+| Section A, integral tongues | 154.38 × 131.31 × 322.88 |
+| Section B, covered sockets | 154.24 × 131.30 × 314.78 |
 
 Both fit the checked 300 × 320 × 325 mm envelope, including an 8 mm brim. Keep the supplied upright, 100° open orientation. The offline setup is Bambu Studio 02.08.02.61, Bambu H2C, Generic PLA, 0.4 mm nozzle, 0.20 mm layers, four walls, 15% infill and automatic supports. STL units are millimetres. The 3MF files contain oriented geometry, not prepared printer jobs. Nothing is sent to a printer.
 
-Final offline estimates are **A: 14h 56m 55s / 490.59 g**, **B: 14h 58m 56s / 491.66 g**, about **29.9 hours and 982 g** total before coupons. Exact STL, settings and G-code hashes are recorded in `review.json` and `slice-wall-review.json`.
+Final offline estimates are **A: 14h 55m 45s / 490.63 g**, **B: 14h 56m 32s / 492.24 g**, about **29.9 hours and 983 g** total before coupons. Exact STL, settings and G-code hashes are recorded in `review.json` and `slice-wall-review.json`.
 
 1. Print `joint_A` and `joint_B` first. Clear support from the covered slots through their joining-face openings, then verify full seating and retention.
 2. Print hinge and exterior latch coupons. The 0.4 mm hinge coupon reproduces the default bearing; 0.3 and 0.5 mm alternatives bracket fit. Check release force and repeated flexing with the taller grips.
