@@ -1,6 +1,6 @@
 {
-  "generator_sha256": "934bb336ff595c5d981e35e75cc4bc6e85c59a1c8761cf108c71bfbc1a23f008",
-  "revision": "V3.4 direct rim hinge engineering prototype",
+  "generator_sha256": "3394f33c191394e5d93271fcc81c072524e0dfaa2085dc25113b832b01cd36e1",
+  "revision": "V3.5 blended rim hinge engineering prototype",
   "parameters": {
     "hinge_axis_x": -41.0,
     "hinge_axis_z": 0.0,
@@ -13,6 +13,7 @@
     "max_open_angle": 100,
     "rear_wall_outer_x": -43.0,
     "rear_wall_inner_x": -40.0,
+    "rim_blend_radius": 2.0,
     "radial_clearance": 0.4,
     "axial_clearance": 0.45,
     "seam_gap": 0.3,
@@ -47,15 +48,15 @@
   ],
   "printables": {
     "segment_A": {
-      "triangles": 18576,
+      "triangles": 24080,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 290453.67641444044,
-      "mass_g_at_1_24": 360.1625587539061,
+      "volume_mm3": 292950.67745289044,
+      "mass_g_at_1_24": 363.25884004158416,
       "components": 2,
       "component_volumes_mm3": [
-        125403.73992240017,
-        165049.9364920403
+        125421.48135228308,
+        167529.19610060737
       ],
       "bounds_mm": [
         -77.5409940003949,
@@ -72,15 +73,15 @@
       ]
     },
     "segment_B": {
-      "triangles": 19084,
+      "triangles": 24610,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 295491.7610747768,
-      "mass_g_at_1_24": 366.40978373272327,
+      "volume_mm3": 298076.4707923984,
+      "mass_g_at_1_24": 369.614823782574,
       "components": 2,
       "component_volumes_mm3": [
-        127250.51081966434,
-        168241.25025511245
+        127268.69616742834,
+        170807.77462497004
       ],
       "bounds_mm": [
         -77.46997533025956,
@@ -171,14 +172,14 @@
   },
   "parts": {
     "base_A": {
-      "triangles": 10094,
+      "triangles": 14390,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 165049.9364920402,
-      "mass_g_at_1_24": 204.66192125012984,
+      "volume_mm3": 167529.1961006073,
+      "mass_g_at_1_24": 207.73620316475308,
       "components": 1,
       "component_volumes_mm3": [
-        165049.9364920402
+        167529.1961006073
       ],
       "bounds_mm": [
         -44.3,
@@ -195,14 +196,14 @@
       ]
     },
     "lid_A": {
-      "triangles": 8482,
+      "triangles": 9690,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 125403.73992240019,
-      "mass_g_at_1_24": 155.50063750377623,
+      "volume_mm3": 125421.48135228308,
+      "mass_g_at_1_24": 155.52263687683103,
       "components": 1,
       "component_volumes_mm3": [
-        125403.73992240019
+        125421.48135228308
       ],
       "bounds_mm": [
         -44.3,
@@ -219,14 +220,14 @@
       ]
     },
     "base_B": {
-      "triangles": 10300,
+      "triangles": 14836,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 168241.25025511245,
-      "mass_g_at_1_24": 208.61915031633944,
+      "volume_mm3": 170807.77462497004,
+      "mass_g_at_1_24": 211.80164053496284,
       "components": 1,
       "component_volumes_mm3": [
-        168241.25025511245
+        170807.77462497004
       ],
       "bounds_mm": [
         -44.3,
@@ -243,14 +244,14 @@
       ]
     },
     "lid_B": {
-      "triangles": 8784,
+      "triangles": 9774,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 127250.51081966433,
-      "mass_g_at_1_24": 157.79063341638377,
+      "volume_mm3": 127268.69616742832,
+      "mass_g_at_1_24": 157.8131832476111,
       "components": 1,
       "component_volumes_mm3": [
-        127250.51081966433
+        127268.69616742832
       ],
       "bounds_mm": [
         -44.3,
@@ -613,7 +614,7 @@
         "name": "hinge side has no added exterior structure",
         "passed": true,
         "detail": {
-          "absolute_boolean_residue_mm3": 0.0009268847189907711,
+          "absolute_boolean_residue_mm3": 0.0009262250184070177,
           "tolerance_mm3": 0.05
         }
       },
@@ -621,14 +622,14 @@
         "name": "segment A retains printable running clearance",
         "passed": true,
         "detail": {
-          "minimum_gap_mm": 0.3967702084518962
+          "minimum_gap_mm": 0.38786552263970936
         }
       },
       {
         "name": "segment B retains printable running clearance",
         "passed": true,
         "detail": {
-          "minimum_gap_mm": 0.3967702084518964
+          "minimum_gap_mm": 0.38786552263970864
         }
       },
       {
@@ -723,7 +724,7 @@
           "enclosed_air_components": 1,
           "analysis_seam_offset_mm": 0.36,
           "masked_vents": 4,
-          "cavity_volume_mm3": 2996407.4189119744
+          "cavity_volume_mm3": 2990614.7893279917
         }
       },
       {
@@ -743,12 +744,58 @@
         }
       },
       {
+        "name": "outside rim blend meets the bearing tangentially",
+        "passed": true,
+        "detail": {
+          "position_error_mm": 4.440892098500626e-16,
+          "normal_alignment": 1.0,
+          "blend_radius_mm": 2.0
+        }
+      },
+      {
+        "name": "inside rim blend meets the bearing tangentially",
+        "passed": true,
+        "detail": {
+          "position_error_mm": 2.220446049250313e-16,
+          "normal_alignment": 1.0,
+          "blend_radius_mm": 2.0
+        }
+      },
+      {
+        "name": "fixed ear merges into the rim at Y -164.45",
+        "passed": true,
+        "detail": {
+          "missing_profile_mm3": 1.7335730700889564e-16
+        }
+      },
+      {
+        "name": "fixed ear merges into the rim at Y -135.55",
+        "passed": true,
+        "detail": {
+          "missing_profile_mm3": 2.8996987103124816e-16
+        }
+      },
+      {
+        "name": "fixed ear merges into the rim at Y 135.55",
+        "passed": true,
+        "detail": {
+          "missing_profile_mm3": 2.8780146668627715e-16
+        }
+      },
+      {
+        "name": "fixed ear merges into the rim at Y 164.45",
+        "passed": true,
+        "detail": {
+          "missing_profile_mm3": 3.1111858965829353e-16
+        }
+      },
+      {
         "name": "geometry report matches the current generator",
         "passed": true,
-        "detail": "934bb336ff595c5d981e35e75cc4bc6e85c59a1c8761cf108c71bfbc1a23f008"
+        "detail": "3394f33c191394e5d93271fcc81c072524e0dfaa2085dc25113b832b01cd36e1"
       }
     ],
-    "passed": 42,
+    "passed": 48,
     "failed": 0,
     "physical_print_tested": false,
     "continuous_sweep_proven": true,
@@ -764,41 +811,41 @@
   },
   "slicing": {
     "A": {
-      "input_stl_sha256": "456011e118d2b40f71d9ad00fd6eee701c7ee429ca7b0b8a01bc9a9ee2825bfa",
+      "input_stl_sha256": "512c83ac9a69990a1a86456ebae171981603935536e8479f761bf4682eeded7c",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "14h 21m 59s",
-      "filament_g": 446.92,
+      "estimated_time": "14h 25m 2s",
+      "filament_g": 449.6,
       "max_z_mm": 306.8,
       "supports_enabled": true,
       "sent_to_printer": false,
       "provenance": {
-        "input_stl_sha256": "456011e118d2b40f71d9ad00fd6eee701c7ee429ca7b0b8a01bc9a9ee2825bfa",
+        "input_stl_sha256": "512c83ac9a69990a1a86456ebae171981603935536e8479f761bf4682eeded7c",
         "settings_sha256": {
           "machine": "8b98c3c85b37e97f455ed6821ec764cdc9b17fc73755f8794f69e215ebdc901d",
           "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
           "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
         },
-        "output_gcode_sha256": "ccfba28dcd9f0f06ba5a25f9f5a4ba4754e54b708250a1c9f1bc852b19475646"
+        "output_gcode_sha256": "d29d83186c25457f495d9805e687c64053b76abb4b7d46108df8093d2fb2e64c"
       }
     },
     "B": {
-      "input_stl_sha256": "1fdb2a9ecb081a060f3c657a69074f2d34821ff9e0b81e50cc4d7bc1e6488e83",
+      "input_stl_sha256": "b9d1a81a97b398b76e7cdfa2489fded71944a336f5e4dd574fc0c4a53567e7d5",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "14h 30m 20s",
-      "filament_g": 459.53,
+      "estimated_time": "14h 32m 18s",
+      "filament_g": 462.54,
       "max_z_mm": 314.8,
       "supports_enabled": true,
       "sent_to_printer": false,
       "provenance": {
-        "input_stl_sha256": "1fdb2a9ecb081a060f3c657a69074f2d34821ff9e0b81e50cc4d7bc1e6488e83",
+        "input_stl_sha256": "b9d1a81a97b398b76e7cdfa2489fded71944a336f5e4dd574fc0c4a53567e7d5",
         "settings_sha256": {
           "machine": "8b98c3c85b37e97f455ed6821ec764cdc9b17fc73755f8794f69e215ebdc901d",
           "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
           "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
         },
-        "output_gcode_sha256": "e120915a62f3d3aa909b259ed8e40766f76124b0fcbf6f60fa9604bcf41e8c6f"
+        "output_gcode_sha256": "128884a948a44ee333924225a356779d8c92bdfb3e302b4c7e1dc52fbf5cdab6"
       }
     }
   }

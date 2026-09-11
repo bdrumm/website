@@ -1,10 +1,10 @@
-# Baguette holder V3.4 — engineering review
+# Baguette holder V3.5 — engineering review
 
-V3.4 removes the raised hinge pivot and bent support arms. The hinge now joins directly to a rounded rear rim, entirely within the original case outline. The two short shell-contoured latches from V3.3 remain, with a hidden exit bevel added to clear the new opening path. This is a printable prototype; it has not been physically printed or fatigue-tested.
+V3.5 blends the hinge into the shell with **2 mm radius tangent transitions** on both sides of the rear wall. The fixed hinge ends merge into the same continuous rim profile, removing the exposed cylindrical end steps. The direct hinge, two short latches and working clearances remain. This is a printable prototype; it has not been physically printed or fatigue-tested.
 
 ## Revised latch design
 
-| Feature | V3.2 | V3.3 / V3.4 |
+| Feature | V3.2 | V3.3–V3.5 |
 |---|---:|---:|
 | Latches | 4 | 2, at Y = −150 and +150 mm |
 | Nominal flexible length | 26 mm | 18 mm |
@@ -23,13 +23,13 @@ Shorter, deeper hooks require more release flex. A straight-beam screening calcu
 
 ## Hinge design
 
-Each printed half contains one 28.9 mm long hinge: two fixed 6 mm ears, one 16 mm moving knuckle, and a captive 2 mm pin. The knuckle outside diameter is 6.6 mm, with a 0.4 mm nominal radial gap, 0.45 mm axial gaps and a 1.9 mm nominal bearing wall. The knuckles meet the shell directly; there are no raised arms or mounting frames.
+Each printed half contains one 28.9 mm long hinge: two fixed 6 mm ears, one 16 mm moving knuckle, and a captive 2 mm pin. The knuckle outside diameter is 6.6 mm, with a 0.4 mm nominal radial gap, 0.45 mm axial gaps and a 1.9 mm nominal bearing wall. The knuckles meet the shell directly; there are no raised arms or mounting frames. The original abrupt circle-to-wall intersections are replaced by tangent circular blends of 2 mm radius. The smooth profile continues past the fixed-ear ends, so those ends no longer leave projecting end caps inside the case.
 
-The axis moves from X = −36, Z = 7 mm to **X = −41, Z = 0 mm**, at the rear rim in source coordinates. The back wall is reprofiled inward to X = −43 mm outside and X = −40 mm inside, providing a nominal 3 mm wall. A rounded edge follows the bearing radius. The moving rim clears this edge radially. The barrel and all hinge-side geometry remain inside the original exterior envelope.
+The axis moves from X = −36, Z = 7 mm to **X = −41, Z = 0 mm**, at the rear rim in source coordinates. The back wall is reprofiled inward to X = −43 mm outside and X = −40 mm inside, providing a nominal 3 mm wall. A rounded edge follows the bearing radius and blends tangentially into both wall surfaces. The added material is approximately 5.08 cm³ across the whole case, with the original bread clearance retained. The moving rim clears this edge radially. The barrel and all hinge-side geometry remain inside the original exterior envelope.
 
 The reviewed opening range is **0–100°**. It is an operating limit, without a mechanical hard stop. Do not force the lid farther. The supplied print pose is 100° open with the pin axes vertical.
 
-The changed pivot revealed a small hook-to-catch conflict early in opening. A **0.9 mm hidden exit relief** now tapers the upper catch pocket; the holding shoulder and reinforced back wall below it remain intact. The measured retaining overlap remains approximately 1.12 mm. Both released latches clear throughout the reviewed motion.
+In V3.4, the changed pivot revealed a small hook-to-catch conflict early in opening. A **0.9 mm hidden exit relief** now tapers the upper catch pocket; the holding shoulder and reinforced back wall below it remain intact. The measured retaining overlap remains approximately 1.12 mm. Both released latches clear throughout the reviewed motion.
 
 ## Review before committing
 
@@ -37,8 +37,10 @@ The review covers the actual manufacturing solids with installed joiners, not ju
 
 ## Geometry review
 
-All **42 checks pass**:
+All **48 checks pass**:
 
+- The new inner and outer blend profiles meet the bearing tangentially, with matching positions and tangent directions.
+- All four fixed-ear ends continue into the surrounding rim profile, excluding designed working seams.
 - Each of the four shells and three internal joiners is one watertight, consistently wound solid.
 - Each main print segment contains exactly two separate solids: the base and captured moving lid.
 - The closed assembly has zero detected overlap.
@@ -47,7 +49,7 @@ All **42 checks pass**:
 - The latch surfaces follow the original exterior except for the thumb lips.
 - The modeled release path is clear at 0.1 mm increments from 0 to 2.1 mm.
 - Released motion has zero detected overlap at every 1° increment from 0° to 100°, including the installed joiners.
-- Each open print segment retains approximately 0.397 mm minimum base-to-lid clearance.
+- Each open print segment retains approximately 0.388 mm minimum base-to-lid clearance.
 - The original 62 mm diameter × 600 mm capsule clearance is retained within the Boolean tolerance.
 - Both compact barrels lie inside the original exterior. The full hinge-side exterior test leaves only 0.00093 mm³ of numerical boundary residue, below its 0.05 mm³ tolerance.
 - The joiners have approximately 0.250 mm socket clearance.
@@ -75,7 +77,7 @@ The cleaned rib-to-shell unions remain. The sculpted outer crust is preserved ap
 | Lid key 1 | 25.11 × 24.23 × 32.00 |
 | Lid key 2 | 25.05 × 30.42 × 32.00 |
 
-Both main segments slice successfully offline in Bambu Studio 02.08.02.61, using the installed Bambu H2C / Generic PLA presets, 0.4 mm nozzle, 0.20 mm layers, four walls, 15% infill, an 8 mm brim and automatic supports. Segment A estimates **14 h 22 m / 447 g**; B estimates **14 h 30 m / 460 g**. These estimates include supports and brim, and exclude joiners and coupons. No job was sent to a printer. Input STL hashes in `review.json` tie the results to these exports.
+Both main segments slice successfully offline in Bambu Studio 02.08.02.61, using the installed Bambu H2C / Generic PLA presets, 0.4 mm nozzle, 0.20 mm layers, four walls, 15% infill, an 8 mm brim and automatic supports. Segment A estimates **14 h 25 m / 450 g**; B estimates **14 h 32 m / 463 g**. These estimates include supports and brim, and exclude joiners and coupons. No job was sent to a printer. Input STL hashes in `review.json` tie the results to these exports.
 
 Keep the supplied upright, open orientation. Inspect supports under the latch undercuts and rim features, and keep them out of working bearings. This complete object is not claimed to print without supports. The STL units are millimetres. The 3MF files contain oriented geometry, not prepared printer jobs or G-code.
 
