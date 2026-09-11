@@ -23,4 +23,8 @@ Keep fingernail access directly below each lip. Check the gauge clearance and re
 
 Keep all four latch side slots clear through the raised shell band. Check a continuous slot gauge for residual overhanging bridges, including where the band is higher than the opening corners.
 
+The raised outer band must blend smoothly into the shell and latch face. Preserve cavity thickness and test continuity across the former band ledges at Z ±3.5 mm. Keep functional retaining shoulders square.
+
+Strap eyes must keep their through-openings and a strong outer web while their edges and roots are rounded. Inspect the strap view. Check fingernail entry into the grip itself and the material above and in front of that recess.
+
 The editable CAD and source checks are distributed in baguette-v3-source-and-print.zip. Extract to a writable model workspace before changing geometry. Publish rebuilt assets and both matching archives together.

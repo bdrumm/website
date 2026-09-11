@@ -1,6 +1,6 @@
 {
-  "generator_sha256": "d9718cafd023c35e6645f46431de4815957f6d75a5b97efc7764049b7605b9c6",
-  "revision": "V3.11 clear latch openings engineering prototype",
+  "generator_sha256": "1685a4f871b64faff6e2fd28ad6f099800bc4f213e7b7c01598f7620a89da5ce",
+  "revision": "V3.12 blended lip, rounded strap eyes and recessed grips engineering prototype",
   "parameters": {
     "hinge_axis_x": -40.4,
     "exterior_rim_axis_x": -41.0,
@@ -45,6 +45,12 @@
     "nail_recess_height": 6.0,
     "nail_recess_z": -12.2,
     "mount_edge_radius": 0.4,
+    "strap_edge_radius": 1.0,
+    "strap_root_blend": 2.0,
+    "thumb_inset_width": 10.0,
+    "thumb_inset_rise": 0.6,
+    "belt_flat_height": 0.6,
+    "belt_blend_height": 8.0,
     "wall_guard": 2.45,
     "wall_nominal": 3.6,
     "joint_blend_length": 30.0,
@@ -89,15 +95,15 @@
   ],
   "printables": {
     "segment_A": {
-      "triangles": 41632,
+      "triangles": 65434,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 339490.8435128195,
-      "mass_g_at_1_24": 420.9686459558962,
+      "volume_mm3": 340507.5824085031,
+      "mass_g_at_1_24": 422.22940218654384,
       "components": 2,
       "component_volumes_mm3": [
-        148133.3950437798,
-        191357.4484690397
+        148873.83959600414,
+        191633.74281249897
       ],
       "bounds_mm": [
         -77.18889617919922,
@@ -105,54 +111,54 @@
         0.0,
         77.18889617919922,
         65.65385437011719,
-        322.87554931640625
+        322.8713073730469
       ],
       "size_mm": [
         154.37779235839844,
         131.30770874023438,
-        322.87554931640625
+        322.8713073730469
       ]
     },
     "segment_B": {
-      "triangles": 41054,
+      "triangles": 65244,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 337056.9162276759,
-      "mass_g_at_1_24": 417.9505761223181,
+      "volume_mm3": 338108.40036133997,
+      "mass_g_at_1_24": 419.25441644806153,
       "components": 2,
       "component_volumes_mm3": [
-        146201.96612311894,
-        190854.95010455695
+        146968.33041330668,
+        191140.06994803328
       ],
       "bounds_mm": [
         -77.11788177490234,
-        -65.6517333984375,
+        -65.6515121459961,
         0.0,
         77.11788177490234,
-        65.6517333984375,
-        314.7755126953125
+        65.6515121459961,
+        314.771240234375
       ],
       "size_mm": [
         154.2357635498047,
-        131.303466796875,
-        314.7755126953125
+        131.3030242919922,
+        314.771240234375
       ]
     }
   },
   "parts": {
     "base_A": {
-      "triangles": 21114,
+      "triangles": 31184,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 191357.45445465005,
-      "mass_g_at_1_24": 237.28324352376606,
+      "volume_mm3": 191633.71189807105,
+      "mass_g_at_1_24": 237.6258027536081,
       "components": 1,
       "component_volumes_mm3": [
-        191357.45445465005
+        191633.71189807105
       ],
       "bounds_mm": [
         -44.29999923706055,
-        -310.87554931640625,
+        -310.8713073730469,
         -43.473731994628906,
         61.80098342895508,
         12.0,
@@ -160,80 +166,80 @@
       ],
       "size_mm": [
         106.10098266601562,
-        322.87554931640625,
+        322.8713073730469,
         47.77373218536377
       ]
     },
     "lid_A": {
-      "triangles": 20532,
+      "triangles": 34290,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 148133.3901435619,
-      "mass_g_at_1_24": 183.68540377801676,
+      "volume_mm3": 148873.83595315056,
+      "mass_g_at_1_24": 184.6035565819067,
       "components": 1,
       "component_volumes_mm3": [
-        148133.3901435619
+        148873.83595315056
       ],
       "bounds_mm": [
         -44.29999923706055,
-        -310.87554931640625,
-        -10.798425674438477,
-        48.040592193603516,
+        -310.8713073730469,
+        -10.793608665466309,
+        48.0399055480957,
         12.0,
         43.473731994628906
       ],
       "size_mm": [
-        92.34059143066406,
-        322.87554931640625,
-        54.27215766906738
+        92.33990478515625,
+        322.8713073730469,
+        54.267340660095215
       ]
     },
     "base_B": {
-      "triangles": 20936,
+      "triangles": 30952,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 190854.98642865135,
-      "mass_g_at_1_24": 236.66018317152768,
+      "volume_mm3": 191140.06945933015,
+      "mass_g_at_1_24": 237.01368612956938,
       "components": 1,
       "component_volumes_mm3": [
-        190854.98642865135
+        191140.06945933015
       ],
       "bounds_mm": [
         -44.29999923706055,
         -3.9000000953674316,
         -43.473731994628906,
         61.757957458496094,
-        310.8755187988281,
+        310.8712463378906,
         4.300000190734863
       ],
       "size_mm": [
         106.05795669555664,
-        314.77551889419556,
+        314.77124643325806,
         47.77373218536377
       ]
     },
     "lid_B": {
-      "triangles": 20180,
+      "triangles": 34316,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 146202.13559691416,
-      "mass_g_at_1_24": 181.29064814017354,
+      "volume_mm3": 146968.32852888582,
+      "mass_g_at_1_24": 182.2407273758184,
       "components": 1,
       "component_volumes_mm3": [
-        146202.13559691416
+        146968.32852888582
       ],
       "bounds_mm": [
         -44.29999923706055,
         -3.9000000953674316,
-        -10.799222946166992,
-        48.047183990478516,
-        310.8755187988281,
+        -10.799251556396484,
+        48.041709899902344,
+        310.8712463378906,
         43.473731994628906
       ],
       "size_mm": [
-        92.34718322753906,
-        314.77551889419556,
-        54.2729549407959
+        92.34170913696289,
+        314.77124643325806,
+        54.27298355102539
       ]
     }
   },
@@ -418,25 +424,29 @@
   "latches": [
     {
       "y": -150.0,
-      "x": 45.975556565453545,
+      "x": 45.980963286060096,
       "root_z": 8.0,
       "tip_z": -10.8,
       "release_min_x": 31.9,
       "hook_shoulder_z": -5.5,
       "engagement_mm": 1.1500000000000001,
       "receiver_lip_projection_mm": 1.55,
-      "receiver_back_wall_mm": 3.6500000000000004
+      "receiver_back_wall_mm": 3.6500000000000004,
+      "grip_inset_reference_x": 44.820112398574054,
+      "grip_inset_rise_mm": 0.6
     },
     {
       "y": 150.0,
-      "x": 46.011130509180674,
+      "x": 46.01815796768969,
       "root_z": 8.0,
       "tip_z": -10.8,
       "release_min_x": 31.9,
       "hook_shoulder_z": -5.5,
       "engagement_mm": 1.1500000000000001,
       "receiver_lip_projection_mm": 1.55,
-      "receiver_back_wall_mm": 3.6500000000000004
+      "receiver_back_wall_mm": 3.6500000000000004,
+      "grip_inset_reference_x": 44.817954660455506,
+      "grip_inset_rise_mm": 0.6
     }
   ],
   "closed_overlap_mm3": 0.0,
@@ -457,30 +467,30 @@
     "stations": [
       {
         "y": -220.0,
-        "removed_volume_mm3": 2438.6373814742665
+        "removed_volume_mm3": 2438.637367472017
       },
       {
         "y": -140.0,
-        "removed_volume_mm3": 2634.6419462880563
+        "removed_volume_mm3": 2634.6419262034924
       },
       {
         "y": -60.0,
-        "removed_volume_mm3": 2371.200647700018
+        "removed_volume_mm3": 2371.200772590732
       },
       {
         "y": 60.0,
-        "removed_volume_mm3": 2353.9854277505065
+        "removed_volume_mm3": 2353.9855041123324
       },
       {
         "y": 140.0,
-        "removed_volume_mm3": 2562.837627761899
+        "removed_volume_mm3": 2562.8375466276393
       },
       {
         "y": 220.0,
-        "removed_volume_mm3": 2429.9149492699967
+        "removed_volume_mm3": 2429.914789758522
       }
     ],
-    "removed_volume_mm3": 14791.217980244743
+    "removed_volume_mm3": 14791.217906764736
   },
   "validation": {
     "checks": [
@@ -515,7 +525,7 @@
         "detail": [
           154.37779235839844,
           131.30770874023438,
-          322.87554931640625
+          322.8713073730469
         ]
       },
       {
@@ -528,8 +538,8 @@
         "passed": true,
         "detail": [
           154.2357635498047,
-          131.303466796875,
-          314.7755126953125
+          131.3030242919922,
+          314.771240234375
         ]
       },
       {
@@ -549,7 +559,63 @@
       {
         "name": "62 mm x 600 mm capsule clearance is retained",
         "passed": true,
-        "detail": 6.240255186585396e-05
+        "detail": 6.242082662516571e-05
+      },
+      {
+        "name": "outer lip blends without a step at Y -180.0",
+        "passed": true,
+        "detail": {
+          "surface_change_across_0p02_mm": [
+            0.004524448397660308,
+            0.010928725121218008
+          ],
+          "former_band_edge_z_mm": [
+            -3.5,
+            3.5
+          ]
+        }
+      },
+      {
+        "name": "outer lip blends without a step at Y -120.0",
+        "passed": true,
+        "detail": {
+          "surface_change_across_0p02_mm": [
+            0.004104964034567615,
+            0.012193307830578703
+          ],
+          "former_band_edge_z_mm": [
+            -3.5,
+            3.5
+          ]
+        }
+      },
+      {
+        "name": "outer lip blends without a step at Y 120.0",
+        "passed": true,
+        "detail": {
+          "surface_change_across_0p02_mm": [
+            0.004081831959794613,
+            0.012232743567459181
+          ],
+          "former_band_edge_z_mm": [
+            -3.5,
+            3.5
+          ]
+        }
+      },
+      {
+        "name": "outer lip blends without a step at Y 180.0",
+        "passed": true,
+        "detail": {
+          "surface_change_across_0p02_mm": [
+            0.004554341250553762,
+            0.010983089950357794
+          ],
+          "former_band_edge_z_mm": [
+            -3.5,
+            3.5
+          ]
+        }
       },
       {
         "name": "both compact barrels are fully inside the original exterior",
@@ -560,7 +626,7 @@
         "name": "hinge side has no added exterior structure",
         "passed": true,
         "detail": {
-          "absolute_boolean_residue_mm3": 0.0007120817355291125,
+          "absolute_boolean_residue_mm3": 0.04372666862370263,
           "tolerance_mm3": 0.05
         }
       },
@@ -575,7 +641,7 @@
         "name": "segment B retains printable running clearance",
         "passed": true,
         "detail": {
-          "minimum_gap_mm": 0.395935979196482
+          "minimum_gap_mm": 0.39593597919648277
         }
       },
       {
@@ -590,72 +656,72 @@
         "name": "latch at -150.0 blocks opening without release",
         "passed": true,
         "detail": {
-          "rigid_interference_at_half_degree_mm3": 5.870707819456175
+          "rigid_interference_at_half_degree_mm3": 6.680578198009131
         }
       },
       {
         "name": "latch at -150.0 has at least 1 mm of measured retaining overlap",
         "passed": true,
         "detail": {
-          "local_overlap_x_mm": 1.1203892629062224
+          "local_overlap_x_mm": 1.2218868878260523
         }
       },
       {
         "name": "latch at -150.0 has a reinforced catch back wall",
         "passed": true,
         "detail": {
-          "local_back_wall_x_mm": 3.6697879504756727
+          "local_back_wall_x_mm": 3.656041632871542
         }
       },
       {
         "name": "latch at -150.0 follows the original outer surface except the thumb lip",
         "passed": true,
         "detail": {
-          "exterior_residue_mm3": 3.443974866605138e-05
+          "exterior_residue_mm3": 0.0012737821405265286
         }
       },
       {
         "name": "latch at -150.0 has an integrated underside finger catch",
         "passed": true,
         "detail": {
-          "underhang_mm": 0.7981153716507841,
-          "outside_material_below_original_tip_mm3": 15.442394952581541
+          "underhang_mm": 0.7934170642957898,
+          "outside_material_below_original_tip_mm3": 11.434916978851485
         }
       },
       {
         "name": "latch at 150.0 blocks opening without release",
         "passed": true,
         "detail": {
-          "rigid_interference_at_half_degree_mm3": 5.362260110460809
+          "rigid_interference_at_half_degree_mm3": 6.702844981732601
         }
       },
       {
         "name": "latch at 150.0 has at least 1 mm of measured retaining overlap",
         "passed": true,
         "detail": {
-          "local_overlap_x_mm": 1.1234804638111413
+          "local_overlap_x_mm": 1.2251848685415538
         }
       },
       {
         "name": "latch at 150.0 has a reinforced catch back wall",
         "passed": true,
         "detail": {
-          "local_back_wall_x_mm": 3.668274106113543
+          "local_back_wall_x_mm": 3.6571390655925455
         }
       },
       {
         "name": "latch at 150.0 follows the original outer surface except the thumb lip",
         "passed": true,
         "detail": {
-          "exterior_residue_mm3": 0.00012264250094054285
+          "exterior_residue_mm3": 0.0033247786464162456
         }
       },
       {
         "name": "latch at 150.0 has an integrated underside finger catch",
         "passed": true,
         "detail": {
-          "underhang_mm": 0.796931266784668,
-          "outside_material_below_original_tip_mm3": 15.431492581597988
+          "underhang_mm": 0.7992089854649187,
+          "outside_material_below_original_tip_mm3": 11.428863086962865
         }
       },
       {
@@ -665,7 +731,7 @@
           "checked_height_mm": 14.2,
           "surface_depth_mm": 0.3,
           "gauge_width_mm": 0.08,
-          "obstruction_mm3": 7.587879510053304e-05
+          "obstruction_mm3": 7.587755592296682e-05
         }
       },
       {
@@ -675,7 +741,7 @@
           "checked_height_mm": 14.2,
           "surface_depth_mm": 0.3,
           "gauge_width_mm": 0.08,
-          "obstruction_mm3": 7.588050226317483e-05
+          "obstruction_mm3": 7.584160513210291e-05
         }
       },
       {
@@ -685,7 +751,7 @@
           "checked_height_mm": 14.2,
           "surface_depth_mm": 0.3,
           "gauge_width_mm": 0.08,
-          "obstruction_mm3": 7.587467177383442e-05
+          "obstruction_mm3": 7.587825944133279e-05
         }
       },
       {
@@ -695,7 +761,7 @@
           "checked_height_mm": 14.2,
           "surface_depth_mm": 0.3,
           "gauge_width_mm": 0.08,
-          "obstruction_mm3": 7.588102814114301e-05
+          "obstruction_mm3": 7.588022499246482e-05
         }
       },
       {
@@ -712,7 +778,7 @@
         "name": "fingernail access at -150.0 retains at least 2.4 mm behind the scoop",
         "passed": true,
         "detail": {
-          "center_floor_thickness_x_mm": 2.610779688449483
+          "center_floor_thickness_x_mm": 2.6069214437323396
         }
       },
       {
@@ -729,7 +795,81 @@
         "name": "fingernail access at 150.0 retains at least 2.4 mm behind the scoop",
         "passed": true,
         "detail": {
-          "center_floor_thickness_x_mm": 2.6069727418999236
+          "center_floor_thickness_x_mm": 2.607931445291925
+        }
+      },
+      {
+        "name": "underside grip inset accepts a nail at Y -150.0",
+        "passed": true,
+        "detail": {
+          "gauge_width_mm": 4,
+          "gauge_depth_mm": 0.6,
+          "top_z_mm": -10.4,
+          "interference_mm3": 0.0
+        }
+      },
+      {
+        "name": "grip retains its roof and front rim at Y -150.0",
+        "passed": true,
+        "detail": {
+          "checked_roof_height_mm": 1.9,
+          "checked_front_rim_width_mm": 0.4,
+          "missing_material_mm3": 0.0
+        }
+      },
+      {
+        "name": "underside grip inset accepts a nail at Y 150.0",
+        "passed": true,
+        "detail": {
+          "gauge_width_mm": 4,
+          "gauge_depth_mm": 0.6,
+          "top_z_mm": -10.4,
+          "interference_mm3": 0.0
+        }
+      },
+      {
+        "name": "grip retains its roof and front rim at Y 150.0",
+        "passed": true,
+        "detail": {
+          "checked_roof_height_mm": 1.9,
+          "checked_front_rim_width_mm": 0.4,
+          "missing_material_mm3": 0.0
+        }
+      },
+      {
+        "name": "rounded strap eye stays open at Y -255.0",
+        "passed": true,
+        "detail": {
+          "gauge_mm": [
+            7,
+            12
+          ],
+          "interference_mm3": 0.0
+        }
+      },
+      {
+        "name": "rounded strap eye retains a strong outer web at Y -255.0",
+        "passed": true,
+        "detail": {
+          "measured_midplane_web_mm": 3.0002558835194293
+        }
+      },
+      {
+        "name": "rounded strap eye stays open at Y 255.0",
+        "passed": true,
+        "detail": {
+          "gauge_mm": [
+            7,
+            12
+          ],
+          "interference_mm3": 0.0
+        }
+      },
+      {
+        "name": "rounded strap eye retains a strong outer web at Y 255.0",
+        "passed": true,
+        "detail": {
+          "measured_midplane_web_mm": 3.0002558835194293
         }
       },
       {
@@ -747,10 +887,10 @@
           "sample_step_degrees": 0.2,
           "sample_count": 501,
           "minimum_sampled_gap_mm": 0.3000000119209289,
-          "moving_radius_mm": 90.05970870843981,
-          "between_sample_displacement_bound_mm": 0.15718382408453882,
+          "moving_radius_mm": 90.05970928829336,
+          "between_sample_displacement_bound_mm": 0.15718382509657405,
           "numerical_allowance_mm": 0.002,
-          "certified_minimum_gap_mm": 0.14081618783639008
+          "certified_minimum_gap_mm": 0.14081618682435484
         }
       },
       {
@@ -760,7 +900,7 @@
           "enclosed_air_components": 1,
           "analysis_seam_offset_mm": 0.36,
           "masked_vents": 4,
-          "cavity_volume_mm3": 2945206.3256313964
+          "cavity_volume_mm3": 2945403.7447340107
         }
       },
       {
@@ -801,28 +941,28 @@
         "name": "fixed ear merges into the rim at Y -164.45",
         "passed": true,
         "detail": {
-          "missing_profile_mm3": 4.249935263112193e-07
+          "missing_profile_mm3": 4.1672735131726776e-07
         }
       },
       {
         "name": "fixed ear merges into the rim at Y -135.55",
         "passed": true,
         "detail": {
-          "missing_profile_mm3": 4.134450761314218e-07
+          "missing_profile_mm3": 4.0568810586494784e-07
         }
       },
       {
         "name": "fixed ear merges into the rim at Y 135.55",
         "passed": true,
         "detail": {
-          "missing_profile_mm3": 3.994530484470916e-07
+          "missing_profile_mm3": 4.053266045583924e-07
         }
       },
       {
         "name": "fixed ear merges into the rim at Y 164.45",
         "passed": true,
         "detail": {
-          "missing_profile_mm3": 4.231955913023418e-07
+          "missing_profile_mm3": 4.408959397172023e-07
         }
       },
       {
@@ -923,7 +1063,7 @@
         "name": "lid snap at 25 degrees blocks withdrawal",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.65344790181504,
+          "interference_after_half_mm_pull_mm3": 1.6534479018150379,
           "nominal_radial_engagement_mm": 0.7
         }
       },
@@ -939,7 +1079,7 @@
         "name": "lid snap at 48 degrees blocks withdrawal",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.6939547084879627,
+          "interference_after_half_mm_pull_mm3": 1.6939547084879625,
           "nominal_radial_engagement_mm": 0.7
         }
       },
@@ -955,7 +1095,7 @@
         "name": "lid snap at 132 degrees blocks withdrawal",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.706159389776243,
+          "interference_after_half_mm_pull_mm3": 1.7061593897762428,
           "nominal_radial_engagement_mm": 0.7
         }
       },
@@ -971,7 +1111,7 @@
         "name": "lid snap at 155 degrees blocks withdrawal",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.6561017242733875,
+          "interference_after_half_mm_pull_mm3": 1.656101714669502,
           "nominal_radial_engagement_mm": 0.7
         }
       },
@@ -1250,8 +1390,8 @@
         "name": "rib at -220.0 is completely omitted from the shell construction",
         "passed": true,
         "detail": {
-          "removed_volume_mm3": 2438.6373814742665,
-          "added_boolean_residue_mm3": 0.0011524018899798007,
+          "removed_volume_mm3": 2438.637367472017,
+          "added_boolean_residue_mm3": 0.0011417600481062118,
           "residue_tolerance_mm3": 0.01
         }
       },
@@ -1259,8 +1399,8 @@
         "name": "rib at -140.0 is completely omitted from the shell construction",
         "passed": true,
         "detail": {
-          "removed_volume_mm3": 2634.6419462880563,
-          "added_boolean_residue_mm3": 0.0010761937842690456,
+          "removed_volume_mm3": 2634.6419262034924,
+          "added_boolean_residue_mm3": 0.0010666866445002503,
           "residue_tolerance_mm3": 0.01
         }
       },
@@ -1268,8 +1408,8 @@
         "name": "rib at -60.0 is completely omitted from the shell construction",
         "passed": true,
         "detail": {
-          "removed_volume_mm3": 2371.200647700018,
-          "added_boolean_residue_mm3": 0.000859505464474279,
+          "removed_volume_mm3": 2371.200772590732,
+          "added_boolean_residue_mm3": 0.000745928216173231,
           "residue_tolerance_mm3": 0.01
         }
       },
@@ -1277,8 +1417,8 @@
         "name": "rib at 60.0 is completely omitted from the shell construction",
         "passed": true,
         "detail": {
-          "removed_volume_mm3": 2353.9854277505065,
-          "added_boolean_residue_mm3": 0.0009689783746778959,
+          "removed_volume_mm3": 2353.9855041123324,
+          "added_boolean_residue_mm3": 0.0009459169138256354,
           "residue_tolerance_mm3": 0.01
         }
       },
@@ -1286,8 +1426,8 @@
         "name": "rib at 140.0 is completely omitted from the shell construction",
         "passed": true,
         "detail": {
-          "removed_volume_mm3": 2562.837627761899,
-          "added_boolean_residue_mm3": 0.0009566670842702823,
+          "removed_volume_mm3": 2562.8375466276393,
+          "added_boolean_residue_mm3": 0.0008964938777137737,
           "residue_tolerance_mm3": 0.01
         }
       },
@@ -1295,8 +1435,8 @@
         "name": "rib at 220.0 is completely omitted from the shell construction",
         "passed": true,
         "detail": {
-          "removed_volume_mm3": 2429.9149492699967,
-          "added_boolean_residue_mm3": 0.0009870349495021626,
+          "removed_volume_mm3": 2429.914789758522,
+          "added_boolean_residue_mm3": 0.0009419000688612876,
           "residue_tolerance_mm3": 0.01
         }
       },
@@ -1342,10 +1482,10 @@
       {
         "name": "geometry report matches the current generator",
         "passed": true,
-        "detail": "d9718cafd023c35e6645f46431de4815957f6d75a5b97efc7764049b7605b9c6"
+        "detail": "1685a4f871b64faff6e2fd28ad6f099800bc4f213e7b7c01598f7620a89da5ce"
       }
     ],
-    "passed": 108,
+    "passed": 120,
     "failed": 0,
     "physical_print_tested": false,
     "continuous_sweep_proven": true,
@@ -1353,49 +1493,49 @@
       "sample_step_degrees": 0.2,
       "sample_count": 501,
       "minimum_sampled_gap_mm": 0.3000000119209289,
-      "moving_radius_mm": 90.05970870843981,
-      "between_sample_displacement_bound_mm": 0.15718382408453882,
+      "moving_radius_mm": 90.05970928829336,
+      "between_sample_displacement_bound_mm": 0.15718382509657405,
       "numerical_allowance_mm": 0.002,
-      "certified_minimum_gap_mm": 0.14081618783639008
+      "certified_minimum_gap_mm": 0.14081618682435484
     }
   },
   "slicing": {
     "A": {
-      "input_stl_sha256": "c28376e8948b73303bbe9d81708bf6733b8da69873241ee8713835cbb7b51395",
+      "input_stl_sha256": "1d5cdda6bf2bd879056c30dff935d218ab41cb6ab89d0393054337feb700d356",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "14h 56m 45s",
-      "filament_g": 490.6,
+      "estimated_time": "14h 48m 17s",
+      "filament_g": 490.76,
       "max_z_mm": 322.8,
       "supports_enabled": true,
       "sent_to_printer": false,
       "provenance": {
-        "input_stl_sha256": "c28376e8948b73303bbe9d81708bf6733b8da69873241ee8713835cbb7b51395",
+        "input_stl_sha256": "1d5cdda6bf2bd879056c30dff935d218ab41cb6ab89d0393054337feb700d356",
         "settings_sha256": {
           "machine": "8b98c3c85b37e97f455ed6821ec764cdc9b17fc73755f8794f69e215ebdc901d",
           "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
           "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
         },
-        "output_gcode_sha256": "8767761c0dadce27ca387f1a05f158d37948f82d70081249a5864dfe595ee57b"
+        "output_gcode_sha256": "03abfa9e482527f3274caf9d8165b2eeca99ebfe2745812f13004bd8159ee3fd"
       }
     },
     "B": {
-      "input_stl_sha256": "6ecc62578f3f1ca990c3c4c42cf0ff674208b4a6d521d093a108307cbfea7e4c",
+      "input_stl_sha256": "f15b6b1d43a0b8be24f96a7300ef1d97efd8d55bb714dad5f056a88877f5d638",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "14h 56m 25s",
-      "filament_g": 492.21,
+      "estimated_time": "14h 44m 22s",
+      "filament_g": 490.85,
       "max_z_mm": 314.8,
       "supports_enabled": true,
       "sent_to_printer": false,
       "provenance": {
-        "input_stl_sha256": "6ecc62578f3f1ca990c3c4c42cf0ff674208b4a6d521d093a108307cbfea7e4c",
+        "input_stl_sha256": "f15b6b1d43a0b8be24f96a7300ef1d97efd8d55bb714dad5f056a88877f5d638",
         "settings_sha256": {
           "machine": "8b98c3c85b37e97f455ed6821ec764cdc9b17fc73755f8794f69e215ebdc901d",
           "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
           "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
         },
-        "output_gcode_sha256": "f1dc76905618b1842c0fa6c4f131068bd8fbd9bbf0d1ac50926278045acfa523"
+        "output_gcode_sha256": "fd23a22685ec2fe8a6fc776d74fe66c66b28347c65297261f85d4d12270a34fd"
       }
     }
   }
