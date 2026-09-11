@@ -1,0 +1,1945 @@
+{
+  "status": "standard brick revision, supplied print orientations",
+  "count": 43,
+  "display_notice": "Each numbered tile is a separate illustration. The layout does not imply the set fits on one printer. Category colours are for review only. Supplied print orientations are preserved; only tile translations are applied.",
+  "parts": [
+    {
+      "number": 1,
+      "id": "Garage_Structural_Module",
+      "label": "Garage body",
+      "group": "bodies",
+      "group_title": "Structural bodies",
+      "stl_sha256": "70146df15b8fd445be791698a7e51aed7488d575c8dae4f9a330338c9a8ea494",
+      "dimensions_mm": [
+        200.0,
+        244.39999389648438,
+        130.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        200.0,
+        244.39999389648438,
+        130.0
+      ],
+      "vertices": 7700,
+      "triangles": 15452,
+      "orientation_note": "Upright one-piece structural shell. Added sloped undersides reduce ledges; use normal accessible removable supports beneath remaining rear rod/header and guide features. Keep anchor slots, guide channels and mating sockets clear.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 224.0,
+      "tile_depth_mm": 286.3999938964844,
+      "tile_local_xy_mm": [
+        0,
+        0.0
+      ],
+      "tile_origin_mm": [
+        0,
+        1089.9400177001953,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        12.0,
+        1117.9400177001953,
+        -0.0
+      ],
+      "stl_file": "Garage_Structural_Module.stl"
+    },
+    {
+      "number": 2,
+      "id": "Kitchen_Structural_Module",
+      "label": "Kitchen body",
+      "group": "bodies",
+      "group_title": "Structural bodies",
+      "stl_sha256": "bd84e44db11fa7ac42559b8f99ce593bb00801b6c0e0957ce1bbce04c7b068a9",
+      "dimensions_mm": [
+        200.0,
+        244.39999389648438,
+        130.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        200.0,
+        244.39999389648438,
+        130.0
+      ],
+      "vertices": 5336,
+      "triangles": 10704,
+      "orientation_note": "Upright one-piece structural shell. Added sloped undersides reduce ledges; use normal accessible removable supports beneath remaining rear rod/header and guide features. Keep anchor slots, guide channels and mating sockets clear. Exterior brick recesses now match the garage, with a 2.9 mm remaining side web.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 224.0,
+      "tile_depth_mm": 286.3999938964844,
+      "tile_local_xy_mm": [
+        240.0,
+        0.0
+      ],
+      "tile_origin_mm": [
+        240.0,
+        1089.9400177001953,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        252.0,
+        1117.9400177001953,
+        -0.0
+      ],
+      "stl_file": "Kitchen_Structural_Module.stl"
+    },
+    {
+      "number": 3,
+      "id": "Dining_Structural_Module",
+      "label": "Dining body",
+      "group": "bodies",
+      "group_title": "Structural bodies",
+      "stl_sha256": "367809865432c2c837e377ffd4153e01fac5984387ea38a82a681b96a2f9cfdb",
+      "dimensions_mm": [
+        200.0,
+        244.39999389648438,
+        130.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        200.0,
+        244.39999389648438,
+        130.0
+      ],
+      "vertices": 5352,
+      "triangles": 10736,
+      "orientation_note": "Upright one-piece structural shell. Added sloped undersides reduce ledges; use normal accessible removable supports beneath remaining rear rod/header and guide features. Keep anchor slots, guide channels and mating sockets clear. Exterior brick recesses now match the garage, with a 2.9 mm remaining side web.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 224.0,
+      "tile_depth_mm": 286.3999938964844,
+      "tile_local_xy_mm": [
+        480.0,
+        0.0
+      ],
+      "tile_origin_mm": [
+        480.0,
+        1089.9400177001953,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        492.0,
+        1117.9400177001953,
+        -0.0
+      ],
+      "stl_file": "Dining_Structural_Module.stl"
+    },
+    {
+      "number": 4,
+      "id": "Garage_Roof_Print_In_Place",
+      "label": "Garage roof pair",
+      "group": "roofs_fronts",
+      "group_title": "Roofs and removable fronts",
+      "stl_sha256": "61c2081a78ddbf0a7e3c6bc1e6baa532d55c7e1cc1152fa23185bef4178c66b8",
+      "dimensions_mm": [
+        179.01959228515625,
+        178.1400146484375,
+        178.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        179.01959228515625,
+        178.1400146484375,
+        178.0
+      ],
+      "vertices": 4107,
+      "triangles": 8270,
+      "orientation_note": "Equal-width front and rear leaves with integral rear hinge carrier; both start on bed. Preserve the saved two-body diagonal print orientation and vertical hinge axes. External brim, no supports in moving joints. The obsolete starterrail has been removed.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 204.0,
+      "tile_depth_mm": 220.1400146484375,
+      "tile_local_xy_mm": [
+        220.0,
+        205.8000030517578
+      ],
+      "tile_origin_mm": [
+        220.0,
+        699.8000030517578,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        232.49020385742188,
+        727.8000030517578,
+        -0.0
+      ],
+      "stl_file": "Garage_Roof_Print_In_Place.stl"
+    },
+    {
+      "number": 5,
+      "id": "Kitchen_Roof_Print_In_Place",
+      "label": "Kitchen roof pair",
+      "group": "roofs_fronts",
+      "group_title": "Roofs and removable fronts",
+      "stl_sha256": "248b5ebadf6eafe54643ed736944c16479ca48e17115c7bb1be005cc914705b0",
+      "dimensions_mm": [
+        179.01959228515625,
+        178.1400146484375,
+        178.00001525878906
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        179.01959228515625,
+        178.1400146484375,
+        178.00001525878906
+      ],
+      "vertices": 4104,
+      "triangles": 8264,
+      "orientation_note": "Equal-width front and rear leaves with integral rear hinge carrier; both start on bed. Preserve the saved two-body diagonal print orientation and vertical hinge axes. External brim, no supports in moving joints. The obsolete starterrail has been removed.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 204.0,
+      "tile_depth_mm": 220.1400146484375,
+      "tile_local_xy_mm": [
+        0,
+        205.8000030517578
+      ],
+      "tile_origin_mm": [
+        0,
+        699.8000030517578,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        12.490203857421875,
+        727.8000030517578,
+        -0.0
+      ],
+      "stl_file": "Kitchen_Roof_Print_In_Place.stl"
+    },
+    {
+      "number": 6,
+      "id": "Dining_Roof_Print_In_Place",
+      "label": "Dining roof pair",
+      "group": "roofs_fronts",
+      "group_title": "Roofs and removable fronts",
+      "stl_sha256": "0eb221455139979568d8a5b22d5443088f9fefd2d105055e55d5f06bca8157d9",
+      "dimensions_mm": [
+        179.0196075439453,
+        178.13999938964844,
+        178.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        179.0196075439453,
+        178.13999938964844,
+        178.0
+      ],
+      "vertices": 4121,
+      "triangles": 8298,
+      "orientation_note": "Equal-width front and rear leaves with integral rear hinge carrier; both start on bed. Preserve the saved two-body diagonal print orientation and vertical hinge axes. External brim, no supports in moving joints. The obsolete starterrail has been removed.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 204.0,
+      "tile_depth_mm": 220.1400146484375,
+      "tile_local_xy_mm": [
+        440.0,
+        205.8000030517578
+      ],
+      "tile_origin_mm": [
+        440.0,
+        699.8000030517578,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        452.49019622802734,
+        727.8000030517578,
+        -0.0
+      ],
+      "stl_file": "Dining_Roof_Print_In_Place.stl"
+    },
+    {
+      "number": 7,
+      "id": "Garage_Removable_Front_Frame",
+      "label": "Garage front",
+      "group": "roofs_fronts",
+      "group_title": "Roofs and removable fronts",
+      "stl_sha256": "d50f009bbb3a4f1b33beead0d1b08b7f05008dc9aacc50346c0196b06b4c1d28",
+      "dimensions_mm": [
+        180.0,
+        115.80000305175781,
+        12.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        180.0,
+        115.80000305175781,
+        12.0
+      ],
+      "vertices": 4166,
+      "triangles": 8352,
+      "orientation_note": "Flat rear face down as supplied, exterior details upward. No supports in blind anchor sockets or bearing gaps. Backside-down geometry is verified against current source; review hidden awning fillets and short bridges in actual-printer preview.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 204.0,
+      "tile_depth_mm": 157.8000030517578,
+      "tile_local_xy_mm": [
+        440.0,
+        0.0
+      ],
+      "tile_origin_mm": [
+        440.0,
+        494.0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        452.0,
+        522.0,
+        -0.0
+      ],
+      "stl_file": "Garage_Removable_Front_Frame.stl"
+    },
+    {
+      "number": 8,
+      "id": "Kitchen_shop_removable_front",
+      "label": "Kitchen front",
+      "group": "roofs_fronts",
+      "group_title": "Roofs and removable fronts",
+      "stl_sha256": "fdea316d81d8d2fcf9a9f832b4db4170d23eb8390cf7489866c754a362e3814e",
+      "dimensions_mm": [
+        180.0,
+        115.80000305175781,
+        23.500003814697266
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        180.0,
+        115.80000305175781,
+        23.500003814697266
+      ],
+      "vertices": 4170,
+      "triangles": 8368,
+      "orientation_note": "Flat rear face down as supplied, exterior details upward. No supports in blind anchor sockets or bearing gaps. Backside-down geometry is verified against current source; review hidden awning fillets and short bridges in actual-printer preview.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 204.0,
+      "tile_depth_mm": 157.8000030517578,
+      "tile_local_xy_mm": [
+        0,
+        0.0
+      ],
+      "tile_origin_mm": [
+        0,
+        494.0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        12.0,
+        522.0,
+        -0.0
+      ],
+      "stl_file": "Kitchen_shop_removable_front.stl"
+    },
+    {
+      "number": 9,
+      "id": "Dining_removable_storefront",
+      "label": "Dining front",
+      "group": "roofs_fronts",
+      "group_title": "Roofs and removable fronts",
+      "stl_sha256": "e6fef7cee5c882fd5a7fbc409483c8a8b056cba17b06338dfb4375a7296410df",
+      "dimensions_mm": [
+        180.0,
+        115.80000305175781,
+        23.500003814697266
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        180.0,
+        115.80000305175781,
+        23.500003814697266
+      ],
+      "vertices": 4767,
+      "triangles": 9562,
+      "orientation_note": "Flat rear face down as supplied, exterior details upward. No supports in blind anchor sockets or bearing gaps. Backside-down geometry is verified against current source; review hidden awning fillets and short bridges in actual-printer preview.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 204.0,
+      "tile_depth_mm": 157.8000030517578,
+      "tile_local_xy_mm": [
+        220.0,
+        0.0
+      ],
+      "tile_origin_mm": [
+        220.0,
+        494.0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        232.0,
+        522.0,
+        -0.0
+      ],
+      "stl_file": "Dining_removable_storefront.stl"
+    },
+    {
+      "number": 10,
+      "id": "Garage_Door_Print_In_Place",
+      "label": "Roller door assembly",
+      "group": "doors",
+      "group_title": "Doors and moving joints",
+      "stl_sha256": "435730a90c8293fa5e387ca1dec900341619d0445d9752bc141492f74d73b394",
+      "dimensions_mm": [
+        157.39999389648438,
+        98.70000457763672,
+        5.90000581741333
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        157.39999389648438,
+        98.70000457763672,
+        5.90000581741333
+      ],
+      "vertices": 13858,
+      "triangles": 28052,
+      "orientation_note": "Preserve supplied flat slat layout and all relative body positions. Four-wall Arachne, outer brim; clean complete no-support slice verified. Exposed guide-axle tips still cantilever 5.7 mm beyond each panel side: optional accessible build-plate-only painted supports may improve tip accuracy on the actual printer. Restrict them to supplied-STL X 0\u20135.7 mm and X 151.7\u2013157.4 mm beneath exposed axle ends. Never support captive bores or inter-slat gaps. Print the three-slat coupon first to test release, bridge quality, tip accuracy and travel.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 181.39999389648438,
+      "tile_depth_mm": 140.70000457763672,
+      "tile_local_xy_mm": [
+        0,
+        0.0
+      ],
+      "tile_origin_mm": [
+        0,
+        0.0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        12.0,
+        28.0,
+        -0.0
+      ],
+      "stl_file": "Garage_Door_Print_In_Place.stl"
+    },
+    {
+      "number": 11,
+      "id": "Garage_Door_Bottom_Handle",
+      "label": "Roller-door handle",
+      "group": "doors",
+      "group_title": "Doors and moving joints",
+      "stl_sha256": "0468c61dbf8b585c453cd7a6fbb5459606bfdeb497896a2b1640ddb6eaee8c8e",
+      "dimensions_mm": [
+        25.0,
+        9.499999046325684,
+        3.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        25.0,
+        9.499999046325684,
+        3.0
+      ],
+      "vertices": 708,
+      "triangles": 1412,
+      "orientation_note": "Preserve supplied flat base/contact faces down, with an outer brim. Four-wall Arachne with no supports generated a clean complete toolpath. Preserve the split clip slots and barb lead-in ramps; clean the brim and test the handle against the curtain bottom sockets before assembly.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 140.70000457763672,
+      "tile_local_xy_mm": [
+        405.3999938964844,
+        0.0
+      ],
+      "tile_origin_mm": [
+        405.3999938964844,
+        0.0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        436.8999938964844,
+        28.0,
+        -0.0
+      ],
+      "stl_file": "Garage_Door_Bottom_Handle.stl"
+    },
+    {
+      "number": 12,
+      "id": "Kitchen_snap_in_door",
+      "label": "Kitchen door",
+      "group": "doors",
+      "group_title": "Doors and moving joints",
+      "stl_sha256": "800aec6f6005ce09ed78829f5725ef10bd37283a1323f194df63350339425a1a",
+      "dimensions_mm": [
+        40.300018310546875,
+        77.80001068115234,
+        5.600002765655518
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        40.300018310546875,
+        77.80001068115234,
+        5.600002765655518
+      ],
+      "vertices": 509,
+      "triangles": 1018,
+      "orientation_note": "Flat rear face on bed; handle upward, as supplied. No supports in bearing gaps; test no-support recipe after local root update. Added localized45\u00b0 handle-root ramp removes1.5mm cantilever,12.3mm\u00b2 underside. +9.225mm\u00b3 per door, exact outer bounds and bearing pivots unchanged. Preserve existing flat-back orientation.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 140.70000457763672,
+      "tile_local_xy_mm": [
+        197.39999389648438,
+        0.0
+      ],
+      "tile_origin_mm": [
+        197.39999389648438,
+        0.0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        221.24998474121094,
+        28.0,
+        -0.0
+      ],
+      "stl_file": "Kitchen_snap_in_door.stl"
+    },
+    {
+      "number": 13,
+      "id": "Dining_snap_in_door",
+      "label": "Dining door",
+      "group": "doors",
+      "group_title": "Doors and moving joints",
+      "stl_sha256": "dc832b114ca12d7e61614a1fe585cb0b458f8b707678bd35fcc07af4d7677f94",
+      "dimensions_mm": [
+        40.300018310546875,
+        77.80001068115234,
+        5.600002765655518
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        40.300018310546875,
+        77.80001068115234,
+        5.600002765655518
+      ],
+      "vertices": 509,
+      "triangles": 1018,
+      "orientation_note": "Flat rear face on bed; handle upward, as supplied. No supports in bearing gaps; test no-support recipe after local root update. Added localized45\u00b0 handle-root ramp removes1.5mm cantilever,12.3mm\u00b2 underside. +9.225mm\u00b3 per door, exact outer bounds and bearing pivots unchanged. Preserve existing flat-back orientation.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 140.70000457763672,
+      "tile_local_xy_mm": [
+        301.3999938964844,
+        0.0
+      ],
+      "tile_origin_mm": [
+        301.3999938964844,
+        0.0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        325.24998474121094,
+        28.0,
+        -0.0
+      ],
+      "stl_file": "Dining_snap_in_door.stl"
+    },
+    {
+      "number": 14,
+      "id": "Workshop_bench",
+      "label": "Workshop bench",
+      "group": "furniture",
+      "group_title": "Furniture",
+      "stl_sha256": "2a3cbef35ee89370e4092b945aa2f96f542535e950bff4163a6a03ea25470244",
+      "dimensions_mm": [
+        122.0,
+        39.0,
+        99.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        122.0,
+        39.0,
+        99.0
+      ],
+      "vertices": 2203,
+      "triangles": 4402,
+      "orientation_note": "Flat base on bed, as supplied. Localized accessible removable supports under pulls/tool relief if required; main counter and toe-kick now sloped. Integral countertop haunch removes the2\u20134mm projection;45\u00b0 toe-kick ceiling removes the3mm shelf. Bounds and feet unchanged. Remaining horizontal patches are narrow drawer/relief recesses and tool/handle starts, typically0.55\u20131.65mm reach.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 146.0,
+      "tile_depth_mm": 88.0,
+      "tile_local_xy_mm": [
+        0,
+        431.00000381469727
+      ],
+      "tile_origin_mm": [
+        834.0,
+        1520.9400215148926,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        846.0,
+        1548.9400215148926,
+        -0.0
+      ],
+      "stl_file": "Workshop_bench.stl"
+    },
+    {
+      "number": 15,
+      "id": "Tool_chest",
+      "label": "Tool chest",
+      "group": "furniture",
+      "group_title": "Furniture",
+      "stl_sha256": "e0ddfcbd75d7e5edcfcae30f3f3d7ea0f572357ad5d9842ecec03deb0d6a1e88",
+      "dimensions_mm": [
+        39.0,
+        35.80000305175781,
+        45.40000534057617
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        39.0,
+        35.80000305175781,
+        45.40000534057617
+      ],
+      "vertices": 556,
+      "triangles": 1108,
+      "orientation_note": "Top tray down, world X180\u00b0; fixed caster soles upward. Test no-support recipe with broad tray onbed; assess small fixed-caster curved starts and drawer recesses in layer preview. Top-tray-down orientation avoids1077mm\u00b2 cabinet underside over four casters. Four tiny45\u00b0 pull roots reduce remaining flat ledges further. Shape bounds unchanged, caster soles and visible outline preserved. Remaining horizontal area lies in shallow drawer recesses/rounded handle edges.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 100.0,
+      "tile_depth_mm": 91.00000381469727,
+      "tile_local_xy_mm": [
+        162.0,
+        124.0
+      ],
+      "tile_origin_mm": [
+        996.0,
+        1213.9400177001953,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1026.5,
+        1241.9400177001953,
+        -0.0
+      ],
+      "stl_file": "Tool_chest.stl"
+    },
+    {
+      "number": 16,
+      "id": "Kitchen_sink_unit",
+      "label": "Sink unit",
+      "group": "furniture",
+      "group_title": "Furniture",
+      "stl_sha256": "5e2a7e43f208a48e14e7a2df9b74ca3b3c3be56a13f0e7421288cc0049c29057",
+      "dimensions_mm": [
+        66.0,
+        46.0,
+        63.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        66.0,
+        46.0,
+        63.0
+      ],
+      "vertices": 316,
+      "triangles": 628,
+      "orientation_note": "Flat base on bed, as supplied. Test no-support recipe in supplied upright pose; no large flat underside remains. Integral sloped underside supports the2mm counter projection without changing bounds or contact base. Remaining0.383mm\u00b2 horizontal corners are numerical/small fillet remnants; faucet stays integral.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 100.0,
+      "tile_depth_mm": 88.0,
+      "tile_local_xy_mm": [
+        162.0,
+        431.00000381469727
+      ],
+      "tile_origin_mm": [
+        996.0,
+        1520.9400215148926,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1013.0,
+        1548.9400215148926,
+        -0.0
+      ],
+      "stl_file": "Kitchen_sink_unit.stl"
+    },
+    {
+      "number": 17,
+      "id": "Kitchen_stove",
+      "label": "Stove",
+      "group": "furniture",
+      "group_title": "Furniture",
+      "stl_sha256": "dab7073a3574af808edcf54cd1cce29ab0b443f678dcc91977131b3849fc2eaa",
+      "dimensions_mm": [
+        48.0,
+        49.000003814697266,
+        47.5
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        48.0,
+        49.000003814697266,
+        47.5
+      ],
+      "vertices": 570,
+      "triangles": 1136,
+      "orientation_note": "Rear face down, world X\u221290\u00b0; details face upward. Test no-support recipe, back down. Orientation-only change to broad back face removes handle horizontal underside. No geometry changes; curved edge/burner bevels account for remaining steep normals.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 146.0,
+      "tile_depth_mm": 91.00000381469727,
+      "tile_local_xy_mm": [
+        0,
+        124.0
+      ],
+      "tile_origin_mm": [
+        834.0,
+        1213.9400177001953,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        883.0,
+        1241.9400177001953,
+        -0.0
+      ],
+      "stl_file": "Kitchen_stove.stl"
+    },
+    {
+      "number": 18,
+      "id": "Kitchen_fridge",
+      "label": "Fridge",
+      "group": "furniture",
+      "group_title": "Furniture",
+      "stl_sha256": "82814e4c45a33710c930a24613fe52b04998dbf48fe5bff78cc8fa33f5e3ff19",
+      "dimensions_mm": [
+        40.0,
+        78.0,
+        50.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        40.0,
+        78.0,
+        50.0
+      ],
+      "vertices": 160,
+      "triangles": 316,
+      "orientation_note": "Rear face down, world X\u221290\u00b0; handle upward. Test no-support recipe, back down. Orientation-only change to broad back face removes handle horizontal underside. No geometry changes; rounded perimeter expansion still contributes steep-normal area.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 106.0,
+      "tile_depth_mm": 120.0,
+      "tile_local_xy_mm": [
+        278.0,
+        263.00000381469727
+      ],
+      "tile_origin_mm": [
+        1112.0,
+        1352.9400215148926,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1145.0,
+        1380.9400215148926,
+        -0.0
+      ],
+      "stl_file": "Kitchen_fridge.stl"
+    },
+    {
+      "number": 19,
+      "id": "Kitchen_serving_bar",
+      "label": "Serving bar",
+      "group": "furniture",
+      "group_title": "Furniture",
+      "stl_sha256": "cb588c8288eb994ccaa04a7c6be08b91553f09adf90b691effc9dd33d21521a6",
+      "dimensions_mm": [
+        128.0,
+        40.000003814697266,
+        49.000003814697266
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        128.0,
+        40.000003814697266,
+        49.000003814697266
+      ],
+      "vertices": 160,
+      "triangles": 316,
+      "orientation_note": "Countertop down, world X180\u00b0. Test no-support recipe, countertop down. Orientation-only inversion puts widest countertop onbed, removing949mm\u00b2 upper ledge. No geometry changes; rounded edge fillets still contribute steep normals.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 152.0,
+      "tile_depth_mm": 120.0,
+      "tile_local_xy_mm": [
+        400.0,
+        263.00000381469727
+      ],
+      "tile_origin_mm": [
+        1234.0,
+        1352.9400215148926,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1246.0,
+        1380.9400215148926,
+        -0.0
+      ],
+      "stl_file": "Kitchen_serving_bar.stl"
+    },
+    {
+      "number": 20,
+      "id": "Diner_booth_59",
+      "label": "Booth 1A",
+      "group": "furniture",
+      "group_title": "Furniture",
+      "stl_sha256": "5b1324db6d406e65b607f94dee5d6671a4d6dc8cb762c5624bd3efb01ab7620a",
+      "dimensions_mm": [
+        76.0,
+        32.0,
+        57.5
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        76.0,
+        32.0,
+        57.5
+      ],
+      "vertices": 259,
+      "triangles": 514,
+      "orientation_note": "Flat base on bed, as supplied. Retain localized accessible removable support if actual layer preview requires it. Stable upright pose retained. Only ~1mm\u00b2 tiny horizontal corner remnants; rounded seat edges contribute steep-face area but do not form a broad shelf. Changing pose creates larger unsupported faces.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 106.0,
+      "tile_depth_mm": 88.0,
+      "tile_local_xy_mm": [
+        278.0,
+        431.00000381469727
+      ],
+      "tile_origin_mm": [
+        1112.0,
+        1520.9400215148926,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1127.0,
+        1548.9400215148926,
+        -0.0
+      ],
+      "stl_file": "Diner_booth_59.stl"
+    },
+    {
+      "number": 21,
+      "id": "Diner_booth_141",
+      "label": "Booth 1B",
+      "group": "furniture",
+      "group_title": "Furniture",
+      "stl_sha256": "82c8534727ae432e468c260b62fcf0f8e241f46027e106edbe9ade3b78e1b036",
+      "dimensions_mm": [
+        76.0,
+        32.0,
+        57.5
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        76.0,
+        32.0,
+        57.5
+      ],
+      "vertices": 259,
+      "triangles": 514,
+      "orientation_note": "Flat base on bed, as supplied. Retain localized accessible removable support if actual layer preview requires it. Stable upright pose retained. Only ~1mm\u00b2 tiny horizontal corner remnants; rounded seat edges contribute steep-face area but do not form a broad shelf. Changing pose creates larger unsupported faces.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 152.0,
+      "tile_depth_mm": 88.0,
+      "tile_local_xy_mm": [
+        400.0,
+        431.00000381469727
+      ],
+      "tile_origin_mm": [
+        1234.0,
+        1520.9400215148926,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1272.0,
+        1548.9400215148926,
+        -0.0
+      ],
+      "stl_file": "Diner_booth_141.stl"
+    },
+    {
+      "number": 22,
+      "id": "Dining_table_1",
+      "label": "Table 1",
+      "group": "furniture",
+      "group_title": "Furniture",
+      "stl_sha256": "206392630542c27ce92f3237bc1d5a28471a966821d00d1ab55fcca9e7c8187a",
+      "dimensions_mm": [
+        82.0,
+        38.999996185302734,
+        45.000003814697266
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        82.0,
+        38.999996185302734,
+        45.000003814697266
+      ],
+      "vertices": 224,
+      "triangles": 444,
+      "orientation_note": "Tabletop down, pedestal and foot upward, as supplied. Accessible local removable support beneath foot; keep table in supplied tabletop-down orientation. Retain slim pedestal and tabletop-down pose. Broad foot underside still1177mm\u00b2 at printZ39. Four thin axial ribs leave unsupported corners; four diagonal ribs require long30\u201344mm bridges. A full tapered pedestal would alter the requested silhouette, so retain geometry.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 106.0,
+      "tile_depth_mm": 91.00000381469727,
+      "tile_local_xy_mm": [
+        278.0,
+        124.0
+      ],
+      "tile_origin_mm": [
+        1112.0,
+        1213.9400177001953,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1124.0,
+        1241.9400177001953,
+        -0.0
+      ],
+      "stl_file": "Dining_table_1.stl"
+    },
+    {
+      "number": 23,
+      "id": "Diner_booth_59_second_table",
+      "label": "Booth 2A",
+      "group": "furniture",
+      "group_title": "Furniture",
+      "stl_sha256": "8a08f22642d66742dbbd090aafc1d5eaae674297ddb0db8daeaef75f06e4225a",
+      "dimensions_mm": [
+        76.0,
+        32.0,
+        57.5
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        76.0,
+        32.0,
+        57.5
+      ],
+      "vertices": 259,
+      "triangles": 514,
+      "orientation_note": "Flat base on bed, as supplied. Retain localized accessible removable support if actual layer preview requires it. Stable upright pose retained. Only ~1mm\u00b2 tiny horizontal corner remnants; rounded seat edges contribute steep-face area but do not form a broad shelf. Changing pose creates larger unsupported faces.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 146.0,
+      "tile_depth_mm": 120.0,
+      "tile_local_xy_mm": [
+        0,
+        263.00000381469727
+      ],
+      "tile_origin_mm": [
+        834.0,
+        1352.9400215148926,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        869.0,
+        1380.9400215148926,
+        -0.0
+      ],
+      "stl_file": "Diner_booth_59_second_table.stl"
+    },
+    {
+      "number": 24,
+      "id": "Diner_booth_141_second_table",
+      "label": "Booth 2B",
+      "group": "furniture",
+      "group_title": "Furniture",
+      "stl_sha256": "6eba70ec823bde302e89b69c00fbfd3c8a6fdb33470ff46a7f2dd2d8489ea1dc",
+      "dimensions_mm": [
+        76.0,
+        32.0,
+        57.5
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        76.0,
+        32.0,
+        57.5
+      ],
+      "vertices": 259,
+      "triangles": 514,
+      "orientation_note": "Flat base on bed, as supplied. Retain localized accessible removable support if actual layer preview requires it. Stable upright pose retained. Only ~1mm\u00b2 tiny horizontal corner remnants; rounded seat edges contribute steep-face area but do not form a broad shelf. Changing pose creates larger unsupported faces.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 100.0,
+      "tile_depth_mm": 120.0,
+      "tile_local_xy_mm": [
+        162.0,
+        263.00000381469727
+      ],
+      "tile_origin_mm": [
+        996.0,
+        1352.9400215148926,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1008.0,
+        1380.9400215148926,
+        -0.0
+      ],
+      "stl_file": "Diner_booth_141_second_table.stl"
+    },
+    {
+      "number": 25,
+      "id": "Dining_table_2",
+      "label": "Table 2",
+      "group": "furniture",
+      "group_title": "Furniture",
+      "stl_sha256": "e67444c11e7339756f87c51e777c8917f8cadc7c314e6a8cc3398eb4be48edfb",
+      "dimensions_mm": [
+        82.0,
+        39.0,
+        45.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        82.0,
+        39.0,
+        45.0
+      ],
+      "vertices": 224,
+      "triangles": 444,
+      "orientation_note": "Tabletop down, pedestal and foot upward, as supplied. Accessible local removable support beneath foot; keep table in supplied tabletop-down orientation. Retain slim pedestal and tabletop-down pose. Broad foot underside still1177mm\u00b2 at printZ39. Four thin axial ribs leave unsupported corners; four diagonal ribs require long30\u201344mm bridges. A full tapered pedestal would alter the requested silhouette, so retain geometry.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 152.0,
+      "tile_depth_mm": 91.00000381469727,
+      "tile_local_xy_mm": [
+        400.0,
+        124.0
+      ],
+      "tile_origin_mm": [
+        1234.0,
+        1213.9400177001953,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1269.0,
+        1241.9400177001953,
+        -0.0
+      ],
+      "stl_file": "Dining_table_2.stl"
+    },
+    {
+      "number": 26,
+      "id": "Spare_tire_stack",
+      "label": "Tire stack",
+      "group": "furniture",
+      "group_title": "Furniture",
+      "stl_sha256": "8b95638398abb09e0b981ae890c91850fec79fa519c7fb6ca38fdd1e5e048553",
+      "dimensions_mm": [
+        23.0,
+        23.0,
+        25.599998474121094
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        23.0,
+        23.0,
+        25.599998474121094
+      ],
+      "vertices": 488,
+      "triangles": 972,
+      "orientation_note": "Flat base on bed, as supplied. No internal supports; retain previous upright recipe; inspect short groove ledges. Retain upright pose and blind top recess. Two shallow grooves give0.65mm radial cantilevers;45.45mm\u00b2 each. A V-notch edit offers little practical benefit and would change the tire detail.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 146.0,
+      "tile_depth_mm": 76,
+      "tile_local_xy_mm": [
+        0,
+        0.0
+      ],
+      "tile_origin_mm": [
+        834.0,
+        1089.9400177001953,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        895.5,
+        1117.9400177001953,
+        -0.0
+      ],
+      "stl_file": "Spare_tire_stack.stl"
+    },
+    {
+      "number": 27,
+      "id": "Service_Rail_Bay_1_L",
+      "label": "Bay 1 left rail",
+      "group": "accessories",
+      "group_title": "Rails and connecting clips",
+      "stl_sha256": "6be0b2828ad3701b6cc4b43b951914310f54685b888984c8cab0adf201f819b0",
+      "dimensions_mm": [
+        12.0,
+        144.0,
+        14.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        12.0,
+        144.0,
+        14.0
+      ],
+      "vertices": 96,
+      "triangles": 188,
+      "orientation_note": "Flat underside on bed, ramp/tread/wheel stop upward. None. All four rails have no downward horizontal or >45\u00b0 surfaces above the1728mm\u00b2 sole. No change warranted.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 186.0,
+      "tile_local_xy_mm": [
+        0,
+        124.0
+      ],
+      "tile_origin_mm": [
+        834.0,
+        618.0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        872.0,
+        646.0,
+        -0.0
+      ],
+      "stl_file": "Service_Rail_Bay_1_L.stl"
+    },
+    {
+      "number": 28,
+      "id": "Service_Rail_Bay_1_R",
+      "label": "Bay 1 right rail",
+      "group": "accessories",
+      "group_title": "Rails and connecting clips",
+      "stl_sha256": "bce4b4c223a64bb9dfb6f83b28093d5a5d2fa85115768dfa7451bc171920c354",
+      "dimensions_mm": [
+        12.0,
+        144.0,
+        14.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        12.0,
+        144.0,
+        14.0
+      ],
+      "vertices": 96,
+      "triangles": 188,
+      "orientation_note": "Flat underside on bed, ramp/tread/wheel stop upward. None. All four rails have no downward horizontal or >45\u00b0 surfaces above the1728mm\u00b2 sole. No change warranted.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 186.0,
+      "tile_local_xy_mm": [
+        104,
+        124.0
+      ],
+      "tile_origin_mm": [
+        938.0,
+        618.0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        976.0,
+        646.0,
+        -0.0
+      ],
+      "stl_file": "Service_Rail_Bay_1_R.stl"
+    },
+    {
+      "number": 29,
+      "id": "Service_Rail_Bay_2_L",
+      "label": "Bay 2 left rail",
+      "group": "accessories",
+      "group_title": "Rails and connecting clips",
+      "stl_sha256": "bce4b4c223a64bb9dfb6f83b28093d5a5d2fa85115768dfa7451bc171920c354",
+      "dimensions_mm": [
+        12.0,
+        144.0,
+        14.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        12.0,
+        144.0,
+        14.0
+      ],
+      "vertices": 96,
+      "triangles": 188,
+      "orientation_note": "Flat underside on bed, ramp/tread/wheel stop upward. None. All four rails have no downward horizontal or >45\u00b0 surfaces above the1728mm\u00b2 sole. No change warranted.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 186.0,
+      "tile_local_xy_mm": [
+        208,
+        124.0
+      ],
+      "tile_origin_mm": [
+        1042.0,
+        618.0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1080.0,
+        646.0,
+        -0.0
+      ],
+      "stl_file": "Service_Rail_Bay_2_L.stl"
+    },
+    {
+      "number": 30,
+      "id": "Service_Rail_Bay_2_R",
+      "label": "Bay 2 right rail",
+      "group": "accessories",
+      "group_title": "Rails and connecting clips",
+      "stl_sha256": "c2ba0f0fa2bff12506fe9dde0ef6382683c507fce59b45112ba057b9604b152a",
+      "dimensions_mm": [
+        12.0,
+        144.0,
+        14.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        12.0,
+        144.0,
+        14.0
+      ],
+      "vertices": 96,
+      "triangles": 188,
+      "orientation_note": "Flat underside on bed, ramp/tread/wheel stop upward. None. All four rails have no downward horizontal or >45\u00b0 surfaces above the1728mm\u00b2 sole. No change warranted.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 186.0,
+      "tile_local_xy_mm": [
+        312,
+        124.0
+      ],
+      "tile_origin_mm": [
+        1146.0,
+        618.0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1184.0,
+        646.0,
+        -0.0
+      ],
+      "stl_file": "Service_Rail_Bay_2_R.stl"
+    },
+    {
+      "number": 31,
+      "id": "Universal_side_clip_200_60",
+      "label": "Side clip 1",
+      "group": "accessories",
+      "group_title": "Rails and connecting clips",
+      "stl_sha256": "312f68b1c49a5cbb7001b898263b3323f67052ba8c88c643c97e8424ff2d0248",
+      "dimensions_mm": [
+        24.0,
+        10.0,
+        11.30000114440918
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        24.0,
+        10.0,
+        11.30000114440918
+      ],
+      "vertices": 580,
+      "triangles": 1156,
+      "orientation_note": "Broad cap on bed; split barbs upward. No supports in functional gaps; retain previous tested recipe. Keep broad cap down with split barbs upward. Four functional retention shoulders project only 0.6104 mm beyond their stems. Do not support or chamfer the shoulders/flex slots without recalibrating the matching sockets. Sideways reduces horizontal area to zero but increases >45-degree downward area from 34.95 to 65.54 mm\u00b2 and reduces bed contact 207 to 23 mm\u00b2.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 76,
+      "tile_local_xy_mm": [
+        0,
+        0.0
+      ],
+      "tile_origin_mm": [
+        834.0,
+        494.0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        866.0,
+        522.0,
+        -0.0
+      ],
+      "stl_file": "Universal_side_clip_200_60.stl"
+    },
+    {
+      "number": 32,
+      "id": "Universal_side_clip_200_180",
+      "label": "Side clip 2",
+      "group": "accessories",
+      "group_title": "Rails and connecting clips",
+      "stl_sha256": "807320d390435f217f34c1da82bf2d38de7c067fea6ab14ef762537fee4fa351",
+      "dimensions_mm": [
+        24.0,
+        10.0,
+        11.30000114440918
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        24.0,
+        10.0,
+        11.30000114440918
+      ],
+      "vertices": 580,
+      "triangles": 1156,
+      "orientation_note": "Broad cap on bed; split barbs upward. No supports in functional gaps; retain previous tested recipe. Keep broad cap down with split barbs upward. Four functional retention shoulders project only 0.6104 mm beyond their stems. Do not support or chamfer the shoulders/flex slots without recalibrating the matching sockets. Sideways reduces horizontal area to zero but increases >45-degree downward area from 34.95 to 65.54 mm\u00b2 and reduces bed contact 207 to 23 mm\u00b2.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 76,
+      "tile_local_xy_mm": [
+        104,
+        0.0
+      ],
+      "tile_origin_mm": [
+        938.0,
+        494.0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        970.0,
+        522.0,
+        -0.0
+      ],
+      "stl_file": "Universal_side_clip_200_180.stl"
+    },
+    {
+      "number": 33,
+      "id": "Universal_side_clip_400_60",
+      "label": "Side clip 3",
+      "group": "accessories",
+      "group_title": "Rails and connecting clips",
+      "stl_sha256": "45e314dc4434e762ec99cfaf66a41152b18498b92845552cf5676357965c91da",
+      "dimensions_mm": [
+        24.0,
+        10.0,
+        11.30000114440918
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        24.0,
+        10.0,
+        11.30000114440918
+      ],
+      "vertices": 580,
+      "triangles": 1156,
+      "orientation_note": "Broad cap on bed; split barbs upward. No supports in functional gaps; retain previous tested recipe. Keep broad cap down with split barbs upward. Four functional retention shoulders project only 0.6104 mm beyond their stems. Do not support or chamfer the shoulders/flex slots without recalibrating the matching sockets. Sideways reduces horizontal area to zero but increases >45-degree downward area from 34.95 to 65.54 mm\u00b2 and reduces bed contact 207 to 23 mm\u00b2.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 76,
+      "tile_local_xy_mm": [
+        208,
+        0.0
+      ],
+      "tile_origin_mm": [
+        1042.0,
+        494.0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1074.0,
+        522.0,
+        -0.0
+      ],
+      "stl_file": "Universal_side_clip_400_60.stl"
+    },
+    {
+      "number": 34,
+      "id": "Universal_side_clip_400_180",
+      "label": "Side clip 4",
+      "group": "accessories",
+      "group_title": "Rails and connecting clips",
+      "stl_sha256": "7627a204b722d22bb1f10beeff6edff35f6ee151b9c217018fd037ef9ced3d4a",
+      "dimensions_mm": [
+        24.0,
+        10.0,
+        11.30000114440918
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        24.0,
+        10.0,
+        11.30000114440918
+      ],
+      "vertices": 580,
+      "triangles": 1156,
+      "orientation_note": "Broad cap on bed; split barbs upward. No supports in functional gaps; retain previous tested recipe. Keep broad cap down with split barbs upward. Four functional retention shoulders project only 0.6104 mm beyond their stems. Do not support or chamfer the shoulders/flex slots without recalibrating the matching sockets. Sideways reduces horizontal area to zero but increases >45-degree downward area from 34.95 to 65.54 mm\u00b2 and reduces bed contact 207 to 23 mm\u00b2.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 76,
+      "tile_local_xy_mm": [
+        312,
+        0.0
+      ],
+      "tile_origin_mm": [
+        1146.0,
+        494.0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1178.0,
+        522.0,
+        -0.0
+      ],
+      "stl_file": "Universal_side_clip_400_180.stl"
+    },
+    {
+      "number": 35,
+      "id": "TEST_Three_Slat_Print_In_Place",
+      "label": "Three-slat test",
+      "group": "calibration",
+      "group_title": "Calibration pieces",
+      "stl_sha256": "d20b6ef78736755406d4bbf3a99aa4b94dc24213b3b26425e5346991d835b02d",
+      "dimensions_mm": [
+        157.39999389648438,
+        27.900001525878906,
+        5.9000020027160645
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        157.39999389648438,
+        27.900001525878906,
+        5.9000020027160645
+      ],
+      "vertices": 3546,
+      "triangles": 7184,
+      "orientation_note": "Preserve supplied flat slat layout and all relative body positions. Four-wall Arachne, outer brim; clean complete no-support slice verified. Exposed guide-axle tips still cantilever 5.7 mm beyond each panel side: optional accessible build-plate-only painted supports may improve tip accuracy on the actual printer. Restrict them to supplied-STL X 0\u20135.7 mm and X 151.7\u2013157.4 mm beneath exposed axle ends. Never support captive bores or inter-slat gaps. Print the three-slat coupon first to test release, bridge quality, tip accuracy and travel.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 181.39999389648438,
+      "tile_depth_mm": 76,
+      "tile_local_xy_mm": [
+        208,
+        0
+      ],
+      "tile_origin_mm": [
+        1042.0,
+        0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1054.0,
+        28.0,
+        -0.0
+      ],
+      "stl_file": "TEST_Three_Slat_Print_In_Place.stl"
+    },
+    {
+      "number": 36,
+      "id": "TEST_socket_A",
+      "label": "Socket test A",
+      "group": "calibration",
+      "group_title": "Calibration pieces",
+      "stl_sha256": "b813fa756927fb8f9ed19d02017a853bbaf928a33a9fbb36468b79f0b19bdaac",
+      "dimensions_mm": [
+        28.0,
+        26.0,
+        12.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        28.0,
+        26.0,
+        12.0
+      ],
+      "vertices": 259,
+      "triangles": 518,
+      "orientation_note": "Supplied vertical-bore pose. No supports in functional gaps; retain previous tested recipe. Keep supplied vertical-bore pose. The 0.5987 mm inward annular ledge is the snap-retention feature, not a broad unsupported roof. No internal support or unpaired chamfer is recommended. Side rotations make bores horizontal and worsen steep downward surface area; preserve coupon fidelity to the production socket.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 76,
+      "tile_local_xy_mm": [
+        104,
+        124
+      ],
+      "tile_origin_mm": [
+        938.0,
+        124,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        968.0,
+        152.0,
+        -0.0
+      ],
+      "stl_file": "TEST_socket_A.stl"
+    },
+    {
+      "number": 37,
+      "id": "TEST_socket_B",
+      "label": "Socket test B",
+      "group": "calibration",
+      "group_title": "Calibration pieces",
+      "stl_sha256": "03a12cda233479e55d24c691bd6ef697929df98af53ca8d80505d8cf548d893a",
+      "dimensions_mm": [
+        28.0,
+        26.0,
+        12.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        28.0,
+        26.0,
+        12.0
+      ],
+      "vertices": 259,
+      "triangles": 518,
+      "orientation_note": "Supplied vertical-bore pose. No supports in functional gaps; retain previous tested recipe. Keep supplied vertical-bore pose. The 0.5987 mm inward annular ledge is the snap-retention feature, not a broad unsupported roof. No internal support or unpaired chamfer is recommended. Side rotations make bores horizontal and worsen steep downward surface area; preserve coupon fidelity to the production socket.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 181.39999389648438,
+      "tile_depth_mm": 76,
+      "tile_local_xy_mm": [
+        208,
+        124
+      ],
+      "tile_origin_mm": [
+        1042.0,
+        124,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1118.6999969482422,
+        152.0,
+        -0.0
+      ],
+      "stl_file": "TEST_socket_B.stl"
+    },
+    {
+      "number": 38,
+      "id": "TEST_double_snap_key",
+      "label": "Connector test",
+      "group": "calibration",
+      "group_title": "Calibration pieces",
+      "stl_sha256": "5acb630af6e4a2fe72e498010b0e9e185b9e0ef2ee34f2043d10f6eecb7727b9",
+      "dimensions_mm": [
+        24.0,
+        10.0,
+        11.30000114440918
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        24.0,
+        10.0,
+        11.30000114440918
+      ],
+      "vertices": 580,
+      "triangles": 1156,
+      "orientation_note": "Broad cap on bed; split barbs upward. No supports in functional gaps; retain previous tested recipe. Keep broad cap down with split barbs upward. Four functional retention shoulders project only 0.6104 mm beyond their stems. Do not support or chamfer the shoulders/flex slots without recalibrating the matching sockets. Sideways reduces horizontal area to zero but increases >45-degree downward area from 34.95 to 65.54 mm\u00b2 and reduces bed contact 207 to 23 mm\u00b2.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 76,
+      "tile_local_xy_mm": [
+        0,
+        0
+      ],
+      "tile_origin_mm": [
+        834.0,
+        0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        866.0,
+        28.0,
+        -0.0
+      ],
+      "stl_file": "TEST_double_snap_key.stl"
+    },
+    {
+      "number": 39,
+      "id": "TEST_Roof_Hinge",
+      "label": "Roof hinge test",
+      "group": "calibration",
+      "group_title": "Calibration pieces",
+      "stl_sha256": "8289a33de3c3a31aebb5536ac7987d7a842370e769194117775671cd2bb7a497",
+      "dimensions_mm": [
+        6.599998474121094,
+        20.0,
+        32.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        6.599998474121094,
+        20.0,
+        32.0
+      ],
+      "vertices": 687,
+      "triangles": 1378,
+      "orientation_note": "Supplied production-faithful vertical hinge-axis pose. No supports in functional gaps; retain previous tested recipe. Keep supplied vertical hinge-axis pose, preserving the relative positions of both captive bodies. Three knuckle/support starts at Z10, 13 and 30 have reaches 1.4, 1.7 and 1.4 mm. These are short functional ring/attachment ledges, not a large continuous roof ceiling. Keep supports out of bore and captive gaps. Do not chamfer this coupon alone: any underside relief must first be applied identically to the production hinge and rechecked for rotation/clearance.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 76,
+      "tile_local_xy_mm": [
+        104,
+        248
+      ],
+      "tile_origin_mm": [
+        938.0,
+        248,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        978.7000007629395,
+        276.0,
+        -0.0
+      ],
+      "stl_file": "TEST_Roof_Hinge.stl"
+    },
+    {
+      "number": 40,
+      "id": "TEST_Rear_Wall_Bar",
+      "label": "Rear wall-bar test",
+      "group": "calibration",
+      "group_title": "Calibration pieces",
+      "stl_sha256": "eca0c37157a7084841e7c4dfc551fa3b5c89d0756f89851cda5432ca86d061e6",
+      "dimensions_mm": [
+        12.0,
+        16.399993896484375,
+        39.0
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        12.0,
+        16.399993896484375,
+        39.0
+      ],
+      "vertices": 196,
+      "triangles": 388,
+      "orientation_note": "Supplied reversed vertical rod-axis pose. Existing accessible build-plate-only removable support under fixed bar start. Keep current reversed vertical rod-axis pose and the existing bed-only removable support beneath the accessible 1.8 mm ledge at Z1.5. It has 10.44 mm\u00b2 horizontal underside. Laying the broad wall face down roughly doubles contact but increases steep downward area 11.24\u219286.34 mm\u00b2 and makes the functional rod horizontal. No independent coupon geometry change.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 76,
+      "tile_local_xy_mm": [
+        0,
+        248
+      ],
+      "tile_origin_mm": [
+        834.0,
+        248,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        872.0,
+        276.0,
+        -0.0
+      ],
+      "stl_file": "TEST_Rear_Wall_Bar.stl"
+    },
+    {
+      "number": 41,
+      "id": "TEST_Rear_Roof_Snap",
+      "label": "Rear snap test",
+      "group": "calibration",
+      "group_title": "Calibration pieces",
+      "stl_sha256": "d3bf4db129c518cbc1b51a70b84d69ab9ce02b9945897c4b011e765310cbaae8",
+      "dimensions_mm": [
+        5.03826904296875,
+        17.5,
+        22.000001907348633
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        5.03826904296875,
+        17.5,
+        22.000001907348633
+      ],
+      "vertices": 276,
+      "triangles": 548,
+      "orientation_note": "Supplied production-faithful vertical hinge-axis pose. Production roof review retained the joint geometry and vertical hinge-axis pose. Keep bore/lip unsupported; physically test the4.11mm free-ring start with the matching coupon. Existing successful slicing alone is not proof of the surface quality at this start.. Keep supplied vertical-axis calibration pose unless the production roof print pose changes. This is the highest-priority layer-preview point in scope: the C-ring begins at Z3 with two underside patches totaling 6.035 mm\u00b2 and a 4.1102 mm maximum reach to the immediate lower section. Existing successful no-support slicing alone does not prove this free lip will print cleanly. Roof-face-down (R_y(+90 degrees), supplied -X becomes +Z) is geometrically easier: bed contact 41.845\u2192371.800 mm\u00b2, horizontal underside 6.035\u21920, steep downward area 6.035\u21922.814 mm\u00b2. However its hinge axis becomes horizontal and its layer direction no longer matches the production roof, so do not change only the calibration coupon. Root print audit should resolve any production start relief/support consistently; preserve bore and spring lip fit.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 181.39999389648438,
+      "tile_depth_mm": 76,
+      "tile_local_xy_mm": [
+        208,
+        248
+      ],
+      "tile_origin_mm": [
+        1042.0,
+        248,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        1130.1808624267578,
+        276.0,
+        -0.0
+      ],
+      "stl_file": "TEST_Rear_Roof_Snap.stl"
+    },
+    {
+      "number": 42,
+      "id": "TEST_Flat_Front_Body_Pin",
+      "label": "Front anchor test",
+      "group": "calibration",
+      "group_title": "Calibration pieces",
+      "stl_sha256": "b61373a2b92e3195f35315d8c9ae21462b9af7407381f111ac75d503b03c7f75",
+      "dimensions_mm": [
+        16.0,
+        14.0,
+        13.300000190734863
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        16.0,
+        14.0,
+        13.300000190734863
+      ],
+      "vertices": 250,
+      "triangles": 496,
+      "orientation_note": "Upright on16\u00d714mm base, as supplied. No supports in functional gaps; retain previous tested recipe. Keep upright on its 16 \u00d7 14 mm base. No above-bed horizontal undersides or surfaces steeper than 45 degrees were detected. Existing barb withdrawal ramps already avoid flat shoulders. Preserve the flex slot; no geometry, orientation or support change recommended.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 76,
+      "tile_local_xy_mm": [
+        0,
+        124
+      ],
+      "tile_origin_mm": [
+        834.0,
+        124,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        870.0,
+        152.0,
+        -0.0
+      ],
+      "stl_file": "TEST_Flat_Front_Body_Pin.stl"
+    },
+    {
+      "number": 43,
+      "id": "TEST_Flat_Front_Panel_Socket",
+      "label": "Front socket test",
+      "group": "calibration",
+      "group_title": "Calibration pieces",
+      "stl_sha256": "55a8b993f25cb54ed6120b650573520441545a1dda23cb7c16e68158cb7f3ce6",
+      "dimensions_mm": [
+        12.0,
+        14.0,
+        6.000000953674316
+      ],
+      "input_min_mm": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "input_max_mm": [
+        12.0,
+        14.0,
+        6.000000953674316
+      ],
+      "vertices": 284,
+      "triangles": 564,
+      "orientation_note": "Inside face down, as supplied and matching production front. No supports in functional gaps; retain previous tested recipe. Keep supplied inside-face-down pose, matching the production front. There are no exactly horizontal downward faces, but the arched blind socket ceiling contributes 56.931 mm\u00b2 of >45-degree downward surface: zero horizontal-face area is not a support-free guarantee. Keep internal support out so it cannot obstruct the fit. Other orientations reduce this metric (blind-end-down reaches 4.73 mm\u00b2) but change the ceiling/layer relationship from the production front. No isolated coupon chamfer, teardrop conversion or rotation recommended.",
+      "display_rotation_applied": false,
+      "tile_width_mm": 88,
+      "tile_depth_mm": 76,
+      "tile_local_xy_mm": [
+        104,
+        0
+      ],
+      "tile_origin_mm": [
+        938.0,
+        0,
+        0
+      ],
+      "input_to_display_translation_mm": [
+        976.0,
+        28.0,
+        -0.0
+      ],
+      "stl_file": "TEST_Flat_Front_Panel_Socket.stl"
+    }
+  ],
+  "glb": {
+    "display_bounds_mm": {
+      "min": [
+        0.0,
+        0.0,
+        -3.0
+      ],
+      "max": [
+        1386.0,
+        1633.1240234375,
+        178.00001525878906
+      ]
+    },
+    "glb_bounds_m": {
+      "min": [
+        0.0,
+        -0.003000000142492354,
+        -1.633124141061052
+      ],
+      "max": [
+        1.3860000658314675,
+        0.17800002371333612,
+        0.0
+      ]
+    },
+    "glb_sha256": "60fb300e5e6842b6383ae6906c5fa607c9e2ef1e147049b2b3c3a1db1e3d8e3e",
+    "stl_group_nodes": 43,
+    "verified": true
+  },
+  "provenance": {
+    "revision": "2026-09-11 standard brick exterior",
+    "source_blend_file": "Garage_Standard_Brick.blend",
+    "source_blend_sha256": "927d05540c9b9b6cd0d337579b4c7e2f78ed2a34b7d64a655ca3dcf93f35db3e",
+    "base_print_revision_blend_sha256": "a16d700544dc095815de8c8d1a1ec031461e75af435054e04ef4a4e7622c5b9b",
+    "changed_parts": [
+      "Kitchen_Structural_Module",
+      "Dining_Structural_Module"
+    ],
+    "unchanged_parts_count": 41,
+    "geometry_notice": "Kitchen and dining structural shells have matching exterior brick recesses; supplied orientations and tile translations are preserved. Other 41 printable groups retain their base geometry.",
+    "base_input_manifest_sha256": "b9e2aa88703c16c2cfe616ed02fcbd6a88a365ad000973537c1d3f8cf100f9f7",
+    "base_orientation_notes_sha256": "fd3ff233b47b3d93dc90d2d5ef6d1d4ecbece26f475d912d6bbc7dee861ccce4",
+    "current_orientation_notes_digest_format": "SHA256 of UTF-8 JSON object keyed by part id, sorted keys, compact separators"
+  },
+  "stills_notice": "Overview and structural-body views show the standard-brick revision. Other category views retain identical unchanged geometry.",
+  "orientation_notes_sha256": "89019d28a60256a13b7723dabde49fd68ca39b3ccc27854dfeda9922712516bc"
+}

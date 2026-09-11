@@ -1,13 +1,13 @@
 {
-  "source": "Garage_Simplified_Structure.blend",
-  "sourceRevision": "Simplified structure · 10 Sep 2026",
-  "sourceBlendSha256": "d2e20f530ace280876a91d0b583dc716b5a67fa8079ab2b3708090403a480a88",
-  "sourceGlbSha256": "42533610b61b313078189c5d623c8e9e2810267b825379f589e8d05c56c02fc0",
-  "sourceNodes": 60,
+  "source": "Garage_Standard_Brick.blend",
+  "sourceRevision": "Standard brickwork across all modules · printability revision · 11 Sep 2026",
+  "sourceBlendSha256": "927d05540c9b9b6cd0d337579b4c7e2f78ed2a34b7d64a655ca3dcf93f35db3e",
+  "sourceGlbSha256": "dadc30869194c612040c28f54305888e6fc560a337135a3fb61afa8f8a9eee49",
+  "sourceNodes": 63,
   "animatedObjects": 21,
   "sourceFrames": 80,
-  "fullModelSha256": "964d4a3ca26d1d98df836d3e8e371b9a60166f50028b6433512bae98b7ae62a7",
-  "previewSha256": "f34e2cecf39b5bf60c46784e6b4807951a2be0f138bcadee3b41864a4a39711c",
-  "fullBytes": 6502736,
-  "previewBytes": 3770608
+  "fullModelSha256": "150329e2fe8f2d767df75fbb3b4e7dffd060d65356b3f5358ff95f3a9e886ab8",
+  "previewSha256": "cd8bae8c2de2d87b4a59d28e73bac2e2f9b42f204e9cfc557a6814dada342916",
+  "fullBytes": 6078312,
+  "previewBytes": 3008120
 }

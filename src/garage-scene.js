@@ -157,10 +157,13 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
   });
   intersection.observe(host);
   let needsFraming = true;
+  let viewportWidth = 0, viewportHeight = 0;
   const resized = () => {
-    needsFraming = true;
     const width = host.clientWidth || 800;
     const height = host.clientHeight || 620;
+    if (width === viewportWidth && height === viewportHeight) return;
+    viewportWidth = width; viewportHeight = height;
+    needsFraming = true;
     camera.aspect = width / height;
     camera.updateProjectionMatrix();
     renderer.setSize(width, height, false);
@@ -175,7 +178,8 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
   let previousTime = performance.now();
   let previousLayout = "";
   let previousReset = -1;
-  let previousExplode = 0;
+  let previousCamera = "";
+  let previousExplode = getSettings().explode;
   let door = getSettings().door;
   let roof = getSettings().roof;
   let exploded = 0;
@@ -216,12 +220,13 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
     const dt = canRender ? Math.min((now - previousTime) / 1e3, 0.05) : 0;
     previousTime = now;
     const blend = motionReduced ? 1 : 1 - Math.exp(-dt * 8);
-    if (needsFraming || s.layout !== previousLayout || s.reset !== previousReset) {
+    if (needsFraming || s.layout !== previousLayout || s.reset !== previousReset || s.camera !== previousCamera) {
       const initialLayout = previousLayout === "";
       needsFraming = false;
       if (s.layout !== previousLayout) closingFrom = {door, roof, exploded, layout: previousLayout};
       previousLayout = s.layout;
       previousReset = s.reset;
+      previousCamera = s.camera;
       configuration.setLayout(s.layout, motionReduced);
       const narrow = camera.aspect < 1.25;
       if (s.layout === "row") {
@@ -235,6 +240,15 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
         targetDestination.set(0, 0.7, 0);
       }
       if (s.layout !== "row") { cameraDestination.x -= 2; targetDestination.x -= 2; }
+      const view = s.camera || "overview";
+      const distance = s.layout === "row" ? 12 : s.layout === "stack" ? 9 : 7;
+      if (view === "front") cameraDestination.copy(targetDestination).add(new THREE.Vector3(0, .4, distance));
+      else if (view === "rear") cameraDestination.copy(targetDestination).add(new THREE.Vector3(0, .5, -distance));
+      else if (view === "top") cameraDestination.copy(targetDestination).add(new THREE.Vector3(0, distance, .01));
+      else if (view === "hinge") {
+        targetDestination.set(-2, s.layout === "stack" ? 3.83 : 1.27, -1.25);
+        cameraDestination.copy(targetDestination).add(new THREE.Vector3(1.3, 1.4, -3.2));
+      }
       const aspectFit = Math.max(1, 1.15 / camera.aspect);
       cameraDestination.sub(targetDestination).multiplyScalar(aspectFit).add(targetDestination);
       controls.maxDistance = Math.max(18, cameraDestination.distanceTo(targetDestination) * 1.6);
@@ -243,6 +257,11 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
         controls.target.copy(targetDestination);
       }
       cameraTransition = true;
+      if (initialLayout && s.cameraPose) {
+        camera.position.fromArray(s.cameraPose.position);controls.target.fromArray(s.cameraPose.target);
+        controls.maxDistance=Math.max(controls.maxDistance,camera.position.distanceTo(controls.target)*1.1);
+        cameraTransition=false;
+      }
     }
     if (s.explode !== previousExplode) {
       previousExplode = s.explode;
@@ -257,7 +276,7 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
       exploded = closingFrom.exploded * (1 - closed);
     } else {
       door += (s.door - door) * blend;
-      roof += ((s.layout === "stack" ? 0 : s.roof) - roof) * blend;
+      roof += (s.roof - roof) * blend;
       exploded += ((s.layout === "stack" ? 0 : s.explode) - exploded) * blend;
     }
     const spreadRow = s.layout === "row" || (configuration.active && closingFrom.layout === "row");
@@ -271,7 +290,7 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
       const extra = exploded / 100;
       const currentCameraGoal = cameraDestination.clone().add(new THREE.Vector3(extra * 0.8, extra * 1.5, extra * 1.8));
       const currentTargetGoal = targetDestination.clone().add(new THREE.Vector3(0, extra * 0.3, 0));
-      if (spreadRow) {
+      if (spreadRow && (!s.camera || s.camera === "overview")) {
         const expandedView = explodedRowView(camera.aspect);
         currentCameraGoal.copy(cameraDestination).lerp(new THREE.Vector3().fromArray(expandedView.camera), extra);
         currentTargetGoal.copy(targetDestination).lerp(new THREE.Vector3().fromArray(expandedView.target), extra);
@@ -292,7 +311,10 @@ async function createGarageScene(host, getSettings, modelUrl = "assets/models/ga
     frame = requestAnimationFrame(update);
   };
   frame = requestAnimationFrame(update);
-  return { zoom, dispose() {
+  return { zoom, getCameraView(){return {position:camera.position.toArray(),target:controls.target.toArray()};}, capture() {
+    composer.render();
+    return new Promise((resolve, reject) => renderer.domElement.toBlob(blob => blob ? resolve(blob) : reject(new Error("Image capture failed.")), "image/png"));
+  }, dispose() {
     window.removeEventListener('themechange', updateTheme);
     cancelAnimationFrame(frame);
     observer.disconnect();

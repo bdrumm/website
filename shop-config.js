@@ -36,12 +36,12 @@ window.PARAMETRIC_SHOP = {
     summary: 'A rolling door. A folding roof. Room to grow.',
     description: [
       'The latest garage design combines each floor, rear wall and side walls into one continuous structural shell. Twelve articulated door slats and a two-part roof open the workshop; the roof folds underneath itself and stows behind the rear wall.',
-      'Based on the supplied Garage_Simple_Roof_Hinges.blend. The original geometry and animation are retained, with physically based materials and studio lighting.'
+      'September 11 print revision: matching brick exteriors, flat-backed fronts, simpler roller hinges and reviewed print orientations. Explore the assembly or inspect all 43 parts in their supplied print positions.'
     ],
-    modelUrl: 'assets/models/garage-simplified-structure.glb',
-    previewModelUrl: 'assets/models/home/modular-garage-simplified.glb',
-    image: 'assets/garage/simplified-garage.jpg',
-    imageAlt: 'The latest garage with its roof half open and rolling door raised, rendered from the September 10 Blender model.',
+    modelUrl: 'assets/models/garage-simplified-structure.glb?v=927d05540c',
+    previewModelUrl: 'assets/models/home/modular-garage-simplified.glb?v=927d05540c',
+    image: 'assets/garage/revision-garage.jpg',
+    imageAlt: 'The latest garage with its roof half open and rolling door raised, rendered from the September 11 Blender model.',
     available: false
   }, {
     id: 'station',

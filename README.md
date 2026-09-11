@@ -155,3 +155,14 @@ CSI Presence presents one main floor plan with Hybrid, Wi-Fi / RTI, Camera evide
 The “A shared picture” section includes source-based signal schematics for the Wi-Fi CSI mesh, LD2410 reports, both camera capture paths and the Python host. They show data interfaces and processing stages, not electrical wiring. SVG sources are in `assets/csi-*-schematic.svg`.
 
 CSI now opens directly on the sensing visualization, without the former floor/building-size summary. The component schematics use abstract interference, range-band, optical-field and fusion graphics. The Hardware versions tab includes an interactive precision/accuracy example with eight constructed XY readings, a fixed ±5 cm scale and a 1 cm tolerance radius. Its computed spread, mean offset and RMS error are independent of hardware presets.
+
+
+## September 11 garage review update
+
+The garage uses `Garage_Standard_Brick.blend` (SHA-256 `927d05540c9b9b6cd0d337579b4c7e2f78ed2a34b7d64a655ca3dcf93f35db3e`), with 63 source objects and 21 animated objects over 80 frames. Matching brick recesses are added to the kitchen and dining shells. The other 61 source mesh payloads and all source motion are preserved. New renders show the same source revision.
+
+The project page adds roof presets and fine sliders, removable-part separation, five camera presets, a 24-second sequence, PNG capture and shareable assembly states. Side-by-side entrance motion and zoom controls are retained. Print layout loads lazily and includes 43 parts with category/search filters, list and mesh selection, dimensions/orientation notes, underside highlighting and display tiles. Its latest colored 3MF download includes the revised brick shells. Print tiles are illustrations of supplied orientations, not a single build plate.
+
+Only two print-layout geometries were replaced; all other 41 meshes, numbered labels and tile transforms are preserved. Source assets were recovered from verified temporary exports because macOS denied access to the relocated Documents source. The source Blender files were not changed.
+
+The garage also has a standalone sharing page at `/modular-garage/`, with a domain-only header and no shop navigation. The garage stats strip is removed in both views. Copy view link opens this standalone page and preserves the configuration, camera angle, and zoom.

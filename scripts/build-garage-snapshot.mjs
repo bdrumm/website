@@ -13,7 +13,7 @@ const jsonSize=source.readUInt32LE(12);
 const original=JSON.parse(source.subarray(20,20+jsonSize));
 const binary=source.subarray(28+jsonSize);
 const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
-const provenance={source:'Garage_Simplified_Structure.blend',sourceRevision:metadata.sourceRevision,sourceBlendSha256:metadata.sourceBlendSha256,sourceGlbSha256:digest(source)};
+const provenance={source:'Garage_Standard_Brick.blend',sourceRevision:metadata.sourceRevision,sourceBlendSha256:metadata.sourceBlendSha256,sourceGlbSha256:digest(source)};
 const groups=['garage','kitchen','dining'];
 const label=name=>name[0].toUpperCase()+name.slice(1);
 const transform=values=>{

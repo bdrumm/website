@@ -14,12 +14,12 @@ async function load(path='../assets/models/garage-simplified-structure.glb'){
 const sourceNodes=model=>{const nodes=[];model.traverse(o=>{if(o.userData.sourceName)nodes.push(o);});return nodes;};
 const error=(a,b)=>Math.max(...a.elements.map((v,i)=>Math.abs(v-b.elements[i])));
 
-test('published garage preserves the September 10 source and its continuous structural shells',async()=>{
+test('published garage preserves the September 11 source and its continuous structural shells',async()=>{
  const {bytes,scene,animations}=await load();
  assert.equal(createHash('sha256').update(bytes).digest('hex'),audit.fullModelSha256);
- assert.equal(metadata.sourceBlendSha256,'d2e20f530ace280876a91d0b583dc716b5a67fa8079ab2b3708090403a480a88');
+ assert.equal(metadata.sourceBlendSha256,'927d05540c9b9b6cd0d337579b4c7e2f78ed2a34b7d64a655ca3dcf93f35db3e');
  assert.equal(scene.getObjectByName('SYSTEM_ROOT').userData.sourceBlendSha256,metadata.sourceBlendSha256);
- const nodes=sourceNodes(scene);assert.equal(nodes.length,60);assert.equal(new Set(nodes.map(n=>n.userData.sourceName)).size,60);assert.equal(animations.length,21);
+ const nodes=sourceNodes(scene);assert.equal(nodes.length,63);assert.equal(new Set(nodes.map(n=>n.userData.sourceName)).size,63);assert.equal(animations.length,21);
  for(const module of ['Garage','Kitchen','Dining'])assert.ok(nodes.find(n=>n.userData.sourceName===module+'_Structural_Module'));
  assert.ok(!nodes.some(n=>/^Floor_|^Rear_wall_|_Left_side_|_Right_side_/.test(n.userData.sourceName)));
  for(const node of nodes)node.traverse(o=>{if(o.isMesh)for(const value of o.geometry.attributes.position.array)assert.ok(Number.isFinite(value));});
