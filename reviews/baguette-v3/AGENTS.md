@@ -13,6 +13,8 @@ Publishing to the existing site is authorized in this task. Do not migrate hosti
 
 The center joint uses integral one-way snap tabs. Do not restore loose bonding sleeves or adhesive assembly unless the user requests it. Review insertion, spring return, withdrawal resistance and receiver wall thickness.
 
-All six interior ribs are intentionally removed. Center-joint tongues must remain within the shell edge and enter covered blind sockets. Check inward and outward covers, the closed end and embedded-root flex clearance before publishing.
+All six interior ribs are intentionally removed. Center-joint tongues must remain within the shell edge and enter covered blind sockets. Check inward and outward covers, the closed end and exposed-tongue flex clearance before publishing.
+
+Keep the reinforced cavity wall guard and former thin-wall slice review. Preserve the previous exterior hinge profile while adding strength inward. Half A must have solid snap roots without recessed flex channels. Blend the center attachment into the inner cavity without abrupt transverse ledges. Hash joint-profile.json and joint-blend.py.txt along with the generator and inspect actual sliced wall paths before publishing.
 
 The editable CAD and source checks are distributed in baguette-v3-source-and-print.zip. Extract to a writable model workspace before changing geometry. Publish rebuilt assets and both matching archives together.
