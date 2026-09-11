@@ -27,4 +27,6 @@ The raised outer band must blend smoothly into the shell and latch face. Preserv
 
 Strap eyes must keep their through-openings and a strong outer web while their edges and roots are rounded. Inspect the strap view. Check fingernail entry into the grip itself and the material above and in front of that recess.
 
+The strap tail must fade into the actual narrowing shell instead of ending in a raised stub. Inspect its silhouette and sample the final outer skin beyond the tail termination.
+
 The editable CAD and source checks are distributed in baguette-v3-source-and-print.zip. Extract to a writable model workspace before changing geometry. Publish rebuilt assets and both matching archives together.

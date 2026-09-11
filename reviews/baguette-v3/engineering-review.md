@@ -1,6 +1,6 @@
-# Baguette holder V3.12 — engineering review
+# Baguette holder V3.13 — engineering review
 
-V3.12 replaces the hard-edged outer band with a curved transition into the shell. The same surface drives the latch face, so the band blends across the case and latch instead of forming square ledges. Both strap eyes have rounded edges and coved roots, and each projecting latch grip has a shallow fingernail inset in its underside. The clear side slots, shell recesses and internal retaining shoulders remain. Physical fit, release force and durability remain untested.
+V3.13 removes the raised stub at the end of each strap root. The final 11 mm of the tail follows a quintic taper into the actual narrowing shell, while the material underneath stays joined to the shell wall. The rounded eye, clear strap opening and 3 mm outer web remain. The previously blended outer band and recessed latch grips are retained. Physical fit, release force and durability remain untested.
 
 The band keeps its existing outer outline at the parting edge. Its full-height region extends 0.6 mm above and below the seam; a quintic transition blends into the original crust by Z ±8 mm with zero slope and curvature at its ends. The change expands the exterior from the crust while preserving the cavity and wall guard. It is actual CAD geometry, shared by the print objects and preview.
 
@@ -14,7 +14,7 @@ The two exterior latches retain their short 18 × 20 mm shell-contoured tongues,
 
 ## Rounded strap attachments
 
-The stepped fin layers and root collars are replaced by a strap eye with 1 mm rounded edges and a 2 mm coved root transition into the shell. The through-openings remain clear of a 7 × 12 mm gauge. Each eye retains approximately 3 mm of material in its outer web at the plate midplane. Use the Strap view to inspect the attachment and print the supplied `strap_eye` coupon to check clipping access and feel. Strap loading and strength remain untested.
+The stepped fin layers and root collars are replaced by a strap eye with 1 mm rounded edges and a 2 mm coved root transition into the shell. The tail now fades from 29 to 40 mm beyond the eye center along the case, tracking the actual curved surface with zero slope at the fade endpoints. Final skin samples around the former stub depart from the body by at most 0.0114 mm (0.025 mm check limit). The through-openings remain clear of a 7 × 12 mm gauge. Each eye retains approximately 3 mm of material in its outer web at the plate midplane. Use the Strap view to inspect the attachment and print the supplied `strap_eye` coupon to check clipping access and feel. Strap loading and strength remain untested.
 
 ## Clear latch openings, fingernail access and softened edges
 
@@ -54,13 +54,13 @@ Insertion is modeled with 1.2 mm of inward tip deflection. A straight-beam scree
 
 ## Geometry and sliced-path review
 
-All **120 geometry checks pass**, covering four watertight shells, two print objects with two captured moving solids each, the retained 62 mm × 600 mm capsule clearance, zero interior ribs, covered sockets, solid male roots, removal of the old transverse ledges, snap insertion and return, retaining engagement, and released hinge/latch movement.
+All **122 geometry checks pass**, covering four watertight shells, two print objects with two captured moving solids each, the retained 62 mm × 600 mm capsule clearance, zero interior ribs, covered sockets, solid male roots, removal of the old transverse ledges, snap insertion and return, retaining engagement, and released hinge/latch movement.
 
 The continuous rotation certificate uses 501 poses at 0.2° spacing. It subtracts a bound on movement between poses and a 0.002 mm numerical allowance from the measured gaps, certifying at least **0.1408 mm** clearance over 0–100°. The center-joint insertion and spring-return certificates each retain at least **0.1480 mm** clearance. These are CAD motion bounds, not printer-tolerance guarantees.
 
 A separate enclosure diagnostic temporarily caps designed vents and bridges working seams to check one enclosed bread cavity without changing the printed vents or seams. The extrusion helper preserves polygon holes, preventing hidden pocket cuts from removing their inner covers.
 
-The review includes closed, rear, open and intermediate hinge renders, capped hinge and catch sections, a separated center joint, a capped covered-socket section, a dedicated underside latch view, and a strap-attachment close-up. Six actual sliced cross-sections are reviewed: four at former thin-wall stations (A at print Z 55.6 and 180.0 mm; B at 47.6 and 172.0 mm), plus one through each fingernail recess and hinge center (A at 162.0 mm; B at 153.8 mm). The former thin-wall sections have two separate base/lid material regions; the hinge-center sections also show the isolated captured-pin cross-section. `slice-walls.jpg` shows the planned paths with supports hidden. This is a regional review, not an all-layer or physical defect proof.
+The review includes closed, rear, open and intermediate hinge renders, capped hinge and catch sections, a separated center joint, a capped covered-socket section, a dedicated underside latch view, and a strap-attachment close-up and a separate tail silhouette. Six actual sliced cross-sections are reviewed: four at former thin-wall stations (A at print Z 55.6 and 180.0 mm; B at 47.6 and 172.0 mm), plus one through each fingernail recess and hinge center (A at 162.0 mm; B at 153.8 mm). The former thin-wall sections have two separate base/lid material regions; the hinge-center sections also show the isolated captured-pin cross-section. `slice-walls.jpg` shows the planned paths with supports hidden. This is a regional review, not an all-layer or physical defect proof.
 
 ## Print files and assembly
 
@@ -71,7 +71,7 @@ The review includes closed, rear, open and intermediate hinge renders, capped hi
 
 Both fit the checked 300 × 320 × 325 mm envelope, including an 8 mm brim. Keep the supplied upright, 100° open orientation. The offline setup is Bambu Studio 02.08.02.61, Bambu H2C, Generic PLA, 0.4 mm nozzle, 0.20 mm layers, four walls, 15% infill and automatic supports. STL units are millimetres. The 3MF files contain oriented geometry, not prepared printer jobs. Nothing is sent to a printer.
 
-Final offline estimates are **A: 14h 48m 17s / 490.76 g**, **B: 14h 44m 22s / 490.85 g**, about **29.5 hours and 982 g** total before coupons. Exact STL, settings and G-code hashes are recorded in `review.json` and `slice-wall-review.json`.
+Final offline estimates are **A: 14h 47m 48s / 490.61 g**, **B: 14h 43m 26s / 490.69 g**, about **29.5 hours and 981 g** total before coupons. Exact STL, settings and G-code hashes are recorded in `review.json` and `slice-wall-review.json`.
 
 1. Print `joint_A` and `joint_B` first. Clear support from the covered slots through their joining-face openings, then verify full seating and retention.
 2. Print hinge and exterior latch coupons. The 0.4 mm hinge coupon reproduces the default bearing; 0.3 and 0.5 mm alternatives bracket fit. Check release force and repeated flexing with the taller grips.
