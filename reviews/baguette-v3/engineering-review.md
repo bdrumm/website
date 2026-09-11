@@ -1,101 +1,90 @@
-# Baguette holder V3.5 — engineering review
+# Baguette holder V3.6 — engineering review
 
-V3.5 blends the hinge into the shell with **2 mm radius tangent transitions** on both sides of the rear wall. The fixed hinge ends merge into the same continuous rim profile, removing the exposed cylindrical end steps. The direct hinge, two short latches and working clearances remain. This is a printable prototype; it has not been physically printed or fatigue-tested.
+V3.6 replaces the three loose bonding connectors with an **integrated, one-way snap joint** and reduces the internal ribs. There are now **two main print objects**, each containing a captured base and moving lid. The smooth direct rim hinge and two short exterior latches remain. Physical fit, retention force, carrying loads and durability have not been tested.
 
-## Revised latch design
+## Integrated center joint
 
-| Feature | V3.2 | V3.3–V3.5 |
-|---|---:|---:|
-| Latches | 4 | 2, at Y = −150 and +150 mm |
-| Nominal flexible length | 26 mm | 18 mm |
-| Tongue width | 16 mm | 20 mm |
-| Nominal tongue skin | 1.6 mm | 1.8 mm |
-| Inward hook projection | 0.65 mm | 1.60 mm |
-| Commanded release travel | 1.05 mm | 2.10 mm |
+Section A carries a 12 mm aligning collar that is part of its base and lid. It slides into the sockets in section B. Eight flexible fingers, four on each shell, snap behind internal retaining shoulders. The outer shells meet at the retained 0.20 mm butt seam. No separate connector or adhesive is required.
 
-The tongues follow the actual outer crust and belt contour. Their thicker roots join directly into the lid. A 0.8 mm thumb lip is the only intentional outward addition in each latch region. The surrounding shell no longer has the four long rectangular latch recesses.
-
-Each fixed catch has a nominal 5.2 mm reinforcement depth behind the running clearance, a 1.55 mm projecting ledge relative to its pocket, and a nominal 3.65 mm back wall. The actual sampled sections measure **1.12 mm of hook-to-ledge overlap** and **3.67 mm behind the recess**. The hook includes a sloped entry face and a positive retaining shoulder, with a nominal 0.35 mm vertical gap in the unloaded closed state.
-
-The geometry tests confirm that both latches block a 0.5° attempted opening without release, that the 0–2.1 mm modeled outward release path is clear, and that the released lid opens through its reviewed range. These tests establish geometric engagement, not retention force or durability. The preview's **Catch section** view and the static section render expose the actual hook and ledge.
-
-Shorter, deeper hooks require more release flex. A straight-beam screening calculation gives about **1.75% nominal strain**, versus 0.37% for the prior dimensions. The actual tongue is curved and varies in section, so this is not a stress analysis or a strength prediction. Print and cycle the new latch coupons before the complete case; check comfortable release, retention and cracking at the root.
-
-## Hinge design
-
-Each printed half contains one 28.9 mm long hinge: two fixed 6 mm ears, one 16 mm moving knuckle, and a captive 2 mm pin. The knuckle outside diameter is 6.6 mm, with a 0.4 mm nominal radial gap, 0.45 mm axial gaps and a 1.9 mm nominal bearing wall. The knuckles meet the shell directly; there are no raised arms or mounting frames. The original abrupt circle-to-wall intersections are replaced by tangent circular blends of 2 mm radius. The smooth profile continues past the fixed-ear ends, so those ends no longer leave projecting end caps inside the case.
-
-The axis moves from X = −36, Z = 7 mm to **X = −41, Z = 0 mm**, at the rear rim in source coordinates. The back wall is reprofiled inward to X = −43 mm outside and X = −40 mm inside, providing a nominal 3 mm wall. A rounded edge follows the bearing radius and blends tangentially into both wall surfaces. The added material is approximately 5.08 cm³ across the whole case, with the original bread clearance retained. The moving rim clears this edge radially. The barrel and all hinge-side geometry remain inside the original exterior envelope.
-
-The reviewed opening range is **0–100°**. It is an operating limit, without a mechanical hard stop. Do not force the lid farther. The supplied print pose is 100° open with the pin axes vertical.
-
-In V3.4, the changed pivot revealed a small hook-to-catch conflict early in opening. A **0.9 mm hidden exit relief** now tapers the upper catch pocket; the holding shoulder and reinforced back wall below it remain intact. The measured retaining overlap remains approximately 1.12 mm. Both released latches clear throughout the reviewed motion.
-
-## Review before committing
-
-The review covers the actual manufacturing solids with installed joiners, not just the rendered display. Closed rear/exterior views, 0°/50°/100° hinge views, and transverse hinge and latch sections are inspected before publishing. `AGENTS.md` preserves this requirement for subsequent work. `source/prepublish-review.py` rejects missing motion clearance, stale geometry or preview evidence, stale slices and mismatched print-pack files.
-
-## Geometry review
-
-All **48 checks pass**:
-
-- The new inner and outer blend profiles meet the bearing tangentially, with matching positions and tangent directions.
-- All four fixed-ear ends continue into the surrounding rim profile, excluding designed working seams.
-- Each of the four shells and three internal joiners is one watertight, consistently wound solid.
-- Each main print segment contains exactly two separate solids: the base and captured moving lid.
-- The closed assembly has zero detected overlap.
-- There are exactly two latches, one per printed half; both block unreleased opening.
-- Each tested catch section has over 1 mm of retaining overlap and over 3.5 mm of back-wall thickness.
-- The latch surfaces follow the original exterior except for the thumb lips.
-- The modeled release path is clear at 0.1 mm increments from 0 to 2.1 mm.
-- Released motion has zero detected overlap at every 1° increment from 0° to 100°, including the installed joiners.
-- Each open print segment retains approximately 0.388 mm minimum base-to-lid clearance.
-- The original 62 mm diameter × 600 mm capsule clearance is retained within the Boolean tolerance.
-- Both compact barrels lie inside the original exterior. The full hinge-side exterior test leaves only 0.00093 mm³ of numerical boundary residue, below its 0.05 mm³ tolerance.
-- The joiners have approximately 0.250 mm socket clearance.
-- All parts fit the checked 300 × 320 × 325 mm envelope, allowing an 8 mm brim around the main footprints.
-
-A separate clearance certificate covers the intervals between the 501 sampled poses at 0.2° spacing. The minimum sampled gap is 0.300 mm. The farthest moving vertex is 89.472 mm from the axis; its maximum displacement to the nearest sample is 0.1562 mm. Subtracting that bound and a 0.002 mm numerical allowance leaves a conservative **0.1418 mm minimum clearance throughout 0–100°**. This applies to rigid rotation of the CAD mesh with both latches held at the modeled 2.1 mm release position.
-
-The closed-shell check temporarily caps the four designed bottom vents and bridges submillimetre working seams for analysis only. It finds one enclosed bread cavity; this catches unintended openings caused by trimming the rear wall. The original vents and working seams remain in the printable geometry. Each moving bearing also overlaps the shell directly by over 116 mm³.
-
-These checks establish geometric compatibility. They do not establish printed tolerances, release force, structural strength or fatigue life. Full measurements and test names are in `review.json`.
-
-## Center joint and retained improvements
-
-The two main segments meet across flat center faces with a 0.20 mm working seam. One base sleeve and two distinct lid keys align the halves internally. The hinge-side joiners are trimmed to clear the revised rim and motion. **Use the joiners supplied with this revision; their geometry is unchanged from V3.2.** They require a filament-compatible adhesive after dry fitting, and replace the old snap-together center coupling. Keep adhesive away from the base/lid seam and bearings.
-
-The cleaned rib-to-shell unions remain. The sculpted outer crust is preserved apart from the reprofiled rear wall and rounded rim; no display-only center repair is used.
-
-## Print objects and offline slicing
-
-| Object | Supplied X × Y × Z envelope (mm) |
+| Feature | Nominal dimension |
 |---|---:|
-| Segment A | 155.08 × 131.14 × 306.78 |
-| Segment B | 154.94 × 131.14 × 314.78 |
-| Base sleeve | 73.51 × 35.99 × 32.00 |
-| Lid key 1 | 25.11 × 24.23 × 32.00 |
-| Lid key 2 | 25.05 × 30.42 × 32.00 |
+| Collar insertion length | 12 mm |
+| Collar / finger wall | 1.8 mm |
+| Sliding clearance | 0.30 mm |
+| Rear anchoring length | 12 mm |
+| Flexible finger length | 22 mm |
+| Outward barb height | 1.00 mm |
+| Retaining overlap beyond the socket land | 0.70 mm |
+| Clearance behind each retaining shoulder | 0.25 mm |
+| Checked material behind each socket | At least 1.8 mm |
 
-Both main segments slice successfully offline in Bambu Studio 02.08.02.61, using the installed Bambu H2C / Generic PLA presets, 0.4 mm nozzle, 0.20 mm layers, four walls, 15% infill, an 8 mm brim and automatic supports. Segment A estimates **14 h 25 m / 450 g**; B estimates **14 h 32 m / 463 g**. These estimates include supports and brim, and exclude joiners and coupons. No job was sent to a printer. Input STL hashes in `review.json` tie the results to these exports.
+The barbs have ramped entry faces and square withdrawal shoulders. Wider slots allow the fingers to bend independently of the alignment lands. The receiver pockets include clearance beside the fingers so they can return after insertion. Both base and lid joints resist a modeled 0.5 mm withdrawal, with positive engagement at every finger.
 
-Keep the supplied upright, open orientation. Inspect supports under the latch undercuts and rim features, and keep them out of working bearings. This complete object is not claimed to print without supports. The STL units are millimetres. The 3MF files contain oriented geometry, not prepared printer jobs or G-code.
+The joint has no release feature and is **intended for permanent assembly**. Removing an engaged joint may damage the fingers or socket. This intent is not a tested strength rating. Test the joint coupons before joining the full-size case. Check alignment up to the leading lip before pushing the locking shoulders into their pockets.
 
-## Fit-test sequence
+The insertion review holds the fingers at a modeled 1.5 mm tip deflection. A straight-beam screening estimate for the 22 × 1.8 mm fingers is about 0.84% strain. Their actual curved sections and layer orientation differ from that idealization, so this does not predict insertion force, fatigue life or printed elasticity.
 
-1. Print `hinge_gap_0p4`, cropped from the actual final hinge and adjoining shells. Check freedom through the reviewed travel and captive retention. `hinge_gap_0p3` and `hinge_gap_0p5` are circular-bore variants to compare tighter and looser fits; they change only the moving center bearing. Parameter changes require regenerating the full model.
-2. Print `latch_base` and `latch_lid`. Check seating, retention and release at the finger lip. Do not scale coupons independently.
-3. Print `joint_A`, `joint_B` and all three full-size joiners. Dry-fit alignment and check opening before bonding.
-4. Print the main segments only after those checks. Remove supports, free the hinges gently, dry-fit the assembly, then bond the matching base and lid joiners separately.
+## Reduced ribs
 
-## Physical checks still needed
+All six rib stations remain at Y = −220, −140, −60, +60, +140 and +220 mm.
 
-Test hinge freedom, the small pin and direct shell attachment strength, latch cycling, carrying loads, adhesive compatibility and joint strength. Coupon handling and load tests are required before carrying use, including the revised latch roots and catch ledges.
+| Feature | Previous | V3.6 |
+|---|---:|---:|
+| Nominal inward depth | 4.0 mm | 1.8 mm |
+| Rib width along the case | 3.2 mm | 2.4 mm |
+| Support ramp length | 6.0 mm | 3.0 mm |
 
-Across 4,210 normal-ray wall samples, the retained crust measures at least 1.53 mm on the base and 1.58 mm on the lid. The sample set does not measure the new latch tongues. It also omits end tips, the center joint, central parting seam, small faces and much of the left rim. It does not establish the global minimum wall or strength of the hinge attachments. Region minima and sample locations are recorded in `wall-samples.json`.
+The nominal depth is reduced by 55%. The ribs retain smooth elliptical inner edges and connections into the shell. A comparison against the previous rib solids confirms material removal at every station, totaling approximately **23.2 cm³**. These are nominal dimensions around the original organic cavity, rather than a claim of uniform projection from every point on the wall.
+
+## Retained hinge and latches
+
+The two direct hinges remain at X = −41, Z = 0 mm, with 6.6 mm knuckles, captured 2 mm pins, 0.4 mm radial clearance and 0.45 mm axial gaps. Two-millimetre radius tangent blends join the hinge to the inside and outside of the rear wall. The fixed hinge ends continue into the same rim profile. The nominal rear wall is 3 mm thick. All hinge geometry remains inside the original exterior envelope; there are no support arms.
+
+The reviewed opening range remains **0–100°**, without a mechanical hard stop. Do not force the lid farther. The print poses have the pin axes vertical and the lids open at 100°.
+
+The two exterior latches retain 18 mm tongues, 20 mm width, 1.8 mm nominal skin, thicker roots, 1.6 mm inward hooks and small thumb lips. Measured retaining overlap is about 1.12 mm, with approximately 3.67 mm behind the catch recesses. The internal exit bevel clears the hooks during opening. Latch release is modeled at 2.1 mm; its nominal straight-beam strain screen remains about 1.75%. These tests establish geometric engagement, not release force or durability.
+
+## Geometry review before committing
+
+All **68 geometry checks pass**. The main checks cover:
+
+- Exactly four integral shells and two print objects, with no separate sleeves. Each shell is a single watertight, consistently wound solid; each print object has the expected two captured moving solids.
+- No rigid interference in the assembled center joints or closed base/lid assembly.
+- All eight snap shoulders resist withdrawal. All receiver pockets retain at least 1.8 mm of outer wall under a solid-offset check.
+- Continuously clear insertion paths with the fingers compressed, followed by continuously clear spring-return paths into the pockets. The review also checks finger clearance beside the alignment lands.
+- Continuous released lid rotation through 0–100°, including the integrated collars and snaps.
+- The retained 62 mm diameter × 600 mm capsule clearance.
+- Smaller ribs at every station, with only numerical residue in the comparison of added material.
+- Tangent hinge transitions, continuous fixed-ear roots, retained latch engagement and printable envelopes.
+
+The rotation certificate uses 501 poses at 0.2° spacing. It subtracts the maximum possible movement to the nearest sampled angle and a 0.002 mm numerical allowance from the minimum measured gap. The insertion and spring-return checks use the same displacement-bound principle at 0.1 mm spacing. The complete measurements and clearance bounds are in `review.json`.
+
+The enclosure check temporarily caps the four designed bottom vents and bridges submillimetre working seams for analysis. It finds one enclosed bread cavity. The vents and working seams remain in the manufacturing geometry.
+
+Closed, open and intermediate hinge views, hinge and latch sections, the separated center joint and its snap cross-section are inspected before publishing. `AGENTS.md` preserves this review requirement. `source/prepublish-review.py` checks that the CAD, reviewed images, preview, offline slices and download archives match.
+
+## Print files and assembly
+
+| Main object | Supplied X × Y × Z envelope (mm) |
+|---|---:|
+| Section A, with integral collar | 155.08 × 131.14 × 318.88 |
+| Section B, with integral sockets | 154.94 × 131.14 × 314.78 |
+
+Both fit the checked 300 × 320 × 325 mm envelope, including an 8 mm brim around the footprint. Keep the supplied upright orientation. The collar makes A taller than in the previous revision.
+
+The checked setup is Bambu Studio 02.08.02.61, Bambu H2C, Generic PLA, a 0.4 mm nozzle, 0.20 mm layers, four walls, 15% infill, an 8 mm brim and automatic supports. Fresh offline slicing results and input/output hashes are recorded in `review.json`. No job is sent to a printer. The STL units are millimetres; the 3MF files contain oriented geometry, not prepared printer jobs or G-code.
+
+The final offline slices estimate **15 h 37 min / 479.66 g** for section A and **14 h 47 min / 467.29 g** for section B, approximately **30.4 hours and 947 g** total before fit coupons. These include the recorded support and brim settings.
+
+1. Print the matching `joint_A` and `joint_B` coupons first. They include the actual snap fingers, roots and sockets. Confirm insertion, full seating and resistance to withdrawal. Treat them as one-way test parts.
+2. Print the hinge and exterior latch coupons. The 0.4 mm hinge coupon reproduces the current bearing; the 0.3 and 0.5 mm variants bracket its fit.
+3. Inspect supports at the collar, finger slots, hidden retaining pockets and latch undercuts. Remove all support and brim material from mating and moving surfaces before assembly.
+4. Print the full segments after the coupons pass. Align both base and lid connections with the hinges at the same angle. Support both sections evenly and press straight along the case length until seated. Avoid twisting the fingers. Check lid movement after assembly.
+
+Physical tests must establish printed fit, snap insertion and retention force, hinge freedom, latch cycling, carrying loads and long-term joint strength. Wall-sample coverage and regional measurements are in `wall-samples.json`; they do not establish a global minimum wall or structural load rating.
 
 ## Preview and reproducibility
 
-The interactive review and renders derive from the manufacturing CAD. The display mesh uses 0.02 mm simplification and 0.001 mm coordinate rounding for remote viewing; the STL/3MF manufacturing exports retain the detailed geometry. The opening control applies the real hinge pivot and a latch-release display deformation. Hinge section uses separate capped cross-sections cut from the actual manufacturing solids; its lid section rotates around the same pivot. These inspection sections are excluded from the print objects.
+The preview comes from the manufacturing CAD with 0.02 mm display simplification and 0.001 mm coordinate rounding. The print files retain the manufacturing meshes. Section views are capped cuts from those solids and are excluded from the print objects. Center joint reveals the integrated collar with the two case sections separated; Joint section shows a locking tongue seated behind its receiving shell.
 
-The source pack includes the generator, unchanged V2 reference, fit coupons, geometry checks, preview export, renders and slicer setup scripts. Dimensions are millimetres. The source identifies the reference crust as “Baguette” by Isa Lousberg, CC0/Public Domain. Display color does not specify filament.
+The source archive contains the generator, geometry checks, coupons, render and preview scripts, slicer setup and review requirements. The unchanged reference source identifies the crust as “Baguette” by Isa Lousberg, CC0/Public Domain. Display color does not specify filament.

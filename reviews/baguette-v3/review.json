@@ -1,6 +1,6 @@
 {
-  "generator_sha256": "3394f33c191394e5d93271fcc81c072524e0dfaa2085dc25113b832b01cd36e1",
-  "revision": "V3.5 blended rim hinge engineering prototype",
+  "generator_sha256": "9ad74340a4c48a92c712ae6e3740a59c207d18eb657a2da052240c62448827ec",
+  "revision": "V3.6 integrated snap joint engineering prototype",
   "parameters": {
     "hinge_axis_x": -41.0,
     "hinge_axis_z": 0.0,
@@ -37,6 +37,32 @@
     "catch_shoulder_gap": 0.35,
     "thumb_lip": 0.8,
     "release_travel": 2.1,
+    "rib_depth": 1.8,
+    "rib_width": 2.4,
+    "rib_support": 3.0,
+    "joint_lip_length": 12.0,
+    "joint_lip_thickness": 1.8,
+    "joint_clearance": 0.3,
+    "joint_anchor_length": 12.0,
+    "joint_flex_start": -10.0,
+    "joint_barb_height": 1.0,
+    "joint_barb_shoulder": 8.0,
+    "joint_pocket_clearance": 0.25,
+    "joint_retention_gap": 0.25,
+    "joint_finger_width_degrees": 16.0,
+    "joint_slot_width_degrees": 3.0,
+    "joint_pocket_extra_degrees": 5.0,
+    "joint_deflection": 1.5,
+    "joint_finger_angles": [
+      30,
+      70,
+      110,
+      150,
+      210,
+      250,
+      290,
+      330
+    ],
     "material": "PLA",
     "nozzle_mm": 0.4,
     "layer_mm": 0.2
@@ -48,295 +74,151 @@
   ],
   "printables": {
     "segment_A": {
-      "triangles": 24080,
+      "triangles": 25148,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 292950.67745289044,
-      "mass_g_at_1_24": 363.25884004158416,
+      "volume_mm3": 289787.4225068097,
+      "mass_g_at_1_24": 359.336403908444,
       "components": 2,
       "component_volumes_mm3": [
-        125421.48135228308,
-        167529.19610060737
+        125442.12812416074,
+        164345.29438264895
       ],
       "bounds_mm": [
-        -77.5409940003949,
-        -65.56777514651895,
+        -77.5409927368164,
+        -65.5677719116211,
         0.0,
-        77.5409940003949,
-        65.56777514651895,
-        306.7755493164062
+        77.5409927368164,
+        65.5677719116211,
+        318.87554931640625
       ],
       "size_mm": [
-        155.0819880007898,
-        131.1355502930379,
-        306.7755493164062
+        155.0819854736328,
+        131.1355438232422,
+        318.87554931640625
       ]
     },
     "segment_B": {
-      "triangles": 24610,
+      "triangles": 23788,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 298076.4707923984,
-      "mass_g_at_1_24": 369.614823782574,
+      "volume_mm3": 287060.28407112806,
+      "mass_g_at_1_24": 355.9547522481988,
       "components": 2,
       "component_volumes_mm3": [
-        127268.69616742834,
-        170807.77462497004
+        124187.00228673813,
+        162873.28178438992
       ],
       "bounds_mm": [
-        -77.46997533025956,
-        -65.57102097285333,
+        -77.46997833251953,
+        -65.5710220336914,
         0.0,
-        77.46997533025956,
-        65.57102097285333,
-        314.7755187988281
+        77.46997833251953,
+        65.5710220336914,
+        314.7755126953125
       ],
       "size_mm": [
-        154.93995066051912,
-        131.14204194570667,
-        314.7755187988281
-      ]
-    },
-    "sleeve_base": {
-      "triangles": 276,
-      "watertight": true,
-      "consistent_winding": true,
-      "volume_mm3": 26825.92263992677,
-      "mass_g_at_1_24": 33.2641440735092,
-      "components": 1,
-      "component_volumes_mm3": [
-        26825.92263992677
-      ],
-      "bounds_mm": [
-        -36.75559762865305,
-        -17.997327701747416,
-        0.0,
-        36.75559762865305,
-        17.997327701747416,
-        32.0
-      ],
-      "size_mm": [
-        73.5111952573061,
-        35.99465540349483,
-        32.0
-      ]
-    },
-    "sleeve_lid_1": {
-      "triangles": 148,
-      "watertight": true,
-      "consistent_winding": true,
-      "volume_mm3": 4487.887101754149,
-      "mass_g_at_1_24": 5.564980006175144,
-      "components": 1,
-      "component_volumes_mm3": [
-        4487.887101754149
-      ],
-      "bounds_mm": [
-        -12.554299525862213,
-        -12.1161390542984,
-        0.0,
-        12.55429952586221,
-        12.1161390542984,
-        32.0
-      ],
-      "size_mm": [
-        25.108599051724422,
-        24.2322781085968,
-        32.0
-      ]
-    },
-    "sleeve_lid_2": {
-      "triangles": 132,
-      "watertight": true,
-      "consistent_winding": true,
-      "volume_mm3": 4989.049190622034,
-      "mass_g_at_1_24": 6.186420996371322,
-      "components": 1,
-      "component_volumes_mm3": [
-        4989.049190622034
-      ],
-      "bounds_mm": [
-        -12.524261912695357,
-        -15.208906380087138,
-        0.0,
-        12.524261912695355,
-        15.208906380087138,
-        32.0
-      ],
-      "size_mm": [
-        25.04852382539071,
-        30.417812760174275,
-        32.0
+        154.93995666503906,
+        131.1420440673828,
+        314.7755126953125
       ]
     }
   },
   "parts": {
     "base_A": {
-      "triangles": 14390,
+      "triangles": 15192,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 167529.1961006073,
-      "mass_g_at_1_24": 207.73620316475308,
+      "volume_mm3": 164345.33086288613,
+      "mass_g_at_1_24": 203.7882102699788,
       "components": 1,
       "component_volumes_mm3": [
-        167529.1961006073
+        164345.33086288613
       ],
       "bounds_mm": [
-        -44.3,
+        -44.29999923706055,
         -310.87554931640625,
         -43.473731994628906,
         61.80098342895508,
-        -4.100000000000023,
-        3.3
+        8.0,
+        3.299999952316284
       ],
       "size_mm": [
-        106.10098342895508,
-        306.7755493164062,
-        46.7737319946289
+        106.10098266601562,
+        318.87554931640625,
+        46.77373194694519
       ]
     },
     "lid_A": {
-      "triangles": 9690,
+      "triangles": 9988,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 125421.48135228308,
-      "mass_g_at_1_24": 155.52263687683103,
+      "volume_mm3": 125442.50354814608,
+      "mass_g_at_1_24": 155.54870439970114,
       "components": 1,
       "component_volumes_mm3": [
-        125421.48135228308
+        125442.50354814608
       ],
       "bounds_mm": [
-        -44.3,
+        -44.29999923706055,
         -310.87554931640625,
         -10.0,
         48.040592193603516,
-        -4.100000000000023,
+        8.0,
         43.473731994628906
       ],
       "size_mm": [
-        92.34059219360351,
-        306.7755493164062,
+        92.34059143066406,
+        318.87554931640625,
         53.473731994628906
       ]
     },
     "base_B": {
-      "triangles": 14836,
+      "triangles": 14774,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 170807.77462497004,
-      "mass_g_at_1_24": 211.80164053496284,
+      "volume_mm3": 162873.29100780556,
+      "mass_g_at_1_24": 201.9628808496789,
       "components": 1,
       "component_volumes_mm3": [
-        170807.77462497004
+        162873.29100780556
       ],
       "bounds_mm": [
-        -44.3,
-        -3.9,
+        -44.29999923706055,
+        -3.9000000953674316,
         -43.473731994628906,
         61.757957458496094,
         310.8755187988281,
-        3.3
+        3.299999952316284
       ],
       "size_mm": [
-        106.05795745849609,
-        314.7755187988281,
-        46.7737319946289
+        106.05795669555664,
+        314.77551889419556,
+        46.77373194694519
       ]
     },
     "lid_B": {
-      "triangles": 9774,
+      "triangles": 9052,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 127268.69616742832,
-      "mass_g_at_1_24": 157.8131832476111,
+      "volume_mm3": 124188.43013513119,
+      "mass_g_at_1_24": 153.99365336756267,
       "components": 1,
       "component_volumes_mm3": [
-        127268.69616742832
+        124188.43013513119
       ],
       "bounds_mm": [
-        -44.3,
-        -3.9,
+        -44.29999923706055,
+        -3.9000000953674316,
         -10.0,
         48.047183990478516,
         310.8755187988281,
         43.473731994628906
       ],
       "size_mm": [
-        92.34718399047851,
-        314.7755187988281,
+        92.34718322753906,
+        314.77551889419556,
         53.473731994628906
-      ]
-    },
-    "sleeve_base": {
-      "triangles": 276,
-      "watertight": true,
-      "consistent_winding": true,
-      "volume_mm3": 26825.922639926768,
-      "mass_g_at_1_24": 33.26414407350919,
-      "components": 1,
-      "component_volumes_mm3": [
-        26825.922639926768
-      ],
-      "bounds_mm": [
-        -36.70817881822586,
-        -20.0,
-        -36.694655403494835,
-        36.80301643908024,
-        12.0,
-        -0.7000000000000028
-      ],
-      "size_mm": [
-        73.5111952573061,
-        32.0,
-        35.99465540349483
-      ]
-    },
-    "sleeve_lid_1": {
-      "triangles": 148,
-      "watertight": true,
-      "consistent_winding": true,
-      "volume_mm3": 4487.887101754149,
-      "mass_g_at_1_24": 5.564980006175144,
-      "components": 1,
-      "component_volumes_mm3": [
-        4487.887101754149
-      ],
-      "bounds_mm": [
-        -33.64715818753114,
-        -20.0,
-        8.5,
-        -8.538559135806718,
-        12.0,
-        32.7322781085968
-      ],
-      "size_mm": [
-        25.108599051724422,
-        32.0,
-        24.2322781085968
-      ]
-    },
-    "sleeve_lid_2": {
-      "triangles": 132,
-      "watertight": true,
-      "consistent_winding": true,
-      "volume_mm3": 4989.049190622034,
-      "mass_g_at_1_24": 6.186420996371322,
-      "components": 1,
-      "component_volumes_mm3": [
-        4989.049190622034
-      ],
-      "bounds_mm": [
-        10.779917997804153,
-        -20.0,
-        0.7,
-        35.828441823194865,
-        12.0,
-        31.117812760174274
-      ],
-      "size_mm": [
-        25.04852382539071,
-        32.0,
-        30.417812760174275
       ]
     }
   },
@@ -426,7 +308,73 @@
       "released_overlap_mm3": 0.0
     }
   ],
-  "joinery": "Separate keyed internal bonding sleeves; adhesives require material compatibility and physical validation.",
+  "joinery": "Integrated collar with eight one-way snap fingers, four on each shell; no separate connector or adhesive. Intended as a non-serviceable joint, pending physical fit and load tests.",
+  "joint": [
+    {
+      "part": "base",
+      "angle": 210,
+      "root_y": -14.0,
+      "tip_y": 8.0,
+      "shoulder_y": 4.0,
+      "nominal_radial_engagement_mm": 0.7
+    },
+    {
+      "part": "base",
+      "angle": 250,
+      "root_y": -14.0,
+      "tip_y": 8.0,
+      "shoulder_y": 4.0,
+      "nominal_radial_engagement_mm": 0.7
+    },
+    {
+      "part": "base",
+      "angle": 290,
+      "root_y": -14.0,
+      "tip_y": 8.0,
+      "shoulder_y": 4.0,
+      "nominal_radial_engagement_mm": 0.7
+    },
+    {
+      "part": "base",
+      "angle": 330,
+      "root_y": -14.0,
+      "tip_y": 8.0,
+      "shoulder_y": 4.0,
+      "nominal_radial_engagement_mm": 0.7
+    },
+    {
+      "part": "lid",
+      "angle": 30,
+      "root_y": -14.0,
+      "tip_y": 8.0,
+      "shoulder_y": 4.0,
+      "nominal_radial_engagement_mm": 0.7
+    },
+    {
+      "part": "lid",
+      "angle": 70,
+      "root_y": -14.0,
+      "tip_y": 8.0,
+      "shoulder_y": 4.0,
+      "nominal_radial_engagement_mm": 0.7
+    },
+    {
+      "part": "lid",
+      "angle": 110,
+      "root_y": -14.0,
+      "tip_y": 8.0,
+      "shoulder_y": 4.0,
+      "nominal_radial_engagement_mm": 0.7
+    },
+    {
+      "part": "lid",
+      "angle": 150,
+      "root_y": -14.0,
+      "tip_y": 8.0,
+      "shoulder_y": 4.0,
+      "nominal_radial_engagement_mm": 0.7
+    }
+  ],
   "latches": [
     {
       "y": -150.0,
@@ -452,12 +400,50 @@
     }
   ],
   "closed_overlap_mm3": 0.0,
-  "sleeve_interference_mm3": {
-    "sleeve_base": 0.0,
-    "sleeve_lid_1": 0.0,
-    "sleeve_lid_2": 0.0
-  },
   "approx_latch_strain_at_release": 0.0175,
+  "joint_validation": {
+    "base": {
+      "insertion_certified_clearance_mm": 0.14799980926513673,
+      "restoration_certified_clearance_mm": 0.14799980926513673
+    },
+    "lid": {
+      "insertion_certified_clearance_mm": 0.1322974465164778,
+      "restoration_certified_clearance_mm": 0.14799980926513673
+    }
+  },
+  "rib_reduction": {
+    "old_depth_mm": 4.0,
+    "new_depth_mm": 1.8,
+    "old_width_mm": 3.2,
+    "new_width_mm": 2.4,
+    "stations": [
+      {
+        "y": -220.0,
+        "removed_volume_mm3": 3944.151666358642
+      },
+      {
+        "y": -140.0,
+        "removed_volume_mm3": 3888.493969298441
+      },
+      {
+        "y": -60.0,
+        "removed_volume_mm3": 3841.6660978150644
+      },
+      {
+        "y": 60.0,
+        "removed_volume_mm3": 3789.937742279358
+      },
+      {
+        "y": 140.0,
+        "removed_volume_mm3": 3842.564439151463
+      },
+      {
+        "y": 220.0,
+        "removed_volume_mm3": 3918.170360618992
+      }
+    ],
+    "removed_volume_mm3": 23224.98427552196
+  },
   "validation": {
     "checks": [
       {
@@ -481,21 +467,6 @@
         "detail": 1
       },
       {
-        "name": "sleeve_base is one closed solid",
-        "passed": true,
-        "detail": 1
-      },
-      {
-        "name": "sleeve_lid_1 is one closed solid",
-        "passed": true,
-        "detail": 1
-      },
-      {
-        "name": "sleeve_lid_2 is one closed solid",
-        "passed": true,
-        "detail": 1
-      },
-      {
         "name": "segment_A has the expected printable components",
         "passed": true,
         "detail": 2
@@ -504,9 +475,9 @@
         "name": "segment_A fits a 300 x 320 x 325 mm envelope including 8 mm brim",
         "passed": true,
         "detail": [
-          155.0819880007898,
-          131.1355502930379,
-          306.7755493164062
+          155.0819854736328,
+          131.1355438232422,
+          318.87554931640625
         ]
       },
       {
@@ -518,51 +489,9 @@
         "name": "segment_B fits a 300 x 320 x 325 mm envelope including 8 mm brim",
         "passed": true,
         "detail": [
-          154.93995066051912,
-          131.14204194570667,
-          314.7755187988281
-        ]
-      },
-      {
-        "name": "sleeve_base has the expected printable components",
-        "passed": true,
-        "detail": 1
-      },
-      {
-        "name": "sleeve_base fits a 300 x 320 x 325 mm envelope including 8 mm brim",
-        "passed": true,
-        "detail": [
-          73.5111952573061,
-          35.99465540349483,
-          32.0
-        ]
-      },
-      {
-        "name": "sleeve_lid_1 has the expected printable components",
-        "passed": true,
-        "detail": 1
-      },
-      {
-        "name": "sleeve_lid_1 fits a 300 x 320 x 325 mm envelope including 8 mm brim",
-        "passed": true,
-        "detail": [
-          25.108599051724422,
-          24.2322781085968,
-          32.0
-        ]
-      },
-      {
-        "name": "sleeve_lid_2 has the expected printable components",
-        "passed": true,
-        "detail": 1
-      },
-      {
-        "name": "sleeve_lid_2 fits a 300 x 320 x 325 mm envelope including 8 mm brim",
-        "passed": true,
-        "detail": [
-          25.04852382539071,
-          30.417812760174275,
-          32.0
+          154.93995666503906,
+          131.1420440673828,
+          314.7755126953125
         ]
       },
       {
@@ -571,7 +500,7 @@
         "detail": 0.0
       },
       {
-        "name": "released hinge sweep clears 0 to 100 degrees with sleeves installed",
+        "name": "released hinge sweep clears 0 to 100 degrees with integrated center joints",
         "passed": true,
         "detail": {
           "maximum_overlap_mm3": 0.0,
@@ -582,28 +511,7 @@
       {
         "name": "62 mm x 600 mm capsule clearance is retained",
         "passed": true,
-        "detail": 1.7176784190433136e-05
-      },
-      {
-        "name": "sleeve_base fits its socket without interference",
-        "passed": true,
-        "detail": {
-          "minimum_gap_mm": 0.24999838171580005
-        }
-      },
-      {
-        "name": "sleeve_lid_1 fits its socket without interference",
-        "passed": true,
-        "detail": {
-          "minimum_gap_mm": 0.24991332456129245
-        }
-      },
-      {
-        "name": "sleeve_lid_2 fits its socket without interference",
-        "passed": true,
-        "detail": {
-          "minimum_gap_mm": 0.24996943388359966
-        }
+        "detail": 2.9681888928806794e-05
       },
       {
         "name": "both compact barrels are fully inside the original exterior",
@@ -614,7 +522,7 @@
         "name": "hinge side has no added exterior structure",
         "passed": true,
         "detail": {
-          "absolute_boolean_residue_mm3": 0.0009262250184070177,
+          "absolute_boolean_residue_mm3": 0.0017665179440917572,
           "tolerance_mm3": 0.05
         }
       },
@@ -622,14 +530,14 @@
         "name": "segment A retains printable running clearance",
         "passed": true,
         "detail": {
-          "minimum_gap_mm": 0.38786552263970936
+          "minimum_gap_mm": 0.38786523671818135
         }
       },
       {
         "name": "segment B retains printable running clearance",
         "passed": true,
         "detail": {
-          "minimum_gap_mm": 0.38786552263970864
+          "minimum_gap_mm": 0.38786496634920165
         }
       },
       {
@@ -644,56 +552,56 @@
         "name": "latch at -150.0 blocks opening without release",
         "passed": true,
         "detail": {
-          "rigid_interference_at_half_degree_mm3": 5.951428024525595
+          "rigid_interference_at_half_degree_mm3": 5.951430821389583
         }
       },
       {
         "name": "latch at -150.0 has at least 1 mm of measured retaining overlap",
         "passed": true,
         "detail": {
-          "local_overlap_x_mm": 1.1203876628908844
+          "local_overlap_x_mm": 1.1203892629062224
         }
       },
       {
         "name": "latch at -150.0 has a reinforced catch back wall",
         "passed": true,
         "detail": {
-          "local_back_wall_x_mm": 3.66978638888817
+          "local_back_wall_x_mm": 3.6697879504756727
         }
       },
       {
         "name": "latch at -150.0 follows the original outer surface except the thumb lip",
         "passed": true,
         "detail": {
-          "exterior_residue_mm3": 5.4706695127410176e-05
+          "exterior_residue_mm3": 4.9658685994964865e-05
         }
       },
       {
         "name": "latch at 150.0 blocks opening without release",
         "passed": true,
         "detail": {
-          "rigid_interference_at_half_degree_mm3": 5.988579775030342
+          "rigid_interference_at_half_degree_mm3": 5.981253116488613
         }
       },
       {
         "name": "latch at 150.0 has at least 1 mm of measured retaining overlap",
         "passed": true,
         "detail": {
-          "local_overlap_x_mm": 1.1234817152091097
+          "local_overlap_x_mm": 1.1234804638111413
         }
       },
       {
         "name": "latch at 150.0 has a reinforced catch back wall",
         "passed": true,
         "detail": {
-          "local_back_wall_x_mm": 3.6682730540568755
+          "local_back_wall_x_mm": 3.668274106113543
         }
       },
       {
         "name": "latch at 150.0 follows the original outer surface except the thumb lip",
         "passed": true,
         "detail": {
-          "exterior_residue_mm3": 8.621979593995434e-05
+          "exterior_residue_mm3": 3.252306260974827e-05
         }
       },
       {
@@ -705,16 +613,16 @@
         }
       },
       {
-        "name": "continuous released rotation clears the base and installed sleeves",
+        "name": "continuous released rotation clears the joined base",
         "passed": true,
         "detail": {
           "sample_step_degrees": 0.2,
           "sample_count": 501,
-          "minimum_sampled_gap_mm": 0.3000000000000005,
+          "minimum_sampled_gap_mm": 0.3000000119209289,
           "moving_radius_mm": 89.47197498871192,
           "between_sample_displacement_bound_mm": 0.15615803536131143,
           "numerical_allowance_mm": 0.002,
-          "certified_minimum_gap_mm": 0.14184196463868906
+          "certified_minimum_gap_mm": 0.14184197655961747
         }
       },
       {
@@ -724,14 +632,14 @@
           "enclosed_air_components": 1,
           "analysis_seam_offset_mm": 0.36,
           "masked_vents": 4,
-          "cavity_volume_mm3": 2990614.7893279917
+          "cavity_volume_mm3": 3042598.086846169
         }
       },
       {
         "name": "hinge at -150.0 has direct bearing-to-shell attachment",
         "passed": true,
         "detail": {
-          "bearing_shell_overlap_mm3": 116.71832640096072,
+          "bearing_shell_overlap_mm3": 116.71833820224046,
           "nominal_bearing_wall_mm": 1.9
         }
       },
@@ -739,7 +647,7 @@
         "name": "hinge at 150.0 has direct bearing-to-shell attachment",
         "passed": true,
         "detail": {
-          "bearing_shell_overlap_mm3": 116.53216659281769,
+          "bearing_shell_overlap_mm3": 116.5321573478323,
           "nominal_bearing_wall_mm": 1.9
         }
       },
@@ -765,87 +673,363 @@
         "name": "fixed ear merges into the rim at Y -164.45",
         "passed": true,
         "detail": {
-          "missing_profile_mm3": 1.7335730700889564e-16
+          "missing_profile_mm3": 4.001441520311329e-07
         }
       },
       {
         "name": "fixed ear merges into the rim at Y -135.55",
         "passed": true,
         "detail": {
-          "missing_profile_mm3": 2.8996987103124816e-16
+          "missing_profile_mm3": 4.475621542461817e-07
         }
       },
       {
         "name": "fixed ear merges into the rim at Y 135.55",
         "passed": true,
         "detail": {
-          "missing_profile_mm3": 2.8780146668627715e-16
+          "missing_profile_mm3": 4.1652860655953854e-07
         }
       },
       {
         "name": "fixed ear merges into the rim at Y 164.45",
         "passed": true,
         "detail": {
-          "missing_profile_mm3": 3.1111858965829353e-16
+          "missing_profile_mm3": 4.4206473965576805e-07
+        }
+      },
+      {
+        "name": "only four integral shells and two print objects remain",
+        "passed": true,
+        "detail": [
+          "base_A",
+          "lid_A",
+          "base_B",
+          "lid_B"
+        ]
+      },
+      {
+        "name": "eight one-way joint fingers, four per shell",
+        "passed": true,
+        "detail": [
+          210,
+          250,
+          290,
+          330,
+          30,
+          70,
+          110,
+          150
+        ]
+      },
+      {
+        "name": "base center joint seats without rigid overlap",
+        "passed": true,
+        "detail": {
+          "overlap_mm3": 0.0
+        }
+      },
+      {
+        "name": "base center joint has a continuously clear compressed insertion path",
+        "passed": true,
+        "detail": {
+          "sample_spacing_mm": 0.1,
+          "minimum_sampled_gap_mm": 0.19999980926513672,
+          "between_sample_displacement_bound_mm": 0.05,
+          "numerical_allowance_mm": 0.002,
+          "certified_clearance_mm": 0.14799980926513673,
+          "modeled_tip_deflection_mm": 1.5
+        }
+      },
+      {
+        "name": "base joint fingers can return into the locking pockets",
+        "passed": true,
+        "detail": {
+          "sample_spacing_mm": 0.1,
+          "minimum_sampled_gap_mm": 0.19999980926513672,
+          "certified_clearance_mm": 0.14799980926513673
+        }
+      },
+      {
+        "name": "base joint fingers have room to flex beside their alignment lands",
+        "passed": true,
+        "detail": {
+          "maximum_self_interference_mm3": 9.099818905817818e-05
+        }
+      },
+      {
+        "name": "lid center joint seats without rigid overlap",
+        "passed": true,
+        "detail": {
+          "overlap_mm3": 0.0
+        }
+      },
+      {
+        "name": "lid center joint has a continuously clear compressed insertion path",
+        "passed": true,
+        "detail": {
+          "sample_spacing_mm": 0.1,
+          "minimum_sampled_gap_mm": 0.18429744651647778,
+          "between_sample_displacement_bound_mm": 0.05,
+          "numerical_allowance_mm": 0.002,
+          "certified_clearance_mm": 0.1322974465164778,
+          "modeled_tip_deflection_mm": 1.5
+        }
+      },
+      {
+        "name": "lid joint fingers can return into the locking pockets",
+        "passed": true,
+        "detail": {
+          "sample_spacing_mm": 0.1,
+          "minimum_sampled_gap_mm": 0.19999980926513672,
+          "certified_clearance_mm": 0.14799980926513673
+        }
+      },
+      {
+        "name": "lid joint fingers have room to flex beside their alignment lands",
+        "passed": true,
+        "detail": {
+          "maximum_self_interference_mm3": 2.7886575390917265e-05
+        }
+      },
+      {
+        "name": "base snap at 210 degrees blocks withdrawal",
+        "passed": true,
+        "detail": {
+          "interference_after_half_mm_pull_mm3": 1.935649149473808,
+          "nominal_radial_engagement_mm": 0.7
+        }
+      },
+      {
+        "name": "base snap pocket at 210 degrees retains exterior wall",
+        "passed": true,
+        "detail": {
+          "minimum_checked_wall_mm": 1.8,
+          "outside_volume_mm3": 0.0
+        }
+      },
+      {
+        "name": "base snap at 250 degrees blocks withdrawal",
+        "passed": true,
+        "detail": {
+          "interference_after_half_mm_pull_mm3": 1.887082800488594,
+          "nominal_radial_engagement_mm": 0.7
+        }
+      },
+      {
+        "name": "base snap pocket at 250 degrees retains exterior wall",
+        "passed": true,
+        "detail": {
+          "minimum_checked_wall_mm": 1.8,
+          "outside_volume_mm3": 0.0
+        }
+      },
+      {
+        "name": "base snap at 290 degrees blocks withdrawal",
+        "passed": true,
+        "detail": {
+          "interference_after_half_mm_pull_mm3": 1.8882697182063035,
+          "nominal_radial_engagement_mm": 0.7
+        }
+      },
+      {
+        "name": "base snap pocket at 290 degrees retains exterior wall",
+        "passed": true,
+        "detail": {
+          "minimum_checked_wall_mm": 1.8,
+          "outside_volume_mm3": 0.0
+        }
+      },
+      {
+        "name": "base snap at 330 degrees blocks withdrawal",
+        "passed": true,
+        "detail": {
+          "interference_after_half_mm_pull_mm3": 1.9392869794106935,
+          "nominal_radial_engagement_mm": 0.7
+        }
+      },
+      {
+        "name": "base snap pocket at 330 degrees retains exterior wall",
+        "passed": true,
+        "detail": {
+          "minimum_checked_wall_mm": 1.8,
+          "outside_volume_mm3": 0.0
+        }
+      },
+      {
+        "name": "lid snap at 30 degrees blocks withdrawal",
+        "passed": true,
+        "detail": {
+          "interference_after_half_mm_pull_mm3": 1.6790026003261234,
+          "nominal_radial_engagement_mm": 0.7
+        }
+      },
+      {
+        "name": "lid snap pocket at 30 degrees retains exterior wall",
+        "passed": true,
+        "detail": {
+          "minimum_checked_wall_mm": 1.8,
+          "outside_volume_mm3": 0.0
+        }
+      },
+      {
+        "name": "lid snap at 70 degrees blocks withdrawal",
+        "passed": true,
+        "detail": {
+          "interference_after_half_mm_pull_mm3": 1.2578958030513667,
+          "nominal_radial_engagement_mm": 0.7
+        }
+      },
+      {
+        "name": "lid snap pocket at 70 degrees retains exterior wall",
+        "passed": true,
+        "detail": {
+          "minimum_checked_wall_mm": 1.8,
+          "outside_volume_mm3": 0.0
+        }
+      },
+      {
+        "name": "lid snap at 110 degrees blocks withdrawal",
+        "passed": true,
+        "detail": {
+          "interference_after_half_mm_pull_mm3": 1.8097251916209924,
+          "nominal_radial_engagement_mm": 0.7
+        }
+      },
+      {
+        "name": "lid snap pocket at 110 degrees retains exterior wall",
+        "passed": true,
+        "detail": {
+          "minimum_checked_wall_mm": 1.8,
+          "outside_volume_mm3": 0.0
+        }
+      },
+      {
+        "name": "lid snap at 150 degrees blocks withdrawal",
+        "passed": true,
+        "detail": {
+          "interference_after_half_mm_pull_mm3": 1.6825740082755274,
+          "nominal_radial_engagement_mm": 0.7
+        }
+      },
+      {
+        "name": "lid snap pocket at 150 degrees retains exterior wall",
+        "passed": true,
+        "detail": {
+          "minimum_checked_wall_mm": 1.8,
+          "outside_volume_mm3": 0.0
+        }
+      },
+      {
+        "name": "rib at -220.0 is smaller throughout its station",
+        "passed": true,
+        "detail": {
+          "removed_volume_mm3": 3944.151666358642,
+          "added_boolean_residue_mm3": 0.0017375692840426215,
+          "residue_tolerance_mm3": 0.01
+        }
+      },
+      {
+        "name": "rib at -140.0 is smaller throughout its station",
+        "passed": true,
+        "detail": {
+          "removed_volume_mm3": 3888.493969298441,
+          "added_boolean_residue_mm3": 0.0013581640910473672,
+          "residue_tolerance_mm3": 0.01
+        }
+      },
+      {
+        "name": "rib at -60.0 is smaller throughout its station",
+        "passed": true,
+        "detail": {
+          "removed_volume_mm3": 3841.6660978150644,
+          "added_boolean_residue_mm3": 0.0011187666988500006,
+          "residue_tolerance_mm3": 0.01
+        }
+      },
+      {
+        "name": "rib at 60.0 is smaller throughout its station",
+        "passed": true,
+        "detail": {
+          "removed_volume_mm3": 3789.937742279358,
+          "added_boolean_residue_mm3": 0.0011201704255583123,
+          "residue_tolerance_mm3": 0.01
+        }
+      },
+      {
+        "name": "rib at 140.0 is smaller throughout its station",
+        "passed": true,
+        "detail": {
+          "removed_volume_mm3": 3842.564439151463,
+          "added_boolean_residue_mm3": 0.0012328982806913882,
+          "residue_tolerance_mm3": 0.01
+        }
+      },
+      {
+        "name": "rib at 220.0 is smaller throughout its station",
+        "passed": true,
+        "detail": {
+          "removed_volume_mm3": 3918.170360618992,
+          "added_boolean_residue_mm3": 0.001768816933264127,
+          "residue_tolerance_mm3": 0.01
         }
       },
       {
         "name": "geometry report matches the current generator",
         "passed": true,
-        "detail": "3394f33c191394e5d93271fcc81c072524e0dfaa2085dc25113b832b01cd36e1"
+        "detail": "9ad74340a4c48a92c712ae6e3740a59c207d18eb657a2da052240c62448827ec"
       }
     ],
-    "passed": 48,
+    "passed": 68,
     "failed": 0,
     "physical_print_tested": false,
     "continuous_sweep_proven": true,
     "rotation_clearance_certificate": {
       "sample_step_degrees": 0.2,
       "sample_count": 501,
-      "minimum_sampled_gap_mm": 0.3000000000000005,
+      "minimum_sampled_gap_mm": 0.3000000119209289,
       "moving_radius_mm": 89.47197498871192,
       "between_sample_displacement_bound_mm": 0.15615803536131143,
       "numerical_allowance_mm": 0.002,
-      "certified_minimum_gap_mm": 0.14184196463868906
+      "certified_minimum_gap_mm": 0.14184197655961747
     }
   },
   "slicing": {
     "A": {
-      "input_stl_sha256": "512c83ac9a69990a1a86456ebae171981603935536e8479f761bf4682eeded7c",
+      "input_stl_sha256": "d720c51bab33c9da3192b24fb4bf7e280d90fb0043ec5f9be19ffbd0e1ba6d2d",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "14h 25m 2s",
-      "filament_g": 449.6,
-      "max_z_mm": 306.8,
+      "estimated_time": "15h 37m 1s",
+      "filament_g": 479.66,
+      "max_z_mm": 318.8,
       "supports_enabled": true,
       "sent_to_printer": false,
       "provenance": {
-        "input_stl_sha256": "512c83ac9a69990a1a86456ebae171981603935536e8479f761bf4682eeded7c",
+        "input_stl_sha256": "d720c51bab33c9da3192b24fb4bf7e280d90fb0043ec5f9be19ffbd0e1ba6d2d",
         "settings_sha256": {
           "machine": "8b98c3c85b37e97f455ed6821ec764cdc9b17fc73755f8794f69e215ebdc901d",
           "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
           "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
         },
-        "output_gcode_sha256": "d29d83186c25457f495d9805e687c64053b76abb4b7d46108df8093d2fb2e64c"
+        "output_gcode_sha256": "15f9faa6b660b2554c3d38de87b601ff085346370cff2b6d94147b92dfc093a3"
       }
     },
     "B": {
-      "input_stl_sha256": "b9d1a81a97b398b76e7cdfa2489fded71944a336f5e4dd574fc0c4a53567e7d5",
+      "input_stl_sha256": "f16c89733026e4517f3da60549f8c72fa49483b3287797b533931e9d3cf60e64",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "14h 32m 18s",
-      "filament_g": 462.54,
+      "estimated_time": "14h 46m 41s",
+      "filament_g": 467.29,
       "max_z_mm": 314.8,
       "supports_enabled": true,
       "sent_to_printer": false,
       "provenance": {
-        "input_stl_sha256": "b9d1a81a97b398b76e7cdfa2489fded71944a336f5e4dd574fc0c4a53567e7d5",
+        "input_stl_sha256": "f16c89733026e4517f3da60549f8c72fa49483b3287797b533931e9d3cf60e64",
         "settings_sha256": {
           "machine": "8b98c3c85b37e97f455ed6821ec764cdc9b17fc73755f8794f69e215ebdc901d",
           "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
           "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
         },
-        "output_gcode_sha256": "128884a948a44ee333924225a356779d8c92bdfb3e302b4c7e1dc52fbf5cdab6"
+        "output_gcode_sha256": "c34b8db7ec40b0b51228223754970488576bac231a813d9f5ae01fadae39f31f"
       }
     }
   }
