@@ -1,6 +1,6 @@
 {
-  "generator_sha256": "9ad74340a4c48a92c712ae6e3740a59c207d18eb657a2da052240c62448827ec",
-  "revision": "V3.6 integrated snap joint engineering prototype",
+  "generator_sha256": "061790248c14c2336f0c204c85a336724333dbfbdb0e36af73a1c1f5c656c986",
+  "revision": "V3.7 covered edge snap joint engineering prototype",
   "parameters": {
     "hinge_axis_x": -41.0,
     "hinge_axis_z": 0.0,
@@ -18,9 +18,6 @@
     "axial_clearance": 0.45,
     "seam_gap": 0.3,
     "joint_gap": 0.2,
-    "sleeve_clearance": 0.25,
-    "sleeve_wall": 2.0,
-    "sleeve_length": 32.0,
     "latch_thickness": 1.8,
     "latch_length": 18.0,
     "latch_width": 20.0,
@@ -37,11 +34,15 @@
     "catch_shoulder_gap": 0.35,
     "thumb_lip": 0.8,
     "release_travel": 2.1,
+    "ribs_enabled": false,
     "rib_depth": 1.8,
     "rib_width": 2.4,
     "rib_support": 3.0,
     "joint_lip_length": 12.0,
-    "joint_lip_thickness": 1.8,
+    "joint_lip_thickness": 1.6,
+    "joint_outward_shift": 4.6,
+    "joint_inner_cover": 1.2,
+    "joint_outer_cover": 1.2,
     "joint_clearance": 0.3,
     "joint_anchor_length": 12.0,
     "joint_flex_start": -10.0,
@@ -49,18 +50,17 @@
     "joint_barb_shoulder": 8.0,
     "joint_pocket_clearance": 0.25,
     "joint_retention_gap": 0.25,
-    "joint_finger_width_degrees": 16.0,
-    "joint_slot_width_degrees": 3.0,
+    "joint_finger_width_degrees": 14.0,
     "joint_pocket_extra_degrees": 5.0,
-    "joint_deflection": 1.5,
+    "joint_deflection": 1.2,
     "joint_finger_angles": [
-      30,
-      70,
-      110,
-      150,
+      25,
+      48,
+      132,
+      155,
       210,
-      250,
-      290,
+      245,
+      295,
       330
     ],
     "material": "PLA",
@@ -74,15 +74,15 @@
   ],
   "printables": {
     "segment_A": {
-      "triangles": 25148,
+      "triangles": 19882,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 289787.4225068097,
-      "mass_g_at_1_24": 359.336403908444,
+      "volume_mm3": 274724.31748797087,
+      "mass_g_at_1_24": 340.6581536850839,
       "components": 2,
       "component_volumes_mm3": [
-        125442.12812416074,
-        164345.29438264895
+        121203.52301021476,
+        153520.7944777561
       ],
       "bounds_mm": [
         -77.5409927368164,
@@ -99,15 +99,15 @@
       ]
     },
     "segment_B": {
-      "triangles": 23788,
+      "triangles": 19234,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 287060.28407112806,
-      "mass_g_at_1_24": 355.9547522481988,
+      "volume_mm3": 275646.1202416964,
+      "mass_g_at_1_24": 341.80118909970355,
       "components": 2,
       "component_volumes_mm3": [
-        124187.00228673813,
-        162873.28178438992
+        121181.8953969458,
+        154464.22484475066
       ],
       "bounds_mm": [
         -77.46997833251953,
@@ -126,14 +126,14 @@
   },
   "parts": {
     "base_A": {
-      "triangles": 15192,
+      "triangles": 12336,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 164345.33086288613,
-      "mass_g_at_1_24": 203.7882102699788,
+      "volume_mm3": 153520.82815756832,
+      "mass_g_at_1_24": 190.36582691538473,
       "components": 1,
       "component_volumes_mm3": [
-        164345.33086288613
+        153520.82815756832
       ],
       "bounds_mm": [
         -44.29999923706055,
@@ -150,14 +150,14 @@
       ]
     },
     "lid_A": {
-      "triangles": 9988,
+      "triangles": 7556,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 125442.50354814608,
-      "mass_g_at_1_24": 155.54870439970114,
+      "volume_mm3": 121203.89709056068,
+      "mass_g_at_1_24": 150.29283239229525,
       "components": 1,
       "component_volumes_mm3": [
-        125442.50354814608
+        121203.89709056068
       ],
       "bounds_mm": [
         -44.29999923706055,
@@ -174,14 +174,14 @@
       ]
     },
     "base_B": {
-      "triangles": 14774,
+      "triangles": 12216,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 162873.29100780556,
-      "mass_g_at_1_24": 201.9628808496789,
+      "volume_mm3": 154464.23187100893,
+      "mass_g_at_1_24": 191.53564752005107,
       "components": 1,
       "component_volumes_mm3": [
-        162873.29100780556
+        154464.23187100893
       ],
       "bounds_mm": [
         -44.29999923706055,
@@ -198,14 +198,14 @@
       ]
     },
     "lid_B": {
-      "triangles": 9052,
+      "triangles": 7036,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 124188.43013513119,
-      "mass_g_at_1_24": 153.99365336756267,
+      "volume_mm3": 121183.32355454176,
+      "mass_g_at_1_24": 150.26732120763177,
       "components": 1,
       "component_volumes_mm3": [
-        124188.43013513119
+        121183.32355454176
       ],
       "bounds_mm": [
         -44.29999923706055,
@@ -308,31 +308,85 @@
       "released_overlap_mm3": 0.0
     }
   ],
-  "joinery": "Integrated collar with eight one-way snap fingers, four on each shell; no separate connector or adhesive. Intended as a non-serviceable joint, pending physical fit and load tests.",
+  "joinery": "Eight integral edge tongues enter covered blind receiving slots, four on each shell; no separate connector, interior ribs or adhesive. Intended as a non-serviceable joint, pending physical fit and load tests.",
+  "rib_count": 0,
   "joint": [
+    {
+      "part": "lid",
+      "angle": 25,
+      "root_y": -14.0,
+      "tip_y": 8.0,
+      "shoulder_y": 4.0,
+      "nominal_radial_engagement_mm": 0.7,
+      "outward_shift_mm": 4.6,
+      "nominal_inner_cover_mm": 1.1999999999999997,
+      "covered_socket": true
+    },
+    {
+      "part": "lid",
+      "angle": 48,
+      "root_y": -14.0,
+      "tip_y": 8.0,
+      "shoulder_y": 4.0,
+      "nominal_radial_engagement_mm": 0.7,
+      "outward_shift_mm": 4.6,
+      "nominal_inner_cover_mm": 1.1999999999999997,
+      "covered_socket": true
+    },
+    {
+      "part": "lid",
+      "angle": 132,
+      "root_y": -14.0,
+      "tip_y": 8.0,
+      "shoulder_y": 4.0,
+      "nominal_radial_engagement_mm": 0.7,
+      "outward_shift_mm": 4.6,
+      "nominal_inner_cover_mm": 1.1999999999999997,
+      "covered_socket": true
+    },
+    {
+      "part": "lid",
+      "angle": 155,
+      "root_y": -14.0,
+      "tip_y": 8.0,
+      "shoulder_y": 4.0,
+      "nominal_radial_engagement_mm": 0.7,
+      "outward_shift_mm": 4.6,
+      "nominal_inner_cover_mm": 1.1999999999999997,
+      "covered_socket": true
+    },
     {
       "part": "base",
       "angle": 210,
       "root_y": -14.0,
       "tip_y": 8.0,
       "shoulder_y": 4.0,
-      "nominal_radial_engagement_mm": 0.7
+      "nominal_radial_engagement_mm": 0.7,
+      "outward_shift_mm": 4.6,
+      "nominal_inner_cover_mm": 1.1999999999999997,
+      "covered_socket": true
     },
     {
       "part": "base",
-      "angle": 250,
+      "angle": 245,
       "root_y": -14.0,
       "tip_y": 8.0,
       "shoulder_y": 4.0,
-      "nominal_radial_engagement_mm": 0.7
+      "nominal_radial_engagement_mm": 0.7,
+      "outward_shift_mm": 4.6,
+      "nominal_inner_cover_mm": 1.1999999999999997,
+      "covered_socket": true
     },
     {
       "part": "base",
-      "angle": 290,
+      "angle": 295,
       "root_y": -14.0,
       "tip_y": 8.0,
       "shoulder_y": 4.0,
-      "nominal_radial_engagement_mm": 0.7
+      "nominal_radial_engagement_mm": 0.7,
+      "outward_shift_mm": 4.6,
+      "nominal_inner_cover_mm": 1.1999999999999997,
+      "covered_socket": true
     },
     {
       "part": "base",
@@ -340,39 +394,10 @@
       "root_y": -14.0,
       "tip_y": 8.0,
       "shoulder_y": 4.0,
-      "nominal_radial_engagement_mm": 0.7
-    },
-    {
-      "part": "lid",
-      "angle": 30,
-      "root_y": -14.0,
-      "tip_y": 8.0,
-      "shoulder_y": 4.0,
-      "nominal_radial_engagement_mm": 0.7
-    },
-    {
-      "part": "lid",
-      "angle": 70,
-      "root_y": -14.0,
-      "tip_y": 8.0,
-      "shoulder_y": 4.0,
-      "nominal_radial_engagement_mm": 0.7
-    },
-    {
-      "part": "lid",
-      "angle": 110,
-      "root_y": -14.0,
-      "tip_y": 8.0,
-      "shoulder_y": 4.0,
-      "nominal_radial_engagement_mm": 0.7
-    },
-    {
-      "part": "lid",
-      "angle": 150,
-      "root_y": -14.0,
-      "tip_y": 8.0,
-      "shoulder_y": 4.0,
-      "nominal_radial_engagement_mm": 0.7
+      "nominal_radial_engagement_mm": 0.7,
+      "outward_shift_mm": 4.6,
+      "nominal_inner_cover_mm": 1.1999999999999997,
+      "covered_socket": true
     }
   ],
   "latches": [
@@ -407,42 +432,40 @@
       "restoration_certified_clearance_mm": 0.14799980926513673
     },
     "lid": {
-      "insertion_certified_clearance_mm": 0.1322974465164778,
+      "insertion_certified_clearance_mm": 0.14799980926513673,
       "restoration_certified_clearance_mm": 0.14799980926513673
     }
   },
-  "rib_reduction": {
-    "old_depth_mm": 4.0,
-    "new_depth_mm": 1.8,
-    "old_width_mm": 3.2,
-    "new_width_mm": 2.4,
+  "rib_removal": {
+    "rib_count": 0,
+    "previous_depth_mm": 1.8,
     "stations": [
       {
         "y": -220.0,
-        "removed_volume_mm3": 3944.151666358642
+        "removed_volume_mm3": 2493.2588626173797
       },
       {
         "y": -140.0,
-        "removed_volume_mm3": 3888.493969298441
+        "removed_volume_mm3": 2687.5855671162262
       },
       {
         "y": -60.0,
-        "removed_volume_mm3": 3841.6660978150644
+        "removed_volume_mm3": 2446.4896326564285
       },
       {
         "y": 60.0,
-        "removed_volume_mm3": 3789.937742279358
+        "removed_volume_mm3": 2428.9509636026487
       },
       {
         "y": 140.0,
-        "removed_volume_mm3": 3842.564439151463
+        "removed_volume_mm3": 2613.061727743508
       },
       {
         "y": 220.0,
-        "removed_volume_mm3": 3918.170360618992
+        "removed_volume_mm3": 2484.4216715608172
       }
     ],
-    "removed_volume_mm3": 23224.98427552196
+    "removed_volume_mm3": 15153.768425297008
   },
   "validation": {
     "checks": [
@@ -511,7 +534,7 @@
       {
         "name": "62 mm x 600 mm capsule clearance is retained",
         "passed": true,
-        "detail": 2.9681888928806794e-05
+        "detail": 1.7176784010379038e-05
       },
       {
         "name": "both compact barrels are fully inside the original exterior",
@@ -522,7 +545,7 @@
         "name": "hinge side has no added exterior structure",
         "passed": true,
         "detail": {
-          "absolute_boolean_residue_mm3": 0.0017665179440917572,
+          "absolute_boolean_residue_mm3": 0.0007956529516195142,
           "tolerance_mm3": 0.05
         }
       },
@@ -530,7 +553,7 @@
         "name": "segment A retains printable running clearance",
         "passed": true,
         "detail": {
-          "minimum_gap_mm": 0.38786523671818135
+          "minimum_gap_mm": 0.38786534659195493
         }
       },
       {
@@ -573,7 +596,7 @@
         "name": "latch at -150.0 follows the original outer surface except the thumb lip",
         "passed": true,
         "detail": {
-          "exterior_residue_mm3": 4.9658685994964865e-05
+          "exterior_residue_mm3": 1.9206023800262168e-05
         }
       },
       {
@@ -601,7 +624,7 @@
         "name": "latch at 150.0 follows the original outer surface except the thumb lip",
         "passed": true,
         "detail": {
-          "exterior_residue_mm3": 3.252306260974827e-05
+          "exterior_residue_mm3": 3.6819195183713966e-05
         }
       },
       {
@@ -632,14 +655,14 @@
           "enclosed_air_components": 1,
           "analysis_seam_offset_mm": 0.36,
           "masked_vents": 4,
-          "cavity_volume_mm3": 3042598.086846169
+          "cavity_volume_mm3": 3067882.545384692
         }
       },
       {
         "name": "hinge at -150.0 has direct bearing-to-shell attachment",
         "passed": true,
         "detail": {
-          "bearing_shell_overlap_mm3": 116.71833820224046,
+          "bearing_shell_overlap_mm3": 116.71832274311588,
           "nominal_bearing_wall_mm": 1.9
         }
       },
@@ -647,7 +670,7 @@
         "name": "hinge at 150.0 has direct bearing-to-shell attachment",
         "passed": true,
         "detail": {
-          "bearing_shell_overlap_mm3": 116.5321573478323,
+          "bearing_shell_overlap_mm3": 116.53216359312,
           "nominal_bearing_wall_mm": 1.9
         }
       },
@@ -673,28 +696,28 @@
         "name": "fixed ear merges into the rim at Y -164.45",
         "passed": true,
         "detail": {
-          "missing_profile_mm3": 4.001441520311329e-07
+          "missing_profile_mm3": 3.9996757650484916e-07
         }
       },
       {
         "name": "fixed ear merges into the rim at Y -135.55",
         "passed": true,
         "detail": {
-          "missing_profile_mm3": 4.475621542461817e-07
+          "missing_profile_mm3": 4.475692057904368e-07
         }
       },
       {
         "name": "fixed ear merges into the rim at Y 135.55",
         "passed": true,
         "detail": {
-          "missing_profile_mm3": 4.1652860655953854e-07
+          "missing_profile_mm3": 4.2154497748568896e-07
         }
       },
       {
         "name": "fixed ear merges into the rim at Y 164.45",
         "passed": true,
         "detail": {
-          "missing_profile_mm3": 4.4206473965576805e-07
+          "missing_profile_mm3": 4.4291323198127487e-07
         }
       },
       {
@@ -711,14 +734,14 @@
         "name": "eight one-way joint fingers, four per shell",
         "passed": true,
         "detail": [
+          25,
+          48,
+          132,
+          155,
           210,
-          250,
-          290,
-          330,
-          30,
-          70,
-          110,
-          150
+          245,
+          295,
+          330
         ]
       },
       {
@@ -737,7 +760,7 @@
           "between_sample_displacement_bound_mm": 0.05,
           "numerical_allowance_mm": 0.002,
           "certified_clearance_mm": 0.14799980926513673,
-          "modeled_tip_deflection_mm": 1.5
+          "modeled_tip_deflection_mm": 1.2
         }
       },
       {
@@ -753,7 +776,7 @@
         "name": "base joint fingers have room to flex beside their alignment lands",
         "passed": true,
         "detail": {
-          "maximum_self_interference_mm3": 9.099818905817818e-05
+          "maximum_self_interference_mm3": 8.741136510337504e-05
         }
       },
       {
@@ -768,11 +791,11 @@
         "passed": true,
         "detail": {
           "sample_spacing_mm": 0.1,
-          "minimum_sampled_gap_mm": 0.18429744651647778,
+          "minimum_sampled_gap_mm": 0.19999980926513672,
           "between_sample_displacement_bound_mm": 0.05,
           "numerical_allowance_mm": 0.002,
-          "certified_clearance_mm": 0.1322974465164778,
-          "modeled_tip_deflection_mm": 1.5
+          "certified_clearance_mm": 0.14799980926513673,
+          "modeled_tip_deflection_mm": 1.2
         }
       },
       {
@@ -788,14 +811,78 @@
         "name": "lid joint fingers have room to flex beside their alignment lands",
         "passed": true,
         "detail": {
-          "maximum_self_interference_mm3": 2.7886575390917265e-05
+          "maximum_self_interference_mm3": 5.143396395636378e-05
+        }
+      },
+      {
+        "name": "lid snap at 25 degrees blocks withdrawal",
+        "passed": true,
+        "detail": {
+          "interference_after_half_mm_pull_mm3": 1.6534479018150403,
+          "nominal_radial_engagement_mm": 0.7
+        }
+      },
+      {
+        "name": "lid snap pocket at 25 degrees retains exterior wall",
+        "passed": true,
+        "detail": {
+          "minimum_checked_wall_mm": 1.2,
+          "outside_volume_mm3": 0.0
+        }
+      },
+      {
+        "name": "lid snap at 48 degrees blocks withdrawal",
+        "passed": true,
+        "detail": {
+          "interference_after_half_mm_pull_mm3": 1.6939547084879636,
+          "nominal_radial_engagement_mm": 0.7
+        }
+      },
+      {
+        "name": "lid snap pocket at 48 degrees retains exterior wall",
+        "passed": true,
+        "detail": {
+          "minimum_checked_wall_mm": 1.2,
+          "outside_volume_mm3": 0.0
+        }
+      },
+      {
+        "name": "lid snap at 132 degrees blocks withdrawal",
+        "passed": true,
+        "detail": {
+          "interference_after_half_mm_pull_mm3": 1.7061593940182833,
+          "nominal_radial_engagement_mm": 0.7
+        }
+      },
+      {
+        "name": "lid snap pocket at 132 degrees retains exterior wall",
+        "passed": true,
+        "detail": {
+          "minimum_checked_wall_mm": 1.2,
+          "outside_volume_mm3": 0.0
+        }
+      },
+      {
+        "name": "lid snap at 155 degrees blocks withdrawal",
+        "passed": true,
+        "detail": {
+          "interference_after_half_mm_pull_mm3": 1.6561017316309867,
+          "nominal_radial_engagement_mm": 0.7
+        }
+      },
+      {
+        "name": "lid snap pocket at 155 degrees retains exterior wall",
+        "passed": true,
+        "detail": {
+          "minimum_checked_wall_mm": 1.2,
+          "outside_volume_mm3": 0.0
         }
       },
       {
         "name": "base snap at 210 degrees blocks withdrawal",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.935649149473808,
+          "interference_after_half_mm_pull_mm3": 1.8833360663606382,
           "nominal_radial_engagement_mm": 0.7
         }
       },
@@ -803,39 +890,39 @@
         "name": "base snap pocket at 210 degrees retains exterior wall",
         "passed": true,
         "detail": {
-          "minimum_checked_wall_mm": 1.8,
+          "minimum_checked_wall_mm": 1.2,
           "outside_volume_mm3": 0.0
         }
       },
       {
-        "name": "base snap at 250 degrees blocks withdrawal",
+        "name": "base snap at 245 degrees blocks withdrawal",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.887082800488594,
+          "interference_after_half_mm_pull_mm3": 1.8699489562176006,
           "nominal_radial_engagement_mm": 0.7
         }
       },
       {
-        "name": "base snap pocket at 250 degrees retains exterior wall",
+        "name": "base snap pocket at 245 degrees retains exterior wall",
         "passed": true,
         "detail": {
-          "minimum_checked_wall_mm": 1.8,
+          "minimum_checked_wall_mm": 1.2,
           "outside_volume_mm3": 0.0
         }
       },
       {
-        "name": "base snap at 290 degrees blocks withdrawal",
+        "name": "base snap at 295 degrees blocks withdrawal",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.8882697182063035,
+          "interference_after_half_mm_pull_mm3": 1.871179554885763,
           "nominal_radial_engagement_mm": 0.7
         }
       },
       {
-        "name": "base snap pocket at 290 degrees retains exterior wall",
+        "name": "base snap pocket at 295 degrees retains exterior wall",
         "passed": true,
         "detail": {
-          "minimum_checked_wall_mm": 1.8,
+          "minimum_checked_wall_mm": 1.2,
           "outside_volume_mm3": 0.0
         }
       },
@@ -843,7 +930,7 @@
         "name": "base snap at 330 degrees blocks withdrawal",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.9392869794106935,
+          "interference_after_half_mm_pull_mm3": 1.8865917594102832,
           "nominal_radial_engagement_mm": 0.7
         }
       },
@@ -851,135 +938,278 @@
         "name": "base snap pocket at 330 degrees retains exterior wall",
         "passed": true,
         "detail": {
-          "minimum_checked_wall_mm": 1.8,
+          "minimum_checked_wall_mm": 1.2,
           "outside_volume_mm3": 0.0
         }
       },
       {
-        "name": "lid snap at 30 degrees blocks withdrawal",
+        "name": "lid covered snap at 25 keeps the bread-side skin covered",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.6790026003261234,
-          "nominal_radial_engagement_mm": 0.7
+          "minimum_checked_inner_cover_mm": 1.15,
+          "nominal_inner_cover_mm": 1.1999999999999997,
+          "breach_mm3": 0.0
         }
       },
       {
-        "name": "lid snap pocket at 30 degrees retains exterior wall",
+        "name": "lid covered snap at 25 retains cover above the embedded root",
         "passed": true,
         "detail": {
-          "minimum_checked_wall_mm": 1.8,
-          "outside_volume_mm3": 0.0
+          "minimum_checked_outer_cover_mm": 1.2,
+          "breach_mm3": 0.0
         }
       },
       {
-        "name": "lid snap at 70 degrees blocks withdrawal",
+        "name": "lid covered snap at 25 has a closed socket end",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.2578958030513667,
-          "nominal_radial_engagement_mm": 0.7
+          "checked_end_wall_mm": 1.2,
+          "missing_end_wall_mm3": 0.0
         }
       },
       {
-        "name": "lid snap pocket at 70 degrees retains exterior wall",
+        "name": "lid covered snap at 48 keeps the bread-side skin covered",
         "passed": true,
         "detail": {
-          "minimum_checked_wall_mm": 1.8,
-          "outside_volume_mm3": 0.0
+          "minimum_checked_inner_cover_mm": 1.15,
+          "nominal_inner_cover_mm": 1.1999999999999997,
+          "breach_mm3": 0.0
         }
       },
       {
-        "name": "lid snap at 110 degrees blocks withdrawal",
+        "name": "lid covered snap at 48 retains cover above the embedded root",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.8097251916209924,
-          "nominal_radial_engagement_mm": 0.7
+          "minimum_checked_outer_cover_mm": 1.2,
+          "breach_mm3": 0.0
         }
       },
       {
-        "name": "lid snap pocket at 110 degrees retains exterior wall",
+        "name": "lid covered snap at 48 has a closed socket end",
         "passed": true,
         "detail": {
-          "minimum_checked_wall_mm": 1.8,
-          "outside_volume_mm3": 0.0
+          "checked_end_wall_mm": 1.2,
+          "missing_end_wall_mm3": 0.0
         }
       },
       {
-        "name": "lid snap at 150 degrees blocks withdrawal",
+        "name": "lid covered snap at 132 keeps the bread-side skin covered",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.6825740082755274,
-          "nominal_radial_engagement_mm": 0.7
+          "minimum_checked_inner_cover_mm": 1.15,
+          "nominal_inner_cover_mm": 1.1999999999999997,
+          "breach_mm3": 0.0
         }
       },
       {
-        "name": "lid snap pocket at 150 degrees retains exterior wall",
+        "name": "lid covered snap at 132 retains cover above the embedded root",
         "passed": true,
         "detail": {
-          "minimum_checked_wall_mm": 1.8,
-          "outside_volume_mm3": 0.0
+          "minimum_checked_outer_cover_mm": 1.2,
+          "breach_mm3": 0.0
         }
       },
       {
-        "name": "rib at -220.0 is smaller throughout its station",
+        "name": "lid covered snap at 132 has a closed socket end",
         "passed": true,
         "detail": {
-          "removed_volume_mm3": 3944.151666358642,
-          "added_boolean_residue_mm3": 0.0017375692840426215,
+          "checked_end_wall_mm": 1.2,
+          "missing_end_wall_mm3": 0.0
+        }
+      },
+      {
+        "name": "lid covered snap at 155 keeps the bread-side skin covered",
+        "passed": true,
+        "detail": {
+          "minimum_checked_inner_cover_mm": 1.15,
+          "nominal_inner_cover_mm": 1.1999999999999997,
+          "breach_mm3": 0.0
+        }
+      },
+      {
+        "name": "lid covered snap at 155 retains cover above the embedded root",
+        "passed": true,
+        "detail": {
+          "minimum_checked_outer_cover_mm": 1.2,
+          "breach_mm3": 0.0
+        }
+      },
+      {
+        "name": "lid covered snap at 155 has a closed socket end",
+        "passed": true,
+        "detail": {
+          "checked_end_wall_mm": 1.2,
+          "missing_end_wall_mm3": 0.0
+        }
+      },
+      {
+        "name": "base covered snap at 210 keeps the bread-side skin covered",
+        "passed": true,
+        "detail": {
+          "minimum_checked_inner_cover_mm": 1.15,
+          "nominal_inner_cover_mm": 1.1999999999999997,
+          "breach_mm3": 0.0
+        }
+      },
+      {
+        "name": "base covered snap at 210 retains cover above the embedded root",
+        "passed": true,
+        "detail": {
+          "minimum_checked_outer_cover_mm": 1.2,
+          "breach_mm3": 0.0
+        }
+      },
+      {
+        "name": "base covered snap at 210 has a closed socket end",
+        "passed": true,
+        "detail": {
+          "checked_end_wall_mm": 1.2,
+          "missing_end_wall_mm3": 0.0
+        }
+      },
+      {
+        "name": "base covered snap at 245 keeps the bread-side skin covered",
+        "passed": true,
+        "detail": {
+          "minimum_checked_inner_cover_mm": 1.15,
+          "nominal_inner_cover_mm": 1.1999999999999997,
+          "breach_mm3": 0.0
+        }
+      },
+      {
+        "name": "base covered snap at 245 retains cover above the embedded root",
+        "passed": true,
+        "detail": {
+          "minimum_checked_outer_cover_mm": 1.2,
+          "breach_mm3": 0.0
+        }
+      },
+      {
+        "name": "base covered snap at 245 has a closed socket end",
+        "passed": true,
+        "detail": {
+          "checked_end_wall_mm": 1.2,
+          "missing_end_wall_mm3": 0.0
+        }
+      },
+      {
+        "name": "base covered snap at 295 keeps the bread-side skin covered",
+        "passed": true,
+        "detail": {
+          "minimum_checked_inner_cover_mm": 1.15,
+          "nominal_inner_cover_mm": 1.1999999999999997,
+          "breach_mm3": 0.0
+        }
+      },
+      {
+        "name": "base covered snap at 295 retains cover above the embedded root",
+        "passed": true,
+        "detail": {
+          "minimum_checked_outer_cover_mm": 1.2,
+          "breach_mm3": 0.0
+        }
+      },
+      {
+        "name": "base covered snap at 295 has a closed socket end",
+        "passed": true,
+        "detail": {
+          "checked_end_wall_mm": 1.2,
+          "missing_end_wall_mm3": 0.0
+        }
+      },
+      {
+        "name": "base covered snap at 330 keeps the bread-side skin covered",
+        "passed": true,
+        "detail": {
+          "minimum_checked_inner_cover_mm": 1.15,
+          "nominal_inner_cover_mm": 1.1999999999999997,
+          "breach_mm3": 0.0
+        }
+      },
+      {
+        "name": "base covered snap at 330 retains cover above the embedded root",
+        "passed": true,
+        "detail": {
+          "minimum_checked_outer_cover_mm": 1.2,
+          "breach_mm3": 0.0
+        }
+      },
+      {
+        "name": "base covered snap at 330 has a closed socket end",
+        "passed": true,
+        "detail": {
+          "checked_end_wall_mm": 1.2,
+          "missing_end_wall_mm3": 0.0
+        }
+      },
+      {
+        "name": "all internal ribs are disabled",
+        "passed": true,
+        "detail": {
+          "rib_count": 0
+        }
+      },
+      {
+        "name": "rib at -220.0 is completely omitted from the shell construction",
+        "passed": true,
+        "detail": {
+          "removed_volume_mm3": 2493.2588626173797,
+          "added_boolean_residue_mm3": 0.0027567213295500315,
           "residue_tolerance_mm3": 0.01
         }
       },
       {
-        "name": "rib at -140.0 is smaller throughout its station",
+        "name": "rib at -140.0 is completely omitted from the shell construction",
         "passed": true,
         "detail": {
-          "removed_volume_mm3": 3888.493969298441,
-          "added_boolean_residue_mm3": 0.0013581640910473672,
+          "removed_volume_mm3": 2687.5855671162262,
+          "added_boolean_residue_mm3": 0.0029387215603292193,
           "residue_tolerance_mm3": 0.01
         }
       },
       {
-        "name": "rib at -60.0 is smaller throughout its station",
+        "name": "rib at -60.0 is completely omitted from the shell construction",
         "passed": true,
         "detail": {
-          "removed_volume_mm3": 3841.6660978150644,
-          "added_boolean_residue_mm3": 0.0011187666988500006,
+          "removed_volume_mm3": 2446.4896326564285,
+          "added_boolean_residue_mm3": 0.003321054337324699,
           "residue_tolerance_mm3": 0.01
         }
       },
       {
-        "name": "rib at 60.0 is smaller throughout its station",
+        "name": "rib at 60.0 is completely omitted from the shell construction",
         "passed": true,
         "detail": {
-          "removed_volume_mm3": 3789.937742279358,
-          "added_boolean_residue_mm3": 0.0011201704255583123,
+          "removed_volume_mm3": 2428.9509636026487,
+          "added_boolean_residue_mm3": 0.0032989107475936905,
           "residue_tolerance_mm3": 0.01
         }
       },
       {
-        "name": "rib at 140.0 is smaller throughout its station",
+        "name": "rib at 140.0 is completely omitted from the shell construction",
         "passed": true,
         "detail": {
-          "removed_volume_mm3": 3842.564439151463,
-          "added_boolean_residue_mm3": 0.0012328982806913882,
+          "removed_volume_mm3": 2613.061727743508,
+          "added_boolean_residue_mm3": 0.0022570885652576167,
           "residue_tolerance_mm3": 0.01
         }
       },
       {
-        "name": "rib at 220.0 is smaller throughout its station",
+        "name": "rib at 220.0 is completely omitted from the shell construction",
         "passed": true,
         "detail": {
-          "removed_volume_mm3": 3918.170360618992,
-          "added_boolean_residue_mm3": 0.001768816933264127,
+          "removed_volume_mm3": 2484.4216715608172,
+          "added_boolean_residue_mm3": 0.0021734844780805685,
           "residue_tolerance_mm3": 0.01
         }
       },
       {
         "name": "geometry report matches the current generator",
         "passed": true,
-        "detail": "9ad74340a4c48a92c712ae6e3740a59c207d18eb657a2da052240c62448827ec"
+        "detail": "061790248c14c2336f0c204c85a336724333dbfbdb0e36af73a1c1f5c656c986"
       }
     ],
-    "passed": 68,
+    "passed": 93,
     "failed": 0,
     "physical_print_tested": false,
     "continuous_sweep_proven": true,
@@ -995,41 +1225,41 @@
   },
   "slicing": {
     "A": {
-      "input_stl_sha256": "d720c51bab33c9da3192b24fb4bf7e280d90fb0043ec5f9be19ffbd0e1ba6d2d",
+      "input_stl_sha256": "6bccd5ad59054c2b409a9349a7554b2af44187935de79e3f08c25173a6441428",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "15h 37m 1s",
-      "filament_g": 479.66,
+      "estimated_time": "14h 40m 4s",
+      "filament_g": 453.36,
       "max_z_mm": 318.8,
       "supports_enabled": true,
       "sent_to_printer": false,
       "provenance": {
-        "input_stl_sha256": "d720c51bab33c9da3192b24fb4bf7e280d90fb0043ec5f9be19ffbd0e1ba6d2d",
+        "input_stl_sha256": "6bccd5ad59054c2b409a9349a7554b2af44187935de79e3f08c25173a6441428",
         "settings_sha256": {
           "machine": "8b98c3c85b37e97f455ed6821ec764cdc9b17fc73755f8794f69e215ebdc901d",
           "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
           "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
         },
-        "output_gcode_sha256": "15f9faa6b660b2554c3d38de87b601ff085346370cff2b6d94147b92dfc093a3"
+        "output_gcode_sha256": "9d7ed2f9531cae7249aa7732e8efb51ac5951e5db627f02a26bff2a9365ea17f"
       }
     },
     "B": {
-      "input_stl_sha256": "f16c89733026e4517f3da60549f8c72fa49483b3287797b533931e9d3cf60e64",
+      "input_stl_sha256": "37f0291206fc18546650def5ea8997316abb271ff455ecf9e2d75ec62127b1f8",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "14h 46m 41s",
-      "filament_g": 467.29,
+      "estimated_time": "14h 3m 2s",
+      "filament_g": 444.08,
       "max_z_mm": 314.8,
       "supports_enabled": true,
       "sent_to_printer": false,
       "provenance": {
-        "input_stl_sha256": "f16c89733026e4517f3da60549f8c72fa49483b3287797b533931e9d3cf60e64",
+        "input_stl_sha256": "37f0291206fc18546650def5ea8997316abb271ff455ecf9e2d75ec62127b1f8",
         "settings_sha256": {
           "machine": "8b98c3c85b37e97f455ed6821ec764cdc9b17fc73755f8794f69e215ebdc901d",
           "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
           "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
         },
-        "output_gcode_sha256": "c34b8db7ec40b0b51228223754970488576bac231a813d9f5ae01fadae39f31f"
+        "output_gcode_sha256": "9ab222b690d6f3a25d47372a05f95792c3e584d5ddd0cdceb4bb92ef2093e580"
       }
     }
   }
