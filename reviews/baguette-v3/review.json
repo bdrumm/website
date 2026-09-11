@@ -1,6 +1,6 @@
 {
-  "generator_sha256": "826eb827553619216c785f6832b78396d4ee69be57516f6acdef887b7761435c",
-  "revision": "V3.10 fingernail recess and softened mounts engineering prototype",
+  "generator_sha256": "d9718cafd023c35e6645f46431de4815957f6d75a5b97efc7764049b7605b9c6",
+  "revision": "V3.11 clear latch openings engineering prototype",
   "parameters": {
     "hinge_axis_x": -40.4,
     "exterior_rim_axis_x": -41.0,
@@ -89,14 +89,14 @@
   ],
   "printables": {
     "segment_A": {
-      "triangles": 41700,
+      "triangles": 41632,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 339492.1092224868,
-      "mass_g_at_1_24": 420.97021543588363,
+      "volume_mm3": 339490.8435128195,
+      "mass_g_at_1_24": 420.9686459558962,
       "components": 2,
       "component_volumes_mm3": [
-        148134.66075344707,
+        148133.3950437798,
         191357.4484690397
       ],
       "bounds_mm": [
@@ -114,14 +114,14 @@
       ]
     },
     "segment_B": {
-      "triangles": 41138,
+      "triangles": 41054,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 337058.1344251774,
-      "mass_g_at_1_24": 417.95208668722,
+      "volume_mm3": 337056.9162276759,
+      "mass_g_at_1_24": 417.9505761223181,
       "components": 2,
       "component_volumes_mm3": [
-        146203.1843206205,
+        146201.96612311894,
         190854.95010455695
       ],
       "bounds_mm": [
@@ -165,14 +165,14 @@
       ]
     },
     "lid_A": {
-      "triangles": 20600,
+      "triangles": 20532,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 148134.65585364148,
-      "mass_g_at_1_24": 183.68697325851545,
+      "volume_mm3": 148133.3901435619,
+      "mass_g_at_1_24": 183.68540377801676,
       "components": 1,
       "component_volumes_mm3": [
-        148134.65585364148
+        148133.3901435619
       ],
       "bounds_mm": [
         -44.29999923706055,
@@ -213,14 +213,14 @@
       ]
     },
     "lid_B": {
-      "triangles": 20264,
+      "triangles": 20180,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 146203.35385136286,
-      "mass_g_at_1_24": 181.29215877568996,
+      "volume_mm3": 146202.13559691416,
+      "mass_g_at_1_24": 181.29064814017354,
       "components": 1,
       "component_volumes_mm3": [
-        146203.35385136286
+        146202.13559691416
       ],
       "bounds_mm": [
         -44.29999923706055,
@@ -611,7 +611,7 @@
         "name": "latch at -150.0 follows the original outer surface except the thumb lip",
         "passed": true,
         "detail": {
-          "exterior_residue_mm3": 5.2715316160277353e-05
+          "exterior_residue_mm3": 3.443974866605138e-05
         }
       },
       {
@@ -647,7 +647,7 @@
         "name": "latch at 150.0 follows the original outer surface except the thumb lip",
         "passed": true,
         "detail": {
-          "exterior_residue_mm3": 0.00011363328116579265
+          "exterior_residue_mm3": 0.00012264250094054285
         }
       },
       {
@@ -656,6 +656,46 @@
         "detail": {
           "underhang_mm": 0.796931266784668,
           "outside_material_below_original_tip_mm3": 15.431492581597988
+        }
+      },
+      {
+        "name": "latch side slot is unobstructed at Y -160.25",
+        "passed": true,
+        "detail": {
+          "checked_height_mm": 14.2,
+          "surface_depth_mm": 0.3,
+          "gauge_width_mm": 0.08,
+          "obstruction_mm3": 7.587879510053304e-05
+        }
+      },
+      {
+        "name": "latch side slot is unobstructed at Y -139.75",
+        "passed": true,
+        "detail": {
+          "checked_height_mm": 14.2,
+          "surface_depth_mm": 0.3,
+          "gauge_width_mm": 0.08,
+          "obstruction_mm3": 7.588050226317483e-05
+        }
+      },
+      {
+        "name": "latch side slot is unobstructed at Y 139.75",
+        "passed": true,
+        "detail": {
+          "checked_height_mm": 14.2,
+          "surface_depth_mm": 0.3,
+          "gauge_width_mm": 0.08,
+          "obstruction_mm3": 7.587467177383442e-05
+        }
+      },
+      {
+        "name": "latch side slot is unobstructed at Y 160.25",
+        "passed": true,
+        "detail": {
+          "checked_height_mm": 14.2,
+          "surface_depth_mm": 0.3,
+          "gauge_width_mm": 0.08,
+          "obstruction_mm3": 7.588102814114301e-05
         }
       },
       {
@@ -720,7 +760,7 @@
           "enclosed_air_components": 1,
           "analysis_seam_offset_mm": 0.36,
           "masked_vents": 4,
-          "cavity_volume_mm3": 2945206.336868497
+          "cavity_volume_mm3": 2945206.3256313964
         }
       },
       {
@@ -1302,10 +1342,10 @@
       {
         "name": "geometry report matches the current generator",
         "passed": true,
-        "detail": "826eb827553619216c785f6832b78396d4ee69be57516f6acdef887b7761435c"
+        "detail": "d9718cafd023c35e6645f46431de4815957f6d75a5b97efc7764049b7605b9c6"
       }
     ],
-    "passed": 104,
+    "passed": 108,
     "failed": 0,
     "physical_print_tested": false,
     "continuous_sweep_proven": true,
@@ -1321,41 +1361,41 @@
   },
   "slicing": {
     "A": {
-      "input_stl_sha256": "342fdaca8f7baf2f1423420457f3528f097b4478f9566eb2ebc3b6b09df59db2",
+      "input_stl_sha256": "c28376e8948b73303bbe9d81708bf6733b8da69873241ee8713835cbb7b51395",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "14h 55m 40s",
+      "estimated_time": "14h 56m 45s",
       "filament_g": 490.6,
       "max_z_mm": 322.8,
       "supports_enabled": true,
       "sent_to_printer": false,
       "provenance": {
-        "input_stl_sha256": "342fdaca8f7baf2f1423420457f3528f097b4478f9566eb2ebc3b6b09df59db2",
+        "input_stl_sha256": "c28376e8948b73303bbe9d81708bf6733b8da69873241ee8713835cbb7b51395",
         "settings_sha256": {
           "machine": "8b98c3c85b37e97f455ed6821ec764cdc9b17fc73755f8794f69e215ebdc901d",
           "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
           "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
         },
-        "output_gcode_sha256": "8b5d2a2ed7d0bb0379df321e669c98dbfde55301ce0b2c00c5c1180638c3eeae"
+        "output_gcode_sha256": "8767761c0dadce27ca387f1a05f158d37948f82d70081249a5864dfe595ee57b"
       }
     },
     "B": {
-      "input_stl_sha256": "2a427197939a2ce7b8336737a8a687c0aff9820aabd7b5f21410f91c9ab3c8c3",
+      "input_stl_sha256": "6ecc62578f3f1ca990c3c4c42cf0ff674208b4a6d521d093a108307cbfea7e4c",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "14h 55m 49s",
-      "filament_g": 491.61,
+      "estimated_time": "14h 56m 25s",
+      "filament_g": 492.21,
       "max_z_mm": 314.8,
       "supports_enabled": true,
       "sent_to_printer": false,
       "provenance": {
-        "input_stl_sha256": "2a427197939a2ce7b8336737a8a687c0aff9820aabd7b5f21410f91c9ab3c8c3",
+        "input_stl_sha256": "6ecc62578f3f1ca990c3c4c42cf0ff674208b4a6d521d093a108307cbfea7e4c",
         "settings_sha256": {
           "machine": "8b98c3c85b37e97f455ed6821ec764cdc9b17fc73755f8794f69e215ebdc901d",
           "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
           "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
         },
-        "output_gcode_sha256": "81d4d5351f7c13a52b04336601862c2e096b9962ee6b555c2799133c1e7f7ee1"
+        "output_gcode_sha256": "f1dc76905618b1842c0fa6c4f131068bd8fbd9bbf0d1ac50926278045acfa523"
       }
     }
   }

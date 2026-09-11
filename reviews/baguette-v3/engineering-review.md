@@ -1,6 +1,6 @@
-# Baguette holder V3.10 — engineering review
+# Baguette holder V3.11 — engineering review
 
-V3.10 adds a shallow fingernail recess in the stationary shell beneath each latch lip and rounds the exposed latch-mount edges and hinge-knuckle entrances. The reinforced shell, captured 3 mm pin, solid center-snap roots and blended rib-free cavity remain. Physical fit, release force and durability remain untested.
+V3.11 removes the thin shell-band bridges that overhung the latch side openings. The opening tool now extends beyond the highest local band surface, so the side slots remain clear even where the raised band is higher than the opening corners. The rounded grips, shallow fingernail recesses and eased mounting edges remain. The reinforced shell, captured 3 mm pin, solid center-snap roots and blended rib-free cavity remain. Physical fit, release force and durability remain untested.
 
 ## Reinforced shell and hinge
 
@@ -10,11 +10,13 @@ The captured hinge pin increases from 2 to 3 mm diameter. Its internal bearing r
 
 The two exterior latches retain their short 18 × 20 mm shell-contoured tongues, 1.8 mm nominal skin, thicker roots and 1.6 mm inward hooks. The tongue outline has 1.5 mm corner radii and its exposed edges are eased with a 0.45 mm radius. Each grip projects 2 mm and blends into the tongue with a 0.8 mm concave transition. Its rounded lower edge extends 0.8 mm beneath the original tip for finger purchase, while the upper grip height remains 3 mm. The receiver is relieved around the final rounded face to preserve running clearance. The internal retaining shoulder remains square for positive engagement. Measured retaining overlap remains about 1.12 mm, with about 3.67 mm behind the catch recess. Release travel is modeled at 2.1 mm.
 
-## Fingernail access and softened edges
+## Clear latch openings, fingernail access and softened edges
 
 Each grip has an elliptical scoop directly underneath, inset into the stationary base. It is nominally 14 mm wide, 6 mm high and 0.9 mm deep at its center. The inset falls to zero depth and zero slope at the perimeter, blending into the original shell rather than ending in a sharp pocket rim. The rounded lip still extends 0.8 mm below the latch tongue and projects 2 mm outward.
 
 The latch-pocket mouths and exposed hinge-knuckle cap/bore entrances use 0.4 mm radius curves. The fillets are defined directly in their section profiles. The upper latch opening also has rounded corners. The full captured pin, central bearing surface, internal catch shoulders and already-rounded moving latch are retained. Edge easing removes material within the existing envelope.
+
+Four additional swept slot gauges check for leftover band bridges along both sides of both latches.
 
 CAD checks include insertion of a 0.3 mm thick, 4 mm wide fingernail gauge to 0.4 mm behind the original shell surface below each lip, plus a minimum 2.4 mm wall check at each scoop center. The measured center walls are about 2.61 mm thick. Actual comfort and opening force require the updated latch coupons.
 
@@ -44,7 +46,7 @@ Insertion is modeled with 1.2 mm of inward tip deflection. A straight-beam scree
 
 ## Geometry and sliced-path review
 
-All **104 geometry checks pass**, covering four watertight shells, two print objects with two captured moving solids each, the retained 62 mm × 600 mm capsule clearance, zero interior ribs, covered sockets, solid male roots, removal of the old transverse ledges, snap insertion and return, retaining engagement, and released hinge/latch movement.
+All **108 geometry checks pass**, covering four watertight shells, two print objects with two captured moving solids each, the retained 62 mm × 600 mm capsule clearance, zero interior ribs, covered sockets, solid male roots, removal of the old transverse ledges, snap insertion and return, retaining engagement, and released hinge/latch movement.
 
 The continuous rotation certificate uses 501 poses at 0.2° spacing. It subtracts a bound on movement between poses and a 0.002 mm numerical allowance from the measured gaps, certifying at least **0.1408 mm** clearance over 0–100°. The center-joint insertion and spring-return certificates each retain at least **0.1480 mm** clearance. These are CAD motion bounds, not printer-tolerance guarantees.
 
@@ -61,7 +63,7 @@ The review includes closed, rear, open and intermediate hinge renders, capped hi
 
 Both fit the checked 300 × 320 × 325 mm envelope, including an 8 mm brim. Keep the supplied upright, 100° open orientation. The offline setup is Bambu Studio 02.08.02.61, Bambu H2C, Generic PLA, 0.4 mm nozzle, 0.20 mm layers, four walls, 15% infill and automatic supports. STL units are millimetres. The 3MF files contain oriented geometry, not prepared printer jobs. Nothing is sent to a printer.
 
-Final offline estimates are **A: 14h 55m 40s / 490.60 g**, **B: 14h 55m 49s / 491.61 g**, about **29.9 hours and 982 g** total before coupons. Exact STL, settings and G-code hashes are recorded in `review.json` and `slice-wall-review.json`.
+Final offline estimates are **A: 14h 56m 45s / 490.60 g**, **B: 14h 56m 25s / 492.21 g**, about **29.9 hours and 983 g** total before coupons. Exact STL, settings and G-code hashes are recorded in `review.json` and `slice-wall-review.json`.
 
 1. Print `joint_A` and `joint_B` first. Clear support from the covered slots through their joining-face openings, then verify full seating and retention.
 2. Print hinge and exterior latch coupons. The 0.4 mm hinge coupon reproduces the default bearing; 0.3 and 0.5 mm alternatives bracket fit. Check release force and repeated flexing with the taller grips.

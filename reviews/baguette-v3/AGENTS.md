@@ -21,4 +21,6 @@ Latch rounding must preserve the internal retaining shoulder and running gap. In
 
 Keep fingernail access directly below each lip. Check the gauge clearance and remaining scoop wall, and preserve the pin, bearing and retaining faces when softening exposed mounting edges.
 
+Keep all four latch side slots clear through the raised shell band. Check a continuous slot gauge for residual overhanging bridges, including where the band is higher than the opening corners.
+
 The editable CAD and source checks are distributed in baguette-v3-source-and-print.zip. Extract to a writable model workspace before changing geometry. Publish rebuilt assets and both matching archives together.
