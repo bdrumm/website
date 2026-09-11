@@ -19,4 +19,6 @@ Keep the reinforced cavity wall guard and former thin-wall slice review. Preserv
 
 Latch rounding must preserve the internal retaining shoulder and running gap. Inspect the underside finger catch and its blend in an actual CAD section and underside view before publishing.
 
+Keep fingernail access directly below each lip. Check the gauge clearance and remaining scoop wall, and preserve the pin, bearing and retaining faces when softening exposed mounting edges.
+
 The editable CAD and source checks are distributed in baguette-v3-source-and-print.zip. Extract to a writable model workspace before changing geometry. Publish rebuilt assets and both matching archives together.
