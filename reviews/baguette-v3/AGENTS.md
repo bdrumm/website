@@ -29,4 +29,6 @@ Strap eyes must keep their through-openings and a strong outer web while their e
 
 The strap tail must fade into the actual narrowing shell instead of ending in a raised stub. Inspect its silhouette and sample the final outer skin beyond the tail termination.
 
+Covered center-joint sockets must have 45-degree ceilings in the connection-down print orientation. Preserve tab clearance and the retaining shoulder; inspect the capped joint section and verify sloped roof face normals and cover thickness.
+
 The editable CAD and source checks are distributed in baguette-v3-source-and-print.zip. Extract to a writable model workspace before changing geometry. Publish rebuilt assets and both matching archives together.

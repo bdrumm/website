@@ -1,6 +1,6 @@
 {
-  "generator_sha256": "863fef6ed69550fbf0429e48e865e0fe40651d487d04350fa65ebe8c489397fd",
-  "revision": "V3.13 strap roots blended into the shell engineering prototype",
+  "generator_sha256": "aa81a7ac64d9ce515b4d093dafdceaa4d2ef3d8b543883f42c05efbfe97690d6",
+  "revision": "V3.14 covered sockets with 45 degree print ceilings engineering prototype",
   "parameters": {
     "hinge_axis_x": -40.4,
     "exterior_rim_axis_x": -41.0,
@@ -122,15 +122,15 @@
       ]
     },
     "segment_B": {
-      "triangles": 67716,
+      "triangles": 67876,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 337877.2474979756,
-      "mass_g_at_1_24": 418.96778689748976,
+      "volume_mm3": 337016.748897351,
+      "mass_g_at_1_24": 417.9007686327152,
       "components": 2,
       "component_volumes_mm3": [
-        146968.32921121718,
-        190908.91828675842
+        146629.43787558418,
+        190387.3110217668
       ],
       "bounds_mm": [
         -77.11788177490234,
@@ -197,14 +197,14 @@
       ]
     },
     "base_B": {
-      "triangles": 33424,
+      "triangles": 33488,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 190908.91776003808,
-      "mass_g_at_1_24": 236.7270580224472,
+      "volume_mm3": 190387.3106158719,
+      "mass_g_at_1_24": 236.08026516368113,
       "components": 1,
       "component_volumes_mm3": [
-        190908.91776003808
+        190387.3106158719
       ],
       "bounds_mm": [
         -44.29999923706055,
@@ -221,14 +221,14 @@
       ]
     },
     "lid_B": {
-      "triangles": 34316,
+      "triangles": 34414,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 146968.32731762476,
-      "mass_g_at_1_24": 182.2407258738547,
+      "volume_mm3": 146629.43603951612,
+      "mass_g_at_1_24": 181.820500689,
       "components": 1,
       "component_volumes_mm3": [
-        146968.32731762476
+        146629.43603951612
       ],
       "bounds_mm": [
         -44.29999923706055,
@@ -343,7 +343,10 @@
       "nominal_radial_engagement_mm": 0.7,
       "outward_shift_mm": 4.6,
       "nominal_inner_cover_mm": 1.1999999999999997,
-      "covered_socket": true
+      "covered_socket": true,
+      "roof_angle_degrees": 45.0,
+      "roof_start_y": 12.4,
+      "roof_top_y": 14.821367099881172
     },
     {
       "part": "lid",
@@ -354,7 +357,10 @@
       "nominal_radial_engagement_mm": 0.7,
       "outward_shift_mm": 4.6,
       "nominal_inner_cover_mm": 1.1999999999999997,
-      "covered_socket": true
+      "covered_socket": true,
+      "roof_angle_degrees": 45.0,
+      "roof_start_y": 12.4,
+      "roof_top_y": 15.163310267031193
     },
     {
       "part": "lid",
@@ -365,7 +371,10 @@
       "nominal_radial_engagement_mm": 0.7,
       "outward_shift_mm": 4.6,
       "nominal_inner_cover_mm": 1.1999999999999997,
-      "covered_socket": true
+      "covered_socket": true,
+      "roof_angle_degrees": 45.0,
+      "roof_start_y": 12.4,
+      "roof_top_y": 15.26666884124279
     },
     {
       "part": "lid",
@@ -376,7 +385,10 @@
       "nominal_radial_engagement_mm": 0.7,
       "outward_shift_mm": 4.6,
       "nominal_inner_cover_mm": 1.1999999999999997,
-      "covered_socket": true
+      "covered_socket": true,
+      "roof_angle_degrees": 45.0,
+      "roof_start_y": 12.4,
+      "roof_top_y": 14.842949226498604
     },
     {
       "part": "base",
@@ -387,7 +399,10 @@
       "nominal_radial_engagement_mm": 0.7,
       "outward_shift_mm": 4.6,
       "nominal_inner_cover_mm": 1.1999999999999997,
-      "covered_socket": true
+      "covered_socket": true,
+      "roof_angle_degrees": 45.0,
+      "roof_start_y": 12.4,
+      "roof_top_y": 15.637671515345573
     },
     {
       "part": "base",
@@ -398,7 +413,10 @@
       "nominal_radial_engagement_mm": 0.7,
       "outward_shift_mm": 4.6,
       "nominal_inner_cover_mm": 1.1999999999999997,
-      "covered_socket": true
+      "covered_socket": true,
+      "roof_angle_degrees": 45.0,
+      "roof_start_y": 12.4,
+      "roof_top_y": 15.83510135114193
     },
     {
       "part": "base",
@@ -409,7 +427,10 @@
       "nominal_radial_engagement_mm": 0.7,
       "outward_shift_mm": 4.6,
       "nominal_inner_cover_mm": 1.1999999999999997,
-      "covered_socket": true
+      "covered_socket": true,
+      "roof_angle_degrees": 45.0,
+      "roof_start_y": 12.4,
+      "roof_top_y": 15.84622722119093
     },
     {
       "part": "base",
@@ -420,7 +441,10 @@
       "nominal_radial_engagement_mm": 0.7,
       "outward_shift_mm": 4.6,
       "nominal_inner_cover_mm": 1.1999999999999997,
-      "covered_socket": true
+      "covered_socket": true,
+      "roof_angle_degrees": 45.0,
+      "roof_start_y": 12.4,
+      "roof_top_y": 15.631213583052158
     }
   ],
   "latches": [
@@ -1100,7 +1124,7 @@
           "enclosed_air_components": 1,
           "analysis_seam_offset_mm": 0.36,
           "masked_vents": 4,
-          "cavity_volume_mm3": 2945543.593491594
+          "cavity_volume_mm3": 2945543.5934874695
         }
       },
       {
@@ -1263,7 +1287,7 @@
         "name": "lid snap at 25 degrees blocks withdrawal",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.6534479018150379,
+          "interference_after_half_mm_pull_mm3": 1.653447901815038,
           "nominal_radial_engagement_mm": 0.7
         }
       },
@@ -1279,7 +1303,7 @@
         "name": "lid snap at 48 degrees blocks withdrawal",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.6939547084879625,
+          "interference_after_half_mm_pull_mm3": 1.6939547084879627,
           "nominal_radial_engagement_mm": 0.7
         }
       },
@@ -1311,7 +1335,7 @@
         "name": "lid snap at 155 degrees blocks withdrawal",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.656101714669502,
+          "interference_after_half_mm_pull_mm3": 1.6561017242733862,
           "nominal_radial_engagement_mm": 0.7
         }
       },
@@ -1343,7 +1367,7 @@
         "name": "base snap at 245 degrees blocks withdrawal",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.8699489562176017,
+          "interference_after_half_mm_pull_mm3": 1.8699489562176006,
           "nominal_radial_engagement_mm": 0.7
         }
       },
@@ -1359,7 +1383,7 @@
         "name": "base snap at 295 degrees blocks withdrawal",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.871179560499944,
+          "interference_after_half_mm_pull_mm3": 1.8711795604999446,
           "nominal_radial_engagement_mm": 0.7
         }
       },
@@ -1375,7 +1399,7 @@
         "name": "base snap at 330 degrees blocks withdrawal",
         "passed": true,
         "detail": {
-          "interference_after_half_mm_pull_mm3": 1.88659175917161,
+          "interference_after_half_mm_pull_mm3": 1.8865917591716101,
           "nominal_radial_engagement_mm": 0.7
         }
       },
@@ -1580,6 +1604,166 @@
         }
       },
       {
+        "name": "lid socket at 25 has 45 degree print ceilings",
+        "passed": true,
+        "detail": {
+          "ceiling_face_count": 16,
+          "minimum_angle_from_build_axis_degrees": 44.999956250216336,
+          "maximum_angle_from_build_axis_degrees": 45.001232946792385,
+          "flat_ceiling_area_mm2": 0.0,
+          "roof_start_y_mm": 12.4,
+          "roof_top_y_mm": 14.821367099881172
+        }
+      },
+      {
+        "name": "lid sloped socket roof at 25 stays covered",
+        "passed": true,
+        "detail": {
+          "minimum_checked_roof_cover_mm": 1.15,
+          "missing_wall_mm3": 2.321902252647111e-05
+        }
+      },
+      {
+        "name": "lid socket at 48 has 45 degree print ceilings",
+        "passed": true,
+        "detail": {
+          "ceiling_face_count": 20,
+          "minimum_angle_from_build_axis_degrees": 44.99829885910846,
+          "maximum_angle_from_build_axis_degrees": 45.003106622534595,
+          "flat_ceiling_area_mm2": 3.582244971767068e-07,
+          "roof_start_y_mm": 12.4,
+          "roof_top_y_mm": 15.163310267031193
+        }
+      },
+      {
+        "name": "lid sloped socket roof at 48 stays covered",
+        "passed": true,
+        "detail": {
+          "minimum_checked_roof_cover_mm": 1.15,
+          "missing_wall_mm3": 1.1681331967539889e-05
+        }
+      },
+      {
+        "name": "lid socket at 132 has 45 degree print ceilings",
+        "passed": true,
+        "detail": {
+          "ceiling_face_count": 22,
+          "minimum_angle_from_build_axis_degrees": 44.99940345814654,
+          "maximum_angle_from_build_axis_degrees": 45.00083594798671,
+          "flat_ceiling_area_mm2": 0.0,
+          "roof_start_y_mm": 12.4,
+          "roof_top_y_mm": 15.26666884124279
+        }
+      },
+      {
+        "name": "lid sloped socket roof at 132 stays covered",
+        "passed": true,
+        "detail": {
+          "minimum_checked_roof_cover_mm": 1.15,
+          "missing_wall_mm3": 1.217698635350357e-05
+        }
+      },
+      {
+        "name": "lid socket at 155 has 45 degree print ceilings",
+        "passed": true,
+        "detail": {
+          "ceiling_face_count": 16,
+          "minimum_angle_from_build_axis_degrees": 44.99538976268579,
+          "maximum_angle_from_build_axis_degrees": 45.00015104730925,
+          "flat_ceiling_area_mm2": 0.0,
+          "roof_start_y_mm": 12.4,
+          "roof_top_y_mm": 14.842949226498604
+        }
+      },
+      {
+        "name": "lid sloped socket roof at 155 stays covered",
+        "passed": true,
+        "detail": {
+          "minimum_checked_roof_cover_mm": 1.15,
+          "missing_wall_mm3": 1.2214506546841268e-05
+        }
+      },
+      {
+        "name": "base socket at 210 has 45 degree print ceilings",
+        "passed": true,
+        "detail": {
+          "ceiling_face_count": 24,
+          "minimum_angle_from_build_axis_degrees": 44.979878480014506,
+          "maximum_angle_from_build_axis_degrees": 45.00051055127093,
+          "flat_ceiling_area_mm2": 0.0,
+          "roof_start_y_mm": 12.4,
+          "roof_top_y_mm": 15.637671515345573
+        }
+      },
+      {
+        "name": "base sloped socket roof at 210 stays covered",
+        "passed": true,
+        "detail": {
+          "minimum_checked_roof_cover_mm": 1.15,
+          "missing_wall_mm3": 2.9574936870681896e-05
+        }
+      },
+      {
+        "name": "base socket at 245 has 45 degree print ceilings",
+        "passed": true,
+        "detail": {
+          "ceiling_face_count": 24,
+          "minimum_angle_from_build_axis_degrees": 44.99932700419796,
+          "maximum_angle_from_build_axis_degrees": 45.002793683104294,
+          "flat_ceiling_area_mm2": 0.0,
+          "roof_start_y_mm": 12.4,
+          "roof_top_y_mm": 15.83510135114193
+        }
+      },
+      {
+        "name": "base sloped socket roof at 245 stays covered",
+        "passed": true,
+        "detail": {
+          "minimum_checked_roof_cover_mm": 1.15,
+          "missing_wall_mm3": 2.0238246493683136e-05
+        }
+      },
+      {
+        "name": "base socket at 295 has 45 degree print ceilings",
+        "passed": true,
+        "detail": {
+          "ceiling_face_count": 28,
+          "minimum_angle_from_build_axis_degrees": 44.986613165780504,
+          "maximum_angle_from_build_axis_degrees": 45.000589651339055,
+          "flat_ceiling_area_mm2": 0.0,
+          "roof_start_y_mm": 12.4,
+          "roof_top_y_mm": 15.84622722119093
+        }
+      },
+      {
+        "name": "base sloped socket roof at 295 stays covered",
+        "passed": true,
+        "detail": {
+          "minimum_checked_roof_cover_mm": 1.15,
+          "missing_wall_mm3": 1.731936630822323e-05
+        }
+      },
+      {
+        "name": "base socket at 330 has 45 degree print ceilings",
+        "passed": true,
+        "detail": {
+          "ceiling_face_count": 20,
+          "minimum_angle_from_build_axis_degrees": 44.99898950756282,
+          "maximum_angle_from_build_axis_degrees": 45.00004866148863,
+          "flat_ceiling_area_mm2": 0.0,
+          "roof_start_y_mm": 12.4,
+          "roof_top_y_mm": 15.631213583052158
+        }
+      },
+      {
+        "name": "base sloped socket roof at 330 stays covered",
+        "passed": true,
+        "detail": {
+          "minimum_checked_roof_cover_mm": 1.15,
+          "missing_wall_mm3": 1.9215359749773426e-05
+        }
+      },
+      {
         "name": "all internal ribs are disabled",
         "passed": true,
         "detail": {
@@ -1682,10 +1866,10 @@
       {
         "name": "geometry report matches the current generator",
         "passed": true,
-        "detail": "863fef6ed69550fbf0429e48e865e0fe40651d487d04350fa65ebe8c489397fd"
+        "detail": "aa81a7ac64d9ce515b4d093dafdceaa4d2ef3d8b543883f42c05efbfe97690d6"
       }
     ],
-    "passed": 122,
+    "passed": 138,
     "failed": 0,
     "physical_print_tested": false,
     "continuous_sweep_proven": true,
@@ -1704,7 +1888,7 @@
       "input_stl_sha256": "7a21e2cc338e7cf2d718f8fd6a2e60cdfd20eec258e72b77c05676e8232cc619",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "14h 47m 48s",
+      "estimated_time": "14h 47m 49s",
       "filament_g": 490.61,
       "max_z_mm": 322.8,
       "supports_enabled": true,
@@ -1716,26 +1900,26 @@
           "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
           "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
         },
-        "output_gcode_sha256": "1046e708b1dd1f316fe986574325daece762641de971ca2026a8b72e7dd3b526"
+        "output_gcode_sha256": "8301e519fabf820eb698f1ca4498dd43df3ad0ee446af2fd791733136b7a49c1"
       }
     },
     "B": {
-      "input_stl_sha256": "65921646a2ccce44e2d90a258678f301e3334aef267bee61e4189bfb29892ed8",
+      "input_stl_sha256": "36f1833df84a877eb022150305f3d38594f306cbf41b672e8efc03f61bbf6ee7",
       "status": "offline slice completed",
       "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "14h 43m 26s",
-      "filament_g": 490.69,
+      "estimated_time": "14h 43m 42s",
+      "filament_g": 489.38,
       "max_z_mm": 314.8,
       "supports_enabled": true,
       "sent_to_printer": false,
       "provenance": {
-        "input_stl_sha256": "65921646a2ccce44e2d90a258678f301e3334aef267bee61e4189bfb29892ed8",
+        "input_stl_sha256": "36f1833df84a877eb022150305f3d38594f306cbf41b672e8efc03f61bbf6ee7",
         "settings_sha256": {
           "machine": "8b98c3c85b37e97f455ed6821ec764cdc9b17fc73755f8794f69e215ebdc901d",
           "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
           "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
         },
-        "output_gcode_sha256": "8df1853c63fef1589cf6d89fec272345933b91523d9d3cb9b347e9b6a2f3373f"
+        "output_gcode_sha256": "bd45bb7c0444aa71b80c677b9aec0ea802d17faca034dd1c7ad4e65b238d30d2"
       }
     }
   }

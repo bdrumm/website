@@ -1,6 +1,6 @@
-# Baguette holder V3.13 — engineering review
+# Baguette holder V3.14 — engineering review
 
-V3.13 removes the raised stub at the end of each strap root. The final 11 mm of the tail follows a quintic taper into the actual narrowing shell, while the material underneath stays joined to the shell wall. The rounded eye, clear strap opening and 3 mm outer web remain. The previously blended outer band and recessed latch grips are retained. Physical fit, release force and durability remain untested.
+V3.14 gives all eight covered center-joint sockets 45° ceilings for the connection-down print orientation. Each roof extends above the existing pocket and tab tip, preserving insertion clearance and the square retaining shoulder. Both the base and lid receiving pockets are updated. A single combined 3MF includes both main halves and all eight test pieces. Physical fit, release force and durability remain untested.
 
 The band keeps its existing outer outline at the parting edge. Its full-height region extends 0.6 mm above and below the seam; a quintic transition blends into the original crust by Z ±8 mm with zero slope and curvature at its ends. The change expands the exterior from the crust while preserving the cavity and wall guard. It is actual CAD geometry, shared by the print objects and preview.
 
@@ -30,7 +30,7 @@ CAD checks include insertion of a 0.3 mm thick, 4 mm wide fingernail gauge to 0.
 
 ## Flush snap roots and blended interior
 
-Half A’s eight tongues now grow directly from the uncut shell at the joining face. The old inset flex channels behind the roots are removed entirely. The exposed tongues are longer so they can flex without a recess in the case wall. Their covered sockets in Half B are extended to match.
+Half A’s eight tongues now grow directly from the uncut shell at the joining face. The old inset flex channels behind the roots are removed entirely. The exposed tongues are longer so they can flex without a recess in the case wall. Their covered sockets in Half B are extended to match. Each blind end now closes with two planar 45° roof faces. Half B prints with +Y upward from its connection face; opening its lid rotates around Y, preserving that slope. Half A carries the solid male tabs and has no recessed root channels. The roof starts 0.4 mm past the tab tip, so the original insertion and spring-return space remains.
 
 The internal attachment profile transitions into the organic cavity over 30 mm on each side with a smooth taper. This removes the abrupt transverse ledge shown in the previous sliced model. There is no separate collar or connector. The inner cavity remains rib-free.
 
@@ -54,13 +54,13 @@ Insertion is modeled with 1.2 mm of inward tip deflection. A straight-beam scree
 
 ## Geometry and sliced-path review
 
-All **122 geometry checks pass**, covering four watertight shells, two print objects with two captured moving solids each, the retained 62 mm × 600 mm capsule clearance, zero interior ribs, covered sockets, solid male roots, removal of the old transverse ledges, snap insertion and return, retaining engagement, and released hinge/latch movement.
+All **138 geometry checks pass**, covering four watertight shells, two print objects with two captured moving solids each, the retained 62 mm × 600 mm capsule clearance, zero interior ribs, covered sockets, solid male roots, removal of the old transverse ledges, snap insertion and return, retaining engagement, and released hinge/latch movement.
 
 The continuous rotation certificate uses 501 poses at 0.2° spacing. It subtracts a bound on movement between poses and a 0.002 mm numerical allowance from the measured gaps, certifying at least **0.1408 mm** clearance over 0–100°. The center-joint insertion and spring-return certificates each retain at least **0.1480 mm** clearance. These are CAD motion bounds, not printer-tolerance guarantees.
 
 A separate enclosure diagnostic temporarily caps designed vents and bridges working seams to check one enclosed bread cavity without changing the printed vents or seams. The extrusion helper preserves polygon holes, preventing hidden pocket cuts from removing their inner covers.
 
-The review includes closed, rear, open and intermediate hinge renders, capped hinge and catch sections, a separated center joint, a capped covered-socket section, a dedicated underside latch view, and a strap-attachment close-up and a separate tail silhouette. Six actual sliced cross-sections are reviewed: four at former thin-wall stations (A at print Z 55.6 and 180.0 mm; B at 47.6 and 172.0 mm), plus one through each fingernail recess and hinge center (A at 162.0 mm; B at 153.8 mm). The former thin-wall sections have two separate base/lid material regions; the hinge-center sections also show the isolated captured-pin cross-section. `slice-walls.jpg` shows the planned paths with supports hidden. This is a regional review, not an all-layer or physical defect proof.
+The review includes closed, rear, open and intermediate hinge renders, capped hinge and catch sections, a separated center joint, a capped covered-socket section, a dedicated underside latch view, and a strap-attachment close-up and a separate tail silhouette. Six actual sliced cross-sections are reviewed: four at former thin-wall stations (A at print Z 55.6 and 180.0 mm; B at 47.6 and 172.0 mm), plus one through each fingernail recess and hinge center (A at 162.0 mm; B at 153.8 mm). The former thin-wall sections have two separate base/lid material regions; the hinge-center sections also show the isolated captured-pin cross-section. `slice-walls.jpg` shows the planned paths with supports hidden. Three additional actual layers through the socket roofs at print Z 16.4, 18.0 and 19.6 mm show the openings progressively closing. `slice-roofs.jpg` records them. This is a regional review, not an all-layer or physical defect proof.
 
 ## Print files and assembly
 
@@ -71,12 +71,16 @@ The review includes closed, rear, open and intermediate hinge renders, capped hi
 
 Both fit the checked 300 × 320 × 325 mm envelope, including an 8 mm brim. Keep the supplied upright, 100° open orientation. The offline setup is Bambu Studio 02.08.02.61, Bambu H2C, Generic PLA, 0.4 mm nozzle, 0.20 mm layers, four walls, 15% infill and automatic supports. STL units are millimetres. The 3MF files contain oriented geometry, not prepared printer jobs. Nothing is sent to a printer.
 
-Final offline estimates are **A: 14h 47m 48s / 490.61 g**, **B: 14h 43m 26s / 490.69 g**, about **29.5 hours and 981 g** total before coupons. Exact STL, settings and G-code hashes are recorded in `review.json` and `slice-wall-review.json`.
+Final offline estimates are **A: 14h 47m 49s / 490.61 g**, **B: 14h 43m 42s / 489.38 g**, about **29.5 hours and 980 g** total before coupons. Exact STL, settings and G-code hashes are recorded in `review.json` and `slice-wall-review.json`.
 
 1. Print `joint_A` and `joint_B` first. Clear support from the covered slots through their joining-face openings, then verify full seating and retention.
 2. Print hinge and exterior latch coupons. The 0.4 mm hinge coupon reproduces the default bearing; 0.3 and 0.5 mm alternatives bracket fit. Check release force and repeated flexing with the taller grips.
 3. Inspect supports around blind socket roofs, retaining shoulders and latch undercuts. Keep support out of working hinge bearings.
 4. Print the full objects only after the coupons pass. Align both base and lid joints at the same hinge angle, support the parts evenly and press straight along their length until seated. Check lid movement afterward.
+
+## Combined project
+
+`baguette-v3-all-parts.3mf` contains three plates: main Half A, main Half B, and all eight test pieces. Each object retains its reviewed connection-down orientation. The Bambu H2C / PLA settings are embedded, but the project is unsliced. The project was reopened in Bambu Studio, its plate membership was checked, and all ten meshes match the individual reviewed 3MF geometries within a 0.00015 mm round-trip coordinate tolerance. Bounding envelopes allow an 8 mm brim without overlap.
 
 ## Preview and reproducibility
 
