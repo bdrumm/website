@@ -1,6 +1,6 @@
-# Baguette holder V3.14 — engineering review
+# Baguette holder V3.15 — engineering review
 
-V3.14 gives all eight covered center-joint sockets 45° ceilings for the connection-down print orientation. Each roof extends above the existing pocket and tab tip, preserving insertion clearance and the square retaining shoulder. Both the base and lid receiving pockets are updated. A single combined 3MF includes both main halves and all eight test pieces. Physical fit, release force and durability remain untested.
+V3.15 gives each latch a 2° nominal inward set (0.657 mm at its free tip). The existing receiver holds the tongue approximately 0.220 mm outward when seated, creating spring preload. The hook, grip projection and added catch backing have mirrored 45° bevels on the side facing the center connection. The central locking shoulder remains square. All manufacturing geometry outside the latch regions is compared against V3.14. Physical fit, release force and durability remain untested.
 
 The band keeps its existing outer outline at the parting edge. Its full-height region extends 0.6 mm above and below the seam; a quintic transition blends into the original crust by Z ±8 mm with zero slope and curvature at its ends. The change expands the exterior from the crust while preserving the cavity and wall guard. It is actual CAD geometry, shared by the print objects and preview.
 
@@ -10,7 +10,7 @@ The nominal cavity-wall parameter increases from 3.0 to 3.6 mm. A 2.45 mm geomet
 
 The captured hinge pin increases from 2 to 3 mm diameter. Its internal bearing radius increases from 3.3 to 4.3 mm, with a thicker rear wall. The new bearing is clipped to the previous exterior rim profile, so the extra material grows inward and the outside remains equally flush. The hinge remains direct and print-in-place, with no support arms. Radial clearance is 0.4 mm and axial gaps are 0.45 mm. The reviewed opening range is 0–100°, without a mechanical hard stop.
 
-The two exterior latches retain their short 18 × 20 mm shell-contoured tongues, 1.8 mm nominal skin, thicker roots and 1.6 mm inward hooks. The tongue outline has 1.5 mm corner radii and its exposed edges are eased with a 0.45 mm radius. Each grip projects 2 mm and blends into the tongue with a 0.8 mm concave transition. Its rounded lower edge extends 0.8 mm beneath the original tip for finger purchase, while the upper grip height remains 3 mm. The receiver is relieved around the final rounded face to preserve running clearance. The internal retaining shoulder remains square for positive engagement. Measured retaining overlap remains about 1.22 mm, with about 3.67 mm behind the catch recess. Release travel is modeled at 2.1 mm.
+The two exterior latches retain their short 18 × 20 mm shell-contoured tongues, 1.8 mm nominal skin, thicker roots and 1.6 mm inward hooks. The tongue outline has 1.5 mm corner radii and its exposed edges are eased with a 0.45 mm radius. Each grip has a nominal 2 mm projection before the inward set and blends into the tongue with a 0.8 mm concave transition. Its rounded lower edge extends 0.8 mm beneath the original tip for finger purchase, while the upper grip height remains 3 mm. The receiver is relieved around the final rounded face to preserve running clearance. The internal retaining shoulder remains square for positive engagement. Measured retaining overlap is about 1.58 mm, with about 3.66 mm behind the catch recess. Total outward release is modeled at 2.757 mm from the free state, or approximately 2.536 mm from the seated state.
 
 ## Rounded strap attachments
 
@@ -18,15 +18,21 @@ The stepped fin layers and root collars are replaced by a strap eye with 1 mm ro
 
 ## Clear latch openings, fingernail access and softened edges
 
-Each grip has an elliptical scoop directly underneath, inset into the stationary base. It is nominally 14 mm wide, 6 mm high and 0.9 mm deep at its center. The inset falls to zero depth and zero slope at the perimeter, blending into the original shell rather than ending in a sharp pocket rim. The rounded lip still extends 0.8 mm below the latch tongue and projects 2 mm outward.
+Each grip has an elliptical scoop directly underneath, inset into the stationary base. It is nominally 14 mm wide, 6 mm high and 0.9 mm deep at its center. The inset falls to zero depth and zero slope at the perimeter, blending into the original shell rather than ending in a sharp pocket rim. The rounded lip still extends 0.8 mm below the latch tongue and retains its original grip profile before the inward set.
 
-A second scoop is cut into the underside of the projecting grip itself. Its elliptical tool is 10 mm wide and rises 0.6 mm into the grip. A 4 mm wide, 0.6 mm deep gauge can enter upward from below, while checked material remains above the recess and in front of it as a retaining rim. The latch hook and spring root are unchanged.
+A second scoop is cut into the underside of the projecting grip itself. Its elliptical tool is 10 mm wide and rises 0.6 mm into the grip. A 4 mm wide, 0.6 mm deep gauge can enter upward from below, while checked material remains above the recess and in front of it as a retaining rim. The middle of the hook and the spring root retain their original profiles before the inward set; only the connection-facing end of the hook is beveled.
 
 The latch-pocket mouths and exposed hinge-knuckle cap/bore entrances use 0.4 mm radius curves. The fillets are defined directly in their section profiles. The upper latch opening also has rounded corners. The full captured pin, central bearing surface, internal catch shoulders and already-rounded moving latch are retained. Edge easing removes material within the existing envelope.
 
 Four additional swept slot gauges check for leftover band bridges along both sides of both latches.
 
 CAD checks include insertion of a 0.3 mm thick, 4 mm wide fingernail gauge to 0.4 mm behind the original shell surface below each lip, plus a minimum 2.4 mm wall check at each scoop center. The measured center walls are about 2.61 mm thick. Actual comfort and opening force require the updated latch coupons.
+
+## Latch preload and print-facing bevels
+
+The print files contain the unloaded inward-set latch. The assembled preview and closed CAD section show its measured outward elastic seating displacement; the released preview uses 2.757 mm total tip displacement from the unloaded state. A 0.01 mm numerical separation represents seated contact against the existing pocket. The unloaded rigid shapes intentionally overlap at the catch; the fitted and released states do not. This geometric spring model does not predict retention force or material creep.
+
+Each half prints connection-down. The bevel normals are measured after forming the inward set, with +Y as the build direction on B and −Y on A. The hook and grip bevels leave the central engagement and fingernail inset intact; the receiver bevel trims only its added inward backing.
 
 ## Flush snap roots and blended interior
 
@@ -54,13 +60,13 @@ Insertion is modeled with 1.2 mm of inward tip deflection. A straight-beam scree
 
 ## Geometry and sliced-path review
 
-All **138 geometry checks pass**, covering four watertight shells, two print objects with two captured moving solids each, the retained 62 mm × 600 mm capsule clearance, zero interior ribs, covered sockets, solid male roots, removal of the old transverse ledges, snap insertion and return, retaining engagement, and released hinge/latch movement.
+All **152 geometry checks pass**, covering four watertight shells, two print objects with two captured moving solids each, the retained 62 mm × 600 mm capsule clearance, zero interior ribs, covered sockets, solid male roots, removal of the old transverse ledges, snap insertion and return, retaining engagement, and released hinge/latch movement.
 
 The continuous rotation certificate uses 501 poses at 0.2° spacing. It subtracts a bound on movement between poses and a 0.002 mm numerical allowance from the measured gaps, certifying at least **0.1408 mm** clearance over 0–100°. The center-joint insertion and spring-return certificates each retain at least **0.1480 mm** clearance. These are CAD motion bounds, not printer-tolerance guarantees.
 
 A separate enclosure diagnostic temporarily caps designed vents and bridges working seams to check one enclosed bread cavity without changing the printed vents or seams. The extrusion helper preserves polygon holes, preventing hidden pocket cuts from removing their inner covers.
 
-The review includes closed, rear, open and intermediate hinge renders, capped hinge and catch sections, a separated center joint, a capped covered-socket section, a dedicated underside latch view, and a strap-attachment close-up and a separate tail silhouette. Six actual sliced cross-sections are reviewed: four at former thin-wall stations (A at print Z 55.6 and 180.0 mm; B at 47.6 and 172.0 mm), plus one through each fingernail recess and hinge center (A at 162.0 mm; B at 153.8 mm). The former thin-wall sections have two separate base/lid material regions; the hinge-center sections also show the isolated captured-pin cross-section. `slice-walls.jpg` shows the planned paths with supports hidden. Three additional actual layers through the socket roofs at print Z 16.4, 18.0 and 19.6 mm show the openings progressively closing. `slice-roofs.jpg` records them. This is a regional review, not an all-layer or physical defect proof.
+The review includes closed, rear, open and intermediate hinge renders, capped hinge and catch sections, a separated center joint, a capped covered-socket section, a dedicated underside latch view, and a strap-attachment close-up and a separate tail silhouette. Six actual sliced cross-sections are reviewed: four at former thin-wall stations (A at print Z 55.6 and 180.0 mm; B at 47.6 and 172.0 mm), plus one through each fingernail recess and hinge center (A at 162.0 mm; B at 153.8 mm). The former thin-wall sections have two separate base/lid material regions; the hinge-center sections also show the isolated captured-pin cross-section. `slice-walls.jpg` shows the planned paths with supports hidden. Three additional actual layers through the socket roofs at print Z 16.4, 18.0 and 19.6 mm show the openings progressively closing. `slice-roofs.jpg` records them. Six additional layers through the mirrored latch bevels are shown in `slice-latches.jpg`, and `latch-bevel.jpg` looks toward the connection-facing chamfer. This is a regional review, not an all-layer or physical defect proof.
 
 ## Print files and assembly
 
@@ -71,7 +77,7 @@ The review includes closed, rear, open and intermediate hinge renders, capped hi
 
 Both fit the checked 300 × 320 × 325 mm envelope, including an 8 mm brim. Keep the supplied upright, 100° open orientation. The offline setup is Bambu Studio 02.08.02.61, Bambu H2C, Generic PLA, 0.4 mm nozzle, 0.20 mm layers, four walls, 15% infill and automatic supports. STL units are millimetres. The 3MF files contain oriented geometry, not prepared printer jobs. Nothing is sent to a printer.
 
-Final offline estimates are **A: 14h 47m 49s / 490.61 g**, **B: 14h 43m 42s / 489.38 g**, about **29.5 hours and 980 g** total before coupons. Exact STL, settings and G-code hashes are recorded in `review.json` and `slice-wall-review.json`.
+Final offline estimates are **A: 14h 36m 25s / 486.39 g**, **B: 14h 28m 44s / 486.24 g**, about **29.1 hours and 973 g** total before coupons. Exact STL, settings and G-code hashes are recorded in `review.json` and `slice-wall-review.json`.
 
 1. Print `joint_A` and `joint_B` first. Clear support from the covered slots through their joining-face openings, then verify full seating and retention.
 2. Print hinge and exterior latch coupons. The 0.4 mm hinge coupon reproduces the default bearing; 0.3 and 0.5 mm alternatives bracket fit. Check release force and repeated flexing with the taller grips.

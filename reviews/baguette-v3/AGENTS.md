@@ -31,4 +31,6 @@ The strap tail must fade into the actual narrowing shell instead of ending in a 
 
 Covered center-joint sockets must have 45-degree ceilings in the connection-down print orientation. Preserve tab clearance and the retaining shoulder; inspect the capped joint section and verify sloped roof face normals and cover thickness.
 
+Keep unloaded inward-set latch geometry distinct from its elastic seated state. Verify positive preload, seated contact, release clearance, and 45-degree connection-facing bevels in the actual unloaded print orientation. Preserve the central retaining shoulders and compare geometry outside the latch regions against the prior revision.
+
 The editable CAD and source checks are distributed in baguette-v3-source-and-print.zip. Extract to a writable model workspace before changing geometry. Publish rebuilt assets and both matching archives together.
