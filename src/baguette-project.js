@@ -14,7 +14,7 @@ const featureViews=[
 ];
 
 function buildFeatures(info,gallery,viewer){
- const panel=make('section','baguette-features');
+ const panel=make('section','baguette-features');panel.setAttribute('aria-label','Baguette holder features');
  const intro=make('div','baguette-section-intro');intro.append(make('span','section-number','DESIGN DETAILS'),make('h2','','The details, up close.'),make('p','','Explore each feature alongside the geometry that makes it work.'));
  panel.append(intro);
  const figures=[...gallery.querySelectorAll('figure')];
@@ -56,7 +56,7 @@ const useCases=[
 ];
 
 function buildUseCases(){
- const panel=make('section','baguette-use-cases');
+ const panel=make('section','baguette-use-cases');panel.setAttribute('aria-label','Baguette holder use cases');
  const intro=make('div','baguette-section-intro');intro.append(make('span','section-number','OUT IN THE WORLD'),make('h2','','Made to come along.'),make('p','','From the morning bakery run to a weekend outside.'));
  const note=make('p','baguette-concept-note','Model-based concept renderings · Carry straps shown as accessories.');intro.append(note);panel.append(intro);
  const grid=make('div','baguette-use-case-grid');
@@ -69,26 +69,9 @@ function buildUseCases(){
  panel.append(grid);return panel;
 }
 
-function buildContentViews(features,useCases){
- const wrapper=make('div','baguette-content-views');
- const tabs=make('div','baguette-content-tabs');tabs.setAttribute('role','tablist');tabs.setAttribute('aria-label','Explore the baguette holder');
- const entries=[['use-cases','Use cases',useCases],['features','Features',features]];
- const buttons=entries.map(([id,label,panel])=>{
-  const button=make('button','',label);button.type='button';button.id=`baguette-tab-${id}`;button.setAttribute('role','tab');button.setAttribute('aria-controls',`baguette-panel-${id}`);
-  panel.id=`baguette-panel-${id}`;panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby',button.id);panel.tabIndex=0;tabs.append(button);return button;
- });
- const select=index=>{entries.forEach(([, ,panel],i)=>{panel.hidden=i!==index;buttons[i].setAttribute('aria-selected',String(i===index));buttons[i].tabIndex=i===index?0:-1;});};
- buttons.forEach((button,index)=>{
-  button.addEventListener('click',()=>select(index));
-  button.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(index+1)%buttons.length;if(event.key==='ArrowLeft')next=(index+buttons.length-1)%buttons.length;if(event.key==='Home')next=0;if(event.key==='End')next=buttons.length-1;if(next===undefined)return;event.preventDefault();select(next);buttons[next].focus();});
- });
- // Shared model-view links still open their requested geometry directly.
- select(new URLSearchParams(location.search).has('view')?1:0);wrapper.append(tabs,...entries.map(([, ,panel])=>panel));return wrapper;
-}
-
 export async function buildBaguetteProject(container,project){
  document.documentElement.classList.add('baguette-project-page');
- const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href=new URL('../baguette.css?v=cc12940e72',import.meta.url).href;document.head.append(sheet);
+ const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href=new URL('../baguette.css?v=79ff1e0f93',import.meta.url).href;document.head.append(sheet);
  const experience=document.createElement('section');experience.className='baguette-experience';experience.setAttribute('aria-label','Baguette holder design and interactive preview');container.append(experience);
  const loading=document.createElement('p');loading.className='baguette-loading';loading.textContent='Preparing the working model…';loading.setAttribute('role','status');experience.append(loading);
  try{
@@ -108,9 +91,7 @@ export async function buildBaguetteProject(container,project){
   const note=document.createElement('span');note.className='prototype';note.textContent=review.querySelector('.prototype')?.textContent||'Engineering prototype';heading.append(revision,note);
   const viewer=copy(originalViewer),info=copy(details),gallery=copy(renders);
   const hint=document.createElement('p');hint.className='baguette-gesture-hint';hint.textContent='Drag to rotate · Scroll to move the page';viewer.querySelector('[data-model-stage]').after(hint);
-  const features=buildFeatures(info,gallery,viewer);features.prepend(heading,viewer);
-  const contentViews=buildContentViews(features,buildUseCases());
-  experience.replaceChildren(contentViews);
+  experience.replaceChildren(heading,viewer,buildUseCases(),buildFeatures(info,gallery,viewer));
   document.querySelector('meta[name="description"]')?.setAttribute('content',project.description?.[0]||project.summary);
   const revisionQuery=new URL(review.querySelector('script[src*="review.js"]').getAttribute('src'),reviewURL).search;
   const modelURL=assetURL('baguette-v3.glb'+revisionQuery);

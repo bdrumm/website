@@ -25,11 +25,8 @@
 .baguette-experience h3{font-size:clamp(24px,2.4vw,32px);letter-spacing:-.04em;line-height:1.18;margin:16px 0}
 .baguette-experience p{font-size:16px;line-height:1.65}
 .baguette-experience .section-number{font-family:var(--font-geist-mono),monospace;font-size:12px;letter-spacing:.04em;color:var(--review-muted);padding:0}
-.baguette-content-tabs{display:flex;gap:32px;border-bottom:1px solid var(--border);margin:0 0 48px}
-.baguette-content-tabs button{position:relative;padding:18px 0;border:0;background:none;color:var(--review-muted);font-family:var(--font-geist-mono),monospace;font-size:14px;text-transform:uppercase;cursor:pointer}
-.baguette-content-tabs button[aria-selected=true]{color:var(--foreground)}
-.baguette-content-tabs button[aria-selected=true]:after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:3px;background:var(--foreground)}
-.baguette-experience button:focus-visible,.baguette-experience [role=tabpanel]:focus-visible,.baguette-experience summary:focus-visible{outline:2px solid var(--review-accent);outline-offset:5px}
+.baguette-experience button:focus-visible,.baguette-experience summary:focus-visible{outline:2px solid var(--review-accent);outline-offset:5px}
+.baguette-use-cases+.baguette-features{margin-top:64px;padding-top:64px;border-top:1px solid var(--border)}
 .baguette-section-intro{margin-bottom:40px;max-width:750px}
 .baguette-section-intro>p{color:var(--review-muted);margin:0}
 .baguette-feature-row{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);align-items:center;margin-bottom:24px;border:2px solid var(--border);background:var(--mint)}
@@ -57,7 +54,7 @@
 .baguette-use-case-lead figure{border-right:1px solid var(--border)}.baguette-use-case-lead .baguette-use-case-copy{padding:clamp(24px,3.5vw,52px);border-top:0}
 @media(max-width:760px){
  .baguette-experience .toolbar{padding:12px;gap:6px}.baguette-experience .toolbar button{padding:9px 10px;font-size:13px}.baguette-experience .toolbar button[data-copy-link]{margin-left:0}.baguette-experience .controls{gap:12px;padding:16px}.baguette-experience .angle{flex-basis:100%}.baguette-experience [data-model-stage]{height:340px}.baguette-experience .baguette-gesture-hint{font-size:11px;padding-left:16px}
- .baguette-content-tabs{margin-bottom:32px}.baguette-section-intro{margin-bottom:28px}
+ .baguette-section-intro{margin-bottom:28px}.baguette-use-cases+.baguette-features{margin-top:40px;padding-top:40px}
  .baguette-project-page .shop-heading{grid-template-columns:minmax(0,1fr)}.baguette-project-page .shop-heading h1{font-size:clamp(44px,11vw,76px)}
  .baguette-feature-row{grid-template-columns:1fr}.baguette-feature-copy{padding:24px}.baguette-feature-copy p{margin-bottom:10px}.baguette-feature-photos{padding:16px;border-left:0;border-top:1px solid var(--border)}
  .baguette-use-case-grid,.baguette-use-case-lead,.baguette-experience .renders{grid-template-columns:1fr;gap:24px}.baguette-use-case-lead{gap:0}.baguette-use-case-lead figure{border-right:0}.baguette-use-case-lead .baguette-use-case-copy{border-top:1px solid var(--border)}
