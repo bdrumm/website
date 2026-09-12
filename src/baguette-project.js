@@ -95,7 +95,7 @@ export async function buildBaguetteProject(container,project){
   document.querySelector('meta[name="description"]')?.setAttribute('content',project.description?.[0]||project.summary);
   const revisionQuery=new URL(review.querySelector('script[src*="review.js"]').getAttribute('src'),reviewURL).search;
   const modelURL=assetURL('baguette-v3.glb'+revisionQuery);
-  const [model,{mountBaguetteViewer}]=await Promise.all([fetch(modelURL,{cache:'no-cache'}),import('../assets/baguette-viewer.js?v=6c97fd3f5c')]);
+  const [model,{mountBaguetteViewer}]=await Promise.all([fetch(modelURL,{cache:'no-cache'}),import('../assets/baguette-viewer.js'+revisionQuery)]);
   if(!model.ok)throw Error('Model unavailable');
   await mountBaguetteViewer(viewer,await model.arrayBuffer());
  }catch{
