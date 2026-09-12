@@ -6,7 +6,7 @@
   try { preference = localStorage.getItem(key); } catch {}
   const valid = value => value === 'dark' || value === 'light';
   function apply(value) {
-    const theme = valid(value) ? value : system.matches ? 'dark' : 'light';
+    const theme = valid(value) ? value : 'light';
     document.documentElement.dataset.theme = theme;
     document.querySelectorAll('[data-theme-toggle]').forEach(button => {
       button.setAttribute('aria-label', `Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`);

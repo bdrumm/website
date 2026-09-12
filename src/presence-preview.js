@@ -1,0 +1,12 @@
+export function mountPresencePreview(host){
+ const canvas=document.createElement('canvas');canvas.width=720;canvas.height=460;canvas.setAttribute('role','img');canvas.setAttribute('aria-label','Animated illustrative sensing field with eight radio nodes and moving synthetic targets');host.append(canvas);
+ const button=document.createElement('button');button.type='button';host.append(button);const c=canvas.getContext('2d'),reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;let playing=!reduced,visible=true,raf=0,last=0,t=0;
+ function label(){button.textContent=playing?'Pause preview':'Play preview';button.setAttribute('aria-pressed',String(playing));}label();button.onclick=()=>{playing=!playing;label();};
+ const nodes=[[70,90],[280,65],[500,70],[660,130],[660,360],[450,390],[250,385],[60,330]];
+ function draw(){c.fillStyle='#071522';c.fillRect(0,0,720,460);c.strokeStyle='#15313e';c.lineWidth=1;for(let x=30;x<720;x+=30){c.beginPath();c.moveTo(x,45);c.lineTo(x,420);c.stroke();}for(let y=60;y<420;y+=30){c.beginPath();c.moveTo(30,y);c.lineTo(690,y);c.stroke();}
+ const targets=[[360+160*Math.sin(t*.4),230+75*Math.cos(t*.53)],[360+100*Math.cos(t*.32+2),230+95*Math.sin(t*.43+2)]];
+ nodes.forEach(([x,y],i)=>{nodes.slice(i+1).forEach(([a,b],j)=>{c.strokeStyle=`rgba(110,181,255,${.04+.055*(1+Math.sin(t*1.8+i+j))})`;c.beginPath();c.moveTo(x,y);c.lineTo(a,b);c.stroke();});const r=8+(t*15+i*6)%40;c.strokeStyle=`rgba(84,230,194,${(1-r/48)*.3})`;c.beginPath();c.arc(x,y,r,0,7);c.stroke();c.fillStyle='#54e6c2';c.fillRect(x-4,y-4,8,8);});
+ targets.forEach(([x,y],i)=>{const g=c.createRadialGradient(x,y,2,x,y,85);g.addColorStop(0,i?'#c2a9f288':'#54e6c288');g.addColorStop(1,'#54e6c200');c.fillStyle=g;c.fillRect(x-85,y-85,170,170);c.strokeStyle=i?'#c2a9f2':'#8be3e2';c.lineWidth=2;c.beginPath();c.arc(x,y,10,0,7);c.stroke();c.beginPath();c.moveTo(x-17,y);c.lineTo(x+17,y);c.moveTo(x,y-17);c.lineTo(x,y+17);c.stroke();});c.fillStyle='#b4d8e4';c.font='12px monospace';c.fillText('CSI / PRESENCE FIELD',24,28);c.fillText('SYNTHETIC SIGNAL · 08 NODES',24,440);}
+ function tick(now){const dt=last?Math.min((now-last)/1000,.05):0;last=now;if(visible&&!document.hidden){if(playing)t+=dt;draw();}raf=requestAnimationFrame(tick);}raf=requestAnimationFrame(tick);
+ const observer=new IntersectionObserver(e=>{visible=e[0].isIntersecting;});observer.observe(host);addEventListener('pagehide',()=>{cancelAnimationFrame(raf);observer.disconnect();},{once:true});
+}

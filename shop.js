@@ -15,12 +15,19 @@ function projectHref(id){return projects.find(p=>p.id===id)?.projectUrl||'projec
 function empty(title,copy){const box=el('div',undefined,'empty-state');box.append(el('h2',title),el('p',copy));root.append(box);}
 function add(p){cart=normalizeCart([...cart,{id:p.id,quantity:1}],projects);save();document.getElementById('shop-status').textContent=`${p.title} added to your cart.`;}
 function catalogue(){
+ const section=document.body.dataset.section;
+ if(!section){const categories=el('div',undefined,'project-sections');
+ for(const [title,href,copy] of [['Software / Hardware','projects-hardware.html','Apps, connected devices, and digital experiences.'],['3D','projects-3d.html','Printed objects, articulated forms, and dimensional studies.']]){const card=link('',href,'project-section');card.append(el('h2',title),el('p',copy),el('span','Explore projects →','section-link'));categories.append(card);}root.append(categories);return;}
+ root.append(link('← All categories','projects.html','secondary-button category-back'));
+ const selected=projects.filter(p=>section==='3d'?p.section==='3d':['hardware','software'].includes(p.section));
+
  if(!projects.length){empty('Projects are on their way.','Get in touch to discuss a project.');root.append(link('Get in touch →','index.html#contact-title','secondary-button'));return;}
  const grid=el('div',undefined,'project-grid');
- for(const [index,p] of projects.entries()){
+ for(const [index,p] of selected.entries()){
   const card=el('article',undefined,'project-card');card.dataset.projectId=p.id;
-  if(p.experience==='fly-lab'){
-   const preview=el('iframe');preview.src='fly-lab/specimen.html';preview.title='Fly Lab — interactive fly anatomy';preview.loading='lazy';preview.className='catalogue-model';preview.style.cssText='display:block;width:100%;height:300px;border:0;background:#1b241b';card.append(preview);
+  if(p.experience==='fly-lab'){const preview=el('iframe');preview.src='fly-lab/walking-preview.html';preview.title='Fly walking automatically on a surface';preview.loading='lazy';preview.style.cssText='display:block;width:100%;height:280px;border:0;margin-bottom:22px';card.append(preview);
+  }else if(p.experience==='radar'){
+   const preview=el('div',undefined,'presence-preview');card.append(preview);import('./src/presence-preview.js?v=1').then(({mountPresencePreview})=>mountPresencePreview(preview));
   }else if(p.modelUrl){
    const preview=el('div',undefined,'catalogue-model');card.append(preview);
    const isGarage=p.experience==='garage';

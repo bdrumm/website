@@ -336,3 +336,19 @@ body{background:var(--background)}
  .home-main .contact{display:block;padding:26px 22px;margin:40px 0}.contact-copy{margin-bottom:32px}.contact-copy h2{margin-top:24px}
  .project-grid{grid-template-columns:1fr}.project-card{padding:22px}.catalogue-model .model-stage{height:300px}
 }
+
+.project-section h2{overflow-wrap:anywhere;font-size:clamp(36px,4.6vw,72px)}
+
+.presence-preview{position:relative;margin-bottom:22px;background:#071522}.presence-preview canvas{display:block;width:100%;height:280px;object-fit:cover}.presence-preview button{position:absolute;right:12px;bottom:12px;background:#102d38;color:#8be3e2;border:1px solid #50699e;padding:8px 10px;font:12px monospace;cursor:pointer}.fly-lab-embed{display:block;width:100%;height:85svh;min-height:560px;border:1px solid var(--border);margin-top:24px;background:#101810}
+
+/* Warm neutral surfaces with restrained sage, clay, and lavender accents. */
+:root,html[data-theme="light"]{--background:#f2eee6;--foreground:#302e29;--primary:#302e29;--accent:#756653;--card:#e7e3d9;--border:#b7aea0;--coral:#e5d8cd;--mint:#dfe3d8;--violet:#e1dce4;--field:#faf7f1;--muted:#726c61;--accent-violet:#81738a;--space-glow-a:#c6b9a52b;--space-glow-b:#b0bdab26}
+html[data-theme="dark"]{--background:#24231f;--foreground:#ede7db;--primary:#d8c7ad;--accent:#c4b394;--card:#302f29;--border:#625c50;--coral:#3c332d;--mint:#30382e;--violet:#38333c;--field:#2c2b26;--muted:#b9b0a0;--accent-violet:#b6a6bc;--space-glow-a:#c6b9a514;--space-glow-b:#b0bdab14}
+html body{background:var(--background);color:var(--foreground)}
+html .shop-heading,html .project-card,html .project-section{border-color:var(--border)}
+html .shop-heading{background:var(--card)}
+html .shop-heading h1,html .shop-heading .section-number{color:var(--foreground)}
+html .shop-heading p{color:var(--muted)}
+html .site-nav a,html .theme-toggle{background:var(--card);color:var(--foreground);border-color:var(--border)}
+html .brand-dot,html .category-back,html footer a{color:var(--accent)}
+.catalogue-model .model-controls,.catalogue-model .viewer-status,.catalogue-model .app-walkthrough{display:none}

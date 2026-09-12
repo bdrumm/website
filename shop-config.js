@@ -78,7 +78,7 @@ window.PARAMETRIC_SHOP = {
     id: 'fly-lab',
     experience: 'fly-lab',
     title: 'Fly Lab',
-    section: 'research',
+    section: 'software',
     category: 'NEURAL SIMULATION / 001',
     projectUrl: 'fly-lab/',
     summary: 'A real fly connectome, configurable experiments, and an interactive 3D training workspace.',
