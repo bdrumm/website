@@ -20,10 +20,10 @@ window.PARAMETRIC_SHOP = {
     title: 'Baguette holder',
     section: '3d',
     category: 'PRINT STUDY / 002',
-    summary: 'Two printed segments. One complete form.',
+    summary: 'A sculpted shell. A considered way to carry.',
     description: [
-      'The completed baguette holder, with both printed segments joined and the hinged case closed. Rotate the model to explore the continuous sculpted shell and closure details.',
-      'Based on the matching baguette_v2.3mf design, with the center join blended into a continuous display shell. Shown in a warm gold silk finish with soft studio reflections.'
+      'Explore the working printable design, with integrated center snaps, a rim hinge, recessed latch grips and strap roots that blend into the body.',
+      'Open the lid, inspect the hinge and latch sections, separate the print segments, and review the matching CAD renders and print files.'
     ],
     modelUrl: 'assets/models/baguette-holder.glb',
     available: false

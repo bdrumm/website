@@ -3,7 +3,7 @@ import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 
-export async function mountReview(root, buffer) {
+export async function mountReview(root, buffer, {configureControls} = {}) {
  const host=root.querySelector('[data-model-stage]'),status=root.querySelector('[data-status]');
  let renderer;
  try { renderer=new T.WebGLRenderer({antialias:true,alpha:true}); }
@@ -13,7 +13,7 @@ export async function mountReview(root, buffer) {
  const scene=new T.Scene(),camera=new T.OrthographicCamera(-350,350,210,-210,.1,4000);
  const pmrem=new T.PMREMGenerator(renderer),room=new RoomEnvironment(),env=pmrem.fromScene(room,.04);scene.environment=env.texture;scene.environmentIntensity=.85;room.dispose();pmrem.dispose();
  scene.add(new T.HemisphereLight(0xffffff,0x778496,1.6));const key=new T.DirectionalLight(0xfff4e4,2.2);key.position.set(-200,450,500);scene.add(key);
- const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.minZoom=.4;controls.maxZoom=8;
+ const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.minZoom=.4;controls.maxZoom=8;configureControls?.(camera,controls);
  const {scene:model}=await new GLTFLoader().parseAsync(buffer,'');scene.add(model);
  const hinge=model.getObjectByName('LidHinge'),meshes=[];model.traverse(o=>{if(o.isMesh){o.material=o.material.clone();o.material.side=T.DoubleSide;meshes.push({mesh:o,rest:o.position.clone(),color:o.material.color.clone()});}});
  const maxAngle=model.getObjectByName('BaguetteV3').userData.maxOpenAngle;
