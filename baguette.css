@@ -1,8 +1,22 @@
 .project-detail.baguette-detail{display:block}
-.baguette-experience{--review-surface:var(--stage);--review-accent:var(--primary);--review-muted:var(--muted);color:var(--foreground);width:100%}
+.baguette-experience{--review-surface:var(--field);--review-accent:var(--primary);--review-muted:var(--muted);color:var(--foreground);width:100%}
 .baguette-project-page .shop-heading{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}
 .baguette-project-page .shop-heading h1{font-size:clamp(52px,6.8vw,104px);overflow-wrap:anywhere}
 .baguette-review-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+.baguette-finish-bar{display:flex;align-items:center;justify-content:space-between;gap:24px;border:2px solid var(--border);border-bottom:0;padding:20px 22px;background:var(--review-surface)}
+.baguette-finish-picker{display:flex;flex-wrap:wrap;gap:8px;border:0;margin:0;padding:0;min-width:0}
+.baguette-finish-picker legend{font:14px var(--font-geist-mono),monospace;margin-bottom:12px;padding:0}.baguette-finish-picker legend span{color:var(--review-accent)}
+.baguette-finish-option{display:flex;align-items:center;gap:9px;min-height:44px;padding:8px 12px;background:var(--field);color:var(--foreground);border:1px solid var(--border);font:14px var(--font-geist-sans),sans-serif;cursor:pointer}
+.baguette-finish-option[aria-pressed=true]{outline:2px solid var(--review-accent);outline-offset:2px}.baguette-finish-chip{width:22px;height:22px;background:var(--finish-color);border:1px solid #0003;border-radius:50%}
+.baguette-parallax-toggle{background:transparent;color:var(--foreground);border:1px solid var(--border);min-height:44px;padding:10px 14px;font:12px var(--font-geist-mono),monospace;cursor:pointer;white-space:nowrap}
+.baguette-lifestyle-preview{position:relative;isolation:isolate;aspect-ratio:3/2;overflow:hidden;background:var(--review-surface);touch-action:pan-y pinch-zoom;--scene-x:0px;--scene-y:0px}
+.baguette-experience .baguette-scene-background,.baguette-experience .baguette-scene-occlusion{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none;transform:translate(var(--scene-x),var(--scene-y)) scale(1.018);background:none}
+.baguette-scene-background{z-index:0}.baguette-scene-occlusion{z-index:2}
+.baguette-render-canvas{position:absolute;inset:0;display:block;width:100%;height:100%;z-index:1;pointer-events:none}
+.baguette-experience .baguette-scene-fallback{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:3;background:var(--review-surface)}
+.baguette-scene-status{position:absolute;bottom:12px;left:12px;z-index:4;background:var(--field);color:var(--foreground);font:12px var(--font-geist-mono),monospace;padding:9px 12px;border:1px solid var(--border)}
+.preview-unavailable .baguette-scene-fallback{display:block}.baguette-lifestyle-preview:focus-visible{outline:3px solid var(--review-accent);outline-offset:4px}
+.baguette-cad-preview{position:relative;aspect-ratio:8/5;overflow:hidden;background:#4d545e}.baguette-cad-preview.is-rendered>img{visibility:hidden}
 .baguette-experience .prototype{font-size:13px;color:var(--review-muted)}
 .baguette-experience #baguette-v3-web{border:2px solid var(--border);background:var(--review-surface);margin:0 0 40px;overflow:hidden}
 .baguette-experience .toolbar{display:flex;flex-wrap:wrap;gap:8px;padding:18px;border-bottom:1px solid var(--border);background:var(--mint)}
@@ -53,6 +67,7 @@
 .baguette-use-case-lead{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);align-items:center}
 .baguette-use-case-lead figure{border-right:1px solid var(--border)}.baguette-use-case-lead .baguette-use-case-copy{padding:clamp(24px,3.5vw,52px);border-top:0}
 @media(max-width:760px){
+ .baguette-finish-bar{display:block;padding:16px}.baguette-finish-picker{gap:9px}.baguette-finish-option{padding:8px 10px}.baguette-parallax-toggle{margin-top:16px}
  .baguette-experience .toolbar{padding:12px;gap:6px}.baguette-experience .toolbar button{padding:9px 10px;font-size:13px}.baguette-experience .toolbar button[data-copy-link]{margin-left:0}.baguette-experience .controls{gap:12px;padding:16px}.baguette-experience .angle{flex-basis:100%}.baguette-experience [data-model-stage]{height:340px}.baguette-experience .baguette-gesture-hint{font-size:11px;padding-left:16px}
  .baguette-section-intro{margin-bottom:28px}.baguette-use-cases+.baguette-features{margin-top:40px;padding-top:40px}
  .baguette-project-page .shop-heading{grid-template-columns:minmax(0,1fr)}.baguette-project-page .shop-heading h1{font-size:clamp(44px,11vw,76px)}

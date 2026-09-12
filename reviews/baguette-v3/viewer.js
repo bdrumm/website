@@ -3,7 +3,7 @@ import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 
-export async function mountReview(root, buffer, {configureControls} = {}) {
+export async function mountReview(root, buffer, {configureControls,initialColor,configureMaterial,lighting={}} = {}) {
  const host=root.querySelector('[data-model-stage]'),status=root.querySelector('[data-status]');
  let renderer;
  try { renderer=new T.WebGLRenderer({antialias:true,alpha:true}); }
@@ -11,11 +11,11 @@ export async function mountReview(root, buffer, {configureControls} = {}) {
  renderer.setPixelRatio(Math.min(devicePixelRatio,2));renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1;
  renderer.localClippingEnabled=true;host.append(renderer.domElement);renderer.domElement.setAttribute('aria-label','Baguette V3 printable assembly. Drag to orbit, pinch or scroll to zoom.');
  const scene=new T.Scene(),camera=new T.OrthographicCamera(-350,350,210,-210,.1,4000);
- const pmrem=new T.PMREMGenerator(renderer),room=new RoomEnvironment(),env=pmrem.fromScene(room,.04);scene.environment=env.texture;scene.environmentIntensity=.85;room.dispose();pmrem.dispose();
- scene.add(new T.HemisphereLight(0xffffff,0x778496,1.6));const key=new T.DirectionalLight(0xfff4e4,2.2);key.position.set(-200,450,500);scene.add(key);
+ const pmrem=new T.PMREMGenerator(renderer),room=new RoomEnvironment(),env=pmrem.fromScene(room,.04);scene.environment=env.texture;scene.environmentIntensity=lighting.environment??.85;room.dispose();pmrem.dispose();
+ scene.add(new T.HemisphereLight(0xffffff,0x778496,lighting.ambient??1.6));const key=new T.DirectionalLight(0xfff4e4,lighting.key??2.2);key.position.set(-200,450,500);scene.add(key);
  const controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.minZoom=.4;controls.maxZoom=8;configureControls?.(camera,controls);
  const {scene:model}=await new GLTFLoader().parseAsync(buffer,'');scene.add(model);
- const hinge=model.getObjectByName('LidHinge'),meshes=[];model.traverse(o=>{if(o.isMesh){o.material=o.material.clone();o.material.side=T.DoubleSide;meshes.push({mesh:o,rest:o.position.clone(),color:o.material.color.clone()});}});
+ const hinge=model.getObjectByName('LidHinge'),meshes=[];model.traverse(o=>{if(o.isMesh){o.material=o.material.clone();o.material.side=T.DoubleSide;configureMaterial?.(o.material);if(initialColor&&!o.userData.reviewSection)o.material.color.set(initialColor);meshes.push({mesh:o,rest:o.position.clone(),color:o.material.color.clone()});}});
  const maxAngle=model.getObjectByName('BaguetteV3').userData.maxOpenAngle;
  const angle=root.querySelector('[data-angle]'),angleValue=root.querySelector('[data-angle-value]'),exploded=root.querySelector('[data-explode]'),cutaway=root.querySelector('[data-cutaway]');
  angle.max=String(maxAngle);
@@ -25,7 +25,7 @@ export async function mountReview(root, buffer, {configureControls} = {}) {
  function pose(){const degrees=Number(angle.value);hinge.rotation.x=-T.MathUtils.degToRad(degrees);angleValue.textContent=degrees+'°';
   for(const {mesh,rest,color} of meshes){mesh.visible=mesh.userData.reviewSection?(mesh.userData.sectionType==='joint'?view==='jointsection':view==='section'):!['section','jointsection'].includes(view);mesh.position.copy(rest);if(mesh.name.endsWith('_A'))mesh.position.x-=exploded.checked?24:0;else if(mesh.name.endsWith('_B'))mesh.position.x+=exploded.checked?24:0;
    if(mesh.morphTargetInfluences)mesh.morphTargetInfluences[0]=degrees>0?1:0;
-   mesh.material.color.copy(color);if(['catch','section'].includes(view)&&mesh.name.startsWith('base'))mesh.material.color.set('#638c9a');
+   mesh.material.color.copy(color);if(['catch','section'].includes(view))mesh.material.color.set(mesh.name.startsWith('base')?'#638c9a':'#d8b57b');
    mesh.material.clippingPlanes=cutaway.checked?(['section','jointsection'].includes(view)?[]:view==='catch'?[new T.Plane(new T.Vector3(-1,0,0),150),new T.Plane(new T.Vector3(1,0,0),-136),new T.Plane(new T.Vector3(0,0,1),-30)]:[new T.Plane(new T.Vector3(0,-1,0),0)]):[];
   }
   status.textContent=view==='jointsection'?'Light: section A tongue · Dark: section B socket':view==='section'?'Blue: base / pin · Gold: lid · '+degrees+'°':degrees>0?'Latches shown released · '+degrees+'° open':(view==='catch'?'Blue: catch · Gold: latch':'Closed assembly');
@@ -36,6 +36,7 @@ export async function mountReview(root, buffer, {configureControls} = {}) {
  const params=new URLSearchParams(location.search);if(root.dataset.remote==='true'){angle.value=String(Math.max(0,Math.min(maxAngle,params.has('angle')?Number(params.get('angle')):Number(angle.value))));exploded.checked=params.get('explode')==='1';cutaway.checked=params.get('cut')==='1';view=presets[params.get('view')]?params.get('view'):view;}
  pose();select(view);const observer=new ResizeObserver(resize);observer.observe(host);
  root.querySelector('[data-copy-link]')?.addEventListener('click',async()=>{const url=new URL(location.href);url.searchParams.set('view',view);url.searchParams.set('angle',angle.value);url.searchParams.set('explode',exploded.checked?'1':'0');url.searchParams.set('cut',cutaway.checked?'1':'0');try{await navigator.clipboard.writeText(url.href);status.textContent='Review link copied';}catch{history.replaceState(null,'',url);status.textContent='This view is saved in the address bar';}});
- function frame(){if(disposed)return;requestAnimationFrame(frame);controls.update();if(!document.hidden)renderer.render(scene,camera);}frame();
+ function frame(){if(disposed)return;requestAnimationFrame(frame);controls.update();const rect=host.getBoundingClientRect();if(!document.hidden&&rect.width&&rect.bottom>0&&rect.top<innerHeight)renderer.render(scene,camera);}frame();
  window.addEventListener('pagehide',()=>{disposed=true;observer.disconnect();controls.dispose();env.dispose();meshes.forEach(({mesh})=>{mesh.geometry.dispose();mesh.material.dispose();});renderer.dispose();},{once:true});
+ return {setColor(value){for(const {mesh,color} of meshes)if(!mesh.userData.reviewSection)color.set(value);pose();}};
 }

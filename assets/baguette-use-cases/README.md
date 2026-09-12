@@ -1,5 +1,19 @@
 # Baguette holder use-case renderings
 
+## Live CAD composites · 2026-09-12
+
+The public project page now uses the five `*-background.jpg` files as clean background plates. The product, cord loops and webbing are rendered in the browser above each plate. The earlier complete illustrations below are preserved as source assets and are no longer used as the public lifestyle previews.
+
+Background plates were edited with the **built-in image-generation tool** from their corresponding `carry.jpg`, `rain.jpg`, `picnic.jpg`, `travel.jpg` and `backpacking.jpg` originals. Outputs were converted to 1536×1024 JPEGs at quality 88. The real product geometry comes from `../../reviews/baguette-v3/baguette-v3.glb` (V3.17), not from image generation. See `../../docs/baguette-composites.md` for rendering and calibration details.
+
+Saved assets: `carry-background.jpg`, `rain-background.jpg`, `picnic-background.jpg`, `travel-background.jpg`, `backpacking-background.jpg` in this directory.
+
+### Exact background-edit prompt
+
+Use case: precise-object-edit. Create a CLEAN BACKGROUND PLATE from the supplied lifestyle photograph. Remove the entire ivory baguette case, ALL of its carry strap/webbing/cord loops, and every product-cast shadow. Reconstruct the clothing, person, fabric, table or scenery naturally and seamlessly behind those removed objects. Preserve the person, pose, face crop, hands, clothing, backpack (including the backpack's own original black/olive shoulder harness), background, camera, framing, existing natural lighting, weather, other objects and resolution EXACTLY. Do not introduce any replacement product, case, strap, bag, bread or new foreground object. For the picnic scene only, also remove the baguette INSIDE the case, leaving uninterrupted linen blanket where the entire case and bread were. For rain, keep raindrops on the coat and the rainy background. This will be used behind an accurately positioned real 3D product, so the formerly occupied product area must be completely empty and naturally inpainted. Landscape 1536x1024, no text or watermark.
+
+## Original illustration provenance
+
 Generated with the built-in image-generation tool on 2026-09-12, using the V3.14 CAD renders in `reviews/baguette-v3/` as references. These are concept illustrations, not photographs of a tested physical product. Straps are illustrative accessories and are not part of the printable geometry.
 
 ## Source references

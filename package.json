@@ -7,7 +7,7 @@
     "build:model": "node scripts/color-arowana.mjs",
     "build:viewer": "esbuild src/model-viewer.js --bundle --format=esm --minify --outfile=assets/model-viewer.js",
     "build": "npm run build:viewer && npm run build:garage && npm run build:home && npm run build:station-viewer && npm run build:baguette-page",
-    "test": "node --test src/garage-model.test.mjs src/model-rotation-controls.test.mjs shop-core.test.mjs services/checkout/worker.test.mjs src/garage-configuration.test.mjs src/home-physics.test.mjs src/home-models.test.mjs src/baguette-model.test.mjs src/radar-simulation.test.mjs src/radar-fusion.test.mjs src/radar-presets.test.mjs src/radar-building.test.mjs src/garage-review-state.test.mjs",
+    "test": "node --test src/garage-model.test.mjs src/model-rotation-controls.test.mjs shop-core.test.mjs services/checkout/worker.test.mjs src/garage-configuration.test.mjs src/home-physics.test.mjs src/home-models.test.mjs src/baguette-model.test.mjs src/radar-simulation.test.mjs src/radar-fusion.test.mjs src/radar-presets.test.mjs src/radar-building.test.mjs src/garage-review-state.test.mjs src/baguette-composites.test.mjs",
     "build:garage": "esbuild src/garage-scene.js --bundle --format=esm --minify --outfile=assets/garage-viewer.js && npm run build:garage-print",
     "build:home": "esbuild src/home-space.js --bundle --format=esm --minify --outfile=assets/home-space.js",
     "build:home-station": "node scripts/build-home-station.mjs",

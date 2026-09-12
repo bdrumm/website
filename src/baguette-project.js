@@ -3,6 +3,15 @@ const assetURL=path=>new URL(path,reviewURL).href;
 
 const make=(tag,className,text)=>{const node=document.createElement(tag);if(className)node.className=className;if(text)node.textContent=text;return node;};
 
+function buildFinishPicker(finishes){
+ const bar=make('div','baguette-finish-bar'),group=make('fieldset','baguette-finish-picker');
+ const legend=make('legend','','Color · '),name=make('span');legend.append(name);group.append(legend);
+ const buttons=BAGUETTE_FINISHES.map(finish=>{const button=make('button','baguette-finish-option');button.type='button';button.dataset.finish=finish.id;button.setAttribute('aria-label',finish.name);const chip=make('span','baguette-finish-chip');chip.style.setProperty('--finish-color',finish.color);chip.setAttribute('aria-hidden','true');button.append(chip,make('span','',finish.name));button.addEventListener('click',()=>finishes.set(finish.id));group.append(button);return button;});
+ const motion=make('button','baguette-parallax-toggle','Parallax on');motion.type='button';motion.dataset.parallaxToggle='';motion.setAttribute('aria-pressed','true');
+ finishes.subscribe(finish=>{name.textContent=finish.name;for(const button of buttons)button.setAttribute('aria-pressed',String(button.dataset.finish===finish.id));});
+ bar.append(group,motion);return bar;
+}
+
 // Match the current review's feature copy to its own CAD photos.
 const featureViews=[
  {match:/shell/i,images:['closed','open'],labels:['Closed','Open'],view:'overall'},
@@ -34,7 +43,9 @@ function buildFeatures(info,gallery,viewer){
   const matches=(config?.images||[]).map((key,i)=>({key,figure:available.get(key),label:config.labels[i]})).filter(item=>item.figure);
   matches.forEach(({key,figure,label},i)=>{
    used.add(figure);figure.hidden=i!==0;figure.id=`baguette-photo-${key}`;
-   figure.querySelector('img').decoding='async';photos.append(figure);
+   const img=figure.querySelector('img');img.decoding='async';
+   if(DETAIL_SCENES[key]){const stage=make('div','baguette-cad-preview');stage.dataset.cadPreview=key;img.replaceWith(stage);stage.append(img);}
+   photos.append(figure);
    const button=make('button','',label);button.type='button';button.setAttribute('aria-pressed',String(i===0));button.setAttribute('aria-controls',figure.id);
    button.addEventListener('click',()=>{for(const item of matches)item.figure.hidden=item.figure!==figure;for(const sibling of choices.children)sibling.setAttribute('aria-pressed',String(sibling===button));});choices.append(button);
   });
@@ -50,7 +61,7 @@ function buildFeatures(info,gallery,viewer){
 const useCases=[
  {id:'carry',label:'01 / STRAP FUNCTIONALITY',title:'A strap. Two attachment points.',copy:'The shoulder strap pulls outward from the two projecting eyes. The case hangs beneath these tension points, with the strap clear of the shell.',alt:'Concept rendering of the ivory baguette case hanging below its two outward-projecting eyes, with taut shoulder straps clear of the shell.'},
  {id:'rain',label:'02 / RAIN',title:'For the walk home.',copy:'A closed-shell carry concept for a drizzly trip from the bakery. Weather resistance is still to be tested.',alt:'Model-based concept of the closed baguette holder on a shoulder strap during a rainy walk.'},
- {id:'picnic',label:'03 / PICNIC',title:'Unclip. Open. Share.',copy:'Set it down on the blanket and open the hinged lid. The smooth interior leaves room for one very good baguette.',alt:'Concept rendering of the open baguette case holding bread on a linen picnic blanket.'},
+ {id:'picnic',label:'03 / PICNIC',title:'Unclip. Open. Share.',copy:'Set it down on the blanket and open the hinged lid. The smooth interior leaves room for one very good baguette.',alt:'The actual open baguette case rendered in 3D on a linen picnic blanket.'},
  {id:'travel',label:'04 / TRAVEL',title:'A little room for the journey.',copy:'From the bakery to the train, keep your baguette in its own contoured case. Unshoulder the strap when it is time to settle in.',alt:'Concept rendering of the closed baguette case and its loose carry strap on a train table.'},
  {id:'backpacking',label:'05 / BACKPACKING',title:'Bread beyond the city.',copy:'Wear the strap over your shoulder and let the case hang at your side. Both ends pull from the projecting eyes, leaving your backpack free for the rest.',alt:'Concept rendering of a hiker carrying the baguette case at their hip on a shoulder strap, suspended from its two outer eyes.'}
 ];
@@ -58,11 +69,14 @@ const useCases=[
 function buildUseCases(){
  const panel=make('section','baguette-use-cases');panel.setAttribute('aria-label','Baguette holder use cases');
  const intro=make('div','baguette-section-intro');intro.append(make('span','section-number','OUT IN THE WORLD'),make('h2','','Made to come along.'),make('p','','From the morning bakery run to a weekend outside.'));
- const note=make('p','baguette-concept-note','Model-based concept renderings · Carry straps shown as accessories.');intro.append(note);panel.append(intro);
+ const note=make('p','baguette-concept-note','Live CAD model · Illustrated settings · Accessory straps');intro.append(note);panel.append(intro);
  const grid=make('div','baguette-use-case-grid');
  for(const scene of useCases){
   const card=make('article','baguette-use-case'+(scene.id==='carry'?' baguette-use-case-lead':''));
-  const figure=make('figure');const img=make('img');img.src=new URL(`../assets/baguette-use-cases/${scene.id}.jpg?v=shoulder-20260912`,import.meta.url).href;img.alt=scene.alt;img.width=1536;img.height=1024;img.loading=scene.id==='carry'?'eager':'lazy';img.decoding='async';figure.append(img);
+  const figure=make('figure'),stage=make('div','baguette-lifestyle-preview');stage.dataset.lifestyleScene=scene.id;
+  const img=make('img','baguette-scene-background');img.src=new URL(`../assets/baguette-use-cases/${scene.id}-background.jpg`,import.meta.url).href;img.alt='';img.width=1536;img.height=1024;img.loading='lazy';img.decoding='async';
+  const fallback=make('img','baguette-scene-fallback');fallback.src=assetURL((scene.id==='picnic'?'open':'closed')+'.jpg');fallback.alt=scene.alt;fallback.loading='lazy';
+  const status=make('span','baguette-scene-status','Loading 3D preview…');status.dataset.sceneStatus='';stage.append(img,fallback,status);figure.append(stage);
   const copy=make('div','baguette-use-case-copy');copy.append(make('span','section-number',scene.label),make('h3','',scene.title),make('p','',scene.copy));
   card.append(figure,copy);grid.append(card);
  }
@@ -71,8 +85,11 @@ function buildUseCases(){
 
 export async function buildBaguetteProject(container,project){
  document.documentElement.classList.add('baguette-project-page');
- const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href=new URL('../baguette.css?v=79ff1e0f93',import.meta.url).href;document.head.append(sheet);
+ const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href=new URL('../baguette.css?v=6d225fb3a0',import.meta.url).href;document.head.append(sheet);
  const experience=document.createElement('section');experience.className='baguette-experience';experience.setAttribute('aria-label','Baguette holder design and interactive preview');container.append(experience);
+ let savedFinish;try{savedFinish=localStorage.getItem('parametric-baguette-finish');}catch{}
+ const finishes=createFinishStore(new URLSearchParams(location.search).get('finish')||savedFinish);
+ finishes.subscribe(finish=>{try{localStorage.setItem('parametric-baguette-finish',finish.id);}catch{}experience.dataset.finish=finish.id;const url=new URL(location.href);url.searchParams.set('finish',finish.id);history.replaceState(history.state,'',url);});
  const loading=document.createElement('p');loading.className='baguette-loading';loading.textContent='Preparing the working model…';loading.setAttribute('role','status');experience.append(loading);
  try{
   // Reuse the working preview's controls, review text, renders and download URLs.
@@ -91,15 +108,21 @@ export async function buildBaguetteProject(container,project){
   const note=document.createElement('span');note.className='prototype';note.textContent=review.querySelector('.prototype')?.textContent||'Engineering prototype';heading.append(revision,note);
   const viewer=copy(originalViewer),info=copy(details),gallery=copy(renders);
   const hint=document.createElement('p');hint.className='baguette-gesture-hint';hint.textContent='Drag to rotate · Scroll to move the page';viewer.querySelector('[data-model-stage]').after(hint);
-  experience.replaceChildren(heading,viewer,buildUseCases(),buildFeatures(info,gallery,viewer));
+  experience.replaceChildren(heading,buildFinishPicker(finishes),viewer,buildUseCases(),buildFeatures(info,gallery,viewer));
   document.querySelector('meta[name="description"]')?.setAttribute('content',project.description?.[0]||project.summary);
   const revisionQuery=new URL(review.querySelector('script[src*="review.js"]').getAttribute('src'),reviewURL).search;
   const modelURL=assetURL('baguette-v3.glb'+revisionQuery);
-  const [model,{mountBaguetteViewer}]=await Promise.all([fetch(modelURL,{cache:'no-cache'}),import('../assets/baguette-viewer.js'+revisionQuery)]);
+  const [model,{mountBaguetteViewer,mountBaguetteComposites}]=await Promise.all([fetch(modelURL,{cache:'no-cache'}),import('../assets/baguette-viewer.js?v=41683e533e'+'&revision='+encodeURIComponent(revisionQuery))]);
   if(!model.ok)throw Error('Model unavailable');
-  await mountBaguetteViewer(viewer,await model.arrayBuffer());
+  const buffer=await model.arrayBuffer();
+  const results=await Promise.allSettled([mountBaguetteViewer(viewer,buffer,finishes),mountBaguetteComposites(experience,buffer,finishes)]);
+  if(results[0].status==='rejected')throw results[0].reason;
+  if(results[1].status==='rejected')for(const stage of experience.querySelectorAll('[data-lifestyle-scene]')){stage.classList.add('preview-unavailable');stage.querySelector('[data-scene-status]').textContent='3D preview unavailable on this device.';}
  }catch{
+  for(const stage of experience.querySelectorAll('[data-lifestyle-scene]')){stage.classList.add('preview-unavailable');stage.querySelector('[data-scene-status]').textContent='3D preview unavailable. CAD image shown.';}
   const status=experience.querySelector('[data-status]')||loading;status.textContent='The interactive preview could not load. Open the working preview, or explore the rendered views below.';
   const link=document.createElement('a');link.className='secondary-button';link.href=reviewURL.href;link.textContent='Open the working preview →';experience.append(link);
  }
 }
+import {BAGUETTE_FINISHES,createFinishStore} from './baguette-finishes.js?v=cad-1';
+import {DETAIL_SCENES} from './baguette-scenes.js?v=cad-1';
