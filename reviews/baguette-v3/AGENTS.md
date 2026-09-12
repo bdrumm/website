@@ -35,4 +35,6 @@ Keep unloaded inward-set latch geometry distinct from its elastic seated state. 
 
 The 45-degree connection-facing bevel must cover the main tongue end, not only the hook or grip. Match the stationary U-slot edge to the bevel with a running gap. Measure remaining flat downward-facing tongue area and verify that the fixed slot rim does not move with latch release in either CAD or the preview.
 
+Check the complete connection-facing latch outline, including grip and hook, against a 45-degree maximum overhang in the unloaded connection-down print frame. Run source/validate-print-ramp.py to compare each 0.2 mm layer with material in the preceding whole-lid layer, excluding supports. Beveling the thickness alone does not satisfy the required front-profile ramp.
+
 The editable CAD and source checks are distributed in baguette-v3-source-and-print.zip. Extract to a writable model workspace before changing geometry. Publish rebuilt assets and both matching archives together.
