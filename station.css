@@ -416,3 +416,25 @@ body{background:var(--background)}
  .station-project-page .station-code-runtimes{gap:36px}
  .station-project-page .station-details-hardware dl{grid-template-columns:minmax(0,1fr)}
 }
+
+/* Generated use cases share the image-first layout of the baguette project. */
+.station-project-page .station-use-cases{margin-block:48px 32px;scroll-margin-top:24px;min-width:0}
+.station-project-page .station-use-case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.station-project-page .station-use-case{min-width:0;border:1px solid color-mix(in srgb,var(--border) 45%,transparent);background:color-mix(in srgb,var(--mint) 20%,var(--background))}
+.station-project-page .station-use-case:nth-child(3n+2){background:color-mix(in srgb,var(--violet) 12%,var(--background))}
+.station-project-page .station-use-case:nth-child(3n){background:color-mix(in srgb,var(--coral) 15%,var(--background))}
+.station-project-page .station-use-case figure{margin:0;min-width:0}
+.station-project-page .station-use-case img{display:block;width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;background:var(--stage)}
+.station-project-page .station-use-case-copy{padding:28px;border-top:1px solid color-mix(in srgb,var(--border) 35%,transparent)}
+.station-project-page .station-use-case-copy h3{font-size:clamp(1.5rem,2.5vw,2rem);font-weight:550;line-height:1.15;letter-spacing:-.035em;margin:14px 0}
+.station-project-page .station-use-case-copy p{margin:0;font-size:1rem;line-height:1.7;color:var(--foreground);max-width:55ch}
+.station-project-page .station-use-case-lead{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);align-items:center}
+.station-project-page .station-use-case-lead figure{border-right:1px solid color-mix(in srgb,var(--border) 35%,transparent)}
+.station-project-page .station-use-case-lead .station-use-case-copy{padding:clamp(24px,3.5vw,52px);border-top:0}
+.station-project-page .station-use-cases .station-use-case-note{font-size:.875rem;line-height:1.65;color:var(--muted);margin:20px 0 0}
+@media(max-width:760px){
+ .station-project-page .station-use-case-grid,.station-project-page .station-use-case-lead{grid-template-columns:minmax(0,1fr)}
+ .station-project-page .station-use-case-lead figure{border-right:0}
+ .station-project-page .station-use-case-lead .station-use-case-copy{border-top:1px solid color-mix(in srgb,var(--border) 35%,transparent)}
+ .station-project-page .station-use-case-copy{padding:24px}
+}

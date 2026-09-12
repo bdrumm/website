@@ -55,7 +55,7 @@ window.PARAMETRIC_SHOP = {
       'From the bedside to the kitchen: glance at your commute, start a timer, change a light or settle into a quiet night clock. Station OS brings these everyday interactions together on the Waveshare ESP32-S3-Touch-AMOLED-1.75C.',
       'Explore the app states above. The interactive screen demos pair sample data with expressive lighting and motion, imagining what Station can feel like in everyday use. The device is a visual reconstruction; small exterior details are illustrative, not manufacturing CAD.'
     ],
-    specs: [['Body','Aluminum · Ø 51 × 12.1 mm'],['Display','1.75″ AMOLED · 466 × 466'],['Interaction','Two-point touch · dual microphones'],['Audio','ES7210 input · ES8311 playback'],['Compute','ESP32-S3R8 · 8 MB PSRAM · 16 MB flash'],['Connectivity','2.4 GHz Wi-Fi · Bluetooth LE · USB-C'],['Sensors','Six-axis IMU · real-time clock'],['Carry','Pocket-sized circular enclosure']],
+    specs: [['Body','Aluminum · Ø 55 × 15.05 mm'],['Display','1.75″ AMOLED · 466 × 466'],['Interaction','Two-point touch · dual microphones'],['Audio','ES7210 input · ES8311 playback'],['Compute','ESP32-S3R8 · 8 MB PSRAM · 16 MB flash'],['Connectivity','2.4 GHz Wi-Fi · Bluetooth LE · USB-C'],['Sensors','Six-axis IMU · real-time clock'],['Carry','Pocket-sized circular enclosure']],
     features: [
       ['Wake to the day','Time, weather and transit share a glanceable home screen.'],
       ['Know your next train','Saved subway lines and arrival countdowns, without reaching for your phone.'],
