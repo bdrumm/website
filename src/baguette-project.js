@@ -48,11 +48,11 @@ function buildFeatures(info,gallery,viewer){
 }
 
 const useCases=[
- {id:'carry',label:'01 / STRAP FUNCTIONALITY',title:'A strap. Two attachment points.',copy:'A removable shoulder strap connects to the rounded eyes at either end of the shell. Carry it at your side and leave your hands free.',alt:'Concept rendering of the ivory baguette case worn at the hip, with an olive shoulder strap connected to its end eyes.'},
+ {id:'carry',label:'01 / STRAP FUNCTIONALITY',title:'A strap. Two attachment points.',copy:'The shoulder strap pulls outward from the two projecting eyes. The case hangs beneath these tension points, with the strap clear of the shell.',alt:'Concept rendering of the ivory baguette case hanging below its two outward-projecting eyes, with taut shoulder straps clear of the shell.'},
  {id:'rain',label:'02 / RAIN',title:'For the walk home.',copy:'A closed-shell carry concept for a drizzly trip from the bakery. Weather resistance is still to be tested.',alt:'Model-based concept of the closed baguette holder on a shoulder strap during a rainy walk.'},
  {id:'picnic',label:'03 / PICNIC',title:'Unclip. Open. Share.',copy:'Set it down on the blanket and open the hinged lid. The smooth interior leaves room for one very good baguette.',alt:'Concept rendering of the open baguette case holding bread on a linen picnic blanket.'},
  {id:'travel',label:'04 / TRAVEL',title:'A little room for the journey.',copy:'From the bakery to the train, keep your baguette in its own contoured case. Unshoulder the strap when it is time to settle in.',alt:'Concept rendering of the closed baguette case and its loose carry strap on a train table.'},
- {id:'backpacking',label:'05 / BACKPACKING',title:'Bread beyond the city.',copy:'Use the end eyes to connect the holder to pack webbing with accessory straps. A trail-carry concept with the bread close at hand.',alt:'Concept rendering of the baguette holder attached horizontally to a hiking backpack through its two end eyes.'}
+ {id:'backpacking',label:'05 / BACKPACKING',title:'Bread beyond the city.',copy:'Wear the strap over your shoulder and let the case hang at your side. Both ends pull from the projecting eyes, leaving your backpack free for the rest.',alt:'Concept rendering of a hiker carrying the baguette case at their hip on a shoulder strap, suspended from its two outer eyes.'}
 ];
 
 function buildUseCases(){
@@ -62,7 +62,7 @@ function buildUseCases(){
  const grid=make('div','baguette-use-case-grid');
  for(const scene of useCases){
   const card=make('article','baguette-use-case'+(scene.id==='carry'?' baguette-use-case-lead':''));
-  const figure=make('figure');const img=make('img');img.src=new URL(`../assets/baguette-use-cases/${scene.id}.jpg`,import.meta.url).href;img.alt=scene.alt;img.width=1536;img.height=1024;img.loading='lazy';img.decoding='async';figure.append(img);
+  const figure=make('figure');const img=make('img');img.src=new URL(`../assets/baguette-use-cases/${scene.id}.jpg?v=shoulder-20260912`,import.meta.url).href;img.alt=scene.alt;img.width=1536;img.height=1024;img.loading=scene.id==='carry'?'eager':'lazy';img.decoding='async';figure.append(img);
   const copy=make('div','baguette-use-case-copy');copy.append(make('span','section-number',scene.label),make('h3','',scene.title),make('p','',scene.copy));
   card.append(figure,copy);grid.append(card);
  }
@@ -72,7 +72,7 @@ function buildUseCases(){
 function buildContentViews(features,useCases){
  const wrapper=make('div','baguette-content-views');
  const tabs=make('div','baguette-content-tabs');tabs.setAttribute('role','tablist');tabs.setAttribute('aria-label','Explore the baguette holder');
- const entries=[['features','Features',features],['use-cases','Use cases',useCases]];
+ const entries=[['use-cases','Use cases',useCases],['features','Features',features]];
  const buttons=entries.map(([id,label,panel])=>{
   const button=make('button','',label);button.type='button';button.id=`baguette-tab-${id}`;button.setAttribute('role','tab');button.setAttribute('aria-controls',`baguette-panel-${id}`);
   panel.id=`baguette-panel-${id}`;panel.setAttribute('role','tabpanel');panel.setAttribute('aria-labelledby',button.id);panel.tabIndex=0;tabs.append(button);return button;
@@ -82,7 +82,8 @@ function buildContentViews(features,useCases){
   button.addEventListener('click',()=>select(index));
   button.addEventListener('keydown',event=>{let next;if(event.key==='ArrowRight')next=(index+1)%buttons.length;if(event.key==='ArrowLeft')next=(index+buttons.length-1)%buttons.length;if(event.key==='Home')next=0;if(event.key==='End')next=buttons.length-1;if(next===undefined)return;event.preventDefault();select(next);buttons[next].focus();});
  });
- select(0);wrapper.append(tabs,features,useCases);return wrapper;
+ // Shared model-view links still open their requested geometry directly.
+ select(new URLSearchParams(location.search).has('view')?1:0);wrapper.append(tabs,...entries.map(([, ,panel])=>panel));return wrapper;
 }
 
 export async function buildBaguetteProject(container,project){
@@ -107,8 +108,9 @@ export async function buildBaguetteProject(container,project){
   const note=document.createElement('span');note.className='prototype';note.textContent=review.querySelector('.prototype')?.textContent||'Engineering prototype';heading.append(revision,note);
   const viewer=copy(originalViewer),info=copy(details),gallery=copy(renders);
   const hint=document.createElement('p');hint.className='baguette-gesture-hint';hint.textContent='Drag to rotate · Scroll to move the page';viewer.querySelector('[data-model-stage]').after(hint);
-  const contentViews=buildContentViews(buildFeatures(info,gallery,viewer),buildUseCases());
-  experience.replaceChildren(heading,viewer,contentViews);
+  const features=buildFeatures(info,gallery,viewer);features.prepend(heading,viewer);
+  const contentViews=buildContentViews(features,buildUseCases());
+  experience.replaceChildren(contentViews);
   document.querySelector('meta[name="description"]')?.setAttribute('content',project.description?.[0]||project.summary);
   const revisionQuery=new URL(review.querySelector('script[src*="review.js"]').getAttribute('src'),reviewURL).search;
   const modelURL=assetURL('baguette-v3.glb'+revisionQuery);
