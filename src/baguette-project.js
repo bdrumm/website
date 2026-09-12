@@ -2,7 +2,7 @@ const reviewURL=new URL('../reviews/baguette-v3/index.html',import.meta.url);
 const assetURL=path=>new URL(path,reviewURL).href;
 
 export async function buildBaguetteProject(container,project){
- const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href=new URL('../baguette.css?v=52c032dace',import.meta.url).href;document.head.append(sheet);
+ const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href=new URL('../baguette.css?v=features-1',import.meta.url).href;document.head.append(sheet);
  const experience=document.createElement('section');experience.className='baguette-experience';experience.setAttribute('aria-label','Baguette holder design and interactive preview');container.append(experience);
  const loading=document.createElement('p');loading.className='baguette-loading';loading.textContent='Preparing the working model…';loading.setAttribute('role','status');experience.append(loading);
  try{

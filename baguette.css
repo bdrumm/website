@@ -19,7 +19,9 @@
 .baguette-experience .angle input{flex:1;min-width:0;accent-color:var(--review-accent)}
 .baguette-experience input[type=checkbox]{width:18px;height:18px;accent-color:var(--review-accent)}
 .baguette-experience [data-status]{margin:0;padding:0 22px 20px;font-size:14px;color:var(--review-muted)}
-.baguette-experience .review-layout{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.baguette-experience .review-layout{display:block}
+.baguette-experience .feature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 60px}
+.baguette-experience .feature-grid div{padding-bottom:0}
 .baguette-experience h2{font-size:26px;letter-spacing:-.035em;margin:0 0 22px}
 .baguette-experience p,.baguette-experience dd,.baguette-experience li{font-size:16px;line-height:1.65}
 .baguette-experience dl{margin:0}.baguette-experience dl div{padding-bottom:22px}.baguette-experience dt{font-weight:650;margin-bottom:6px}.baguette-experience dd{margin:0}
@@ -30,4 +32,4 @@
 .baguette-experience .renders{display:grid;grid-template-columns:1fr 1fr;gap:28px}
 .baguette-experience figure{margin:0}.baguette-experience figure img{width:100%;height:auto;display:block;border:1px solid var(--border)}
 .baguette-experience figcaption{font-size:14px;margin-top:10px;color:var(--review-muted)}
-@media(max-width:760px){.baguette-experience .review-layout,.baguette-experience .renders{grid-template-columns:1fr;gap:30px}.baguette-experience .toolbar{padding:12px;gap:6px}.baguette-experience .toolbar button{padding:9px 10px;font-size:13px}.baguette-experience .toolbar button[data-copy-link]{margin-left:0}.baguette-experience .controls{gap:12px;padding:16px}.baguette-experience .angle{flex-basis:100%}.baguette-experience [data-model-stage]{height:340px}.baguette-experience .baguette-gesture-hint{font-size:11px;padding-left:16px}}
+@media(max-width:760px){.baguette-experience .feature-grid,.baguette-experience .renders{grid-template-columns:1fr;gap:30px}.baguette-experience .toolbar{padding:12px;gap:6px}.baguette-experience .toolbar button{padding:9px 10px;font-size:13px}.baguette-experience .toolbar button[data-copy-link]{margin-left:0}.baguette-experience .controls{gap:12px;padding:16px}.baguette-experience .angle{flex-basis:100%}.baguette-experience [data-model-stage]{height:340px}.baguette-experience .baguette-gesture-hint{font-size:11px;padding-left:16px}}

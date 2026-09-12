@@ -81,7 +81,7 @@ blender --background --factory-startup --disable-autoexec /path/to/Articulated_T
 
 ## Baguette holder
 
-`project.html?id=baguette-holder` now presents the working manufacturing preview from `reviews/baguette-v3/`. `src/baguette-project.js` reuses that page's model controls, revision notes, fifteen CAD renders, print archive and editable-source download links. Relative links are resolved against the review directory, and the model revision is taken from the working preview's versioned script URL. The review HTML and model are revalidated when the project page loads.
+`project.html?id=baguette-holder` now presents the working manufacturing preview from `reviews/baguette-v3/`. `src/baguette-project.js` reuses that page's model controls, concise feature overview, sixteen CAD and sliced-layer images, and model/source download links. Relative links are resolved against the review directory, and the model revision is taken from the working preview's versioned script URL. The review HTML and model are revalidated when the project page loads.
 
 `src/baguette-viewer.js` mounts the same `mountReview` renderer used by the working preview, adding the site's rotation-only controls. Wheel and vertical touch gestures scroll the page. The eight camera/section presets, 0–100° lid slider, segment separation, cutaway, and shared-view URLs all remain available. `baguette.css` adapts the review layout to the site's existing light/dark themes.
 
