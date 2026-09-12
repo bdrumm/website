@@ -74,5 +74,15 @@ window.PARAMETRIC_SHOP = {
     summary: 'Presence across every level. Explore a simulated sensor network across two to four floors.',
     description: ['Compare six hardware configurations, sensors at multiple heights, independent presence on each floor, and stairwell transitions in a simulated building.'],
     available: false
+  }, {
+    id: 'fly-lab',
+    experience: 'fly-lab',
+    title: 'Fly Lab',
+    section: 'research',
+    category: 'NEURAL SIMULATION / 001',
+    projectUrl: 'fly-lab/',
+    summary: 'A real fly connectome, configurable experiments, and an interactive 3D training workspace.',
+    description: ['Explore our Stonkfly fork, inspect its articulated fly model, and run the browser arena demo. Real neural training requires a future compute connection.'],
+    available: false
   }]
 };

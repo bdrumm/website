@@ -11,7 +11,7 @@ function save(){try{localStorage.setItem(KEY,JSON.stringify(cart));}catch{}updat
 function updateCount(){document.querySelectorAll('[data-cart-count]').forEach(e=>e.textContent=cart.reduce((n,i)=>n+i.quantity,0));}
 function image(p){if(!p.image)return null;const i=el('img');i.src=p.image;i.alt=p.imageAlt||p.title;i.className='project-image';return i;}
 function shopLink(p){if(!p.shopUrl)return null;try{const u=new URL(p.shopUrl);if(u.protocol!=='https:')return null;return link('Visit shop ↗',u.href,'secondary-button');}catch{return null;}}
-function projectHref(id){return 'project.html?id='+encodeURIComponent(id);}
+function projectHref(id){return projects.find(p=>p.id===id)?.projectUrl||'project.html?id='+encodeURIComponent(id);}
 function empty(title,copy){const box=el('div',undefined,'empty-state');box.append(el('h2',title),el('p',copy));root.append(box);}
 function add(p){cart=normalizeCart([...cart,{id:p.id,quantity:1}],projects);save();document.getElementById('shop-status').textContent=`${p.title} added to your cart.`;}
 function catalogue(){
@@ -19,7 +19,9 @@ function catalogue(){
  const grid=el('div',undefined,'project-grid');
  for(const [index,p] of projects.entries()){
   const card=el('article',undefined,'project-card');card.dataset.projectId=p.id;
-  if(p.modelUrl){
+  if(p.experience==='fly-lab'){
+   const preview=el('iframe');preview.src='fly-lab/specimen.html';preview.title='Fly Lab — interactive fly anatomy';preview.loading='lazy';preview.className='catalogue-model';preview.style.cssText='display:block;width:100%;height:300px;border:0;background:#1b241b';card.append(preview);
+  }else if(p.modelUrl){
    const preview=el('div',undefined,'catalogue-model');card.append(preview);
    const isGarage=p.experience==='garage';
    const modelUrl=p.previewModelUrl||p.modelUrl;
@@ -34,6 +36,7 @@ function catalogue(){
  root.append(grid);
 }
 function detail(){const p=projects.find(p=>p.id===({arowana:'trout'}[new URLSearchParams(location.search).get('id')]||new URLSearchParams(location.search).get('id')));if(!p){empty('Project not found.','Choose a project from the project list.');root.append(link('All projects →','projects.html','secondary-button'));return;}
+ if(p.projectUrl){location.replace(p.projectUrl);return;}
  document.title=p.title+' — Parametric Space';document.getElementById('page-heading').textContent=p.title;document.getElementById('page-intro').textContent=p.summary||'';
  root.append(link('← All projects','projects.html','secondary-button category-back'));
  const content=el('div',undefined,'project-detail');const visual=image(p);

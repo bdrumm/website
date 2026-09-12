@@ -1,0 +1,1063 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0c121c" />
+    <title>Fly Lab · Parametric Space</title>
+    <link rel="stylesheet" href="/fly-lab/lab.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <a class="brand" href="/fly-lab/" target="_top" aria-label="Fly Lab project"
+        ><span class="brand-mark">F</span><strong>FLY<span>LAB</span></strong
+        ><span class="version">01</span></a
+      >
+      <div class="header-context">
+        NEURAL BEHAVIOR WORKSPACE <span class="divider">/</span>
+        <a href="/fly-lab/" target="_top">PROJECT</a> <span class="divider">/</span> <span>SIMULATION</span>
+      </div>
+      <div class="connection">
+        <i id="connection-dot"></i><span id="connection-label">Connecting</span>
+      </div>
+      <button class="quiet" id="help-toggle" aria-label="Open simulation guide">
+        Guide ↗
+      </button>
+    </header>
+    <div class="runtime-banner"><p id="runtime-message" role="status">Browser demo · manual arena physics; neural training requires compute.</p><button id="runtime-connect">Connect compute</button></div>
+    <main class="workspace">
+      <aside class="sidebar">
+        <div class="sidebar-heading">
+          <div>
+            <span class="eyebrow">EXPERIMENT DESIGN</span>
+            <h1>Simulation setup</h1>
+          </div>
+          <span class="tiny-badge">3D</span>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Setup sections">
+          <button role="tab" aria-selected="true" data-panel="scene-panel">
+            Scenario</button
+          ><button role="tab" aria-selected="false" data-panel="training-panel">
+            Training</button
+          ><button role="tab" aria-selected="false" data-panel="brain-panel">
+            Readout</button
+          ><button role="tab" aria-selected="false" data-panel="body-panel">
+            Body
+          </button>
+        </div>
+        <fieldset id="setup-fields">
+          <legend class="sr-only">Experiment setup</legend>
+          <section class="setup-panel" id="scene-panel">
+            <label>Scenario preset<select id="preset"></select></label>
+            <label
+              >Task mode<select id="task-mode">
+                <option value="arena">Fly arena</option>
+                <option value="super">
+                  Super Scenario · bus → game → website
+                </option>
+                <option value="bus">Drive a bus</option>
+                <option value="arcade">Play the foraging game</option>
+                <option value="website">Test a website</option>
+              </select></label
+            >
+            <div id="website-settings" hidden>
+              <label
+                >Website URL<input
+                  id="website-url"
+                  placeholder="demo or https://…" /></label
+              ><label
+                >Testing objective<input
+                  id="website-task"
+                  maxlength="500" /></label
+              ><label
+                >Success URL contains<input
+                  id="website-goal"
+                  maxlength="500"
+                  placeholder="e.g. /support/setup"
+              /></label>
+              <label
+                >Link destinations<select id="website-navigation">
+                  <option value="follow_links">
+                    Follow links to their destinations
+                  </option>
+                  <option value="same_site">
+                    Stay on the starting website
+                  </option>
+                </select></label
+              >
+              <p class="hint">
+                The brain explores controls, clicks, goes back, and scrolls. The
+                success URL is the food goal; the objective records your
+                intended test. Links open in the fly’s current page. External
+                forms are not submitted.
+              </p>
+            </div>
+            <label>Name<input id="scene-name" maxlength="80" /></label>
+            <div class="two-col">
+              <label
+                >Arena size<input
+                  type="number"
+                  id="arena-size"
+                  min="30"
+                  max="200" /></label
+              ><label
+                >Move / decision<input
+                  type="number"
+                  id="move-distance"
+                  min="0.1"
+                  max="10"
+                  step="0.1"
+              /></label>
+            </div>
+            <p class="hint" id="task-layout-note" hidden></p>
+            <div id="arena-editor">
+              <div class="section-label">
+                <span>PLACE IN ARENA</span
+                ><span class="muted">Click to place</span>
+              </div>
+              <div class="place-tools">
+                <button data-tool="food" title="Place a food target">
+                  <i class="key food"></i>Food</button
+                ><button data-tool="obstacle" title="Place an obstacle">
+                  <i class="key obstacle"></i>Barrier</button
+                ><button data-tool="hazard" title="Place an aversive zone">
+                  <i class="key hazard"></i>Zone</button
+                ><button data-tool="start" title="Place the starting position">
+                  ⌖ Start
+                </button>
+              </div>
+              <div class="section-label">
+                <span>SCENE OBJECTS</span><span id="object-count"></span>
+              </div>
+              <div id="objects" class="objects"></div>
+            </div>
+            <div class="two-col">
+              <label
+                >Starting heading<input
+                  type="number"
+                  id="start-heading"
+                  min="-360"
+                  max="360"
+                  step="5" /></label
+              ><label
+                >Turn / decision °<input
+                  type="number"
+                  id="turn-degrees"
+                  min="1"
+                  max="90"
+              /></label>
+            </div>
+            <label
+              >Forward motion while turning
+              <span class="muted">0 = pivot in place</span
+              ><input type="range" id="turn-move" min="0" max="1" step="0.05"
+            /></label>
+            <button class="full secondary" id="apply-scene">
+              Apply scenario
+            </button>
+            <div class="two-col button-row">
+              <button class="quiet bordered" id="save-scenario">
+                Save locally</button
+              ><button class="quiet bordered" id="export-scenario">
+                Export JSON
+              </button>
+            </div>
+            <label class="load-label"
+              >Saved scenarios<select id="saved-scenario">
+                <option value="">Choose saved scenario…</option>
+              </select></label
+            >
+            <button class="quiet full" id="import-scenario">
+              Import scenario JSON</button
+            ><input
+              id="import-file"
+              type="file"
+              accept=".json,application/json"
+              hidden
+            />
+          </section>
+          <section class="setup-panel" id="training-panel" hidden>
+            <label
+              >Training mode<select id="training-mode">
+                <option value="practice">Focused practice</option>
+                <option value="rotation">Mixed scenario practice</option>
+                <option value="curriculum">Skill blocks</option>
+                <option value="evaluate">Frozen evaluation</option>
+              </select></label
+            >
+            <p class="hint" id="training-mode-help"></p>
+            <div id="training-tasks">
+              <div class="section-label">PRACTICE SCENARIOS</div>
+              <label class="check-row"
+                ><input type="checkbox" data-training-task="arena" checked />
+                Fly arena</label
+              >
+              <label class="check-row"
+                ><input type="checkbox" data-training-task="bus" checked /> Bus
+                food route</label
+              >
+              <label class="check-row"
+                ><input type="checkbox" data-training-task="arcade" checked />
+                Foraging game</label
+              >
+              <label class="check-row"
+                ><input type="checkbox" data-training-task="website" checked />
+                Website navigation</label
+              >
+            </div>
+            <label id="training-block-label"
+              >Episodes per skill block<input
+                id="training-block"
+                type="number"
+                min="1"
+                max="1000"
+                value="2"
+            /></label>
+            <label id="training-probes-label"
+              >Matched tests per scenario, before and after<input
+                id="training-probes"
+                type="number"
+                min="0"
+                max="1000"
+                value="0"
+            /></label>
+            <p class="hint">
+              Tests freeze memory, suppress reward pulses, and use the same
+              starting conditions before and after practice. They add episodes
+              to the run.
+            </p>
+            <label class="switch-row"
+              ><span
+                ><strong>Learning enabled</strong
+                ><small>Update candidate memory efficacies</small></span
+              ><input id="learning" type="checkbox" role="switch"
+            /></label>
+            <div class="two-col">
+              <label
+                >Episodes<input
+                  id="episodes"
+                  type="number"
+                  min="1"
+                  max="1000" /></label
+              ><label
+                >Decisions / episode<input
+                  id="max-steps"
+                  type="number"
+                  min="1"
+                  max="10000"
+              /></label>
+            </div>
+            <label
+              >Environment seed<input
+                id="seed"
+                type="number"
+                min="0"
+                max="4294966295"
+            /></label>
+            <label class="check-row"
+              ><input id="randomize" type="checkbox" />Randomize food between
+              episodes</label
+            >
+            <label
+              >Starting brain<select id="checkpoint">
+                <option value="latest">Continue latest saved brain</option>
+                <option value="">Fresh brain · baseline weights</option>
+              </select></label
+            >
+            <p class="hint">
+              Continue latest carries learned memory into each new run,
+              including when you change scenarios. Fresh brain is an explicit
+              reset. Every episode saves a verified checkpoint.
+            </p>
+            <label
+              >Autosave every N decisions<input
+                id="autosave-steps"
+                type="number"
+                min="1"
+                max="10000"
+                value="100"
+            /></label>
+            <div class="section-label">INTERNAL STATE</div>
+            <label class="check-row"
+              ><input id="internal-enabled" type="checkbox" checked />Enable
+              modeled hunger input</label
+            >
+            <label class="check-row"
+              ><input id="internal-resume" type="checkbox" checked />Continue
+              saved body reserve</label
+            >
+            <div class="two-col">
+              <label
+                >Initial reserve (0–1)<input
+                  id="internal-energy"
+                  type="number"
+                  min="0"
+                  max="1"
+                  step="0.05"
+                  value="0.8" /></label
+              ><label
+                >Maximum input current<input
+                  id="internal-current"
+                  type="number"
+                  min="0"
+                  max="4"
+                  step="0.1"
+                  value="2"
+              /></label>
+            </div>
+            <p class="hint">
+              Food replenishes modeled reserve; simulated time and executed
+              controls consume it. Initial reserve applies to a new body or
+              fixed evaluation. Current biases the two MBON11 cells in model
+              units; these parameters are not calibrated fly physiology.
+            </p>
+            <button class="secondary full" type="button" id="run-assay">
+              Run controlled cue assay
+            </button>
+            <p class="hint">
+              48 neural windows. Tests fixed low/high reserves and opposite
+              cue–reward assignments from the same checkpoint. Saves results
+              separately from continuing practice.
+            </p>
+            <div class="section-label">NEURAL TIMING</div>
+            <label
+              >Neural time per decision<select id="neural-ms">
+                <option value="100">100 ms · shorter decisions</option>
+                <option value="250">250 ms</option>
+                <option value="500">500 ms</option>
+                <option value="1000">1,000 ms</option>
+                <option value="2000">2,000 ms</option>
+              </select></label
+            >
+            <label
+              >Pause between decisions<select id="pace-ms">
+                <option value="0">Full speed · no delay</option>
+                <option value="120">120 ms</option>
+                <option value="500">500 ms</option>
+                <option value="1000">1 second</option>
+              </select></label
+            >
+            <div class="section-label">REWARD RULES</div>
+            <div class="two-col">
+              <label
+                >Collect food<input
+                  id="reward-food"
+                  type="number"
+                  step="0.1"
+                  min="-100"
+                  max="100" /></label
+              ><label
+                >Closer to food<input
+                  id="reward-progress"
+                  type="number"
+                  step="0.01"
+                  min="-100"
+                  max="100" /></label
+              ><label
+                >New area explored<input
+                  id="reward-exploration"
+                  type="number"
+                  step="0.01"
+                  min="-100"
+                  max="100" /></label
+              ><label
+                >Collision<input
+                  id="reward-collision"
+                  type="number"
+                  step="0.1"
+                  min="-100"
+                  max="100" /></label
+              ><label
+                >First zone contact<input
+                  id="reward-hazard"
+                  type="number"
+                  step="0.1"
+                  min="-100"
+                  max="100" /></label
+              ><label
+                >Each decision<input
+                  id="reward-step"
+                  type="number"
+                  step="0.001"
+                  min="-100"
+                  max="100" /></label
+              ><label
+                >Reward deadband<input
+                  id="deadband"
+                  type="number"
+                  step="0.001"
+                  min="0.000001"
+                  max="100"
+              /></label>
+            </div>
+            <p class="hint">
+              Food goals give the main reward. New areas give a small, one-time
+              exploration reward. Larger outcomes produce longer reinforcement
+              pulses; the deadband ignores very small net outcomes. Use
+              frozen-memory runs with the same seed to compare behavior.
+            </p>
+          </section>
+          <section class="setup-panel" id="body-panel" hidden>
+            <label
+              >Constraint preset<select id="restraint-preset">
+                <option value="auto">Match the scenario</option>
+                <option value="free">Free walking</option>
+                <option value="operator_chair">
+                  Operator chair · legs free
+                </option>
+                <option value="bus_harness">Bus seat · torso harness</option>
+                <option value="forelegs_only">Chair · front legs only</option>
+                <option value="immobilized">Immobilized control</option>
+              </select></label
+            >
+            <p class="hint">
+              Auto uses a bus harness for driving and an operator chair for game
+              and website tasks. Arena trials use free walking.
+            </p>
+            <label
+              >Joint excursion from neutral · degrees<input
+                id="joint-limit"
+                type="number"
+                min="0"
+                max="60"
+                step="1"
+            /></label>
+            <div class="section-label">PERMITTED LEGS</div>
+            <div class="leg-options">
+              <label class="check-row"
+                ><input type="checkbox" data-leg="L1" />L1 · left front</label
+              ><label class="check-row"
+                ><input type="checkbox" data-leg="R1" />R1 · right front</label
+              ><label class="check-row"
+                ><input type="checkbox" data-leg="L2" />L2 · left middle</label
+              ><label class="check-row"
+                ><input type="checkbox" data-leg="R2" />R2 · right middle</label
+              ><label class="check-row"
+                ><input type="checkbox" data-leg="L3" />L3 · left rear</label
+              ><label class="check-row"
+                ><input type="checkbox" data-leg="R3" />R3 · right rear</label
+              >
+            </div>
+            <label class="check-row"
+              ><input type="checkbox" id="wings-locked" checked />Restrain
+              wings</label
+            ><button class="quiet bordered full" id="restore-restraint">
+              Restore preset limits
+            </button>
+            <p class="hint">
+              Bus steering and propulsion use front legs plus the right middle
+              pedal leg. Panel tasks use front legs to choose controls and the
+              right middle leg to activate. Reverse also uses the left middle
+              leg to shift gear. On websites, the left middle leg operates Back
+              and the rear legs scroll up/down. Restraints may block a neural
+              request.
+            </p>
+            <div class="model-block">
+              <span class="eyebrow">KINEMATIC MODEL</span
+              ><strong>6 articulated legs</strong
+              ><span
+                >Fixed segment lengths · reach checks · neutral-relative joint
+                limits</span
+              >
+            </div>
+            <p class="hint">
+              Body locks are relative to the seat. The bus can move while the
+              fly stays secured. This operator model is engineered, not a
+              validated fly musculoskeletal simulation. Motor activity continues
+              under restraint; a blocked task request does not silence neurons.
+            </p>
+            <div class="section-label">NEURON → MOVEMENT</div>
+            <label class="switch-row"
+              ><span
+                ><strong>Illustrate motor response</strong
+                ><small>Free joints only · measured rates</small></span
+              ><input id="motor-motion" type="checkbox" role="switch"
+            /></label>
+            <div class="two-col">
+              <label
+                >Maximum offset · °<input
+                  id="motor-gain"
+                  type="number"
+                  min="0"
+                  max="20"
+                  step="1" /></label
+              ><label
+                >Rate scale · Hz<input
+                  id="motor-scale"
+                  type="number"
+                  min="1"
+                  max="1000"
+              /></label>
+            </div>
+            <p class="hint">
+              Tibia flexor/extensor activity changes unoccupied knee poses. Wing
+              b1/b2 activity changes an unlocked wing’s illustrative posture.
+              This is a rate-to-angle illustration, not calibrated muscle force,
+              twitch timing, or wingbeats. Task contacts take priority.
+            </p>
+          </section>
+          <section class="setup-panel" id="brain-panel" hidden>
+            <div class="model-block">
+              <span class="eyebrow">RETAINED CONNECTOME</span
+              ><strong>MaleCNS v1.0</strong
+              ><span>166,700 neurons · 25.6M connections</span>
+            </div>
+            <div class="two-col">
+              <label
+                >Pulse duration · ms<input
+                  id="pulse-ms"
+                  type="number"
+                  min="0"
+                  max="2000"
+                  step="0.1" /></label
+              ><label
+                >Pulse current<input
+                  id="pulse-current"
+                  type="number"
+                  min="0"
+                  max="100"
+                  step="1"
+              /></label>
+            </div>
+            <label
+              >Website click weight · ×<input
+                id="website-click-weight"
+                type="number"
+                min="0.1"
+                max="20"
+                step="0.5"
+                value="5"
+            /></label>
+            <p class="hint">
+              Raises click's selection score on websites. Raw neural activity
+              stays visible; silent or below-threshold signals cannot win. Bus
+              and game movement keep their own weights.
+            </p>
+            <label
+              >Neural decoder<textarea
+                id="decoder"
+                spellcheck="false"
+                rows="19"
+                aria-describedby="decoder-help"
+              ></textarea>
+            </label>
+            <p class="hint" id="decoder-help">
+              Weighted mean-rate competition. Map neuron types or body IDs to
+              <code>forward</code>, <code>turn_left</code>,
+              <code>turn_right</code>, <code>reverse</code> (bus / website
+              Back), <code>click</code>, <code>back</code>,
+              <code>scroll_up</code>, <code>scroll_down</code>, or
+              <code>rest</code>. No activity or a tie uses the fallback. The
+              default DNp20/DNpe017 assignments are engineered task controls,
+              not established walking commands.
+            </p>
+            <button class="quiet full bordered" id="add-reverse" hidden>
+              Add reverse control
+            </button>
+            <button class="quiet full bordered" id="add-website-actions" hidden>
+              Add website actions
+            </button>
+            <p class="hint" id="website-readout-help" hidden>
+              Website defaults: front-leg controls move focus; the right middle
+              leg clicks, the left middle leg goes Back, and rear legs scroll.
+              DNp09 left/right are engineered scroll readouts.
+            </p>
+            <button class="quiet full bordered" id="reset-decoder">
+              Restore task readout
+            </button>
+          </section>
+        </fieldset>
+        <div class="sidebar-footer">
+          <span class="status-dot"></span
+          ><span>Original lab controls · browser demo.</span>
+        </div>
+      </aside>
+      <section class="main-column">
+        <div class="run-toolbar">
+          <div class="run-title">
+            <span class="eyebrow">LIVE ENVIRONMENT</span>
+            <h2 id="run-title">Food seeking</h2>
+          </div>
+          <div class="transport">
+            <button id="start" class="primary">▶ Start training</button
+            ><button id="pause" class="secondary" disabled>Ⅱ Pause</button
+            ><button
+              id="step"
+              class="icon-button"
+              aria-label="Advance one decision"
+              title="Single decision"
+            >
+              ▷│</button
+            ><button
+              id="stop"
+              class="icon-button"
+              aria-label="Stop run"
+              title="Stop run"
+              disabled
+            >
+              ■
+            </button>
+          </div>
+        </div>
+        <div class="continuous-controls">
+          <label class="check-row"
+            ><input id="continuous-training" type="checkbox" />Run
+            continuously</label
+          >
+          <span id="continuous-summary" class="hint"
+            >Each session continues from its saved brain. Stop gives food and
+            saves.</span
+          >
+        </div>
+        <div id="browser-demo-controls" class="demo-controls"><span>MANUAL INPUT <small>One press = one decision</small></span><button data-demo-action="turn_left" disabled>← Left <kbd>A</kbd></button><button data-demo-action="forward" disabled>↑ Forward <kbd>W</kbd></button><button data-demo-action="turn_right" disabled>Right → <kbd>D</kbd></button><button data-demo-action="rest" disabled>Rest <kbd>S</kbd></button></div>
+        <div class="status-line">
+          <span class="pill" id="run-status">READY</span
+          ><span id="status-message">Set up a scenario to begin.</span
+          ><span class="mode-pill" id="mode-label">LEARNING</span>
+        </div>
+        <div class="task-banner" id="task-banner" hidden>
+          <strong id="task-title"></strong><span id="task-objective"></span
+          ><small id="task-performance"></small>
+        </div>
+        <div class="website-monitor" id="website-monitor" hidden>
+          <div
+            class="website-actions"
+            id="website-actions"
+            aria-label="Website action mapping"
+          ></div>
+          <p id="website-focus"></p>
+          <p id="website-outcome" role="status"></p>
+          <p class="hint" id="website-position"></p>
+        </div>
+        <div class="arena-wrap" id="arena-wrap">
+          <div id="viewport" aria-label="Interactive 3D fly arena"></div>
+          <div class="arena-top">
+            <span class="arena-caption"
+              ><i></i> ARENA VIEW
+              <span id="arena-dimensions">100 × 100</span></span
+            >
+            <div class="camera-buttons">
+              <button data-camera="orbit" class="active">Orbit</button
+              ><button data-camera="top">Top</button
+              ><button data-camera="follow">Follow</button
+              ><button data-camera="body">Body</button
+              ><button id="toggle-trail" class="active" aria-pressed="true">
+                Trail
+              </button>
+            </div>
+          </div>
+          <div class="placement-note" id="placement-note" hidden></div>
+          <div class="arena-bottom">
+            <span
+              >Drag to orbit <b>·</b> Scroll to zoom <b>·</b> Right-drag to
+              pan</span
+            ><span class="model-credit" id="fly-model-label"
+              >Loading anatomical fly mesh…</span
+            ><span id="coordinates">X 22.0 / Y 50.0</span>
+          </div>
+          <div id="render-error" class="render-error" hidden></div>
+          <div class="scene-legend">
+            <span><i class="key food"></i>Food</span
+            ><span><i class="key obstacle"></i>Barrier</span
+            ><span><i class="key hazard"></i>Aversive zone</span>
+          </div>
+        </div>
+        <div class="metrics-strip">
+          <div>
+            <span>EPISODE</span
+            ><strong id="metric-episode">— <small>/ 5</small></strong>
+          </div>
+          <div><span>DECISIONS</span><strong id="metric-step">0</strong></div>
+          <div>
+            <span>EPISODE REWARD</span><strong id="metric-reward">0.00</strong>
+          </div>
+          <div>
+            <span id="progress-label">FOOD COLLECTED</span
+            ><strong id="metric-food">0 <small>/ 1</small></strong>
+          </div>
+          <div>
+            <span>NEURAL TIME</span
+            ><strong id="metric-time">0.0 <small>s</small></strong>
+          </div>
+        </div>
+        <section class="training-history">
+          <div class="section-heading">
+            <h3>Training history</h3>
+            <div class="history-tabs">
+              <button data-chart="reward" class="active">Reward</button
+              ><button data-chart="spikes">Spikes</button
+              ><button data-chart="memory">Memory</button>
+            </div>
+            <button class="quiet" id="export-run">Export run ↓</button>
+          </div>
+          <div class="chart-wrap">
+            <canvas
+              id="history-chart"
+              aria-label="Training measurements by decision"
+            ></canvas
+            ><span class="chart-empty" id="chart-empty"
+              >Measurements appear after the first neural decision.</span
+            >
+          </div>
+          <div class="chart-caption">
+            <span id="chart-label">REWARD PER DECISION</span
+            ><span id="history-range">NO DECISIONS YET</span>
+          </div>
+          <section
+            class="journey-section"
+            id="journey-section"
+            aria-labelledby="journey-heading"
+            hidden
+          >
+            <div class="journey-heading">
+              <div>
+                <h3 id="journey-heading">Fly’s website journey</h3>
+                <p id="journey-summary">No recorded steps yet</p>
+              </div>
+              <a class="quiet" id="journey-export" download hidden
+                >Export journey ↓</a
+              >
+            </div>
+            <div class="journey-controls">
+              <label
+                >Run<select id="journey-run">
+                  <option value="">Current run</option>
+                </select></label
+              ><label
+                >Show<select id="journey-filter">
+                  <option value="actions">Clicks, Back, and scroll</option>
+                  <option value="all">Every decision</option>
+                  <option value="pages">Page changes</option>
+                </select></label
+              >
+            </div>
+            <ol
+              class="journey-list"
+              id="journey-list"
+              aria-label="Recorded website journey"
+            >
+              <li class="journey-empty">
+                The fly’s actions and destinations appear here during training.
+              </li>
+            </ol>
+          </section>
+          <section
+            class="training-progress"
+            id="training-progress"
+            aria-labelledby="training-progress-title"
+          >
+            <h3 id="training-progress-title">Learning &amp; checkpoints</h3>
+            <p id="training-progress-summary" class="hint">
+              Continue from a saved brain to accumulate practice.
+            </p>
+            <div id="training-memory" class="hint"></div>
+            <div id="training-comparison"></div>
+          </section>
+          <section class="training-progress" aria-labelledby="assay-title">
+            <h3 id="assay-title">Internal state &amp; cue recall</h3>
+            <div id="assay-results"></div>
+          </section>
+          <div class="episode-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Episode</th>
+                  <th>Task</th>
+                  <th>Seed</th>
+                  <th>Decisions</th>
+                  <th>Reward</th>
+                  <th>Food</th>
+                  <th>Outcome</th>
+                </tr>
+              </thead>
+              <tbody id="episode-rows">
+                <tr>
+                  <td colspan="7" class="empty-row">No completed episodes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </section>
+      <aside class="monitor" id="live-monitor">
+        <div
+          id="monitor-resize"
+          class="monitor-resize"
+          role="separator"
+          tabindex="0"
+          aria-label="Resize brain and mind panel"
+          aria-orientation="vertical"
+          aria-controls="live-monitor"
+          aria-valuemin="340"
+          aria-valuemax="680"
+          aria-valuenow="420"
+          title="Drag to resize · Arrow keys adjust · Double-click resets"
+        ></div>
+        <div class="monitor-heading">
+          <span class="eyebrow">LIVE MONITOR</span
+          ><span class="live-indicator" id="activity-state"
+            >AWAITING INPUT</span
+          >
+        </div>
+        <section class="brain-panel">
+          <div class="section-heading">
+            <h3>Brain + nerve cord</h3>
+            <button class="quiet" id="neuron-expand">Expand ↗</button>
+          </div>
+          <div class="neuron-controls">
+            <label
+              >Color<select id="neuron-color">
+                <option value="spikes">Measured spikes</option>
+                <option value="voltage">Membrane mV</option>
+                <option value="type">Neuron class</option>
+              </select></label
+            ><label class="check-row"
+              ><input
+                id="neuron-edges"
+                type="checkbox"
+                checked
+              />Connections</label
+            >
+          </div>
+          <div id="neuron-viewport">
+            <p id="neuron-tooltip" class="neuron-tooltip" hidden></p>
+          </div>
+          <div class="neuron-playback">
+            <span id="neuron-timing">Awaiting activity</span
+            ><button id="neuron-replay" class="quiet">Replay bins ↻</button>
+          </div>
+          <label class="neuron-scrub"
+            >Recorded neural bin<input
+              id="neuron-bin"
+              type="range"
+              min="0"
+              max="0"
+              value="0"
+              step="1"
+              disabled
+          /></label>
+          <div class="neuron-search">
+            <input
+              id="neuron-search"
+              placeholder="Neuron ID or exact type"
+              aria-label="Find neuron"
+            /><button id="neuron-search-button" class="quiet bordered">
+              Inspect
+            </button>
+          </div>
+          <div id="neuron-inspector" hidden></div>
+          <p class="neuron-caption" id="neuron-caption">
+            Loading real soma positions…
+          </p>
+          <button id="show-all-neurons" class="quiet full">
+            Show all displayed neurons
+          </button>
+          <div
+            class="neuron-legend"
+            title="Connections: cyan = positive, pink = negative model weight. Voltage and weights are end-of-window values."
+          >
+            <span id="neuron-legend-low">Quiet</span><i id="neuron-gradient"></i
+            ><span id="neuron-legend-high">Measured spikes</span>
+          </div>
+        </section>
+        <section class="mind-panel" aria-labelledby="mind-heading">
+          <div class="section-heading">
+            <h3 id="mind-heading">Fly’s mind</h3>
+            <span class="unit">BEHAVIOR VIEW</span>
+          </div>
+          <div
+            class="mind-scroll"
+            tabindex="0"
+            role="region"
+            aria-label="Fly’s mind activity"
+          >
+            <div id="internal-content"></div>
+            <div id="mind-content">
+              <p class="hint">Awaiting observed behavior…</p>
+            </div>
+            <p class="mind-boundary">
+              Interpretations of actions and learning evidence, not a readout of
+              thoughts or feelings.
+            </p>
+          </div>
+        </section>
+        <section class="motor-panel">
+          <div class="section-heading">
+            <h3>Neuron → body</h3>
+            <span class="unit">MEAN Hz</span>
+          </div>
+          <p class="hint">
+            Select a limb or click the fly to highlight its annotated motor
+            neurons above. Body glow shows measured activity.
+          </p>
+          <div id="motor-regions" class="motor-regions"></div>
+          <strong id="motor-region-title">Left front leg</strong>
+          <div class="motor-window" id="motor-window">
+            Awaiting neural input
+          </div>
+          <p class="hint" id="motor-summary"></p>
+          <div id="motor-pools"></div>
+          <p class="hint" id="motor-motion-status"></p>
+          <button id="export-motor" class="quiet bordered full">
+            Export neuron mapping + activity ↓
+          </button>
+          <p class="hint">
+            Anatomical mapping · MaleCNS. Counts include cells with missing soma
+            coordinates. Angles and forces are not inferred measurements.
+          </p>
+        </section>
+        <section>
+          <div class="section-heading">
+            <h3>Neural output</h3>
+            <span class="unit">Hz</span>
+          </div>
+          <div class="action-card">
+            <span>SELECTED BEHAVIOR</span
+            ><strong id="action-label">Awaiting decision</strong
+            ><small id="decoder-reason"
+              >The brain determines every action.</small
+            >
+          </div>
+          <div class="constraint-readout">
+            <span>BODY EXECUTION</span
+            ><strong id="effective-action">Awaiting command</strong
+            ><small id="constraint-reason">No action yet.</small>
+          </div>
+          <div id="rate-bars" class="rate-bars"></div>
+          <div class="mini-row">
+            <span>Gate spikes</span><strong id="gate-spikes">Disabled</strong>
+          </div>
+          <div class="mini-row">
+            <span>Selection margin</span><strong id="winner-margin">—</strong>
+          </div>
+        </section>
+        <section class="sensory-section">
+          <div class="section-heading">
+            <h3>Fly’s visual input</h3>
+            <span class="unit" id="frame-tick">PREVIEW</span>
+          </div>
+          <div class="retina-frame">
+            <img
+              id="retina"
+              alt="Exact RGB scene supplied to the neural simulation"
+            />
+          </div>
+          <p class="hint">
+            Exact input for the labeled neural window: arena camera, bus
+            dashboard, game view, or website screenshot.
+          </p>
+        </section>
+        <section>
+          <div class="section-heading"><h3>Activity & memory</h3></div>
+          <div class="mini-row">
+            <span>Window spikes</span><strong id="total-spikes">—</strong>
+          </div>
+          <div class="mini-row">
+            <span>Kenyon cell spikes</span><strong id="kc-spikes">—</strong>
+          </div>
+          <div class="mini-row">
+            <span>Reward / aversive</span><strong id="dan-spikes">—</strong>
+          </div>
+          <div class="mini-row">
+            <span>Changed connections</span
+            ><strong id="changed-edges">—</strong>
+          </div>
+          <div class="mini-row">
+            <span>Mean efficacy</span><strong id="mean-efficacy">—</strong>
+          </div>
+          <div class="memory-track"><i id="memory-fill"></i></div>
+          <div class="mini-row">
+            <span>Native compute</span><strong id="compute-time">—</strong>
+          </div>
+          <div class="mini-row">
+            <span>Neural window total</span><strong id="observe-time">—</strong>
+          </div>
+          <div class="mini-row">
+            <span>CPU workers</span><strong id="execution-workers">—</strong>
+          </div>
+        </section>
+        <section>
+          <div class="section-heading"><h3>Reinforcement</h3></div>
+          <div class="feedback-grid">
+            <div>
+              <span>RECEIVED</span><strong id="reward-received">—</strong>
+            </div>
+            <div>
+              <span>DELIVERED</span><strong id="reward-delivered">—</strong>
+            </div>
+          </div>
+          <p class="hint" id="reinforcement-pulse"></p>
+          <p class="hint" id="reward-breakdown"></p>
+          <div class="two-col">
+            <button class="feedback positive" id="give-reward" disabled>
+              + Reward</button
+            ><button class="feedback negative" id="give-aversive" disabled>
+              − Aversive
+            </button>
+          </div>
+          <p class="hint">Manual pulses join the next decision’s feedback.</p>
+        </section>
+        <section>
+          <div class="section-heading">
+            <h3>Local runs</h3>
+            <button
+              class="quiet"
+              id="refresh-runs"
+              aria-label="Refresh saved runs"
+            >
+              ↻
+            </button>
+          </div>
+          <button class="secondary full" id="save-brain" disabled>
+            Save brain checkpoint
+          </button>
+          <div id="saved-runs" class="saved-runs">
+            <p class="hint">Finished runs will appear here.</p>
+          </div>
+          <p id="run-id" class="run-id">No active session</p>
+        </section>
+      </aside>
+    </main>
+    <div class="toast" id="toast" role="status" hidden></div>
+    <dialog id="guide">
+      <div class="dialog-heading">
+        <h2>Inside the simulation</h2>
+        <button id="close-guide" class="icon-button" aria-label="Close guide">
+          ×
+        </button>
+      </div>
+      <p>
+        In the browser, choose an arena preset and start the demo. Use W, A, D and S, or the action buttons, to advance one decision at a time. Your actions drive the environment directly; the browser does not simulate neural activity or learning.
+      </p>
+      <ol>
+        <li>
+          <strong>Design:</strong> click a placement tool, then click the arena.
+          Tune rewards and episode settings under Training.
+        </li>
+        <li>
+          <strong>With compute:</strong> memory persists across episodes. Turn learning
+          off for a frozen-memory comparison.
+        </li>
+        <li>
+          <strong>With compute:</strong> pause at a decision boundary, advance one
+          decision, and compare behavior with the exact sensory input and
+          measured neural rates.
+        </li>
+        <li>
+          <strong>With compute:</strong> save the brain, then choose its checkpoint
+          under Training to start a new episode with that memory.
+        </li>
+      </ol>
+      <p>
+        The fly moves on a plane displayed in 3D. Its body and wings illustrate
+        behavior; this is not a biomechanical flight model. The sensory
+        projection, behavior readout, and reward rules are engineered
+        interfaces. Reward or changed weights alone do not establish learning.
+      </p>
+      <p>
+        Browser scenario saves stay in this browser. Configuration and demo summaries can be exported. The browser runs one manual arena episode; randomized food, other task execution, neural training, assays and checkpoints require compute. Other task scenes show their default layout.
+      </p>
+    </dialog>
+    <script src="/fly-lab/runtime-config.js"></script><script type="module" src="/fly-lab/app.js"></script>
+  </body>
+</html>
