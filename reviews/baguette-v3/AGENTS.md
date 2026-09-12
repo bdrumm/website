@@ -33,4 +33,6 @@ Covered center-joint sockets must have 45-degree ceilings in the connection-down
 
 Keep unloaded inward-set latch geometry distinct from its elastic seated state. Verify positive preload, seated contact, release clearance, and 45-degree connection-facing bevels in the actual unloaded print orientation. Preserve the central retaining shoulders and compare geometry outside the latch regions against the prior revision.
 
+The 45-degree connection-facing bevel must cover the main tongue end, not only the hook or grip. Match the stationary U-slot edge to the bevel with a running gap. Measure remaining flat downward-facing tongue area and verify that the fixed slot rim does not move with latch release in either CAD or the preview.
+
 The editable CAD and source checks are distributed in baguette-v3-source-and-print.zip. Extract to a writable model workspace before changing geometry. Publish rebuilt assets and both matching archives together.

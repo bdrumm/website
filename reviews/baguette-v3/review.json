@@ -1,6 +1,6 @@
 {
-  "generator_sha256": "2686dddf5f221d2ef6102119ea97d2e78b21d648bb6b4dd569f7af9a7c8843d2",
-  "revision": "V3.15 inward-set latches with 45 degree connection-facing bevels engineering prototype",
+  "generator_sha256": "5c20afbd6e8286fd61ef02ce73f4e918a1cfae08cf96535fbfb9962bf8c7a6c4",
+  "revision": "V3.16 inward-set latches with full 45 degree tongue edges engineering prototype",
   "parameters": {
     "hinge_axis_x": -40.4,
     "exterior_rim_axis_x": -41.0,
@@ -99,15 +99,15 @@
   ],
   "printables": {
     "segment_A": {
-      "triangles": 68238,
+      "triangles": 66734,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 340154.46023562655,
-      "mass_g_at_1_24": 421.79153069217693,
+      "volume_mm3": 340269.6174985668,
+      "mass_g_at_1_24": 421.93432569822284,
       "components": 2,
       "component_volumes_mm3": [
-        148857.77912477983,
-        191296.68111084675
+        148898.99229214215,
+        191370.62520642465
       ],
       "bounds_mm": [
         -77.18889617919922,
@@ -124,15 +124,15 @@
       ]
     },
     "segment_B": {
-      "triangles": 68016,
+      "triangles": 66588,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 336890.9179942182,
-      "mass_g_at_1_24": 417.7447383128305,
+      "volume_mm3": 337006.2926424964,
+      "mass_g_at_1_24": 417.88780287669556,
       "components": 2,
       "component_volumes_mm3": [
-        146613.37801284544,
-        190277.53998137274
+        146654.14767418595,
+        190352.14496831046
       ],
       "bounds_mm": [
         -77.11788177490234,
@@ -151,14 +151,14 @@
   },
   "parts": {
     "base_A": {
-      "triangles": 33778,
+      "triangles": 33368,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 191296.7125628189,
-      "mass_g_at_1_24": 237.20792357789543,
+      "volume_mm3": 191371.19643719686,
+      "mass_g_at_1_24": 237.3002835821241,
       "components": 1,
       "component_volumes_mm3": [
-        191296.7125628189
+        191371.19643719686
       ],
       "bounds_mm": [
         -44.29999923706055,
@@ -175,14 +175,14 @@
       ]
     },
     "lid_A": {
-      "triangles": 34496,
+      "triangles": 33398,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 148857.7763712104,
-      "mass_g_at_1_24": 184.5836427003009,
+      "volume_mm3": 148898.9894770342,
+      "mass_g_at_1_24": 184.6347469515224,
       "components": 1,
       "component_volumes_mm3": [
-        148857.7763712104
+        148898.9894770342
       ],
       "bounds_mm": [
         -44.29999923706055,
@@ -199,14 +199,14 @@
       ]
     },
     "base_B": {
-      "triangles": 33462,
+      "triangles": 33022,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 190277.5154408553,
-      "mass_g_at_1_24": 235.94411914666057,
+      "volume_mm3": 190352.1204239223,
+      "mass_g_at_1_24": 236.03662932566363,
       "components": 1,
       "component_volumes_mm3": [
-        190277.5154408553
+        190352.1204239223
       ],
       "bounds_mm": [
         -44.29999923706055,
@@ -223,14 +223,14 @@
       ]
     },
     "lid_B": {
-      "triangles": 34584,
+      "triangles": 33594,
       "watertight": true,
       "consistent_winding": true,
-      "volume_mm3": 146613.37744160136,
-      "mass_g_at_1_24": 181.8005880275857,
+      "volume_mm3": 146654.1470394037,
+      "mass_g_at_1_24": 181.8511423288606,
       "components": 1,
       "component_volumes_mm3": [
-        146613.37744160136
+        146654.1470394037
       ],
       "bounds_mm": [
         -44.29999923706055,
@@ -456,6 +456,7 @@
       "root_z": 8.0,
       "tip_z": -10.8,
       "release_min_x": 31.9,
+      "release_plane_constant": 186.5,
       "hook_shoulder_z": -5.5,
       "engagement_mm": 1.1500000000000001,
       "receiver_lip_projection_mm": 1.55,
@@ -467,13 +468,13 @@
       "print_up_y": -1,
       "bevel_planes": [
         {
-          "name": "hook",
+          "name": "tongue",
           "normal": [
             1,
             -1,
             0
           ],
-          "offset": 131.16830791010455
+          "offset": 131.8754146912911
         },
         {
           "name": "grip",
@@ -494,9 +495,9 @@
           "offset": 127.27922061357854
         }
       ],
-      "free_catch_interference_mm3": 8.051336345260147,
-      "preload_travel_mm": 0.2202692802991688,
-      "seated_catch_gap_mm": 0.010000032888179885
+      "free_catch_interference_mm3": 6.82931230923771,
+      "preload_travel_mm": 0.22026536719185444,
+      "seated_catch_gap_mm": 0.010000111761364205
     },
     {
       "y": 150.0,
@@ -504,6 +505,7 @@
       "root_z": 8.0,
       "tip_z": -10.8,
       "release_min_x": 31.9,
+      "release_plane_constant": 186.5,
       "hook_shoulder_z": -5.5,
       "engagement_mm": 1.1500000000000001,
       "receiver_lip_projection_mm": 1.55,
@@ -515,13 +517,13 @@
       "print_up_y": 1,
       "bevel_planes": [
         {
-          "name": "hook",
+          "name": "tongue",
           "normal": [
             1,
             1,
             0
           ],
-          "offset": 131.16830791010455
+          "offset": 131.8754146912911
         },
         {
           "name": "grip",
@@ -542,16 +544,56 @@
           "offset": 127.27922061357854
         }
       ],
-      "free_catch_interference_mm3": 8.01114418394378,
-      "preload_travel_mm": 0.22027084554209458,
-      "seated_catch_gap_mm": 0.010000053859275907
+      "free_catch_interference_mm3": 6.796961782838243,
+      "preload_travel_mm": 0.22026286280317323,
+      "seated_catch_gap_mm": 0.010000066081401669
     }
   ],
   "closed_overlap_mm3": 0.0,
-  "unloaded_closed_overlap_mm3": 16.062549652985656,
+  "unloaded_closed_overlap_mm3": 13.626341201812716,
   "release_travel_from_free_mm": 2.7565104664448574,
   "latch_states": "Print objects contain unloaded inward-set tongues. Closed assembly shows the measured outward seated displacement against each catch; opening shows fully released tongues.",
   "approx_latch_strain_at_release": 0.02297092055370715,
+  "slicing": {
+    "A": {
+      "input_stl_sha256": "c9e7d2290f16e566789604e9335de091a8c25b259daccdbe725ace5b6e432a54",
+      "status": "offline slice completed",
+      "slicer": "Bambu Studio 02.08.02.61",
+      "estimated_time": "14h 39m 43s",
+      "filament_g": 487.06,
+      "max_z_mm": 322.8,
+      "supports_enabled": true,
+      "sent_to_printer": false,
+      "provenance": {
+        "input_stl_sha256": "c9e7d2290f16e566789604e9335de091a8c25b259daccdbe725ace5b6e432a54",
+        "settings_sha256": {
+          "machine": "8b98c3c85b37e97f455ed6821ec764cdc9b17fc73755f8794f69e215ebdc901d",
+          "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
+          "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
+        },
+        "output_gcode_sha256": "8ad2756a3828387a87f6780f581fe97d88f9b02bfdbbcf6c10fcb672b84a1941"
+      }
+    },
+    "B": {
+      "input_stl_sha256": "443e446d2d85a9092a239b7a3ba1987dccea6cab8791ff388fce0b591080087e",
+      "status": "offline slice completed",
+      "slicer": "Bambu Studio 02.08.02.61",
+      "estimated_time": "14h 32m 55s",
+      "filament_g": 486.16,
+      "max_z_mm": 314.8,
+      "supports_enabled": true,
+      "sent_to_printer": false,
+      "provenance": {
+        "input_stl_sha256": "443e446d2d85a9092a239b7a3ba1987dccea6cab8791ff388fce0b591080087e",
+        "settings_sha256": {
+          "machine": "8b98c3c85b37e97f455ed6821ec764cdc9b17fc73755f8794f69e215ebdc901d",
+          "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
+          "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
+        },
+        "output_gcode_sha256": "89656dbca3e30bfcb69386c1d0d442d0208d72ceebe7a0c3b34ebc6f50bd16a5"
+      }
+    }
+  },
   "joint_validation": {
     "base": {
       "insertion_certified_clearance_mm": 0.14799980926513673,
@@ -757,14 +799,14 @@
         "name": "latch at -150.0 blocks opening without release",
         "passed": true,
         "detail": {
-          "rigid_interference_at_half_degree_mm3": 7.767555942292349
+          "rigid_interference_at_half_degree_mm3": 7.221912238798107
         }
       },
       {
         "name": "latch at -150.0 has at least 1 mm of measured retaining overlap",
         "passed": true,
         "detail": {
-          "local_overlap_x_mm": 1.5791585998466573
+          "local_overlap_x_mm": 1.5791618045961968
         }
       },
       {
@@ -778,29 +820,29 @@
         "name": "latch at -150.0 follows the original outer surface except the thumb lip",
         "passed": true,
         "detail": {
-          "exterior_residue_mm3": 0.001608966716402939
+          "exterior_residue_mm3": 0.0015727468178889556
         }
       },
       {
         "name": "latch at -150.0 has an integrated underside finger catch",
         "passed": true,
         "detail": {
-          "underhang_mm": 0.7933577720895482,
-          "outside_material_below_original_tip_mm3": 9.615016850377256
+          "underhang_mm": 0.793357771569541,
+          "outside_material_below_original_tip_mm3": 9.615002198659552
         }
       },
       {
         "name": "latch at 150.0 blocks opening without release",
         "passed": true,
         "detail": {
-          "rigid_interference_at_half_degree_mm3": 7.80740836209703
+          "rigid_interference_at_half_degree_mm3": 7.261192913579251
         }
       },
       {
         "name": "latch at 150.0 has at least 1 mm of measured retaining overlap",
         "passed": true,
         "detail": {
-          "local_overlap_x_mm": 1.5824576186604986
+          "local_overlap_x_mm": 1.5824641563970587
         }
       },
       {
@@ -814,23 +856,23 @@
         "name": "latch at 150.0 follows the original outer surface except the thumb lip",
         "passed": true,
         "detail": {
-          "exterior_residue_mm3": 0.003614800559861225
+          "exterior_residue_mm3": 0.007446341099162274
         }
       },
       {
         "name": "latch at 150.0 has an integrated underside finger catch",
         "passed": true,
         "detail": {
-          "underhang_mm": 0.799205017576492,
-          "outside_material_below_original_tip_mm3": 9.610042775315659
+          "underhang_mm": 0.7992050175102197,
+          "outside_material_below_original_tip_mm3": 9.610012906784814
         }
       },
       {
         "name": "preloaded latch at -150.0 is held elastically outward by its catch",
         "passed": true,
         "detail": {
-          "unloaded_interference_mm3": 8.051336345260147,
-          "outward_seated_tip_travel_mm": 0.2202692802991688,
+          "unloaded_interference_mm3": 6.82931230923771,
+          "outward_seated_tip_travel_mm": 0.22026536719185444,
           "inward_tip_set_mm": 0.6565104664448573
         }
       },
@@ -838,16 +880,16 @@
         "name": "preloaded latch at -150.0 seats at the retaining pocket without penetrating it",
         "passed": true,
         "detail": {
-          "contact_numerical_separation_mm": 0.009999784665618894,
+          "contact_numerical_separation_mm": 0.009997974345723895,
           "overlap_mm3": 0.0
         }
       },
       {
-        "name": "preloaded latch at -150.0 has a 45 degree connection-facing hook bevel",
+        "name": "preloaded latch at -150.0 has a 45 degree connection-facing tongue bevel",
         "passed": true,
         "detail": {
-          "beveled_area_mm2": 5.729515086089515,
-          "measured_plane_angle_degrees": 45.00006241781269,
+          "beveled_area_mm2": 71.81059635586439,
+          "measured_plane_angle_degrees": 45.000004471703036,
           "maximum_vertex_plane_error_mm": 5.3947966307532624e-06,
           "connection_down_build_direction": [
             0,
@@ -860,7 +902,7 @@
         "name": "preloaded latch at -150.0 has a 45 degree connection-facing grip bevel",
         "passed": true,
         "detail": {
-          "beveled_area_mm2": 10.809751136831931,
+          "beveled_area_mm2": 10.809751136831933,
           "measured_plane_angle_degrees": 45.00003113196131,
           "maximum_vertex_plane_error_mm": 5.394796616542408e-06,
           "connection_down_build_direction": [
@@ -885,11 +927,27 @@
         }
       },
       {
+        "name": "preloaded latch at -150.0 has no remaining flat connection-facing tongue end",
+        "passed": true,
+        "detail": {
+          "remaining_downward_flat_area_mm2": 0.0,
+          "root_transition_excluded_above_z_mm": 7.5
+        }
+      },
+      {
+        "name": "preloaded latch at -150.0 retains a fixed shell edge and running gap beside its bevel",
+        "passed": true,
+        "detail": {
+          "minimum_gap_to_static_slot_edge_mm": 0.4499910915939443,
+          "stationary_edge_motion_mm3": 0.0
+        }
+      },
+      {
         "name": "preloaded latch at 150.0 is held elastically outward by its catch",
         "passed": true,
         "detail": {
-          "unloaded_interference_mm3": 8.01114418394378,
-          "outward_seated_tip_travel_mm": 0.22027084554209458,
+          "unloaded_interference_mm3": 6.796961782838243,
+          "outward_seated_tip_travel_mm": 0.22026286280317323,
           "inward_tip_set_mm": 0.6565104664448573
         }
       },
@@ -897,16 +955,16 @@
         "name": "preloaded latch at 150.0 seats at the retaining pocket without penetrating it",
         "passed": true,
         "detail": {
-          "contact_numerical_separation_mm": 0.0099979562581514,
+          "contact_numerical_separation_mm": 0.00999862690763959,
           "overlap_mm3": 0.0
         }
       },
       {
-        "name": "preloaded latch at 150.0 has a 45 degree connection-facing hook bevel",
+        "name": "preloaded latch at 150.0 has a 45 degree connection-facing tongue bevel",
         "passed": true,
         "detail": {
-          "beveled_area_mm2": 5.737210453496466,
-          "measured_plane_angle_degrees": 45.00002118492762,
+          "beveled_area_mm2": 71.63409210018105,
+          "measured_plane_angle_degrees": 44.999986916060216,
           "maximum_vertex_plane_error_mm": 5.3947966307532624e-06,
           "connection_down_build_direction": [
             0,
@@ -944,31 +1002,97 @@
         }
       },
       {
+        "name": "preloaded latch at 150.0 has no remaining flat connection-facing tongue end",
+        "passed": true,
+        "detail": {
+          "remaining_downward_flat_area_mm2": 0.0,
+          "root_transition_excluded_above_z_mm": 7.5
+        }
+      },
+      {
+        "name": "preloaded latch at 150.0 retains a fixed shell edge and running gap beside its bevel",
+        "passed": true,
+        "detail": {
+          "minimum_gap_to_static_slot_edge_mm": 0.4499892832376843,
+          "stationary_edge_motion_mm3": 0.0
+        }
+      },
+      {
         "name": "base_A is unchanged outside the latch mechanism",
         "passed": true,
         "detail": {
-          "boolean_difference_outside_latches_mm3": 0.000377051518172707
+          "boolean_difference_outside_latches_mm3": 0.0003525292609730577
+        }
+      },
+      {
+        "name": "base_A retains its catch and adds only original shell beside the bevel",
+        "passed": true,
+        "detail": {
+          "rounded_edge_removed_residue_mm3": 0.011238367704629562,
+          "central_four_mm_boolean_difference_mm3": 0.0,
+          "added_outside_original_shell_mm3": 3.3102570821648e-05
+        }
+      },
+      {
+        "name": "base_A has a matching fixed 45 degree slot face below the seam",
+        "passed": true,
+        "detail": {
+          "face_area_mm2": 43.141652090193496,
+          "maximum_plane_error_mm": 6.527818868562463e-06,
+          "measured_normal_gap_to_tongue_mm": 0.44999962220549605
         }
       },
       {
         "name": "lid_A is unchanged outside the latch mechanism",
         "passed": true,
         "detail": {
-          "boolean_difference_outside_latches_mm3": 1.207213369974064e-06
+          "boolean_difference_outside_latches_mm3": 1.3749493052295513e-05
+        }
+      },
+      {
+        "name": "lid_A retains its central grip and locking shoulder",
+        "passed": true,
+        "detail": {
+          "central_four_mm_boolean_difference_mm3": 1.2052665199329512e-06
         }
       },
       {
         "name": "base_B is unchanged outside the latch mechanism",
         "passed": true,
         "detail": {
-          "boolean_difference_outside_latches_mm3": 0.00025993217916563116
+          "boolean_difference_outside_latches_mm3": 0.00020768873053318346
+        }
+      },
+      {
+        "name": "base_B retains its catch and adds only original shell beside the bevel",
+        "passed": true,
+        "detail": {
+          "rounded_edge_removed_residue_mm3": 0.009175318348446626,
+          "central_four_mm_boolean_difference_mm3": 0.0,
+          "added_outside_original_shell_mm3": 0.0005989976709035626
+        }
+      },
+      {
+        "name": "base_B has a matching fixed 45 degree slot face below the seam",
+        "passed": true,
+        "detail": {
+          "face_area_mm2": 45.08552724505272,
+          "maximum_plane_error_mm": 6.527818868562463e-06,
+          "measured_normal_gap_to_tongue_mm": 0.4500004785945748
         }
       },
       {
         "name": "lid_B is unchanged outside the latch mechanism",
         "passed": true,
         "detail": {
-          "boolean_difference_outside_latches_mm3": 1.3156818777312722e-05
+          "boolean_difference_outside_latches_mm3": 9.95217276980858e-06
+        }
+      },
+      {
+        "name": "lid_B retains its central grip and locking shoulder",
+        "passed": true,
+        "detail": {
+          "central_four_mm_boolean_difference_mm3": 4.345728890643124e-06
         }
       },
       {
@@ -978,7 +1102,8 @@
           "checked_height_mm": 14.2,
           "surface_depth_mm": 0.3,
           "gauge_width_mm": 0.08,
-          "obstruction_mm3": 7.587755592296682e-05
+          "obstruction_mm3": 7.587755592296682e-05,
+          "sloped_side": false
         }
       },
       {
@@ -988,7 +1113,8 @@
           "checked_height_mm": 14.2,
           "surface_depth_mm": 0.3,
           "gauge_width_mm": 0.08,
-          "obstruction_mm3": 7.584160513210291e-05
+          "obstruction_mm3": 0.0,
+          "sloped_side": true
         }
       },
       {
@@ -998,7 +1124,8 @@
           "checked_height_mm": 14.2,
           "surface_depth_mm": 0.3,
           "gauge_width_mm": 0.08,
-          "obstruction_mm3": 7.587825944133279e-05
+          "obstruction_mm3": 0.0,
+          "sloped_side": true
         }
       },
       {
@@ -1008,7 +1135,8 @@
           "checked_height_mm": 14.2,
           "surface_depth_mm": 0.3,
           "gauge_width_mm": 0.08,
-          "obstruction_mm3": 7.588022499246482e-05
+          "obstruction_mm3": 7.588022499246482e-05,
+          "sloped_side": false
         }
       },
       {
@@ -1345,7 +1473,7 @@
           "enclosed_air_components": 1,
           "analysis_seam_offset_mm": 0.36,
           "masked_vents": 4,
-          "cavity_volume_mm3": 2945735.9113953225
+          "cavity_volume_mm3": 2945541.9880177705
         }
       },
       {
@@ -2087,10 +2215,10 @@
       {
         "name": "geometry report matches the current generator",
         "passed": true,
-        "detail": "2686dddf5f221d2ef6102119ea97d2e78b21d648bb6b4dd569f7af9a7c8843d2"
+        "detail": "5c20afbd6e8286fd61ef02ce73f4e918a1cfae08cf96535fbfb9962bf8c7a6c4"
       }
     ],
-    "passed": 152,
+    "passed": 162,
     "failed": 0,
     "physical_print_tested": false,
     "continuous_sweep_proven": true,
@@ -2102,46 +2230,6 @@
       "between_sample_displacement_bound_mm": 0.15718381848228777,
       "numerical_allowance_mm": 0.002,
       "certified_minimum_gap_mm": 0.14081619343864113
-    }
-  },
-  "slicing": {
-    "A": {
-      "input_stl_sha256": "fe8e02e4f0f1c9cd953202757055fc0a64d60319b56e8a64da50b2a6f195905e",
-      "status": "offline slice completed",
-      "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "14h 36m 25s",
-      "filament_g": 486.39,
-      "max_z_mm": 322.8,
-      "supports_enabled": true,
-      "sent_to_printer": false,
-      "provenance": {
-        "input_stl_sha256": "fe8e02e4f0f1c9cd953202757055fc0a64d60319b56e8a64da50b2a6f195905e",
-        "settings_sha256": {
-          "machine": "8b98c3c85b37e97f455ed6821ec764cdc9b17fc73755f8794f69e215ebdc901d",
-          "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
-          "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
-        },
-        "output_gcode_sha256": "02e61e96e6fe79df8f29bf0b48a71e6536502619f5457b6f734cc42468299413"
-      }
-    },
-    "B": {
-      "input_stl_sha256": "4b6096ffbb833486138f87143a7420138de6c8ef76669c24e38c94819a080d93",
-      "status": "offline slice completed",
-      "slicer": "Bambu Studio 02.08.02.61",
-      "estimated_time": "14h 28m 44s",
-      "filament_g": 486.24,
-      "max_z_mm": 314.8,
-      "supports_enabled": true,
-      "sent_to_printer": false,
-      "provenance": {
-        "input_stl_sha256": "4b6096ffbb833486138f87143a7420138de6c8ef76669c24e38c94819a080d93",
-        "settings_sha256": {
-          "machine": "8b98c3c85b37e97f455ed6821ec764cdc9b17fc73755f8794f69e215ebdc901d",
-          "process": "ce6fc785119d2cb6b8ecf764b94f54a2472dbca371aadfd459f103c0d6dac242",
-          "filament": "b93e7ace8abb80220c38308896a750a62edd8479b82cc369a1021516fe206898"
-        },
-        "output_gcode_sha256": "55c24109a796e2cc60f9bd3eea07b0a0eb844939975349536039ddc495aa183b"
-      }
     }
   }
 }
