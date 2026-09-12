@@ -86,7 +86,8 @@ function buildContentViews(features,useCases){
 }
 
 export async function buildBaguetteProject(container,project){
- const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href=new URL('../baguette.css?v=dcecbdcd9f',import.meta.url).href;document.head.append(sheet);
+ document.documentElement.classList.add('baguette-project-page');
+ const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href=new URL('../baguette.css?v=cc12940e72',import.meta.url).href;document.head.append(sheet);
  const experience=document.createElement('section');experience.className='baguette-experience';experience.setAttribute('aria-label','Baguette holder design and interactive preview');container.append(experience);
  const loading=document.createElement('p');loading.className='baguette-loading';loading.textContent='Preparing the working model…';loading.setAttribute('role','status');experience.append(loading);
  try{

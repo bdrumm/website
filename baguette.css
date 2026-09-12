@@ -1,11 +1,12 @@
 .project-detail.baguette-detail{display:block}
-.baguette-experience{--review-surface:#f3f4ec;--review-accent:#49375f;--review-muted:#65596d;color:var(--foreground);width:100%}
-[data-theme=dark] .baguette-experience{--review-surface:#0e192b;--review-accent:#8be3e2;--review-muted:#b4c5df}
+.baguette-experience{--review-surface:var(--stage);--review-accent:var(--primary);--review-muted:var(--muted);color:var(--foreground);width:100%}
+.baguette-project-page .shop-heading{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}
+.baguette-project-page .shop-heading h1{font-size:clamp(52px,6.8vw,104px);overflow-wrap:anywhere}
 .baguette-review-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
 .baguette-experience .prototype{font-size:13px;color:var(--review-muted)}
 .baguette-experience #baguette-v3-web{border:2px solid var(--border);background:var(--review-surface);margin:0 0 40px;overflow:hidden}
-.baguette-experience .toolbar{display:flex;flex-wrap:wrap;gap:8px;padding:18px;border-bottom:1px solid var(--border)}
-.baguette-experience .toolbar button{font-size:14px;min-height:42px;padding:9px 14px;border:1px solid var(--border);color:var(--foreground);background:transparent;cursor:pointer}
+.baguette-experience .toolbar{display:flex;flex-wrap:wrap;gap:8px;padding:18px;border-bottom:1px solid var(--border);background:var(--mint)}
+.baguette-experience .toolbar button{font-family:var(--font-geist-mono),monospace;font-size:14px;min-height:44px;padding:9px 14px;border:1px solid var(--border);color:var(--foreground);background:var(--field);cursor:pointer}
 .baguette-experience .toolbar button[aria-pressed=true]{background:var(--review-accent);color:var(--background);border-color:var(--review-accent)}
 .baguette-experience .toolbar button:hover{background:var(--review-accent);color:var(--background)}
 .baguette-experience .toolbar button[data-copy-link]{margin-left:auto}
@@ -20,41 +21,45 @@
 .baguette-experience input[type=checkbox]{width:18px;height:18px;accent-color:var(--review-accent)}
 .baguette-experience [data-status]{margin:0;padding:0 22px 20px;font-size:14px;color:var(--review-muted)}
 .baguette-experience [hidden]{display:none!important}
-.baguette-experience h2{font-size:clamp(28px,3.2vw,44px);letter-spacing:-.045em;line-height:1.1;margin:12px 0 14px;font-weight:550}
+.baguette-experience h2{font-size:clamp(28px,3.2vw,44px);letter-spacing:-.045em;line-height:1.1;margin:12px 0 14px;font-weight:650;text-transform:uppercase}
 .baguette-experience h3{font-size:clamp(24px,2.4vw,32px);letter-spacing:-.04em;line-height:1.18;margin:16px 0}
 .baguette-experience p{font-size:16px;line-height:1.65}
-.baguette-experience .section-number{font-family:var(--font-geist-mono),monospace;font-size:11px;letter-spacing:.08em;color:var(--review-muted)}
+.baguette-experience .section-number{font-family:var(--font-geist-mono),monospace;font-size:12px;letter-spacing:.04em;color:var(--review-muted);padding:0}
 .baguette-content-tabs{display:flex;gap:32px;border-bottom:1px solid var(--border);margin:0 0 48px}
-.baguette-content-tabs button{position:relative;padding:16px 0;border:0;background:none;color:var(--review-muted);font:inherit;font-size:18px;cursor:pointer}
+.baguette-content-tabs button{position:relative;padding:18px 0;border:0;background:none;color:var(--review-muted);font-family:var(--font-geist-mono),monospace;font-size:14px;text-transform:uppercase;cursor:pointer}
 .baguette-content-tabs button[aria-selected=true]{color:var(--foreground)}
 .baguette-content-tabs button[aria-selected=true]:after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:3px;background:var(--foreground)}
 .baguette-experience button:focus-visible,.baguette-experience [role=tabpanel]:focus-visible,.baguette-experience summary:focus-visible{outline:2px solid var(--review-accent);outline-offset:5px}
 .baguette-section-intro{margin-bottom:40px;max-width:750px}
 .baguette-section-intro>p{color:var(--review-muted);margin:0}
-.baguette-feature-row{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:clamp(28px,5vw,80px);align-items:center;padding:40px 0;border-top:1px solid var(--border)}
-.baguette-feature-copy{max-width:390px}.baguette-feature-copy p{color:var(--review-muted);margin:0 0 20px}
+.baguette-feature-row{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);align-items:center;margin-bottom:24px;border:2px solid var(--border);background:var(--mint)}
+.baguette-feature-row:nth-of-type(3n+2){background:var(--coral)}.baguette-feature-row:nth-of-type(3n){background:var(--violet)}
+.baguette-feature-copy .section-number,.baguette-use-case-copy .section-number{color:var(--foreground)}
+.baguette-feature-copy{padding:clamp(24px,3.5vw,52px)}.baguette-feature-copy p{color:var(--foreground);margin:0 0 20px}
 .baguette-text-button{padding:8px 0;background:none;border:0;border-bottom:1px solid var(--border);font:inherit;font-size:14px;color:var(--foreground);cursor:pointer}
 .baguette-text-button:hover{color:var(--review-accent);border-color:currentColor}
 .baguette-experience figure{margin:0}.baguette-experience figure img{width:100%;height:auto;display:block;background:var(--review-surface)}
-.baguette-feature-photos{min-width:0}.baguette-feature-photos figure img{aspect-ratio:8/5;object-fit:contain;background:#4d545e}
+.baguette-feature-photos{min-width:0;align-self:stretch;padding:24px;border-left:1px solid var(--border);background:var(--review-surface)}.baguette-feature-photos figure img{aspect-ratio:8/5;object-fit:contain;background:#4d545e}
 .baguette-experience figcaption{font-size:12px;margin-top:12px;color:var(--review-muted);line-height:1.5}
 .baguette-photo-choices{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
-.baguette-photo-choices button{padding:8px 12px;min-height:40px;font:inherit;font-size:12px;border:1px solid var(--border);color:var(--review-muted);background:transparent;cursor:pointer}
+.baguette-photo-choices button{padding:8px 12px;min-height:44px;font:inherit;font-size:14px;border:1px solid var(--border);color:var(--review-muted);background:var(--field);cursor:pointer}
 .baguette-photo-choices button[aria-pressed=true]{color:var(--background);background:var(--foreground);border-color:var(--foreground)}
 .baguette-photo-choices button:hover{border-color:var(--foreground)}
-.baguette-project-files{border-top:1px solid var(--border);padding-top:32px;margin-top:16px}.baguette-project-files p{color:var(--review-muted)}
+.baguette-project-files{border:2px solid var(--border);padding:28px;margin-top:40px;background:var(--violet)}.baguette-project-files h3{margin-top:0}.baguette-project-files p{color:var(--foreground)}
 .baguette-experience .downloads{display:flex;flex-wrap:wrap;gap:16px 28px;margin-top:24px}.baguette-experience .downloads a{font-size:14px;text-underline-offset:5px}
 .baguette-experience .renders{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:24px}.baguette-more-renders summary{cursor:pointer;padding:16px 0}
 .baguette-experience .baguette-concept-note{margin-top:16px;font-size:12px}
-.baguette-use-case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:48px 32px}
+.baguette-use-case-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.baguette-use-case{border:2px solid var(--border);background:var(--mint);min-width:0}.baguette-use-case:nth-child(3n+2){background:var(--coral)}.baguette-use-case:nth-child(3n){background:var(--violet)}
 .baguette-use-case figure img{aspect-ratio:3/2;object-fit:cover}
-.baguette-use-case-copy{padding:24px 0 0;max-width:550px}.baguette-use-case-copy h3{margin:12px 0}.baguette-use-case-copy p{margin:0;color:var(--review-muted)}
-.baguette-use-case-lead{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);align-items:center;gap:clamp(28px,5vw,80px);padding-bottom:48px;border-bottom:1px solid var(--border)}
-.baguette-use-case-lead .baguette-use-case-copy{padding:0}
+.baguette-use-case-copy{padding:28px;border-top:1px solid var(--border)}.baguette-use-case-copy h3{margin:12px 0}.baguette-use-case-copy p{margin:0;color:var(--foreground)}
+.baguette-use-case-lead{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);align-items:center}
+.baguette-use-case-lead figure{border-right:1px solid var(--border)}.baguette-use-case-lead .baguette-use-case-copy{padding:clamp(24px,3.5vw,52px);border-top:0}
 @media(max-width:760px){
  .baguette-experience .toolbar{padding:12px;gap:6px}.baguette-experience .toolbar button{padding:9px 10px;font-size:13px}.baguette-experience .toolbar button[data-copy-link]{margin-left:0}.baguette-experience .controls{gap:12px;padding:16px}.baguette-experience .angle{flex-basis:100%}.baguette-experience [data-model-stage]{height:340px}.baguette-experience .baguette-gesture-hint{font-size:11px;padding-left:16px}
  .baguette-content-tabs{margin-bottom:32px}.baguette-section-intro{margin-bottom:28px}
- .baguette-feature-row{grid-template-columns:1fr;gap:24px;padding:32px 0}.baguette-feature-copy{max-width:unset}.baguette-feature-copy p{margin-bottom:10px}
- .baguette-use-case-grid,.baguette-use-case-lead,.baguette-experience .renders{grid-template-columns:1fr;gap:32px}.baguette-use-case-lead{gap:0;padding-bottom:32px}.baguette-use-case-lead .baguette-use-case-copy{padding-top:24px}
- .baguette-photo-choices{gap:6px}.baguette-photo-choices button{padding:8px 10px}.baguette-experience .downloads{flex-direction:column;gap:18px}
+ .baguette-project-page .shop-heading{grid-template-columns:minmax(0,1fr)}.baguette-project-page .shop-heading h1{font-size:clamp(44px,11vw,76px)}
+ .baguette-feature-row{grid-template-columns:1fr}.baguette-feature-copy{padding:24px}.baguette-feature-copy p{margin-bottom:10px}.baguette-feature-photos{padding:16px;border-left:0;border-top:1px solid var(--border)}
+ .baguette-use-case-grid,.baguette-use-case-lead,.baguette-experience .renders{grid-template-columns:1fr;gap:24px}.baguette-use-case-lead{gap:0}.baguette-use-case-lead figure{border-right:0}.baguette-use-case-lead .baguette-use-case-copy{border-top:1px solid var(--border)}
+ .baguette-use-case-copy,.baguette-project-files{padding:24px}.baguette-photo-choices{gap:6px}.baguette-photo-choices button{padding:8px 10px}.baguette-experience .downloads{flex-direction:column;gap:18px}
 }

@@ -20,7 +20,7 @@ window.PARAMETRIC_SHOP = {
     title: 'Baguette holder',
     section: '3d',
     category: 'PRINT STUDY / 002',
-    summary: 'A sculpted shell. A considered way to carry.',
+    summary: 'A printable baguette case with a hinged lid, integrated latches and carry-strap eyes.',
     description: [
       'Explore the working printable design, with integrated center snaps, a rim hinge, recessed latch grips and strap roots that blend into the body.',
       'Open the lid, inspect the hinge and latch sections, separate the print segments, and review the matching CAD renders and print files.'
