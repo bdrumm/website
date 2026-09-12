@@ -60,6 +60,8 @@ function buildFeatures(info,gallery,viewer){
 
 const useCases=[
  {id:'carry',label:'01 / STRAP FUNCTIONALITY',title:'A strap. Two attachment points.',copy:'The shoulder strap pulls outward from the two projecting eyes. The case hangs beneath these tension points, with the strap clear of the shell.',alt:'Concept rendering of the ivory baguette case hanging below its two outward-projecting eyes, with taut shoulder straps clear of the shell.'},
+ {id:'purse',label:'EVERYDAY PURSE',title:'Carry the day.',copy:'An everyday shoulder purse for keys, cards and small essentials. From a coffee run to an evening out, take the case beyond the bakery.',alt:'The current case rendered as a shoulder purse outside a café.'},
+ {id:'essentials',label:'NON-BAGUETTE STORAGE',title:'Room for something else.',copy:'Keep sunglasses, cables and small travel items together. The credit card holder concept adds a dedicated place for cards; Pro and Mini explore a more compact everyday carry.',alt:'The current open case on a table beside keys, a card wallet and sunglasses.'},
  {id:'rain',label:'02 / RAIN',title:'For the walk home.',copy:'A closed-shell carry concept for a drizzly trip from the bakery. Weather resistance is still to be tested.',alt:'Model-based concept of the closed baguette holder on a shoulder strap during a rainy walk.'},
  {id:'picnic',label:'03 / PICNIC',title:'Unclip. Open. Share.',copy:'Set it down on the blanket and open the hinged lid. The smooth interior leaves room for one very good baguette.',alt:'The actual open baguette case rendered in 3D on a linen picnic blanket.'},
  {id:'travel',label:'04 / TRAVEL',title:'A little room for the journey.',copy:'From the bakery to the train, keep your baguette in its own contoured case. Unshoulder the strap when it is time to settle in.',alt:'Concept rendering of the closed baguette case and its loose carry strap on a train table.'},
@@ -68,16 +70,16 @@ const useCases=[
 
 function buildUseCases(){
  const panel=make('section','baguette-use-cases');panel.setAttribute('aria-label','Baguette holder use cases');
- const intro=make('div','baguette-section-intro');intro.append(make('span','section-number','OUT IN THE WORLD'),make('h2','','Made to come along.'),make('p','','From the morning bakery run to a weekend outside.'));
- const note=make('p','baguette-concept-note','Live CAD model · Illustrated settings · Accessory straps');intro.append(note);panel.append(intro);
+ const intro=make('div','baguette-section-intro');intro.append(make('span','section-number','OUT IN THE WORLD'),make('h2','','Made to come along.'),make('p','','Bread, daily essentials, and everything in between.'));
+ const note=make('p','baguette-concept-note','Current Pro Max model · Illustrated settings · Accessory straps');intro.append(note);panel.append(intro);
  const grid=make('div','baguette-use-case-grid');
- for(const scene of useCases){
+ for(const [index,scene] of useCases.entries()){
   const card=make('article','baguette-use-case'+(scene.id==='carry'?' baguette-use-case-lead':''));
   const figure=make('figure'),stage=make('div','baguette-lifestyle-preview');stage.dataset.lifestyleScene=scene.id;
   const img=make('img','baguette-scene-background');img.src=new URL(`../assets/baguette-use-cases/${scene.id}-background.jpg`,import.meta.url).href;img.alt='';img.width=1536;img.height=1024;img.loading='lazy';img.decoding='async';
-  const fallback=make('img','baguette-scene-fallback');fallback.src=assetURL((scene.id==='picnic'?'open':'closed')+'.jpg');fallback.alt=scene.alt;fallback.loading='lazy';
+  const fallback=make('img','baguette-scene-fallback');fallback.src=assetURL((['picnic','essentials'].includes(scene.id)?'open':'closed')+'.jpg');fallback.alt=scene.alt;fallback.loading='lazy';
   const status=make('span','baguette-scene-status','Loading 3D preview…');status.dataset.sceneStatus='';stage.append(img,fallback,status);figure.append(stage);
-  const copy=make('div','baguette-use-case-copy');copy.append(make('span','section-number',scene.label),make('h3','',scene.title),make('p','',scene.copy));
+  const copy=make('div','baguette-use-case-copy');copy.append(make('span','section-number',`${String(index+1).padStart(2,'0')} / ${scene.label.replace(/^\d+ \/ /,'')}`),make('h3','',scene.title),make('p','',scene.copy));
   card.append(figure,copy);grid.append(card);
  }
  panel.append(grid);return panel;
@@ -85,11 +87,14 @@ function buildUseCases(){
 
 export async function buildBaguetteProject(container,project){
  document.documentElement.classList.add('baguette-project-page');
- const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href=new URL('../baguette.css?v=6d225fb3a0',import.meta.url).href;document.head.append(sheet);
+ const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href=new URL('../baguette.css?v=45d69c1124',import.meta.url).href;document.head.append(sheet);
  const experience=document.createElement('section');experience.className='baguette-experience';experience.setAttribute('aria-label','Baguette holder design and interactive preview');container.append(experience);
  let savedFinish;try{savedFinish=localStorage.getItem('parametric-baguette-finish');}catch{}
  const finishes=createFinishStore(new URLSearchParams(location.search).get('finish')||savedFinish);
  finishes.subscribe(finish=>{try{localStorage.setItem('parametric-baguette-finish',finish.id);}catch{}experience.dataset.finish=finish.id;const url=new URL(location.href);url.searchParams.set('finish',finish.id);history.replaceState(history.state,'',url);});
+ let savedOptions;try{savedOptions=JSON.parse(localStorage.getItem('parametric-baguette-options'));}catch{}
+ const options=createOptionsStore(readOptions(new URLSearchParams(location.search),savedOptions));
+ options.subscribe(value=>{try{localStorage.setItem('parametric-baguette-options',JSON.stringify(value));}catch{}const url=new URL(location.href);writeOptions(url.searchParams,value);history.replaceState(history.state,'',url);});
  const loading=document.createElement('p');loading.className='baguette-loading';loading.textContent='Preparing the working model…';loading.setAttribute('role','status');experience.append(loading);
  try{
   // Reuse the working preview's controls, review text, renders and download URLs.
@@ -108,11 +113,13 @@ export async function buildBaguetteProject(container,project){
   const note=document.createElement('span');note.className='prototype';note.textContent=review.querySelector('.prototype')?.textContent||'Engineering prototype';heading.append(revision,note);
   const viewer=copy(originalViewer),info=copy(details),gallery=copy(renders);
   const hint=document.createElement('p');hint.className='baguette-gesture-hint';hint.textContent='Drag to rotate · Scroll to move the page';viewer.querySelector('[data-model-stage]').after(hint);
-  experience.replaceChildren(heading,buildFinishPicker(finishes),viewer,buildUseCases(),buildFeatures(info,gallery,viewer));
+  const previewNote=make('p','baguette-preview-scope');
+  options.subscribe(value=>{previewNote.textContent=value.size==='pro-max'?'3D preview · Current Pro Max prototype. Add-ons are shown as options above.':`${BAGUETTE_SIZES.find(size=>size.id===value.size).name} selected · Size concept. The 3D preview and lifestyle scenes show the current Pro Max prototype.`;});
+  experience.replaceChildren(heading,buildBaguetteConfigurator(options,finishes),buildFinishPicker(finishes),previewNote,viewer,buildUseCases(),buildFeatures(info,gallery,viewer));
   document.querySelector('meta[name="description"]')?.setAttribute('content',project.description?.[0]||project.summary);
   const revisionQuery=new URL(review.querySelector('script[src*="review.js"]').getAttribute('src'),reviewURL).search;
   const modelURL=assetURL('baguette-v3.glb'+revisionQuery);
-  const [model,{mountBaguetteViewer,mountBaguetteComposites}]=await Promise.all([fetch(modelURL,{cache:'no-cache'}),import('../assets/baguette-viewer.js?v=41683e533e'+'&revision='+encodeURIComponent(revisionQuery))]);
+  const [model,{mountBaguetteViewer,mountBaguetteComposites}]=await Promise.all([fetch(modelURL,{cache:'no-cache'}),import('../assets/baguette-viewer.js?v=49a21596ff'+'&revision='+encodeURIComponent(revisionQuery))]);
   if(!model.ok)throw Error('Model unavailable');
   const buffer=await model.arrayBuffer();
   const results=await Promise.allSettled([mountBaguetteViewer(viewer,buffer,finishes),mountBaguetteComposites(experience,buffer,finishes)]);
@@ -125,4 +132,6 @@ export async function buildBaguetteProject(container,project){
  }
 }
 import {BAGUETTE_FINISHES,createFinishStore} from './baguette-finishes.js?v=cad-1';
-import {DETAIL_SCENES} from './baguette-scenes.js?v=cad-1';
+import {DETAIL_SCENES} from './baguette-scenes.js?v=cad-2';
+import {BAGUETTE_SIZES,createOptionsStore,readOptions,writeOptions} from './baguette-options.js?v=options-1';
+import {buildBaguetteConfigurator} from './baguette-configurator.js?v=options-1';

@@ -1,5 +1,18 @@
 # Baguette holder use-case renderings
 
+## Everyday purse and storage scenes · 2026-09-12
+
+Added `purse-background.jpg` and `essentials-background.jpg`, generated with the **built-in image-generation tool**, then saved here as 1536×1024 JPEGs at quality 88. These images contain backgrounds and everyday objects only; the live page overlays the actual current Pro Max CAD model. Pro, Mini and the selected expansion, card-holder and bottle-holder options are labeled as concepts; no unreviewed printable variants are distributed.
+
+### purse-background.jpg — exact prompt
+
+Use case: photorealistic-natural. Asset type: clean background plate for a browser-rendered product lifestyle scene, landscape 1536x1024. A stylish adult in a warm charcoal cropped jacket and straight stone-colored trousers, cropped from shoulders to upper thighs, standing outside a quiet cream-stone city café. Front three-quarter view, torso nearly straight to camera, adult at center. Their hands are resting in trouser pockets and both forearms sit towards the outer edges, leaving the hip/waist area unobstructed. Natural soft late afternoon light from upper left, realistic clothing weave and understated city background. The central waist area from x=18% to 82%, y=45% to 72% must be completely uninterrupted clothing with no foreground object, so an actual slim 3D case and straps can be rendered there afterward. No bag, purse, case, strap, bread, container, logos, text, watermarks or extra people. Keep shoulders at y=0 and hips around y=60%. Editorial product photography background only.
+
+### essentials-background.jpg — exact prompt
+
+Use case: photorealistic-natural. Asset type: clean background plate for a browser-rendered product lifestyle scene, landscape 1536x1024. An elegant overhead / shallow three-quarter view of a pale oak café table, warm diffuse daylight from upper left. The middle band of the table x=12% to 88%, y=29% to 69% is completely EMPTY and clear, reserved for a real 3D case to be rendered later. Neatly arrange a few ordinary personal essentials around the OUTSIDE edges of this empty area: a slim blank dark card wallet and two metal keys at bottom left, tortoiseshell sunglasses and a small lip balm at bottom right, a closed small notebook at upper right, soft neutral linen folded at upper left. Real materials, credible small objects, restrained editorial styling. The clear center is the dominant visual area, no painted shadow of a missing case. No baguette, food, purse, bag, product case, straps, bottle, logos, readable text or watermark. Landscape 1536x1024.
+
+
 ## Live CAD composites · 2026-09-12
 
 The public project page now uses the five `*-background.jpg` files as clean background plates. The product, cord loops and webbing are rendered in the browser above each plate. The earlier complete illustrations below are preserved as source assets and are no longer used as the public lifestyle previews.

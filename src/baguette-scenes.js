@@ -2,6 +2,8 @@
 // Eye-slot centers were checked against the actual base meshes, not image silhouettes.
 export const STRAP_EYES=[[-271.5,-3.5,54],[271.5,-3.5,54]];
 export const LIFESTYLE_SCENES={
+ purse:{center:[.52,.70],width:.62,rotation:[-Math.PI/2,.06,-.17],key:[-600,800,650],keyColor:'#fff0db',exposure:1.01,strapTops:[[.64,.045],[.66,.045]]},
+ essentials:{center:[.5,.44],width:.73,rotation:[.72,.10,-.06],angle:100,key:[-650,900,650],keyColor:'#fff0d4',exposure:1.04,ground:true},
  carry:{center:[.521,.558],width:.65,rotation:[-Math.PI/2,.055,-.235],key:[-500,650,800],keyColor:'#fff1df',exposure:1.05,strapTops:[[.368,-.07],[.64,-.07]]},
  rain:{center:[.512,.565],width:.595,rotation:[-Math.PI/2,.035,-.235],key:[-650,950,500],keyColor:'#e4ecf5',exposure:.91,wet:true,strapTops:[[.321,.265],[.658,.11]],occlusion:'polygon(59% 0%,72% 0%,74% 12%,70% 18%,63% 19%,60% 12%)'},
  picnic:{center:[.501,.488],width:.825,rotation:[.51,.18,-.22],angle:100,key:[-650,900,650],keyColor:'#fff0d4',exposure:1.04,ground:true},

@@ -1,6 +1,12 @@
 # Baguette browser composites
 
-The product page loads the published V3.17 manufacturing GLB once and passes its buffer to the main rotatable viewer and a shared gallery renderer. Five lifestyle cards combine generated clean photo backgrounds with real CAD geometry, accessory webbing, physically based polymer materials, image-based lighting and shadow receivers. Fourteen feature previews render the same mesh with the reviewed close-up cameras. The unloaded tongue and actual sliced-layer diagrams remain their original CAD images; section colors retain their engineering legend.
+The product page loads the published V3.17 manufacturing GLB once and passes its buffer to the main rotatable viewer and a shared gallery renderer. Seven lifestyle cards combine generated clean photo backgrounds with real CAD geometry, accessory webbing, physically based polymer materials, image-based lighting and shadow receivers. Fourteen feature previews render the same mesh with the reviewed close-up cameras. The unloaded tongue and actual sliced-layer diagrams remain their original CAD images; section colors retain their engineering legend.
+
+## Sizes and accessory concepts
+
+The existing manufacturing model is presented as Pro Max, with Pro and Mini introduced as shorter size concepts. Their relative-size illustrations are interface graphics, not scaled manufacturing meshes or dimensioned product specifications. The page explicitly identifies the 3D viewer and lifestyle renders as the current Pro Max prototype. No downloadable geometry has changed.
+
+The configurator supports zero, one or two expansion modules, a credit card holder and an external bottle holder. These are labeled as accessory concepts pending dimensions and attachment design. Selections update the visible setup summary and are saved as device preferences and shareable URL parameters (`size`, `expand`, `cards`, `bottle`). Existing color and model-view parameters are preserved. The size illustrations follow the selected finish. New purse and non-baguette storage scenes demonstrate the broader everyday-carry use cases using the current model.
 
 ## Geometry and alignment
 
