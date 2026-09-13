@@ -33,8 +33,6 @@ Covered center-joint sockets must have 45-degree ceilings in the connection-down
 
 Keep unloaded inward-set latch geometry distinct from its elastic seated state. Verify positive preload, seated contact, release clearance, and 45-degree connection-facing bevels in the actual unloaded print orientation. Preserve the central retaining shoulders and compare geometry outside the latch regions against the prior revision.
 
-The 45-degree connection-facing bevel must cover the main tongue end, not only the hook or grip. Match the stationary U-slot edge to the bevel with a running gap. Measure remaining flat downward-facing tongue area and verify that the fixed slot rim does not move with latch release in either CAD or the preview.
-
-Check the complete connection-facing latch outline, including grip and hook, against a 45-degree maximum overhang in the unloaded connection-down print frame. Run source/validate-print-ramp.py to compare each 0.2 mm layer with material in the preceding whole-lid layer, excluding supports. Beveling the thickness alone does not satisfy the required front-profile ramp.
+The latest user request restores the compact rounded latch, removes the elongated shell recess and infill patch, and confines the new 45-degree edge to material projecting beyond the outer shell where possible. This supersedes the previous full-outline ramp requirement. Preserve the short shell-following spring, central retaining shoulder, preload and fingernail inset. Verify the old patch region matches the uninterrupted shell and measure the new bevel on the actual unloaded exterior grip. Do not claim support-free printing of the entire latch from the exterior bevel check alone.
 
 The editable CAD and source checks are distributed in baguette-v3-source-and-print.zip. Extract to a writable model workspace before changing geometry. Publish rebuilt assets and both matching archives together.
