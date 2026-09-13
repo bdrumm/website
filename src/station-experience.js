@@ -22,7 +22,7 @@ export async function installStation(model,button,status,onSelect,host){
   outgoingContext.clearRect(0,0,size,size);outgoingContext.drawImage(canvas,0,0,size,size);transition=reduced?1:0;select(id);
  }
  function onState(event){requestState(event.detail);}host?.addEventListener('station-state',onState);
- for(const state of STATION_STATES){const b=button(state[1],()=>{if(host?.classList.contains('station-story-viewer')){host.dispatchEvent(new CustomEvent('station-navigate',{detail:state[0]}));return;}requestState(state[0]);});b.setAttribute('aria-pressed','false');buttons.push([state[0],b]);}
+ if(!host?.classList.contains('station-story-viewer'))for(const state of STATION_STATES){const b=button(state[1],()=>{if(host?.classList.contains('station-story-viewer')){host.dispatchEvent(new CustomEvent('station-navigate',{detail:state[0]}));return;}requestState(state[0]);});b.setAttribute('aria-pressed','false');buttons.push([state[0],b]);}
  select('home');if(host?.dataset.storyState&&host.dataset.storyState!=='home')requestState(host.dataset.storyState);host?.dispatchEvent(new Event('station-ready'));
  return {toggleMotion(){motionEnabled=!motionEnabled;host?.classList.toggle('motion-paused',!motionEnabled);return motionEnabled;},setInteracting(value){interacting=value;},update(dt){
   if(motionEnabled&&!interacting){motionTime+=dt;const sway=Math.sin(motionTime*.55);model.rotation.set(Math.sin(motionTime*.37)*.012,sway*.065,Math.sin(motionTime*.23)*.006);model.position.x=restPosition.x+sway*.12;model.position.y=restPosition.y+Math.sin(motionTime*.8)*.025;}

@@ -26,7 +26,7 @@ const SOURCE_FILES=[
  ['src/station-voice-field.js','Voice gradient','The evolving color field used during the voice interaction.'],
  ['src/station-model.js','Device appearance','Display surface and the model’s materials and exterior details.'],
  ['src/station-preview-controls.js','Camera interaction','Small, bounded 3D shifts and a consistent resting angle.'],
- ['src/station-story.js','The page walkthrough','Scroll chapters, app selection and the accompanying scenario text.']
+ ['src/station-story.js','The page walkthrough','App selection and the accompanying scenario text.']
 ];
 
 function section(id,number,title,copy){
@@ -40,8 +40,15 @@ export function buildStationNavigation(root,content){
  content.id='station-demo';
  const nav=element('nav',undefined,'station-details-nav');nav.setAttribute('aria-label','Station page sections');
  nav.append(element('span','Explore Station','station-details-label'));
- for(const [label,id] of [['Demo','demo'],['Use cases','use-cases'],['Apps','apps'],['Capabilities','capabilities'],['Hardware','hardware'],['Code','code']])nav.append(link(label+' ↗','#station-'+id));
+ for(const [label,id] of [['Demo','demo'],['Use cases','use-cases'],['Apps','apps'],['Capabilities','capabilities'],['Hardware','hardware'],['Code','code']])nav.append(link(label,'#station-'+id));
  root.insertBefore(nav,content);
+ return ()=>{
+  const links=[...nav.querySelectorAll('a')],sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);let scheduled=0;
+  function update(){scheduled=0;const offset=nav.getBoundingClientRect().height+36;let active=sections[0];for(const target of sections)if(target.getBoundingClientRect().top<=offset)active=target;for(const a of links){if(a.getAttribute('href')==='#'+active?.id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');}}
+  function schedule(){if(!scheduled)scheduled=requestAnimationFrame(update);}
+  addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);update();
+  addEventListener('pagehide',()=>{removeEventListener('scroll',schedule);removeEventListener('resize',schedule);cancelAnimationFrame(scheduled);},{once:true});
+ };
 }
 
 export function buildStationAppDetails(root,viewer){
@@ -53,7 +60,7 @@ export function buildStationAppDetails(root,viewer){
   const header=element('div',undefined,'station-app-heading');header.append(element('span',String(index+1).padStart(2,'0'),'station-app-number'),element('span',app.category,'station-details-label'));
   card.append(header,element('h3',app.name),element('p',app.summary,'station-app-summary'));
   const features=element('ul',undefined,'station-app-features');for(const feature of app.features)features.append(element('li',feature));
-  card.append(features,element('p',app.detail,'station-app-detail'));
+  card.append(features);const technical=element('details',undefined,'station-app-technical');technical.append(element('summary','How it works'),element('p',app.detail,'station-app-detail'));card.append(technical);
   const demo=element('button','View '+app.name.toLowerCase()+' demo ↗','station-text-action');demo.type='button';demo.dataset.demo=app.id;
   demo.addEventListener('click',()=>{viewer.dispatchEvent(new CustomEvent('station-navigate',{detail:app.id}));viewer.focus({preventScroll:true});});card.append(demo);grid.append(card);
  });

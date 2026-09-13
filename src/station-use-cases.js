@@ -8,7 +8,7 @@ export const STATION_USE_CASES=[
  {id:'waking-up',label:'05 / WAKING UP',title:'Meet the morning.',copy:'The hour and the weather, ready for the first glance. A quiet starting point before the day picks up.',alt:'Generated concept of the small silver Station display beside a bed in morning sunlight, showing the time and weather.'}
 ];
 
-export function buildStationUseCases(){
+export function buildStationUseCases(viewer){
  const section=element('section',undefined,'station-use-cases');section.id='station-use-cases';section.setAttribute('aria-labelledby','station-use-cases-title');
  const intro=element('div',undefined,'station-details-heading');const heading=element('h2','A small part of the day.');heading.id='station-use-cases-title';
  intro.append(element('span','STATION / EVERYDAY MOMENTS','station-details-label'),heading,element('p','From the front door to the bedside, a few ways Station can fit into everyday life.'));section.append(intro);
@@ -21,6 +21,8 @@ export function buildStationUseCases(){
   image.sizes=scene.id==='coming-home'?'(max-width: 760px) calc(100vw - 32px), (max-width: 1440px) 60vw, 850px':'(max-width: 760px) calc(100vw - 32px), (max-width: 1440px) 48vw, 650px';
   image.alt=scene.alt;image.width=1536;image.height=1024;image.loading='lazy';image.decoding='async';figure.append(image);
   const copy=element('div',undefined,'station-use-case-copy');copy.append(element('span',scene.label,'station-details-label'),element('h3',scene.title),element('p',scene.copy));
+  const app={'coming-home':'lights',docked:'home',city:'subway',bedtime:'night','waking-up':'home'}[scene.id];
+  const demo=element('button','Try this moment ↗','station-text-action');demo.type='button';demo.dataset.sceneDemo=app;demo.addEventListener('click',()=>{viewer.dispatchEvent(new CustomEvent('station-navigate',{detail:app}));viewer.focus({preventScroll:true});});copy.append(demo);
   card.append(figure,copy);grid.append(card);
  }
  section.append(grid,element('p','AI-generated use-case concepts based on the Waveshare round display. The dock is a concept accessory.','station-use-case-note'));

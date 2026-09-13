@@ -6,24 +6,31 @@ export const STATION_CHAPTERS=[
  ['voice','16:20 / A SMALL REQUEST','Say it. See it happen.','Follow the voice journey from listening to thinking, speaking and confirmation.'],
  ['lights','19:45 / LIVING ROOM','Set the room’s mood.','A light changes to 40%. The screen confirms what changed.'],
  ['scene','22:30 / WINDING DOWN','One scene. A quieter home.','Bring a familiar routine together in a single request.'],
- ['night','23:10 / NIGHT','Goes quiet when you do.','A dim clock closes the day. Scroll back to revisit any moment.']
+ ['night','23:10 / NIGHT','Goes quiet when you do.','A dim clock closes the day. Choose an app to revisit any moment.']
 ];
+const APP_NAMES={home:'Home',weather0:'Weather',subway:'Transit',timer:'Timer',voice:'Voice',lights:'Lights',scene:'Scenes',night:'Night'};
+
 export function buildStationStory(content,viewer){
- const story=document.createElement('div');story.className='station-story';viewer.classList.add('station-story-viewer');const chapters=document.createElement('div');chapters.className='station-chapters';
- for(const [id,kicker,title,copy] of STATION_CHAPTERS){const section=document.createElement('section');section.className='station-chapter';section.id='station-'+id;section.dataset.state=id;const label=document.createElement('span');label.className='section-number';label.textContent=kicker;const h=document.createElement('h2');h.textContent=title;const p=document.createElement('p');p.textContent=copy;section.append(label,h,p);chapters.append(section);}
- const panel=document.createElement('div');panel.className='station-view-panel';
- const copyPanel=document.createElement('section');copyPanel.className='station-view-copy';copyPanel.setAttribute('aria-label','Current scenario');
- const copyLabel=document.createElement('span');copyLabel.className='section-number';const copyTitle=document.createElement('h2');const copyText=document.createElement('p');copyPanel.append(copyLabel,copyTitle,copyText);
- function showCopy(id){const chapter=STATION_CHAPTERS.find(c=>c[0]===id);if(!chapter)return;copyLabel.textContent=chapter[1];copyTitle.textContent=chapter[2];copyText.textContent=chapter[3];panel.dataset.scenario=id;}
- function syncCopy(event){showCopy(event.detail);if(!matchMedia('(prefers-reduced-motion: reduce)').matches){copyPanel.getAnimations().forEach(a=>a.cancel());copyPanel.animate([{opacity:.2,transform:'translateY(7px)'},{opacity:1,transform:'translateY(0)'}],{duration:650,easing:'cubic-bezier(.2,.7,.2,1)'});}}
- viewer.addEventListener('station-display-change',syncCopy);
- showCopy('home');chapters.setAttribute('aria-hidden','true');panel.append(copyPanel,viewer);story.append(chapters,panel);content.append(story);let current='',raf=0,settle=0,navigation=null;
- function commit(id){if(!id||id===current)return;current=id;viewer.dataset.storyState=id;viewer.dispatchEvent(new CustomEvent('station-state',{detail:id}));}
- function closestSection(){const center=innerHeight*(innerWidth<=760?.76:.5);let closest=null,distance=Infinity;for(const section of chapters.children){const rect=section.getBoundingClientRect(),d=Math.abs(rect.top+rect.height/2-center);if(d<distance){closest=section;distance=d;}}return closest;}
- function update(){raf=0;const closest=closestSection();for(const section of chapters.children)section.classList.toggle('is-active',section===(navigation?document.getElementById('station-'+navigation):closest));clearTimeout(settle);settle=setTimeout(()=>{const destination=navigation||closestSection()?.dataset.state;navigation=null;commit(destination);},180);}
- function schedule(){if(!raf)raf=requestAnimationFrame(update);}
- function navigate(event){navigation=event.detail;commit(navigation);document.getElementById('station-'+navigation)?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'center'});schedule();}
- function interrupt(){navigation=null;schedule();}
- addEventListener('scroll',schedule,{passive:true});addEventListener('resize',schedule);addEventListener('wheel',interrupt,{passive:true});addEventListener('touchstart',interrupt,{passive:true});viewer.addEventListener('station-navigate',navigate);viewer.addEventListener('station-ready',schedule);schedule();
- addEventListener('pagehide',()=>{viewer.removeEventListener('station-display-change',syncCopy);removeEventListener('scroll',schedule);removeEventListener('resize',schedule);removeEventListener('wheel',interrupt);removeEventListener('touchstart',interrupt);viewer.removeEventListener('station-navigate',navigate);cancelAnimationFrame(raf);clearTimeout(settle);},{once:true});
+ const make=(tag,text,className)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(className)node.className=className;return node;};
+ const story=make('div',undefined,'station-story');viewer.classList.add('station-story-viewer');
+ const panel=make('div',undefined,'station-view-panel');
+ const copyPanel=make('section',undefined,'station-view-copy');copyPanel.setAttribute('aria-label','Current scenario');
+ const top=make('div',undefined,'station-scenario-top');const copyLabel=make('span',undefined,'section-number'),counter=make('span',undefined,'station-scenario-count');top.append(copyLabel,counter);
+ const copyTitle=make('h2'),copyText=make('p');copyTitle.id='station-scenario-title';copyPanel.append(top,copyTitle,copyText);
+ const appNav=make('div',undefined,'station-app-switcher');appNav.setAttribute('role','group');appNav.setAttribute('aria-label','Choose an app to preview');
+ let current='home';const appButtons=new Map();
+ function showCopy(id){const index=STATION_CHAPTERS.findIndex(chapter=>chapter[0]===id);if(index<0)return;const chapter=STATION_CHAPTERS[index];current=id;copyLabel.textContent=chapter[1];copyTitle.textContent=chapter[2];copyText.textContent=chapter[3];counter.textContent=String(index+1).padStart(2,'0')+' / 08';panel.dataset.scenario=id;for(const [key,button] of appButtons)button.setAttribute('aria-pressed',String(key===id));previous.disabled=index===0;next.disabled=index===STATION_CHAPTERS.length-1;}
+ function select(id){if(!APP_NAMES[id])return;showCopy(id);if(viewer.dataset.storyState===id)return;viewer.dataset.storyState=id;viewer.dispatchEvent(new CustomEvent('station-state',{detail:id}));}
+ for(const [id] of STATION_CHAPTERS){const button=make('button',APP_NAMES[id]);button.type='button';button.dataset.stationApp=id;button.setAttribute('aria-controls','station-device');button.addEventListener('click',()=>select(id));appButtons.set(id,button);appNav.append(button);}
+ const sequence=make('div',undefined,'station-scenario-sequence');
+ const previous=make('button','← Previous'),next=make('button','Next moment →');previous.type=next.type='button';
+ previous.addEventListener('click',()=>select(STATION_CHAPTERS[Math.max(0,STATION_CHAPTERS.findIndex(c=>c[0]===current)-1)][0]));
+ next.addEventListener('click',()=>select(STATION_CHAPTERS[Math.min(STATION_CHAPTERS.length-1,STATION_CHAPTERS.findIndex(c=>c[0]===current)+1)][0]));sequence.append(previous,next);
+ copyPanel.append(appNav,sequence);panel.append(copyPanel,viewer);story.append(panel);content.append(story);viewer.id='station-device';
+ function navigate(event){if(!APP_NAMES[event.detail])return;select(event.detail);const rect=story.getBoundingClientRect();if(rect.top<0||rect.top>innerHeight*.35)story.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth',block:'start'});}
+ function fromHash(){const id=location.hash.slice(1).replace(/^station-/,'');if(APP_NAMES[id])navigate({detail:id});}
+ function syncCopy(event){showCopy(event.detail);}
+ viewer.addEventListener('station-display-change',syncCopy);viewer.addEventListener('station-navigate',navigate);addEventListener('hashchange',fromHash);
+ select('home');fromHash();
+ addEventListener('pagehide',()=>{viewer.removeEventListener('station-display-change',syncCopy);viewer.removeEventListener('station-navigate',navigate);removeEventListener('hashchange',fromHash);},{once:true});
 }
