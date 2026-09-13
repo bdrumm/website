@@ -37,4 +37,6 @@ The latest user request restores the compact rounded latch, removes the elongate
 
 The latest seam-facing overhang correction also bevels the lower tongue behind the grip. Measure its front outline in the Y/Z connection-down print frame, not only a chamfer across skin thickness. Preserve the compact upper spring and central retaining shoulder, keep the new diagonal clearance free during release, and check actual layer growth across the complete lower overhang.
 
+The next marked-edge review must include the seam entry at A in the overhang check and a tangent blend where the diagonal meets the grip and stationary rim at B. Do not leave a short vertical ledge above the checked region. Preserve latch clearance and the central retaining shoulder.
+
 The editable CAD and source checks are distributed in baguette-v3-source-and-print.zip. Extract to a writable model workspace before changing geometry. Publish rebuilt assets and both matching archives together.
