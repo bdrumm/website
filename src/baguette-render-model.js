@@ -21,11 +21,11 @@ export function clonePrintModel(source,{angle=0,explode=0,section,clip}={}){
  return {model,materials};
 }
 
-export function applyPrintFinish(model,color,{wet=false,texture}={}){
+export function applyPrintFinish(model,color,{wet=false,texture,roughness,metalness=0}={}){
  model.traverse(mesh=>{
   if(!mesh.isMesh||mesh.userData.annotationColor)return;
-  mesh.material.color.set(color);mesh.material.metalness=0;
-  mesh.material.roughness=wet?.24:.43;
+  mesh.material.color.set(color);mesh.material.metalness=metalness;
+  mesh.material.roughness=roughness??(wet?.24:.43);
   if(mesh.material.isMeshPhysicalMaterial){mesh.material.clearcoat=wet?.48:.12;mesh.material.clearcoatRoughness=wet?.16:.38;}
   if(texture){mesh.material.normalMap=texture;mesh.material.normalScale.set(.07,.07);}
  });

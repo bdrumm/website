@@ -29,7 +29,7 @@ export function buildBaguetteConfigurator(options,finishes){
  }
  addons.append(addonGrid);
  const summary=make('div','baguette-configuration-summary'),selection=make('p','baguette-selected-options');selection.setAttribute('role','status');selection.setAttribute('aria-live','polite');
- const note=make('p','baguette-configuration-note','The model and scenes follow your size and color. Pro and Mini are proportional scale previews; final dimensions and add-on attachments are in development.');
+ const note=make('p','baguette-configuration-note','The model follows your size and color; lifestyle photos show Pro Max in your selected color. Pro and Mini are proportional scale previews. Add-on attachments are in development.');
  summary.append(selection,note);panel.append(sizes,addons,summary);
  options.subscribe(value=>{for(const input of inputs)input.checked=input.value===value.size;select.value=String(value.expansions);expansion.classList.toggle('is-selected',value.expansions>0);for(const input of addonInputs)input.checked=value[input.dataset.addon];selection.textContent='Your setup · '+describeOptions(value);});
  finishes.subscribe(finish=>panel.style.setProperty('--case-finish',finish.color));

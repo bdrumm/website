@@ -40,11 +40,9 @@ export async function mountBaguetteViewer(root,buffer,finishes,options){
  canvas.addEventListener('keydown',event=>{if(rotateModelWithKey(camera,controls,event.key)){event.preventDefault();requestRender();}});controls.addEventListener('change',requestRender);
  opening.addEventListener('click',()=>{targetAngle=targetAngle?0:maxAngle;opening.textContent=targetAngle?'Close case':'Open case';opening.setAttribute('aria-pressed',String(targetAngle>0));requestRender();});
  root.querySelector('[data-copy-link]').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(location.href);status.textContent='Setup link copied';}catch{status.textContent='Your setup is saved in the page address.';}});
- const unsubscribeFinish=finishes.subscribe(finish=>{applyPrintFinish(model,finish.color);label();requestRender();});
+ const unsubscribeFinish=finishes.subscribe(finish=>{applyPrintFinish(model,finish.color,finish);label();requestRender();});
  const unsubscribeOptions=options.subscribe(value=>{selected=sizePresentation(value.size);targetScale=selected.scale;label();requestRender();});
  const sizeObserver=new ResizeObserver(resize);sizeObserver.observe(host);const visibility=new IntersectionObserver(requestRender);visibility.observe(host);document.addEventListener('visibilitychange',requestRender);
  resize();requestRender();
  window.addEventListener('pagehide',()=>{disposed=true;cancelAnimationFrame(frameId);unsubscribeFinish();unsubscribeOptions();sizeObserver.disconnect();visibility.disconnect();document.removeEventListener('visibilitychange',requestRender);controls.dispose();key.shadow.dispose();floorGeometry.dispose();floorMaterial.dispose();materials.forEach(material=>material.dispose());source.traverse(mesh=>{if(mesh.isMesh)mesh.geometry.dispose();});environment.dispose();renderer.dispose();},{once:true});
 }
-
-export {mountBaguetteComposites} from './baguette-composites.js';

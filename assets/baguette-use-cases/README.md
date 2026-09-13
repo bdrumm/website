@@ -1,5 +1,9 @@
 # Baguette holder use-case renderings
 
+## Current finished photos · 2026-09-13
+
+The public page now uses the 49 complete lifestyle images in [photos-v1](photos-v1/README.md): seven scenes in Ivory, Graphite, Forest, Clay, Cobalt, Matte Silver and Yellow. The color selector switches the saved images. The live CAD overlays and parallax effect are removed from the gallery. Exact prompts and reference hashes are in [the provenance record](photos-v1/provenance.json). The older sections below document previous image versions and background plates.
+
 ## Everyday purse and storage scenes · 2026-09-12
 
 Added `purse-background.jpg` and `essentials-background.jpg`, generated with the **built-in image-generation tool**, then saved here as 1536×1024 JPEGs at quality 88. These images contain backgrounds and everyday objects only; the live page overlays the actual current Pro Max CAD model. Pro, Mini and the selected expansion, card-holder and bottle-holder options are labeled as concepts; no unreviewed printable variants are distributed.

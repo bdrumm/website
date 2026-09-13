@@ -1,0 +1,453 @@
+{
+  "created": "2026-09-13",
+  "method": "Built-in image_gen tool; JPEG conversion with sips at quality 86",
+  "references": {
+    "reviews/baguette-v3/closed.jpg": "48ffcb315dff9eed7858e0accdadb080764c5972866065361dfb59f34dd2866d",
+    "reviews/baguette-v3/open.jpg": "c39965bf865fef23d86ebe7e8ab5402766244c9dde6fc0ee0f35fa66b73d2e3f",
+    "reviews/baguette-v3/strap.jpg": "a439eddf04843b344d41744c3a282e864598c1409b96fe76f3521c9039a1a201",
+    "reviews/baguette-v3/baguette-v3.glb": "bb543d555910a22e2603e3fa0cc0279d3c4e1d77efafeee7db4a46ca61e1874c"
+  },
+  "assets": [
+    {
+      "file": "carry-ivory.jpg",
+      "scene": "carry",
+      "finish": "ivory",
+      "generatorOutput": "exec-dfd5e8a1-419b-4c7a-977a-2ccf0a8f7461.png",
+      "sha256": "0a7a7bae52603bff46b5322ab8fdc110bf58c204f5f961190ba6b7436d6d29a1",
+      "bytes": 350565,
+      "prompt": "Use case: photorealistic-natural. Asset type: finished landscape product lifestyle photograph for parametric.space, 1536x1024. The supplied images are exact current CAD geometry references: first closed device, second open device, third actual strap eye. Reproduce THIS product very faithfully; do not redesign it. It is a slender rigid approximately 622 mm long, 90 mm wide baguette-shaped clamshell with rounded tapered ends, shallow irregular diagonal sculpting, one transverse center assembly seam, one continuous clamshell rim seam, exactly two SMALL compact polymer latches at quarter points along the front edge, and exactly TWO integral low rectangular strap eyes at the ends of THAT SAME edge. Preserve proportions, latches, hinge, center joint, silhouette and surface contours from the references. Smooth satin 3D-printed polymer, no leather/fabric shell, no zipper, logos, text, collage or watermarks. Accessory strap is thin dark olive woven webbing with small cord loops through those TWO existing rectangular eye slots; no invented holes, metal hardware, added buckles, handles or loops on the broad lid. For hanging scenes, rotate the ENTIRE rigid assembly around its long axis so its broad lid face is upright, the eye-and-latch edge is on TOP, and the case hangs below those eye tension points. Both strap branches pull outward and then upward clear of the case. Never move the eyes or latches relative to the original geometry. Whole case visible, adult scale, realistic gravity, physically consistent contact shadows, matched soft illumination, camera optics and natural photographic texture. Product edges must be clean and geometrically consistent, not a pasted-on illustration.\nFinish: IVORY, warm pale satin polymer #ded5c3. Scene: Closed case hanging beside an adult's hip on a continuous over-shoulder strap. Cropped torso to mid-thigh, natural ivory linen shirt and trousers, quiet warm stone street. Broad case face upright with both real eye connections and two compact latches clear along its upper edge. Product prominent and fully visible, occupying about 70% of image width, suspended beneath its actual eyes. Warm soft morning light. No hands touching or obscuring case."
+    },
+    {
+      "file": "carry-graphite.jpg",
+      "scene": "carry",
+      "finish": "graphite",
+      "generatorOutput": "exec-b4c3be65-1855-4a64-8412-52eabe5be9b3.png",
+      "sha256": "f66b8b112ccbdcef32a2e39861395591029f808eded18ecc3f0cbebba73c193f",
+      "bytes": 340964,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to DEEP CHARCOAL GRAY (graphite, base color #353a40). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "carry-forest.jpg",
+      "scene": "carry",
+      "finish": "forest",
+      "generatorOutput": "exec-7bded8b8-3d9d-4c83-abe3-3242d9ad97a6.png",
+      "sha256": "596c80af205986caf74e598d938c6b7ca2ec142af0b21e2aff8b8e7c01ac4e3f",
+      "bytes": 344978,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MUTED FOREST GREEN (forest, base color #526952). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "carry-clay.jpg",
+      "scene": "carry",
+      "finish": "clay",
+      "generatorOutput": "exec-c391531e-416c-4f51-b746-590a703a9ef7.png",
+      "sha256": "8acf9e24620916391e678e11999d932757ff46c2ded75fd2a68367a50702a872",
+      "bytes": 344754,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to WARM TERRACOTTA CLAY (clay, base color #b96d50). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "carry-cobalt.jpg",
+      "scene": "carry",
+      "finish": "cobalt",
+      "generatorOutput": "exec-998c6ea2-0b79-4279-8211-381f61558fa6.png",
+      "sha256": "bb4d550f33dbf2dc5decd202592aaf2119aa60135f8d132fd2baa48e2ed58ae5",
+      "bytes": 345548,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MEDIUM RICH COBALT BLUE (cobalt, base color #375ca4). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "carry-matte-silver.jpg",
+      "scene": "carry",
+      "finish": "matte-silver",
+      "generatorOutput": "exec-3049abfe-a9be-4617-97a4-211fc00ac992.png",
+      "sha256": "98753d1132f8df8be4c4cb79d8e1b1229eb53755c32ca9a530050e2cdda559af",
+      "bytes": 352530,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MATTE SILVER: NEUTRAL LIGHT SILVER-GRAY WITH A SOFT DIFFUSE SATIN SHEEN, FINE POLYMER TEXTURE, NO CHROME OR MIRROR REFLECTIONS (matte-silver, base color #b8bdc3). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "carry-yellow.jpg",
+      "scene": "carry",
+      "finish": "yellow",
+      "generatorOutput": "exec-a12da2ce-ca5c-4c5b-a2f7-48f8975ab1cf.png",
+      "sha256": "7fe0f115f3be52dc582d3f062f0d7d8b00abfed05e0b077658e5bd1aae2d6c02",
+      "bytes": 345367,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to WARM SUNFLOWER YELLOW, CLEARLY YELLOW RATHER THAN ORANGE, SATIN POLYMER (yellow, base color #f1c638). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "purse-ivory.jpg",
+      "scene": "purse",
+      "finish": "ivory",
+      "generatorOutput": "exec-94e2d68e-4e0c-4c63-b8d9-d78a51e460b9.png",
+      "sha256": "449bc03d2d0cc2169dca5f0d5286c55b93029ca4a53748f92430fb867e6b60a0",
+      "bytes": 388377,
+      "prompt": "Use case: photorealistic-natural. Asset type: finished landscape product lifestyle photograph for parametric.space, 1536x1024. The supplied images are exact current CAD geometry references: first closed device, second open device, third actual strap eye. Reproduce THIS product very faithfully; do not redesign it. It is a slender rigid approximately 622 mm long, 90 mm wide baguette-shaped clamshell with rounded tapered ends, shallow irregular diagonal sculpting, one transverse center assembly seam, one continuous clamshell rim seam, exactly two SMALL compact polymer latches at quarter points along the front edge, and exactly TWO integral low rectangular strap eyes at the ends of THAT SAME edge. Preserve proportions, latches, hinge, center joint, silhouette and surface contours from the references. Smooth satin 3D-printed polymer, no leather/fabric shell, no zipper, logos, text, collage or watermarks. Accessory strap is thin dark olive woven webbing with small cord loops through those TWO existing rectangular eye slots; no invented holes, metal hardware, added buckles, handles or loops on the broad lid. For hanging scenes, rotate the ENTIRE rigid assembly around its long axis so its broad lid face is upright, the eye-and-latch edge is on TOP, and the case hangs below those eye tension points. Both strap branches pull outward and then upward clear of the case. Never move the eyes or latches relative to the original geometry. Whole case visible, adult scale, realistic gravity, physically consistent contact shadows, matched soft illumination, camera optics and natural photographic texture. Product edges must be clean and geometrically consistent, not a pasted-on illustration.\nFinish: IVORY, warm pale satin polymer #ded5c3. Scene: Closed case worn as a slender shoulder purse by an adult in a charcoal cropped jacket and stone trousers outside a cream-stone caf\u00e9. Crop torso to upper thighs, relaxed hands in pockets away from the product. One continuous shoulder strap; entire case at hip, upright broad face, eye-and-latch edge uppermost. Natural late afternoon light. Show the same full-length current product, not a redesigned handbag."
+    },
+    {
+      "file": "purse-graphite.jpg",
+      "scene": "purse",
+      "finish": "graphite",
+      "generatorOutput": "exec-e696babb-ef09-4fe2-a84f-a06dd91ffe45.png",
+      "sha256": "1b251d967976f0a9afc2d811060049e9331cfc919600237164824de8472ccd61",
+      "bytes": 354047,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to DEEP CHARCOAL GRAY (graphite, base color #353a40). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "purse-forest.jpg",
+      "scene": "purse",
+      "finish": "forest",
+      "generatorOutput": "exec-480ee97a-af39-4e97-a9df-47f7516c576b.png",
+      "sha256": "8ebda75b479ac193f80b9d6e503a477b43ed764f8cc1c2c1418671301dc3ed7b",
+      "bytes": 355629,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MUTED FOREST GREEN (forest, base color #526952). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "purse-clay.jpg",
+      "scene": "purse",
+      "finish": "clay",
+      "generatorOutput": "exec-a10466a9-82e0-4d9f-849d-6ddd851fc6a6.png",
+      "sha256": "8b9573150e7fa5962f54da0afe4a315af34f7742be06aa70447849602190283e",
+      "bytes": 364665,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to WARM TERRACOTTA CLAY (clay, base color #b96d50). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "purse-cobalt.jpg",
+      "scene": "purse",
+      "finish": "cobalt",
+      "generatorOutput": "exec-8cb8fc90-cad6-4a83-83a1-3df0fe64f663.png",
+      "sha256": "cf0cc7dbaa97c82bb3b9d102d025bc4bc94d9f4ac7632ca82f79b115ac0ed9d8",
+      "bytes": 350917,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MEDIUM RICH COBALT BLUE (cobalt, base color #375ca4). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "purse-matte-silver.jpg",
+      "scene": "purse",
+      "finish": "matte-silver",
+      "generatorOutput": "exec-da4aea51-9c55-4603-918d-156ccedde818.png",
+      "sha256": "27124dc40f320aff39074a84b24c2a265f4a89aebaff6265ca2f944c733ec937",
+      "bytes": 352084,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MATTE SILVER: NEUTRAL LIGHT SILVER-GRAY WITH A SOFT DIFFUSE SATIN SHEEN, FINE POLYMER TEXTURE, NO CHROME OR MIRROR REFLECTIONS (matte-silver, base color #b8bdc3). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "purse-yellow.jpg",
+      "scene": "purse",
+      "finish": "yellow",
+      "generatorOutput": "exec-3046b2ae-830c-4635-88c9-0bb0d12bdb40.png",
+      "sha256": "448a129cc01b3d853b01fbac6aaf0c9df03de1f42f5ce5f95967ab1ec1046f99",
+      "bytes": 348600,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to WARM SUNFLOWER YELLOW, CLEARLY YELLOW RATHER THAN ORANGE, SATIN POLYMER (yellow, base color #f1c638). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "essentials-ivory.jpg",
+      "scene": "essentials",
+      "finish": "ivory",
+      "generatorOutput": "exec-7088505a-bbcc-49c7-b591-4f91a43d353b.png",
+      "sha256": "4d4de341bd09b8a52b95dcfd8ff067a3ca78a28fad1ccea70a797384a8271e92",
+      "bytes": 511804,
+      "prompt": "Use case: photorealistic-natural. Asset type: finished landscape product lifestyle photograph for parametric.space, 1536x1024. The supplied images are exact current CAD geometry references: first closed device, second open device, third actual strap eye. Reproduce THIS product very faithfully; do not redesign it. It is a slender rigid approximately 622 mm long, 90 mm wide baguette-shaped clamshell with rounded tapered ends, shallow irregular diagonal sculpting, one transverse center assembly seam, one continuous clamshell rim seam, exactly two SMALL compact polymer latches at quarter points along the front edge, and exactly TWO integral low rectangular strap eyes at the ends of THAT SAME edge. Preserve proportions, latches, hinge, center joint, silhouette and surface contours from the references. Smooth satin 3D-printed polymer, no leather/fabric shell, no zipper, logos, text, collage or watermarks. Accessory strap is thin dark olive woven webbing with small cord loops through those TWO existing rectangular eye slots; no invented holes, metal hardware, added buckles, handles or loops on the broad lid. For hanging scenes, rotate the ENTIRE rigid assembly around its long axis so its broad lid face is upright, the eye-and-latch edge is on TOP, and the case hangs below those eye tension points. Both strap branches pull outward and then upward clear of the case. Never move the eyes or latches relative to the original geometry. Whole case visible, adult scale, realistic gravity, physically consistent contact shadows, matched soft illumination, camera optics and natural photographic texture. Product edges must be clean and geometrically consistent, not a pasted-on illustration.\nFinish: IVORY, warm pale satin polymer #ded5c3. Scene: Open case, lid at about100 degrees about the original rear hinge, on a pale oak caf\u00e9 table. Match open CAD reference precisely: narrow smooth rib-free lower trough and smooth curved upper lid, thin center joint, two compact front latches and eyes. The case is EMPTY so its original cavity is visible. Arrange keys, a slim card wallet, sunglasses, lip balm and a small notebook naturally outside it at the table edges, as non-food everyday storage context. Olive strap lies loosely beside the case connected to original eyes. Three-quarter overhead view, natural diffuse daylight from upper left. No extra interior ribs, pockets or compartments."
+    },
+    {
+      "file": "essentials-graphite.jpg",
+      "scene": "essentials",
+      "finish": "graphite",
+      "generatorOutput": "exec-7fafdba0-2ac5-4a68-b4ff-68d39f346cc8.png",
+      "sha256": "eb15b1852a87d6ec0afb322c1fe7ed8213efd41cb973dd89ef73e471d538807f",
+      "bytes": 496932,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to DEEP CHARCOAL GRAY (graphite, base color #353a40). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "essentials-forest.jpg",
+      "scene": "essentials",
+      "finish": "forest",
+      "generatorOutput": "exec-fc05986e-8699-480b-9672-ce344871e732.png",
+      "sha256": "d28f0f66daedb2cc5d580df3893bd7a2459e3069852764d5a0a4453c27dabdf3",
+      "bytes": 492495,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MUTED FOREST GREEN (forest, base color #526952). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "essentials-clay.jpg",
+      "scene": "essentials",
+      "finish": "clay",
+      "generatorOutput": "exec-37956b08-b133-4748-b983-032976a5c6c4.png",
+      "sha256": "c18c101dd557bcc4ef1ce9a888fe7f7b0e9d19b1b3d8be57a9e05d08c40391c0",
+      "bytes": 480322,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to WARM TERRACOTTA CLAY (clay, base color #b96d50). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "essentials-cobalt.jpg",
+      "scene": "essentials",
+      "finish": "cobalt",
+      "generatorOutput": "exec-4d4fa0ba-46a9-4190-ab44-b1094680255d.png",
+      "sha256": "c5384b0b7b874906a0be3e9c65ade53028ff6c796c41ec38c02138247cfd7620",
+      "bytes": 497936,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MEDIUM RICH COBALT BLUE (cobalt, base color #375ca4). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "essentials-matte-silver.jpg",
+      "scene": "essentials",
+      "finish": "matte-silver",
+      "generatorOutput": "exec-b88e89c6-4fdc-47d3-9535-3a538b7d9117.png",
+      "sha256": "a1dfa4b4dc5a721c3c666a3772d7481ff2d7509f9d6f68ce2c699313680d2552",
+      "bytes": 496285,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MATTE SILVER: NEUTRAL LIGHT SILVER-GRAY WITH A SOFT DIFFUSE SATIN SHEEN, FINE POLYMER TEXTURE, NO CHROME OR MIRROR REFLECTIONS (matte-silver, base color #b8bdc3). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "essentials-yellow.jpg",
+      "scene": "essentials",
+      "finish": "yellow",
+      "generatorOutput": "exec-6344131c-14a1-4c98-9e70-7e9aa2a106f6.png",
+      "sha256": "1eb0d9693dc5442cd91eb2b483526963a50c5f9ca8a42c355dcdb772de52bc77",
+      "bytes": 476952,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to WARM SUNFLOWER YELLOW, CLEARLY YELLOW RATHER THAN ORANGE, SATIN POLYMER (yellow, base color #f1c638). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "rain-ivory.jpg",
+      "scene": "rain",
+      "finish": "ivory",
+      "generatorOutput": "exec-98a9aaf8-5586-4ed9-a95e-87eced906e27.png",
+      "sha256": "992256f6774628a918b3896b9530d54c38d204976275ea92d3374a3ea081e4c6",
+      "bytes": 423541,
+      "prompt": "Use case: photorealistic-natural. Asset type: finished landscape product lifestyle photograph for parametric.space, 1536x1024. The supplied images are exact current CAD geometry references: first closed device, second open device, third actual strap eye. Reproduce THIS product very faithfully; do not redesign it. It is a slender rigid approximately 622 mm long, 90 mm wide baguette-shaped clamshell with rounded tapered ends, shallow irregular diagonal sculpting, one transverse center assembly seam, one continuous clamshell rim seam, exactly two SMALL compact polymer latches at quarter points along the front edge, and exactly TWO integral low rectangular strap eyes at the ends of THAT SAME edge. Preserve proportions, latches, hinge, center joint, silhouette and surface contours from the references. Smooth satin 3D-printed polymer, no leather/fabric shell, no zipper, logos, text, collage or watermarks. Accessory strap is thin dark olive woven webbing with small cord loops through those TWO existing rectangular eye slots; no invented holes, metal hardware, added buckles, handles or loops on the broad lid. For hanging scenes, rotate the ENTIRE rigid assembly around its long axis so its broad lid face is upright, the eye-and-latch edge is on TOP, and the case hangs below those eye tension points. Both strap branches pull outward and then upward clear of the case. Never move the eyes or latches relative to the original geometry. Whole case visible, adult scale, realistic gravity, physically consistent contact shadows, matched soft illumination, camera optics and natural photographic texture. Product edges must be clean and geometrically consistent, not a pasted-on illustration.\nFinish: IVORY, warm pale satin polymer #ded5c3. Scene: Closed case worn at an adult's hip over a charcoal rain jacket on an olive shoulder strap during a light drizzly city walk. Crop shoulders to mid-thigh, whole case unobscured; upright broad lid with eyes and two latches along the upper edge. Fine realistic droplets on shell, natural wet pavement background, soft overcast light. Strap hangs from the shoulder, branches taut through original two eye slots, clear of shell. Not a waterproof test; no heavy storm or submersion."
+    },
+    {
+      "file": "rain-graphite.jpg",
+      "scene": "rain",
+      "finish": "graphite",
+      "generatorOutput": "exec-24db5c89-26c5-4b3a-b32b-fc2e5a464a12.png",
+      "sha256": "342037324da26418e23cc813909c05bb2b0a5b623c47bde891989ccf7b1669d3",
+      "bytes": 403404,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to DEEP CHARCOAL GRAY (graphite, base color #353a40). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "rain-forest.jpg",
+      "scene": "rain",
+      "finish": "forest",
+      "generatorOutput": "exec-82194c1c-702f-4d8c-baf8-b82d0e531103.png",
+      "sha256": "5e8b2980b38b1335415c814f4aaaedb4f8f7d060360490dc11b269d8a0d7eb82",
+      "bytes": 409935,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MUTED FOREST GREEN (forest, base color #526952). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "rain-clay.jpg",
+      "scene": "rain",
+      "finish": "clay",
+      "generatorOutput": "exec-86d5c38b-3212-4c06-8ea2-acd9fe0ab967.png",
+      "sha256": "d92862ae6ebd44b18f737af009fea7b59b031eda5f5f5dc3f72c98792415124f",
+      "bytes": 411714,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to WARM TERRACOTTA CLAY (clay, base color #b96d50). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "rain-cobalt.jpg",
+      "scene": "rain",
+      "finish": "cobalt",
+      "generatorOutput": "exec-b71a81e0-4664-4157-978b-c662083265f8.png",
+      "sha256": "f028edab7ab1cc4ec5929cda1ed3530a3d525790c4aed6d36fec7f79b5bfd2c5",
+      "bytes": 414142,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MEDIUM RICH COBALT BLUE (cobalt, base color #375ca4). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "rain-matte-silver.jpg",
+      "scene": "rain",
+      "finish": "matte-silver",
+      "generatorOutput": "exec-e558c76e-7b70-489c-aaf3-a6d3ddc983c2.png",
+      "sha256": "594cd170ce4f5a97a8d93ab496465ada588e5aca1473c4dc295f64645a8aec44",
+      "bytes": 409864,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MATTE SILVER: NEUTRAL LIGHT SILVER-GRAY WITH A SOFT DIFFUSE SATIN SHEEN, FINE POLYMER TEXTURE, NO CHROME OR MIRROR REFLECTIONS (matte-silver, base color #b8bdc3). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "rain-yellow.jpg",
+      "scene": "rain",
+      "finish": "yellow",
+      "generatorOutput": "exec-2cc9cfb5-54ba-4ee9-b7c9-bef4963d1fac.png",
+      "sha256": "427f400cfeb3e218c77f56d6a9556a40a346dbf21db3397635d065bff95ecb06",
+      "bytes": 406912,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to WARM SUNFLOWER YELLOW, CLEARLY YELLOW RATHER THAN ORANGE, SATIN POLYMER (yellow, base color #f1c638). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "picnic-ivory.jpg",
+      "scene": "picnic",
+      "finish": "ivory",
+      "generatorOutput": "exec-c569c8fc-df10-468a-9634-b2cfada41c8f.png",
+      "sha256": "6c1575b92f72ed4c541627d467e4f1210a6204b4cbd8b64a8c028f193f868381",
+      "bytes": 723888,
+      "prompt": "Use case: photorealistic-natural. Asset type: finished landscape product lifestyle photograph for parametric.space, 1536x1024. The supplied images are exact current CAD geometry references: first closed device, second open device, third actual strap eye. Reproduce THIS product very faithfully; do not redesign it. It is a slender rigid approximately 622 mm long, 90 mm wide baguette-shaped clamshell with rounded tapered ends, shallow irregular diagonal sculpting, one transverse center assembly seam, one continuous clamshell rim seam, exactly two SMALL compact polymer latches at quarter points along the front edge, and exactly TWO integral low rectangular strap eyes at the ends of THAT SAME edge. Preserve proportions, latches, hinge, center joint, silhouette and surface contours from the references. Smooth satin 3D-printed polymer, no leather/fabric shell, no zipper, logos, text, collage or watermarks. Accessory strap is thin dark olive woven webbing with small cord loops through those TWO existing rectangular eye slots; no invented holes, metal hardware, added buckles, handles or loops on the broad lid. For hanging scenes, rotate the ENTIRE rigid assembly around its long axis so its broad lid face is upright, the eye-and-latch edge is on TOP, and the case hangs below those eye tension points. Both strap branches pull outward and then upward clear of the case. Never move the eyes or latches relative to the original geometry. Whole case visible, adult scale, realistic gravity, physically consistent contact shadows, matched soft illumination, camera optics and natural photographic texture. Product edges must be clean and geometrically consistent, not a pasted-on illustration.\nFinish: IVORY, warm pale satin polymer #ded5c3. Scene: The exact OPEN case at 100 degrees on a natural linen picnic blanket in grass. Match the supplied open reference's original rigid hinged geometry, narrow rib-free trough, center seam and two front latches. One crusty baguette lies naturally in the lower trough without hiding the entire shell. Olive strap loose on blanket but attached to original end eyes. A small apple and folded cloth at edge. Three-quarter overhead view with whole product visible, soft dappled afternoon light, natural contact shadows."
+    },
+    {
+      "file": "picnic-graphite.jpg",
+      "scene": "picnic",
+      "finish": "graphite",
+      "generatorOutput": "exec-b321a184-c993-430b-8e33-cc16648601ae.png",
+      "sha256": "3030a72a44aef7bc3d722e88c9ae2cf54cf6b199ffeb4b8bea204c09a569fed0",
+      "bytes": 671607,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to DEEP CHARCOAL GRAY (graphite, base color #353a40). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "picnic-forest.jpg",
+      "scene": "picnic",
+      "finish": "forest",
+      "generatorOutput": "exec-7f438be8-dbd0-4408-aad6-68681fd2b8bc.png",
+      "sha256": "2b3d2068b0a5cb7bfb229354fa01e0d4bfb01f3c0c1803737a296076cc096d80",
+      "bytes": 650033,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MUTED FOREST GREEN (forest, base color #526952). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "picnic-clay.jpg",
+      "scene": "picnic",
+      "finish": "clay",
+      "generatorOutput": "exec-330d4cef-59db-40c7-971d-eb1f6cbab202.png",
+      "sha256": "6617e745e20a477763edb2fa71f61e1cff28da0b6017204298549380aec3db8f",
+      "bytes": 676474,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to WARM TERRACOTTA CLAY (clay, base color #b96d50). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "picnic-cobalt.jpg",
+      "scene": "picnic",
+      "finish": "cobalt",
+      "generatorOutput": "exec-ca11ac8e-33c1-4621-b6c8-8be4c30f0f21.png",
+      "sha256": "088ea5808bf143d7f987b2e96234f28db0ace9bc9b138892e167f31e26402999",
+      "bytes": 654554,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MEDIUM RICH COBALT BLUE (cobalt, base color #375ca4). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "picnic-matte-silver.jpg",
+      "scene": "picnic",
+      "finish": "matte-silver",
+      "generatorOutput": "exec-a9fffc13-b226-4599-a585-34266adcdeed.png",
+      "sha256": "928170a1c879610d34d57cb758845fe0db3ed4975d34e90f2dc567ec08552cc3",
+      "bytes": 685686,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MATTE SILVER: NEUTRAL LIGHT SILVER-GRAY WITH A SOFT DIFFUSE SATIN SHEEN, FINE POLYMER TEXTURE, NO CHROME OR MIRROR REFLECTIONS (matte-silver, base color #b8bdc3). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "picnic-yellow.jpg",
+      "scene": "picnic",
+      "finish": "yellow",
+      "generatorOutput": "exec-0d3b27af-1c15-4789-8129-84772eb4679b.png",
+      "sha256": "b989bc6d967283ce891f4115cc246e0cb79a1ec72543781a3f055a407223e469",
+      "bytes": 675993,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to WARM SUNFLOWER YELLOW, CLEARLY YELLOW RATHER THAN ORANGE, SATIN POLYMER (yellow, base color #f1c638). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "travel-ivory.jpg",
+      "scene": "travel",
+      "finish": "ivory",
+      "generatorOutput": "exec-e3e702ca-45d5-44e5-9763-6a87518edcc4.png",
+      "sha256": "c27f626e75898de3aa013cd2d60d382dcee983d740a335a8ac1181f6a4a5bc37",
+      "bytes": 362991,
+      "prompt": "Use case: photorealistic-natural. Asset type: finished landscape product lifestyle photograph for parametric.space, 1536x1024. The supplied images are exact current CAD geometry references: first closed device, second open device, third actual strap eye. Reproduce THIS product very faithfully; do not redesign it. It is a slender rigid approximately 622 mm long, 90 mm wide baguette-shaped clamshell with rounded tapered ends, shallow irregular diagonal sculpting, one transverse center assembly seam, one continuous clamshell rim seam, exactly two SMALL compact polymer latches at quarter points along the front edge, and exactly TWO integral low rectangular strap eyes at the ends of THAT SAME edge. Preserve proportions, latches, hinge, center joint, silhouette and surface contours from the references. Smooth satin 3D-printed polymer, no leather/fabric shell, no zipper, logos, text, collage or watermarks. Accessory strap is thin dark olive woven webbing with small cord loops through those TWO existing rectangular eye slots; no invented holes, metal hardware, added buckles, handles or loops on the broad lid. For hanging scenes, rotate the ENTIRE rigid assembly around its long axis so its broad lid face is upright, the eye-and-latch edge is on TOP, and the case hangs below those eye tension points. Both strap branches pull outward and then upward clear of the case. Never move the eyes or latches relative to the original geometry. Whole case visible, adult scale, realistic gravity, physically consistent contact shadows, matched soft illumination, camera optics and natural photographic texture. Product edges must be clean and geometrically consistent, not a pasted-on illustration.\nFinish: IVORY, warm pale satin polymer #ded5c3. Scene: Exact CLOSED case resting lengthwise on a spacious train window-side table, its original two latches and same-edge eye slots facing the camera. Soft countryside through window, neutral weekend bag on adjacent seat. Olive strap threaded through both original eyes lies in a loose natural loop on the table. Whole product visible, three-quarter view comparable to CAD closed reference. Quiet warm window light, credible contact shadows. No readable signs."
+    },
+    {
+      "file": "travel-graphite.jpg",
+      "scene": "travel",
+      "finish": "graphite",
+      "generatorOutput": "exec-02350293-476d-4bbe-b2bf-88b9d1655b0e.png",
+      "sha256": "210386a3aa7f317fb9efc1c7d840e035674cce62166539425c8d2e429c542e60",
+      "bytes": 357497,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to DEEP CHARCOAL GRAY (graphite, base color #353a40). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "travel-forest.jpg",
+      "scene": "travel",
+      "finish": "forest",
+      "generatorOutput": "exec-8a1b8286-06eb-4fd6-9f4a-3660259e8831.png",
+      "sha256": "e6fe6c6f121abbec2031f2212054029f25e5f258de496917899f72305bbbc35a",
+      "bytes": 359566,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MUTED FOREST GREEN (forest, base color #526952). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "travel-clay.jpg",
+      "scene": "travel",
+      "finish": "clay",
+      "generatorOutput": "exec-f886f658-f6a3-4f66-933e-6fbd6b075037.png",
+      "sha256": "74b167687a0117c0ab1ed57c73189afff84a0f6a2f512bc1a385927647d011cc",
+      "bytes": 359153,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to WARM TERRACOTTA CLAY (clay, base color #b96d50). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "travel-cobalt.jpg",
+      "scene": "travel",
+      "finish": "cobalt",
+      "generatorOutput": "exec-1ce18f8a-9fcc-4b42-bc19-1caa4805c91e.png",
+      "sha256": "e76d8d7746aa95faa6fa5e07cc62d73545662618f812603b41e7f7f9006f3637",
+      "bytes": 368137,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MEDIUM RICH COBALT BLUE (cobalt, base color #375ca4). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "travel-matte-silver.jpg",
+      "scene": "travel",
+      "finish": "matte-silver",
+      "generatorOutput": "exec-51248b42-80b1-4301-a663-c1c9942d07eb.png",
+      "sha256": "dcdaaafefcfdaa69e702b71a775b8ab6316002fdd9a3e75ea621306ad36a090e",
+      "bytes": 366537,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MATTE SILVER: NEUTRAL LIGHT SILVER-GRAY WITH A SOFT DIFFUSE SATIN SHEEN, FINE POLYMER TEXTURE, NO CHROME OR MIRROR REFLECTIONS (matte-silver, base color #b8bdc3). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "travel-yellow.jpg",
+      "scene": "travel",
+      "finish": "yellow",
+      "generatorOutput": "exec-0c8c0330-fd56-408b-8f0d-871b6e4d4dbe.png",
+      "sha256": "f40203d159000b22747403e9942286274a2952838da4e4aff8ba6badf301ef6d",
+      "bytes": 360657,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to WARM SUNFLOWER YELLOW, CLEARLY YELLOW RATHER THAN ORANGE, SATIN POLYMER (yellow, base color #f1c638). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "backpacking-ivory.jpg",
+      "scene": "backpacking",
+      "finish": "ivory",
+      "generatorOutput": "exec-1d5c7633-06c6-40ac-89c4-a121cd7c4c48.png",
+      "sha256": "093ded6229e2f93691e962945ca943f9f1ec7bbf4111938bc160a355126d483d",
+      "bytes": 418488,
+      "prompt": "Use case: photorealistic-natural. Asset type: finished landscape product lifestyle photograph for parametric.space, 1536x1024. The supplied images are exact current CAD geometry references: first closed device, second open device, third actual strap eye. Reproduce THIS product very faithfully; do not redesign it. It is a slender rigid approximately 622 mm long, 90 mm wide baguette-shaped clamshell with rounded tapered ends, shallow irregular diagonal sculpting, one transverse center assembly seam, one continuous clamshell rim seam, exactly two SMALL compact polymer latches at quarter points along the front edge, and exactly TWO integral low rectangular strap eyes at the ends of THAT SAME edge. Preserve proportions, latches, hinge, center joint, silhouette and surface contours from the references. Smooth satin 3D-printed polymer, no leather/fabric shell, no zipper, logos, text, collage or watermarks. Accessory strap is thin dark olive woven webbing with small cord loops through those TWO existing rectangular eye slots; no invented holes, metal hardware, added buckles, handles or loops on the broad lid. For hanging scenes, rotate the ENTIRE rigid assembly around its long axis so its broad lid face is upright, the eye-and-latch edge is on TOP, and the case hangs below those eye tension points. Both strap branches pull outward and then upward clear of the case. Never move the eyes or latches relative to the original geometry. Whole case visible, adult scale, realistic gravity, physically consistent contact shadows, matched soft illumination, camera optics and natural photographic texture. Product edges must be clean and geometrically consistent, not a pasted-on illustration.\nFinish: IVORY, warm pale satin polymer #ded5c3. Scene: An adult in muted olive outdoor clothing walking on a forest trail, side three-quarter crop from shoulder to upper thigh. A hiking backpack is worn normally. The baguette case hangs FREELY BESIDE THE HIP from its own continuous olive strap worn OVER THE PERSON'S SHOULDER; it is NOT attached to the backpack. Both strap branches terminate through the actual two outward eye slots along the case's TOP edge, two compact latches on that same edge, broad lid face upright. Hands clear. Whole case visible and recognizable, natural adult scale, diffuse green forest light, soft distant trail."
+    },
+    {
+      "file": "backpacking-graphite.jpg",
+      "scene": "backpacking",
+      "finish": "graphite",
+      "generatorOutput": "exec-df4b7d64-2429-4c02-99da-c8ca4f0be0fb.png",
+      "sha256": "6c7a8eb8b3f0b6233b00eadf9f2bde98b13e759fe2c4b03944014f92d97b864b",
+      "bytes": 404695,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to DEEP CHARCOAL GRAY (graphite, base color #353a40). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "backpacking-forest.jpg",
+      "scene": "backpacking",
+      "finish": "forest",
+      "generatorOutput": "exec-a17233ff-6aaf-4dfd-93b9-7cdf0601e036.png",
+      "sha256": "2a6115fdfbf5f97693c6348c0f684e4b6a1922cad1cd50ab5bfde3ee8de5d14e",
+      "bytes": 394073,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MUTED FOREST GREEN (forest, base color #526952). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "backpacking-clay.jpg",
+      "scene": "backpacking",
+      "finish": "clay",
+      "generatorOutput": "exec-94081013-73d5-4ab4-8403-f2f4f6814945.png",
+      "sha256": "9e13f3df0343c4c2a7862fe2873191233681a826f4ce9c39ea180b7f9aa78fa3",
+      "bytes": 406176,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to WARM TERRACOTTA CLAY (clay, base color #b96d50). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "backpacking-cobalt.jpg",
+      "scene": "backpacking",
+      "finish": "cobalt",
+      "generatorOutput": "exec-7ce3754f-7eff-4fe0-adcd-168eaa8686bf.png",
+      "sha256": "0ad98dd20fa57a2005344da6d922b140ebc47b9c097c255d8775208b80f84216",
+      "bytes": 411269,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MEDIUM RICH COBALT BLUE (cobalt, base color #375ca4). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "backpacking-matte-silver.jpg",
+      "scene": "backpacking",
+      "finish": "matte-silver",
+      "generatorOutput": "exec-510d7a7c-685d-422e-8ef3-b58835a2296d.png",
+      "sha256": "809b206b0bfa8770d967f1ca36465aca3fbeb95f6898b3c5c2e3ba21240e891e",
+      "bytes": 388077,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to MATTE SILVER: NEUTRAL LIGHT SILVER-GRAY WITH A SOFT DIFFUSE SATIN SHEEN, FINE POLYMER TEXTURE, NO CHROME OR MIRROR REFLECTIONS (matte-silver, base color #b8bdc3). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    },
+    {
+      "file": "backpacking-yellow.jpg",
+      "scene": "backpacking",
+      "finish": "yellow",
+      "generatorOutput": "exec-19c670f1-3a2c-40a3-bf32-7135b336a9f9.png",
+      "sha256": "72a095b72f7a35dbbd06670d727fe9389a263793ae8173962454185918e44ac1",
+      "bytes": 410033,
+      "prompt": "Use case: precise-object-edit. Asset type: finished product lifestyle photograph, 1536x1024. Image 1 is the edit target. Change ONLY the color of ALL ivory POLYMER PRODUCT SURFACES to WARM SUNFLOWER YELLOW, CLEARLY YELLOW RATHER THAN ORANGE, SATIN POLYMER (yellow, base color #f1c638). This includes case shell, lid, interior if visible, original integral eye loops, latches and hinge; they are all the same satin polymer color. Preserve EXACTLY the original product silhouette, dimensions, sculpted diagonal contours, clamshell seam, middle transverse seam, two compact latches, original two rectangular eye openings, hinge, perspective, placement, contact shadows and physical geometry. The product shape must remain pixel-aligned with the original. Preserve original natural highlights, subtle texture and shading so the recolored material remains realistic. Do not change the olive woven strap or cords, human, clothing, skin, background, furniture, objects, bread, raindrops, lighting, framing, focus, or any non-product pixels. Do not introduce any new hardware, shape, hole, buckle, rib, pocket, lettering, logo or watermark. This is only a product finish color variant, not a redesign. Keep landscape 1536x1024."
+    }
+  ]
+}

@@ -7,9 +7,8 @@ function buildFinishPicker(finishes){
  const bar=make('div','baguette-finish-bar'),group=make('fieldset','baguette-finish-picker');
  const legend=make('legend','','Color · '),name=make('span');legend.append(name);group.append(legend);
  const buttons=BAGUETTE_FINISHES.map(finish=>{const button=make('button','baguette-finish-option');button.type='button';button.dataset.finish=finish.id;button.setAttribute('aria-label',finish.name);const chip=make('span','baguette-finish-chip');chip.style.setProperty('--finish-color',finish.color);chip.setAttribute('aria-hidden','true');button.append(chip,make('span','',finish.name));button.addEventListener('click',()=>finishes.set(finish.id));group.append(button);return button;});
- const motion=make('button','baguette-parallax-toggle','Parallax on');motion.type='button';motion.dataset.parallaxToggle='';motion.setAttribute('aria-pressed','true');
  finishes.subscribe(finish=>{name.textContent=finish.name;for(const button of buttons)button.setAttribute('aria-pressed',String(button.dataset.finish===finish.id));});
- bar.append(group,motion);return bar;
+ bar.append(group);return bar;
 }
 
 // Match the current review's feature copy to its own CAD photos.
@@ -24,7 +23,7 @@ const featureViews=[
 
 function buildFeatures(info,gallery){
  const panel=make('section','baguette-features');panel.setAttribute('aria-label','Baguette holder features');
- const intro=make('div','baguette-section-intro');intro.append(make('span','section-number','DESIGN DETAILS'),make('h2','','The details, up close.'),make('p','','Explore each feature alongside the geometry that makes it work.'));
+ const intro=make('div','baguette-section-intro');intro.append(make('span','section-number','DESIGN DETAILS'),make('h2','','The details, up close.'),make('p','','Explore each feature alongside the original CAD renders, shown in Ivory.'));
  panel.append(intro);
  const figures=[...gallery.querySelectorAll('figure')];
  const available=new Map(figures.map(figure=>[new URL(figure.querySelector('img').src).pathname.split('/').pop().replace(/\.jpg$/,''),figure]));
@@ -40,7 +39,6 @@ function buildFeatures(info,gallery){
   matches.forEach(({key,figure,label},i)=>{
    used.add(figure);figure.hidden=i!==0;figure.id=`baguette-photo-${key}`;
    const img=figure.querySelector('img');img.decoding='async';
-   if(DETAIL_SCENES[key]){const stage=make('div','baguette-cad-preview');stage.dataset.cadPreview=key;img.replaceWith(stage);stage.append(img);}
    photos.append(figure);
    const button=make('button','',label);button.type='button';button.setAttribute('aria-pressed',String(i===0));button.setAttribute('aria-controls',figure.id);
    button.addEventListener('click',()=>{for(const item of matches)item.figure.hidden=item.figure!==figure;for(const sibling of choices.children)sibling.setAttribute('aria-pressed',String(sibling===button));});choices.append(button);
@@ -55,26 +53,24 @@ function buildFeatures(info,gallery){
 }
 
 const useCases=[
- {id:'carry',label:'01 / STRAP FUNCTIONALITY',title:'A strap. Two attachment points.',copy:'The shoulder strap pulls outward from the two projecting eyes. The case hangs beneath these tension points, with the strap clear of the shell.',alt:'Concept rendering of the ivory baguette case hanging below its two outward-projecting eyes, with taut shoulder straps clear of the shell.'},
+ {id:'carry',label:'01 / STRAP FUNCTIONALITY',title:'A strap. Two attachment points.',copy:'The shoulder strap pulls outward from the two projecting eyes. The case hangs beneath these tension points, with the strap clear of the shell.',alt:'Lifestyle rendering of the baguette case hanging below its two outward-projecting eyes, with taut shoulder straps clear of the shell.'},
  {id:'purse',label:'EVERYDAY PURSE',title:'Carry the day.',copy:'An everyday shoulder purse for keys, cards and small essentials. From a coffee run to an evening out, take the case beyond the bakery.',alt:'The current case rendered as a shoulder purse outside a café.'},
  {id:'essentials',label:'NON-BAGUETTE STORAGE',title:'Room for something else.',copy:'Keep sunglasses, cables and small travel items together. The credit card holder concept adds a dedicated place for cards; Pro and Mini explore a more compact everyday carry.',alt:'The current open case on a table beside keys, a card wallet and sunglasses.'},
  {id:'rain',label:'02 / RAIN',title:'For the walk home.',copy:'A closed-shell carry concept for a drizzly trip from the bakery. Weather resistance is still to be tested.',alt:'Model-based concept of the closed baguette holder on a shoulder strap during a rainy walk.'},
- {id:'picnic',label:'03 / PICNIC',title:'Unclip. Open. Share.',copy:'Set it down on the blanket and open the hinged lid. The smooth interior leaves room for one very good baguette.',alt:'The actual open baguette case rendered in 3D on a linen picnic blanket.'},
+ {id:'picnic',label:'03 / PICNIC',title:'Unclip. Open. Share.',copy:'Set it down on the blanket and open the hinged lid. The smooth interior leaves room for one very good baguette.',alt:'The open baguette case on a linen picnic blanket.'},
  {id:'travel',label:'04 / TRAVEL',title:'A little room for the journey.',copy:'From the bakery to the train, keep your baguette in its own contoured case. Unshoulder the strap when it is time to settle in.',alt:'Concept rendering of the closed baguette case and its loose carry strap on a train table.'},
  {id:'backpacking',label:'05 / BACKPACKING',title:'Bread beyond the city.',copy:'Wear the strap over your shoulder and let the case hang at your side. Both ends pull from the projecting eyes, leaving your backpack free for the rest.',alt:'Concept rendering of a hiker carrying the baguette case at their hip on a shoulder strap, suspended from its two outer eyes.'}
 ];
 
-function buildUseCases(options){
+function buildUseCases(finishes){
  const panel=make('section','baguette-use-cases');panel.setAttribute('aria-label','Baguette holder use cases');
  const intro=make('div','baguette-section-intro');intro.append(make('span','section-number','OUT IN THE WORLD'),make('h2','','Made to come along.'),make('p','','Bread, daily essentials, and everything in between.'));
- const note=make('p','baguette-concept-note');options.subscribe(value=>{const size=BAGUETTE_SIZES.find(size=>size.id===value.size);note.textContent=`${size.name} ${size.current?'model':'scale preview'} · Illustrated settings · Accessory straps`;});intro.append(note);panel.append(intro);
+ const note=make('p','baguette-concept-note');finishes.subscribe(finish=>{note.textContent=`${finish.name} · Pro Max lifestyle renderings`;});intro.append(note);panel.append(intro);
  const grid=make('div','baguette-use-case-grid');
  for(const [index,scene] of useCases.entries()){
   const card=make('article','baguette-use-case'+(scene.id==='carry'?' baguette-use-case-lead':''));
-  const figure=make('figure'),stage=make('div','baguette-lifestyle-preview');stage.dataset.lifestyleScene=scene.id;
-  const img=make('img','baguette-scene-background');img.src=new URL(`../assets/baguette-use-cases/${scene.id}-background.jpg`,import.meta.url).href;img.alt='';img.width=1536;img.height=1024;img.loading='lazy';img.decoding='async';
-  const fallback=make('img','baguette-scene-fallback');fallback.src=assetURL((['picnic','essentials'].includes(scene.id)?'open':'closed')+'.jpg');fallback.alt=scene.alt;fallback.loading='lazy';
-  const status=make('span','baguette-scene-status','Loading 3D preview…');status.dataset.sceneStatus='';stage.append(img,fallback,status);figure.append(stage);
+  const figure=make('figure'),img=make('img','baguette-use-case-photo');img.width=1536;img.height=1024;img.loading='lazy';img.decoding='async';
+  finishes.subscribe(finish=>{img.src=lifestylePhotoURL(scene.id,finish.id);img.alt=`${finish.name} Pro Max. ${scene.alt}`;});figure.append(img);
   const copy=make('div','baguette-use-case-copy');copy.append(make('span','section-number',`${String(index+1).padStart(2,'0')} / ${scene.label.replace(/^\d+ \/ /,'')}`),make('h3','',scene.title),make('p','',scene.copy));
   card.append(figure,copy);grid.append(card);
  }
@@ -83,7 +79,7 @@ function buildUseCases(options){
 
 export async function buildBaguetteProject(container,project){
  document.documentElement.classList.add('baguette-project-page');
- const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href=new URL('../baguette.css?v=afda2b1ed1',import.meta.url).href;document.head.append(sheet);
+ const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href=new URL('../baguette.css?v=8f70bc8645',import.meta.url).href;document.head.append(sheet);
  const experience=document.createElement('section');experience.className='baguette-experience';experience.setAttribute('aria-label','Baguette holder design and interactive preview');container.append(experience);
  let savedFinish;try{savedFinish=localStorage.getItem('parametric-baguette-finish');}catch{}
  const finishes=createFinishStore(new URLSearchParams(location.search).get('finish')||savedFinish);
@@ -93,7 +89,7 @@ export async function buildBaguetteProject(container,project){
  options.subscribe(value=>{try{localStorage.setItem('parametric-baguette-options',JSON.stringify(value));}catch{}const url=new URL(location.href);writeOptions(url.searchParams,value);history.replaceState(history.state,'',url);});
  const loading=document.createElement('p');loading.className='baguette-loading';loading.textContent='Preparing the working model…';loading.setAttribute('role','status');experience.append(loading);
  try{
-  // Reuse the working preview's controls, review text, renders and download URLs.
+  // Reuse the working preview's review text, CAD renders and download URLs.
   // Fetching its HTML keeps the project page aligned when that review is revised.
   const response=await fetch(reviewURL,{cache:'no-cache'});if(!response.ok)throw Error('Review unavailable');
   const review=new DOMParser().parseFromString(await response.text(),'text/html');
@@ -115,23 +111,20 @@ export async function buildBaguetteProject(container,project){
   const status=make('p');status.dataset.status='';status.setAttribute('role','status');viewer.append(stage,interaction,status);
   const previewNote=make('p','baguette-preview-scope');
   options.subscribe(value=>{const size=BAGUETTE_SIZES.find(size=>size.id===value.size);previewNote.textContent=size.current?'Pro Max · Current prototype':`${size.name} · Proportional size preview`;});
-  experience.replaceChildren(heading,viewer,buildFinishPicker(finishes),previewNote,buildBaguetteConfigurator(options,finishes),buildUseCases(options),buildFeatures(info,gallery));
+  experience.replaceChildren(heading,viewer,buildFinishPicker(finishes),previewNote,buildBaguetteConfigurator(options,finishes),buildUseCases(finishes),buildFeatures(info,gallery));
   document.querySelector('meta[name="description"]')?.setAttribute('content',project.description?.[0]||project.summary);
   const revisionQuery=new URL(review.querySelector('script[src*="review.js"]').getAttribute('src'),reviewURL).search;
   const modelURL=assetURL('baguette-v3.glb'+revisionQuery);
-  const [model,{mountBaguetteViewer,mountBaguetteComposites}]=await Promise.all([fetch(modelURL,{cache:'no-cache'}),import('../assets/baguette-viewer.js?v=f3dfc19b87'+'&revision='+encodeURIComponent(revisionQuery))]);
+  const [model,{mountBaguetteViewer}]=await Promise.all([fetch(modelURL,{cache:'no-cache'}),import('../assets/baguette-viewer.js?v=7bbdd3b21a'+'&revision='+encodeURIComponent(revisionQuery))]);
   if(!model.ok)throw Error('Model unavailable');
   const buffer=await model.arrayBuffer();
-  const results=await Promise.allSettled([mountBaguetteViewer(viewer,buffer,finishes,options),mountBaguetteComposites(experience,buffer,finishes,options)]);
-  if(results[0].status==='rejected')throw results[0].reason;
-  if(results[1].status==='rejected')for(const stage of experience.querySelectorAll('[data-lifestyle-scene]')){stage.classList.add('preview-unavailable');stage.querySelector('[data-scene-status]').textContent='3D preview unavailable on this device.';}
+  await mountBaguetteViewer(viewer,buffer,finishes,options);
  }catch{
-  for(const stage of experience.querySelectorAll('[data-lifestyle-scene]')){stage.classList.add('preview-unavailable');stage.querySelector('[data-scene-status]').textContent='3D preview unavailable. CAD image shown.';}
   const status=experience.querySelector('[data-status]')||loading;status.textContent='The interactive preview could not load. Open the working preview, or explore the rendered views below.';
   const link=document.createElement('a');link.className='secondary-button';link.href=reviewURL.href;link.textContent='Open the working preview →';experience.append(link);
  }
 }
-import {BAGUETTE_FINISHES,createFinishStore} from './baguette-finishes.js?v=cad-1';
-import {DETAIL_SCENES} from './baguette-scenes.js?v=cad-3';
+import {BAGUETTE_FINISHES,createFinishStore} from './baguette-finishes.js?v=colors-2';
+import {lifestylePhotoURL} from './baguette-photos.js?v=photos-1';
 import {BAGUETTE_SIZES,createOptionsStore,readOptions,writeOptions} from './baguette-options.js?v=options-1';
-import {buildBaguetteConfigurator} from './baguette-configurator.js?v=options-2';
+import {buildBaguetteConfigurator} from './baguette-configurator.js?v=photos-1';

@@ -86,9 +86,9 @@ test('one finish selection updates every product clone and preserves section ann
  const store=createFinishStore('invalid'),models=[...Object.values(LIFESTYLE_SCENES),...Object.values(DETAIL_SCENES)].map(p=>clonePrintModel(source,p).model);
  const initialSourceColor=source.getObjectByName('base_A').material.color.clone();
  const annotations=[];models.forEach(model=>model.traverse(mesh=>{if(mesh.isMesh&&mesh.userData.annotationColor)annotations.push([mesh,mesh.material.color.clone()]);}));
- const unsub=store.subscribe(finish=>models.forEach(model=>applyPrintFinish(model,finish.color)));
- for(const finish of BAGUETTE_FINISHES){store.set(finish.id);models.forEach(model=>model.traverse(mesh=>{if(mesh.isMesh&&!mesh.userData.annotationColor)assert.ok(mesh.material.color.equals(new Color(finish.color)));}));}
- store.set('unknown');assert.equal(store.value.id,'cobalt');
+ const unsub=store.subscribe(finish=>models.forEach(model=>applyPrintFinish(model,finish.color,finish)));
+ for(const finish of BAGUETTE_FINISHES){store.set(finish.id);models.forEach(model=>model.traverse(mesh=>{if(mesh.isMesh&&!mesh.userData.annotationColor){assert.ok(mesh.material.color.equals(new Color(finish.color)));assert.equal(mesh.material.roughness,finish.roughness??.43);assert.equal(mesh.material.metalness,finish.metalness??0);}}));}
+ store.set('unknown');assert.equal(store.value.id,BAGUETTE_FINISHES.at(-1).id);
  annotations.forEach(([mesh,color])=>assert.ok(mesh.material.color.equals(color)));
  assert.ok(source.getObjectByName('base_A').material.color.equals(initialSourceColor));
  unsub();store.set('ivory');assert.ok(models[0].getObjectByName('base_A').material.color.equals(new Color(BAGUETTE_FINISHES.at(-1).color)));

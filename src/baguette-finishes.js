@@ -3,7 +3,9 @@ export const BAGUETTE_FINISHES=Object.freeze([
  {id:'graphite',name:'Graphite',color:'#353a40'},
  {id:'forest',name:'Forest',color:'#526952'},
  {id:'clay',name:'Clay',color:'#b96d50'},
- {id:'cobalt',name:'Cobalt',color:'#375ca4'}
+ {id:'cobalt',name:'Cobalt',color:'#375ca4'},
+ {id:'matte-silver',name:'Matte Silver',color:'#b8bdc3',roughness:.72,metalness:.25},
+ {id:'yellow',name:'Yellow',color:'#f1c638'}
 ]);
 
 export function createFinishStore(initial='ivory'){
