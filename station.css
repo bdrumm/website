@@ -129,26 +129,17 @@
 .station-project-page .station-scenario-count{flex-shrink:0;font:400 .75rem/1.6 var(--font-geist-mono),monospace;color:var(--muted)}
 .station-project-page .station-view-copy h2{font-size:clamp(2rem,3.4vw,3.5rem);line-height:1.06;letter-spacing:-.05em;font-weight:500;margin:26px 0 18px;text-transform:none;color:var(--primary);max-width:12ch}
 .station-project-page .station-view-copy p{font-size:1rem;line-height:1.7;color:var(--muted);min-height:5.1em;max-width:36ch;margin:0}
-.station-project-page .station-app-switcher{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px;margin-top:32px}
+.station-project-page .station-app-switcher{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px;margin-top:32px}
 .station-project-page .station-app-switcher button{font:500 .8125rem/1.3 var(--font-geist-sans),sans-serif;min-height:44px;padding:10px 4px;background:transparent;color:var(--muted);border:1px solid var(--station-rule);border-radius:7px;cursor:pointer}
 .station-project-page .station-app-switcher button:hover{background:var(--station-soft);color:var(--foreground);border-color:var(--accent-violet)}
 .station-project-page .station-app-switcher button[aria-pressed="true"]{color:var(--background);background:var(--primary);border-color:var(--primary)}
-.station-project-page .station-scenario-sequence{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px}
-.station-project-page .station-scenario-sequence button{font:400 .8125rem/1.5 var(--font-geist-mono),monospace;min-height:44px;background:none;border:0;color:var(--foreground);padding:8px 0;cursor:pointer}
-.station-project-page .station-scenario-sequence button:disabled{color:var(--muted);opacity:.4;cursor:default}
 .station-project-page .station-details-jump{margin-top:14px;font-size:.875rem;color:var(--accent-violet)}
 .station-project-page .station-view-panel .station-story-viewer{position:relative;top:auto;grid-column:2;grid-row:1;order:0;width:auto;max-height:none;overflow:visible;border:0;background:transparent;padding:16px 24px 26px;min-width:0}
 .station-project-page .station-story-viewer .model-stage{height:clamp(330px,38vw,560px);min-height:0}
 .station-project-page .station-story-viewer>.model-controls{position:absolute;right:24px;top:20px;z-index:2}
 .station-project-page .station-story-viewer .model-controls{gap:8px}
-.station-project-page .station-story-viewer .model-controls button,.station-project-page .walkthrough-steps button{font:400 .8125rem/1.4 var(--font-geist-mono),monospace;text-transform:none;border:1px solid var(--station-rule);border-radius:6px;padding:10px 12px;min-height:40px;background:transparent;color:var(--foreground)}
 .station-project-page .station-story-viewer>.model-controls button{background:color-mix(in srgb,var(--stage) 85%,transparent);backdrop-filter:blur(10px);font-size:.75rem;padding:8px 10px;min-height:36px}
-.station-project-page .station-story-viewer .model-controls button:hover,.station-project-page .walkthrough-steps button:hover{border-color:var(--accent-violet);background:var(--station-soft);color:var(--foreground)}
-.station-project-page .walkthrough-steps button[aria-current="step"]{background:var(--primary);color:var(--background);border-color:var(--primary)}
 .station-project-page .station-story-viewer .viewer-status{font-size:.75rem;line-height:1.6;color:var(--muted);margin:2px 0 14px;max-width:66ch}
-.station-project-page .app-walkthrough{border-top:1px solid var(--station-rule);margin-top:0;padding-top:16px}
-.station-project-page .app-walkthrough h3{font-size:.75rem;color:var(--accent-violet);font-weight:500;letter-spacing:.04em;margin:0 0 12px}
-.station-project-page .walkthrough-steps{gap:6px;margin-bottom:12px}
 .station-project-page .station-use-cases,.station-project-page .station-details-section,.station-project-page #station-hardware,.station-project-page #station-demo{scroll-margin-top:90px}
 .station-project-page .station-use-cases{margin:88px 0 0}
 .station-project-page .station-use-case,.station-project-page .station-use-case:nth-child(n){background:var(--station-soft);border:1px solid var(--station-rule);border-radius:12px;overflow:hidden}
@@ -178,7 +169,7 @@
 @media(max-width:1050px){
  .station-project-page .station-view-panel{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)}
  .station-project-page .station-view-copy{padding:28px}
- .station-project-page .station-app-switcher{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .station-project-page .station-app-switcher{grid-template-columns:repeat(3,minmax(0,1fr))}
  .station-project-page .station-details-nav{gap:6px 18px}
  .station-project-page .station-details-nav>.station-details-label{display:none}
  .station-project-page .station-hero-facts{gap:18px 30px}
@@ -200,8 +191,7 @@
  .station-project-page .station-view-copy{padding:24px;width:100%}
  .station-project-page .station-view-copy h2{font-size:2rem;max-width:16ch;margin:18px 0 12px}
  .station-project-page .station-view-copy p{font-size:.9375rem;min-height:0;max-width:none}
- .station-project-page .station-app-switcher{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:22px;gap:6px}
- .station-project-page .station-scenario-sequence{margin-top:6px}
+ .station-project-page .station-app-switcher{grid-template-columns:repeat(3,minmax(0,1fr));margin-top:22px;gap:6px}
  .station-project-page .station-details-jump{margin-top:4px}
  .station-project-page .station-view-panel .station-story-viewer{width:100%;padding:12px 20px 24px;order:0;max-height:none}
  .station-project-page .station-story-viewer .model-stage{height:clamp(300px,82vw,450px);min-height:0}
@@ -210,3 +200,14 @@
  .station-project-page .station-app-card,.station-project-page .station-app-card:nth-child(even){padding:28px 0}
  .station-project-page .station-project-end{grid-template-columns:minmax(0,1fr);gap:20px;margin-top:64px;padding-top:32px}
 }
+
+/* A white surface and ink controls, consistent across site theme preferences. */
+.station-project-page .station-view-panel{color-scheme:light;--background:#fff;--foreground:#17212e;--primary:#17212e;--muted:#526070;--border:#8995a4;--stage:#fff;--field:#fff;--accent-violet:#7043ab;--station-rule:#c3ccd6;--station-soft:#f3f5f8;background:#fff;color:#17212e}
+.station-project-page .station-app-switcher button{background:#fff;border-color:#8995a4;color:#273545}
+.station-project-page .station-app-switcher button[aria-pressed="true"]{background:#17212e;border-color:#17212e;color:#fff}
+.station-project-page .station-app-switcher button:hover{border-color:#17212e;background:#edf1f5;color:#17212e}
+.station-project-page .station-app-switcher button[aria-pressed="true"]:hover{background:#273545;color:#fff}
+.station-project-page .station-story-viewer .model-stage::before{display:none}
+.station-project-page .station-story-viewer .model-controls button{font:400 .75rem/1.4 var(--font-geist-mono),monospace;border:1px solid #8995a4;border-radius:6px;background:#fff;color:#17212e;padding:8px 10px;min-height:36px;cursor:pointer}
+.station-touch-controls button{position:absolute;width:1px;height:1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.station-touch-controls button:focus-visible{position:relative;clip-path:none;width:auto;height:auto;white-space:normal;margin:4px;padding:12px 16px;border:2px solid #17212e;border-radius:8px;background:#fff;color:#17212e;outline:3px solid #7043ab;outline-offset:2px}

@@ -1,7 +1,7 @@
 import {buildStationUseCases} from './station-use-cases.js?v=ed97e2700f';
-import {buildStationNavigation,buildStationAppDetails,buildStationCode} from './station-details.js?v=221d21a2d8';
-import {buildStationStory} from './station-story.js?v=414510f182';
-import {mountModelViewer} from '../assets/station-viewer.js?v=f9e332e5c3';
+import {buildStationNavigation,buildStationAppDetails,buildStationCode} from './station-details.js?v=1135bb0e40';
+import {buildStationStory} from './station-story.js?v=752bc22185';
+import {mountModelViewer} from '../assets/station-viewer.js?v=9228089a67';
 
 const element=(tag,text,className)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(className)node.className=className;return node;};
 const link=(label,url)=>{const node=element('a',label,'secondary-button');node.href=url;return node;};
@@ -25,6 +25,6 @@ export function buildStationProject(root,content,project){
  const dimensionSource=element('a','Waveshare product dimensions ↗','secondary-button');dimensionSource.href='https://www.waveshare.com/img/devkit/ESP32-S3-Touch-AMOLED-1.75C/ESP32-S3-Touch-AMOLED-1.75C-details-size.jpg';specs.append(dimensionSource);root.append(specs);
  buildStationCode(root);
  const info=element('section',undefined,'station-project-end');const copy=element('div');copy.append(element('span','A WORK IN PROGRESS','station-details-label'),element('h2','Small object. Plenty to explore.'),element('p','Station is a hardware and interface prototype, built around the Waveshare ESP32-S3. Explore the model or get in touch about the project. It is not currently available to purchase.'));const actions=element('div',undefined,'station-project-actions');actions.append(link('Download device model ↗',project.modelUrl),link('Enquire about Station →','mailto:info@parametric.space?subject=Station%20enquiry'));info.append(copy,actions);root.append(info);connectNavigation();
- document.querySelector('meta[name="description"]')?.setAttribute('content','Explore Station’s eight app demos, touch and voice interactions, ESP32-S3 hardware, firmware architecture and preview source code.');
+ document.querySelector('meta[name="description"]')?.setAttribute('content','Explore Station’s nine app demos, touch and voice interactions, ESP32-S3 hardware, firmware architecture and preview source code.');
  mountModelViewer(viewer,project.modelUrl,project.title,'station').catch(()=>viewer.append(element('p','The 3D viewer is unavailable. Try reloading, or download the model below.')));
 }
