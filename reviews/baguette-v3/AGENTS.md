@@ -35,4 +35,6 @@ Keep unloaded inward-set latch geometry distinct from its elastic seated state. 
 
 The latest user request restores the compact rounded latch, removes the elongated shell recess and infill patch, and confines the new 45-degree edge to material projecting beyond the outer shell where possible. This supersedes the previous full-outline ramp requirement. Preserve the short shell-following spring, central retaining shoulder, preload and fingernail inset. Verify the old patch region matches the uninterrupted shell and measure the new bevel on the actual unloaded exterior grip. Do not claim support-free printing of the entire latch from the exterior bevel check alone.
 
+The latest seam-facing overhang correction also bevels the lower tongue behind the grip. Measure its front outline in the Y/Z connection-down print frame, not only a chamfer across skin thickness. Preserve the compact upper spring and central retaining shoulder, keep the new diagonal clearance free during release, and check actual layer growth across the complete lower overhang.
+
 The editable CAD and source checks are distributed in baguette-v3-source-and-print.zip. Extract to a writable model workspace before changing geometry. Publish rebuilt assets and both matching archives together.
