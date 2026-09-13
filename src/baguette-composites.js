@@ -3,6 +3,7 @@ import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 import {RoomEnvironment} from 'three/addons/environments/RoomEnvironment.js';
 import {clonePrintModel,applyPrintFinish} from './baguette-render-model.js';
 import {LIFESTYLE_SCENES,DETAIL_SCENES,STRAP_EYES} from './baguette-scenes.js';
+import {applyPresentationScale,sizePresentation,photoAnchor,PHOTO_LAYER_TRANSFORM} from './baguette-presentation.js';
 
 function weaveTexture(){
  const size=64,data=new Uint8Array(size*size*4);
@@ -43,15 +44,15 @@ function makeLighting(scene,preset={}){
 }
 
 function shadowPlane(scene,placement,ground,geometry,materials){
- const g=new T.PlaneGeometry(1300,700),m=new T.ShadowMaterial({opacity:ground?.24:.1,depthWrite:false});geometry.push(g);materials.push(m);
+ const g=new T.PlaneGeometry(1300,700),m=new T.ShadowMaterial({opacity:ground?.28:.16,depthWrite:false});geometry.push(g);materials.push(m);
  const plane=new T.Mesh(g,m);plane.receiveShadow=true;
  if(ground){plane.rotation.x=-Math.PI/2;plane.position.y=-43.7;placement.add(plane);}
- else{plane.position.copy(placement.position);plane.position.z-=95;scene.add(plane);}
+ else{plane.position.copy(placement.position);plane.position.z-=55;scene.add(plane);}
 }
 
 // One shared WebGL renderer feeds all visible preview canvases. Geometry and the
 // lighting environment are loaded once; off-screen/hidden cards do no rendering.
-export async function mountBaguetteComposites(root,buffer,finishes){
+export async function mountBaguetteComposites(root,buffer,finishes,options){
  const surfaces=[...root.querySelectorAll('[data-lifestyle-scene],[data-cad-preview]')];
  if(!surfaces.length)return;
  let renderer;
@@ -62,6 +63,7 @@ export async function mountBaguetteComposites(root,buffer,finishes){
  let source;
  try{({scene:source}=await new GLTFLoader().parseAsync(buffer,''));}
  catch(error){environment.dispose();renderer.dispose();throw error;}
+ source.updateMatrixWorld(true);const floorY=new T.Box3().setFromObject(source.getObjectByName('base_A')).min.y;
  const weave=weaveTexture(),strapMaterial=new T.MeshStandardMaterial({color:'#53533d',map:weave,roughness:.92,metalness:0,side:T.DoubleSide});
  const records=[],ownedGeometry=[],ownedMaterials=[strapMaterial];
  let frameId=0,disposed=false,parallaxEnabled=!matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -72,30 +74,33 @@ export async function mountBaguetteComposites(root,buffer,finishes){
   const lifestyle=host.dataset.lifestyleScene,preset=lifestyle?LIFESTYLE_SCENES[lifestyle]:DETAIL_SCENES[host.dataset.cadPreview];
   if(!preset)continue;
   const scene=new T.Scene();scene.environment=environment.texture;
-  const camera=new T.OrthographicCamera(-350,350,230,-230,.1,5000);
+  const camera=lifestyle?new T.PerspectiveCamera(30,1.5,.1,5000):new T.OrthographicCamera(-350,350,230,-230,.1,5000);
   const {model,materials}=clonePrintModel(source,preset);ownedMaterials.push(...materials);
-  const placement=new T.Group();placement.add(model);scene.add(placement);
+  const placement=new T.Group(),assembly=new T.Group();assembly.add(model);placement.add(assembly);scene.add(placement);
   const key=makeLighting(scene,preset),canvas=document.createElement('canvas');canvas.className='baguette-render-canvas';canvas.setAttribute('role','img');
   const context=canvas.getContext('2d',{alpha:true});if(!context)continue;
   host.append(canvas);
-  const record={host,lifestyle,preset,scene,camera,model,placement,key,canvas,context,straps:[],visible:false,dirty:true,x:0,y:0,targetX:0,targetY:0};
+  const record={host,lifestyle,preset,scene,camera,model,placement,assembly,key,canvas,context,straps:[],visible:false,dirty:true,x:0,y:0,targetX:0,targetY:0};
   if(lifestyle){
    // Uniform physical scale and rigid transforms only. Image coordinates calibrate
    // a lens framing; they never stretch or deform the manufacturing mesh.
-   const width=621.74/preset.width,height=width/1.5;
-   camera.left=-width/2;camera.right=width/2;camera.top=height/2;camera.bottom=-height/2;camera.position.set(0,0,1600);camera.lookAt(0,0,0);camera.updateProjectionMatrix();
+   const width=621.74/preset.width,height=width/1.5,distance=height/(2*Math.tan(T.MathUtils.degToRad(camera.fov/2)));
+   camera.position.set(0,0,distance);camera.lookAt(0,0,0);camera.updateProjectionMatrix();
    placement.position.set((preset.center[0]-.5)*width,(.5-preset.center[1])*height,0);placement.rotation.set(...preset.rotation,'ZYX');
-   record.width=width;record.height=height;
+   record.width=width;record.height=height;record.distance=distance;
    key.target.position.copy(placement.position);scene.add(key.target);
-   addStrapEyes(placement,strapMaterial,ownedGeometry);
+   addStrapEyes(assembly,strapMaterial,ownedGeometry);
    if(preset.strapTops){
     for(let i=0;i<2;i++){const strap=new T.Mesh(new T.BufferGeometry(),strapMaterial);strap.castShadow=true;record.straps.push(strap);scene.add(strap);}
    }else{
     const points=[[-271.5,-3.5,69],[-291,-40,105],[-185,-42,186],[25,-42,221],[243,-42,144],[271.5,-3.5,69]].map(p=>new T.Vector3(...p));
-    const geometry=ribbon(points,15,true);ownedGeometry.push(geometry);const strap=new T.Mesh(geometry,strapMaterial);strap.castShadow=strap.receiveShadow=true;placement.add(strap);
+    const geometry=ribbon(points,15,true);ownedGeometry.push(geometry);const strap=new T.Mesh(geometry,strapMaterial);strap.castShadow=strap.receiveShadow=true;assembly.add(strap);
    }
    shadowPlane(scene,placement,preset.ground,ownedGeometry,ownedMaterials);
    if(preset.occlusion){const plate=host.querySelector('.baguette-scene-background').cloneNode();plate.className='baguette-scene-occlusion';plate.style.clipPath=preset.occlusion;plate.alt='';host.append(plate);}
+   // The photograph, foreground mask and CAD pixels use exactly the same
+   // overscan and translation. Separate transforms caused visible registration drift.
+   for(const layer of [host.querySelector('.baguette-scene-background'),canvas,host.querySelector('.baguette-scene-occlusion')])if(layer){layer.style.transform=PHOTO_LAYER_TRANSFORM;layer.style.transformOrigin='50% 50%';}
    host.tabIndex=0;host.setAttribute('aria-label',`${lifestyle} scene. Move the pointer or use arrow keys for a small change in perspective.`);
    host.addEventListener('pointermove',event=>{if(event.pointerType==='touch')return;const box=host.getBoundingClientRect();record.targetX=(event.clientX-box.left)/box.width*2-1;record.targetY=(event.clientY-box.top)/box.height*2-1;requestRender();});
    host.addEventListener('pointerleave',()=>{record.targetX=record.targetY=0;requestRender();});
@@ -124,11 +129,11 @@ export async function mountBaguetteComposites(root,buffer,finishes){
    const shadowSize=r.lifestyle&&w>1200?2048:1024;
    if(r.key.shadow.mapSize.x!==shadowSize){r.key.shadow.dispose();r.key.shadow.map=null;r.key.shadow.mapSize.set(shadowSize,shadowSize);}
    if(r.lifestyle){
-    const [rx,ry,rz]=r.preset.rotation;r.placement.rotation.set(rx+r.y*.012,ry+r.x*.018,rz+r.x*.003);r.placement.updateMatrixWorld(true);
+    const [rx,ry,rz]=r.preset.rotation;r.placement.rotation.set(rx+r.y*.006,ry+r.x*.009,rz);r.placement.updateMatrixWorld(true);
     r.host.style.setProperty('--scene-x',`${r.x*2}px`);r.host.style.setProperty('--scene-y',`${r.y*2}px`);
     for(let i=0;i<r.straps.length;i++){
-     const [x,y]=r.preset.strapTops[i];const anchor=r.placement.localToWorld(vector.set(STRAP_EYES[i][0],-3.5,69)).clone();
-     const top=new T.Vector3((x-.5)*r.width,(.5-y)*r.height,15);
+     const [x,y]=r.preset.strapTops[i];const anchor=r.assembly.localToWorld(vector.set(STRAP_EYES[i][0],-3.5,69)).clone();
+     const top=photoAnchor(r.width,r.height,r.distance,x,y,15);
      const geometry=ribbon([anchor,anchor.clone().lerp(top,.08),anchor.clone().lerp(top,.6),top]);r.straps[i].geometry.dispose();r.straps[i].geometry=geometry;
     }
    }
@@ -141,12 +146,14 @@ export async function mountBaguetteComposites(root,buffer,finishes){
  const visibility=new IntersectionObserver(entries=>{for(const entry of entries){const r=records.find(r=>r.host===entry.target);r.visible=entry.isIntersecting;if(r.visible)r.dirty=true;else{r.key.shadow.dispose();r.key.shadow.map=null;}}requestRender();},{rootMargin:'100px'});
  const size=new ResizeObserver(entries=>{for(const entry of entries){const r=records.find(r=>r.host===entry.target);if(r)r.dirty=true;}requestRender();});
  for(const r of records){visibility.observe(r.host);size.observe(r.host);}
- const unsubscribe=finishes.subscribe(finish=>{for(const r of records){applyPrintFinish(r.model,finish.color,r.preset);r.canvas.setAttribute('aria-label',`Baguette holder in ${finish.name}. ${r.lifestyle||r.host.dataset.cadPreview} view, rendered from the printable CAD model.`);r.dirty=true;}requestRender();});
+ function describe(r){const selected=sizePresentation(options.value.size);r.canvas.setAttribute('aria-label',`${r.lifestyle?selected.name:'Pro Max construction detail'} in ${finishes.value.name}. ${r.lifestyle||r.host.dataset.cadPreview} view${r.lifestyle&&!selected.current?', proportional scale preview':''}.`);}
+ const unsubscribe=finishes.subscribe(finish=>{for(const r of records){applyPrintFinish(r.model,finish.color,r.preset);describe(r);r.dirty=true;}requestRender();});
+ const unsubscribeSize=options.subscribe(value=>{const selected=sizePresentation(value.size);for(const r of records){if(r.lifestyle)applyPresentationScale(r.assembly,selected.scale,r.preset.ground?'ground':'hanging',floorY);describe(r);r.dirty=true;}requestRender();});
  const motionButton=root.querySelector('[data-parallax-toggle]');
  function updateMotion(){motionButton?.setAttribute('aria-pressed',String(parallaxEnabled));if(motionButton)motionButton.textContent=parallaxEnabled?'Parallax on':'Parallax off';for(const r of records)r.dirty=true;requestRender();}
  motionButton?.addEventListener('click',()=>{parallaxEnabled=!parallaxEnabled;updateMotion();});
  reducedMotion.addEventListener('change',()=>{parallaxEnabled=!reducedMotion.matches;updateMotion();});updateMotion();
  window.addEventListener('scroll',requestRender,{passive:true});document.addEventListener('visibilitychange',requestRender);
- window.addEventListener('pagehide',()=>{disposed=true;cancelAnimationFrame(frameId);visibility.disconnect();size.disconnect();unsubscribe();window.removeEventListener('scroll',requestRender);document.removeEventListener('visibilitychange',requestRender);for(const r of records){for(const strap of r.straps)strap.geometry.dispose();r.key.shadow.map?.dispose();}for(const geometry of ownedGeometry)geometry.dispose();for(const material of ownedMaterials)material.dispose();source.traverse(o=>{if(o.isMesh)o.geometry.dispose();});weave.dispose();environment.dispose();renderer.dispose();},{once:true});
+ window.addEventListener('pagehide',()=>{disposed=true;cancelAnimationFrame(frameId);visibility.disconnect();size.disconnect();unsubscribe();unsubscribeSize();window.removeEventListener('scroll',requestRender);document.removeEventListener('visibilitychange',requestRender);for(const r of records){for(const strap of r.straps)strap.geometry.dispose();r.key.shadow.map?.dispose();}for(const geometry of ownedGeometry)geometry.dispose();for(const material of ownedMaterials)material.dispose();source.traverse(o=>{if(o.isMesh)o.geometry.dispose();});weave.dispose();environment.dispose();renderer.dispose();},{once:true});
  return {records,renderer};
 }

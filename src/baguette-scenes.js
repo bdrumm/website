@@ -20,7 +20,7 @@ export const DETAIL_SCENES={
  'hinge-mid':{target:[150,0,-41],camera:[190,150,10],width:32,angle:50},
  'hinge-closed':{target:[150,0,-41],camera:[190,150,10],width:32},
  'hinge-section':{target:[150,0,-41],camera:[50,2,-44],width:15,section:'hinge',angle:100},
- latch:{target:[134,-3,43],camera:[154,-135,200],width:40},
+ latch:{target:[150,-6,43],camera:[170,-135,200],width:32},
  'latch-under':{target:[134,-3,43],camera:[144,-180,80],width:40},
  // The isolated unloaded tongue and sliced layers remain their source CAD images.
  catch:{target:[150,-4,42],camera:[245,5,45],width:18,clip:'catch'},

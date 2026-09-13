@@ -8,8 +8,8 @@ export function buildBaguetteConfigurator(options,finishes){
  const grid=make('div','baguette-size-grid'),inputs=[];
  for(const size of BAGUETTE_SIZES){
   const card=make('label','baguette-size-option'),radio=make('input');radio.type='radio';radio.name='baguette-size';radio.value=size.id;radio.setAttribute('aria-label',size.name);
-  const heading=make('span','baguette-option-heading');heading.append(make('strong','',size.name),make('span','baguette-option-status',size.current?'Current prototype':'Size concept'));
-  const illustration=make('span','baguette-size-illustration');illustration.setAttribute('aria-hidden','true');illustration.style.setProperty('--size-length',`${size.scale*100}%`);illustration.append(make('span','baguette-size-shell'));
+  const heading=make('span','baguette-option-heading');heading.append(make('strong','',size.name),make('span','baguette-option-status',size.current?'Current prototype':'Scale preview'));
+  const illustration=make('span','baguette-size-illustration');illustration.setAttribute('aria-hidden','true');illustration.style.setProperty('--size-length',`${size.scale*100}%`);illustration.style.setProperty('--size-thickness',`${30*size.scale}px`);illustration.append(make('span','baguette-size-shell'));
   card.append(radio,heading,illustration,make('span','baguette-option-label',size.label),make('span','baguette-option-description',size.description));
   radio.addEventListener('change',()=>{if(radio.checked)options.set({size:size.id});});inputs.push(radio);grid.append(card);
  }
@@ -29,7 +29,7 @@ export function buildBaguetteConfigurator(options,finishes){
  }
  addons.append(addonGrid);
  const summary=make('div','baguette-configuration-summary'),selection=make('p','baguette-selected-options');selection.setAttribute('role','status');selection.setAttribute('aria-live','polite');
- const note=make('p','baguette-configuration-note','Size illustrations show relative proportions. Pro, Mini and add-ons are concepts; final dimensions and attachments are in development.');
+ const note=make('p','baguette-configuration-note','The model and scenes follow your size and color. Pro and Mini are proportional scale previews; final dimensions and add-on attachments are in development.');
  summary.append(selection,note);panel.append(sizes,addons,summary);
  options.subscribe(value=>{for(const input of inputs)input.checked=input.value===value.size;select.value=String(value.expansions);expansion.classList.toggle('is-selected',value.expansions>0);for(const input of addonInputs)input.checked=value[input.dataset.addon];selection.textContent='Your setup · '+describeOptions(value);});
  finishes.subscribe(finish=>panel.style.setProperty('--case-finish',finish.color));

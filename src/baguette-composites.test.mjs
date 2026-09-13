@@ -2,14 +2,49 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {readFile} from 'node:fs/promises';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
-import {Box3,Color,MathUtils,Raycaster,Vector3} from 'three';
+import {Box3,Color,Group,MathUtils,PerspectiveCamera,Raycaster,Vector3} from 'three';
 import {clonePrintModel,applyPrintFinish} from './baguette-render-model.js';
 import {BAGUETTE_FINISHES,createFinishStore} from './baguette-finishes.js';
 import {LIFESTYLE_SCENES,DETAIL_SCENES,STRAP_EYES} from './baguette-scenes.js';
+import {applyPresentationScale,sizePresentation,setOpening,photoAnchor} from './baguette-presentation.js';
 
 const bytes=await readFile(new URL('../reviews/baguette-v3/baguette-v3.glb',import.meta.url));
 const {scene:source}=await new GLTFLoader().parseAsync(bytes.buffer.slice(bytes.byteOffset,bytes.byteOffset+bytes.byteLength),'');
 source.updateMatrixWorld(true);
+
+test('perspective strap endpoints project to their exact photo attachment coordinates at any depth',()=>{
+ for(const preset of Object.values(LIFESTYLE_SCENES)){
+  const camera=new PerspectiveCamera(30,1.5,.1,5000),width=621.74/preset.width,height=width/1.5,distance=height/(2*Math.tan(Math.PI/12));
+  camera.position.z=distance;camera.lookAt(0,0,0);camera.updateMatrixWorld(true);
+  for(const [x,y] of preset.strapTops||[[.2,.3],[.8,.7]])for(const z of [-55,0,15,80]){
+   const point=photoAnchor(width,height,distance,x,y,z).project(camera);
+   assert.ok(Math.abs((point.x+1)/2-x)<1e-10);assert.ok(Math.abs((1-point.y)/2-y)<1e-10);
+  }
+ }
+});
+
+test('each selected type changes the whole assembly uniformly and returns exactly to the source size',()=>{
+ const {model}=clonePrintModel(source),assembly=new Group();assembly.add(model);assembly.updateMatrixWorld(true);
+ const baseline=new Box3().setFromObject(model).getSize(new Vector3());
+ for(const id of ['mini','pro','pro-max','mini','pro-max']){
+  const {scale}=sizePresentation(id);applyPresentationScale(assembly,scale);
+  const size=new Box3().setFromObject(model).getSize(new Vector3());
+  for(const axis of ['x','y','z'])assert.ok(Math.abs(size[axis]-baseline[axis]*scale)<1e-6);
+  model.traverse(mesh=>{if(mesh.isMesh)assert.equal(mesh.geometry,source.getObjectByName(mesh.name).geometry);});
+ }
+ assert.ok(new Box3().setFromObject(model).getSize(new Vector3()).equals(baseline));
+});
+
+test('changing size never lifts the base off a table or moves the suspension plane',()=>{
+ const {model}=clonePrintModel(source),assembly=new Group();assembly.add(model);
+ const floorY=new Box3().setFromObject(source.getObjectByName('base_A')).min.y;
+ for(const id of ['pro-max','pro','mini']){
+  const {scale}=sizePresentation(id);applyPresentationScale(assembly,scale,'ground',floorY);
+  for(const angle of [0,50,100]){setOpening(model,angle);assembly.updateMatrixWorld(true);assert.ok(Math.abs(new Box3().setFromObject(model.getObjectByName('base_A')).min.y-floorY)<1e-6);}
+  applyPresentationScale(assembly,scale,'hanging',floorY);
+  for(const [x,y,z] of STRAP_EYES){const eye=assembly.localToWorld(new Vector3(x,y,z));assert.ok(Math.abs(eye.y-y)<1e-6);assert.ok(Math.abs(eye.z-z)<1e-6);assert.ok(Math.abs(eye.x-x*scale)<1e-6);}
+ }
+});
 
 test('every composite shares the exact manufacturing geometry and keeps the source intact',()=>{
  const initial=[];source.traverse(mesh=>{if(mesh.isMesh)initial.push({mesh,matrix:mesh.matrixWorld.clone(),color:mesh.material.color.clone(),morph:[...(mesh.morphTargetInfluences||[])]});});
