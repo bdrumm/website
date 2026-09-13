@@ -26,12 +26,13 @@ test('room tiles open usable dimmers with presets and no slider',()=>{
  applyLightingAction(state,ui.controls[1].action);ui.render('rooms',frame,0,0,true);assert.ok(texts.some(t=>t.text==='25%'));
  applyLightingAction(state,ui.controls[4].action);assert.equal(state.detail,null);
 });
-test('routines replace Display with an actionable All off, and white UI uses dark text',()=>{
+test('routines replace Display with an actionable All off, and dark UI uses light text',()=>{
  const state=createLightingState(),{ctx,texts,fills}=drawing(),ui=new StationAppUI(ctx,state);
- ui.render('scene',{id:'choose',elapsed:3},0,0,true);assert.equal(fills[0],'#ffffff');assert.ok(!texts.some(t=>t.text==='Display'));assert.equal(ui.controls.length,1);
- applyLightingAction(state,ui.controls[0].action);ui.render('scene',{id:'choose',elapsed:3},0,0,true);assert.ok(texts.some(t=>t.text==='All lights are off.'));assert.ok(texts.some(t=>t.text==='Good night'&&t.color==='#17212e'));
+ ui.render('scene',{id:'choose',elapsed:3},0,0,true);assert.equal(fills[0],'#030812');assert.ok(!texts.some(t=>t.text==='Display'));assert.equal(ui.controls.length,1);
+ applyLightingAction(state,ui.controls[0].action);ui.render('scene',{id:'choose',elapsed:3},0,0,true);assert.ok(texts.some(t=>t.text==='All lights are off.'));assert.ok(texts.some(t=>t.text==='Good night'&&t.color==='#f3f8ff'));
  const luminance=hex=>{const rgb=hex.match(/[a-f\d]{2}/gi).map(v=>parseInt(v,16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);return rgb[0]*.2126+rgb[1]*.7152+rgb[2]*.0722;};
- for(const color of ['#17212e','#526070','#08775f','#1768b2','#7043ab','#975008'])assert.ok(1.05/(luminance(color)+.05)>=4.5,color+' on white');
+ for(const color of ['#f3f8ff','#a4b7cd','#83f2d0','#89c6ff','#c5b2ff','#ffcf91'])assert.ok((luminance(color)+.05)/(luminance('#030812')+.05)>=4.5,color+' on dark');
+ assert.ok((luminance('#83f2d0')+.05)/(luminance('#10212a')+.05)>=7,'active light control contrast');
  assert.equal(Object.keys(APP_TOURS).length,9);
 });
 
