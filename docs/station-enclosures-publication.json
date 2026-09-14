@@ -1,0 +1,1057 @@
+{
+  "date": "2026-09-14",
+  "source": "Measured 4.3-inch case project; N43/O43 release",
+  "viewer_verification": {
+    "variants": [
+      {
+        "id": "n43",
+        "parts": 11,
+        "caseMm": [
+          71.6,
+          118.3,
+          24.9
+        ],
+        "mountedDepthMm": 29.2,
+        "assemblySteps": 13,
+        "removalSteps": 7
+      },
+      {
+        "id": "o43",
+        "parts": 10,
+        "caseMm": [
+          71.6,
+          132.3,
+          18.8
+        ],
+        "mountedDepthMm": 28.1,
+        "assemblySteps": 12,
+        "removalSteps": 7
+      },
+      {
+        "id": "m43",
+        "parts": 10,
+        "caseMm": [
+          69.3,
+          118.3,
+          23.7
+        ],
+        "mountedDepthMm": 28,
+        "assemblySteps": 12,
+        "removalSteps": 6
+      },
+      {
+        "id": "l43",
+        "parts": 9,
+        "caseMm": [
+          69.3,
+          132.3,
+          17.6
+        ],
+        "mountedDepthMm": 26.9,
+        "assemblySteps": 11,
+        "removalSteps": 6
+      },
+      {
+        "id": "k43",
+        "parts": 10,
+        "caseMm": [
+          69.3,
+          118.3,
+          24.9
+        ],
+        "mountedDepthMm": 28.6,
+        "assemblySteps": 12,
+        "removalSteps": 6
+      },
+      {
+        "id": "j-w5",
+        "parts": 10,
+        "caseMm": [
+          75,
+          131.2,
+          23.7
+        ],
+        "mountedDepthMm": 28.2,
+        "assemblySteps": 12,
+        "removalSteps": 6
+      },
+      {
+        "id": "i-s3",
+        "parts": 9,
+        "caseMm": [
+          75,
+          145.2,
+          16.7
+        ],
+        "mountedDepthMm": 27.2,
+        "assemblySteps": 11,
+        "removalSteps": 6
+      },
+      {
+        "id": "h-s2",
+        "parts": 9,
+        "caseMm": [
+          75,
+          145.2,
+          16.7
+        ],
+        "mountedDepthMm": 27.2,
+        "assemblySteps": 11,
+        "removalSteps": 6
+      },
+      {
+        "id": "g-switch",
+        "parts": 8,
+        "caseMm": [
+          75,
+          145.2,
+          18.7
+        ],
+        "mountedDepthMm": 43.7,
+        "assemblySteps": 11,
+        "removalSteps": 6
+      },
+      {
+        "id": "g-surface",
+        "parts": 8,
+        "caseMm": [
+          75,
+          145.2,
+          18.7
+        ],
+        "mountedDepthMm": 33.7,
+        "assemblySteps": 11,
+        "removalSteps": 6
+      },
+      {
+        "id": "f-portable",
+        "parts": 8,
+        "caseMm": [
+          75,
+          131.2,
+          23.7
+        ],
+        "mountedDepthMm": null,
+        "assemblySteps": 9,
+        "removalSteps": 3
+      },
+      {
+        "id": "f-wall",
+        "parts": 6,
+        "caseMm": [
+          75,
+          131.2,
+          23.7
+        ],
+        "mountedDepthMm": 29.7,
+        "assemblySteps": 11,
+        "removalSteps": 6
+      },
+      {
+        "id": "a-portable",
+        "parts": 7,
+        "caseMm": [
+          75,
+          131.2,
+          24.4
+        ],
+        "mountedDepthMm": null,
+        "assemblySteps": 9,
+        "removalSteps": 3
+      },
+      {
+        "id": "b-portable",
+        "parts": 8,
+        "caseMm": [
+          75,
+          131.2,
+          23.7
+        ],
+        "mountedDepthMm": null,
+        "assemblySteps": 9,
+        "removalSteps": 3
+      },
+      {
+        "id": "c-portable",
+        "parts": 8,
+        "caseMm": [
+          75,
+          131.2,
+          23.7
+        ],
+        "mountedDepthMm": null,
+        "assemblySteps": 9,
+        "removalSteps": 3
+      },
+      {
+        "id": "c-wall",
+        "parts": 6,
+        "caseMm": [
+          77.6,
+          132.15,
+          20.4
+        ],
+        "mountedDepthMm": 26.4,
+        "assemblySteps": 10,
+        "removalSteps": 7
+      },
+      {
+        "id": "d-portable",
+        "parts": 8,
+        "caseMm": [
+          77.6,
+          132.15,
+          23.7
+        ],
+        "mountedDepthMm": null,
+        "assemblySteps": 9,
+        "removalSteps": 3
+      },
+      {
+        "id": "d-wall",
+        "parts": 6,
+        "caseMm": [
+          77.6,
+          132.15,
+          23.7
+        ],
+        "mountedDepthMm": 29.7,
+        "assemblySteps": 10,
+        "removalSteps": 7
+      },
+      {
+        "id": "e-portable",
+        "parts": 8,
+        "caseMm": [
+          75,
+          131.2,
+          23.7
+        ],
+        "mountedDepthMm": null,
+        "assemblySteps": 9,
+        "removalSteps": 3
+      },
+      {
+        "id": "e-wall",
+        "parts": 6,
+        "caseMm": [
+          75,
+          131.2,
+          23.7
+        ],
+        "mountedDepthMm": 29.7,
+        "assemblySteps": 11,
+        "removalSteps": 6
+      }
+    ],
+    "assets": 184,
+    "sequenceSamples": 8944,
+    "browserQa": false,
+    "webmcpVerified": false,
+    "svgDiagrams": 60,
+    "uniqueMeshAssets": 70,
+    "status": "passed"
+  },
+  "files": {
+    "station/enclosures/preview.png": {
+      "bytes": 323970,
+      "sha256": "31b9cb203ee911149e60d9082b9f1ac081282ef8e9444fd0ccf67139f9076ffc"
+    },
+    "station/enclosures/index.html": {
+      "bytes": 3686,
+      "sha256": "8c4bb4d4bc4a9f0bc0c67433a44ea02e6088467e11e9bc38faeb993ccd9fd2b1"
+    },
+    "station/enclosures/scene.js": {
+      "bytes": 9553,
+      "sha256": "4bdae1b367cf671a5144721d905a9566453f34d52abf4731a47d39fdef0da580"
+    },
+    "station/enclosures/bootstrap.js": {
+      "bytes": 296,
+      "sha256": "bfd0f7a8b393cb0ad496a48984d9a2668d4307993ae817330e00d3d0f6f65b45"
+    },
+    "station/enclosures/usb-relief-preview.png": {
+      "bytes": 114672,
+      "sha256": "f774950a72d5bce45956e99fbcecc9a75b8f452725de3e4f32956ef0ac738f4b"
+    },
+    "station/enclosures/release.json": {
+      "bytes": 906,
+      "sha256": "9feb59a7111d4a2e2fb8247bb2ea0c7ef7a447d69fe756a6947c35b63ab5b591"
+    },
+    "station/enclosures/release-manifest.json": {
+      "bytes": 2969,
+      "sha256": "4236056bc4c7310e1192d46e50b29572be1e9a2d430002eaa3dc511a3effcc08"
+    },
+    "station/enclosures/style.css": {
+      "bytes": 10676,
+      "sha256": "e8e8893c89cd7f4327f7ff478f4b9e5cf062400fe814e1a47a4c119f88834051"
+    },
+    "station/enclosures/assembly.js": {
+      "bytes": 8297,
+      "sha256": "f914b050cb5c327ce8bc8eb522e96cb8fab8c932429edf3ac62332aae8188174"
+    },
+    "station/enclosures/catalog.json": {
+      "bytes": 82195,
+      "sha256": "df48f105cc953e6479d50b465a39a1caecc72e59e078b4f1d70433964b9aa640"
+    },
+    "station/enclosures/diagrams.js": {
+      "bytes": 10610,
+      "sha256": "cac6d221f91286370f87709e98fa0c87f2149ae871ac5878f957e3970ddf00fb"
+    },
+    "station/enclosures/app.js": {
+      "bytes": 18378,
+      "sha256": "feea80ea9a4850170176d279d755858b605f7e4ee0f6ba5ad3bb7d1b43f4b12f"
+    },
+    "station/enclosures/assets/e0041270b40e25df-battery-preview.stl": {
+      "bytes": 684,
+      "sha256": "e0041270b40e25dfabc8ff5af1e527d5afdc3d6785a12b9ac82234ff3253ac09"
+    },
+    "station/enclosures/assets/12ac8f7a0b1dfe9d-usb-clearance-coupon.stl": {
+      "bytes": 83884,
+      "sha256": "12ac8f7a0b1dfe9d69b4e7884bb413d6447a36a357aa162a90927d47e3496c1b"
+    },
+    "station/enclosures/assets/422b263e490a2a16-holder.step": {
+      "bytes": 969999,
+      "sha256": "422b263e490a2a16263e77b4969343aabd0db4854957bdc931691223405cff87"
+    },
+    "station/enclosures/assets/430531ab6e7b5433-glass-preview.stl": {
+      "bytes": 17484,
+      "sha256": "430531ab6e7b54339522ba316a7db86b1ee167d64a68b62e162415da474e8c80"
+    },
+    "station/enclosures/assets/5fc4bb447a6e062c-m43-archived-guide.md": {
+      "bytes": 8991,
+      "sha256": "5fc4bb447a6e062cc071c7ccf65aca73c9440f93d6705279e9ab5a005d6c0306"
+    },
+    "station/enclosures/assets/26714ee1e4fe1cc1-holder-preview.stl": {
+      "bytes": 215884,
+      "sha256": "26714ee1e4fe1cc1dc5e88312cf29fcfe430a3f1e600259cc5e07d1a1de98e12"
+    },
+    "station/enclosures/assets/c4d0ac0ba628a443-holder-preview.stl": {
+      "bytes": 128784,
+      "sha256": "c4d0ac0ba628a443a181a10c4f52fa7c67c1a3d4e27a5cf8186cebd415cba397"
+    },
+    "station/enclosures/assets/b5474ca210b229b5-case-measurement-prototype.step": {
+      "bytes": 2445633,
+      "sha256": "b5474ca210b229b5fdcd6227a6c0ec51875ba988dc7b33e6e196161c23bb534c"
+    },
+    "station/enclosures/assets/b288c28979aa2eb0-ASSEMBLY.md": {
+      "bytes": 12981,
+      "sha256": "b288c28979aa2eb096eb04edd3c7c3e0b9168b49639f75906896230eb801118a"
+    },
+    "station/enclosures/assets/3dccd830d8f199e5-guide.md": {
+      "bytes": 11577,
+      "sha256": "3dccd830d8f199e5694fe9993bf9e76becb4100bb159e5f45d608061cc0790cd"
+    },
+    "station/enclosures/assets/9f3ea166cd69e027-pocket-preview.stl": {
+      "bytes": 13484,
+      "sha256": "9f3ea166cd69e02725c5b88b3fa48d95360a042a6bd7965be32fcf07c9e8a0a6"
+    },
+    "station/enclosures/assets/181d295566c98264-cable-1-preview.stl": {
+      "bytes": 126884,
+      "sha256": "181d295566c98264f87cbd5f210a4bebf28e5f556bb909f1b3ff325adb902017"
+    },
+    "station/enclosures/assets/c9ca7d633691efdd-battery-preview.stl": {
+      "bytes": 684,
+      "sha256": "c9ca7d633691efdd8b0cde1cff74591232dde671f2f7147afd3eed6f834f115f"
+    },
+    "station/enclosures/assets/972538efabf2b60e-p4-5c-shared-case-e-w3.zip": {
+      "bytes": 36670512,
+      "sha256": "972538efabf2b60ee422c9b09e3b94d7fe8e55bde240e6350ce71af709e7df5a"
+    },
+    "station/enclosures/assets/6ca39fc47db18f8b-case-preview.stl": {
+      "bytes": 1176584,
+      "sha256": "6ca39fc47db18f8b21ed7cbdfb390dcfa09c50d112421bdc80c89bc57e2ee4fa"
+    },
+    "station/enclosures/assets/257cc16b543b1c4c-bezel.step": {
+      "bytes": 207103,
+      "sha256": "257cc16b543b1c4ce971b3fdd1a9512894adc0d5b23bcb92f0a0aca06507978f"
+    },
+    "station/enclosures/assets/b718a64c70cc878a-battery-preview.stl": {
+      "bytes": 684,
+      "sha256": "b718a64c70cc878a4df25f1f5344a5343dc9475b2f57defb6d670634d70d02a6"
+    },
+    "station/enclosures/assets/26c1e153c03d0f79-case-preview.stl": {
+      "bytes": 1527684,
+      "sha256": "26c1e153c03d0f79157451995eeaec4370eeab11fa9c3a104e51ec00a19297ce"
+    },
+    "station/enclosures/assets/e8fd315980fad47d-speaker-preview.stl": {
+      "bytes": 17484,
+      "sha256": "e8fd315980fad47d0c72a3d057666aa1b48d2c99d789d93c5323f96dc8dc9b90"
+    },
+    "station/enclosures/assets/1ff3ee956dfc05bf-case-toolpaths.png": {
+      "bytes": 24622,
+      "sha256": "1ff3ee956dfc05bf464c8e6aa9ecca090f1a1a4c7155aa2e5085d58962719345"
+    },
+    "station/enclosures/assets/ec2f72607432e9fc-wallplate-preview.stl": {
+      "bytes": 234684,
+      "sha256": "ec2f72607432e9fc725600aa93f30c0dbf1a1597d507f84962befa2799f1105e"
+    },
+    "station/enclosures/assets/fe8b49e4a326ed05-p4-43-switch-o43.3mf": {
+      "bytes": 767684,
+      "sha256": "fe8b49e4a326ed054f429abb6f9ebff416778decc351c9fd143276fd5cb9316b"
+    },
+    "station/enclosures/assets/de8cfd7a4adaefb2-wallplate-preview.stl": {
+      "bytes": 215884,
+      "sha256": "de8cfd7a4adaefb220658979dcf40f101113e5a52b0365d8ecc8107340190b1e"
+    },
+    "station/enclosures/assets/4f6d5df5e2a8ce02-case-measurement-prototype.step": {
+      "bytes": 1796308,
+      "sha256": "4f6d5df5e2a8ce0218e9b36120f3f39fa186e4a6702cba0630ca91c8516b2b6d"
+    },
+    "station/enclosures/assets/eacd75bdb008b7bf-glass-fit-ring.stl": {
+      "bytes": 565984,
+      "sha256": "eacd75bdb008b7bf44319a120d080e9034bfb443a510e059d137f897cd120a52"
+    },
+    "station/enclosures/assets/3223e6c61580f92a-p4-switch-wall-g-s1.3mf": {
+      "bytes": 617756,
+      "sha256": "3223e6c61580f92a5dcbd40bfae4d365a8fbdae4c62105d16748f01ab25cf8fb"
+    },
+    "station/enclosures/assets/8abfddfadead0135-case-measurement-prototype.stl": {
+      "bytes": 2874684,
+      "sha256": "8abfddfadead01357018d9c3eca1d2c1ac9b9e66ec519ba9b5fc61d6a7c9244a"
+    },
+    "station/enclosures/assets/0d5d664906dc7796-usb-clearance-coupon.stl": {
+      "bytes": 82684,
+      "sha256": "0d5d664906dc7796d2e7777746c376260a1d38eea4d23c0c3c534efb00461f10"
+    },
+    "station/enclosures/assets/7e7b9f9a6f252ba0-mount-holder-coupon.stl": {
+      "bytes": 216784,
+      "sha256": "7e7b9f9a6f252ba065f32c9c1426f85eb451642945a1683c412ab0d9ba2a86ed"
+    },
+    "station/enclosures/assets/30a2e4b114f011a2-mechanical-profile.json": {
+      "bytes": 4017,
+      "sha256": "30a2e4b114f011a29c6b8d4e465947ee08188c63d118347c6a9ea83c3ea65db9"
+    },
+    "station/enclosures/assets/2a4a51580cd85e46-insulator-preview.stl": {
+      "bytes": 684,
+      "sha256": "2a4a51580cd85e461f21aee8ea42a4b3bc17a763d435b4e003231553922aaf3e"
+    },
+    "station/enclosures/assets/6068f6c99db7a099-fit-jig.stl": {
+      "bytes": 980684,
+      "sha256": "6068f6c99db7a099ebc4438252c3f156a8d76e4955528300c54f2e59160969f1"
+    },
+    "station/enclosures/assets/3238a0ab8e84159f-slicer-validation.json": {
+      "bytes": 1398,
+      "sha256": "3238a0ab8e84159f99c2b43880b5837e249275f7d465d4bfae88380f51cc89b2"
+    },
+    "station/enclosures/assets/835be385bd57ef25-cable-0-preview.stl": {
+      "bytes": 925684,
+      "sha256": "835be385bd57ef25667504de01a6d02682eadba23b9894cba826ff82371050b9"
+    },
+    "station/enclosures/assets/3e3c23b5df7d4faf-case-preview.stl": {
+      "bytes": 723984,
+      "sha256": "3e3c23b5df7d4faf73bbfe51f9914dfbcf91361d1f540d78f263165fb4f51001"
+    },
+    "station/enclosures/assets/029b5db96ded487b-holder.step": {
+      "bytes": 935107,
+      "sha256": "029b5db96ded487b4b80aa2db44a5cee32a0b894f35b40a86979a84c209eca39"
+    },
+    "station/enclosures/assets/e1e840f7c32988c5-independent-clearance-checks.json": {
+      "bytes": 13262,
+      "sha256": "e1e840f7c32988c5a7932807b177000a740cc79c3ccf966f94ade293645090e3"
+    },
+    "station/enclosures/assets/b656ab81ead00af8-bezel-fit-ring.stl": {
+      "bytes": 650284,
+      "sha256": "b656ab81ead00af8e5c7a82582ef8987c54542a90aaf91764d353fb9bfa9936d"
+    },
+    "station/enclosures/assets/e5f3eae09981e433-holder.step": {
+      "bytes": 698106,
+      "sha256": "e5f3eae09981e43321743beecd2ca9121612f8c2327b18ad60e38e75c7ed3b16"
+    },
+    "station/enclosures/assets/94085dbfa7e43b0e-glass-fit-ring.stl": {
+      "bytes": 492184,
+      "sha256": "94085dbfa7e43b0e39c4e2d77f35d0bf17dad112e1bcb47096bfcd1d54c25f3c"
+    },
+    "station/enclosures/assets/6384808aae378bd0-bezel.step": {
+      "bytes": 207103,
+      "sha256": "6384808aae378bd0add3fbed435db36e1fe9db04b78863f07ba94b9a91ffae81"
+    },
+    "station/enclosures/assets/b8888d86b62c51f8-case-preview.stl": {
+      "bytes": 631284,
+      "sha256": "b8888d86b62c51f8ffcf5068812bc473bd004ce2c37ab08692a8ad4b54c8d3a9"
+    },
+    "station/enclosures/assets/95d62609056ed459-case-measurement-prototype.step": {
+      "bytes": 2021669,
+      "sha256": "95d62609056ed459b6142611709de529a961497c790871ab9bc62555bfc0efac"
+    },
+    "station/enclosures/assets/a261a9a5cb40a884-ASSEMBLY.md": {
+      "bytes": 12283,
+      "sha256": "a261a9a5cb40a88415b12a22d5bfc75247e1a3f7515e625b4719b95ad6e2571e"
+    },
+    "station/enclosures/assets/4381eecc81291f66-insulator-preview.stl": {
+      "bytes": 684,
+      "sha256": "4381eecc81291f6659ee0b61384e98e9d65f4015d4e968f7fc092e9e1054c066"
+    },
+    "station/enclosures/assets/34a47620fefae477-speaker-preview.stl": {
+      "bytes": 17484,
+      "sha256": "34a47620fefae477ea6eec35e134b100aee58d98e574f37c1f843a01b6f275d5"
+    },
+    "station/enclosures/assets/a4cab3e8f1f16386-mount-case-coupon.stl": {
+      "bytes": 838184,
+      "sha256": "a4cab3e8f1f16386f769fc7ca5b0419cba412c0beb911e9bfdefca813eaa25a3"
+    },
+    "station/enclosures/assets/92f8124df95ddf68-camera-preview.stl": {
+      "bytes": 17484,
+      "sha256": "92f8124df95ddf688f0b32096bce19b688da0fce0ab11f4fab16c4d3fb6a88fd"
+    },
+    "station/enclosures/assets/5b6d4d23d1690d6a-glass-preview.stl": {
+      "bytes": 17484,
+      "sha256": "5b6d4d23d1690d6aed51054d233c3c160594b5926a3280ae1cbc32c2e35f59ed"
+    },
+    "station/enclosures/assets/3ba6ef3afc242f7a-slicer-validation.json": {
+      "bytes": 1596,
+      "sha256": "3ba6ef3afc242f7a7daab72cce3cdfab92b74ee9bb1f7f0e8e849ec350e0644b"
+    },
+    "station/enclosures/assets/e1a8aadf42636a1d-case-preview.stl": {
+      "bytes": 1193684,
+      "sha256": "e1a8aadf42636a1dcdaeae82ab40fa1b139e704a7be6b593b22d5e43f3900c7d"
+    },
+    "station/enclosures/assets/2c7f3e9a2c210aa5-cable-1-preview.stl": {
+      "bytes": 536384,
+      "sha256": "2c7f3e9a2c210aa51c2707edd2b8a06923c03fcd5fc31eb671e1e8ce79137166"
+    },
+    "station/enclosures/assets/52237724cb17f271-mount-holder-coupon.stl": {
+      "bytes": 84484,
+      "sha256": "52237724cb17f271bb282af5cbe6607e8f446e10e4d86085ea1c8892a971dd95"
+    },
+    "station/enclosures/assets/8e149648c065d72c-holder-preview.stl": {
+      "bytes": 115684,
+      "sha256": "8e149648c065d72c298c83476b77f0421b04ac84a743941ae9b463cb78f93e21"
+    },
+    "station/enclosures/assets/62e1ad5e284bb56e-case-measurement-prototype.step": {
+      "bytes": 2158119,
+      "sha256": "62e1ad5e284bb56e5d7a4ccd5a788336414926a6e97ca28761ce449dce920c12"
+    },
+    "station/enclosures/assets/6b73479f08ef19fa-mount-pattern-template.stl": {
+      "bytes": 185684,
+      "sha256": "6b73479f08ef19fa2efd689521cfadf4eef23f2cfe9ef54accbf755c14c0d531"
+    },
+    "station/enclosures/assets/c3b3d7fc7ccace66-case-preview.stl": {
+      "bytes": 1388884,
+      "sha256": "c3b3d7fc7ccace66462b67e250a686dcb22991d5fe2ebd66d749ea4d1a445de3"
+    },
+    "station/enclosures/assets/f840867f85466b62-speaker-preview.stl": {
+      "bytes": 17484,
+      "sha256": "f840867f85466b620db819225f42a17de84f4c4a2eafde22e8861c23d7ffa972"
+    },
+    "station/enclosures/assets/9305b90b447b1fda-holder-preview.stl": {
+      "bytes": 320284,
+      "sha256": "9305b90b447b1fda6b91fd639028cf3a65b3b7dcf8091a88884a255fe5ba303b"
+    },
+    "station/enclosures/assets/8edd9d62a5a54230-p4-43-fit-coupons.3mf": {
+      "bytes": 348393,
+      "sha256": "8edd9d62a5a54230a7fd719713f46eae1fc93d1e458613a8368bbec99eca09b6"
+    },
+    "station/enclosures/assets/971427b8c75be3f3-holder-preview.stl": {
+      "bytes": 296684,
+      "sha256": "971427b8c75be3f39ac29b7ac614776809d6b61fc9601d86592a4e003eee695e"
+    },
+    "station/enclosures/assets/22cc15a44de6692e-holder-toolpaths.png": {
+      "bytes": 22296,
+      "sha256": "22cc15a44de6692efc3efac1c965a23873fe12464d0b399b933af98ae242000a"
+    },
+    "station/enclosures/assets/73be015689d19490-cable-0-preview.stl": {
+      "bytes": 233984,
+      "sha256": "73be015689d1949044b04dfa55c8a2d56bc9ab3fe3c7cef57435da32afb53a05"
+    },
+    "station/enclosures/assets/01377eb6d416a9ae-guide.md": {
+      "bytes": 9440,
+      "sha256": "01377eb6d416a9aeb5a1442efacd1d41a17cd874e18af977288d115478b24135"
+    },
+    "station/enclosures/assets/55176ae1c020a7ca-p4-robust-switch-i-s3.3mf": {
+      "bytes": 726169,
+      "sha256": "55176ae1c020a7ca1d4ad818bb41dd6323cb329faecf7b6d59bf3788e4e1433b"
+    },
+    "station/enclosures/assets/0c10f6ee642130a7-board-hardware.webp": {
+      "bytes": 81166,
+      "sha256": "0c10f6ee642130a70464e5f19d7003dd1a18a50016843328825a8b78fdb5e1cd"
+    },
+    "station/enclosures/assets/9712927778190882-pocket-preview.stl": {
+      "bytes": 17484,
+      "sha256": "97129277781908826602e68cc42de3b349bf7677e08e6162fa6f0cb284096a5c"
+    },
+    "station/enclosures/assets/f33e94f87c03c896-case-measurement-prototype.stl": {
+      "bytes": 2789384,
+      "sha256": "f33e94f87c03c896d47477874d0dcf68a86f89b2d611ae89e1788f48feb4abc1"
+    },
+    "station/enclosures/assets/eba45b1e35fde5fa-case-preview.stl": {
+      "bytes": 631284,
+      "sha256": "eba45b1e35fde5fa97dc34fa4d29e09a29cffd8927b9b8d0eb39d9045f89f150"
+    },
+    "station/enclosures/assets/c47e5e824ab72e13-holder.stl": {
+      "bytes": 450184,
+      "sha256": "c47e5e824ab72e13bf46caac0a7d8467840ccb7a6768cf983502c4ed149f322f"
+    },
+    "station/enclosures/assets/cd094528432d96cc-speaker-clip-coupon.stl": {
+      "bytes": 382584,
+      "sha256": "cd094528432d96ccaa8fee5618111f46f32088eaef1158ffc009f71bae91c9cd"
+    },
+    "station/enclosures/assets/c246bbc70c252157-holder.stl": {
+      "bytes": 455284,
+      "sha256": "c246bbc70c252157935c133df43dacae5721736c45f75424e7c8d8be48d735f4"
+    },
+    "station/enclosures/assets/780b1aa8a035c6ae-README.md": {
+      "bytes": 10539,
+      "sha256": "780b1aa8a035c6aede63bd672786217e85ddf7842253b34cc62536cb3483f4e9"
+    },
+    "station/enclosures/assets/1049e92fc3d53ddc-camera-preview.stl": {
+      "bytes": 17484,
+      "sha256": "1049e92fc3d53ddc7626ea6cdaedf25291fbfce45bc5fbd1cf5b0efe56af72ab"
+    },
+    "station/enclosures/assets/c37e6e4e57c0e384-mount-verification.json": {
+      "bytes": 3074,
+      "sha256": "c37e6e4e57c0e38489e3d4d2acdc60a85203ec0957fafda7187ca4f6eba8e776"
+    },
+    "station/enclosures/assets/075ca24c138d305b-mount-case-coupon.stl": {
+      "bytes": 476284,
+      "sha256": "075ca24c138d305bd644dbccf7c1e6f468b7d7634b85feb3f766767d0bf63ccf"
+    },
+    "station/enclosures/assets/cda24b13520ca91a-mount-case-coupon.stl": {
+      "bytes": 188884,
+      "sha256": "cda24b13520ca91acaebcbdbfbed999863043c01d0e6cc9975cb5ae1f7389870"
+    },
+    "station/enclosures/assets/c084cdf1a2968fdc-cable-0-preview.stl": {
+      "bytes": 536384,
+      "sha256": "c084cdf1a2968fdc755fae63214375b55cd5b17f4dcf3a7960f3f7d4ef4bf101"
+    },
+    "station/enclosures/assets/68f848d82cd7de47-p4-5c-shared-case-d-w2.zip": {
+      "bytes": 36590561,
+      "sha256": "68f848d82cd7de4703d726a4a0607c5e4f781d251be993d96ef43ba21944eb7d"
+    },
+    "station/enclosures/assets/9d88f54db1103edf-cable-1-preview.stl": {
+      "bytes": 18284,
+      "sha256": "9d88f54db1103edfc07a6719ca1b30fb2cc72a5c14b65c6c1c673ad14208fa2c"
+    },
+    "station/enclosures/assets/fbbdd24a4dda5506-mount-holder-coupon.stl": {
+      "bytes": 89584,
+      "sha256": "fbbdd24a4dda5506d35bbff01e5a323440d7e6e12e9d00275a00577d732b5c9b"
+    },
+    "station/enclosures/assets/ade74330cc853f8b-speaker-clip-coupon.stl": {
+      "bytes": 323284,
+      "sha256": "ade74330cc853f8b4aecc6dd1dc352e7958e4fa5cebf6896b7f989997f4d1c6d"
+    },
+    "station/enclosures/assets/2665cbe4f40a57cc-k43-52mm-superseded-20260914.zip": {
+      "bytes": 13585983,
+      "sha256": "2665cbe4f40a57ccf2abfd592041a4ed9cbf092c6621e93f68747dcbacc9c18f"
+    },
+    "station/enclosures/assets/4af9472a40730829-guide.md": {
+      "bytes": 12726,
+      "sha256": "4af9472a4073082933ed412c3a5280be00a1f36a1df362110d9d2a3002db78ce"
+    },
+    "station/enclosures/assets/4fe89834a1f8f004-pcb-preview.stl": {
+      "bytes": 521284,
+      "sha256": "4fe89834a1f8f00452a9e2a7eea4e008ecf3ca9c6a094a83c860474e17a607ae"
+    },
+    "station/enclosures/assets/ebcbd7d084b697fa-speaker-clip-coupon.stl": {
+      "bytes": 323284,
+      "sha256": "ebcbd7d084b697fae0ff02a21c65c1bdd9560b1de9ca09c60dee7eb5cb152f09"
+    },
+    "station/enclosures/assets/50e67ff7f59f620d-case-toolpaths.png": {
+      "bytes": 27806,
+      "sha256": "50e67ff7f59f620db0e82b4ba3e50b73cbb9aee8c1e75025d057f9cfc95c9b5b"
+    },
+    "station/enclosures/assets/b3df9373d14466be-assembly-checks.json": {
+      "bytes": 2989,
+      "sha256": "b3df9373d14466beb14e9efc0f3c485b2d334489005b1e1c647f5af1cc74b87b"
+    },
+    "station/enclosures/assets/564aba0eba0394b3-holder.step": {
+      "bytes": 968484,
+      "sha256": "564aba0eba0394b38ca01a425da8ddd4bdda0128687143f5acc40ddcae0c1c21"
+    },
+    "station/enclosures/assets/e9236a3d0cc3ae15-p4-43-battery-n43.3mf": {
+      "bytes": 897645,
+      "sha256": "e9236a3d0cc3ae153c3e96789531d40a3306de9510bc4950838b6b7fa0de5850"
+    },
+    "station/enclosures/assets/1014e827d1d8ea71-holder-preview.stl": {
+      "bytes": 308784,
+      "sha256": "1014e827d1d8ea713941e715790c0dfd57e3ac568958bdf72c4b3770c1d1052f"
+    },
+    "station/enclosures/assets/dd103916ed9edfe7-p4-5c-case-revision-b.zip": {
+      "bytes": 22034548,
+      "sha256": "dd103916ed9edfe7c02784ece3ab01ccc1d621d1ed2c0fb3301b0b840aa5c3ce"
+    },
+    "station/enclosures/assets/9617faa3b9a0badf-glass-fit-ring.stl": {
+      "bytes": 267284,
+      "sha256": "9617faa3b9a0badfb850bc744f2ba070ca2f48326fa27f89b0a8f19047761413"
+    },
+    "station/enclosures/assets/e5b22b1588c23a0a-slicer-validation.json": {
+      "bytes": 1598,
+      "sha256": "e5b22b1588c23a0a91b7a922d8e7acc40efd77e15ade2d0db683e95b935c3d89"
+    },
+    "station/enclosures/assets/6231b6f230954d7a-assembly-checks.json": {
+      "bytes": 7218,
+      "sha256": "6231b6f230954d7a5b3255976d967c1658937b7b10c74ef425c0d4c40f9b6f8d"
+    },
+    "station/enclosures/assets/a8d37ff1873dc8a5-bezel-usb-verification.json": {
+      "bytes": 5997,
+      "sha256": "a8d37ff1873dc8a51575bd7f8579abef9d3b1254aa198c473f5ce80670603629"
+    },
+    "station/enclosures/assets/a410c2bacb5ee1cf-battery-preview.stl": {
+      "bytes": 684,
+      "sha256": "a410c2bacb5ee1cf3f68265221a26316e84c6a5ba7a52a830f512b8b50778a76"
+    },
+    "station/enclosures/assets/b10cfbc667c46a6a-p4-43-bezel-usb-coupons.3mf": {
+      "bytes": 233851,
+      "sha256": "b10cfbc667c46a6adfd8f587fa7fa72f5a9e86a328e07227bc20c4c8ee1993b3"
+    },
+    "station/enclosures/assets/d8f9bf89f4ff0569-cable-0-preview.stl": {
+      "bytes": 18284,
+      "sha256": "d8f9bf89f4ff0569734221b27ea9071968b93a97bde53ed0b3bfb35bea9dcd59"
+    },
+    "station/enclosures/assets/0e2d4b5a35b564e8-README.md": {
+      "bytes": 11053,
+      "sha256": "0e2d4b5a35b564e8223008937a32e8417c0ec083f25a694732e8ce22fadef10e"
+    },
+    "station/enclosures/assets/2ca7567e36659fee-cable-0-preview.stl": {
+      "bytes": 126884,
+      "sha256": "2ca7567e36659fee070b4e3b0e93198fb2152c047b2d933641137ec9b57ef6e6"
+    },
+    "station/enclosures/assets/f591c3cbd8dd8049-bezel-toolpaths.png": {
+      "bytes": 7652,
+      "sha256": "f591c3cbd8dd8049721540324a6bec8a370c2f85b7c6541716853356e1813bdc"
+    },
+    "station/enclosures/assets/b45ee7518991f8aa-guide.md": {
+      "bytes": 12824,
+      "sha256": "b45ee7518991f8aaf7a6e097e927168cc11d478542c5b2c8d21bf8f8ba8dee2f"
+    },
+    "station/enclosures/assets/e88951bd7ee65d99-assembly-checks.json": {
+      "bytes": 1907,
+      "sha256": "e88951bd7ee65d9965cd9848a74e50e9fc3f644df9c3ac50dadc23e3b4a179cd"
+    },
+    "station/enclosures/assets/4358d07076ad6ac4-l43-archived-guide.md": {
+      "bytes": 8151,
+      "sha256": "4358d07076ad6ac475ce35cef08f9aae739e06e049f62bd32ec0af37258ef517"
+    },
+    "station/enclosures/assets/f7694ebad2c15386-README.md": {
+      "bytes": 11381,
+      "sha256": "f7694ebad2c15386ec6a681e46ae3babffdd32c829395433fd4fe7dae4551997"
+    },
+    "station/enclosures/assets/126b4fa18c6bb4a5-slicer-validation.json": {
+      "bytes": 1596,
+      "sha256": "126b4fa18c6bb4a580410182d56c2ec39d4ab9acfcc76b0b88cc8302d46f8fcb"
+    },
+    "station/enclosures/assets/21c3baeb4f789272-mount-verification.json": {
+      "bytes": 2783,
+      "sha256": "21c3baeb4f789272c5c764f8ea4bd1b32c21b3c4c101a730dda223be0c1eca16"
+    },
+    "station/enclosures/assets/cdc4d9b0756dd5d8-cable-1-preview.stl": {
+      "bytes": 925684,
+      "sha256": "cdc4d9b0756dd5d8fa2a977ca7e96748a69d10eff18e62749223c82d85f22e18"
+    },
+    "station/enclosures/assets/17eeed675d46c45c-bezel.stl": {
+      "bytes": 122084,
+      "sha256": "17eeed675d46c45ca1499df7439c054a8fb9bc268534a12f5a26201131e8c695"
+    },
+    "station/enclosures/assets/30aaf31ca64dd729-speaker-clip-coupon.stl": {
+      "bytes": 382584,
+      "sha256": "30aaf31ca64dd729a320c486d1a9f704a141d69ec740848ac676984c6cca644a"
+    },
+    "station/enclosures/assets/79af222ed289ec9a-cable-0-preview.stl": {
+      "bytes": 18284,
+      "sha256": "79af222ed289ec9ae15261f3eff7e4e67b9264f9c5989156c8f5d8010dfea4f7"
+    },
+    "station/enclosures/assets/7805323bb89aad77-independent-clearance-checks.json": {
+      "bytes": 7838,
+      "sha256": "7805323bb89aad775ae0f7e8d3460eb1ebd9d6b50d72e3a3c5326ae1fa152215"
+    },
+    "station/enclosures/assets/4e5bfd8ea4b383c4-cable-1-preview.stl": {
+      "bytes": 18284,
+      "sha256": "4e5bfd8ea4b383c4b65c2a65eea4d79f458408bfaf9c7c9eb04a27a633fd03b0"
+    },
+    "station/enclosures/assets/1a77602e1e7d4c19-mount-case-coupon.stl": {
+      "bytes": 167884,
+      "sha256": "1a77602e1e7d4c19e37d1fb59e133c506e0687de29d41768da575bc2f76b0cbb"
+    },
+    "station/enclosures/assets/b77deaf287febe5f-speaker-preview.stl": {
+      "bytes": 17484,
+      "sha256": "b77deaf287febe5f4bb72f768e50af1131d915201867df26fdc7f22ffd846cf5"
+    },
+    "station/enclosures/assets/f774950a72d5bce4-usb-relief-preview.png": {
+      "bytes": 114672,
+      "sha256": "f774950a72d5bce45956e99fbcecc9a75b8f452725de3e4f32956ef0ac738f4b"
+    },
+    "station/enclosures/assets/527cf7f0a6a7ee7c-p4-slim-switch-h-s2.3mf": {
+      "bytes": 608717,
+      "sha256": "527cf7f0a6a7ee7cef508b7d6af8606f6274945a580f31e4bd762fcb21f44372"
+    },
+    "station/enclosures/assets/30655a728a938836-insulator-preview.stl": {
+      "bytes": 684,
+      "sha256": "30655a728a9388368227fe2ee34adadfbafa00408392f74ca2918fdf1588bcfd"
+    },
+    "station/enclosures/assets/ead093d0b968aa5c-bezel-preview.stl": {
+      "bytes": 122084,
+      "sha256": "ead093d0b968aa5cc0aa348729408ef380f958b16fb1006116a98040e90b97c1"
+    },
+    "station/enclosures/assets/f9076a83514e5a8d-speaker-preview.stl": {
+      "bytes": 17484,
+      "sha256": "f9076a83514e5a8d297b6edd5b86e328ae3fdbbe555a0f75896c547e6d7157d9"
+    },
+    "station/enclosures/assets/7cb933e92b39c997-p4-surface-wall-g-w4.3mf": {
+      "bytes": 624997,
+      "sha256": "7cb933e92b39c99763b89e148816a33bf877286ddbfefd3a247e2491379d45f4"
+    },
+    "station/enclosures/assets/a802e80671c379b5-p4-5c-case-and-wall-holder.3mf": {
+      "bytes": 557786,
+      "sha256": "a802e80671c379b5770e4fa0cbe5c8ebf0ea24502db7d82f957c2d8ddc8f21a5"
+    },
+    "station/enclosures/assets/40fee48fcae449c2-case-measurement-prototype.stl": {
+      "bytes": 1999484,
+      "sha256": "40fee48fcae449c27568518c2fe49b4339ff0d5fe9c7002b79ab74dc3a859961"
+    },
+    "station/enclosures/assets/92dfd14ed1f6781d-holder.stl": {
+      "bytes": 443384,
+      "sha256": "92dfd14ed1f6781d55c11e7158c4562bf2ad988531e06882bcb3c461fc8c143d"
+    },
+    "station/enclosures/assets/7ff7b7d05e082592-assembly-checks.json": {
+      "bytes": 4402,
+      "sha256": "7ff7b7d05e0825929ebf6060ae0bc493e0fa68e7a6f1eb0fb1990bc25a7b47ac"
+    },
+    "station/enclosures/assets/3b36d5b08c1430a8-holder-preview.stl": {
+      "bytes": 312884,
+      "sha256": "3b36d5b08c1430a893c51e176b21677047e07a5ed6dad4e31ccbcf90c3e7948e"
+    },
+    "station/enclosures/assets/cf1d3ac57cd58894-guide.md": {
+      "bytes": 11931,
+      "sha256": "cf1d3ac57cd58894e54c4b272339f9ba45967079a3a884d85a917436569871e7"
+    },
+    "station/enclosures/assets/4f742fdf0f919995-speaker-preview.stl": {
+      "bytes": 17484,
+      "sha256": "4f742fdf0f9199951899fd413f8f04e20758ed21363363b6b241919eb42dddf2"
+    },
+    "station/enclosures/assets/5a30ceec7760ba94-holder.stl": {
+      "bytes": 312284,
+      "sha256": "5a30ceec7760ba946df1232ff9a23ebf7b68ba6d041ac53dfa9ed981fed09967"
+    },
+    "station/enclosures/assets/0aa6141c8746d606-WALL-INSTALLATION.md": {
+      "bytes": 12824,
+      "sha256": "0aa6141c8746d6069c0551aae3a7a1b86c96b0fbddc5a149251f1fe56322628b"
+    },
+    "station/enclosures/assets/75a03f5e3ab584e7-glass-fit-ring.stl": {
+      "bytes": 345684,
+      "sha256": "75a03f5e3ab584e7220e6ecbfc5ff09ececd887ce90fb171f6c14b1deb27295d"
+    },
+    "station/enclosures/assets/ff3f662819bff0d4-mount-verification.json": {
+      "bytes": 3604,
+      "sha256": "ff3f662819bff0d407ae925c4cada89431e9084bb524d25f1ea2cd87a083acee"
+    },
+    "station/enclosures/assets/6334c992d7f36be7-insulator-preview.stl": {
+      "bytes": 684,
+      "sha256": "6334c992d7f36be70cb554fda110cd91e8207aad1985c99368211239ad31c865"
+    },
+    "station/enclosures/assets/a524eab29858a82d-mount-pattern-template.stl": {
+      "bytes": 207284,
+      "sha256": "a524eab29858a82d4f87e1fcd879de8484ff42bebf7f90c732f0d3123042c11d"
+    },
+    "station/enclosures/assets/ee29b466044ec68a-p4-battery-wall-j-w5.3mf": {
+      "bytes": 893593,
+      "sha256": "ee29b466044ec68a8ce83a7528232a220339b7dc6c81d631700987a8dac46637"
+    },
+    "station/enclosures/assets/6fca9eb00ddc622c-bezel-usb-verification.json": {
+      "bytes": 5810,
+      "sha256": "6fca9eb00ddc622cdb7577f6c8c07c922a9a52169664b894cf171e116542ab3d"
+    },
+    "station/enclosures/assets/c6d2794ffaeb0aae-case-measurement-prototype.step": {
+      "bytes": 2350717,
+      "sha256": "c6d2794ffaeb0aae9607770ac69d18ef0f4bda0d8259dad8f201cf764358bbff"
+    },
+    "station/enclosures/assets/dbe446d61570bb19-holder-preview.stl": {
+      "bytes": 304684,
+      "sha256": "dbe446d61570bb19db77819dc4cf5e14e43fbbb242bec7d7b95e3e35d6b60228"
+    },
+    "station/enclosures/assets/720c2f4a4ad07c98-speaker-preview.stl": {
+      "bytes": 17484,
+      "sha256": "720c2f4a4ad07c9810cf014d451013a8722f2b1061c762cd320f677fa4bca20a"
+    },
+    "station/enclosures/assets/9de1a2f1d8aafccb-guide.md": {
+      "bytes": 12753,
+      "sha256": "9de1a2f1d8aafccb41dd1100c1cb6b00cf9cab11471e3554d4bdc1f40057c6fc"
+    },
+    "station/enclosures/assets/5e20d1b6fd8e6971-speaker-preview.stl": {
+      "bytes": 17484,
+      "sha256": "5e20d1b6fd8e697131366dbc92473f55e27367271bd76bafa06aac54560319da"
+    },
+    "station/enclosures/assets/cb61842ee648cda5-p4-5c-enclosures-c-w1.zip": {
+      "bytes": 36173064,
+      "sha256": "cb61842ee648cda50c2886d3c6a880ed3259a3e39681f64ac7295f277155a399"
+    },
+    "station/enclosures/assets/21eeb0f9c9581c28-speaker-preview.stl": {
+      "bytes": 17484,
+      "sha256": "21eeb0f9c9581c281430591b757fbd40aa5df43cf49aa89677d3a8ffae8e8ad6"
+    },
+    "station/enclosures/assets/857f26d27c70b2c0-case-preview.stl": {
+      "bytes": 595984,
+      "sha256": "857f26d27c70b2c0fff49dd75c2c3e867865ee3ab12c24e0096e8d35e2d69056"
+    },
+    "station/enclosures/assets/7598e7358dbaa0b4-holder-preview.stl": {
+      "bytes": 128784,
+      "sha256": "7598e7358dbaa0b444c9493936ed399242846d0d344aa7d200188a23ce017611"
+    },
+    "station/enclosures/assets/2d529a7681a441e4-cable-1-preview.stl": {
+      "bytes": 233984,
+      "sha256": "2d529a7681a441e4f46b4db9e1d76c3af43044c68db30767a6870db32e3b557b"
+    },
+    "station/enclosures/assets/bf9fe4f5724e9337-case-preview.stl": {
+      "bytes": 1603584,
+      "sha256": "bf9fe4f5724e9337cb8c5c2d214ba19c375a86507bd8566606929b5d5e4549fe"
+    },
+    "station/enclosures/assets/3fb59711e58ea24e-holder-toolpaths.png": {
+      "bytes": 22592,
+      "sha256": "3fb59711e58ea24e4fcbd9619d62ab894e6dbf69a80452646cd6feba1759d45c"
+    },
+    "station/enclosures/assets/c97bd72955ebad73-bezel-fit-ring.stl": {
+      "bytes": 404984,
+      "sha256": "c97bd72955ebad7324793b1f485ed9bc26bd2a03977e74cdd3a1f16d545d6d95"
+    },
+    "station/enclosures/assets/3166bdb2ac341f51-bezel-toolpaths.png": {
+      "bytes": 8125,
+      "sha256": "3166bdb2ac341f519128497160c36442d0513dfeb5c4b86dd398901559acef0b"
+    },
+    "station/enclosures/assets/4e3a2f5d447b2ab3-battery-preview.stl": {
+      "bytes": 684,
+      "sha256": "4e3a2f5d447b2ab37f9bf71ab26e8f3fd20427f5cb6970b626cae824f5cc799b"
+    },
+    "station/enclosures/assets/b9320816f895180f-speaker-preview.stl": {
+      "bytes": 17484,
+      "sha256": "b9320816f895180f45f8d8fe9110b8d178c1cab48a2decb9c1d1726202a28727"
+    },
+    "station/enclosures/assets/7ab6477833f1c475-modules-preview.stl": {
+      "bytes": 27501484,
+      "sha256": "7ab6477833f1c475c86f06a1de19c9deb4e3a9a37ed9e56a376dc1870f7d85db"
+    },
+    "station/enclosures/assets/1d852d81e8171a1e-board-hardware.webp": {
+      "bytes": 83958,
+      "sha256": "1d852d81e8171a1e737b238b0d2197f55e7f9f28b37f09c08db27ab0f9f95b46"
+    },
+    "station/enclosures/assets/f5cf8fd9798fdd81-pcb-preview.stl": {
+      "bytes": 68684,
+      "sha256": "f5cf8fd9798fdd81b87ae47be98074825f80eaf3f3aee7b90b9eb5e0fc580f5a"
+    },
+    "station/enclosures/assets/8f62851541e283f9-speaker-preview.stl": {
+      "bytes": 17484,
+      "sha256": "8f62851541e283f920c9b63e3ed25c2b0ba984f4fae62331ec189e447cef53cc"
+    },
+    "station/enclosures/assets/c6da9b1bc9f070cd-independent-clearance-checks.json": {
+      "bytes": 9034,
+      "sha256": "c6da9b1bc9f070cd116773492256d2a88a2bb3adf3775009127d0a5c7e99ea14"
+    },
+    "station/enclosures/assets/177b2883bfed1934-holder.step": {
+      "bytes": 940965,
+      "sha256": "177b2883bfed193498e76dbff9eccc140a2a6dfb06d85491432352eb6787ba17"
+    },
+    "station/enclosures/assets/4f74a3d7266adec0-case-preview.stl": {
+      "bytes": 1364684,
+      "sha256": "4f74a3d7266adec07017198f6bb6392e63754ecef8165d96505e8ae3aea653e6"
+    },
+    "station/enclosures/assets/7dc4aa8e33f8dde6-case-preview.stl": {
+      "bytes": 1440584,
+      "sha256": "7dc4aa8e33f8dde6df31d232c33f3fcb91b8b4946d94fc5831d5b6a671f9b01c"
+    },
+    "station/enclosures/assets/3c2eae94f42a2690-independent-clearance-checks.json": {
+      "bytes": 9068,
+      "sha256": "3c2eae94f42a2690a6242fadba66b7b4623ef12c0bc7a9a36dde87506fd55c1e"
+    },
+    "station/enclosures/assets/df2e9e662e8c2cac-independent-clearance-checks.json": {
+      "bytes": 13262,
+      "sha256": "df2e9e662e8c2cac35d0837c649360062320879b6f1d24f79319719e67a42acd"
+    },
+    "station/enclosures/assets/f6ade12ec2bf097f-p4-5c-case-revision-a.zip": {
+      "bytes": 20921321,
+      "sha256": "f6ade12ec2bf097f9d7337f05ffd3e2c63e5446dbf9f1da906ac70a9bd3b74d3"
+    },
+    "station/enclosures/assets/ccb45f9791d87e1f-holder-toolpaths.png": {
+      "bytes": 15334,
+      "sha256": "ccb45f9791d87e1f62a794850634a1d1dec2cee086add03dea5717313f08da66"
+    },
+    "station/enclosures/assets/a49f7d8360c759e1-case-measurement-prototype.stl": {
+      "bytes": 2322384,
+      "sha256": "a49f7d8360c759e12f528b6f8d0094cb4f5dc6e98f242882877dbd7e4fbcb1eb"
+    },
+    "station/enclosures/assets/a77dfdfaee693f62-m43-l43-before-front-bezel-20260914.zip": {
+      "bytes": 27254460,
+      "sha256": "a77dfdfaee693f6203f999e3eac525c6f820d1e310a2fbaf2350052e273e3c04"
+    },
+    "station/enclosures/assets/c7c318ac32318cac-case-preview.stl": {
+      "bytes": 714584,
+      "sha256": "c7c318ac32318cac1da357a86caaee0b1b90475f49f5d1949a09ebb56176c641"
+    },
+    "station/enclosures/assets/bd348f8bdac1b3a0-mount-holder-coupon.stl": {
+      "bytes": 231684,
+      "sha256": "bd348f8bdac1b3a00872410ff5d157daead07bc71dc309c886fc56ad3ff6b795"
+    },
+    "station/enclosures/assets/f8799967850f1d49-guide.md": {
+      "bytes": 12665,
+      "sha256": "f8799967850f1d49a0a561a5cb820963a93316b113be4934f201f7643ee07aae"
+    },
+    "station/enclosures/assets/43d1934834f76419-case-preview.stl": {
+      "bytes": 1643784,
+      "sha256": "43d1934834f76419f090b085c91a4d4772eb01659d1b3bb557f5637c74e3e0ca"
+    },
+    "station/enclosures/assets/e21e98f38ecc3054-modules-preview.stl": {
+      "bytes": 2484,
+      "sha256": "e21e98f38ecc3054b2f14fc0bf8a4803c915a092e7bd69dbd3d8c40d71f8dce9"
+    },
+    "station/enclosures/assets/f755267d61263abe-mount-verification.json": {
+      "bytes": 2784,
+      "sha256": "f755267d61263abef47f0ed755c97a3823ae6b9ed3468372b359cf5725331c57"
+    },
+    "station/enclosures/assets/f135d7928c0f13df-case-measurement-prototype.stl": {
+      "bytes": 2382884,
+      "sha256": "f135d7928c0f13df1776478960634d52344c585e51fdf19c505ebe1f41b046f3"
+    },
+    "station/enclosures/assets/8d450c3ff171245e-holder.stl": {
+      "bytes": 431484,
+      "sha256": "8d450c3ff171245e2b2b3dacaa9ff708aaece1c084633b167f797acb4fed6e8a"
+    },
+    "station/enclosures/assets/e5f2430d17a0f31a-case-preview.stl": {
+      "bytes": 1177784,
+      "sha256": "e5f2430d17a0f31a18fbc857fc85688ec930eed6d4beadb1e892ec09209362ec"
+    },
+    "station/enclosures/assets/14503c5a89be3e22-assembly-checks.json": {
+      "bytes": 2267,
+      "sha256": "14503c5a89be3e22352800097436e87d70514723542aa11f65720d857e47c2e6"
+    },
+    "station/enclosures/assets/cdc288a80fb70099-k43-archived-guide.md": {
+      "bytes": 8393,
+      "sha256": "cdc288a80fb700994a3a61bfaf10fe7436a6d463c3f288944113ff927c258bbc"
+    },
+    "station/enclosures/assets/ab94ca762588f8b6-README.md": {
+      "bytes": 5751,
+      "sha256": "ab94ca762588f8b65bbe6b51c02abaa26410b387e07eb7d8bad4cbdc17503d50"
+    },
+    "station/enclosures/assets/21901d182cfe81be-case-preview.stl": {
+      "bytes": 1627884,
+      "sha256": "21901d182cfe81be40a41223e8c4a6e297224afe523122b98d19a8573fef3e09"
+    },
+    "station/enclosures/assets/023421f315dc8cdb-case-toolpaths.png": {
+      "bytes": 24156,
+      "sha256": "023421f315dc8cdbc1c8c212d29c168e52682f6bb36f374e90d9ab26cbafa8ba"
+    },
+    "station/enclosures/assets/dd0d201f216894cc-README.md": {
+      "bytes": 9394,
+      "sha256": "dd0d201f216894ccbbac961b7545656915792283c1683778078d979b57b4150d"
+    },
+    "station/enclosures/assets/175a64d52800bc80-case-preview.stl": {
+      "bytes": 684384,
+      "sha256": "175a64d52800bc8034555c35b5b3c686656151299a4fb5943f015784769477e7"
+    },
+    "station/enclosures/assets/d1813bac03b790a3-holder-toolpaths.png": {
+      "bytes": 23794,
+      "sha256": "d1813bac03b790a333231cf930e8e27037f7e64c6c49e21d5b4aa77a32dd7d56"
+    },
+    "station/enclosures/vendor/THREE-LICENSE.txt": {
+      "bytes": 1081,
+      "sha256": "7dddf7c5b8fd10ee654db8857d75d104b5557889aa5a91fc4ca545ea7c07062f"
+    },
+    "station/enclosures/vendor/STLLoader.js": {
+      "bytes": 9847,
+      "sha256": "c392b93d1331e64082cbd76deb850fe5de11385472a3f4c5b7fe82ba216cb49e"
+    },
+    "station/enclosures/vendor/three.min.js": {
+      "bytes": 603445,
+      "sha256": "9274bbcec8d96168626c732b5d31c775aa8cfb7eaa0599bec0c175908a2c1ce2"
+    },
+    "station/enclosures/vendor/OrbitControls.js": {
+      "bytes": 26375,
+      "sha256": "02bb4ade710f3e607329e37a21f098bc3ac70eb6e33daf8a65e79f4db785e7b2"
+    }
+  }
+}

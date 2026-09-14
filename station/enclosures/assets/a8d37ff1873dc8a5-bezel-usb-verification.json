@@ -1,0 +1,334 @@
+{
+  "case_sha256": "b5474ca210b229b5fdcd6227a6c0ec51875ba988dc7b33e6e196161c23bb534c",
+  "holder_sha256": "029b5db96ded487b4b80aa2db44a5cee32a0b894f35b40a86979a84c209eca39",
+  "bezel_sha256": "257cc16b543b1c4ce971b3fdd1a9512894adc0d5b23bcb92f0a0aca06507978f",
+  "profile_sha256": "30a2e4b114f011a29c6b8d4e465947ee08188c63d118347c6a9ea83c3ea65db9",
+  "glass_insertion": [
+    {
+      "offset_mm": [
+        0,
+        0,
+        0
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        -1
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        -5
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        0,
+        0,
+        -10
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        -0.35,
+        -1,
+        0
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        -0.35,
+        -1,
+        -1
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        -0.35,
+        -1,
+        -5
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        -0.35,
+        -1,
+        -10
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        -0.35,
+        1,
+        0
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        -0.35,
+        1,
+        -1
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        -0.35,
+        1,
+        -5
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        -0.35,
+        1,
+        -10
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        0.35,
+        -1,
+        0
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        0.35,
+        -1,
+        -1
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        0.35,
+        -1,
+        -5
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        0.35,
+        -1,
+        -10
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        0.35,
+        1,
+        0
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        0.35,
+        1,
+        -1
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        0.35,
+        1,
+        -5
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "offset_mm": [
+        0.35,
+        1,
+        -10
+      ],
+      "overlap_mm3": 0.0
+    }
+  ],
+  "bezel_deformation": [
+    {
+      "deflection_fraction": 0,
+      "case_overlap_mm3": 0.0,
+      "glass_overlap_mm3": 0.0
+    },
+    {
+      "deflection_fraction": 0.25,
+      "case_overlap_mm3": 0.0,
+      "glass_overlap_mm3": 0.0
+    },
+    {
+      "deflection_fraction": 0.5,
+      "case_overlap_mm3": 0.0,
+      "glass_overlap_mm3": 0.0
+    },
+    {
+      "deflection_fraction": 0.75,
+      "case_overlap_mm3": 0.0,
+      "glass_overlap_mm3": 0.0
+    },
+    {
+      "deflection_fraction": 1,
+      "case_overlap_mm3": 0.0,
+      "glass_overlap_mm3": 0.0
+    }
+  ],
+  "bezel_insertion_removal": [
+    {
+      "translation_z_mm": -10.0,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -9.5,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -9.0,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -8.5,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -8.0,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -7.5,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -7.0,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -6.5,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -6.0,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -5.5,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -5.0,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -4.5,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -4.0,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -3.5,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -3.0,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -2.5,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -2.0,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -1.5,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -1.0,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": -0.5,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "translation_z_mm": 0.0,
+      "case_overlap_mm3": 0.0
+    }
+  ],
+  "usb_approach": [
+    {
+      "port": 0,
+      "approach_x_mm": -3,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "port": 0,
+      "approach_x_mm": -1,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "port": 0,
+      "approach_x_mm": 0,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "port": 1,
+      "approach_x_mm": -3,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "port": 1,
+      "approach_x_mm": -1,
+      "case_overlap_mm3": 0.0
+    },
+    {
+      "port": 1,
+      "approach_x_mm": 0,
+      "case_overlap_mm3": 0.0
+    }
+  ],
+  "method": "Exact exported STEP; 0.25 mm beam strips with an ideal prescribed 0.45 mm cam deflection. Geometry screening, not material or force validation.",
+  "physical_fit_approved": false,
+  "active_projection_overlap_mm3": 0.0,
+  "face_clearance_mm": 0.4,
+  "minimum_edge_overlap_xy_mm": [
+    0.45,
+    0.3
+  ],
+  "relaxed_pull_engagement_mm3": 4.788749999984325,
+  "usb_screening_boot_mm": [
+    12,
+    9
+  ],
+  "usb_test_route": "Local 4.55 mm shoulder segment; rear side-exit elbow separately checked",
+  "receiver_roof_start_z_mm": 14.2,
+  "usb_throat_end_z_mm": 13.6695,
+  "coupons": {
+    "bezel-fit-ring.stl": 6.376623266460909
+  },
+  "usb_coupon_note": "Bottom-port coupon represents the battery case. Switch rear access is checked with the complete chin and side-exit elbow.",
+  "passed": true
+}

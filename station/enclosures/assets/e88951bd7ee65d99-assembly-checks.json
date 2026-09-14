@@ -1,0 +1,110 @@
+{
+  "revision": "J/W5",
+  "case_mm_portrait": [
+    75.0,
+    131.2,
+    23.7
+  ],
+  "mounted_depth_mm": 28.2,
+  "main_rim_depth_mm": 16.7,
+  "battery_pod_depth_mm": 23.7,
+  "speaker_pod_depth_mm": 17.9,
+  "holder_mm_portrait": [
+    73.0,
+    129.2,
+    15.6
+  ],
+  "holder_gap_mm": 8.5,
+  "battery_rotated_90_degrees": false,
+  "battery_confirmed_casing_mm": [
+    52,
+    36,
+    10
+  ],
+  "no_rear_USB_plug_bay": true,
+  "release_side": "right",
+  "battery_pod_to_plate_mm": 1.5,
+  "case_holder_overlap_mm3": 0,
+  "battery_holder_overlap_mm3": 0,
+  "speaker_holder_overlap_mm3": 0,
+  "case_holder_min_distance_mm": 0.0,
+  "usb": [
+    {
+      "port": 0,
+      "case_overlap_mm3": 0,
+      "holder_overlap_mm3": 0
+    },
+    {
+      "port": 1,
+      "case_overlap_mm3": 0,
+      "holder_overlap_mm3": 0
+    }
+  ],
+  "motion": [
+    {
+      "lift_mm": 0,
+      "fixed_overlap_mm3": 0,
+      "battery_overlap_mm3": 0
+    },
+    {
+      "lift_mm": 0.5,
+      "fixed_overlap_mm3": 0,
+      "battery_overlap_mm3": 0
+    },
+    {
+      "lift_mm": 1,
+      "fixed_overlap_mm3": 0,
+      "battery_overlap_mm3": 0
+    },
+    {
+      "lift_mm": 2,
+      "fixed_overlap_mm3": 0,
+      "battery_overlap_mm3": 0
+    },
+    {
+      "lift_mm": 3,
+      "fixed_overlap_mm3": 0,
+      "battery_overlap_mm3": 0
+    },
+    {
+      "lift_mm": 4,
+      "fixed_overlap_mm3": 0,
+      "battery_overlap_mm3": 0
+    },
+    {
+      "pull_mm": -1,
+      "fixed_overlap_mm3": 0
+    },
+    {
+      "pull_mm": -3,
+      "fixed_overlap_mm3": 0
+    },
+    {
+      "pull_mm": -6,
+      "fixed_overlap_mm3": 0
+    },
+    {
+      "pull_mm": -10,
+      "fixed_overlap_mm3": 0
+    }
+  ],
+  "release": {
+    "released_lift_overlaps_mm3": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "tool_overlaps_mm3": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "closed_lift_overlap_mm3": 4.180000000000017
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "board": "ESP32-P4-WIFI6-Touch-LCD-4.3",
+  "date": "2026-09-14",
+  "physical_fit_approved": false,
+  "measured_components": {
+    "glass_mm": [
+      114,
+      65
+    ],
+    "front_to_screw_end_mm": 11.5,
+    "mount_pattern_mm": [
+      92,
+      50
+    ],
+    "speaker_mm": [
+      26,
+      26,
+      5
+    ],
+    "speaker_lead_mm": 50,
+    "battery_casing_mm": [
+      65,
+      36,
+      10
+    ]
+  },
+  "measurement_revision": "2026-09-14-battery-65",
+  "design_revision": "2026-09-14-front-bezel-usb-relief",
+  "profile_sha256": "30a2e4b114f011a29c6b8d4e465947ee08188c63d118347c6a9ea83c3ea65db9",
+  "variants": [
+    {
+      "id": "n43",
+      "case_mm_portrait": [
+        71.6,
+        118.3,
+        24.9
+      ],
+      "mounted_depth_mm": 29.2,
+      "files": {
+        "battery/exports/p4-43-battery-n43.3mf": "e9236a3d0cc3ae153c3e96789531d40a3306de9510bc4950838b6b7fa0de5850",
+        "battery/exports/case-measurement-prototype.step": "c6d2794ffaeb0aae9607770ac69d18ef0f4bda0d8259dad8f201cf764358bbff",
+        "battery/exports/holder.step": "422b263e490a2a16263e77b4969343aabd0db4854957bdc931691223405cff87",
+        "battery/exports/bezel.step": "6384808aae378bd0add3fbed435db36e1fe9db04b78863f07ba94b9a91ffae81",
+        "battery/exports/independent-clearance-checks.json": "3c2eae94f42a2690a6242fadba66b7b4623ef12c0bc7a9a36dde87506fd55c1e",
+        "battery/exports/mount-verification.json": "f755267d61263abef47f0ed755c97a3823ae6b9ed3468372b359cf5725331c57",
+        "battery/exports/bezel-usb-verification.json": "6fca9eb00ddc622cdb7577f6c8c07c922a9a52169664b894cf171e116542ab3d",
+        "battery/exports/slicer-validation.json": "e5b22b1588c23a0a91b7a922d8e7acc40efd77e15ade2d0db683e95b935c3d89"
+      }
+    },
+    {
+      "id": "o43",
+      "case_mm_portrait": [
+        71.6,
+        132.3,
+        18.8
+      ],
+      "mounted_depth_mm": 28.1,
+      "files": {
+        "switch/exports/p4-43-switch-o43.3mf": "fe8b49e4a326ed054f429abb6f9ebff416778decc351c9fd143276fd5cb9316b",
+        "switch/exports/case-measurement-prototype.step": "b5474ca210b229b5fdcd6227a6c0ec51875ba988dc7b33e6e196161c23bb534c",
+        "switch/exports/holder.step": "029b5db96ded487b4b80aa2db44a5cee32a0b894f35b40a86979a84c209eca39",
+        "switch/exports/bezel.step": "257cc16b543b1c4ce971b3fdd1a9512894adc0d5b23bcb92f0a0aca06507978f",
+        "switch/exports/independent-clearance-checks.json": "7805323bb89aad775ae0f7e8d3460eb1ebd9d6b50d72e3a3c5326ae1fa152215",
+        "switch/exports/mount-verification.json": "21c3baeb4f789272c5c764f8ea4bd1b32c21b3c4c101a730dda223be0c1eca16",
+        "switch/exports/bezel-usb-verification.json": "a8d37ff1873dc8a51575bd7f8579abef9d3b1254aa198c473f5ce80670603629",
+        "switch/exports/slicer-validation.json": "126b4fa18c6bb4a580410182d56c2ec39d4ab9acfcc76b0b88cc8302d46f8fcb"
+      }
+    }
+  ],
+  "archives": [
+    "archive/m43-l43-before-front-bezel-20260914.zip",
+    "archive/k43-52mm-superseded-20260914.zip"
+  ]
+}

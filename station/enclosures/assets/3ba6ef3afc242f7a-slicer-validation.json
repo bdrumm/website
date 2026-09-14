@@ -1,0 +1,59 @@
+{
+  "source_3mf_sha256": "55176ae1c020a7ca1d4ad818bb41dd6323cb329faecf7b6d59bf3788e4e1433b",
+  "slicer": "Bambu Studio 02.08.02.61",
+  "exit_code": 0,
+  "reference_profile": "Bambu Lab P1S 0.4 nozzle; generic PETG; offline only; not an identified user printer",
+  "settings": {
+    "layer_height": "0.2",
+    "wall_loops": "5",
+    "enable_support": "1",
+    "support_type": "normal(auto)",
+    "support_on_build_plate_only": "0",
+    "curr_bed_type": "Textured PEI Plate",
+    "filament_type": "PETG"
+  },
+  "mesh_stats": [
+    {
+      "face_count": "46446",
+      "edges_fixed": "0",
+      "degenerate_facets": "0",
+      "facets_removed": "0",
+      "facets_reversed": "0",
+      "backwards_edges": "0"
+    },
+    {
+      "face_count": "9002",
+      "edges_fixed": "0",
+      "degenerate_facets": "0",
+      "facets_removed": "0",
+      "facets_reversed": "0",
+      "backwards_edges": "0"
+    }
+  ],
+  "feature_sections": {
+    "Custom": 2,
+    "Support": 111,
+    "Outer wall": 904,
+    "Inner wall": 841,
+    "Gap infill": 599,
+    "Bottom surface": 3,
+    "Internal solid infill": 124,
+    "Support transition": 14,
+    "Sparse infill": 131,
+    "Support interface": 56,
+    "Floating vertical shell": 27,
+    "Top surface": 39,
+    "Bridge": 17,
+    "Overhang wall": 59
+  },
+  "gcode_sha256": "f5313bc38e334488a180bb4de997641e5fdee597975de31f0501a8021544701a",
+  "sliced_job_sha256": "7428374653c18aa7a24eeb99aca4aea3e658e775386e08d3a1ee11333255a6ac",
+  "passed": true,
+  "physical_print_performed": false,
+  "toolpaths_visually_reviewed_mm": [
+    2.6,
+    7.6,
+    10.6,
+    13.6
+  ]
+}

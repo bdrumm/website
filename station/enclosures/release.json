@@ -1,0 +1,42 @@
+{
+  "model": "ESP32-P4-WIFI6-Touch-LCD-4.3",
+  "speaker": [
+    26,
+    26,
+    5
+  ],
+  "battery": [
+    65,
+    36,
+    10
+  ],
+  "physical_fit_approved": false,
+  "variants": [
+    {
+      "id": "n43",
+      "title": "Battery wall display",
+      "description": "Bottom USB, a closely packed battery pod and a concealed release on the right.",
+      "size": [
+        71.6,
+        118.3,
+        24.9
+      ],
+      "depth": 29.2,
+      "battery": true,
+      "download": "assets/e9236a3d0cc3ae15-p4-43-battery-n43.3mf"
+    },
+    {
+      "id": "o43",
+      "title": "Batteryless switch display",
+      "description": "Rear USB access, a protected lower elbow and a shared 10 mm cable bay. Release on the left.",
+      "size": [
+        71.6,
+        132.3,
+        18.8
+      ],
+      "depth": 28.1,
+      "battery": false,
+      "download": "assets/fe8b49e4a326ed05-p4-43-switch-o43.3mf"
+    }
+  ]
+}

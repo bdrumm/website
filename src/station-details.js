@@ -42,7 +42,7 @@ export function buildStationNavigation(root,content){
  content.id='station-demo';
  const nav=element('nav',undefined,'station-details-nav');nav.setAttribute('aria-label','Station page sections');
  nav.append(element('span','Explore Station','station-details-label'));
- for(const [label,id] of [['Demo','demo'],['Use cases','use-cases'],['Apps','apps'],['Capabilities','capabilities'],['Hardware','hardware'],['Code','code']])nav.append(link(label,'#station-'+id));
+ for(const [label,id] of [['Demo','demo'],['Use cases','use-cases'],['Apps','apps'],['Capabilities','capabilities'],['Hardware','hardware'],['Enclosures','enclosures'],['Code','code']])nav.append(link(label,'#station-'+id));
  root.insertBefore(nav,content);
  return ()=>{
   const links=[...nav.querySelectorAll('a')],sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);let scheduled=0;

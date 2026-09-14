@@ -1,0 +1,2889 @@
+{
+  "variants": [
+    {
+      "id": "n43",
+      "label": "4.3-inch \u00b7 Battery wall",
+      "revision": "N43",
+      "size": [
+        71.6,
+        118.3,
+        24.9
+      ],
+      "depth": 29.2,
+      "mode": "bottom",
+      "release": "right",
+      "status": "Measured 4.3 prototype",
+      "summary": "114 \u00d7 65 mm measured glass; 92 \u00d7 50 mm posts; 26 \u00d7 26 \u00d7 5 mm speaker. 65 \u00d7 36 \u00d7 10 mm cased battery.",
+      "archive": false,
+      "rim": 17.599999999999998,
+      "parts": {
+        "case": "assets/bf9fe4f5724e9337-case-preview.stl",
+        "glass": "assets/5b6d4d23d1690d6a-glass-preview.stl",
+        "pcb": "assets/4fe89834a1f8f004-pcb-preview.stl",
+        "modules": "assets/7ab6477833f1c475-modules-preview.stl",
+        "speaker": "assets/b9320816f895180f-speaker-preview.stl",
+        "holder": "assets/3b36d5b08c1430a8-holder-preview.stl",
+        "bezel": "assets/ead093d0b968aa5c-bezel-preview.stl",
+        "usb0": "assets/d8f9bf89f4ff0569-cable-0-preview.stl",
+        "usb1": "assets/9d88f54db1103edf-cable-1-preview.stl",
+        "battery": "assets/b718a64c70cc878a-battery-preview.stl",
+        "insulator": "assets/2a4a51580cd85e46-insulator-preview.stl"
+      },
+      "downloads": [
+        {
+          "label": "Case + bezel + holder \u00b7 3MF",
+          "url": "assets/e9236a3d0cc3ae15-p4-43-battery-n43.3mf"
+        },
+        {
+          "label": "Bezel + USB fit coupons \u00b7 3MF",
+          "url": "assets/b10cfbc667c46a6a-p4-43-bezel-usb-coupons.3mf"
+        },
+        {
+          "label": "Glass / post jig + speaker coupon \u00b7 3MF",
+          "url": "assets/8edd9d62a5a54230-p4-43-fit-coupons.3mf"
+        },
+        {
+          "label": "Confirmed dimensions \u00b7 JSON",
+          "url": "assets/30a2e4b114f011a2-mechanical-profile.json"
+        },
+        {
+          "label": "Case \u00b7 STL",
+          "url": "assets/f33e94f87c03c896-case-measurement-prototype.stl"
+        },
+        {
+          "label": "Case \u00b7 STEP",
+          "url": "assets/c6d2794ffaeb0aae-case-measurement-prototype.step"
+        },
+        {
+          "label": "Holder \u00b7 STL",
+          "url": "assets/c246bbc70c252157-holder.stl"
+        },
+        {
+          "label": "Holder \u00b7 STEP",
+          "url": "assets/422b263e490a2a16-holder.step"
+        },
+        {
+          "label": "Bezel \u00b7 STL",
+          "url": "assets/17eeed675d46c45c-bezel.stl"
+        },
+        {
+          "label": "Bezel \u00b7 STEP",
+          "url": "assets/6384808aae378bd0-bezel.step"
+        },
+        {
+          "label": "mount case coupon \u00b7 STL",
+          "url": "assets/a4cab3e8f1f16386-mount-case-coupon.stl"
+        },
+        {
+          "label": "mount holder coupon \u00b7 STL",
+          "url": "assets/bd348f8bdac1b3a0-mount-holder-coupon.stl"
+        },
+        {
+          "label": "speaker clip coupon \u00b7 STL",
+          "url": "assets/ade74330cc853f8b-speaker-clip-coupon.stl"
+        },
+        {
+          "label": "usb clearance coupon \u00b7 STL",
+          "url": "assets/12ac8f7a0b1dfe9d-usb-clearance-coupon.stl"
+        },
+        {
+          "label": "glass fit ring \u00b7 STL",
+          "url": "assets/eacd75bdb008b7bf-glass-fit-ring.stl"
+        },
+        {
+          "label": "mount pattern template \u00b7 STL",
+          "url": "assets/a524eab29858a82d-mount-pattern-template.stl"
+        },
+        {
+          "label": "fit jig \u00b7 STL",
+          "url": "assets/6068f6c99db7a099-fit-jig.stl"
+        },
+        {
+          "label": "bezel fit ring \u00b7 STL",
+          "url": "assets/b656ab81ead00af8-bezel-fit-ring.stl"
+        }
+      ],
+      "guide": "assets/f7694ebad2c15386-README.md",
+      "parameters": {
+        "revision": "N43",
+        "outer_chamfer_mm": 0.6,
+        "outer_blend_radius_mm": 0.15,
+        "perimeter_gap": 0.35,
+        "side_perimeter_gap": 1.0,
+        "wall": 1.8,
+        "side_wall": 2.3,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 16.0,
+        "screw_clearance": 2.9,
+        "screw_well": 7.6,
+        "screw_post": 11.5,
+        "screw_web": 2.0,
+        "battery": [
+          65,
+          36,
+          10
+        ],
+        "battery_xy": [
+          42.0,
+          13.0
+        ],
+        "battery_casing_mm": [
+          65,
+          36,
+          10
+        ],
+        "speaker_lead_mm": 50,
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          26,
+          26,
+          5
+        ],
+        "speaker_xy": [
+          11.5,
+          25.0
+        ],
+        "speaker_dimensions_confirmed": true,
+        "speaker_leaf_root_outset": 2.0,
+        "speaker_fixed_lip_offsets": [
+          12.0,
+          20.0
+        ],
+        "usb_coupon_enabled": false,
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": true,
+        "camera_enabled": false,
+        "dock_enabled": false,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 10.0,
+        "battery_rear_z": 23.3,
+        "battery_rotated_90_degrees": false,
+        "battery_wire_exit_y_mm": 17.0,
+        "speaker_rear_z": 18.5,
+        "design_update": "2026-09-14: left/right glass clearance, removable front rim, cleared USB inner ledges",
+        "front_bezel": {
+          "removable": true,
+          "visible_opening_mm": [
+            112.4,
+            62.4
+          ],
+          "plate_thickness_mm": 1.2,
+          "glass_face_clearance_mm": 0.4,
+          "outer_size_mm": [
+            118.3,
+            71.6
+          ],
+          "attachment": "Four flexible cam detents, common removable bezel; case remains fastened to the display posts.",
+          "overlap_xy_mm": [
+            0.8,
+            1.3
+          ],
+          "glass_recess_mm": [
+            114.7,
+            67.0
+          ],
+          "minimum_overlap_at_full_glass_float_xy_mm": [
+            0.45,
+            0.3
+          ],
+          "rim_front_z": -1.6,
+          "tongue_width_mm": 6.0,
+          "tongue_thickness_mm": 0.8,
+          "tongue_length_mm": 8.2,
+          "root_fillet_mm": 0.35,
+          "nominal_cam_deflection_mm": 0.3,
+          "screening_deflection_mm": 0.45,
+          "ideal_bending_strain_percent": 1.2210978574255187,
+          "physical_fit_approved": false,
+          "assembly": "Seat display in cup, fasten its four rear screws, then press bezel on. Remove bezel before lifting display."
+        },
+        "mechanical_profile_sha256": "30a2e4b114f011a29c6b8d4e465947ee08188c63d118347c6a9ea83c3ea65db9"
+      },
+      "board": {
+        "glass": [
+          114,
+          65
+        ],
+        "active": [
+          94.4,
+          56.96
+        ],
+        "posts": [
+          [
+            8.75,
+            7.5
+          ],
+          [
+            8.75,
+            57.5
+          ],
+          [
+            100.75,
+            7.5
+          ],
+          [
+            100.75,
+            57.5
+          ]
+        ],
+        "postZ": 11.5,
+        "pattern": [
+          92,
+          50
+        ],
+        "measured": true,
+        "source": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-4.3",
+        "photo": "assets/0c10f6ee642130a7-board-hardware.webp"
+      },
+      "frontBezel": {
+        "removable": true,
+        "visible_opening_mm": [
+          112.4,
+          62.4
+        ],
+        "plate_thickness_mm": 1.2,
+        "glass_face_clearance_mm": 0.4,
+        "outer_size_mm": [
+          118.3,
+          71.6
+        ],
+        "attachment": "Four flexible cam detents, common removable bezel; case remains fastened to the display posts.",
+        "overlap_xy_mm": [
+          0.8,
+          1.3
+        ],
+        "glass_recess_mm": [
+          114.7,
+          67.0
+        ],
+        "minimum_overlap_at_full_glass_float_xy_mm": [
+          0.45,
+          0.3
+        ],
+        "rim_front_z": -1.6,
+        "tongue_width_mm": 6.0,
+        "tongue_thickness_mm": 0.8,
+        "tongue_length_mm": 8.2,
+        "root_fillet_mm": 0.35,
+        "nominal_cam_deflection_mm": 0.3,
+        "screening_deflection_mm": 0.45,
+        "ideal_bending_strain_percent": 1.2210978574255187,
+        "physical_fit_approved": false,
+        "assembly": "Seat display in cup, fasten its four rear screws, then press bezel on. Remove bezel before lifting display."
+      },
+      "usbSection": "assets/f774950a72d5bce4-usb-relief-preview.png",
+      "cupSize": [
+        71.6,
+        118.3,
+        23.7
+      ],
+      "hardware": {
+        "glass_mm": [
+          114,
+          65
+        ],
+        "front_to_screw_end_mm": 11.5,
+        "mount_pattern_mm": [
+          92,
+          50
+        ],
+        "speaker_mm": [
+          26,
+          26,
+          5
+        ],
+        "speaker_lead_mm": 50,
+        "battery_casing_mm": [
+          65,
+          36,
+          10
+        ]
+      },
+      "fit": {
+        "glass_cavity_mm": [
+          114.7,
+          67.0
+        ],
+        "glass_corner_radius_nominal_mm": 2.5,
+        "board_mount_washers": "Four metal M2.5 washers, 7 mm OD, up to 0.5 mm thick; screw-head OD up to 5 mm",
+        "unverified": [
+          "Glass corner profile",
+          "Glass-to-post offset within adjustment",
+          "USB plug boots and bend envelope",
+          "Usable screw thread depth",
+          "Speaker wire exit and corner radius",
+          "Printed clip force and endurance",
+          "Printed bezel insertion/removal force and actual glass corners"
+        ],
+        "front_bezel": {
+          "removable": true,
+          "visible_opening_mm": [
+            112.4,
+            62.4
+          ],
+          "plate_thickness_mm": 1.2,
+          "glass_face_clearance_mm": 0.4,
+          "outer_size_mm": [
+            118.3,
+            71.6
+          ],
+          "attachment": "Four flexible cam detents, common removable bezel; case remains fastened to the display posts.",
+          "overlap_xy_mm": [
+            0.8,
+            1.3
+          ]
+        },
+        "glass_gap_xy_mm": [
+          0.35,
+          1.0
+        ],
+        "wall_xy_mm": [
+          1.8,
+          2.3
+        ],
+        "clearance_confirmation": "Owner confirmed glass remains 114 x 65 mm; leave top/bottom fit unchanged and provide 1 mm clearance at each left/right edge (65 mm axis).",
+        "usb_relief": {
+          "opening_width_height_mm": [
+            14,
+            10
+          ],
+          "socket_center_z_mm": 8.6695,
+          "throat_x_limits_mm": [
+            -3,
+            4
+          ],
+          "screening_boot_width_height_mm": [
+            12,
+            9
+          ],
+          "screening_boot_front_x_mm": 1.55,
+          "provenance": "Owner photograph of printed case: inner receiver ledge obstructed larger USB plug shoulders. Final throat cut follows receiver union; physical plug dimensions unmeasured."
+        }
+      },
+      "measurementRevision": "2026-09-14-battery-65",
+      "evidence": [
+        {
+          "label": "assembly checks",
+          "url": "assets/6231b6f230954d7a-assembly-checks.json"
+        },
+        {
+          "label": "independent clearance checks",
+          "url": "assets/3c2eae94f42a2690-independent-clearance-checks.json"
+        },
+        {
+          "label": "mount verification",
+          "url": "assets/f755267d61263abe-mount-verification.json"
+        },
+        {
+          "label": "bezel usb verification",
+          "url": "assets/6fca9eb00ddc622c-bezel-usb-verification.json"
+        },
+        {
+          "label": "slicer validation",
+          "url": "assets/e5b22b1588c23a0a-slicer-validation.json"
+        }
+      ],
+      "printImages": [
+        {
+          "label": "Case reference toolpaths",
+          "url": "assets/1ff3ee956dfc05bf-case-toolpaths.png"
+        },
+        {
+          "label": "Holder reference toolpaths",
+          "url": "assets/ccb45f9791d87e1f-holder-toolpaths.png"
+        },
+        {
+          "label": "Bezel reference toolpaths",
+          "url": "assets/3166bdb2ac341f51-bezel-toolpaths.png"
+        }
+      ]
+    },
+    {
+      "id": "o43",
+      "label": "4.3-inch \u00b7 Slim switch",
+      "revision": "O43",
+      "size": [
+        71.6,
+        132.3,
+        18.8
+      ],
+      "depth": 28.1,
+      "mode": "rear",
+      "release": "left",
+      "status": "Measured 4.3 prototype",
+      "summary": "114 \u00d7 65 mm measured glass; 92 \u00d7 50 mm posts; 26 \u00d7 26 \u00d7 5 mm speaker. No battery.",
+      "archive": false,
+      "rim": 17.599999999999998,
+      "parts": {
+        "case": "assets/7dc4aa8e33f8dde6-case-preview.stl",
+        "glass": "assets/5b6d4d23d1690d6a-glass-preview.stl",
+        "pcb": "assets/4fe89834a1f8f004-pcb-preview.stl",
+        "modules": "assets/7ab6477833f1c475-modules-preview.stl",
+        "speaker": "assets/21eeb0f9c9581c28-speaker-preview.stl",
+        "holder": "assets/971427b8c75be3f3-holder-preview.stl",
+        "bezel": "assets/ead093d0b968aa5c-bezel-preview.stl",
+        "usb0": "assets/835be385bd57ef25-cable-0-preview.stl",
+        "usb1": "assets/cdc4d9b0756dd5d8-cable-1-preview.stl",
+        "bay": "assets/9712927778190882-pocket-preview.stl"
+      },
+      "downloads": [
+        {
+          "label": "Case + bezel + holder \u00b7 3MF",
+          "url": "assets/fe8b49e4a326ed05-p4-43-switch-o43.3mf"
+        },
+        {
+          "label": "Bezel + USB fit coupons \u00b7 3MF",
+          "url": "assets/b10cfbc667c46a6a-p4-43-bezel-usb-coupons.3mf"
+        },
+        {
+          "label": "Glass / post jig + speaker coupon \u00b7 3MF",
+          "url": "assets/8edd9d62a5a54230-p4-43-fit-coupons.3mf"
+        },
+        {
+          "label": "Confirmed dimensions \u00b7 JSON",
+          "url": "assets/30a2e4b114f011a2-mechanical-profile.json"
+        },
+        {
+          "label": "Case \u00b7 STL",
+          "url": "assets/f135d7928c0f13df-case-measurement-prototype.stl"
+        },
+        {
+          "label": "Case \u00b7 STEP",
+          "url": "assets/b5474ca210b229b5-case-measurement-prototype.step"
+        },
+        {
+          "label": "Holder \u00b7 STL",
+          "url": "assets/8d450c3ff171245e-holder.stl"
+        },
+        {
+          "label": "Holder \u00b7 STEP",
+          "url": "assets/029b5db96ded487b-holder.step"
+        },
+        {
+          "label": "Bezel \u00b7 STL",
+          "url": "assets/17eeed675d46c45c-bezel.stl"
+        },
+        {
+          "label": "Bezel \u00b7 STEP",
+          "url": "assets/257cc16b543b1c4c-bezel.step"
+        },
+        {
+          "label": "mount case coupon \u00b7 STL",
+          "url": "assets/cda24b13520ca91a-mount-case-coupon.stl"
+        },
+        {
+          "label": "mount holder coupon \u00b7 STL",
+          "url": "assets/52237724cb17f271-mount-holder-coupon.stl"
+        },
+        {
+          "label": "speaker clip coupon \u00b7 STL",
+          "url": "assets/ebcbd7d084b697fa-speaker-clip-coupon.stl"
+        },
+        {
+          "label": "glass fit ring \u00b7 STL",
+          "url": "assets/75a03f5e3ab584e7-glass-fit-ring.stl"
+        },
+        {
+          "label": "mount pattern template \u00b7 STL",
+          "url": "assets/a524eab29858a82d-mount-pattern-template.stl"
+        },
+        {
+          "label": "fit jig \u00b7 STL",
+          "url": "assets/6068f6c99db7a099-fit-jig.stl"
+        },
+        {
+          "label": "bezel fit ring \u00b7 STL",
+          "url": "assets/c97bd72955ebad73-bezel-fit-ring.stl"
+        }
+      ],
+      "guide": "assets/780b1aa8a035c6ae-README.md",
+      "parameters": {
+        "revision": "O43",
+        "outer_chamfer_mm": 0.6,
+        "outer_blend_radius_mm": 0.15,
+        "perimeter_gap": 0.35,
+        "side_perimeter_gap": 1.0,
+        "wall": 1.8,
+        "side_wall": 2.3,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 16.0,
+        "screw_clearance": 2.9,
+        "screw_well": 7.6,
+        "screw_post": 11.5,
+        "screw_web": 2.0,
+        "battery": [
+          65,
+          36,
+          10
+        ],
+        "battery_xy": [
+          42.0,
+          13.0
+        ],
+        "battery_casing_mm": [
+          65,
+          36,
+          10
+        ],
+        "speaker_lead_mm": 50,
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          26,
+          26,
+          5
+        ],
+        "speaker_xy": [
+          59.0,
+          31.0
+        ],
+        "speaker_dimensions_confirmed": true,
+        "speaker_leaf_root_outset": 2.0,
+        "speaker_fixed_lip_offsets": [
+          12.0,
+          20.0
+        ],
+        "usb_coupon_enabled": false,
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": false,
+        "camera_enabled": false,
+        "dock_enabled": false,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 10.0,
+        "battery_rear_z": 16.0,
+        "battery_rotated_90_degrees": false,
+        "battery_wire_exit_y_mm": 17.0,
+        "speaker_rear_z": 17.2,
+        "design_update": "2026-09-14: left/right glass clearance, removable front rim, cleared USB inner ledges",
+        "front_bezel": {
+          "removable": true,
+          "visible_opening_mm": [
+            112.4,
+            62.4
+          ],
+          "plate_thickness_mm": 1.2,
+          "glass_face_clearance_mm": 0.4,
+          "outer_size_mm": [
+            118.3,
+            71.6
+          ],
+          "attachment": "Four flexible cam detents, common removable bezel; case remains fastened to the display posts.",
+          "overlap_xy_mm": [
+            0.8,
+            1.3
+          ],
+          "glass_recess_mm": [
+            114.7,
+            67.0
+          ],
+          "minimum_overlap_at_full_glass_float_xy_mm": [
+            0.45,
+            0.3
+          ],
+          "rim_front_z": -1.6,
+          "tongue_width_mm": 6.0,
+          "tongue_thickness_mm": 0.8,
+          "tongue_length_mm": 8.2,
+          "root_fillet_mm": 0.35,
+          "nominal_cam_deflection_mm": 0.3,
+          "screening_deflection_mm": 0.45,
+          "ideal_bending_strain_percent": 1.2210978574255187,
+          "physical_fit_approved": false,
+          "assembly": "Seat display in cup, fasten its four rear screws, then press bezel on. Remove bezel before lifting display."
+        },
+        "mechanical_profile_sha256": "30a2e4b114f011a29c6b8d4e465947ee08188c63d118347c6a9ea83c3ea65db9"
+      },
+      "board": {
+        "glass": [
+          114,
+          65
+        ],
+        "active": [
+          94.4,
+          56.96
+        ],
+        "posts": [
+          [
+            8.75,
+            7.5
+          ],
+          [
+            8.75,
+            57.5
+          ],
+          [
+            100.75,
+            7.5
+          ],
+          [
+            100.75,
+            57.5
+          ]
+        ],
+        "postZ": 11.5,
+        "pattern": [
+          92,
+          50
+        ],
+        "measured": true,
+        "source": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-4.3",
+        "photo": "assets/0c10f6ee642130a7-board-hardware.webp"
+      },
+      "frontBezel": {
+        "removable": true,
+        "visible_opening_mm": [
+          112.4,
+          62.4
+        ],
+        "plate_thickness_mm": 1.2,
+        "glass_face_clearance_mm": 0.4,
+        "outer_size_mm": [
+          118.3,
+          71.6
+        ],
+        "attachment": "Four flexible cam detents, common removable bezel; case remains fastened to the display posts.",
+        "overlap_xy_mm": [
+          0.8,
+          1.3
+        ],
+        "glass_recess_mm": [
+          114.7,
+          67.0
+        ],
+        "minimum_overlap_at_full_glass_float_xy_mm": [
+          0.45,
+          0.3
+        ],
+        "rim_front_z": -1.6,
+        "tongue_width_mm": 6.0,
+        "tongue_thickness_mm": 0.8,
+        "tongue_length_mm": 8.2,
+        "root_fillet_mm": 0.35,
+        "nominal_cam_deflection_mm": 0.3,
+        "screening_deflection_mm": 0.45,
+        "ideal_bending_strain_percent": 1.2210978574255187,
+        "physical_fit_approved": false,
+        "assembly": "Seat display in cup, fasten its four rear screws, then press bezel on. Remove bezel before lifting display."
+      },
+      "usbSection": "assets/f774950a72d5bce4-usb-relief-preview.png",
+      "cupSize": [
+        71.6,
+        132.3,
+        17.6
+      ],
+      "hardware": {
+        "glass_mm": [
+          114,
+          65
+        ],
+        "front_to_screw_end_mm": 11.5,
+        "mount_pattern_mm": [
+          92,
+          50
+        ],
+        "speaker_mm": [
+          26,
+          26,
+          5
+        ],
+        "speaker_lead_mm": 50,
+        "battery_casing_mm": [
+          65,
+          36,
+          10
+        ]
+      },
+      "fit": {
+        "glass_cavity_mm": [
+          114.7,
+          67.0
+        ],
+        "glass_corner_radius_nominal_mm": 2.5,
+        "board_mount_washers": "Four metal M2.5 washers, 7 mm OD, up to 0.5 mm thick; screw-head OD up to 5 mm",
+        "unverified": [
+          "Glass corner profile",
+          "Glass-to-post offset within adjustment",
+          "USB plug boots and bend envelope",
+          "Usable screw thread depth",
+          "Speaker wire exit and corner radius",
+          "Printed clip force and endurance",
+          "Printed bezel insertion/removal force and actual glass corners"
+        ],
+        "front_bezel": {
+          "removable": true,
+          "visible_opening_mm": [
+            112.4,
+            62.4
+          ],
+          "plate_thickness_mm": 1.2,
+          "glass_face_clearance_mm": 0.4,
+          "outer_size_mm": [
+            118.3,
+            71.6
+          ],
+          "attachment": "Four flexible cam detents, common removable bezel; case remains fastened to the display posts.",
+          "overlap_xy_mm": [
+            0.8,
+            1.3
+          ]
+        },
+        "glass_gap_xy_mm": [
+          0.35,
+          1.0
+        ],
+        "wall_xy_mm": [
+          1.8,
+          2.3
+        ],
+        "clearance_confirmation": "Owner confirmed glass remains 114 x 65 mm; leave top/bottom fit unchanged and provide 1 mm clearance at each left/right edge (65 mm axis).",
+        "usb_relief": {
+          "opening_width_height_mm": [
+            14,
+            10
+          ],
+          "socket_center_z_mm": 8.6695,
+          "throat_x_limits_mm": [
+            -3,
+            4
+          ],
+          "screening_boot_width_height_mm": [
+            12,
+            9
+          ],
+          "screening_boot_front_x_mm": 1.55,
+          "provenance": "Owner photograph of printed case: inner receiver ledge obstructed larger USB plug shoulders. Final throat cut follows receiver union; physical plug dimensions unmeasured."
+        }
+      },
+      "measurementRevision": "2026-09-14-battery-65",
+      "evidence": [
+        {
+          "label": "assembly checks",
+          "url": "assets/7ff7b7d05e082592-assembly-checks.json"
+        },
+        {
+          "label": "independent clearance checks",
+          "url": "assets/7805323bb89aad77-independent-clearance-checks.json"
+        },
+        {
+          "label": "mount verification",
+          "url": "assets/21c3baeb4f789272-mount-verification.json"
+        },
+        {
+          "label": "bezel usb verification",
+          "url": "assets/a8d37ff1873dc8a5-bezel-usb-verification.json"
+        },
+        {
+          "label": "slicer validation",
+          "url": "assets/126b4fa18c6bb4a5-slicer-validation.json"
+        }
+      ],
+      "printImages": [
+        {
+          "label": "Case reference toolpaths",
+          "url": "assets/023421f315dc8cdb-case-toolpaths.png"
+        },
+        {
+          "label": "Holder reference toolpaths",
+          "url": "assets/22cc15a44de6692e-holder-toolpaths.png"
+        },
+        {
+          "label": "Bezel reference toolpaths",
+          "url": "assets/f591c3cbd8dd8049-bezel-toolpaths.png"
+        }
+      ]
+    },
+    {
+      "id": "m43",
+      "label": "Archived 4.3-inch \u00b7 Battery wall",
+      "revision": "M43",
+      "size": [
+        69.3,
+        118.3,
+        23.7
+      ],
+      "depth": 28.0,
+      "rim": 16.4,
+      "mode": "bottom",
+      "release": "right",
+      "archive": true,
+      "status": "Superseded \u00b7 before front rim and USB relief",
+      "summary": "Earlier close-fitting cup without removable bezel. Use N43/O43 for wider short-axis clearance and cleared USB ledges.",
+      "board": {
+        "glass": [
+          114,
+          65
+        ],
+        "active": [
+          94.4,
+          56.96
+        ],
+        "posts": [
+          [
+            8.75,
+            7.5
+          ],
+          [
+            8.75,
+            57.5
+          ],
+          [
+            100.75,
+            7.5
+          ],
+          [
+            100.75,
+            57.5
+          ]
+        ],
+        "postZ": 11.5,
+        "pattern": [
+          92,
+          50
+        ],
+        "measured": true,
+        "source": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-4.3",
+        "photo": "assets/0c10f6ee642130a7-board-hardware.webp"
+      },
+      "hardware": {
+        "glass_mm": [
+          114,
+          65
+        ],
+        "front_to_screw_end_mm": 11.5,
+        "mount_pattern_mm": [
+          92,
+          50
+        ],
+        "speaker_mm": [
+          26,
+          26,
+          5
+        ],
+        "speaker_lead_mm": 50,
+        "battery_casing_mm": [
+          65,
+          36,
+          10
+        ]
+      },
+      "fit": {
+        "glass_gap_each_side_mm": 0.35,
+        "glass_cavity_mm": [
+          114.7,
+          65.7
+        ],
+        "wall_mm": 1.8,
+        "glass_corner_radius_nominal_mm": 2.5,
+        "board_mount_washers": "Four metal M2.5 washers, 7 mm OD, up to 0.5 mm thick; screw-head OD up to 5 mm",
+        "unverified": [
+          "Glass corner profile",
+          "Glass-to-post offset within adjustment",
+          "USB plug boots and bend envelope",
+          "Usable screw thread depth",
+          "Speaker wire exit and corner radius",
+          "Printed clip force and endurance"
+        ]
+      },
+      "parameters": {
+        "revision": "M43",
+        "outer_chamfer_mm": 0.6,
+        "outer_blend_radius_mm": 0.15,
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 16.0,
+        "screw_clearance": 2.9,
+        "screw_well": 7.6,
+        "screw_post": 11.5,
+        "screw_web": 2.0,
+        "battery": [
+          65,
+          36,
+          10
+        ],
+        "battery_xy": [
+          42.0,
+          13.0
+        ],
+        "battery_casing_mm": [
+          65,
+          36,
+          10
+        ],
+        "speaker_lead_mm": 50,
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          26,
+          26,
+          5
+        ],
+        "speaker_xy": [
+          11.5,
+          25.0
+        ],
+        "speaker_dimensions_confirmed": true,
+        "speaker_leaf_root_outset": 2.0,
+        "speaker_fixed_lip_offsets": [
+          12.0,
+          20.0
+        ],
+        "usb_coupon_enabled": false,
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": true,
+        "camera_enabled": false,
+        "dock_enabled": false,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0,
+        "battery_rear_z": 23.3,
+        "battery_rotated_90_degrees": false,
+        "battery_wire_exit_y_mm": 17.0,
+        "speaker_rear_z": 18.5,
+        "design_update": "2026-09-14: owner battery correction to 65 x 36 x 10; speaker remains 26 x 26 x 5",
+        "mechanical_profile_sha256": "eb1f3b463a042e05eb8191c13d3b2116ccafb4a741a373187cd7012ebf9b980b"
+      },
+      "parts": {
+        "case": "assets/26c1e153c03d0f79-case-preview.stl",
+        "glass": "assets/5b6d4d23d1690d6a-glass-preview.stl",
+        "pcb": "assets/4fe89834a1f8f004-pcb-preview.stl",
+        "modules": "assets/7ab6477833f1c475-modules-preview.stl",
+        "speaker": "assets/b9320816f895180f-speaker-preview.stl",
+        "holder": "assets/3b36d5b08c1430a8-holder-preview.stl",
+        "usb0": "assets/d8f9bf89f4ff0569-cable-0-preview.stl",
+        "usb1": "assets/9d88f54db1103edf-cable-1-preview.stl",
+        "battery": "assets/b718a64c70cc878a-battery-preview.stl",
+        "insulator": "assets/2a4a51580cd85e46-insulator-preview.stl"
+      },
+      "guide": "assets/5fc4bb447a6e062c-m43-archived-guide.md",
+      "downloads": [
+        {
+          "label": "Superseded M43 / L43 package \u00b7 ZIP",
+          "url": "assets/a77dfdfaee693f62-m43-l43-before-front-bezel-20260914.zip"
+        }
+      ]
+    },
+    {
+      "id": "l43",
+      "label": "Archived 4.3-inch \u00b7 Slim switch",
+      "revision": "L43",
+      "size": [
+        69.3,
+        132.3,
+        17.6
+      ],
+      "depth": 26.9,
+      "rim": 16.4,
+      "mode": "rear",
+      "release": "left",
+      "archive": true,
+      "status": "Superseded \u00b7 before front rim and USB relief",
+      "summary": "Earlier close-fitting cup without removable bezel. Use N43/O43 for wider short-axis clearance and cleared USB ledges.",
+      "board": {
+        "glass": [
+          114,
+          65
+        ],
+        "active": [
+          94.4,
+          56.96
+        ],
+        "posts": [
+          [
+            8.75,
+            7.5
+          ],
+          [
+            8.75,
+            57.5
+          ],
+          [
+            100.75,
+            7.5
+          ],
+          [
+            100.75,
+            57.5
+          ]
+        ],
+        "postZ": 11.5,
+        "pattern": [
+          92,
+          50
+        ],
+        "measured": true,
+        "source": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-4.3",
+        "photo": "assets/0c10f6ee642130a7-board-hardware.webp"
+      },
+      "hardware": {
+        "glass_mm": [
+          114,
+          65
+        ],
+        "front_to_screw_end_mm": 11.5,
+        "mount_pattern_mm": [
+          92,
+          50
+        ],
+        "speaker_mm": [
+          26,
+          26,
+          5
+        ],
+        "speaker_lead_mm": 50,
+        "battery_casing_mm": [
+          65,
+          36,
+          10
+        ]
+      },
+      "fit": {
+        "glass_gap_each_side_mm": 0.35,
+        "glass_cavity_mm": [
+          114.7,
+          65.7
+        ],
+        "wall_mm": 1.8,
+        "glass_corner_radius_nominal_mm": 2.5,
+        "board_mount_washers": "Four metal M2.5 washers, 7 mm OD, up to 0.5 mm thick; screw-head OD up to 5 mm",
+        "unverified": [
+          "Glass corner profile",
+          "Glass-to-post offset within adjustment",
+          "USB plug boots and bend envelope",
+          "Usable screw thread depth",
+          "Speaker wire exit and corner radius",
+          "Printed clip force and endurance"
+        ]
+      },
+      "parameters": {
+        "revision": "L43",
+        "outer_chamfer_mm": 0.6,
+        "outer_blend_radius_mm": 0.15,
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 16.0,
+        "screw_clearance": 2.9,
+        "screw_well": 7.6,
+        "screw_post": 11.5,
+        "screw_web": 2.0,
+        "battery": [
+          65,
+          36,
+          10
+        ],
+        "battery_xy": [
+          42.0,
+          13.0
+        ],
+        "battery_casing_mm": [
+          65,
+          36,
+          10
+        ],
+        "speaker_lead_mm": 50,
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          26,
+          26,
+          5
+        ],
+        "speaker_xy": [
+          59.0,
+          31.0
+        ],
+        "speaker_dimensions_confirmed": true,
+        "speaker_leaf_root_outset": 2.0,
+        "speaker_fixed_lip_offsets": [
+          12.0,
+          20.0
+        ],
+        "usb_coupon_enabled": false,
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": false,
+        "camera_enabled": false,
+        "dock_enabled": false,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0,
+        "battery_rear_z": 16.0,
+        "battery_rotated_90_degrees": false,
+        "battery_wire_exit_y_mm": 17.0,
+        "speaker_rear_z": 17.2,
+        "design_update": "2026-09-14: owner battery correction to 65 x 36 x 10; speaker remains 26 x 26 x 5",
+        "mechanical_profile_sha256": "eb1f3b463a042e05eb8191c13d3b2116ccafb4a741a373187cd7012ebf9b980b"
+      },
+      "parts": {
+        "case": "assets/4f74a3d7266adec0-case-preview.stl",
+        "glass": "assets/5b6d4d23d1690d6a-glass-preview.stl",
+        "pcb": "assets/4fe89834a1f8f004-pcb-preview.stl",
+        "modules": "assets/7ab6477833f1c475-modules-preview.stl",
+        "speaker": "assets/21eeb0f9c9581c28-speaker-preview.stl",
+        "holder": "assets/971427b8c75be3f3-holder-preview.stl",
+        "usb0": "assets/835be385bd57ef25-cable-0-preview.stl",
+        "usb1": "assets/cdc4d9b0756dd5d8-cable-1-preview.stl",
+        "bay": "assets/9712927778190882-pocket-preview.stl"
+      },
+      "guide": "assets/4358d07076ad6ac4-l43-archived-guide.md",
+      "downloads": [
+        {
+          "label": "Superseded M43 / L43 package \u00b7 ZIP",
+          "url": "assets/a77dfdfaee693f62-m43-l43-before-front-bezel-20260914.zip"
+        }
+      ]
+    },
+    {
+      "id": "k43",
+      "label": "Archived 4.3-inch \u00b7 52 mm battery",
+      "revision": "K43",
+      "size": [
+        69.3,
+        118.3,
+        24.9
+      ],
+      "depth": 28.6,
+      "rim": 16.4,
+      "mode": "bottom",
+      "release": "right",
+      "archive": true,
+      "status": "Superseded \u00b7 earlier 52 mm battery",
+      "summary": "Earlier 52 \u00d7 36 \u00d7 10 mm battery layout. Use N43 for the confirmed 65 mm pack and updated rim.",
+      "board": {
+        "glass": [
+          114,
+          65
+        ],
+        "active": [
+          94.4,
+          56.96
+        ],
+        "posts": [
+          [
+            8.75,
+            7.5
+          ],
+          [
+            8.75,
+            57.5
+          ],
+          [
+            100.75,
+            7.5
+          ],
+          [
+            100.75,
+            57.5
+          ]
+        ],
+        "postZ": 11.5,
+        "pattern": [
+          92,
+          50
+        ],
+        "measured": true,
+        "source": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-4.3",
+        "photo": "assets/0c10f6ee642130a7-board-hardware.webp"
+      },
+      "hardware": {
+        "glass_mm": [
+          114,
+          65
+        ],
+        "front_to_screw_end_mm": 11.5,
+        "mount_pattern_mm": [
+          92,
+          50
+        ],
+        "speaker_mm": [
+          26,
+          26,
+          5
+        ],
+        "speaker_lead_mm": 50,
+        "battery_casing_mm": [
+          52,
+          36,
+          10
+        ]
+      },
+      "fit": {
+        "glass_gap_each_side_mm": 0.35,
+        "glass_cavity_mm": [
+          114.7,
+          65.7
+        ],
+        "wall_mm": 1.8,
+        "glass_corner_radius_nominal_mm": 2.5,
+        "board_mount_washers": "Four metal M2.5 washers, 7 mm OD, up to 0.5 mm thick; screw-head OD up to 5 mm",
+        "unverified": [
+          "Glass corner profile",
+          "Glass-to-post offset within adjustment",
+          "USB plug boots and bend envelope",
+          "Usable screw thread depth",
+          "Speaker wire exit and corner radius",
+          "Printed clip force and endurance"
+        ]
+      },
+      "parameters": {
+        "revision": "K43",
+        "outer_chamfer_mm": 0.6,
+        "outer_blend_radius_mm": 0.15,
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 16.0,
+        "screw_clearance": 2.9,
+        "screw_well": 7.6,
+        "screw_post": 11.5,
+        "screw_web": 2.0,
+        "battery": [
+          36.0,
+          52.0,
+          10.0
+        ],
+        "battery_xy": [
+          16.0,
+          12.9
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          26.0,
+          26.0,
+          5.0
+        ],
+        "speaker_xy": [
+          59.0,
+          31.0
+        ],
+        "speaker_dimensions_confirmed": true,
+        "speaker_leaf_root_outset": 2.0,
+        "speaker_fixed_lip_offsets": [
+          12.0,
+          20.0
+        ],
+        "usb_coupon_enabled": false,
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": true,
+        "camera_enabled": false,
+        "dock_enabled": false,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0,
+        "battery_rear_z": 24.5,
+        "battery_rotated_90_degrees": true,
+        "speaker_rear_z": 18.5,
+        "design_update": "2026-09-14: actual 4.3-inch board, measured glass/depth and speaker"
+      },
+      "parts": {
+        "case": "assets/21901d182cfe81be-case-preview.stl",
+        "glass": "assets/5b6d4d23d1690d6a-glass-preview.stl",
+        "pcb": "assets/4fe89834a1f8f004-pcb-preview.stl",
+        "modules": "assets/7ab6477833f1c475-modules-preview.stl",
+        "speaker": "assets/e8fd315980fad47d-speaker-preview.stl",
+        "holder": "assets/9305b90b447b1fda-holder-preview.stl",
+        "battery": "assets/e0041270b40e25df-battery-preview.stl",
+        "insulator": "assets/30655a728a938836-insulator-preview.stl",
+        "usb0": "assets/d8f9bf89f4ff0569-cable-0-preview.stl",
+        "usb1": "assets/9d88f54db1103edf-cable-1-preview.stl"
+      },
+      "guide": "assets/cdc288a80fb70099-k43-archived-guide.md",
+      "downloads": [
+        {
+          "label": "Superseded K43 package \u00b7 ZIP",
+          "url": "assets/2665cbe4f40a57cc-k43-52mm-superseded-20260914.zip"
+        }
+      ]
+    },
+    {
+      "id": "j-w5",
+      "label": "Battery wall",
+      "revision": "J / W5",
+      "size": [
+        75,
+        131.2,
+        23.7
+      ],
+      "depth": 28.2,
+      "mode": "bottom",
+      "release": "right",
+      "status": "5-inch archive \u00b7 wrong board for this unit",
+      "summary": "Historical 126.9 \u00d7 70.7 mm board reference. Does not fit the measured 4.3-inch unit. Battery in the mount cavity; both USB ports exposed below.",
+      "archive": true,
+      "rim": 16.7,
+      "parts": {
+        "case": "assets/43d1934834f76419-case-preview.stl",
+        "glass": "assets/430531ab6e7b5433-glass-preview.stl",
+        "pcb": "assets/f5cf8fd9798fdd81-pcb-preview.stl",
+        "modules": "assets/e21e98f38ecc3054-modules-preview.stl",
+        "speaker": "assets/34a47620fefae477-speaker-preview.stl",
+        "holder": "assets/dbe446d61570bb19-holder-preview.stl",
+        "battery": "assets/a410c2bacb5ee1cf-battery-preview.stl",
+        "insulator": "assets/4381eecc81291f66-insulator-preview.stl",
+        "usb0": "assets/79af222ed289ec9a-cable-0-preview.stl",
+        "usb1": "assets/4e5bfd8ea4b383c4-cable-1-preview.stl"
+      },
+      "downloads": [
+        {
+          "label": "Case + holder \u00b7 3MF",
+          "url": "assets/ee29b466044ec68a-p4-battery-wall-j-w5.3mf"
+        },
+        {
+          "label": "Case \u00b7 STL",
+          "url": "assets/8abfddfadead0135-case-measurement-prototype.stl"
+        },
+        {
+          "label": "Case \u00b7 STEP",
+          "url": "assets/62e1ad5e284bb56e-case-measurement-prototype.step"
+        },
+        {
+          "label": "Holder \u00b7 STL",
+          "url": "assets/92dfd14ed1f6781d-holder.stl"
+        },
+        {
+          "label": "Holder \u00b7 STEP",
+          "url": "assets/564aba0eba0394b3-holder.step"
+        },
+        {
+          "label": "mount case coupon \u00b7 STL",
+          "url": "assets/075ca24c138d305b-mount-case-coupon.stl"
+        },
+        {
+          "label": "mount holder coupon \u00b7 STL",
+          "url": "assets/7e7b9f9a6f252ba0-mount-holder-coupon.stl"
+        },
+        {
+          "label": "speaker clip coupon \u00b7 STL",
+          "url": "assets/cd094528432d96cc-speaker-clip-coupon.stl"
+        },
+        {
+          "label": "usb clearance coupon \u00b7 STL",
+          "url": "assets/0d5d664906dc7796-usb-clearance-coupon.stl"
+        },
+        {
+          "label": "glass fit ring \u00b7 STL",
+          "url": "assets/94085dbfa7e43b0e-glass-fit-ring.stl"
+        },
+        {
+          "label": "mount pattern template \u00b7 STL",
+          "url": "assets/6b73479f08ef19fa-mount-pattern-template.stl"
+        }
+      ],
+      "guide": "assets/0e2d4b5a35b564e8-README.md",
+      "parameters": {
+        "revision": "J",
+        "outer_chamfer_mm": 0.6,
+        "outer_blend_radius_mm": 0.15,
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 16.3,
+        "screw_clearance": 2.9,
+        "screw_well": 5.6,
+        "screw_post": 8.0,
+        "screw_web": 2.0,
+        "battery": [
+          52.0,
+          36.0,
+          10.0
+        ],
+        "battery_xy": [
+          15.1,
+          17.0
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          40.0,
+          30.0,
+          4.0
+        ],
+        "speaker_xy": [
+          70.0,
+          37.0
+        ],
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": true,
+        "camera_enabled": false,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0,
+        "dock_enabled": false,
+        "battery_rear_z": 23.3,
+        "speaker_rear_z": 17.5,
+        "speaker_fixed_lip_offsets": [
+          10,
+          20
+        ]
+      },
+      "evidence": [
+        {
+          "label": "assembly checks",
+          "url": "assets/e88951bd7ee65d99-assembly-checks.json"
+        },
+        {
+          "label": "independent clearance checks",
+          "url": "assets/c6da9b1bc9f070cd-independent-clearance-checks.json"
+        },
+        {
+          "label": "mount verification",
+          "url": "assets/ff3f662819bff0d4-mount-verification.json"
+        },
+        {
+          "label": "slicer validation",
+          "url": "assets/3238a0ab8e84159f-slicer-validation.json"
+        }
+      ],
+      "printImages": [
+        {
+          "label": "Case reference toolpaths",
+          "url": "assets/50e67ff7f59f620d-case-toolpaths.png"
+        },
+        {
+          "label": "Holder reference toolpaths",
+          "url": "assets/d1813bac03b790a3-holder-toolpaths.png"
+        }
+      ]
+    },
+    {
+      "id": "i-s3",
+      "label": "Slim switch",
+      "revision": "I / S3",
+      "size": [
+        75,
+        145.2,
+        16.7
+      ],
+      "depth": 27.2,
+      "mode": "rear",
+      "release": "left",
+      "status": "5-inch archive \u00b7 wrong board for this unit",
+      "summary": "Historical 126.9 \u00d7 70.7 mm board reference. Does not fit the measured 4.3-inch unit. Reinforced concealed mount with a shared 10 mm cable bay.",
+      "archive": true,
+      "rim": 16.7,
+      "parts": {
+        "case": "assets/c3b3d7fc7ccace66-case-preview.stl",
+        "glass": "assets/430531ab6e7b5433-glass-preview.stl",
+        "pcb": "assets/f5cf8fd9798fdd81-pcb-preview.stl",
+        "modules": "assets/e21e98f38ecc3054-modules-preview.stl",
+        "speaker": "assets/720c2f4a4ad07c98-speaker-preview.stl",
+        "holder": "assets/1014e827d1d8ea71-holder-preview.stl",
+        "bay": "assets/9f3ea166cd69e027-pocket-preview.stl",
+        "usb0": "assets/c084cdf1a2968fdc-cable-0-preview.stl",
+        "usb1": "assets/2c7f3e9a2c210aa5-cable-1-preview.stl"
+      },
+      "downloads": [
+        {
+          "label": "Case + holder \u00b7 3MF",
+          "url": "assets/55176ae1c020a7ca-p4-robust-switch-i-s3.3mf"
+        },
+        {
+          "label": "Case \u00b7 STL",
+          "url": "assets/a49f7d8360c759e1-case-measurement-prototype.stl"
+        },
+        {
+          "label": "Case \u00b7 STEP",
+          "url": "assets/95d62609056ed459-case-measurement-prototype.step"
+        },
+        {
+          "label": "Holder \u00b7 STL",
+          "url": "assets/c47e5e824ab72e13-holder.stl"
+        },
+        {
+          "label": "Holder \u00b7 STEP",
+          "url": "assets/177b2883bfed1934-holder.step"
+        },
+        {
+          "label": "mount case coupon \u00b7 STL",
+          "url": "assets/1a77602e1e7d4c19-mount-case-coupon.stl"
+        },
+        {
+          "label": "mount holder coupon \u00b7 STL",
+          "url": "assets/fbbdd24a4dda5506-mount-holder-coupon.stl"
+        },
+        {
+          "label": "speaker clip coupon \u00b7 STL",
+          "url": "assets/30aaf31ca64dd729-speaker-clip-coupon.stl"
+        },
+        {
+          "label": "glass fit ring \u00b7 STL",
+          "url": "assets/9617faa3b9a0badf-glass-fit-ring.stl"
+        },
+        {
+          "label": "mount pattern template \u00b7 STL",
+          "url": "assets/6b73479f08ef19fa-mount-pattern-template.stl"
+        }
+      ],
+      "guide": "assets/dd0d201f216894cc-README.md",
+      "parameters": {
+        "revision": "I",
+        "outer_chamfer_mm": 0.6,
+        "outer_blend_radius_mm": 0.15,
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 16.3,
+        "screw_clearance": 2.9,
+        "screw_well": 5.6,
+        "screw_post": 8.0,
+        "screw_web": 2.0,
+        "battery": [
+          52.0,
+          36.0,
+          10.0
+        ],
+        "battery_xy": [
+          9.0,
+          17.0
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          40.0,
+          30.0,
+          4.0
+        ],
+        "speaker_xy": [
+          61.5,
+          37
+        ],
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": false,
+        "camera_enabled": false,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0,
+        "dock_enabled": false,
+        "speaker_fixed_lip_offsets": [
+          10,
+          20
+        ],
+        "usb_coupon_enabled": false
+      },
+      "evidence": [
+        {
+          "label": "assembly checks",
+          "url": "assets/b3df9373d14466be-assembly-checks.json"
+        },
+        {
+          "label": "independent clearance checks",
+          "url": "assets/e1e840f7c32988c5-independent-clearance-checks.json"
+        },
+        {
+          "label": "mount verification",
+          "url": "assets/c37e6e4e57c0e384-mount-verification.json"
+        },
+        {
+          "label": "slicer validation",
+          "url": "assets/3ba6ef3afc242f7a-slicer-validation.json"
+        }
+      ],
+      "printImages": [
+        {
+          "label": "Holder reference toolpaths",
+          "url": "assets/3fb59711e58ea24e-holder-toolpaths.png"
+        }
+      ]
+    },
+    {
+      "id": "h-s2",
+      "label": "Slim switch prototype",
+      "revision": "H / S2",
+      "size": [
+        75,
+        145.2,
+        16.7
+      ],
+      "depth": 27.2,
+      "mode": "rear",
+      "release": "left",
+      "status": "5-inch archive \u00b7 wrong board for this unit",
+      "summary": "Historical 126.9 \u00d7 70.7 mm board reference. Does not fit the measured 4.3-inch unit. Earlier small-neck mount; superseded by I / S3.",
+      "archive": true,
+      "rim": 16.7,
+      "parts": {
+        "case": "assets/6ca39fc47db18f8b-case-preview.stl",
+        "glass": "assets/430531ab6e7b5433-glass-preview.stl",
+        "pcb": "assets/f5cf8fd9798fdd81-pcb-preview.stl",
+        "modules": "assets/e21e98f38ecc3054-modules-preview.stl",
+        "speaker": "assets/720c2f4a4ad07c98-speaker-preview.stl",
+        "holder": "assets/26714ee1e4fe1cc1-holder-preview.stl",
+        "bay": "assets/9f3ea166cd69e027-pocket-preview.stl",
+        "usb0": "assets/c084cdf1a2968fdc-cable-0-preview.stl",
+        "usb1": "assets/2c7f3e9a2c210aa5-cable-1-preview.stl"
+      },
+      "downloads": [
+        {
+          "label": "Case + holder \u00b7 3MF",
+          "url": "assets/527cf7f0a6a7ee7c-p4-slim-switch-h-s2.3mf"
+        },
+        {
+          "label": "Case \u00b7 STL",
+          "url": "assets/40fee48fcae449c2-case-measurement-prototype.stl"
+        },
+        {
+          "label": "Case \u00b7 STEP",
+          "url": "assets/4f6d5df5e2a8ce02-case-measurement-prototype.step"
+        },
+        {
+          "label": "Holder \u00b7 STL",
+          "url": "assets/5a30ceec7760ba94-holder.stl"
+        },
+        {
+          "label": "Holder \u00b7 STEP",
+          "url": "assets/e5f3eae09981e433-holder.step"
+        },
+        {
+          "label": "speaker clip coupon \u00b7 STL",
+          "url": "assets/30aaf31ca64dd729-speaker-clip-coupon.stl"
+        },
+        {
+          "label": "glass fit ring \u00b7 STL",
+          "url": "assets/9617faa3b9a0badf-glass-fit-ring.stl"
+        },
+        {
+          "label": "mount pattern template \u00b7 STL",
+          "url": "assets/6b73479f08ef19fa-mount-pattern-template.stl"
+        }
+      ],
+      "guide": "assets/ab94ca762588f8b6-README.md",
+      "parameters": {
+        "revision": "H",
+        "outer_chamfer_mm": 0.6,
+        "outer_blend_radius_mm": 0.15,
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 16.3,
+        "screw_clearance": 2.9,
+        "screw_well": 5.6,
+        "screw_post": 8.0,
+        "screw_web": 2.0,
+        "battery": [
+          52.0,
+          36.0,
+          10.0
+        ],
+        "battery_xy": [
+          9.0,
+          17.0
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          40.0,
+          30.0,
+          4.0
+        ],
+        "speaker_xy": [
+          61.5,
+          37
+        ],
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": false,
+        "camera_enabled": false,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0,
+        "dock_enabled": false,
+        "speaker_fixed_lip_offsets": [
+          10,
+          20
+        ],
+        "usb_coupon_enabled": false
+      },
+      "evidence": [
+        {
+          "label": "assembly checks",
+          "url": "assets/14503c5a89be3e22-assembly-checks.json"
+        },
+        {
+          "label": "independent clearance checks",
+          "url": "assets/df2e9e662e8c2cac-independent-clearance-checks.json"
+        }
+      ],
+      "printImages": []
+    },
+    {
+      "id": "g-switch",
+      "label": "Switch plate",
+      "revision": "G / S1",
+      "size": [
+        75,
+        145.2,
+        18.7
+      ],
+      "depth": 43.7,
+      "mode": "rear",
+      "release": "left",
+      "status": "5-inch archive \u00b7 wrong board for this unit",
+      "summary": "Historical 126.9 \u00d7 70.7 mm board reference. Does not fit the measured 4.3-inch unit. Shared G cup with a lower pocket for right-angle USB plugs.",
+      "archive": true,
+      "rim": 18.7,
+      "parts": {
+        "case": "assets/e1a8aadf42636a1d-case-preview.stl",
+        "glass": "assets/430531ab6e7b5433-glass-preview.stl",
+        "pcb": "assets/f5cf8fd9798fdd81-pcb-preview.stl",
+        "modules": "assets/e21e98f38ecc3054-modules-preview.stl",
+        "speaker": "assets/f9076a83514e5a8d-speaker-preview.stl",
+        "holder": "assets/de8cfd7a4adaefb2-wallplate-preview.stl",
+        "usb0": "assets/73be015689d19490-cable-0-preview.stl",
+        "usb1": "assets/2d529a7681a441e4-cable-1-preview.stl"
+      },
+      "downloads": [
+        {
+          "label": "Case + holder \u00b7 3MF",
+          "url": "assets/3223e6c61580f92a-p4-switch-wall-g-s1.3mf"
+        }
+      ],
+      "guide": "assets/a261a9a5cb40a884-ASSEMBLY.md",
+      "parameters": {
+        "revision": "G",
+        "outer_chamfer_mm": 0.6,
+        "outer_blend_radius_mm": 0.15,
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 18.3,
+        "screw_clearance": 2.9,
+        "screw_well": 5.6,
+        "screw_post": 8.0,
+        "screw_web": 2.0,
+        "battery": [
+          52.0,
+          36.0,
+          10.0
+        ],
+        "battery_xy": [
+          9.0,
+          17.0
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          40.0,
+          30.0,
+          4.0
+        ],
+        "speaker_xy": [
+          66.0,
+          37.0
+        ],
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": false,
+        "camera_enabled": false,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0,
+        "dock_enabled": false
+      }
+    },
+    {
+      "id": "g-surface",
+      "label": "Surface wall",
+      "revision": "G / W4",
+      "size": [
+        75,
+        145.2,
+        18.7
+      ],
+      "depth": 33.7,
+      "mode": "surface",
+      "release": "left",
+      "status": "5-inch archive \u00b7 wrong board for this unit",
+      "summary": "Historical 126.9 \u00d7 70.7 mm board reference. Does not fit the measured 4.3-inch unit. Shared G cup with a lower pocket for right-angle USB plugs.",
+      "archive": true,
+      "rim": 18.7,
+      "parts": {
+        "case": "assets/e1a8aadf42636a1d-case-preview.stl",
+        "glass": "assets/430531ab6e7b5433-glass-preview.stl",
+        "pcb": "assets/f5cf8fd9798fdd81-pcb-preview.stl",
+        "modules": "assets/e21e98f38ecc3054-modules-preview.stl",
+        "speaker": "assets/f9076a83514e5a8d-speaker-preview.stl",
+        "holder": "assets/ec2f72607432e9fc-wallplate-preview.stl",
+        "usb0": "assets/2ca7567e36659fee-cable-0-preview.stl",
+        "usb1": "assets/181d295566c98264-cable-1-preview.stl"
+      },
+      "downloads": [
+        {
+          "label": "Case + holder \u00b7 3MF",
+          "url": "assets/7cb933e92b39c997-p4-surface-wall-g-w4.3mf"
+        }
+      ],
+      "guide": "assets/a261a9a5cb40a884-ASSEMBLY.md",
+      "parameters": {
+        "revision": "G",
+        "outer_chamfer_mm": 0.6,
+        "outer_blend_radius_mm": 0.15,
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 18.3,
+        "screw_clearance": 2.9,
+        "screw_well": 5.6,
+        "screw_post": 8.0,
+        "screw_web": 2.0,
+        "battery": [
+          52.0,
+          36.0,
+          10.0
+        ],
+        "battery_xy": [
+          9.0,
+          17.0
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          40.0,
+          30.0,
+          4.0
+        ],
+        "speaker_xy": [
+          66.0,
+          37.0
+        ],
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": false,
+        "camera_enabled": false,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0,
+        "dock_enabled": false
+      }
+    },
+    {
+      "id": "f-portable",
+      "label": "Portable camera",
+      "revision": "F",
+      "size": [
+        75,
+        131.2,
+        23.7
+      ],
+      "depth": null,
+      "mode": "portable",
+      "release": null,
+      "status": "5-inch archive \u00b7 wrong board for this unit",
+      "summary": "Historical 126.9 \u00d7 70.7 mm board reference. Does not fit the measured 4.3-inch unit. Smooth chamfers and the common F cup. Battery, rear-facing camera and speaker.",
+      "archive": true,
+      "rim": 23.7,
+      "parts": {
+        "case": "assets/e5f2430d17a0f31a-case-preview.stl",
+        "glass": "assets/430531ab6e7b5433-glass-preview.stl",
+        "pcb": "assets/f5cf8fd9798fdd81-pcb-preview.stl",
+        "modules": "assets/e21e98f38ecc3054-modules-preview.stl",
+        "speaker": "assets/4f742fdf0f919995-speaker-preview.stl",
+        "battery": "assets/c9ca7d633691efdd-battery-preview.stl",
+        "insulator": "assets/6334c992d7f36be7-insulator-preview.stl",
+        "camera": "assets/1049e92fc3d53ddc-camera-preview.stl"
+      },
+      "downloads": [
+        {
+          "label": "F case + optional W3 holder \u00b7 3MF",
+          "url": "assets/a802e80671c379b5-p4-5c-case-and-wall-holder.3mf"
+        }
+      ],
+      "guide": "assets/b288c28979aa2eb0-ASSEMBLY.md",
+      "parameters": {
+        "revision": "F",
+        "outer_chamfer_mm": 0.6,
+        "outer_blend_radius_mm": 0.15,
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 23.3,
+        "screw_clearance": 2.9,
+        "screw_well": 5.6,
+        "screw_post": 8.0,
+        "screw_web": 2.0,
+        "battery": [
+          52.0,
+          36.0,
+          10.0
+        ],
+        "battery_xy": [
+          9.0,
+          17.0
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          40.0,
+          30.0,
+          4.0
+        ],
+        "speaker_xy": [
+          66.0,
+          37.0
+        ],
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": true,
+        "camera_enabled": true,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0
+      }
+    },
+    {
+      "id": "f-wall",
+      "label": "Original wall",
+      "revision": "F / W3",
+      "size": [
+        75,
+        131.2,
+        23.7
+      ],
+      "depth": 29.7,
+      "mode": "bottom",
+      "release": "bottom",
+      "status": "5-inch archive \u00b7 wrong board for this unit",
+      "summary": "Historical 126.9 \u00d7 70.7 mm board reference. Does not fit the measured 4.3-inch unit. Smooth chamfers and the common F cup. Battery and camera omitted; their spaces remain.",
+      "archive": true,
+      "rim": 23.7,
+      "parts": {
+        "case": "assets/e5f2430d17a0f31a-case-preview.stl",
+        "glass": "assets/430531ab6e7b5433-glass-preview.stl",
+        "pcb": "assets/f5cf8fd9798fdd81-pcb-preview.stl",
+        "modules": "assets/e21e98f38ecc3054-modules-preview.stl",
+        "speaker": "assets/4f742fdf0f919995-speaker-preview.stl",
+        "holder": "assets/8e149648c065d72c-holder-preview.stl"
+      },
+      "downloads": [
+        {
+          "label": "Case + holder \u00b7 3MF",
+          "url": "assets/a802e80671c379b5-p4-5c-case-and-wall-holder.3mf"
+        }
+      ],
+      "guide": "assets/0aa6141c8746d606-WALL-INSTALLATION.md",
+      "parameters": {
+        "revision": "F",
+        "outer_chamfer_mm": 0.6,
+        "outer_blend_radius_mm": 0.15,
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 23.3,
+        "screw_clearance": 2.9,
+        "screw_well": 5.6,
+        "screw_post": 8.0,
+        "screw_web": 2.0,
+        "battery": [
+          52.0,
+          36.0,
+          10.0
+        ],
+        "battery_xy": [
+          9.0,
+          17.0
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          40.0,
+          30.0,
+          4.0
+        ],
+        "speaker_xy": [
+          66.0,
+          37.0
+        ],
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": true,
+        "camera_enabled": true,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0
+      }
+    },
+    {
+      "id": "a-portable",
+      "label": "Archived portable",
+      "revision": "A",
+      "size": [
+        75.0,
+        131.2,
+        24.4
+      ],
+      "depth": null,
+      "rim": 24.4,
+      "mode": "portable",
+      "release": null,
+      "status": "5-inch archive \u00b7 wrong board for this unit",
+      "archive": true,
+      "summary": "Historical 126.9 \u00d7 70.7 mm board reference. Does not fit the measured 4.3-inch unit. Historical geometry; superseded. Retained for design comparison.",
+      "parts": {
+        "case": "assets/b8888d86b62c51f8-case-preview.stl",
+        "glass": "assets/430531ab6e7b5433-glass-preview.stl",
+        "pcb": "assets/f5cf8fd9798fdd81-pcb-preview.stl",
+        "modules": "assets/e21e98f38ecc3054-modules-preview.stl",
+        "speaker": "assets/5e20d1b6fd8e6971-speaker-preview.stl",
+        "battery": "assets/4e3a2f5d447b2ab3-battery-preview.stl",
+        "camera": "assets/92f8124df95ddf68-camera-preview.stl"
+      },
+      "parameters": {
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.8,
+        "rim_proud": 0.4,
+        "rear_z": 24.0,
+        "screw_clearance": 2.9,
+        "screw_well": 5.6,
+        "screw_post": 8.0,
+        "screw_web": 2.0,
+        "battery": [
+          52.0,
+          36.0,
+          10.0
+        ],
+        "battery_xy": [
+          8.0,
+          17.0
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.5,
+        "speaker": [
+          40.0,
+          30.0,
+          6.0
+        ],
+        "speaker_xy": [
+          66.0,
+          37.0
+        ],
+        "speaker_side_gap": 0.5,
+        "speaker_gasket": 0.5,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0
+      },
+      "guide": null,
+      "downloads": [
+        {
+          "label": "Archived CAD package \u00b7 ZIP",
+          "url": "assets/f6ade12ec2bf097f-p4-5c-case-revision-a.zip"
+        }
+      ]
+    },
+    {
+      "id": "b-portable",
+      "label": "Archived portable",
+      "revision": "B",
+      "size": [
+        75.0,
+        131.2,
+        23.7
+      ],
+      "depth": null,
+      "rim": 23.7,
+      "mode": "portable",
+      "release": null,
+      "status": "5-inch archive \u00b7 wrong board for this unit",
+      "archive": true,
+      "summary": "Historical 126.9 \u00d7 70.7 mm board reference. Does not fit the measured 4.3-inch unit. Historical geometry; superseded. Retained for design comparison.",
+      "parts": {
+        "case": "assets/eba45b1e35fde5fa-case-preview.stl",
+        "glass": "assets/430531ab6e7b5433-glass-preview.stl",
+        "pcb": "assets/f5cf8fd9798fdd81-pcb-preview.stl",
+        "modules": "assets/e21e98f38ecc3054-modules-preview.stl",
+        "speaker": "assets/f840867f85466b62-speaker-preview.stl",
+        "battery": "assets/c9ca7d633691efdd-battery-preview.stl",
+        "camera": "assets/1049e92fc3d53ddc-camera-preview.stl",
+        "insulator": "assets/6334c992d7f36be7-insulator-preview.stl"
+      },
+      "parameters": {
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 23.3,
+        "screw_clearance": 2.9,
+        "screw_well": 5.6,
+        "screw_post": 8.0,
+        "screw_web": 2.0,
+        "battery": [
+          52.0,
+          36.0,
+          10.0
+        ],
+        "battery_xy": [
+          9.0,
+          17.0
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          40.0,
+          30.0,
+          6.0
+        ],
+        "speaker_xy": [
+          66.0,
+          37.0
+        ],
+        "speaker_side_gap": 0.5,
+        "speaker_gasket": 0.5,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0
+      },
+      "guide": "assets/01377eb6d416a9ae-guide.md",
+      "downloads": [
+        {
+          "label": "Archived CAD package \u00b7 ZIP",
+          "url": "assets/dd103916ed9edfe7-p4-5c-case-revision-b.zip"
+        }
+      ]
+    },
+    {
+      "id": "c-portable",
+      "label": "Archived portable",
+      "revision": "C",
+      "size": [
+        75.0,
+        131.2,
+        23.7
+      ],
+      "depth": null,
+      "rim": 23.7,
+      "mode": "portable",
+      "release": null,
+      "status": "5-inch archive \u00b7 wrong board for this unit",
+      "archive": true,
+      "summary": "Historical 126.9 \u00d7 70.7 mm board reference. Does not fit the measured 4.3-inch unit. Historical geometry; superseded. Retained for design comparison.",
+      "parts": {
+        "case": "assets/175a64d52800bc80-case-preview.stl",
+        "glass": "assets/430531ab6e7b5433-glass-preview.stl",
+        "pcb": "assets/f5cf8fd9798fdd81-pcb-preview.stl",
+        "modules": "assets/e21e98f38ecc3054-modules-preview.stl",
+        "speaker": "assets/b77deaf287febe5f-speaker-preview.stl",
+        "battery": "assets/c9ca7d633691efdd-battery-preview.stl",
+        "camera": "assets/1049e92fc3d53ddc-camera-preview.stl",
+        "insulator": "assets/6334c992d7f36be7-insulator-preview.stl"
+      },
+      "parameters": {
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 23.3,
+        "screw_clearance": 2.9,
+        "screw_well": 5.6,
+        "screw_post": 8.0,
+        "screw_web": 2.0,
+        "battery": [
+          52.0,
+          36.0,
+          10.0
+        ],
+        "battery_xy": [
+          9.0,
+          17.0
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          40.0,
+          30.0,
+          6.0
+        ],
+        "speaker_xy": [
+          66.0,
+          37.0
+        ],
+        "speaker_side_gap": 0.5,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": true,
+        "camera_enabled": true,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0,
+        "speaker_left_stop_gap": 0.1
+      },
+      "guide": "assets/cf1d3ac57cd58894-guide.md",
+      "downloads": [
+        {
+          "label": "Archived CAD package \u00b7 ZIP",
+          "url": "assets/cb61842ee648cda5-p4-5c-enclosures-c-w1.zip"
+        }
+      ]
+    },
+    {
+      "id": "c-wall",
+      "label": "Archived wall",
+      "revision": "C / W1",
+      "size": [
+        77.6,
+        132.15,
+        20.4
+      ],
+      "depth": 26.4,
+      "rim": 20.4,
+      "mode": "bottom",
+      "release": "top",
+      "status": "5-inch archive \u00b7 wrong board for this unit",
+      "archive": true,
+      "summary": "Historical 126.9 \u00d7 70.7 mm board reference. Does not fit the measured 4.3-inch unit. Historical geometry; superseded. Uses the older external tilt-in mount.",
+      "parts": {
+        "case": "assets/857f26d27c70b2c0-case-preview.stl",
+        "glass": "assets/430531ab6e7b5433-glass-preview.stl",
+        "pcb": "assets/f5cf8fd9798fdd81-pcb-preview.stl",
+        "modules": "assets/e21e98f38ecc3054-modules-preview.stl",
+        "speaker": "assets/8f62851541e283f9-speaker-preview.stl",
+        "holder": "assets/7598e7358dbaa0b4-holder-preview.stl"
+      },
+      "parameters": {
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 20.0,
+        "screw_clearance": 2.9,
+        "screw_well": 5.6,
+        "screw_post": 8.0,
+        "screw_web": 2.0,
+        "battery": [
+          52.0,
+          36.0,
+          10.0
+        ],
+        "battery_xy": [
+          9.0,
+          17.0
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          40.0,
+          30.0,
+          6.0
+        ],
+        "speaker_xy": [
+          66.0,
+          37.0
+        ],
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": false,
+        "camera_enabled": false,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0,
+        "revision": "W1"
+      },
+      "guide": "assets/3dccd830d8f199e5-guide.md",
+      "downloads": [
+        {
+          "label": "Archived CAD package \u00b7 ZIP",
+          "url": "assets/cb61842ee648cda5-p4-5c-enclosures-c-w1.zip"
+        }
+      ]
+    },
+    {
+      "id": "d-portable",
+      "label": "Archived portable",
+      "revision": "D",
+      "size": [
+        77.6,
+        132.15,
+        23.7
+      ],
+      "depth": null,
+      "rim": 23.7,
+      "mode": "portable",
+      "release": null,
+      "status": "5-inch archive \u00b7 wrong board for this unit",
+      "archive": true,
+      "summary": "Historical 126.9 \u00d7 70.7 mm board reference. Does not fit the measured 4.3-inch unit. Historical geometry; superseded. Retained for design comparison.",
+      "parts": {
+        "case": "assets/c7c318ac32318cac-case-preview.stl",
+        "glass": "assets/430531ab6e7b5433-glass-preview.stl",
+        "pcb": "assets/f5cf8fd9798fdd81-pcb-preview.stl",
+        "modules": "assets/e21e98f38ecc3054-modules-preview.stl",
+        "speaker": "assets/4f742fdf0f919995-speaker-preview.stl",
+        "battery": "assets/c9ca7d633691efdd-battery-preview.stl",
+        "camera": "assets/1049e92fc3d53ddc-camera-preview.stl",
+        "insulator": "assets/6334c992d7f36be7-insulator-preview.stl"
+      },
+      "parameters": {
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 23.3,
+        "screw_clearance": 2.9,
+        "screw_well": 5.6,
+        "screw_post": 8.0,
+        "screw_web": 2.0,
+        "battery": [
+          52.0,
+          36.0,
+          10.0
+        ],
+        "battery_xy": [
+          9.0,
+          17.0
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          40.0,
+          30.0,
+          4.0
+        ],
+        "speaker_xy": [
+          66.0,
+          37.0
+        ],
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": true,
+        "camera_enabled": true,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0
+      },
+      "guide": "assets/9de1a2f1d8aafccb-guide.md",
+      "downloads": [
+        {
+          "label": "Archived CAD package \u00b7 ZIP",
+          "url": "assets/68f848d82cd7de47-p4-5c-shared-case-d-w2.zip"
+        }
+      ]
+    },
+    {
+      "id": "d-wall",
+      "label": "Archived wall",
+      "revision": "D / W2",
+      "size": [
+        77.6,
+        132.15,
+        23.7
+      ],
+      "depth": 29.7,
+      "rim": 23.7,
+      "mode": "bottom",
+      "release": "top",
+      "status": "5-inch archive \u00b7 wrong board for this unit",
+      "archive": true,
+      "summary": "Historical 126.9 \u00d7 70.7 mm board reference. Does not fit the measured 4.3-inch unit. Historical geometry; superseded. Uses the older external tilt-in mount.",
+      "parts": {
+        "case": "assets/c7c318ac32318cac-case-preview.stl",
+        "glass": "assets/430531ab6e7b5433-glass-preview.stl",
+        "pcb": "assets/f5cf8fd9798fdd81-pcb-preview.stl",
+        "modules": "assets/e21e98f38ecc3054-modules-preview.stl",
+        "speaker": "assets/4f742fdf0f919995-speaker-preview.stl",
+        "holder": "assets/c4d0ac0ba628a443-holder-preview.stl"
+      },
+      "parameters": {
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 23.3,
+        "screw_clearance": 2.9,
+        "screw_well": 5.6,
+        "screw_post": 8.0,
+        "screw_web": 2.0,
+        "battery": [
+          52.0,
+          36.0,
+          10.0
+        ],
+        "battery_xy": [
+          9.0,
+          17.0
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          40.0,
+          30.0,
+          4.0
+        ],
+        "speaker_xy": [
+          66.0,
+          37.0
+        ],
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": true,
+        "camera_enabled": true,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0
+      },
+      "guide": "assets/f8799967850f1d49-guide.md",
+      "downloads": [
+        {
+          "label": "Archived CAD package \u00b7 ZIP",
+          "url": "assets/68f848d82cd7de47-p4-5c-shared-case-d-w2.zip"
+        }
+      ]
+    },
+    {
+      "id": "e-portable",
+      "label": "Archived portable",
+      "revision": "E",
+      "size": [
+        75.0,
+        131.2,
+        23.7
+      ],
+      "depth": null,
+      "rim": 23.7,
+      "mode": "portable",
+      "release": null,
+      "status": "5-inch archive \u00b7 wrong board for this unit",
+      "archive": true,
+      "summary": "Historical 126.9 \u00d7 70.7 mm board reference. Does not fit the measured 4.3-inch unit. Historical geometry; superseded. Retained for design comparison.",
+      "parts": {
+        "case": "assets/3e3c23b5df7d4faf-case-preview.stl",
+        "glass": "assets/430531ab6e7b5433-glass-preview.stl",
+        "pcb": "assets/f5cf8fd9798fdd81-pcb-preview.stl",
+        "modules": "assets/e21e98f38ecc3054-modules-preview.stl",
+        "speaker": "assets/4f742fdf0f919995-speaker-preview.stl",
+        "battery": "assets/c9ca7d633691efdd-battery-preview.stl",
+        "camera": "assets/1049e92fc3d53ddc-camera-preview.stl",
+        "insulator": "assets/6334c992d7f36be7-insulator-preview.stl"
+      },
+      "parameters": {
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 23.3,
+        "screw_clearance": 2.9,
+        "screw_well": 5.6,
+        "screw_post": 8.0,
+        "screw_web": 2.0,
+        "battery": [
+          52.0,
+          36.0,
+          10.0
+        ],
+        "battery_xy": [
+          9.0,
+          17.0
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          40.0,
+          30.0,
+          4.0
+        ],
+        "speaker_xy": [
+          66.0,
+          37.0
+        ],
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": true,
+        "camera_enabled": true,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0
+      },
+      "guide": "assets/4af9472a40730829-guide.md",
+      "downloads": [
+        {
+          "label": "Archived CAD package \u00b7 ZIP",
+          "url": "assets/972538efabf2b60e-p4-5c-shared-case-e-w3.zip"
+        }
+      ]
+    },
+    {
+      "id": "e-wall",
+      "label": "Archived wall",
+      "revision": "E / W3",
+      "size": [
+        75.0,
+        131.2,
+        23.7
+      ],
+      "depth": 29.7,
+      "rim": 23.7,
+      "mode": "bottom",
+      "release": "bottom",
+      "status": "5-inch archive \u00b7 wrong board for this unit",
+      "archive": true,
+      "summary": "Historical 126.9 \u00d7 70.7 mm board reference. Does not fit the measured 4.3-inch unit. Historical geometry; superseded. Retained for design comparison.",
+      "parts": {
+        "case": "assets/3e3c23b5df7d4faf-case-preview.stl",
+        "glass": "assets/430531ab6e7b5433-glass-preview.stl",
+        "pcb": "assets/f5cf8fd9798fdd81-pcb-preview.stl",
+        "modules": "assets/e21e98f38ecc3054-modules-preview.stl",
+        "speaker": "assets/4f742fdf0f919995-speaker-preview.stl",
+        "holder": "assets/8e149648c065d72c-holder-preview.stl"
+      },
+      "parameters": {
+        "perimeter_gap": 0.35,
+        "wall": 1.8,
+        "back": 1.6,
+        "rim_proud": 0.4,
+        "rear_z": 23.3,
+        "screw_clearance": 2.9,
+        "screw_well": 5.6,
+        "screw_post": 8.0,
+        "screw_web": 2.0,
+        "battery": [
+          52.0,
+          36.0,
+          10.0
+        ],
+        "battery_xy": [
+          9.0,
+          17.0
+        ],
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          40.0,
+          30.0,
+          4.0
+        ],
+        "speaker_xy": [
+          66.0,
+          37.0
+        ],
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": true,
+        "camera_enabled": true,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 8.0
+      },
+      "guide": "assets/b45ee7518991f8aa-guide.md",
+      "downloads": [
+        {
+          "label": "Archived CAD package \u00b7 ZIP",
+          "url": "assets/972538efabf2b60e-p4-5c-shared-case-e-w3.zip"
+        }
+      ]
+    }
+  ],
+  "boardPhoto": "assets/1d852d81e8171a1e-board-hardware.webp",
+  "source": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-5"
+}

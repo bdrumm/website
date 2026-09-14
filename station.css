@@ -211,3 +211,19 @@
 .station-project-page .station-story-viewer .model-controls button{font:400 .75rem/1.4 var(--font-geist-mono),monospace;border:1px solid #8995a4;border-radius:6px;background:#fff;color:#17212e;padding:8px 10px;min-height:36px;cursor:pointer}
 .station-touch-controls button{position:absolute;width:1px;height:1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 .station-touch-controls button:focus-visible{position:relative;clip-path:none;width:auto;height:auto;white-space:normal;margin:4px;padding:12px 16px;border:2px solid #17212e;border-radius:8px;background:#fff;color:#17212e;outline:3px solid #7043ab;outline-offset:2px}
+
+/* Measured 4.3-inch enclosure branch; independent of the round Station demo. */
+.station-enclosure-preview{margin:0 0 28px;background:#f4f6f7;border:1px solid var(--border);overflow:hidden;border-radius:12px}
+.station-enclosure-preview img{display:block;width:100%;height:auto}
+.station-enclosure-preview figcaption{padding:16px 22px;font-size:.875rem;color:#425b68;border-top:1px solid #d5dddf}
+.station-enclosures>.station-project-actions{margin-bottom:28px}
+.station-enclosure-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}
+.station-enclosure-grid article{padding:28px;border:1px solid var(--border);border-radius:12px;background:var(--stage);min-width:0}
+.station-enclosure-grid h3{font-size:1.75rem;font-weight:550;margin:12px 0 16px}
+.station-enclosure-grid p{line-height:1.7;color:var(--muted)}
+.station-enclosure-grid dl{margin:24px 0}
+.station-enclosure-grid dl>div{display:flex;justify-content:space-between;gap:20px;padding:12px 0;border-bottom:1px solid var(--border);font-size:.9375rem}
+.station-enclosure-grid dt{color:var(--muted)}
+.station-enclosure-grid dd{margin:0;text-align:right}
+.station-enclosure-links{display:flex;flex-wrap:wrap;gap:16px 24px}
+@media(max-width:760px){.station-enclosure-grid{grid-template-columns:1fr}.station-enclosure-grid article{padding:22px}.station-enclosure-grid dl>div{flex-wrap:wrap;gap:6px}.station-enclosure-grid dd{text-align:left}}

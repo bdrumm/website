@@ -1,0 +1,130 @@
+{
+  "revision": "H/S2",
+  "case_mm_portrait": [
+    75.0,
+    145.2,
+    16.7
+  ],
+  "mounted_depth_mm": 27.2,
+  "old_case_mm": 18.7,
+  "old_mounted_mm": 43.7,
+  "savings_mm": 16.5,
+  "holder_gap_mm": 7.5,
+  "mount_plate_mm": 3,
+  "clear_shared_depth_mm": 10,
+  "shared_depth_inside_case_mm": 2.5,
+  "rear_opening_mm": [
+    35,
+    43
+  ],
+  "case_holder_overlap_mm3": 0,
+  "pocket_case_overlap_mm3": 0,
+  "pocket_holder_overlap_mm3": 0,
+  "pocket_speaker_overlap_mm3": 0,
+  "cables": [
+    {
+      "port": 0,
+      "case_overlap_mm3": 0,
+      "holder_overlap_mm3": 0,
+      "lead_od_mm": 3.5,
+      "lead_bend_radius_mm": 6,
+      "elbow_rotation_deg": 90
+    },
+    {
+      "port": 1,
+      "case_overlap_mm3": 0,
+      "holder_overlap_mm3": 0,
+      "lead_od_mm": 3.5,
+      "lead_bend_radius_mm": 6,
+      "elbow_rotation_deg": -90
+    }
+  ],
+  "motion": [
+    {
+      "lift_mm": 0,
+      "fixed_overlap_mm3": 0,
+      "rigid_elbow_overlaps_mm3": [
+        0,
+        0
+      ]
+    },
+    {
+      "lift_mm": 0.5,
+      "fixed_overlap_mm3": 0,
+      "rigid_elbow_overlaps_mm3": [
+        0,
+        0
+      ]
+    },
+    {
+      "lift_mm": 1,
+      "fixed_overlap_mm3": 0,
+      "rigid_elbow_overlaps_mm3": [
+        0,
+        0
+      ]
+    },
+    {
+      "lift_mm": 2,
+      "fixed_overlap_mm3": 0,
+      "rigid_elbow_overlaps_mm3": [
+        0,
+        0
+      ]
+    },
+    {
+      "lift_mm": 3,
+      "fixed_overlap_mm3": 0,
+      "rigid_elbow_overlaps_mm3": [
+        0,
+        0
+      ]
+    },
+    {
+      "lift_mm": 4,
+      "fixed_overlap_mm3": 0,
+      "rigid_elbow_overlaps_mm3": [
+        0,
+        0
+      ]
+    },
+    {
+      "pull_mm": -1,
+      "fixed_overlap_mm3": 0
+    },
+    {
+      "pull_mm": -3,
+      "fixed_overlap_mm3": 0
+    },
+    {
+      "pull_mm": -6,
+      "fixed_overlap_mm3": 0
+    },
+    {
+      "pull_mm": -10,
+      "fixed_overlap_mm3": 0
+    }
+  ],
+  "release": {
+    "tip_clearance_mm": 0.4262179298986064,
+    "plate_gap_at_full_deflection_mm": 2.372983870967742,
+    "released_lift_overlaps_mm3": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "tool_overlaps_mm3": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "released_tip_fixed_overlap_mm3": 0
+  },
+  "two_cables_overlap_mm3": 0
+}

@@ -1,0 +1,364 @@
+{
+  "frame": "rear view; glass lower-left(0,0), front z=0, rearward +z",
+  "case_step_sha256": "62e1ad5e284bb56e5d7a4ccd5a788336414926a6e97ca28761ce449dce920c12",
+  "board_source": "reference/board-aligned.brep",
+  "board_source_sha256": "6b7b0970b7a98386d36acfa9c523caebfb35dc8b0dadb8d3e67755756e636824",
+  "parameters_json_sha256": "a2db9cdfff0cb28a007ec107a036195895f352c938fb03999f31e5a2a002b702",
+  "revision": "J",
+  "layout": {
+    "battery_xy": [
+      15.1,
+      17.0
+    ],
+    "speaker_xy": [
+      70.0,
+      37.0
+    ],
+    "camera_xy": [
+      98.0,
+      17.0
+    ]
+  },
+  "case_valid": true,
+  "case_solids": 1,
+  "candidate_intersections": [
+    {
+      "solid": 1,
+      "bbox": [
+        -2.1471713296250525e-14,
+        -2.137689899673951e-14,
+        -9.769962616701378e-15,
+        126.90000000000003,
+        70.70000000000002,
+        5.3
+      ],
+      "volume_mm3": 0.0
+    },
+    {
+      "solid": 448,
+      "bbox": [
+        56.102930176064746,
+        4.221397432094592,
+        7.6999986620707315,
+        107.40331607311455,
+        10.824980360669544,
+        12.79999896489168
+      ],
+      "volume_mm3": 0.0
+    },
+    {
+      "solid": 449,
+      "bbox": [
+        32.40441540943485,
+        4.120353112374872,
+        7.550998647631906,
+        40.104623255047,
+        9.32057841084228,
+        10.950998647632009
+      ],
+      "volume_mm3": 0.0
+    },
+    {
+      "solid": 471,
+      "bbox": [
+        0.22955809352756376,
+        21.57527108166777,
+        6.68952094380465,
+        7.760210945986498,
+        31.155371258187277,
+        10.849521244501213
+      ],
+      "volume_mm3": 0.0
+    },
+    {
+      "solid": 493,
+      "bbox": [
+        0.22822865228497538,
+        39.525336645226375,
+        6.689520943804649,
+        7.758881504743903,
+        49.105436821745876,
+        10.849521244501211
+      ],
+      "volume_mm3": 0.0
+    },
+    {
+      "solid": 1178,
+      "bbox": [
+        113.66830980370229,
+        16.473044006590765,
+        7.599999340000005,
+        117.66832446239582,
+        16.67654025923832,
+        11.000000160000008
+      ],
+      "volume_mm3": 0.0
+    },
+    {
+      "solid": 1182,
+      "bbox": [
+        113.66807303781877,
+        19.669848044452937,
+        7.599999340000005,
+        117.66808769651229,
+        19.87334429710049,
+        11.000000160000008
+      ],
+      "volume_mm3": 0.0
+    },
+    {
+      "solid": 1183,
+      "bbox": [
+        117.31547870451715,
+        16.573317766813155,
+        7.599999340000005,
+        117.52359808959369,
+        19.82333173408219,
+        11.000000160000008
+      ],
+      "volume_mm3": 0.0
+    },
+    {
+      "solid": 1184,
+      "bbox": [
+        113.66807268074908,
+        16.51105886744581,
+        10.899998815479005,
+        117.41832570776322,
+        19.823331496153116,
+        10.999998615479006
+      ],
+      "volume_mm3": 0.0
+    },
+    {
+      "solid": 1189,
+      "bbox": [
+        28.163410021848836,
+        61.43555418230207,
+        7.549028277223995,
+        28.3636877590377,
+        65.18556899088867,
+        11.899028284426995
+      ],
+      "volume_mm3": 0.0
+    },
+    {
+      "solid": 1190,
+      "bbox": [
+        33.11341001646754,
+        61.4359207956785,
+        7.549028277223995,
+        33.3136877536564,
+        65.18593560426511,
+        11.899028284426995
+      ],
+      "volume_mm3": 0.0
+    },
+    {
+      "solid": 1191,
+      "bbox": [
+        27.863413725340063,
+        61.035531963744624,
+        7.549028277223995,
+        33.62369994606605,
+        65.88579858638275,
+        11.899028384425995
+      ],
+      "volume_mm3": 0.0
+    },
+    {
+      "solid": 1192,
+      "bbox": [
+        2.050204785909024,
+        61.10020753379648,
+        6.0999993399999894,
+        7.550204785909024,
+        66.60020753379648,
+        11.599999439999992
+      ],
+      "volume_mm3": 0.0
+    },
+    {
+      "solid": 1193,
+      "bbox": [
+        2.0544263965708254,
+        4.100179450129666,
+        6.099999339999995,
+        7.554426396570825,
+        9.600179450129666,
+        11.599999439999996
+      ],
+      "volume_mm3": 0.0
+    },
+    {
+      "solid": 1194,
+      "bbox": [
+        114.05028781872795,
+        61.108502630492794,
+        6.099999340000002,
+        119.55028781872795,
+        66.6085026304928,
+        11.599999440000003
+      ],
+      "volume_mm3": 0.0
+    },
+    {
+      "solid": 1195,
+      "bbox": [
+        114.05450942938974,
+        4.108474546825988,
+        6.099999340000004,
+        119.55450942938974,
+        9.608474546825988,
+        11.599999440000007
+      ],
+      "volume_mm3": 0.0
+    }
+  ],
+  "accessory_intersections": [
+    {
+      "a": "case",
+      "b": "battery",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "case",
+      "b": "speaker",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "case",
+      "b": "insulator",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "battery",
+      "b": "speaker",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "battery",
+      "b": "insulator",
+      "volume_mm3": 0.0
+    },
+    {
+      "a": "speaker",
+      "b": "insulator",
+      "volume_mm3": 0.0
+    }
+  ],
+  "accessory_protrusions": [
+    {
+      "accessory": "battery",
+      "volume_outside_case_envelope_mm3": 0
+    },
+    {
+      "accessory": "speaker",
+      "volume_outside_case_envelope_mm3": 0
+    },
+    {
+      "accessory": "insulator",
+      "volume_outside_case_envelope_mm3": 0
+    }
+  ],
+  "clearances": {
+    "battery": {
+      "conservative_board_zmax": 10.119999289261555,
+      "nearest_bbox_solid": 61,
+      "minimum_front_z": 11.45,
+      "conservative_z_gap": 1.3300007107384442,
+      "nearest_board": {
+        "minimum_exact_distance_mm": 1.2651477224674124,
+        "nearest_solid": 429,
+        "nearest_solid_bbox": [
+          11.892012116504112,
+          9.243887871700842,
+          7.499999339999998,
+          18.692493994283254,
+          16.544110172714507,
+          10.40999944000135
+        ],
+        "exact_candidates": [
+          {
+            "solid": 429,
+            "bbox_lower_bound_mm": 1.135533662829905,
+            "exact_distance_mm": 1.2651477224674124
+          }
+        ],
+        "pruned_by_distance_lower_bound": 1200
+      }
+    },
+    "speaker": {
+      "conservative_board_zmax": 10.119999289261555,
+      "nearest_bbox_solid": 61,
+      "minimum_front_z": 12.05,
+      "conservative_z_gap": 1.9300007107384456,
+      "nearest_board": {
+        "minimum_exact_distance_mm": 1.9300007107384012,
+        "nearest_solid": 61,
+        "nearest_solid_bbox": [
+          53.35167369246141,
+          26.603762349497174,
+          7.61999928926155,
+          74.75296233533349,
+          44.00534725657097,
+          10.119999289261555
+        ],
+        "exact_candidates": [
+          {
+            "solid": 61,
+            "bbox_lower_bound_mm": 1.9300007107384456,
+            "exact_distance_mm": 1.9300007107384012
+          }
+        ],
+        "pruned_by_distance_lower_bound": 1200
+      }
+    },
+    "insulator": {
+      "conservative_board_zmax": 10.119999289261555,
+      "nearest_bbox_solid": 61,
+      "minimum_front_z": 11.2,
+      "conservative_z_gap": 1.0800007107384442,
+      "nearest_board": {
+        "minimum_exact_distance_mm": 1.0668169616501608,
+        "nearest_solid": 429,
+        "nearest_solid_bbox": [
+          11.892012116504112,
+          9.243887871700842,
+          7.499999339999998,
+          18.692493994283254,
+          16.544110172714507,
+          10.40999944000135
+        ],
+        "exact_candidates": [
+          {
+            "solid": 429,
+            "bbox_lower_bound_mm": 0.9121054870027785,
+            "exact_distance_mm": 1.0668169616501608
+          }
+        ],
+        "pruned_by_distance_lower_bound": 1200
+      }
+    }
+  },
+  "minimum_design_clearance_mm": {
+    "battery": 1.0,
+    "insulator": 1.0
+  },
+  "confidence": {
+    "modeled_rigid_collisions": "Exact OpenCascade intersections for every possible board/case collision candidate; strict geometric separation proves remaining board solids clear. Exact accessory/case and accessory/accessory intersections.",
+    "reported_vertical_gaps": "Conservative lower bounds from projected component bounding boxes. They can underestimate the actual local free space.",
+    "reported_minimum_3d_distances": "Exact OpenCascade surface distances for bounding-box-sorted candidates; all untested board solids have a bounding-box distance lower bound larger than the best exact distance. This proves the reported minimum across every board solid.",
+    "physical_fit": "Unverified: real speaker/camera dimensions, leads, mating plugs, flex bends, adhesive, tolerances, acoustic paths and thermal behavior are outside these rigid-solid checks."
+  },
+  "first_interior_plastic_z": 10.699999999999834,
+  "board_solids_cleared_by_separation": 1185,
+  "lateral_candidates_checked_exactly": [
+    1
+  ],
+  "nonzero_intersections": [],
+  "clearance_failures": [],
+  "checked_files_unchanged_at_end": true,
+  "passed": true,
+  "elapsed_seconds": 6.036647796630859
+}
