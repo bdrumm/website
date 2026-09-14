@@ -1,29 +1,32 @@
 {
+  "redirects": {
+    "n43": "p43",
+    "o43": "q43"
+  },
   "variants": [
     {
-      "id": "n43",
+      "id": "p43",
       "label": "4.3-inch \u00b7 Battery wall",
-      "revision": "N43",
+      "revision": "P43",
       "size": [
         71.6,
         118.3,
-        24.9
+        24.5
       ],
-      "depth": 29.2,
+      "depth": 28.8,
       "mode": "bottom",
       "release": "right",
       "status": "Measured 4.3 prototype",
       "summary": "114 \u00d7 65 mm measured glass; 92 \u00d7 50 mm posts; 26 \u00d7 26 \u00d7 5 mm speaker. 65 \u00d7 36 \u00d7 10 mm cased battery.",
       "archive": false,
-      "rim": 17.599999999999998,
+      "rim": 17.2,
       "parts": {
-        "case": "assets/bf9fe4f5724e9337-case-preview.stl",
+        "case": "assets/959693581dd9764e-case-preview.stl",
         "glass": "assets/5b6d4d23d1690d6a-glass-preview.stl",
         "pcb": "assets/4fe89834a1f8f004-pcb-preview.stl",
         "modules": "assets/7ab6477833f1c475-modules-preview.stl",
         "speaker": "assets/b9320816f895180f-speaker-preview.stl",
         "holder": "assets/3b36d5b08c1430a8-holder-preview.stl",
-        "bezel": "assets/ead093d0b968aa5c-bezel-preview.stl",
         "usb0": "assets/d8f9bf89f4ff0569-cable-0-preview.stl",
         "usb1": "assets/9d88f54db1103edf-cable-1-preview.stl",
         "battery": "assets/b718a64c70cc878a-battery-preview.stl",
@@ -31,28 +34,28 @@
       },
       "downloads": [
         {
-          "label": "Case + bezel + holder \u00b7 3MF",
-          "url": "assets/e9236a3d0cc3ae15-p4-43-battery-n43.3mf"
+          "label": "One-piece case + holder \u00b7 3MF",
+          "url": "assets/4606170e88e064af-p4-43-battery-p43.3mf"
         },
         {
-          "label": "Bezel + USB fit coupons \u00b7 3MF",
-          "url": "assets/b10cfbc667c46a6a-p4-43-bezel-usb-coupons.3mf"
+          "label": "Integral lip + USB fit coupons \u00b7 3MF",
+          "url": "assets/8a0a4922a8755ef0-p4-43-lip-usb-coupons.3mf"
         },
         {
           "label": "Glass / post jig + speaker coupon \u00b7 3MF",
-          "url": "assets/8edd9d62a5a54230-p4-43-fit-coupons.3mf"
+          "url": "assets/450956794cfe36bc-p4-43-fit-coupons.3mf"
         },
         {
           "label": "Confirmed dimensions \u00b7 JSON",
-          "url": "assets/30a2e4b114f011a2-mechanical-profile.json"
+          "url": "assets/0fc9a772466d5240-mechanical-profile.json"
         },
         {
           "label": "Case \u00b7 STL",
-          "url": "assets/f33e94f87c03c896-case-measurement-prototype.stl"
+          "url": "assets/a2f76d28fed883ff-case-measurement-prototype.stl"
         },
         {
           "label": "Case \u00b7 STEP",
-          "url": "assets/c6d2794ffaeb0aae-case-measurement-prototype.step"
+          "url": "assets/2da4db5eb6df2386-case-measurement-prototype.step"
         },
         {
           "label": "Holder \u00b7 STL",
@@ -60,19 +63,11 @@
         },
         {
           "label": "Holder \u00b7 STEP",
-          "url": "assets/422b263e490a2a16-holder.step"
-        },
-        {
-          "label": "Bezel \u00b7 STL",
-          "url": "assets/17eeed675d46c45c-bezel.stl"
-        },
-        {
-          "label": "Bezel \u00b7 STEP",
-          "url": "assets/6384808aae378bd0-bezel.step"
+          "url": "assets/d3edd438f8df15e5-holder.step"
         },
         {
           "label": "mount case coupon \u00b7 STL",
-          "url": "assets/a4cab3e8f1f16386-mount-case-coupon.stl"
+          "url": "assets/dfa51450c0fb3bed-mount-case-coupon.stl"
         },
         {
           "label": "mount holder coupon \u00b7 STL",
@@ -84,11 +79,11 @@
         },
         {
           "label": "usb clearance coupon \u00b7 STL",
-          "url": "assets/12ac8f7a0b1dfe9d-usb-clearance-coupon.stl"
+          "url": "assets/78386d78bce13bf4-usb-clearance-coupon.stl"
         },
         {
           "label": "glass fit ring \u00b7 STL",
-          "url": "assets/eacd75bdb008b7bf-glass-fit-ring.stl"
+          "url": "assets/7a592055cba1f16b-glass-fit-ring.stl"
         },
         {
           "label": "mount pattern template \u00b7 STL",
@@ -96,14 +91,799 @@
         },
         {
           "label": "fit jig \u00b7 STL",
-          "url": "assets/6068f6c99db7a099-fit-jig.stl"
+          "url": "assets/f55368e5cd3eec8a-fit-jig.stl"
         },
         {
-          "label": "bezel fit ring \u00b7 STL",
-          "url": "assets/b656ab81ead00af8-bezel-fit-ring.stl"
+          "label": "lip fit ring \u00b7 STL",
+          "url": "assets/df4d7769d0d0f67e-lip-fit-ring.stl"
         }
       ],
-      "guide": "assets/f7694ebad2c15386-README.md",
+      "guide": "assets/a78df909a7e3ed4b-README.md",
+      "parameters": {
+        "revision": "P43",
+        "outer_chamfer_mm": 0.6,
+        "outer_blend_radius_mm": 0.15,
+        "perimeter_gap": 0.35,
+        "side_perimeter_gap": 1.0,
+        "wall": 1.8,
+        "side_wall": 2.3,
+        "back": 1.6,
+        "rim_proud": 1.2,
+        "rear_z": 16.0,
+        "screw_clearance": 2.9,
+        "screw_well": 7.6,
+        "screw_post": 11.5,
+        "screw_web": 2.0,
+        "battery": [
+          65,
+          36,
+          10
+        ],
+        "battery_xy": [
+          42.0,
+          13.0
+        ],
+        "battery_casing_mm": [
+          65,
+          36,
+          10
+        ],
+        "speaker_lead_mm": 50,
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          26,
+          26,
+          5
+        ],
+        "speaker_xy": [
+          11.5,
+          25.0
+        ],
+        "speaker_dimensions_confirmed": true,
+        "speaker_leaf_root_outset": 2.0,
+        "speaker_fixed_lip_offsets": [
+          12.0,
+          20.0
+        ],
+        "usb_coupon_enabled": false,
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": true,
+        "camera_enabled": false,
+        "dock_enabled": false,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 10.0,
+        "battery_rear_z": 23.3,
+        "battery_rotated_90_degrees": false,
+        "battery_wire_exit_y_mm": 17.0,
+        "speaker_rear_z": 18.5,
+        "design_update": "2026-09-14: integral side lip, intact display tilt/slide insertion, cleared USB inner ledges",
+        "integral_lip": {
+          "separate_part": false,
+          "side_overlap_mm": 0.6,
+          "top_bottom_overlap_mm": 0,
+          "thickness_mm": 0.8,
+          "glass_face_clearance_mm": 0.4,
+          "front_z_mm": -1.2,
+          "visible_opening_mm": [
+            114.7,
+            63.8
+          ],
+          "insertion": "Intact display tilted 7 degrees: tuck first side under lip, lower opposite side with 0.8 mm lateral offset, then center and fasten rear screws.",
+          "target_glass_centering_mm": 0.2
+        },
+        "mechanical_profile_sha256": "0fc9a772466d5240a252517c9fdee4a3bffea10709b2087b53b0b246bf308016"
+      },
+      "board": {
+        "glass": [
+          114,
+          65
+        ],
+        "active": [
+          94.4,
+          56.96
+        ],
+        "posts": [
+          [
+            8.75,
+            7.5
+          ],
+          [
+            8.75,
+            57.5
+          ],
+          [
+            100.75,
+            7.5
+          ],
+          [
+            100.75,
+            57.5
+          ]
+        ],
+        "postZ": 11.5,
+        "pattern": [
+          92,
+          50
+        ],
+        "measured": true,
+        "source": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-4.3",
+        "photo": "assets/0c10f6ee642130a7-board-hardware.webp"
+      },
+      "integralLip": {
+        "separate_part": false,
+        "side_overlap_mm": 0.6,
+        "top_bottom_overlap_mm": 0,
+        "thickness_mm": 0.8,
+        "glass_face_clearance_mm": 0.4,
+        "front_z_mm": -1.2,
+        "visible_opening_mm": [
+          114.7,
+          63.8
+        ],
+        "insertion": "Intact display tilted 7 degrees: tuck first side under lip, lower opposite side with 0.8 mm lateral offset, then center and fasten rear screws.",
+        "target_glass_centering_mm": 0.2
+      },
+      "lipSection": "assets/f93752c04fae429c-integral-lip-preview.png",
+      "usbSection": "assets/ecdf4f2dcb3227a4-usb-relief-preview.png",
+      "cupSize": [
+        71.6,
+        118.3,
+        24.5
+      ],
+      "hardware": {
+        "glass_mm": [
+          114,
+          65
+        ],
+        "front_to_screw_end_mm": 11.5,
+        "mount_pattern_mm": [
+          92,
+          50
+        ],
+        "speaker_mm": [
+          26,
+          26,
+          5
+        ],
+        "speaker_lead_mm": 50,
+        "battery_casing_mm": [
+          65,
+          36,
+          10
+        ]
+      },
+      "fit": {
+        "glass_cavity_mm": [
+          114.7,
+          67.0
+        ],
+        "glass_corner_radius_nominal_mm": 2.5,
+        "board_mount_washers": "Four metal M2.5 washers, 7 mm OD, up to 0.5 mm thick; screw-head OD up to 5 mm",
+        "unverified": [
+          "Glass corner profile",
+          "Glass-to-post offset within adjustment",
+          "USB plug boots and bend envelope",
+          "Usable screw thread depth",
+          "Speaker wire exit and corner radius",
+          "Printed clip force and endurance",
+          "Real intact display tilt/slide insertion and glass corner clearance"
+        ],
+        "glass_gap_xy_mm": [
+          0.35,
+          1.0
+        ],
+        "wall_xy_mm": [
+          1.8,
+          2.3
+        ],
+        "clearance_confirmation": "Owner confirmed glass remains 114 x 65 mm; leave top/bottom fit unchanged and provide 1 mm clearance at each left/right edge (65 mm axis).",
+        "usb_relief": {
+          "opening_width_height_mm": [
+            14,
+            10
+          ],
+          "socket_center_z_mm": 8.6695,
+          "throat_x_limits_mm": [
+            -3,
+            4
+          ],
+          "screening_boot_width_height_mm": [
+            12,
+            9
+          ],
+          "screening_boot_front_x_mm": 1.55,
+          "provenance": "Owner photograph of printed case: inner receiver ledge obstructed larger USB plug shoulders. Final throat cut follows receiver union; physical plug dimensions unmeasured."
+        },
+        "integral_lip": {
+          "separate_part": false,
+          "side_overlap_mm": 0.6,
+          "top_bottom_overlap_mm": 0,
+          "thickness_mm": 0.8,
+          "glass_face_clearance_mm": 0.4,
+          "front_z_mm": -1.2,
+          "visible_opening_mm": [
+            114.7,
+            63.8
+          ],
+          "insertion": "Intact display tilted 7 degrees: tuck first side under lip, lower opposite side with 0.8 mm lateral offset, then center and fasten rear screws.",
+          "target_glass_centering_mm": 0.2
+        }
+      },
+      "measurementRevision": "2026-09-14-battery-65",
+      "evidence": [
+        {
+          "label": "assembly checks",
+          "url": "assets/f0caa80d1b2fb087-assembly-checks.json"
+        },
+        {
+          "label": "independent clearance checks",
+          "url": "assets/2b58360ed1175634-independent-clearance-checks.json"
+        },
+        {
+          "label": "mount verification",
+          "url": "assets/357c54fc25cbf406-mount-verification.json"
+        },
+        {
+          "label": "integral lip verification",
+          "url": "assets/53c6c7ae8896038e-integral-lip-verification.json"
+        },
+        {
+          "label": "slicer validation",
+          "url": "assets/7f380bd064ca2760-slicer-validation.json"
+        }
+      ],
+      "printImages": [
+        {
+          "label": "Case reference toolpaths",
+          "url": "assets/fa316a1440204ac6-case-toolpaths.png"
+        },
+        {
+          "label": "Holder reference toolpaths",
+          "url": "assets/a39ed47b08f85ec1-holder-toolpaths.png"
+        }
+      ]
+    },
+    {
+      "id": "q43",
+      "label": "4.3-inch \u00b7 Slim switch",
+      "revision": "Q43",
+      "size": [
+        71.6,
+        132.3,
+        18.4
+      ],
+      "depth": 27.7,
+      "mode": "rear",
+      "release": "left",
+      "status": "Measured 4.3 prototype",
+      "summary": "114 \u00d7 65 mm measured glass; 92 \u00d7 50 mm posts; 26 \u00d7 26 \u00d7 5 mm speaker. No battery.",
+      "archive": false,
+      "rim": 17.2,
+      "parts": {
+        "case": "assets/6bd05e8353d2a817-case-preview.stl",
+        "glass": "assets/5b6d4d23d1690d6a-glass-preview.stl",
+        "pcb": "assets/4fe89834a1f8f004-pcb-preview.stl",
+        "modules": "assets/7ab6477833f1c475-modules-preview.stl",
+        "speaker": "assets/21eeb0f9c9581c28-speaker-preview.stl",
+        "holder": "assets/971427b8c75be3f3-holder-preview.stl",
+        "usb0": "assets/835be385bd57ef25-cable-0-preview.stl",
+        "usb1": "assets/cdc4d9b0756dd5d8-cable-1-preview.stl",
+        "bay": "assets/9712927778190882-pocket-preview.stl"
+      },
+      "downloads": [
+        {
+          "label": "One-piece case + holder \u00b7 3MF",
+          "url": "assets/843617bcc4f03056-p4-43-switch-q43.3mf"
+        },
+        {
+          "label": "Integral lip + USB fit coupons \u00b7 3MF",
+          "url": "assets/8a0a4922a8755ef0-p4-43-lip-usb-coupons.3mf"
+        },
+        {
+          "label": "Glass / post jig + speaker coupon \u00b7 3MF",
+          "url": "assets/450956794cfe36bc-p4-43-fit-coupons.3mf"
+        },
+        {
+          "label": "Confirmed dimensions \u00b7 JSON",
+          "url": "assets/0fc9a772466d5240-mechanical-profile.json"
+        },
+        {
+          "label": "Case \u00b7 STL",
+          "url": "assets/58202eef8c812a57-case-measurement-prototype.stl"
+        },
+        {
+          "label": "Case \u00b7 STEP",
+          "url": "assets/cf24e06686dd1b7b-case-measurement-prototype.step"
+        },
+        {
+          "label": "Holder \u00b7 STL",
+          "url": "assets/8d450c3ff171245e-holder.stl"
+        },
+        {
+          "label": "Holder \u00b7 STEP",
+          "url": "assets/c16c255e0386f831-holder.step"
+        },
+        {
+          "label": "mount case coupon \u00b7 STL",
+          "url": "assets/83c38763eb06f1c6-mount-case-coupon.stl"
+        },
+        {
+          "label": "mount holder coupon \u00b7 STL",
+          "url": "assets/52237724cb17f271-mount-holder-coupon.stl"
+        },
+        {
+          "label": "speaker clip coupon \u00b7 STL",
+          "url": "assets/ebcbd7d084b697fa-speaker-clip-coupon.stl"
+        },
+        {
+          "label": "glass fit ring \u00b7 STL",
+          "url": "assets/6175d73fdaf0bd13-glass-fit-ring.stl"
+        },
+        {
+          "label": "mount pattern template \u00b7 STL",
+          "url": "assets/a524eab29858a82d-mount-pattern-template.stl"
+        },
+        {
+          "label": "fit jig \u00b7 STL",
+          "url": "assets/f55368e5cd3eec8a-fit-jig.stl"
+        },
+        {
+          "label": "lip fit ring \u00b7 STL",
+          "url": "assets/05a0f5c1e68227c8-lip-fit-ring.stl"
+        }
+      ],
+      "guide": "assets/ad4654066aa53ec9-README.md",
+      "parameters": {
+        "revision": "Q43",
+        "outer_chamfer_mm": 0.6,
+        "outer_blend_radius_mm": 0.15,
+        "perimeter_gap": 0.35,
+        "side_perimeter_gap": 1.0,
+        "wall": 1.8,
+        "side_wall": 2.3,
+        "back": 1.6,
+        "rim_proud": 1.2,
+        "rear_z": 16.0,
+        "screw_clearance": 2.9,
+        "screw_well": 7.6,
+        "screw_post": 11.5,
+        "screw_web": 2.0,
+        "battery": [
+          65,
+          36,
+          10
+        ],
+        "battery_xy": [
+          42.0,
+          13.0
+        ],
+        "battery_casing_mm": [
+          65,
+          36,
+          10
+        ],
+        "speaker_lead_mm": 50,
+        "battery_side_gap": 0.4,
+        "battery_rear_pad": 0.25,
+        "battery_insulator": 0.25,
+        "speaker": [
+          26,
+          26,
+          5
+        ],
+        "speaker_xy": [
+          59.0,
+          31.0
+        ],
+        "speaker_dimensions_confirmed": true,
+        "speaker_leaf_root_outset": 2.0,
+        "speaker_fixed_lip_offsets": [
+          12.0,
+          20.0
+        ],
+        "usb_coupon_enabled": false,
+        "speaker_side_gap": 0.5,
+        "speaker_left_stop_gap": 0.1,
+        "speaker_gasket": 0.25,
+        "speaker_recess": 0.4,
+        "battery_enabled": false,
+        "camera_enabled": false,
+        "dock_enabled": false,
+        "camera": [
+          16.0,
+          16.0,
+          8.0
+        ],
+        "camera_xy": [
+          98.0,
+          17.0
+        ],
+        "camera_pcb": 1.2,
+        "lens_diameter": 10.0,
+        "lens_recess": 0.3,
+        "camera_mount_pad": 0.3,
+        "usb_boot_width": 14.0,
+        "usb_boot_height": 10.0,
+        "battery_rear_z": 16.0,
+        "battery_rotated_90_degrees": false,
+        "battery_wire_exit_y_mm": 17.0,
+        "speaker_rear_z": 17.2,
+        "design_update": "2026-09-14: integral side lip, intact display tilt/slide insertion, cleared USB inner ledges",
+        "integral_lip": {
+          "separate_part": false,
+          "side_overlap_mm": 0.6,
+          "top_bottom_overlap_mm": 0,
+          "thickness_mm": 0.8,
+          "glass_face_clearance_mm": 0.4,
+          "front_z_mm": -1.2,
+          "visible_opening_mm": [
+            114.7,
+            63.8
+          ],
+          "insertion": "Intact display tilted 7 degrees: tuck first side under lip, lower opposite side with 0.8 mm lateral offset, then center and fasten rear screws.",
+          "target_glass_centering_mm": 0.2
+        },
+        "mechanical_profile_sha256": "0fc9a772466d5240a252517c9fdee4a3bffea10709b2087b53b0b246bf308016"
+      },
+      "board": {
+        "glass": [
+          114,
+          65
+        ],
+        "active": [
+          94.4,
+          56.96
+        ],
+        "posts": [
+          [
+            8.75,
+            7.5
+          ],
+          [
+            8.75,
+            57.5
+          ],
+          [
+            100.75,
+            7.5
+          ],
+          [
+            100.75,
+            57.5
+          ]
+        ],
+        "postZ": 11.5,
+        "pattern": [
+          92,
+          50
+        ],
+        "measured": true,
+        "source": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-4.3",
+        "photo": "assets/0c10f6ee642130a7-board-hardware.webp"
+      },
+      "integralLip": {
+        "separate_part": false,
+        "side_overlap_mm": 0.6,
+        "top_bottom_overlap_mm": 0,
+        "thickness_mm": 0.8,
+        "glass_face_clearance_mm": 0.4,
+        "front_z_mm": -1.2,
+        "visible_opening_mm": [
+          114.7,
+          63.8
+        ],
+        "insertion": "Intact display tilted 7 degrees: tuck first side under lip, lower opposite side with 0.8 mm lateral offset, then center and fasten rear screws.",
+        "target_glass_centering_mm": 0.2
+      },
+      "lipSection": "assets/f93752c04fae429c-integral-lip-preview.png",
+      "usbSection": "assets/ecdf4f2dcb3227a4-usb-relief-preview.png",
+      "cupSize": [
+        71.6,
+        132.3,
+        18.4
+      ],
+      "hardware": {
+        "glass_mm": [
+          114,
+          65
+        ],
+        "front_to_screw_end_mm": 11.5,
+        "mount_pattern_mm": [
+          92,
+          50
+        ],
+        "speaker_mm": [
+          26,
+          26,
+          5
+        ],
+        "speaker_lead_mm": 50,
+        "battery_casing_mm": [
+          65,
+          36,
+          10
+        ]
+      },
+      "fit": {
+        "glass_cavity_mm": [
+          114.7,
+          67.0
+        ],
+        "glass_corner_radius_nominal_mm": 2.5,
+        "board_mount_washers": "Four metal M2.5 washers, 7 mm OD, up to 0.5 mm thick; screw-head OD up to 5 mm",
+        "unverified": [
+          "Glass corner profile",
+          "Glass-to-post offset within adjustment",
+          "USB plug boots and bend envelope",
+          "Usable screw thread depth",
+          "Speaker wire exit and corner radius",
+          "Printed clip force and endurance",
+          "Real intact display tilt/slide insertion and glass corner clearance"
+        ],
+        "glass_gap_xy_mm": [
+          0.35,
+          1.0
+        ],
+        "wall_xy_mm": [
+          1.8,
+          2.3
+        ],
+        "clearance_confirmation": "Owner confirmed glass remains 114 x 65 mm; leave top/bottom fit unchanged and provide 1 mm clearance at each left/right edge (65 mm axis).",
+        "usb_relief": {
+          "opening_width_height_mm": [
+            14,
+            10
+          ],
+          "socket_center_z_mm": 8.6695,
+          "throat_x_limits_mm": [
+            -3,
+            4
+          ],
+          "screening_boot_width_height_mm": [
+            12,
+            9
+          ],
+          "screening_boot_front_x_mm": 1.55,
+          "provenance": "Owner photograph of printed case: inner receiver ledge obstructed larger USB plug shoulders. Final throat cut follows receiver union; physical plug dimensions unmeasured."
+        },
+        "integral_lip": {
+          "separate_part": false,
+          "side_overlap_mm": 0.6,
+          "top_bottom_overlap_mm": 0,
+          "thickness_mm": 0.8,
+          "glass_face_clearance_mm": 0.4,
+          "front_z_mm": -1.2,
+          "visible_opening_mm": [
+            114.7,
+            63.8
+          ],
+          "insertion": "Intact display tilted 7 degrees: tuck first side under lip, lower opposite side with 0.8 mm lateral offset, then center and fasten rear screws.",
+          "target_glass_centering_mm": 0.2
+        }
+      },
+      "measurementRevision": "2026-09-14-battery-65",
+      "evidence": [
+        {
+          "label": "assembly checks",
+          "url": "assets/cd7d321265bcd1f3-assembly-checks.json"
+        },
+        {
+          "label": "independent clearance checks",
+          "url": "assets/2493ec634bb26acc-independent-clearance-checks.json"
+        },
+        {
+          "label": "mount verification",
+          "url": "assets/0d2b07350ad3f612-mount-verification.json"
+        },
+        {
+          "label": "integral lip verification",
+          "url": "assets/b405e201906fec9d-integral-lip-verification.json"
+        },
+        {
+          "label": "slicer validation",
+          "url": "assets/951941b7457753ac-slicer-validation.json"
+        }
+      ],
+      "printImages": [
+        {
+          "label": "Case reference toolpaths",
+          "url": "assets/f5c919bae83b8c83-case-toolpaths.png"
+        },
+        {
+          "label": "Holder reference toolpaths",
+          "url": "assets/22cc15a44de6692e-holder-toolpaths.png"
+        }
+      ]
+    },
+    {
+      "id": "n43",
+      "label": "Rejected \u00b7 separate front bezel",
+      "revision": "N43",
+      "size": [
+        71.6,
+        118.3,
+        24.9
+      ],
+      "depth": 29.2,
+      "rim": 17.599999999999998,
+      "mode": "bottom",
+      "release": "right",
+      "archive": true,
+      "status": "Rejected \u00b7 extra printed piece",
+      "summary": "The owner requested an integral lip. Use P43/Q43; this separate-bezel approach is retained only as design history.",
+      "board": {
+        "glass": [
+          114,
+          65
+        ],
+        "active": [
+          94.4,
+          56.96
+        ],
+        "posts": [
+          [
+            8.75,
+            7.5
+          ],
+          [
+            8.75,
+            57.5
+          ],
+          [
+            100.75,
+            7.5
+          ],
+          [
+            100.75,
+            57.5
+          ]
+        ],
+        "postZ": 11.5,
+        "pattern": [
+          92,
+          50
+        ],
+        "measured": true,
+        "source": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-4.3",
+        "photo": "assets/0c10f6ee642130a7-board-hardware.webp"
+      },
+      "hardware": {
+        "glass_mm": [
+          114,
+          65
+        ],
+        "front_to_screw_end_mm": 11.5,
+        "mount_pattern_mm": [
+          92,
+          50
+        ],
+        "speaker_mm": [
+          26,
+          26,
+          5
+        ],
+        "speaker_lead_mm": 50,
+        "battery_casing_mm": [
+          65,
+          36,
+          10
+        ]
+      },
+      "fit": {
+        "glass_cavity_mm": [
+          114.7,
+          67.0
+        ],
+        "glass_corner_radius_nominal_mm": 2.5,
+        "board_mount_washers": "Four metal M2.5 washers, 7 mm OD, up to 0.5 mm thick; screw-head OD up to 5 mm",
+        "unverified": [
+          "Glass corner profile",
+          "Glass-to-post offset within adjustment",
+          "USB plug boots and bend envelope",
+          "Usable screw thread depth",
+          "Speaker wire exit and corner radius",
+          "Printed clip force and endurance",
+          "Printed bezel insertion/removal force and actual glass corners"
+        ],
+        "front_bezel": {
+          "removable": true,
+          "visible_opening_mm": [
+            112.4,
+            62.4
+          ],
+          "plate_thickness_mm": 1.2,
+          "glass_face_clearance_mm": 0.4,
+          "outer_size_mm": [
+            118.3,
+            71.6
+          ],
+          "attachment": "Four flexible cam detents, common removable bezel; case remains fastened to the display posts.",
+          "overlap_xy_mm": [
+            0.8,
+            1.3
+          ]
+        },
+        "glass_gap_xy_mm": [
+          0.35,
+          1.0
+        ],
+        "wall_xy_mm": [
+          1.8,
+          2.3
+        ],
+        "clearance_confirmation": "Owner confirmed glass remains 114 x 65 mm; leave top/bottom fit unchanged and provide 1 mm clearance at each left/right edge (65 mm axis).",
+        "usb_relief": {
+          "opening_width_height_mm": [
+            14,
+            10
+          ],
+          "socket_center_z_mm": 8.6695,
+          "throat_x_limits_mm": [
+            -3,
+            4
+          ],
+          "screening_boot_width_height_mm": [
+            12,
+            9
+          ],
+          "screening_boot_front_x_mm": 1.55,
+          "provenance": "Owner photograph of printed case: inner receiver ledge obstructed larger USB plug shoulders. Final throat cut follows receiver union; physical plug dimensions unmeasured."
+        }
+      },
+      "frontBezel": {
+        "removable": true,
+        "visible_opening_mm": [
+          112.4,
+          62.4
+        ],
+        "plate_thickness_mm": 1.2,
+        "glass_face_clearance_mm": 0.4,
+        "outer_size_mm": [
+          118.3,
+          71.6
+        ],
+        "attachment": "Four flexible cam detents, common removable bezel; case remains fastened to the display posts.",
+        "overlap_xy_mm": [
+          0.8,
+          1.3
+        ],
+        "glass_recess_mm": [
+          114.7,
+          67.0
+        ],
+        "minimum_overlap_at_full_glass_float_xy_mm": [
+          0.45,
+          0.3
+        ],
+        "rim_front_z": -1.6,
+        "tongue_width_mm": 6.0,
+        "tongue_thickness_mm": 0.8,
+        "tongue_length_mm": 8.2,
+        "root_fillet_mm": 0.35,
+        "nominal_cam_deflection_mm": 0.3,
+        "screening_deflection_mm": 0.45,
+        "ideal_bending_strain_percent": 1.2210978574255187,
+        "physical_fit_approved": false,
+        "assembly": "Seat display in cup, fasten its four rear screws, then press bezel on. Remove bezel before lifting display."
+      },
       "parameters": {
         "revision": "N43",
         "outer_chamfer_mm": 0.6,
@@ -218,6 +998,43 @@
         },
         "mechanical_profile_sha256": "30a2e4b114f011a29c6b8d4e465947ee08188c63d118347c6a9ea83c3ea65db9"
       },
+      "parts": {
+        "case": "assets/bf9fe4f5724e9337-case-preview.stl",
+        "glass": "assets/5b6d4d23d1690d6a-glass-preview.stl",
+        "pcb": "assets/4fe89834a1f8f004-pcb-preview.stl",
+        "modules": "assets/7ab6477833f1c475-modules-preview.stl",
+        "speaker": "assets/b9320816f895180f-speaker-preview.stl",
+        "holder": "assets/3b36d5b08c1430a8-holder-preview.stl",
+        "bezel": "assets/ead093d0b968aa5c-bezel-preview.stl",
+        "usb0": "assets/d8f9bf89f4ff0569-cable-0-preview.stl",
+        "usb1": "assets/9d88f54db1103edf-cable-1-preview.stl",
+        "battery": "assets/b718a64c70cc878a-battery-preview.stl",
+        "insulator": "assets/2a4a51580cd85e46-insulator-preview.stl"
+      },
+      "guide": "assets/f7694ebad2c15386-n43-rejected-guide.md",
+      "downloads": [
+        {
+          "label": "Rejected separate-bezel archive \u00b7 ZIP",
+          "url": "assets/b842149cd192e065-n43-o43-separate-bezel-rejected-20260914.zip"
+        }
+      ]
+    },
+    {
+      "id": "o43",
+      "label": "Rejected \u00b7 separate front bezel",
+      "revision": "O43",
+      "size": [
+        71.6,
+        132.3,
+        18.8
+      ],
+      "depth": 28.1,
+      "rim": 17.599999999999998,
+      "mode": "rear",
+      "release": "left",
+      "archive": true,
+      "status": "Rejected \u00b7 extra printed piece",
+      "summary": "The owner requested an integral lip. Use P43/Q43; this separate-bezel approach is retained only as design history.",
       "board": {
         "glass": [
           114,
@@ -254,48 +1071,6 @@
         "source": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-4.3",
         "photo": "assets/0c10f6ee642130a7-board-hardware.webp"
       },
-      "frontBezel": {
-        "removable": true,
-        "visible_opening_mm": [
-          112.4,
-          62.4
-        ],
-        "plate_thickness_mm": 1.2,
-        "glass_face_clearance_mm": 0.4,
-        "outer_size_mm": [
-          118.3,
-          71.6
-        ],
-        "attachment": "Four flexible cam detents, common removable bezel; case remains fastened to the display posts.",
-        "overlap_xy_mm": [
-          0.8,
-          1.3
-        ],
-        "glass_recess_mm": [
-          114.7,
-          67.0
-        ],
-        "minimum_overlap_at_full_glass_float_xy_mm": [
-          0.45,
-          0.3
-        ],
-        "rim_front_z": -1.6,
-        "tongue_width_mm": 6.0,
-        "tongue_thickness_mm": 0.8,
-        "tongue_length_mm": 8.2,
-        "root_fillet_mm": 0.35,
-        "nominal_cam_deflection_mm": 0.3,
-        "screening_deflection_mm": 0.45,
-        "ideal_bending_strain_percent": 1.2210978574255187,
-        "physical_fit_approved": false,
-        "assembly": "Seat display in cup, fasten its four rear screws, then press bezel on. Remove bezel before lifting display."
-      },
-      "usbSection": "assets/f774950a72d5bce4-usb-relief-preview.png",
-      "cupSize": [
-        71.6,
-        118.3,
-        23.7
-      ],
       "hardware": {
         "glass_mm": [
           114,
@@ -379,143 +1154,42 @@
           "provenance": "Owner photograph of printed case: inner receiver ledge obstructed larger USB plug shoulders. Final throat cut follows receiver union; physical plug dimensions unmeasured."
         }
       },
-      "measurementRevision": "2026-09-14-battery-65",
-      "evidence": [
-        {
-          "label": "assembly checks",
-          "url": "assets/6231b6f230954d7a-assembly-checks.json"
-        },
-        {
-          "label": "independent clearance checks",
-          "url": "assets/3c2eae94f42a2690-independent-clearance-checks.json"
-        },
-        {
-          "label": "mount verification",
-          "url": "assets/f755267d61263abe-mount-verification.json"
-        },
-        {
-          "label": "bezel usb verification",
-          "url": "assets/6fca9eb00ddc622c-bezel-usb-verification.json"
-        },
-        {
-          "label": "slicer validation",
-          "url": "assets/e5b22b1588c23a0a-slicer-validation.json"
-        }
-      ],
-      "printImages": [
-        {
-          "label": "Case reference toolpaths",
-          "url": "assets/1ff3ee956dfc05bf-case-toolpaths.png"
-        },
-        {
-          "label": "Holder reference toolpaths",
-          "url": "assets/ccb45f9791d87e1f-holder-toolpaths.png"
-        },
-        {
-          "label": "Bezel reference toolpaths",
-          "url": "assets/3166bdb2ac341f51-bezel-toolpaths.png"
-        }
-      ]
-    },
-    {
-      "id": "o43",
-      "label": "4.3-inch \u00b7 Slim switch",
-      "revision": "O43",
-      "size": [
-        71.6,
-        132.3,
-        18.8
-      ],
-      "depth": 28.1,
-      "mode": "rear",
-      "release": "left",
-      "status": "Measured 4.3 prototype",
-      "summary": "114 \u00d7 65 mm measured glass; 92 \u00d7 50 mm posts; 26 \u00d7 26 \u00d7 5 mm speaker. No battery.",
-      "archive": false,
-      "rim": 17.599999999999998,
-      "parts": {
-        "case": "assets/7dc4aa8e33f8dde6-case-preview.stl",
-        "glass": "assets/5b6d4d23d1690d6a-glass-preview.stl",
-        "pcb": "assets/4fe89834a1f8f004-pcb-preview.stl",
-        "modules": "assets/7ab6477833f1c475-modules-preview.stl",
-        "speaker": "assets/21eeb0f9c9581c28-speaker-preview.stl",
-        "holder": "assets/971427b8c75be3f3-holder-preview.stl",
-        "bezel": "assets/ead093d0b968aa5c-bezel-preview.stl",
-        "usb0": "assets/835be385bd57ef25-cable-0-preview.stl",
-        "usb1": "assets/cdc4d9b0756dd5d8-cable-1-preview.stl",
-        "bay": "assets/9712927778190882-pocket-preview.stl"
+      "frontBezel": {
+        "removable": true,
+        "visible_opening_mm": [
+          112.4,
+          62.4
+        ],
+        "plate_thickness_mm": 1.2,
+        "glass_face_clearance_mm": 0.4,
+        "outer_size_mm": [
+          118.3,
+          71.6
+        ],
+        "attachment": "Four flexible cam detents, common removable bezel; case remains fastened to the display posts.",
+        "overlap_xy_mm": [
+          0.8,
+          1.3
+        ],
+        "glass_recess_mm": [
+          114.7,
+          67.0
+        ],
+        "minimum_overlap_at_full_glass_float_xy_mm": [
+          0.45,
+          0.3
+        ],
+        "rim_front_z": -1.6,
+        "tongue_width_mm": 6.0,
+        "tongue_thickness_mm": 0.8,
+        "tongue_length_mm": 8.2,
+        "root_fillet_mm": 0.35,
+        "nominal_cam_deflection_mm": 0.3,
+        "screening_deflection_mm": 0.45,
+        "ideal_bending_strain_percent": 1.2210978574255187,
+        "physical_fit_approved": false,
+        "assembly": "Seat display in cup, fasten its four rear screws, then press bezel on. Remove bezel before lifting display."
       },
-      "downloads": [
-        {
-          "label": "Case + bezel + holder \u00b7 3MF",
-          "url": "assets/fe8b49e4a326ed05-p4-43-switch-o43.3mf"
-        },
-        {
-          "label": "Bezel + USB fit coupons \u00b7 3MF",
-          "url": "assets/b10cfbc667c46a6a-p4-43-bezel-usb-coupons.3mf"
-        },
-        {
-          "label": "Glass / post jig + speaker coupon \u00b7 3MF",
-          "url": "assets/8edd9d62a5a54230-p4-43-fit-coupons.3mf"
-        },
-        {
-          "label": "Confirmed dimensions \u00b7 JSON",
-          "url": "assets/30a2e4b114f011a2-mechanical-profile.json"
-        },
-        {
-          "label": "Case \u00b7 STL",
-          "url": "assets/f135d7928c0f13df-case-measurement-prototype.stl"
-        },
-        {
-          "label": "Case \u00b7 STEP",
-          "url": "assets/b5474ca210b229b5-case-measurement-prototype.step"
-        },
-        {
-          "label": "Holder \u00b7 STL",
-          "url": "assets/8d450c3ff171245e-holder.stl"
-        },
-        {
-          "label": "Holder \u00b7 STEP",
-          "url": "assets/029b5db96ded487b-holder.step"
-        },
-        {
-          "label": "Bezel \u00b7 STL",
-          "url": "assets/17eeed675d46c45c-bezel.stl"
-        },
-        {
-          "label": "Bezel \u00b7 STEP",
-          "url": "assets/257cc16b543b1c4c-bezel.step"
-        },
-        {
-          "label": "mount case coupon \u00b7 STL",
-          "url": "assets/cda24b13520ca91a-mount-case-coupon.stl"
-        },
-        {
-          "label": "mount holder coupon \u00b7 STL",
-          "url": "assets/52237724cb17f271-mount-holder-coupon.stl"
-        },
-        {
-          "label": "speaker clip coupon \u00b7 STL",
-          "url": "assets/ebcbd7d084b697fa-speaker-clip-coupon.stl"
-        },
-        {
-          "label": "glass fit ring \u00b7 STL",
-          "url": "assets/75a03f5e3ab584e7-glass-fit-ring.stl"
-        },
-        {
-          "label": "mount pattern template \u00b7 STL",
-          "url": "assets/a524eab29858a82d-mount-pattern-template.stl"
-        },
-        {
-          "label": "fit jig \u00b7 STL",
-          "url": "assets/6068f6c99db7a099-fit-jig.stl"
-        },
-        {
-          "label": "bezel fit ring \u00b7 STL",
-          "url": "assets/c97bd72955ebad73-bezel-fit-ring.stl"
-        }
-      ],
-      "guide": "assets/780b1aa8a035c6ae-README.md",
       "parameters": {
         "revision": "O43",
         "outer_chamfer_mm": 0.6,
@@ -630,202 +1304,23 @@
         },
         "mechanical_profile_sha256": "30a2e4b114f011a29c6b8d4e465947ee08188c63d118347c6a9ea83c3ea65db9"
       },
-      "board": {
-        "glass": [
-          114,
-          65
-        ],
-        "active": [
-          94.4,
-          56.96
-        ],
-        "posts": [
-          [
-            8.75,
-            7.5
-          ],
-          [
-            8.75,
-            57.5
-          ],
-          [
-            100.75,
-            7.5
-          ],
-          [
-            100.75,
-            57.5
-          ]
-        ],
-        "postZ": 11.5,
-        "pattern": [
-          92,
-          50
-        ],
-        "measured": true,
-        "source": "https://docs.waveshare.com/ESP32-P4-WIFI6-Touch-LCD-4.3",
-        "photo": "assets/0c10f6ee642130a7-board-hardware.webp"
+      "parts": {
+        "case": "assets/7dc4aa8e33f8dde6-case-preview.stl",
+        "glass": "assets/5b6d4d23d1690d6a-glass-preview.stl",
+        "pcb": "assets/4fe89834a1f8f004-pcb-preview.stl",
+        "modules": "assets/7ab6477833f1c475-modules-preview.stl",
+        "speaker": "assets/21eeb0f9c9581c28-speaker-preview.stl",
+        "holder": "assets/971427b8c75be3f3-holder-preview.stl",
+        "bezel": "assets/ead093d0b968aa5c-bezel-preview.stl",
+        "usb0": "assets/835be385bd57ef25-cable-0-preview.stl",
+        "usb1": "assets/cdc4d9b0756dd5d8-cable-1-preview.stl",
+        "bay": "assets/9712927778190882-pocket-preview.stl"
       },
-      "frontBezel": {
-        "removable": true,
-        "visible_opening_mm": [
-          112.4,
-          62.4
-        ],
-        "plate_thickness_mm": 1.2,
-        "glass_face_clearance_mm": 0.4,
-        "outer_size_mm": [
-          118.3,
-          71.6
-        ],
-        "attachment": "Four flexible cam detents, common removable bezel; case remains fastened to the display posts.",
-        "overlap_xy_mm": [
-          0.8,
-          1.3
-        ],
-        "glass_recess_mm": [
-          114.7,
-          67.0
-        ],
-        "minimum_overlap_at_full_glass_float_xy_mm": [
-          0.45,
-          0.3
-        ],
-        "rim_front_z": -1.6,
-        "tongue_width_mm": 6.0,
-        "tongue_thickness_mm": 0.8,
-        "tongue_length_mm": 8.2,
-        "root_fillet_mm": 0.35,
-        "nominal_cam_deflection_mm": 0.3,
-        "screening_deflection_mm": 0.45,
-        "ideal_bending_strain_percent": 1.2210978574255187,
-        "physical_fit_approved": false,
-        "assembly": "Seat display in cup, fasten its four rear screws, then press bezel on. Remove bezel before lifting display."
-      },
-      "usbSection": "assets/f774950a72d5bce4-usb-relief-preview.png",
-      "cupSize": [
-        71.6,
-        132.3,
-        17.6
-      ],
-      "hardware": {
-        "glass_mm": [
-          114,
-          65
-        ],
-        "front_to_screw_end_mm": 11.5,
-        "mount_pattern_mm": [
-          92,
-          50
-        ],
-        "speaker_mm": [
-          26,
-          26,
-          5
-        ],
-        "speaker_lead_mm": 50,
-        "battery_casing_mm": [
-          65,
-          36,
-          10
-        ]
-      },
-      "fit": {
-        "glass_cavity_mm": [
-          114.7,
-          67.0
-        ],
-        "glass_corner_radius_nominal_mm": 2.5,
-        "board_mount_washers": "Four metal M2.5 washers, 7 mm OD, up to 0.5 mm thick; screw-head OD up to 5 mm",
-        "unverified": [
-          "Glass corner profile",
-          "Glass-to-post offset within adjustment",
-          "USB plug boots and bend envelope",
-          "Usable screw thread depth",
-          "Speaker wire exit and corner radius",
-          "Printed clip force and endurance",
-          "Printed bezel insertion/removal force and actual glass corners"
-        ],
-        "front_bezel": {
-          "removable": true,
-          "visible_opening_mm": [
-            112.4,
-            62.4
-          ],
-          "plate_thickness_mm": 1.2,
-          "glass_face_clearance_mm": 0.4,
-          "outer_size_mm": [
-            118.3,
-            71.6
-          ],
-          "attachment": "Four flexible cam detents, common removable bezel; case remains fastened to the display posts.",
-          "overlap_xy_mm": [
-            0.8,
-            1.3
-          ]
-        },
-        "glass_gap_xy_mm": [
-          0.35,
-          1.0
-        ],
-        "wall_xy_mm": [
-          1.8,
-          2.3
-        ],
-        "clearance_confirmation": "Owner confirmed glass remains 114 x 65 mm; leave top/bottom fit unchanged and provide 1 mm clearance at each left/right edge (65 mm axis).",
-        "usb_relief": {
-          "opening_width_height_mm": [
-            14,
-            10
-          ],
-          "socket_center_z_mm": 8.6695,
-          "throat_x_limits_mm": [
-            -3,
-            4
-          ],
-          "screening_boot_width_height_mm": [
-            12,
-            9
-          ],
-          "screening_boot_front_x_mm": 1.55,
-          "provenance": "Owner photograph of printed case: inner receiver ledge obstructed larger USB plug shoulders. Final throat cut follows receiver union; physical plug dimensions unmeasured."
-        }
-      },
-      "measurementRevision": "2026-09-14-battery-65",
-      "evidence": [
+      "guide": "assets/780b1aa8a035c6ae-o43-rejected-guide.md",
+      "downloads": [
         {
-          "label": "assembly checks",
-          "url": "assets/7ff7b7d05e082592-assembly-checks.json"
-        },
-        {
-          "label": "independent clearance checks",
-          "url": "assets/7805323bb89aad77-independent-clearance-checks.json"
-        },
-        {
-          "label": "mount verification",
-          "url": "assets/21c3baeb4f789272-mount-verification.json"
-        },
-        {
-          "label": "bezel usb verification",
-          "url": "assets/a8d37ff1873dc8a5-bezel-usb-verification.json"
-        },
-        {
-          "label": "slicer validation",
-          "url": "assets/126b4fa18c6bb4a5-slicer-validation.json"
-        }
-      ],
-      "printImages": [
-        {
-          "label": "Case reference toolpaths",
-          "url": "assets/023421f315dc8cdb-case-toolpaths.png"
-        },
-        {
-          "label": "Holder reference toolpaths",
-          "url": "assets/22cc15a44de6692e-holder-toolpaths.png"
-        },
-        {
-          "label": "Bezel reference toolpaths",
-          "url": "assets/f591c3cbd8dd8049-bezel-toolpaths.png"
+          "label": "Rejected separate-bezel archive \u00b7 ZIP",
+          "url": "assets/b842149cd192e065-n43-o43-separate-bezel-rejected-20260914.zip"
         }
       ]
     },
@@ -844,7 +1339,7 @@
       "release": "right",
       "archive": true,
       "status": "Superseded \u00b7 before front rim and USB relief",
-      "summary": "Earlier close-fitting cup without removable bezel. Use N43/O43 for wider short-axis clearance and cleared USB ledges.",
+      "summary": "Earlier close-fitting cup without removable bezel. Use P43/Q43 for the integral side lip, wider short-axis clearance and cleared USB ledges.",
       "board": {
         "glass": [
           114,
@@ -1032,7 +1527,7 @@
       "release": "left",
       "archive": true,
       "status": "Superseded \u00b7 before front rim and USB relief",
-      "summary": "Earlier close-fitting cup without removable bezel. Use N43/O43 for wider short-axis clearance and cleared USB ledges.",
+      "summary": "Earlier close-fitting cup without removable bezel. Use P43/Q43 for the integral side lip, wider short-axis clearance and cleared USB ledges.",
       "board": {
         "glass": [
           114,
@@ -1219,7 +1714,7 @@
       "release": "right",
       "archive": true,
       "status": "Superseded \u00b7 earlier 52 mm battery",
-      "summary": "Earlier 52 \u00d7 36 \u00d7 10 mm battery layout. Use N43 for the confirmed 65 mm pack and updated rim.",
+      "summary": "Earlier 52 \u00d7 36 \u00d7 10 mm battery layout. Use P43 for the confirmed 65 mm pack and integral rim.",
       "board": {
         "glass": [
           114,

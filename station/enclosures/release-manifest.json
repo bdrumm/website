@@ -25,49 +25,78 @@
     ]
   },
   "measurement_revision": "2026-09-14-battery-65",
-  "design_revision": "2026-09-14-front-bezel-usb-relief",
-  "profile_sha256": "30a2e4b114f011a29c6b8d4e465947ee08188c63d118347c6a9ea83c3ea65db9",
+  "design_revision": "2026-09-14-integral-lip",
+  "profile_sha256": "0fc9a772466d5240a252517c9fdee4a3bffea10709b2087b53b0b246bf308016",
   "variants": [
     {
-      "id": "n43",
+      "id": "p43",
       "case_mm_portrait": [
         71.6,
         118.3,
-        24.9
+        24.5
       ],
-      "mounted_depth_mm": 29.2,
+      "mounted_depth_mm": 28.8,
+      "manufacturing_objects": 2,
+      "integral_lip": {
+        "separate_part": false,
+        "side_overlap_mm": 0.6,
+        "top_bottom_overlap_mm": 0,
+        "thickness_mm": 0.8,
+        "glass_face_clearance_mm": 0.4,
+        "front_z_mm": -1.2,
+        "visible_opening_mm": [
+          114.7,
+          63.8
+        ],
+        "insertion": "Intact display tilted 7 degrees: tuck first side under lip, lower opposite side with 0.8 mm lateral offset, then center and fasten rear screws.",
+        "target_glass_centering_mm": 0.2
+      },
       "files": {
-        "battery/exports/p4-43-battery-n43.3mf": "e9236a3d0cc3ae153c3e96789531d40a3306de9510bc4950838b6b7fa0de5850",
-        "battery/exports/case-measurement-prototype.step": "c6d2794ffaeb0aae9607770ac69d18ef0f4bda0d8259dad8f201cf764358bbff",
-        "battery/exports/holder.step": "422b263e490a2a16263e77b4969343aabd0db4854957bdc931691223405cff87",
-        "battery/exports/bezel.step": "6384808aae378bd0add3fbed435db36e1fe9db04b78863f07ba94b9a91ffae81",
-        "battery/exports/independent-clearance-checks.json": "3c2eae94f42a2690a6242fadba66b7b4623ef12c0bc7a9a36dde87506fd55c1e",
-        "battery/exports/mount-verification.json": "f755267d61263abef47f0ed755c97a3823ae6b9ed3468372b359cf5725331c57",
-        "battery/exports/bezel-usb-verification.json": "6fca9eb00ddc622cdb7577f6c8c07c922a9a52169664b894cf171e116542ab3d",
-        "battery/exports/slicer-validation.json": "e5b22b1588c23a0a91b7a922d8e7acc40efd77e15ade2d0db683e95b935c3d89"
+        "battery/exports/p4-43-battery-p43.3mf": "4606170e88e064afb5f0bbb4cb3693d4781dec90a1554028dd7d5aa8617d47e4",
+        "battery/exports/case-measurement-prototype.step": "2da4db5eb6df23864841df06779944d076cb264f64f732e888197e3051c0f4f4",
+        "battery/exports/holder.step": "d3edd438f8df15e5028f436d9299b5e79b31ca9009283bac6457e988e3493876",
+        "battery/exports/independent-clearance-checks.json": "2b58360ed1175634e53a14c135914dc56e3c6a8c2838724426b5f6f50dc6e0fd",
+        "battery/exports/mount-verification.json": "357c54fc25cbf40695fe7d2abf08a637338cd51df1e46729e9847c4e36095712",
+        "battery/exports/integral-lip-verification.json": "53c6c7ae8896038ec53e8f6d88ad898da2d24376ae99118f5b988559d5159727",
+        "battery/exports/slicer-validation.json": "7f380bd064ca2760ba9dff89c5ffdc9c91bb4ee268415728a8cf4346dbc54864"
       }
     },
     {
-      "id": "o43",
+      "id": "q43",
       "case_mm_portrait": [
         71.6,
         132.3,
-        18.8
+        18.4
       ],
-      "mounted_depth_mm": 28.1,
+      "mounted_depth_mm": 27.7,
+      "manufacturing_objects": 2,
+      "integral_lip": {
+        "separate_part": false,
+        "side_overlap_mm": 0.6,
+        "top_bottom_overlap_mm": 0,
+        "thickness_mm": 0.8,
+        "glass_face_clearance_mm": 0.4,
+        "front_z_mm": -1.2,
+        "visible_opening_mm": [
+          114.7,
+          63.8
+        ],
+        "insertion": "Intact display tilted 7 degrees: tuck first side under lip, lower opposite side with 0.8 mm lateral offset, then center and fasten rear screws.",
+        "target_glass_centering_mm": 0.2
+      },
       "files": {
-        "switch/exports/p4-43-switch-o43.3mf": "fe8b49e4a326ed054f429abb6f9ebff416778decc351c9fd143276fd5cb9316b",
-        "switch/exports/case-measurement-prototype.step": "b5474ca210b229b5fdcd6227a6c0ec51875ba988dc7b33e6e196161c23bb534c",
-        "switch/exports/holder.step": "029b5db96ded487b4b80aa2db44a5cee32a0b894f35b40a86979a84c209eca39",
-        "switch/exports/bezel.step": "257cc16b543b1c4ce971b3fdd1a9512894adc0d5b23bcb92f0a0aca06507978f",
-        "switch/exports/independent-clearance-checks.json": "7805323bb89aad775ae0f7e8d3460eb1ebd9d6b50d72e3a3c5326ae1fa152215",
-        "switch/exports/mount-verification.json": "21c3baeb4f789272c5c764f8ea4bd1b32c21b3c4c101a730dda223be0c1eca16",
-        "switch/exports/bezel-usb-verification.json": "a8d37ff1873dc8a51575bd7f8579abef9d3b1254aa198c473f5ce80670603629",
-        "switch/exports/slicer-validation.json": "126b4fa18c6bb4a580410182d56c2ec39d4ab9acfcc76b0b88cc8302d46f8fcb"
+        "switch/exports/p4-43-switch-q43.3mf": "843617bcc4f030561768ada8b768749f84803df7f875547b9e77506fea00ad1f",
+        "switch/exports/case-measurement-prototype.step": "cf24e06686dd1b7b3a6a8fbebdcebd40086107d03432e4d4aeb45fa25a94e0a4",
+        "switch/exports/holder.step": "c16c255e0386f831cbd8345c212660c337d6e3717778f69c64e7bef59fea2cb1",
+        "switch/exports/independent-clearance-checks.json": "2493ec634bb26acc125360154fd721313d2a9410b2d0b1ff3335134484050f8c",
+        "switch/exports/mount-verification.json": "0d2b07350ad3f612f9e858b8cbe2bbfbfa0512fd47dd1b373a7d0b5b843e1111",
+        "switch/exports/integral-lip-verification.json": "b405e201906fec9d92e008021defa6c8cf70d659a27424c0706241be91fece76",
+        "switch/exports/slicer-validation.json": "951941b7457753ac4ef134f2a4d865966157700264964502a4a65239cd3bd774"
       }
     }
   ],
   "archives": [
+    "archive/n43-o43-separate-bezel-rejected-20260914.zip",
     "archive/m43-l43-before-front-bezel-20260914.zip",
     "archive/k43-52mm-superseded-20260914.zip"
   ]

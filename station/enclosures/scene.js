@@ -31,7 +31,7 @@ export class CaseScene{
     this.showView(this.view);this.loading.hidden=true;return true;
   }
   clear(){for(const el of Object.values(this.labelEls||{}))el.remove();for(const child of [...this.frame.children]){child.traverse(o=>{if(o.material){if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material.dispose();}if(o.type==='LineSegments')o.geometry.dispose();});this.frame.remove(child);}this.meshes={};}
-  resetPose(){if(!this.device)return;this.device.position.set(0,0,0);this.device.rotation.set(0,0,0);this.display.position.set(0,0,0);this.screws.position.set(0,0,0);for(const m of Object.values(this.meshes)){m.position.set(0,0,0);m.rotation.set(0,0,0);}this.screws.visible=false;if(this.releaseArrow)this.releaseArrow.visible=false;}
+  resetPose(){if(!this.device)return;this.device.position.set(0,0,0);this.device.rotation.set(0,0,0);this.display.position.set(0,0,0);this.display.rotation.set(0,0,0);this.screws.position.set(0,0,0);for(const m of Object.values(this.meshes)){m.position.set(0,0,0);m.rotation.set(0,0,0);}this.screws.visible=false;if(this.releaseArrow)this.releaseArrow.visible=false;}
   visibility(){
     if(!this.device)return;this.display.visible=!['inside','mount'].includes(this.view)&&!this.hidden.has('display');
     for(const [name,m] of Object.entries(this.meshes)){m.visible=!this.hidden.has(name)&&(['glass','pcb','modules'].includes(name)||this.view!=='mount'||name==='holder');if(name==='holder'&&['inside','rear'].includes(this.view))m.visible=false;if(name==='bezel'&&this.view==='inside')m.visible=false;if(name==='bay')m.visible=this.xray&&!this.hidden.has(name);}
@@ -39,7 +39,7 @@ export class CaseScene{
   }
   showView(view){this.view=view;this.resetPose();this.visibility();if(view==='exploded'&&this.device){this.display.position.z=-52;if(this.meshes.bezel)this.meshes.bezel.position.z=-80;for(const n of ['speaker','battery','camera','insulator'])if(this.meshes[n])this.meshes[n].position.z=-24;if(this.meshes.holder)this.meshes.holder.position.z=48;this.screws.position.z=25;this.screws.visible=true;}this.fit();this.render();}
   setPose(p){
-    if(!this.device)return;this.resetPose();this.view='assembly';this.visibility();this.display.position.z=p.display;
+    if(!this.device)return;this.resetPose();this.view='assembly';this.visibility();const angle=p.displayTilt||0,pivot=this.variant?.board?.glass[1]||65;this.display.rotation.x=angle;this.display.position.y=pivot*(1-Math.cos(angle))+(p.displayShift||0);this.display.position.z=p.display-pivot*Math.sin(angle);
     this.device.position.set(p.lift||0,0,p.device||0);
     if(p.tilt){this.device.rotation.y=p.tilt;const pivot=12;this.device.position.x+=pivot*(1-Math.cos(p.tilt));this.device.position.z+=pivot*Math.sin(p.tilt);}
     for(const name of ['battery','insulator','speaker','camera','bezel'])if(this.meshes[name])this.meshes[name].position.z=p[name]||0;

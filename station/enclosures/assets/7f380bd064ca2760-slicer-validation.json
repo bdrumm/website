@@ -1,0 +1,54 @@
+{
+  "source_3mf_sha256": "4606170e88e064afb5f0bbb4cb3693d4781dec90a1554028dd7d5aa8617d47e4",
+  "slicer": "Bambu Studio 02.08.02.61",
+  "exit_code": 0,
+  "reference_profile": "P1S 0.4 mm / generic PETG; user printer not identified",
+  "settings": {
+    "layer_height": "0.2",
+    "wall_loops": "5",
+    "enable_support": "1",
+    "support_type": "normal(auto)",
+    "support_on_build_plate_only": "0",
+    "curr_bed_type": "Textured PEI Plate",
+    "filament_type": [
+      "PETG"
+    ]
+  },
+  "mesh_stats": [
+    {
+      "face_count": "54546",
+      "edges_fixed": "0",
+      "degenerate_facets": "0",
+      "facets_removed": "0",
+      "facets_reversed": "0",
+      "backwards_edges": "0"
+    },
+    {
+      "face_count": "9104",
+      "edges_fixed": "0",
+      "degenerate_facets": "0",
+      "facets_removed": "0",
+      "facets_reversed": "0",
+      "backwards_edges": "0"
+    }
+  ],
+  "gcode_sha256": "25995bc72fb1877b1c9586ea0178ae7f88c2860012e228c43389abf7846df8e3",
+  "feature_sections": {
+    "Custom": 2,
+    "Support": 211,
+    "Inner wall": 897,
+    "Outer wall": 923,
+    "Bottom surface": 2,
+    "Gap infill": 723,
+    "Internal solid infill": 129,
+    "Sparse infill": 195,
+    "Bridge": 36,
+    "Floating vertical shell": 54,
+    "Top surface": 81,
+    "Support transition": 24,
+    "Support interface": 116,
+    "Overhang wall": 113
+  },
+  "physical_print_performed": false,
+  "passed": true
+}

@@ -1,0 +1,328 @@
+{
+  "revision": "P43",
+  "board": "ESP32-P4-WIFI6-Touch-LCD-4.3",
+  "case_mm_portrait": [
+    71.6,
+    118.3,
+    24.5
+  ],
+  "cup_mm_portrait": [
+    71.6,
+    118.3,
+    24.5
+  ],
+  "holder_mm_portrait": [
+    67.3,
+    116.3,
+    15.7
+  ],
+  "mounted_depth_mm": 28.8,
+  "main_rim_depth_mm": 17.2,
+  "holder_gap_mm": 8.6,
+  "mount_plate_mm": 3,
+  "integral_lip": {
+    "separate_part": false,
+    "side_overlap_mm": 0.6,
+    "top_bottom_overlap_mm": 0,
+    "thickness_mm": 0.8,
+    "glass_face_clearance_mm": 0.4,
+    "front_z_mm": -1.2,
+    "visible_opening_mm": [
+      114.7,
+      63.8
+    ],
+    "insertion": "Intact display tilted 7 degrees: tuck first side under lip, lower opposite side with 0.8 mm lateral offset, then center and fasten rear screws.",
+    "target_glass_centering_mm": 0.2
+  },
+  "case_glass_overlap_mm3": 0.0,
+  "measured_glass_mm": [
+    114,
+    65
+  ],
+  "confirmed_mount_pattern_mm": [
+    92,
+    50
+  ],
+  "measured_components": {
+    "glass_mm": [
+      114,
+      65
+    ],
+    "front_to_screw_end_mm": 11.5,
+    "mount_pattern_mm": [
+      92,
+      50
+    ],
+    "speaker_mm": [
+      26,
+      26,
+      5
+    ],
+    "speaker_lead_mm": 50,
+    "battery_casing_mm": [
+      65,
+      36,
+      10
+    ]
+  },
+  "mechanical_profile_sha256": "0fc9a772466d5240a252517c9fdee4a3bffea10709b2087b53b0b246bf308016",
+  "case_holder_overlap_mm3": 0.0,
+  "accessories": [
+    {
+      "part": "battery",
+      "holder_overlap_mm3": 0.0
+    },
+    {
+      "part": "speaker",
+      "holder_overlap_mm3": 0.0
+    },
+    {
+      "part": "insulator",
+      "holder_overlap_mm3": 0.0
+    }
+  ],
+  "usb": [
+    {
+      "port": 0,
+      "case_overlap_mm3": 0.0,
+      "holder_overlap_mm3": 0.0
+    },
+    {
+      "port": 1,
+      "case_overlap_mm3": 0.0,
+      "holder_overlap_mm3": 0.0
+    }
+  ],
+  "motion": [
+    {
+      "lift_mm": 0,
+      "fixed_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "lift_mm": 0.5,
+      "fixed_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "lift_mm": 1,
+      "fixed_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "lift_mm": 2,
+      "fixed_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "lift_mm": 3,
+      "fixed_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "lift_mm": 4,
+      "fixed_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pull_mm": -1,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "pull_mm": -3,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "pull_mm": -6,
+      "fixed_overlap_mm3": 0.0
+    },
+    {
+      "pull_mm": -10,
+      "fixed_overlap_mm3": 0.0
+    }
+  ],
+  "mount_design": {
+    "hook_neck_mm": [
+      4.4,
+      3.2
+    ],
+    "previous_hook_neck_mm": [
+      2.8,
+      2.6
+    ],
+    "neck_section_area_gain_percent": 93.40659340659346,
+    "hook_head_mm": [
+      8.4,
+      3.2,
+      2.0
+    ],
+    "receiver_roof_mm": 1.8,
+    "neck_to_boss_fillet_mm": 0.75,
+    "head_to_neck_fillet_mm": 0.2,
+    "spring_root_fillet_mm": 1.2,
+    "spring_thickness_mm": 1.6,
+    "spring_width_root_tip_mm": [
+      8,
+      6
+    ],
+    "spring_geometric_length_mm": 29.85,
+    "release_point_portrait_mm": [
+      6.1,
+      51.0
+    ],
+    "release_mm": 2.0,
+    "hard_stop_travel_mm": 2.3,
+    "strength_status": "geometry improved; physical load and fatigue tests pending"
+  },
+  "physical_fit": "prototype; template, cable and bench validation required",
+  "wall_fastener_envelope": {
+    "head_diameter_mm": 7.0,
+    "head_height_mm": 2.2,
+    "shank_max_mm": 3.6,
+    "minimum_pod_to_head_gap_mm": 0.3
+  },
+  "wall_fasteners": [
+    {
+      "pattern_mm": 83.34,
+      "position": -1,
+      "lift_mm": 0,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 83.34,
+      "position": -1,
+      "lift_mm": 1,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 83.34,
+      "position": -1,
+      "lift_mm": 2,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 83.34,
+      "position": -1,
+      "lift_mm": 3,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 83.34,
+      "position": -1,
+      "lift_mm": 4,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 83.34,
+      "position": 1,
+      "lift_mm": 0,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 83.34,
+      "position": 1,
+      "lift_mm": 1,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 83.34,
+      "position": 1,
+      "lift_mm": 2,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 83.34,
+      "position": 1,
+      "lift_mm": 3,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 83.34,
+      "position": 1,
+      "lift_mm": 4,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 96.83,
+      "position": -1,
+      "lift_mm": 0,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 96.83,
+      "position": -1,
+      "lift_mm": 1,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 96.83,
+      "position": -1,
+      "lift_mm": 2,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 96.83,
+      "position": -1,
+      "lift_mm": 3,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 96.83,
+      "position": -1,
+      "lift_mm": 4,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 96.83,
+      "position": 1,
+      "lift_mm": 0,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 96.83,
+      "position": 1,
+      "lift_mm": 1,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 96.83,
+      "position": 1,
+      "lift_mm": 2,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 96.83,
+      "position": 1,
+      "lift_mm": 3,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    },
+    {
+      "pattern_mm": 96.83,
+      "position": 1,
+      "lift_mm": 4,
+      "case_overlap_mm3": 0.0,
+      "battery_overlap_mm3": 0.0
+    }
+  ],
+  "two_cable_envelopes_overlap_mm3": 0.0,
+  "locked_lift_interference_mm3": 4.180000000000011
+}

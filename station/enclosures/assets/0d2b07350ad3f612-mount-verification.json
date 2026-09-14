@@ -1,0 +1,142 @@
+{
+  "revision": "Q43",
+  "case_sha256": "cf24e06686dd1b7b3a6a8fbebdcebd40086107d03432e4d4aeb45fa25a94e0a4",
+  "holder_sha256": "c16c255e0386f831cbd8345c212660c337d6e3717778f69c64e7bef59fea2cb1",
+  "spring_screen": {
+    "method": "variable-width linear elastic beam, ideal rigid root; print anisotropy and local concentration not modeled",
+    "effective_length_mm": 28.65,
+    "thickness_mm": 1.6,
+    "commanded_press_mm": 2.0,
+    "nominal_peak_surface_strain_percent": 0.5926955717291581,
+    "tip_wallward_motion_mm": 2.116630642677262,
+    "tooth_leading_motion_mm": 1.5647481383666257,
+    "minimum_rigid_tooth_clearance_mm": 0.46474813836662565
+  },
+  "sweep_strip_tolerance_mm3": 0.0001,
+  "sweep": [
+    {
+      "press_mm": 0,
+      "fixed_overlap_mm3": 0,
+      "case_overlap_mm3": 0
+    },
+    {
+      "press_mm": 0.5,
+      "fixed_overlap_mm3": 0,
+      "case_overlap_mm3": 0
+    },
+    {
+      "press_mm": 1.0,
+      "fixed_overlap_mm3": 0,
+      "case_overlap_mm3": 0
+    },
+    {
+      "press_mm": 1.5,
+      "fixed_overlap_mm3": 0,
+      "case_overlap_mm3": 0
+    },
+    {
+      "press_mm": 2,
+      "fixed_overlap_mm3": 1.853909178879589e-06,
+      "case_overlap_mm3": 0
+    }
+  ],
+  "released_lift": [
+    {
+      "lift_mm": 0.0,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 0.25,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 0.5,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 0.75,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 1.0,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 1.25,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 1.5,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 1.75,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 2.0,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 2.25,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 2.5,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 2.75,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 3.0,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 3.25,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 3.5,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 3.75,
+      "overlap_mm3": 0
+    },
+    {
+      "lift_mm": 4.0,
+      "overlap_mm3": 0
+    }
+  ],
+  "stop": {
+    "2.0": 0,
+    "2.1": 0,
+    "2.2": 0.01191223116510573,
+    "2.3": 0.3727001559387341,
+    "2.4": 1.1518577935605667,
+    "2.6": 2.863067423523463
+  },
+  "coupons": {
+    "case": {
+      "file": "mount-case-coupon.stl",
+      "volume_cm3": 1.5345731821047972
+    },
+    "holder": {
+      "file": "mount-holder-coupon.stl",
+      "volume_cm3": 4.583633444255591
+    }
+  },
+  "board": {},
+  "unreleased_lift_overlap_mm3": 4.180000000000022,
+  "tool_access_overlaps_mm3": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "passed": true
+}

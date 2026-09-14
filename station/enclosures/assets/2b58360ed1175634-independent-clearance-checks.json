@@ -1,0 +1,398 @@
+{
+  "revision": "P43",
+  "vendor_solids": 1220,
+  "vendor_glass_replaced": true,
+  "mechanical_profile_sha256": "0fc9a772466d5240a252517c9fdee4a3bffea10709b2087b53b0b246bf308016",
+  "measured_components": {
+    "glass_mm": [
+      114,
+      65
+    ],
+    "front_to_screw_end_mm": 11.5,
+    "mount_pattern_mm": [
+      92,
+      50
+    ],
+    "speaker_mm": [
+      26,
+      26,
+      5
+    ],
+    "speaker_lead_mm": 50,
+    "battery_casing_mm": [
+      65,
+      36,
+      10
+    ]
+  },
+  "electronic_solids_checked": 1219,
+  "measured_glass_mm": [
+    114,
+    65
+  ],
+  "source_sha256": "6d1cb336ba72fd6d112037b0fd2d6f76b9e6a02cb67d3c7cd0f3de4be3ada77a",
+  "case_sha256": "2da4db5eb6df23864841df06779944d076cb264f64f732e888197e3051c0f4f4",
+  "holder_sha256": "d3edd438f8df15e5028f436d9299b5e79b31ca9009283bac6457e988e3493876",
+  "accessory_checks": [
+    {
+      "part": "case",
+      "against": "measured_glass",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "holder",
+      "against": "measured_glass",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "speaker_full_rectangular_envelope",
+      "against": "case",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "speaker_full_rectangular_envelope",
+      "against": "holder",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "speaker_full_rectangular_envelope",
+      "against": "measured_glass",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "battery",
+      "against": "case",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "battery",
+      "against": "holder",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "battery",
+      "against": "measured_glass",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "insulator",
+      "against": "case",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "insulator",
+      "against": "holder",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "insulator",
+      "against": "measured_glass",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "usb_0",
+      "against": "case",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "usb_0",
+      "against": "holder",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "usb_0",
+      "against": "measured_glass",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "usb_1",
+      "against": "case",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "usb_1",
+      "against": "holder",
+      "overlap_mm3": 0.0
+    },
+    {
+      "part": "usb_1",
+      "against": "measured_glass",
+      "overlap_mm3": 0.0
+    }
+  ],
+  "board_checks": [
+    {
+      "part": "case",
+      "board_offset_xy_mm": [
+        0.0,
+        0.0
+      ],
+      "exact_tests": 35,
+      "proven_clear_by_separation": 1184,
+      "hits": []
+    },
+    {
+      "part": "case",
+      "board_offset_xy_mm": [
+        -0.35,
+        -1.0
+      ],
+      "exact_tests": 58,
+      "proven_clear_by_separation": 1161,
+      "hits": []
+    },
+    {
+      "part": "case",
+      "board_offset_xy_mm": [
+        -0.35,
+        1.0
+      ],
+      "exact_tests": 58,
+      "proven_clear_by_separation": 1161,
+      "hits": []
+    },
+    {
+      "part": "case",
+      "board_offset_xy_mm": [
+        0.35,
+        -1.0
+      ],
+      "exact_tests": 34,
+      "proven_clear_by_separation": 1185,
+      "hits": []
+    },
+    {
+      "part": "case",
+      "board_offset_xy_mm": [
+        0.35,
+        1.0
+      ],
+      "exact_tests": 34,
+      "proven_clear_by_separation": 1185,
+      "hits": []
+    },
+    {
+      "part": "holder",
+      "board_offset_xy_mm": [
+        0.0,
+        0.0
+      ],
+      "exact_tests": 1,
+      "proven_clear_by_separation": 1218,
+      "hits": []
+    },
+    {
+      "part": "holder",
+      "board_offset_xy_mm": [
+        -0.35,
+        -1.0
+      ],
+      "exact_tests": 1,
+      "proven_clear_by_separation": 1218,
+      "hits": []
+    },
+    {
+      "part": "holder",
+      "board_offset_xy_mm": [
+        -0.35,
+        1.0
+      ],
+      "exact_tests": 1,
+      "proven_clear_by_separation": 1218,
+      "hits": []
+    },
+    {
+      "part": "holder",
+      "board_offset_xy_mm": [
+        0.35,
+        -1.0
+      ],
+      "exact_tests": 1,
+      "proven_clear_by_separation": 1218,
+      "hits": []
+    },
+    {
+      "part": "holder",
+      "board_offset_xy_mm": [
+        0.35,
+        1.0
+      ],
+      "exact_tests": 1,
+      "proven_clear_by_separation": 1218,
+      "hits": []
+    },
+    {
+      "part": "speaker_full_rectangular_envelope",
+      "board_offset_xy_mm": [
+        0.0,
+        0.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "speaker_full_rectangular_envelope",
+      "board_offset_xy_mm": [
+        -0.35,
+        -1.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "speaker_full_rectangular_envelope",
+      "board_offset_xy_mm": [
+        -0.35,
+        1.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "speaker_full_rectangular_envelope",
+      "board_offset_xy_mm": [
+        0.35,
+        -1.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "speaker_full_rectangular_envelope",
+      "board_offset_xy_mm": [
+        0.35,
+        1.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "battery",
+      "board_offset_xy_mm": [
+        0.0,
+        0.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "battery",
+      "board_offset_xy_mm": [
+        -0.35,
+        -1.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "battery",
+      "board_offset_xy_mm": [
+        -0.35,
+        1.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "battery",
+      "board_offset_xy_mm": [
+        0.35,
+        -1.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "battery",
+      "board_offset_xy_mm": [
+        0.35,
+        1.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "insulator",
+      "board_offset_xy_mm": [
+        0.0,
+        0.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "insulator",
+      "board_offset_xy_mm": [
+        -0.35,
+        -1.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "insulator",
+      "board_offset_xy_mm": [
+        -0.35,
+        1.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "insulator",
+      "board_offset_xy_mm": [
+        0.35,
+        -1.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "insulator",
+      "board_offset_xy_mm": [
+        0.35,
+        1.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "usb_0",
+      "board_offset_xy_mm": [
+        0.0,
+        0.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    },
+    {
+      "part": "usb_1",
+      "board_offset_xy_mm": [
+        0.0,
+        0.0
+      ],
+      "exact_tests": 0,
+      "proven_clear_by_separation": 1219,
+      "hits": []
+    }
+  ],
+  "printed_fit_approved": false,
+  "case_first_interior_plastic_z": 10.699999999999834,
+  "passed": true
+}

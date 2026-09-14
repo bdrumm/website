@@ -13,30 +13,30 @@
   "physical_fit_approved": false,
   "variants": [
     {
-      "id": "n43",
+      "id": "p43",
       "title": "Battery wall display",
       "description": "Bottom USB, a closely packed battery pod and a concealed release on the right.",
       "size": [
         71.6,
         118.3,
-        24.9
+        24.5
       ],
-      "depth": 29.2,
+      "depth": 28.8,
       "battery": true,
-      "download": "assets/e9236a3d0cc3ae15-p4-43-battery-n43.3mf"
+      "download": "assets/4606170e88e064af-p4-43-battery-p43.3mf"
     },
     {
-      "id": "o43",
+      "id": "q43",
       "title": "Batteryless switch display",
       "description": "Rear USB access, a protected lower elbow and a shared 10 mm cable bay. Release on the left.",
       "size": [
         71.6,
         132.3,
-        18.8
+        18.4
       ],
-      "depth": 28.1,
+      "depth": 27.7,
       "battery": false,
-      "download": "assets/fe8b49e4a326ed05-p4-43-switch-o43.3mf"
+      "download": "assets/843617bcc4f03056-p4-43-switch-q43.3mf"
     }
   ]
 }

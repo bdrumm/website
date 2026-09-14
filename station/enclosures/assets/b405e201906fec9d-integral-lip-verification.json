@@ -1,0 +1,544 @@
+{
+  "revision": "Q43",
+  "profile_sha256": "0fc9a772466d5240a252517c9fdee4a3bffea10709b2087b53b0b246bf308016",
+  "case_sha256": "cf24e06686dd1b7b3a6a8fbebdcebd40086107d03432e4d4aeb45fa25a94e0a4",
+  "holder_sha256": "c16c255e0386f831cbd8345c212660c337d6e3717778f69c64e7bef59fea2cb1",
+  "printed_parts": [
+    "case",
+    "holder"
+  ],
+  "integral_lip": {
+    "separate_part": false,
+    "side_overlap_mm": 0.6,
+    "top_bottom_overlap_mm": 0,
+    "thickness_mm": 0.8,
+    "glass_face_clearance_mm": 0.4,
+    "front_z_mm": -1.2,
+    "visible_opening_mm": [
+      114.7,
+      63.8
+    ],
+    "insertion": "Intact display tilted 7 degrees: tuck first side under lip, lower opposite side with 0.8 mm lateral offset, then center and fasten rear screws.",
+    "target_glass_centering_mm": 0.2
+  },
+  "physical_fit_approved": false,
+  "glass_path": [
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -20.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -19.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -18.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -17.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -16.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -15.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -14.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -13.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -12.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -11.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -10.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -9.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -8.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -7.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -6.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -5.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -4.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -3.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -2.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": -1.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": 0.0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1.0,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -0.6,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -0.3999999999999999,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -0.19999999999999996,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": 0.0,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": 0.20000000000000018,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": 0.40000000000000013,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": 0.6000000000000001,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 7.0,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 6.5,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 6.0,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 5.5,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 5.0,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 4.5,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 4.0,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 3.5,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 3.0,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 2.5,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 2.0,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 1.5,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 1.0,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 0.5,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 0.0,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 0,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 0,
+      "shift_y_mm": 0.7000000000000001,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 0,
+      "shift_y_mm": 0.6000000000000001,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 0,
+      "shift_y_mm": 0.5,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 0,
+      "shift_y_mm": 0.4,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 0,
+      "shift_y_mm": 0.30000000000000004,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 0,
+      "shift_y_mm": 0.19999999999999996,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 0,
+      "shift_y_mm": 0.09999999999999998,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "angle_deg": 0,
+      "shift_y_mm": 0.0,
+      "shift_z_mm": 0,
+      "overlap_mm3": 0.0
+    }
+  ],
+  "electronics_path": [
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1,
+      "shift_z_mm": -6,
+      "exact_intersections": 16,
+      "clear_by_separation": 2422,
+      "hits": []
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1,
+      "shift_z_mm": -3,
+      "exact_intersections": 27,
+      "clear_by_separation": 2411,
+      "hits": []
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1,
+      "shift_z_mm": -1,
+      "exact_intersections": 41,
+      "clear_by_separation": 2397,
+      "hits": []
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": -1,
+      "shift_z_mm": 0,
+      "exact_intersections": 42,
+      "clear_by_separation": 2396,
+      "hits": []
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": 0,
+      "shift_z_mm": 0,
+      "exact_intersections": 29,
+      "clear_by_separation": 2409,
+      "hits": []
+    },
+    {
+      "angle_deg": 7,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "exact_intersections": 30,
+      "clear_by_separation": 2408,
+      "hits": []
+    },
+    {
+      "angle_deg": 5,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "exact_intersections": 30,
+      "clear_by_separation": 2408,
+      "hits": []
+    },
+    {
+      "angle_deg": 2,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "exact_intersections": 37,
+      "clear_by_separation": 2401,
+      "hits": []
+    },
+    {
+      "angle_deg": 0,
+      "shift_y_mm": 0.8,
+      "shift_z_mm": 0,
+      "exact_intersections": 56,
+      "clear_by_separation": 2382,
+      "hits": []
+    },
+    {
+      "angle_deg": 0,
+      "shift_y_mm": 0,
+      "shift_z_mm": 0,
+      "exact_intersections": 54,
+      "clear_by_separation": 2384,
+      "hits": []
+    }
+  ],
+  "usb_approach": [
+    {
+      "port": 0,
+      "shift_x_mm": -3,
+      "overlap_mm3": 0.0
+    },
+    {
+      "port": 0,
+      "shift_x_mm": -1,
+      "overlap_mm3": 0.0
+    },
+    {
+      "port": 0,
+      "shift_x_mm": 0,
+      "overlap_mm3": 0.0
+    },
+    {
+      "port": 1,
+      "shift_x_mm": -3,
+      "overlap_mm3": 0.0
+    },
+    {
+      "port": 1,
+      "shift_x_mm": -1,
+      "overlap_mm3": 0.0
+    },
+    {
+      "port": 1,
+      "shift_x_mm": 0,
+      "overlap_mm3": 0.0
+    }
+  ],
+  "electronic_solids": 1219,
+  "case_first_central_plastic_z": 9.399999999999835,
+  "glass_float": [
+    {
+      "xy_mm": [
+        0,
+        0
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "xy_mm": [
+        -0.35,
+        -1
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "xy_mm": [
+        -0.35,
+        1
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "xy_mm": [
+        0.35,
+        -1
+      ],
+      "overlap_mm3": 0.0
+    },
+    {
+      "xy_mm": [
+        0.35,
+        1
+      ],
+      "overlap_mm3": 0.0
+    }
+  ],
+  "lip_material_probes": [
+    {
+      "x": 15,
+      "y": 0,
+      "volume_mm3": 0.29999999999999993
+    },
+    {
+      "x": 15,
+      "y": 64.5,
+      "volume_mm3": 0.29999999999999993
+    },
+    {
+      "x": 57,
+      "y": 0,
+      "volume_mm3": 0.29999999999999993
+    },
+    {
+      "x": 57,
+      "y": 64.5,
+      "volume_mm3": 0.29999999999999993
+    },
+    {
+      "x": 99,
+      "y": 0,
+      "volume_mm3": 0.29999999999999993
+    },
+    {
+      "x": 99,
+      "y": 64.5,
+      "volume_mm3": 0.29999999999999993
+    }
+  ],
+  "removal": "The same checked geometric path in reverse, after disconnecting leads as needed and removing rear screws. Support the module and lift using a temporary pull tab; do not lever against glass.",
+  "passed": true
+}
