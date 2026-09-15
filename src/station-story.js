@@ -1,6 +1,6 @@
 export const STATION_CHAPTERS=[
  ['home','06:40 / BEDSIDE','Wake to the day.','The hour, the weather and your next train—together on the home screen.'],
- ['weather0','07:10 / GETTING READY','Know what’s outside.','Check the forecast before stepping out. Station keeps the useful details close.'],
+ ['weather0','07:10 / GETTING READY','Know what’s outside.','Check the forecast before stepping out. Pebbl keeps the useful details close.'],
  ['subway','08:12 / BY THE DOOR','Your next train, at a glance.','Arrival countdowns for the lines you take, with a stable place for each train.'],
  ['timer','12:30 / KITCHEN','Keep your hands in the dough.','A focused countdown stays visible while you get on with the task.'],
  ['voice','16:20 / A SMALL REQUEST','Say it. See it happen.','Follow the voice journey from listening to thinking, speaking and confirmation.'],

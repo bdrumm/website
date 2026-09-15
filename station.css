@@ -227,3 +227,21 @@
 .station-enclosure-grid dd{margin:0;text-align:right}
 .station-enclosure-links{display:flex;flex-wrap:wrap;gap:16px 24px}
 @media(max-width:760px){.station-enclosure-grid{grid-template-columns:1fr}.station-enclosure-grid article{padding:22px}.station-enclosure-grid dl>div{flex-wrap:wrap;gap:6px}.station-enclosure-grid dd{text-align:left}}
+
+/* Actual portrait Switch screens, kept at their native 480:800 aspect ratio. */
+.station-wall-ui{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:28px 48px;align-items:center;padding:40px;margin:0 0 40px;border:1px solid var(--station-rule);border-radius:12px;background:var(--station-soft)}
+.station-wall-ui-copy h3{font-size:clamp(1.75rem,3vw,2.5rem);font-weight:500;letter-spacing:-.04em;line-height:1.1;margin:18px 0}
+.station-wall-ui-copy p{font-size:.9375rem;line-height:1.7;color:var(--muted)}
+.station-wall-ui-copy ul{list-style:none;padding:0;margin:24px 0}
+.station-wall-ui-copy li{padding:14px 0;border-top:1px solid var(--station-rule);font-size:.875rem;line-height:1.6}
+.station-wall-ui-copy li strong,.station-wall-ui-copy li span{display:block}
+.station-wall-ui-copy li strong{font-weight:550;color:var(--foreground)}
+.station-wall-ui-copy li span{color:var(--muted);margin-top:4px}
+.station-wall-ui-screens{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+.station-wall-ui-screens figure{margin:0;min-width:0}
+.station-wall-screen{display:block;padding:8px;background:#e4e7e6;border:1px solid #c1c7c6;border-radius:14px;box-shadow:3px 5px 0 #b8bfbd,8px 18px 30px #17212e16;overflow:hidden}
+.station-wall-screen img{display:block;width:100%;height:auto;aspect-ratio:3/5;background:#000;border-radius:6px}
+.station-wall-ui-screens figcaption{font-size:.8125rem;line-height:1.5;color:var(--muted);margin-top:20px;text-align:center}
+.station-wall-ui-note{grid-column:1/-1;font:400 .75rem/1.6 var(--font-geist-mono),monospace;color:var(--muted);margin:0;padding-top:8px}
+@media(max-width:1050px){.station-wall-ui{grid-template-columns:minmax(0,1fr);padding:28px}.station-wall-ui-screens{max-width:560px;width:100%;justify-self:center}.station-wall-ui-copy{max-width:65ch}.station-wall-ui-note{text-align:center}}
+@media(max-width:480px){.station-wall-ui{padding:22px 16px;gap:24px}.station-wall-ui-screens{gap:14px}.station-wall-screen{padding:5px;border-radius:10px}.station-wall-ui-screens figcaption{font-size:.6875rem}.station-wall-ui-note{text-align:left}}

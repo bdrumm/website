@@ -25,6 +25,6 @@ assert.ok(nodes.some(n=>n.id==='station-enclosures'));
 assert.equal(nodes.filter(n=>n.tag==='article').length,2);
 for(const a of nodes.filter(n=>n.tag==='a')){const url=a.href.split(/[?#]/)[0];assert.ok(fs.existsSync(path.join(root,url)),a.href);}
 assert.equal(nodes.filter(n=>n.tag==='a'&&n.download==='').length,2);
-assert.ok(nodes.some(n=>n.textContent==='Station, on the wall.'));
+assert.ok(nodes.some(n=>n.textContent==='Pebbl, on the wall.'));
 assert.equal(fs.readFileSync(path.join(root,'CNAME'),'utf8').trim(),'parametric.space');assert.ok(fs.existsSync(path.join(root,'.nojekyll')));
-console.log(`Station section: 2 variants, ${Object.keys(proof.files).length} bundle hashes and all catalog links passed.`);
+console.log(`Pebbl section: 2 variants, ${Object.keys(proof.files).length} bundle hashes and all catalog links passed.`);

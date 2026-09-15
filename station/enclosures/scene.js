@@ -9,7 +9,7 @@ export class CaseScene{
     this.controls=new T.OrbitControls(this.camera,this.canvas);this.controls.minDistance=40;this.controls.maxDistance=950;
     this.scene.add(new T.HemisphereLight(0xffffff,0x40505f,1.05));for(const [x,y,z,p] of [[-150,170,-240,.85],[160,70,150,.65],[0,-80,-120,.3]]){const l=new T.DirectionalLight(0xffffff,p);l.position.set(x,y,z);this.scene.add(l);}
     this.frame=new T.Group();this.frame.rotation.z=Math.PI/2;this.frame.position.x=70.7;this.scene.add(this.frame);
-    this.controls.addEventListener('change',()=>this.render());this.cache=new Map();this.version=0;this.meshes={};this.hidden=new Set();this.view='installed';this.labels=true;this.xray=false;
+    this.controls.addEventListener('change',()=>this.render());this.cache=new Map();this.version=0;this.meshes={};this.hidden=new Set();this.view='installed';this.labels=true;this.xray=false;this.screenMode='main';this.screenTextures=new Map();
     this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(stage);
   }
   async geometry(url){if(!this.cache.has(url))this.cache.set(url,new T.STLLoader().loadAsync(url));return this.cache.get(url);}
@@ -24,13 +24,29 @@ export class CaseScene{
       if(['case','holder','bezel'].includes(name)){const edges=new T.LineSegments(new T.EdgesGeometry(g,40),new T.LineBasicMaterial({color:0x263c47,transparent:true,opacity:.13}));mesh.add(edges);}
     }
     const board=v.board||{glass:[126.9,70.7],active:[110.32,62.28],posts:[[4.8,6.85],[4.8,63.85],[116.8,6.85],[116.8,63.85]],postZ:11.6};
-    this.active=new T.Mesh(new T.BoxGeometry(...board.active,.05),new T.MeshStandardMaterial({color:0x254456,roughness:.38,side:T.DoubleSide}));this.active.position.set(board.glass[0]/2,board.glass[1]/2,-.025);this.display.add(this.active);
+    // The CAD uses landscape XY coordinates and the front faces -Z. Rotate the
+    // portrait panel so its top follows +X and its right follows +Y.
+    const screenGeometry=new T.PlaneGeometry(board.active[1],board.active[0]);screenGeometry.rotateX(Math.PI);screenGeometry.rotateZ(Math.PI/2);
+    this.active=new T.Mesh(screenGeometry,new T.MeshBasicMaterial({color:0x080b0d,toneMapped:false}));this.active.position.set(board.glass[0]/2,board.glass[1]/2,-.06);this.display.add(this.active);
     this.screws=new T.Group();for(const [x,y] of board.posts){const sh=new T.Mesh(new T.CylinderGeometry(1.25,1.25,board.measured?4:2.5,12),new T.MeshStandardMaterial({color:colors.screws,metalness:.45,roughness:.4}));sh.rotation.x=Math.PI/2;sh.position.set(x,y,board.postZ+(board.measured?.5:1.25));this.screws.add(sh);const hd=new T.Mesh(new T.CylinderGeometry(2.25,2.25,1.4,16),sh.material);hd.rotation.x=Math.PI/2;hd.position.set(x,y,board.postZ+3.2);this.screws.add(hd);}this.device.add(this.screws);
     this.labelEls={};for(const name of ['case','bezel','holder','speaker','battery','camera','display'])if(name==='display'||this.meshes[name]){const el=document.createElement('span');el.className='part-label';el.textContent=names[name];this.stage.appendChild(el);this.labelEls[name]=el;}
     this.releaseArrow=null;if(v.release){const u=v.release==='right'?board.glass[1]-6.1:v.release==='left'?6.1:board.glass[1]/2,cy=v.release==='top'?134:v.release==='bottom'?1:51;this.releaseArrow=new T.ArrowHelper(new T.Vector3(0,0,1),new T.Vector3(cy,board.glass[1]-u,v.rim-.4),10,0xffc676,3,2);this.releaseArrow.visible=false;this.frame.add(this.releaseArrow);}
-    this.showView(this.view);this.loading.hidden=true;return true;
+    this.showView(this.view);this.loading.hidden=true;this.setScreen(this.screenMode).catch(()=>{if(version===this.version){this.loading.hidden=false;this.loading.textContent='Switch screen unavailable. Choose another screen or reload to try again.';}});return true;
   }
-  clear(){for(const el of Object.values(this.labelEls||{}))el.remove();for(const child of [...this.frame.children]){child.traverse(o=>{if(o.material){if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material.dispose();}if(o.type==='LineSegments')o.geometry.dispose();});this.frame.remove(child);}this.meshes={};}
+  async setScreen(mode){
+    if(!['main','room','off'].includes(mode))return;
+    this.screenMode=mode;const active=this.active,request=this.screenRequest=(this.screenRequest||0)+1;
+    if(!active)return;
+    if(mode==='off'||!this.variant?.board?.measured){active.material.map=null;active.material.color.setHex(0x080b0d);active.material.needsUpdate=true;this.render();return;}
+    if(!this.screenTextures.has(mode)){
+      const pending=new T.TextureLoader().loadAsync('../../assets/pebbl-switch/'+mode+'.png').then(texture=>{texture.encoding=T.sRGBEncoding;texture.minFilter=T.LinearFilter;texture.magFilter=T.LinearFilter;texture.generateMipmaps=false;return texture;}).catch(error=>{this.screenTextures.delete(mode);throw error;});
+      this.screenTextures.set(mode,pending);
+    }
+    const texture=await this.screenTextures.get(mode);
+    if(request!==this.screenRequest||active!==this.active)return;
+    active.material.map=texture;active.material.color.setHex(0xffffff);active.material.needsUpdate=true;this.render();
+  }
+  clear(){if(this.active)this.active.geometry.dispose();for(const el of Object.values(this.labelEls||{}))el.remove();for(const child of [...this.frame.children]){child.traverse(o=>{if(o.material){if(Array.isArray(o.material))o.material.forEach(m=>m.dispose());else o.material.dispose();}if(o.type==='LineSegments')o.geometry.dispose();});this.frame.remove(child);}this.meshes={};}
   resetPose(){if(!this.device)return;this.device.position.set(0,0,0);this.device.rotation.set(0,0,0);this.display.position.set(0,0,0);this.display.rotation.set(0,0,0);this.screws.position.set(0,0,0);for(const m of Object.values(this.meshes)){m.position.set(0,0,0);m.rotation.set(0,0,0);}this.screws.visible=false;if(this.releaseArrow)this.releaseArrow.visible=false;}
   visibility(){
     if(!this.device)return;this.display.visible=!['inside','mount'].includes(this.view)&&!this.hidden.has('display');

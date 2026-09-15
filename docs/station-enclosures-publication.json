@@ -282,20 +282,20 @@
       "sha256": "37c033cde87d4425df82deb247d93937053e3c128e53948aeea20348aff8b407"
     },
     "station/enclosures/index.html": {
-      "bytes": 3701,
-      "sha256": "b7e1c8e6f20820e3e336500aadf4475270e0599e4b6a61973ef5e13e8a65c986"
+      "bytes": 4077,
+      "sha256": "7ab4691cbce79fe195d11a9b57d7b19a25cd43ccb613c3e721308f50b027a10d"
     },
     "station/enclosures/scene.js": {
-      "bytes": 9777,
-      "sha256": "67882e9e8d750d0e8f45740708b6f83bac794b269acedf6b61eed14d9883bd73"
+      "bytes": 11359,
+      "sha256": "0d4843906627cd8eecfdd66552869cfed7cc707eaca17fb1dae5963408f05f78"
     },
     "station/enclosures/integral-lip-preview.png": {
       "bytes": 60699,
       "sha256": "f93752c04fae429c86befd3ceccef979ffa356034d20534be039fcc06f02f9b0"
     },
     "station/enclosures/bootstrap.js": {
-      "bytes": 311,
-      "sha256": "085219b6931c2c2eebbebdcd6a696be9a88928cb663433757916b039638fa96e"
+      "bytes": 309,
+      "sha256": "cb0e7b90b3af474fb30bb5625a2920cafe2b2d88d48d5f704a8a1804fd398c37"
     },
     "station/enclosures/usb-relief-preview.png": {
       "bytes": 114498,
@@ -310,8 +310,8 @@
       "sha256": "a136999cf090d472b5a2bb0e01c579494dff7150c5172a2d0964110478595d1b"
     },
     "station/enclosures/style.css": {
-      "bytes": 10676,
-      "sha256": "e8e8893c89cd7f4327f7ff478f4b9e5cf062400fe814e1a47a4c119f88834051"
+      "bytes": 10978,
+      "sha256": "24cff38cd1c11981638c6a949854418684766d0b09a68ba73057b43aa052c3e0"
     },
     "station/enclosures/assembly.js": {
       "bytes": 10026,
@@ -326,8 +326,8 @@
       "sha256": "b2262debcfd46e3ec275fb517dc103d362e0ee096b7ba6c552e9056612ece806"
     },
     "station/enclosures/app.js": {
-      "bytes": 19026,
-      "sha256": "3c3ca372c826252342c184d20670810b18d3a3636612d8d487e0b82436bea01e"
+      "bytes": 19387,
+      "sha256": "beca0f9913f1c4e8af36e66bec13f248d30312f2e34fd0292285ac24cc9c3bf2"
     },
     "station/enclosures/assets/e0041270b40e25df-battery-preview.stl": {
       "bytes": 684,
@@ -1244,6 +1244,32 @@
     "station/enclosures/vendor/OrbitControls.js": {
       "bytes": 26375,
       "sha256": "02bb4ade710f3e607329e37a21f098bc3ac70eb6e33daf8a65e79f4db785e7b2"
+    },
+    "assets/pebbl-switch/main.png": {
+      "bytes": 28120,
+      "sha256": "26d86e4f4c64ac8d4364264c421ba263d32129a7e9822e3e9101576111ee14f3"
+    },
+    "assets/pebbl-switch/room.png": {
+      "bytes": 25402,
+      "sha256": "33c93255756111347525ccdb95386e2a493fdcd0bae37531a98cf4909a626b9c"
+    },
+    "assets/pebbl-switch/README.md": {
+      "bytes": 776,
+      "sha256": "1e5d71ab1a52d882af5e837bad21ccf78d12a6a7ae83df0585325d50995e2efe"
     }
+  },
+  "presentation_update": {
+    "date": "2026-09-14",
+    "description": "Pebbl branding and native Switch simulator screen captures. Print geometry and release data are unchanged.",
+    "switch_resolution": [
+      480,
+      800
+    ],
+    "screen_views": [
+      "Main",
+      "Living Room",
+      "Off"
+    ],
+    "cad_screen_checks": "P43 and Q43: upright, unmirrored, in front of the glass; all camera presets and archive compatibility checked without browser QA."
   }
 }

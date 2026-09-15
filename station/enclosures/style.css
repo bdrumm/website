@@ -5,3 +5,5 @@
 :root .fit-notice{padding:12px 24px;background:#4b3822;color:#f4e0b6;font-size:15px;line-height:1.5;border-bottom:1px solid #8c6b36}
 
 .fit-notice a{color:inherit;font-weight:600;text-underline-offset:3px}
+
+#screen-control{display:flex;align-items:center;gap:8px}#screen-control[hidden]{display:none}#switch-screen{max-width:180px;padding:7px 9px;border:1px solid #bccbcf;border-radius:6px;background:#fff;color:#19333e;font:inherit}#switch-screen:focus-visible{outline:2px solid #287382;outline-offset:2px}

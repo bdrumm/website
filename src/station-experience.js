@@ -3,7 +3,7 @@ import {StationAppUI,APP_TOURS,tourFrame} from './station-app-ui.js';
 import {createLightingState,applyLightingAction,applyLightingDemo} from './station-lighting-state.js';
 export const STATION_STATES=[['home','Home'],['weather0','Weather'],['subway','Transit'],['timer','Timer'],['voice','Voice'],['lights','Lights'],['rooms','Rooms'],['scene','Routines'],['night','Night']];
 export async function installStation(model,button,status,onSelect,host,view){
- const screen=model.getObjectByName('StationScreen');if(!screen)throw Error('Station screen missing');
+ const screen=model.getObjectByName('StationScreen');if(!screen)throw Error('Pebbl screen missing');
  const size=512,resolution=1024;
  function surface(){const canvas=document.createElement('canvas');canvas.width=canvas.height=resolution;const context=canvas.getContext('2d');context.scale(resolution/size,resolution/size);return [canvas,context];}
  const [canvas,ctx]=surface(),[incoming,incomingContext]=surface(),[outgoing,outgoingContext]=surface();

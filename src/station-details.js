@@ -40,9 +40,9 @@ function section(id,number,title,copy){
 
 export function buildStationNavigation(root,content){
  content.id='station-demo';
- const nav=element('nav',undefined,'station-details-nav');nav.setAttribute('aria-label','Station page sections');
- nav.append(element('span','Explore Station','station-details-label'));
- for(const [label,id] of [['Demo','demo'],['Use cases','use-cases'],['Apps','apps'],['Capabilities','capabilities'],['Hardware','hardware'],['Enclosures','enclosures'],['Code','code']])nav.append(link(label,'#station-'+id));
+ const nav=element('nav',undefined,'station-details-nav');nav.setAttribute('aria-label','Pebbl page sections');
+ nav.append(element('span','Explore Pebbl','station-details-label'));
+ for(const [label,id] of [['Demo','demo'],['Use cases','use-cases'],['Apps','apps'],['Capabilities','capabilities'],['Hardware','hardware'],['On the wall','enclosures'],['Code','code']])nav.append(link(label,'#station-'+id));
  root.insertBefore(nav,content);
  return ()=>{
   const links=[...nav.querySelectorAll('a')],sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);let scheduled=0;
@@ -54,7 +54,7 @@ export function buildStationNavigation(root,content){
 }
 
 export function buildStationAppDetails(root,viewer){
- const apps=section('station-apps','01 / THE APPS','Nine ways to use Station.','From the first glance in the morning to the last light at night. Select an app to return to its automatic demo.');
+ const apps=section('station-apps','01 / THE APPS','Nine ways to use Pebbl.','From the first glance in the morning to the last light at night. Select an app to return to its automatic demo.');
  apps.append(element('p','The web preview uses sample data, automatic scenes and interactive light controls. The firmware capabilities described below come from the device prototype; this page does not connect to your microphone, transit feeds or home.','station-preview-note'));
  const grid=element('div',undefined,'station-app-grid');
  STATION_APPS.forEach((app,index)=>{
@@ -69,7 +69,7 @@ export function buildStationAppDetails(root,viewer){
  apps.append(grid);root.append(apps);
  const capabilities=section('station-capabilities','02 / UNDERLYING CAPABILITY','Small device. Connected system.','The display is the visible part of a system that brings together touch, network data, audio and room controls.');
  const flow=element('ol',undefined,'station-system-flow');
- for(const [title,copy] of [['Input','Touch · microphones · network data'],['Station OS','App state · preferences · service callbacks'],['Response','AMOLED display · audio · room actions']]){const item=element('li');item.append(element('strong',title),element('span',copy));flow.append(item);}
+ for(const [title,copy] of [['Input','Touch · microphones · network data'],['Pebbl OS','App state · preferences · service callbacks'],['Response','AMOLED display · audio · room actions']]){const item=element('li');item.append(element('strong',title),element('span',copy));flow.append(item);}
  capabilities.append(flow);
  const rows=element('div',undefined,'station-capability-list');
  for(const [title,lead,copy] of CAPABILITIES){const row=element('article');row.append(element('h3',title));const body=element('div');body.append(element('p',lead,'station-capability-lead'),element('p',copy));row.append(body);rows.append(row);}
@@ -77,9 +77,9 @@ export function buildStationAppDetails(root,viewer){
 }
 
 export function buildStationCode(root){
- const code=section('station-code','04 / THE CODE','How Station is built.','The embedded interface and the web showcase use different rendering systems. The device runs C/C++ and LVGL; this page uses JavaScript, Canvas and Three.js.');
+ const code=section('station-code','05 / THE CODE','How Pebbl is built.','The embedded interface and the web showcase use different rendering systems. The device runs C/C++ and LVGL; this page uses JavaScript, Canvas and Three.js.');
  const runtimes=element('div',undefined,'station-code-runtimes');
- const device=element('article');device.append(element('span','ON THE DEVICE','station-details-label'),element('h3','Firmware + desktop simulator'),element('p','Station’s Arduino ESP32 firmware drives the display, touch, networking and audio. Shared LVGL UI libraries also run in an SDL2 desktop simulator, so screens can be developed before flashing the board.'));
+ const device=element('article');device.append(element('span','ON THE DEVICE','station-details-label'),element('h3','Firmware + desktop simulator'),element('p','Pebbl’s Arduino ESP32 firmware drives the display, touch, networking and audio. Shared LVGL UI libraries also run in an SDL2 desktop simulator, so screens can be developed before flashing the board.'));
  const modules=element('dl',undefined,'station-module-list');
  for(const [name,description] of [['sysui','App registration, navigation and screen lifecycle'],['stationui / stationsubway','Weather views and transit data presentation'],['homeui / voiceui','Room controls, scenes and voice interaction'],['firmware','Board drivers, service connections and saved settings']]){const row=element('div');row.append(element('dt',name),element('dd',description));modules.append(row);}device.append(modules);
  const browser=element('article');browser.append(element('span','IN THIS BROWSER','station-details-label'),element('h3','A live texture on a 3D object'),element('p','Each app is drawn on a 1,024 × 1,024 canvas and mapped onto the round screen. A shared timeline advances the demo states, while Three.js renders the enclosure, lighting and subtle movement.'),element('p','Scenes play automatically. Select an app to explore it, or tap the room controls to try a lighting change. Reduced-motion preferences simplify transitions. The timer sequence below runs in seconds so its full interaction is easy to explore.'));

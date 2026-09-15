@@ -10,7 +10,7 @@ export const APP_TOURS={
  rooms:[['overview','Three lights, one room',4],['dimmed','Room dimmed to 40%',4],['off','All lights off',4]],
  scene:[['choose','Good night routine',3],['running','Settling the room',4],['done','All lights off',4]],
  voice:[['listen','Listening to your request',4],['think','Thinking',2.5],['speak','Speaking the response',4],['result','Light change confirmed',3.5]],
- night:[['evening','Evening clock',4],['dim','Dimmed display',4],['wake','Motion wakes Station',4]]
+ night:[['evening','Evening clock',4],['dim','Dimmed display',4],['wake','Motion wakes Pebbl',4]]
 };
 export function tourFrame(app,time){const steps=APP_TOURS[app];let start=0;for(let i=0;i<steps.length;i++){if(time<start+steps[i][2])return {index:i,id:steps[i][0],title:steps[i][1],elapsed:time-start,done:false};start+=steps[i][2];}const last=steps.at(-1);return {index:steps.length-1,id:last[0],title:last[1],elapsed:last[2],done:true};}
 export function stepStart(app,index){return APP_TOURS[app].slice(0,index).reduce((s,v)=>s+v[2],0);}
@@ -100,7 +100,7 @@ export class StationAppUI{
   const level=reduced?0:Math.max(0,Math.sin(clock*13)*Math.sin(clock*4.1))*.6;
   this.field.tick(reduced?0:dt,mode,mode==='think'?0:level,false,false);c.save();c.globalAlpha=.8;this.field.render(c);c.restore();
 
-  part(.22,()=>this.label(id==='listen'?'LISTENING':id==='think'?'CONNECTING THE DOTS':'STATION',256,256,INK,undefined,13));
+  part(.22,()=>this.label(id==='listen'?'LISTENING':id==='think'?'CONNECTING THE DOTS':'PEBBL',256,256,INK,undefined,13));
   if(id==='listen'){this.words('Dim the living room',383,t-.3,reduced,23);}
   if(id==='think'){part(.25,()=>this.text('Finding just the right light.',256,383,21));}
   if(id==='speak'){this.words('Living room dimmed to 40%.',383,t,reduced,21);}

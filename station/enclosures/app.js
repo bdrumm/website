@@ -1,4 +1,4 @@
-import {CaseScene,names,colors} from './scene.js?v=67882e9e8d75';
+import {CaseScene,names,colors} from './scene.js?v=0d48439066';
 import {makeSequence,sampleSequence,STEP_SECONDS} from './assembly.js?v=73dcc1f050f5';
 import {wiringContent} from './diagrams.js?v=b2262debcfd4';
 const $=s=>document.querySelector(s),all=s=>[...document.querySelectorAll(s)];
@@ -19,7 +19,7 @@ async function choose(id){
   $('#parts').innerHTML=['case','bezel','holder','display','speaker','battery','camera','usb0','usb1','bay','screws'].filter(n=>['display','screws'].includes(n)||v.parts[n]).map(n=>'<label><input type="checkbox" data-part="'+n+'" '+(['bay','screws'].includes(n)?'':'checked')+'><i class="swatch" style="background:#'+(colors[n]||0x35735f).toString(16)+'"></i>'+names[n]+'</label>').join('');
   all('[data-view]').forEach(b=>{b.disabled=b.dataset.view==='mount'&&!v.parts.holder;});
   buildTimeline();all('#timeline button,#timeline input,#timeline select,[data-step],#parts input').forEach(el=>el.disabled=true);$('#wiring-panel').innerHTML=wiringContent(v,data);buildGuide(v);buildComparison();
-  $('#xray').checked=false;history.replaceState(null,'','#'+v.id);
+  $('#screen-control').hidden=!v.board?.measured;$('#switch-screen').value=scene?.screenMode||'main';$('#xray').checked=false;history.replaceState(null,'','#'+v.id);
   if(scene){scene.xray=false;scene.view='installed';try{const ok=await scene.load(v);if(token!==selection||!ok)return;loaded=true;setView('installed');}catch(e){if(token===selection){$('#loading').hidden=false;$('#loading').textContent='Could not load CAD: '+e.message;}}}
   if(token===selection){all('#timeline button,#timeline input,#timeline select,[data-step],#parts input').forEach(el=>el.disabled=!loaded);}
 }
@@ -54,6 +54,7 @@ function buildComparison(){
 for(const v of data.variants){const b=document.createElement('button');b.className='variant';b.dataset.variant=v.id;b.innerHTML='<span class="code">'+v.revision+'</span><span><strong>'+v.label+'</strong><small>'+(v.depth||v.size[2])+' mm · '+v.status+'</small></span>';b.onclick=()=>choose(v.id);$(v.archive?'#archived':'#variants').append(b);}
 $('#count').textContent=data.variants.filter(v=>!v.archive).length;$('#archive-count').textContent=data.variants.filter(v=>v.archive).length;
 all('[data-view]').forEach(b=>b.onclick=()=>setView(b.dataset.view));all('[data-tab]').forEach(b=>b.onclick=()=>showTab(b.dataset.tab));
+$('#switch-screen').onchange=async e=>{try{await scene?.setScreen(e.target.value);if(loaded)$('#loading').hidden=true;}catch{$('#loading').hidden=false;$('#loading').textContent='The Switch screen could not load. Choose another screen or reload to try again.';}};
 $('#reset').onclick=()=>setView('installed');$('#xray').onchange=e=>{if(!scene)return;scene.xray=e.target.checked;scene.visibility();if(animationView)scene.setPose(sampleSequence(sequence,time).pose);scene.render();const cb=$('[data-part="bay"]');if(cb)cb.checked=e.target.checked;};$('#labels').onchange=e=>{if(scene){scene.labels=e.target.checked;scene.render();}};
 $('#parts').onchange=e=>{if(!scene||!e.target.dataset.part)return;const n=e.target.dataset.part;e.target.checked?scene.hidden.delete(n):scene.hidden.add(n);if(n==='bay'){scene.xray=e.target.checked;$('#xray').checked=scene.xray;}scene.visibility();if(animationView)scene.setPose(sampleSequence(sequence,time).pose);else if(n==='screws')scene.screws.visible=e.target.checked;scene.render();};
 document.addEventListener('click',async e=>{const jump=e.target.closest('[data-jump]');if(jump){showTab('model');setView(jump.dataset.jump);}const b=e.target.closest('[data-animate-step]');if(b){showTab('model');stop();mode='assembly';buildTimeline();seek((Number(b.dataset.animateStep)+.999)*STEP_SECONDS);}const c=e.target.closest('[data-compare]');if(c){await choose(c.dataset.compare);showTab('model');}});
