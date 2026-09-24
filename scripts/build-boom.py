@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-"""Package the Boom Boom v16 print kit for project.html?id=boom-boom.
+"""Package the Boom v16 print kit for project.html?id=boom.
 
 Reads the assembly-pose meshes written by the kit's build_print_model.py
 (print_parts/work/*_assembly_colorN.npz, the same topology as the released
 3MF objects) and writes:
 
-  assets/models/boom-boom.glb               assembled train, one node per printed part
-  assets/models/boom-boom.provenance.json   source hashes and part list
-  assets/boom-boom/*.jpg                    web copies of the kit's studio renders
-  assets/boom-boom/files/*.3mf              released print files, hash-checked against delivery_manifest.json
+  assets/models/boom.glb                    assembled train, one node per printed part
+  assets/models/boom.provenance.json        source hashes and part list
+  assets/boom/*.jpg                         web copies of the kit's studio renders
+  assets/boom/files/*.3mf                   released print files, hash-checked against delivery_manifest.json
 
 Each part node carries extras.explode, a millimetre offset used by the
 viewer's Explode action. Vertices are stored with KHR_mesh_quantization
@@ -18,7 +18,7 @@ receiver test module are not part of the assembled train and are omitted.
 The source folder is only read.
 
 Usage (Python with numpy, trimesh and Pillow):
-  python3 scripts/build-boom-boom.py /path/to/boom_boom /path/to/Boom_Boom_complete.zip
+  python3 scripts/build-boom.py /path/to/boom_boom /path/to/Boom_Boom_complete.zip
 """
 import argparse
 import hashlib
@@ -33,9 +33,9 @@ import trimesh
 from PIL import Image
 
 SITE = Path(__file__).resolve().parent.parent
-GLB = SITE / 'assets/models/boom-boom.glb'
-PROVENANCE = SITE / 'assets/models/boom-boom.provenance.json'
-IMAGES = SITE / 'assets/boom-boom'
+GLB = SITE / 'assets/models/boom.glb'
+PROVENANCE = SITE / 'assets/models/boom.provenance.json'
+IMAGES = SITE / 'assets/boom'
 FILES = IMAGES / 'files'
 
 # Filament palette from print_parts/manifest.json, in color-index order.
@@ -87,12 +87,12 @@ RENDERS = {
 
 # Released print files (path in the release archive -> published name).
 DOWNLOADS = {
-    'print_parts/Boom_Boom_v16_multicolor.3mf': 'Boom_Boom_v16_multicolor.3mf',
-    'print_parts/Boom_Boom_plate_1_colors.3mf': 'Boom_Boom_plate_1_colors.3mf',
-    'print_parts/Boom_Boom_plate_2_colors.3mf': 'Boom_Boom_plate_2_colors.3mf',
-    'print_parts/Boom_Boom_plate_3_colors.3mf': 'Boom_Boom_plate_3_colors.3mf',
-    'print_parts/Boom_Boom_coupler_test.3mf': 'Boom_Boom_coupler_test.3mf',
-    'print_parts/fit_test/Boom_Boom_multicolor.3mf': 'Boom_Boom_fit_test.3mf',
+    'print_parts/Boom_Boom_v16_multicolor.3mf': 'Boom_v16_multicolor.3mf',
+    'print_parts/Boom_Boom_plate_1_colors.3mf': 'Boom_plate_1_colors.3mf',
+    'print_parts/Boom_Boom_plate_2_colors.3mf': 'Boom_plate_2_colors.3mf',
+    'print_parts/Boom_Boom_plate_3_colors.3mf': 'Boom_plate_3_colors.3mf',
+    'print_parts/Boom_Boom_coupler_test.3mf': 'Boom_coupler_test.3mf',
+    'print_parts/fit_test/Boom_Boom_multicolor.3mf': 'Boom_fit_test.3mf',
 }
 
 
@@ -192,17 +192,17 @@ def build_glb(source, release_sha):
     upright = [math.sin(half), 0, 0, math.cos(half)]
     yaw = math.radians(-58) / 2
     rotation = quat_multiply([0, math.sin(yaw), 0, math.cos(yaw)], upright)
-    nodes.append({'name': 'BoomBoom', 'rotation': rotation, 'children': list(range(len(PARTS)))})
+    nodes.append({'name': 'Boom', 'rotation': rotation, 'children': list(range(len(PARTS)))})
     materials = [{'name': name, 'pbrMetallicRoughness': {'baseColorFactor': linear(hex_color), 'metallicFactor': 0.0,
                   'roughnessFactor': roughness}} for name, hex_color, roughness in PALETTE]
     while len(buffer.data) % 4:
         buffer.data.append(0)
     document = {
-        'asset': {'version': '2.0', 'generator': 'parametric.space build-boom-boom.py',
-                  'extras': {'title': 'Boom Boom modular printing kit, v16', 'units': 'millimetres',
+        'asset': {'version': '2.0', 'generator': 'parametric.space build-boom.py',
+                  'extras': {'title': 'Boom modular printing kit, v16', 'units': 'millimetres',
                              'release3mfSha256': release_sha}},
         'extensionsUsed': ['KHR_mesh_quantization'], 'extensionsRequired': ['KHR_mesh_quantization'],
-        'scene': 0, 'scenes': [{'name': 'Boom Boom', 'nodes': [len(nodes) - 1]}],
+        'scene': 0, 'scenes': [{'name': 'Boom', 'nodes': [len(nodes) - 1]}],
         'nodes': nodes, 'meshes': meshes, 'materials': materials,
         'buffers': [{'byteLength': len(buffer.data)}], 'bufferViews': buffer.views, 'accessors': buffer.accessors,
     }
@@ -236,7 +236,7 @@ def copy_downloads(release, manifest):
         if digest != expected[member]:
             raise SystemExit(f'{member} does not match delivery_manifest.json')
         (FILES / name).write_bytes(data)
-        published.append({'file': f'assets/boom-boom/files/{name}', 'release': member, 'sha256': digest, 'bytes': len(data)})
+        published.append({'file': f'assets/boom/files/{name}', 'release': member, 'sha256': digest, 'bytes': len(data)})
     return published
 
 
@@ -253,10 +253,10 @@ def main():
     downloads = copy_downloads(release, manifest)
     sources = sorted((args.source / 'print_parts/work').glob('*_assembly_color*.npz'))
     PROVENANCE.write_text(json.dumps({
-        'model': 'assets/models/boom-boom.glb',
+        'model': 'assets/models/boom.glb',
         'revision': manifest['revision'],
         'units': 'millimetres',
-        'release3mf': {'file': 'Boom_Boom_v16_multicolor.3mf', 'sha256': release_sha},
+        'release3mf': {'file': 'print_parts/Boom_Boom_v16_multicolor.3mf', 'sha256': release_sha},
         'releaseZipSha256': sha256(args.release_zip),
         'downloads': downloads,
         'triangles': triangles,

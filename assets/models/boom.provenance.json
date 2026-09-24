@@ -1,45 +1,45 @@
 {
- "model": "assets/models/boom-boom.glb",
+ "model": "assets/models/boom.glb",
  "revision": "v16 shorter drawbar and three categorized print plates",
  "units": "millimetres",
  "release3mf": {
-  "file": "Boom_Boom_v16_multicolor.3mf",
+  "file": "print_parts/Boom_Boom_v16_multicolor.3mf",
   "sha256": "d96b47ab0bf3872a7ce1a2e44dfc1b8f5519b0a638d7f584be5d15e73e82aca3"
  },
  "releaseZipSha256": "9cb67a112aec8beb0ae2f2ebb97b3d330d5f278c4f399e650814de510c3cba42",
  "downloads": [
   {
-   "file": "assets/boom-boom/files/Boom_Boom_v16_multicolor.3mf",
+   "file": "assets/boom/files/Boom_v16_multicolor.3mf",
    "release": "print_parts/Boom_Boom_v16_multicolor.3mf",
    "sha256": "d96b47ab0bf3872a7ce1a2e44dfc1b8f5519b0a638d7f584be5d15e73e82aca3",
    "bytes": 4536053
   },
   {
-   "file": "assets/boom-boom/files/Boom_Boom_plate_1_colors.3mf",
+   "file": "assets/boom/files/Boom_plate_1_colors.3mf",
    "release": "print_parts/Boom_Boom_plate_1_colors.3mf",
    "sha256": "ac3476917d9befeb6a8ccb9161f569083a1951399372894dbb66dd0076925f0f",
    "bytes": 1390428
   },
   {
-   "file": "assets/boom-boom/files/Boom_Boom_plate_2_colors.3mf",
+   "file": "assets/boom/files/Boom_plate_2_colors.3mf",
    "release": "print_parts/Boom_Boom_plate_2_colors.3mf",
    "sha256": "83b4b8a8e0c590b0eabc25292c22f4e1b28eaf8e3ca3c44717bd53d4e3f113ea",
    "bytes": 2525443
   },
   {
-   "file": "assets/boom-boom/files/Boom_Boom_plate_3_colors.3mf",
+   "file": "assets/boom/files/Boom_plate_3_colors.3mf",
    "release": "print_parts/Boom_Boom_plate_3_colors.3mf",
    "sha256": "c5a676800b19cd5cf3e21062ac30782a281e41fce71093fee79062f1723f9f5e",
    "bytes": 624975
   },
   {
-   "file": "assets/boom-boom/files/Boom_Boom_coupler_test.3mf",
+   "file": "assets/boom/files/Boom_coupler_test.3mf",
    "release": "print_parts/Boom_Boom_coupler_test.3mf",
    "sha256": "d208987a87130f3094de6c006866e680b998ef37bdd92f1f847f78cc9f27857f",
    "bytes": 341915
   },
   {
-   "file": "assets/boom-boom/files/Boom_Boom_fit_test.3mf",
+   "file": "assets/boom/files/Boom_fit_test.3mf",
    "release": "print_parts/fit_test/Boom_Boom_multicolor.3mf",
    "sha256": "c517a4c5c2db231a828445516c2766499c54687ec6b8c33028b1cca498a95088",
    "bytes": 126412

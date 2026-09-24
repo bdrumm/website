@@ -111,16 +111,16 @@ Configuration changes close the model before lifting, moving and lowering module
 
 `npm test` verifies source identity, all 80 motion frames, independent doors and roofs, reversible exploded inspection, stack alignment and the single-garage preview. `npm run build:garage` bundles the renderer.
 
-## Boom Boom print kit
+## Boom print kit
 
-`project.html?id=boom-boom` presents the v16 Boom Boom modular train kit from the 3D prints project: 28 printed objects (26 on the assembled train, plus the alternative twin horns and a coupling receiver), three print plates and seven filament colors. `src/boom-boom-project.js` builds the overview (interactive model, design details with studio renders, parts table, plates and print notes, downloads) and loads `boom-boom.css`, which uses the shared theme tokens.
+`project.html?id=boom` (first published as `?id=boom-boom`, which still opens it) presents the v16 Boom modular train kit from the 3D prints project: 28 printed objects (26 on the assembled train, plus the alternative twin horns and a coupling receiver), three print plates and seven filament colors. `src/boom-project.js` builds the overview (interactive model, design details with studio renders, parts table, plates and print notes, downloads) and loads `boom.css`, which uses the shared theme tokens.
 
-`assets/models/boom-boom.glb` is built from the kit's assembly-pose meshes (`print_parts/work/*_assembly_colorN.npz`), which share topology with the released 3MF objects; every web triangle matches a source triangle within 0.005 mm. It has one node per printed part in the kit palette, stored with `KHR_mesh_quantization`. The horns and receiver are omitted from the assembled model. Each node's `extras.explode` offset drives the shared viewer's new `explode` action (Explode / Assemble). The project page places the camera farther back than the site default so the exploded parts stay in frame through a full orbit on desktop and phone layouts.
+`assets/models/boom.glb` is built from the kit's assembly-pose meshes (`print_parts/work/*_assembly_colorN.npz`), which share topology with the released 3MF objects; every web triangle matches a source triangle within 0.005 mm. It has one node per printed part in the kit palette, stored with `KHR_mesh_quantization`. The horns and receiver are omitted from the assembled model. Each node's `extras.explode` offset drives the shared viewer's new `explode` action (Explode / Assemble). The project page places the camera farther back than the site default so the exploded parts stay in frame through a full orbit on desktop and phone layouts.
 
-The six 3MF downloads in `assets/boom-boom/files/` and the render JPEGs are copied from the verified `Boom_Boom_complete.zip`; the script checks each 3MF against the release's `delivery_manifest.json`. The working folder's later Bambu Studio re-save of the v16 project is not published. Hashes and the part list are recorded in `assets/models/boom-boom.provenance.json`. The source folder is only read. Printed fit, glue strength and clip life are untested; the page says so.
+The six 3MF downloads in `assets/boom/files/` and the render JPEGs are copied from the verified `Boom_Boom_complete.zip`; the script checks each 3MF against the release's `delivery_manifest.json`. The working folder's later Bambu Studio re-save of the v16 project is not published. Hashes and the part list are recorded in `assets/models/boom.provenance.json`. The source folder is only read. Printed fit, glue strength and clip life are untested; the page says so.
 
 ```sh
-python3 scripts/build-boom-boom.py /path/to/boom_boom /path/to/Boom_Boom_complete.zip   # numpy, trimesh, Pillow
+python3 scripts/build-boom.py /path/to/boom_boom /path/to/Boom_Boom_complete.zip   # numpy, trimesh, Pillow
 npm run build:viewer
 ```
 

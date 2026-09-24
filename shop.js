@@ -42,13 +42,13 @@ function catalogue(){
  }
  root.append(grid);
 }
-function detail(){const p=projects.find(p=>p.id===({arowana:'trout'}[new URLSearchParams(location.search).get('id')]||new URLSearchParams(location.search).get('id')));if(!p){empty('Project not found.','Choose a project from the project list.');root.append(link('All projects →','projects.html','secondary-button'));return;}
+function detail(){const p=projects.find(p=>p.id===({arowana:'trout','boom-boom':'boom'}[new URLSearchParams(location.search).get('id')]||new URLSearchParams(location.search).get('id')));if(!p){empty('Project not found.','Choose a project from the project list.');root.append(link('All projects →','projects.html','secondary-button'));return;}
  if(p.projectUrl){location.replace(p.projectUrl);return;}
  document.title=p.title+' — Parametric Space';document.getElementById('page-heading').textContent=p.title;document.getElementById('page-intro').textContent=p.summary||'';
  root.append(link('← All projects','projects.html','secondary-button category-back'));
  const content=el('div',undefined,'project-detail');const visual=image(p);
  if(p.id==='baguette-holder'){content.classList.add('baguette-detail');root.append(content);import('./src/baguette-project.js?v=8d89de09b0').then(({buildBaguetteProject})=>buildBaguetteProject(content,p)).catch(()=>content.append(link('Open the working baguette preview →','reviews/baguette-v3/','secondary-button')));return;}
- if(p.id==='boom-boom'){content.classList.add('has-model');root.append(content);import('./src/boom-boom-project.js?v=79aee07e89').then(({buildBoomBoomProject})=>buildBoomBoomProject(root,content,p)).catch(()=>content.append(el('p','The Boom Boom overview could not load. Please reload to try again.')));return;}
+ if(p.id==='boom'){content.classList.add('has-model');root.append(content);import('./src/boom-project.js?v=dfc51ae74a').then(({buildBoomProject})=>buildBoomProject(root,content,p)).catch(()=>content.append(el('p','The Boom overview could not load. Please reload to try again.')));return;}
  if(p.id==='station'){root.append(content);import('./src/station-project.js?v=3c3cae62b9').then(({buildStationProject})=>buildStationProject(root,content,p)).catch(()=>content.append(el('p','The Pebbl viewer is unavailable. Please reload to try again.')));return;}
  if(p.experience==='radar'){document.documentElement.classList.add('radar-project-page');import('./src/radar-project.js?v=csi-abstract-1').then(({buildRadarProject})=>buildRadarProject(content,p)).catch(()=>{content.textContent='The simulation could not load. Please reload the page.';});root.append(content);document.querySelector('meta[name="description"]')?.setAttribute('content',p.summary);return;}
  if(p.experience==='garage'){content.classList.add('has-model','garage-detail');buildGarageProject(content,p);root.append(content);document.querySelector('meta[name="description"]')?.setAttribute('content',p.summary);return;}

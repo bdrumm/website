@@ -1,4 +1,4 @@
-/* Boom Boom project overview. Loaded only by src/boom-boom-project.js; colors come from the shared theme tokens. */
+/* Boom project overview. Loaded only by src/boom-project.js; colors come from the shared theme tokens. */
 .boom-hero-copy h2,.boom-section-intro h2{font-size:clamp(28px,3.2vw,44px);letter-spacing:-.045em;line-height:1.1;margin:12px 0 14px;font-weight:650;text-transform:uppercase}
 .boom-hero-copy h2{margin-top:0}
 .boom-hero-copy p{color:var(--foreground)}
