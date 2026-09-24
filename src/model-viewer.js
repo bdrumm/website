@@ -25,10 +25,12 @@ export async function mountModelViewer(host,modelUrl,title="3D print",actionKind
  function button(text,fn){const b=document.createElement('button');b.type='button';b.textContent=text;b.addEventListener('click',fn);toolbar.append(b);return b;}
  const pause=button(controls.autoRotate?'Pause rotation':'Start rotation',()=>{if(actionKind==='station'){const enabled=stationExperience?.toggleMotion();pause.textContent=enabled?'Pause preview':'Resume preview';pause.setAttribute('aria-pressed',String(!!enabled));return;}controls.autoRotate=!controls.autoRotate;pause.textContent=controls.autoRotate?'Pause rotation':'Start rotation';pause.setAttribute('aria-pressed',String(controls.autoRotate));});pause.setAttribute('aria-pressed',String(controls.autoRotate));
  let actionActive=actionKind==='swim'&&!reducedMotion,modelAction,experience,stationExperience,stationEnvironment,loaded=false,carrying=false;
- const actionButton=actionKind&&actionKind!=='station'?button(actionKind==='open'?'Open':(actionActive?'Stop swimming':'Swim'),()=>{
+ // [idle label, active label, status when starting, status when returning]
+ const actionText={open:['Open','Close','Opening the hinged lid.','Closing the hinged lid.'],explode:['Explode','Assemble','Separating the printed parts · Drag to explore','Reassembling the parts.']}[actionKind]||['Swim','Stop swimming','Swimming · Drag to explore','Returning to rest.'];
+ const actionButton=actionKind&&actionKind!=='station'?button(actionActive?actionText[1]:actionText[0],()=>{
   if(carrying){carrying=false;experience.setCarry(false);carryButton.textContent='Shoulder carry';carryButton.setAttribute('aria-pressed','false');}actionActive=!actionActive;controls.autoRotate=false;pause.textContent='Start rotation';pause.setAttribute('aria-pressed','false');
-  actionButton.textContent=actionKind==='open'?(actionActive?'Close':'Open'):(actionActive?'Stop swimming':'Swim');actionButton.setAttribute('aria-pressed',String(actionActive));
-  status.textContent=actionKind==='open'?(actionActive?'Opening the hinged lid.':'Closing the hinged lid.'):(actionActive?'Swimming · Drag to explore':'Returning to rest.');
+  actionButton.textContent=actionActive?actionText[1]:actionText[0];actionButton.setAttribute('aria-pressed',String(actionActive));
+  status.textContent=actionActive?actionText[2]:actionText[3];
  }):null;
  if(actionButton){actionButton.disabled=true;actionButton.setAttribute('aria-pressed',String(actionActive));}
  function stopOrbit(){controls.autoRotate=false;if(actionKind!=='station'){pause.textContent='Start rotation';pause.setAttribute('aria-pressed','false');}}

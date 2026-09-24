@@ -33,7 +33,7 @@ function catalogue(){
    const isGarage=p.experience==='garage';
    const modelUrl=p.previewModelUrl||p.modelUrl;
    const options=isGarage?{cameraPosition:[8,5,12]}:{};
-   import('./assets/model-viewer.js?v=deaf2b08b1')
+   import('./assets/model-viewer.js?v=2cc094c4d2')
     .then(({mountModelViewer})=>mountModelViewer(preview,modelUrl,p.title,isGarage?'':p.action,options))
     .catch(()=>preview.append(el('p','Open the project to explore the model.')));
   }else{const visual=image(p);if(visual)card.append(visual);}
@@ -48,13 +48,14 @@ function detail(){const p=projects.find(p=>p.id===({arowana:'trout'}[new URLSear
  root.append(link('← All projects','projects.html','secondary-button category-back'));
  const content=el('div',undefined,'project-detail');const visual=image(p);
  if(p.id==='baguette-holder'){content.classList.add('baguette-detail');root.append(content);import('./src/baguette-project.js?v=8d89de09b0').then(({buildBaguetteProject})=>buildBaguetteProject(content,p)).catch(()=>content.append(link('Open the working baguette preview →','reviews/baguette-v3/','secondary-button')));return;}
+ if(p.id==='boom-boom'){content.classList.add('has-model');root.append(content);import('./src/boom-boom-project.js?v=79aee07e89').then(({buildBoomBoomProject})=>buildBoomBoomProject(root,content,p)).catch(()=>content.append(el('p','The Boom Boom overview could not load. Please reload to try again.')));return;}
  if(p.id==='station'){root.append(content);import('./src/station-project.js?v=3c3cae62b9').then(({buildStationProject})=>buildStationProject(root,content,p)).catch(()=>content.append(el('p','The Pebbl viewer is unavailable. Please reload to try again.')));return;}
  if(p.experience==='radar'){document.documentElement.classList.add('radar-project-page');import('./src/radar-project.js?v=csi-abstract-1').then(({buildRadarProject})=>buildRadarProject(content,p)).catch(()=>{content.textContent='The simulation could not load. Please reload the page.';});root.append(content);document.querySelector('meta[name="description"]')?.setAttribute('content',p.summary);return;}
  if(p.experience==='garage'){content.classList.add('has-model','garage-detail');buildGarageProject(content,p);root.append(content);document.querySelector('meta[name="description"]')?.setAttribute('content',p.summary);return;}
  if(p.modelUrl){
   content.classList.add('has-model');
   const viewer=el('section',undefined,'model-viewer');viewer.setAttribute('aria-label',p.title+' interactive 3D print model');viewer.append(el('span',p.category||'3D PRINT','section-number'));if(p.id==='station')buildStationStory(content,viewer);else content.append(viewer);
-  import('./assets/model-viewer.js?v=deaf2b08b1').then(({mountModelViewer})=>mountModelViewer(viewer,p.modelUrl,p.title,p.action)).catch(()=>viewer.append(el('p','The 3D viewer is unavailable. Try reloading, or download the model below.')));
+  import('./assets/model-viewer.js?v=2cc094c4d2').then(({mountModelViewer})=>mountModelViewer(viewer,p.modelUrl,p.title,p.action)).catch(()=>viewer.append(el('p','The 3D viewer is unavailable. Try reloading, or download the model below.')));
  }else if(visual)content.append(visual);
  const info=el('div');for(const paragraph of p.description||[])info.append(el('p',paragraph));
  if(p.available){info.append(el('p',money(p.unitAmount,p.currency),'project-price'));const button=el('button','Add to cart →','send-button');button.type='button';button.addEventListener('click',()=>add(p));info.append(button,link('View cart','cart.html','secondary-button'));}else info.append(el('p','Not currently available to purchase.','muted'));

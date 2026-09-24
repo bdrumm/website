@@ -44,6 +44,21 @@ window.PARAMETRIC_SHOP = {
     imageAlt: 'The latest garage with its roof half open and rolling door raised, rendered from the September 11 Blender model.',
     available: false
   }, {
+    id: 'boom-boom',
+    action: 'explode',
+    title: 'Boom Boom',
+    section: '3d',
+    category: 'PRINT STUDY / 004',
+    summary: 'Twenty-eight printed parts. Four rolling wheelsets. One cheerful face.',
+    description: [
+      'A modular, multicolor print kit of the cheerful passenger train. The orange coach, cream roof, keyed face and seventeen recessed windows print in seven colors. The base, trucks and tank module screw on from below, and four glued wheelsets clip in and roll.',
+      'Explode the model to see how the pieces go together. It is shown in the kit’s filament palette, built from the released v16 print geometry.'
+    ],
+    modelUrl: 'assets/models/boom-boom.glb?v=16929defd0',
+    image: 'assets/boom-boom/assembled-light.jpg',
+    imageAlt: 'Studio render of the assembled Boom Boom train: orange coach, cream roof, black roof vents and a smiling face.',
+    available: false
+  }, {
     id: 'station',
     title: 'Pebbl',
     section: 'hardware',

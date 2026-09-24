@@ -16,5 +16,11 @@ export function installAction(model,kind){
   const patched=new Set();model.traverse(mesh=>{if(!mesh.isMesh)return;mesh.frustumCulled=false;for(const mat of Array.isArray(mesh.material)?mesh.material:[mesh.material]){if(patched.has(mat))continue;patched.add(mat);mat.onBeforeCompile=shader=>{shader.uniforms.swimTime=time;shader.uniforms.swimStrength=strength;shader.vertexShader=declarations+'\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <beginnormal_vertex>','#include <beginnormal_vertex>\nobjectNormal.x -= swimSlope(position.x)*objectNormal.z;').replace('#include <begin_vertex>','#include <begin_vertex>\ntransformed.z += swimOffset(position.x);');};mat.customProgramCacheKey=()=> 'fish-swim-v2';mat.needsUpdate=true;}});
   return {update(dt,active){time.value+=dt;strength.value=THREE.MathUtils.damp(strength.value,active?1:0,4,dt);}};
  }
+ if(kind==='explode'){
+  // Parts carry their separation as glTF node extras: {"explode":[x,y,z]} in the parent's units.
+  const parts=[];model.traverse(o=>{const offset=o.userData.explode;if(Array.isArray(offset))parts.push({object:o,rest:o.position.clone(),offset:new THREE.Vector3().fromArray(offset)});});
+  if(!parts.length)throw Error('Missing exploded offsets');let progress=0;
+  return {update(dt,active,reduced){const target=active?1:0;progress=reduced?target:THREE.MathUtils.damp(progress,target,3.5,dt);if(Math.abs(target-progress)<.001)progress=target;for(const part of parts)part.object.position.copy(part.rest).addScaledVector(part.offset,progress);}};
+ }
  return {update(){}};
 }

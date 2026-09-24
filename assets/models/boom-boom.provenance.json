@@ -1,0 +1,330 @@
+{
+ "model": "assets/models/boom-boom.glb",
+ "revision": "v16 shorter drawbar and three categorized print plates",
+ "units": "millimetres",
+ "release3mf": {
+  "file": "Boom_Boom_v16_multicolor.3mf",
+  "sha256": "d96b47ab0bf3872a7ce1a2e44dfc1b8f5519b0a638d7f584be5d15e73e82aca3"
+ },
+ "releaseZipSha256": "9cb67a112aec8beb0ae2f2ebb97b3d330d5f278c4f399e650814de510c3cba42",
+ "downloads": [
+  {
+   "file": "assets/boom-boom/files/Boom_Boom_v16_multicolor.3mf",
+   "release": "print_parts/Boom_Boom_v16_multicolor.3mf",
+   "sha256": "d96b47ab0bf3872a7ce1a2e44dfc1b8f5519b0a638d7f584be5d15e73e82aca3",
+   "bytes": 4536053
+  },
+  {
+   "file": "assets/boom-boom/files/Boom_Boom_plate_1_colors.3mf",
+   "release": "print_parts/Boom_Boom_plate_1_colors.3mf",
+   "sha256": "ac3476917d9befeb6a8ccb9161f569083a1951399372894dbb66dd0076925f0f",
+   "bytes": 1390428
+  },
+  {
+   "file": "assets/boom-boom/files/Boom_Boom_plate_2_colors.3mf",
+   "release": "print_parts/Boom_Boom_plate_2_colors.3mf",
+   "sha256": "83b4b8a8e0c590b0eabc25292c22f4e1b28eaf8e3ca3c44717bd53d4e3f113ea",
+   "bytes": 2525443
+  },
+  {
+   "file": "assets/boom-boom/files/Boom_Boom_plate_3_colors.3mf",
+   "release": "print_parts/Boom_Boom_plate_3_colors.3mf",
+   "sha256": "c5a676800b19cd5cf3e21062ac30782a281e41fce71093fee79062f1723f9f5e",
+   "bytes": 624975
+  },
+  {
+   "file": "assets/boom-boom/files/Boom_Boom_coupler_test.3mf",
+   "release": "print_parts/Boom_Boom_coupler_test.3mf",
+   "sha256": "d208987a87130f3094de6c006866e680b998ef37bdd92f1f847f78cc9f27857f",
+   "bytes": 341915
+  },
+  {
+   "file": "assets/boom-boom/files/Boom_Boom_fit_test.3mf",
+   "release": "print_parts/fit_test/Boom_Boom_multicolor.3mf",
+   "sha256": "c517a4c5c2db231a828445516c2766499c54687ec6b8c33028b1cca498a95088",
+   "bytes": 126412
+  }
+ ],
+ "triangles": 326644,
+ "parts": [
+  {
+   "part": "01_Train_body",
+   "name": "Train body",
+   "colors": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "part": "28_Roof_vents",
+   "name": "Roof vents",
+   "colors": [
+    3,
+    4
+   ]
+  },
+  {
+   "part": "14_Light_module",
+   "name": "Roof light",
+   "colors": [
+    1,
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "part": "20_Left_eye",
+   "name": "Left eye",
+   "colors": [
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "part": "21_Right_eye",
+   "name": "Right eye",
+   "colors": [
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "part": "22_Smile",
+   "name": "Smile",
+   "colors": [
+    4
+   ]
+  },
+  {
+   "part": "23_Amber_front_light",
+   "name": "Amber front light",
+   "colors": [
+    6
+   ]
+  },
+  {
+   "part": "24_Left_grab_handle",
+   "name": "Left grab handle",
+   "colors": [
+    4
+   ]
+  },
+  {
+   "part": "25_Right_grab_handle",
+   "name": "Right grab handle",
+   "colors": [
+    4
+   ]
+  },
+  {
+   "part": "19_Lower_base",
+   "name": "Lower base",
+   "colors": [
+    3,
+    4
+   ]
+  },
+  {
+   "part": "26_Rear_clip",
+   "name": "Rear coupling",
+   "colors": [
+    3
+   ]
+  },
+  {
+   "part": "16_Front_truck",
+   "name": "Front truck",
+   "colors": [
+    3,
+    4
+   ]
+  },
+  {
+   "part": "18_Tank_electronics",
+   "name": "Tank and electronics",
+   "colors": [
+    3,
+    4
+   ]
+  },
+  {
+   "part": "17_Rear_truck",
+   "name": "Rear truck",
+   "colors": [
+    3,
+    4
+   ]
+  },
+  {
+   "part": "02_Axle_1",
+   "name": "Axle 1",
+   "colors": [
+    3
+   ]
+  },
+  {
+   "part": "03_Wheel_1_L",
+   "name": "Wheel 1 left",
+   "colors": [
+    3
+   ]
+  },
+  {
+   "part": "04_Wheel_1_R",
+   "name": "Wheel 1 right",
+   "colors": [
+    3
+   ]
+  },
+  {
+   "part": "05_Axle_2",
+   "name": "Axle 2",
+   "colors": [
+    3
+   ]
+  },
+  {
+   "part": "06_Wheel_2_L",
+   "name": "Wheel 2 left",
+   "colors": [
+    3
+   ]
+  },
+  {
+   "part": "07_Wheel_2_R",
+   "name": "Wheel 2 right",
+   "colors": [
+    3
+   ]
+  },
+  {
+   "part": "08_Axle_3",
+   "name": "Axle 3",
+   "colors": [
+    3
+   ]
+  },
+  {
+   "part": "09_Wheel_3_L",
+   "name": "Wheel 3 left",
+   "colors": [
+    3
+   ]
+  },
+  {
+   "part": "10_Wheel_3_R",
+   "name": "Wheel 3 right",
+   "colors": [
+    3
+   ]
+  },
+  {
+   "part": "11_Axle_4",
+   "name": "Axle 4",
+   "colors": [
+    3
+   ]
+  },
+  {
+   "part": "12_Wheel_4_L",
+   "name": "Wheel 4 left",
+   "colors": [
+    3
+   ]
+  },
+  {
+   "part": "13_Wheel_4_R",
+   "name": "Wheel 4 right",
+   "colors": [
+    3
+   ]
+  }
+ ],
+ "omitted": [
+  "15_Twin_horn_module (alternative roof accessory)",
+  "27_Mating_receiver (separate coupling test module)"
+ ],
+ "sourceMeshes": {
+  "01_Train_body_assembly_color0.npz": "dc11b0b005baab79595c33fee67e8dd3c80df3888ff707356172b94fb0e65df4",
+  "01_Train_body_assembly_color1.npz": "47eeffaa46d8ec0d074f4572c4f1894d8492b52fda7a77e6eb5e5df7c387acce",
+  "01_Train_body_assembly_color2.npz": "fdda93ab32f530c946507538a64044cbff977e88c5c7fafe63e47c0d128bc2a5",
+  "01_Train_body_assembly_color3.npz": "9cfb64e833f7c8bc1c3b85fa20e16905c0a745acd33d1683162ee93114efdb0d",
+  "01_Train_body_assembly_color4.npz": "9e34ede46a8bc760e66339dd293a94a0baae5e50d465ea34f9c490004a8900f8",
+  "01_Train_body_assembly_color5.npz": "43f64d32c69e735a210a0589588e6f6667adc0b181d2b085bdee2e708466b6ba",
+  "02_Axle_1_assembly_color3.npz": "0713db38eb640d6c38f8ef0e092ed178f01145c972b71e99aebc88ae73235b23",
+  "03_Wheel_1_L_assembly_color3.npz": "d23cda0681f2125721ffe0174333e1a9d56e92c919d26863ab77b6f1ab5bbc61",
+  "04_Wheel_1_R_assembly_color3.npz": "2ec933f811fa12f9345c6abfe56bf448772200f3ab008f37e636aed3a7ac1e26",
+  "05_Axle_2_assembly_color3.npz": "57f2caf5f18e65657effccbf0671316f7864d6c37f358051ec97263bbd3b753e",
+  "06_Wheel_2_L_assembly_color3.npz": "087e9b65ec4b5ea274e0356058c86b9ec75330e2a9b597e793bd76f5ca152e4e",
+  "07_Wheel_2_R_assembly_color3.npz": "ec2212d0bcbebcf80098774dafb838fe367ee60e4b291a93049519195d5ebd80",
+  "08_Axle_3_assembly_color3.npz": "56b16fd9f248b1e0c5b5853057fd4cfba56dc56a23b8f341036b1fbfe07b4e7f",
+  "09_Wheel_3_L_assembly_color3.npz": "36f1bdde4336e77cbb916d935372e43ef1f11ba92d5b0b3d796e52ff4ad4be1d",
+  "10_Wheel_3_R_assembly_color3.npz": "ccd32894792dcdea721b38f8bb1b504a8bcbb162771057ca01458f5f2c81fef0",
+  "11_Axle_4_assembly_color3.npz": "c6b0a2059f114a8ad11703ff52657952ef5700596088dcc27ed07fb8c01fa33a",
+  "12_Wheel_4_L_assembly_color3.npz": "f7811ddae707dd028bdacb87e4b403dc04e2e3292625f7b5a872b21095c5197e",
+  "13_Wheel_4_R_assembly_color3.npz": "8f070934c2a433291567ecf340587b4420adc95c8fed1d129ac2f0fc660bdf2f",
+  "14_Light_module_assembly_color1.npz": "315c9fa0a0360333b47f01a9da92f7c78a92671c8a19ada4c03f68424fe4cfd0",
+  "14_Light_module_assembly_color3.npz": "b001b4b35ee637dbb9883e210181b20b04e06be62c5672849eafd01db72151ce",
+  "14_Light_module_assembly_color4.npz": "e461400f701c4712ac49082a98a0b086cff3f76b974071eaa0982c37846d74a4",
+  "14_Light_module_assembly_color5.npz": "310b7276c8d1b49bce6ca586e44ff728de4ef9f1e3525ccbee34007131031c31",
+  "16_Front_truck_assembly_color3.npz": "1d9a99b7c4ea1f01a2c9f33d1a2a404f871a42867d5e1aafa5daae8de9d506d1",
+  "16_Front_truck_assembly_color4.npz": "8ae329cf8d778609b6b3a81d0f91eb290d1f94a7548120001d4cd239ad03170e",
+  "17_Rear_truck_assembly_color3.npz": "0bce226e19cad588b727af71536044f88082f7bb6684687f32ab21625d8eaa52",
+  "17_Rear_truck_assembly_color4.npz": "97b45fdf5a9ea81b9efaa396da0660639976e23729534c2cdaeb6009972b093c",
+  "18_Tank_electronics_assembly_color3.npz": "c90758281420841257cb5e1716e4aa1daeb146bde32a61e75cf9f5006804a41d",
+  "18_Tank_electronics_assembly_color4.npz": "58856cc7093c9271ff9c87ce1328cac55a31a8f5d20394ff13aa5c1c64f406a9",
+  "19_Lower_base_assembly_color3.npz": "687bd55b21fd74d09c9a6e6b243bd73a337fe46183852dfd16cc32d19f0b0bd6",
+  "19_Lower_base_assembly_color4.npz": "7e0bdc83d8da8b993f76062db5a1fc3ed8bd50637bf0092eae1908a0625df7a9",
+  "20_Left_eye_assembly_color3.npz": "002c4be7f2ba8ef95974249c93f54ad3d32ae5a5c7ca6cad302e6e6a5c008e84",
+  "20_Left_eye_assembly_color4.npz": "83e384c878bedfaaf2af673225a1e63dbe5a1a2be3327e160d8adb84909e811c",
+  "20_Left_eye_assembly_color5.npz": "32818362645bfda7dc12e3cbf5acf380f36b30beabc50d2ae77386ac5e7ba81d",
+  "21_Right_eye_assembly_color3.npz": "956eb0e9bc4e926338f046067073c4b5d8280c03d53dff803d29e02052dcc75c",
+  "21_Right_eye_assembly_color4.npz": "39e8e8c9abec947d713b90d234c334a62cdfe4997db9f07a12af30f5b8e4c361",
+  "21_Right_eye_assembly_color5.npz": "e8723c3ee4985a75251b0ccb0f38256cd3ad2f9b31eac66dcf48be65664711b4",
+  "22_Smile_assembly_color4.npz": "5e4d6f03301a93c08dfa4a990b8ffbcdbfe7806500e21f4024b29cb59e6059ca",
+  "23_Amber_front_light_assembly_color6.npz": "6223fd2151fb21eaf3f5263c7fa5517f3815c7bc327f39e476fda72cea6ae933",
+  "24_Left_grab_handle_assembly_color4.npz": "8cc675c7f1a166e9e5add911b14ecc5a1c385b93bdd15b3283e872f592cb4d13",
+  "25_Right_grab_handle_assembly_color4.npz": "59154eb486948a8565603278fd60044cde20ae3d4e4df9c5baf7b9ce10cebf38",
+  "26_Rear_clip_assembly_color3.npz": "7def64318ffc1857b1041d7f46bb0d563b10278c101fca0e3588a8eb5a818c97",
+  "28_Roof_vents_assembly_color3.npz": "2be137f6ce121c1a054112100c3c4ab8e24972ee77cdacd90d4b98d553662fba",
+  "28_Roof_vents_assembly_color4.npz": "1cb298f81d0bed86582d6d914b743c18e89e657c341fb88b6b7262586e27ce22"
+ },
+ "palette": [
+  {
+   "name": "Vermilion orange",
+   "color": "#E45526"
+  },
+  {
+   "name": "Warm ivory roof",
+   "color": "#E6DFCB"
+  },
+  {
+   "name": "Slate glass",
+   "color": "#858991"
+  },
+  {
+   "name": "Charcoal chassis and pupils",
+   "color": "#23282A"
+  },
+  {
+   "name": "Satin gray trim",
+   "color": "#91958A"
+  },
+  {
+   "name": "Ivory eyes and lamp",
+   "color": "#FFFDF1"
+  },
+  {
+   "name": "Amber nose",
+   "color": "#EFB43D"
+  }
+ ],
+ "note": "Visualization of the released print geometry. Colors are the kit filament palette; materials are display styling."
+}
