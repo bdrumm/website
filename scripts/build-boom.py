@@ -8,14 +8,13 @@ Reads the assembly-pose meshes written by the kit's build_print_model.py
   assets/models/boom.glb                    assembled train, one node per printed part
   assets/models/boom.provenance.json        source hashes and part list
   assets/boom/*.jpg                         web copies of the kit's studio renders
-  assets/boom/files/*.3mf                   released print files, hash-checked against delivery_manifest.json
 
 Each part node carries extras.explode, a millimetre offset used by the
 viewer's Explode action. Vertices are stored with KHR_mesh_quantization
 (int16 positions, about 0.003 mm steps; int8 normals), which three.js
 loads natively. The alternative twin horns and the separate
 receiver test module are not part of the assembled train and are omitted.
-The source folder is only read.
+Print files are not published. The source folder is only read.
 
 Usage (Python with numpy, trimesh and Pillow):
   python3 scripts/build-boom.py /path/to/boom_boom /path/to/Boom_Boom_complete.zip
@@ -36,7 +35,6 @@ SITE = Path(__file__).resolve().parent.parent
 GLB = SITE / 'assets/models/boom.glb'
 PROVENANCE = SITE / 'assets/models/boom.provenance.json'
 IMAGES = SITE / 'assets/boom'
-FILES = IMAGES / 'files'
 
 # Filament palette from print_parts/manifest.json, in color-index order.
 PALETTE = [
@@ -84,17 +82,6 @@ RENDERS = {
     'roof_vent_detail': 'roof-vents', 'rear_door_detail': 'rear-door', 'coupler_grasp': 'coupler-grasp',
     'coupler_test': 'coupler-test', 'connector_mount_detail': 'connector-mount',
 }
-
-# Released print files (path in the release archive -> published name).
-DOWNLOADS = {
-    'print_parts/Boom_Boom_v16_multicolor.3mf': 'Boom_v16_multicolor.3mf',
-    'print_parts/Boom_Boom_plate_1_colors.3mf': 'Boom_plate_1_colors.3mf',
-    'print_parts/Boom_Boom_plate_2_colors.3mf': 'Boom_plate_2_colors.3mf',
-    'print_parts/Boom_Boom_plate_3_colors.3mf': 'Boom_plate_3_colors.3mf',
-    'print_parts/Boom_Boom_coupler_test.3mf': 'Boom_coupler_test.3mf',
-    'print_parts/fit_test/Boom_Boom_multicolor.3mf': 'Boom_fit_test.3mf',
-}
-
 
 def linear(hex_color):
     rgb = [int(hex_color[i:i + 2], 16) / 255 for i in (1, 3, 5)]
@@ -226,31 +213,16 @@ def build_images(release):
         image.save(IMAGES / f'{slug}.jpg', 'JPEG', quality=84, optimize=True, progressive=True)
 
 
-def copy_downloads(release, manifest):
-    expected = {f['path']: f['sha256'] for f in manifest['files']}
-    FILES.mkdir(parents=True, exist_ok=True)
-    published = []
-    for member, name in DOWNLOADS.items():
-        data = release.read(f'boom_boom/{member}')
-        digest = hashlib.sha256(data).hexdigest()
-        if digest != expected[member]:
-            raise SystemExit(f'{member} does not match delivery_manifest.json')
-        (FILES / name).write_bytes(data)
-        published.append({'file': f'assets/boom/files/{name}', 'release': member, 'sha256': digest, 'bytes': len(data)})
-    return published
-
-
 def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('source', type=Path, help='boom_boom project folder (read only)')
-    parser.add_argument('release_zip', type=Path, help='verified Boom_Boom_complete.zip (renders and print files are read from it)')
+    parser.add_argument('release_zip', type=Path, help='verified Boom_Boom_complete.zip (renders and the release manifest are read from it)')
     args = parser.parse_args()
     release = zipfile.ZipFile(args.release_zip)
     manifest = json.loads(release.read('boom_boom/delivery_manifest.json'))
     release_sha = next(f['sha256'] for f in manifest['files'] if f['path'] == 'print_parts/Boom_Boom_v16_multicolor.3mf')
     parts, triangles = build_glb(args.source, release_sha)
     build_images(release)
-    downloads = copy_downloads(release, manifest)
     sources = sorted((args.source / 'print_parts/work').glob('*_assembly_color*.npz'))
     PROVENANCE.write_text(json.dumps({
         'model': 'assets/models/boom.glb',
@@ -258,7 +230,6 @@ def main():
         'units': 'millimetres',
         'release3mf': {'file': 'print_parts/Boom_Boom_v16_multicolor.3mf', 'sha256': release_sha},
         'releaseZipSha256': sha256(args.release_zip),
-        'downloads': downloads,
         'triangles': triangles,
         'parts': parts,
         'omitted': ['15_Twin_horn_module (alternative roof accessory)', '27_Mating_receiver (separate coupling test module)'],

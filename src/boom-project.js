@@ -1,4 +1,4 @@
-// Boom project overview: interactive kit model, design details, parts, plates and print files.
+// Boom project overview: interactive kit model, design details, parts, plates and print notes.
 const asset=path=>new URL('../assets/boom/'+path,import.meta.url).href;
 const make=(tag,className,text)=>{const node=document.createElement(tag);if(className)node.className=className;if(text)node.textContent=text;return node;};
 const link=(text,href,className)=>{const a=make('a',className,text);a.href=href;return a;};
@@ -36,9 +36,7 @@ const kit=[['Orange body with integral cream roof','1','Pegs locate the base and
 
 const plates=[['Plate 1','Body and top','The orange body with its integral cream roof, and the separate black roof vents.','2 objects'],['Plate 2','Bottom and wheels','The lower base, both trucks, the tank module, four axles, eight wheels, the rear coupling and its receiver.','18 objects'],['Plate 3','Decorations','Both eyes, the smile, the amber front light, two grab handles, the roof light and the alternative horns.','8 objects']];
 
-const notes=['Start with a 0.4\u00a0mm nozzle and 0.16\u00a0mm layers. Use at least three walls for the body, and five walls with solid infill for the axles, wheels and coupling.','The base, trucks and tank module print upside down with their clips facing up. Support the body’s underside recess, the axle journals and the receiver’s raised beams.','Keep support out of the bearing slots, locating sockets, screw pilots and clip release gaps.','Print the coupling test and fit coupons first to check the screw pilots, bearing catch and latch in your filament.','Don’t scale the files. Clearances are modeled at full size.','Hardware: six M3×10 and twelve M3×16 screws for the underframe, plus two M3×10 for the coupling clip and two M3×12 for the receiver test block. Use screws made for plastic, or tap the 2.5\u00a0mm pilots.'];
-
-const files=[['Boom_v16_multicolor.3mf','Bambu Studio project','All three plates with the seven-color palette assigned.','4.5\u00a0MB'],['Boom_plate_1_colors.3mf','Plate 1 · Body and top','Profile-free color job for other slicers.','1.4\u00a0MB'],['Boom_plate_2_colors.3mf','Plate 2 · Bottom and wheels','Profile-free color job for other slicers.','2.5\u00a0MB'],['Boom_plate_3_colors.3mf','Plate 3 · Decorations','Profile-free color job for other slicers.','0.6\u00a0MB'],['Boom_coupler_test.3mf','Coupling test','Clip, receiver and two mounting blocks.','0.3\u00a0MB'],['Boom_fit_test.3mf','Fit coupons','Bearing, axle, hub, socket and peg test pieces.','0.1\u00a0MB']];
+const notes=['Start with a 0.4\u00a0mm nozzle and 0.16\u00a0mm layers. Use at least three walls for the body, and five walls with solid infill for the axles, wheels and coupling.','The base, trucks and tank module print upside down with their clips facing up. Support the body’s underside recess, the axle journals and the receiver’s raised beams.','Keep support out of the bearing slots, locating sockets, screw pilots and clip release gaps.','Print the coupling test and fit coupons first to check the screw pilots, bearing catch and latch in your filament.','Print at full size. Clearances are modeled at 100% scale.','Hardware: six M3×10 and twelve M3×16 screws for the underframe, plus two M3×10 for the coupling clip and two M3×12 for the receiver test block. Use screws made for plastic, or tap the 2.5\u00a0mm pilots.'];
 
 // A little farther back than the site default, so the exploded parts stay in frame on every stage shape.
 function buildHero(content,project){
@@ -48,8 +46,7 @@ function buildHero(content,project){
  for(const paragraph of project.description||[])info.append(make('p','',paragraph));
  const swatches=make('ul','boom-palette');swatches.setAttribute('aria-label','The seven filament colors');
  for(const [name,color] of palette){const item=make('li');const chip=make('span','boom-swatch');chip.style.setProperty('--swatch',color);chip.setAttribute('aria-hidden','true');item.append(chip,make('span','',name));swatches.append(item);}
- const download=link('Download print project · 3MF ↗',asset('files/'+files[0][0]),'secondary-button');download.setAttribute('download','');
- info.append(swatches,download,link('All print files ↓','#boom-files','secondary-button'),link('Enquire about this project →','mailto:info@parametric.space?subject='+encodeURIComponent(project.title+' enquiry'),'secondary-button'),make('p','muted','Not currently available to purchase.'));
+ info.append(swatches,link('Enquire about this project →','mailto:info@parametric.space?subject='+encodeURIComponent(project.title+' enquiry'),'secondary-button'),make('p','muted','Not currently available to purchase.'));
  content.append(info);
 }
 
@@ -99,22 +96,13 @@ function buildPrinting(){
  const heading=intro('PRINTING','Three plates, ready to slice.','Every part is already in its print orientation, with at least 3\u00a0mm between parts on a 256\u00a0mm bed.');heading.querySelector('h2').id='boom-plates-title';
  const grid=make('div','boom-plates');for(const [number,title,copy,count] of plates){const card=make('article');card.append(make('span','section-number',number),make('h3','',title),make('p','',copy),make('strong','',count));grid.append(card);}
  const tips=make('div','boom-notes');tips.append(make('h3','','Before you print'));const list=make('ul');for(const note of notes)list.append(make('li','',note));tips.append(list);
- section.append(heading,grid,tips);return section;
-}
-
-function buildFiles(project){
- const section=make('section','boom-files');section.id='boom-files';section.setAttribute('aria-labelledby','boom-files-title');
- const heading=intro('PRINT FILES','Make it yours.','Select your own printer, process and filament presets before slicing. The Bambu project needs its flushing volumes recalculated for your filaments.');heading.querySelector('h2').id='boom-files-title';
- const list=make('ul','boom-downloads');
- for(const [file,title,copy,size] of files){const item=make('li');const a=link(title,asset('files/'+file));a.setAttribute('download','');item.append(a,make('span','',copy),make('small','',file+' · '+size));list.append(item);}
- const model=make('li');const glb=link('Display model',project.modelUrl);glb.setAttribute('download','boom.glb');model.append(glb,make('span','','The assembled train in the kit palette, for viewing.'),make('small','','boom.glb · 5.1\u00a0MB'));list.append(model);
- const note=make('p','boom-note','An independent fan reconstruction of Boom-Boom from Titipo Titipo, with original manufacturing geometry. The character belongs to its rights holders. Fits, clearances and the coupling are checked digitally; printed fit, glue strength and clip life are not yet tested.');
- section.append(heading,list,note);return section;
+ const credit=make('p','boom-note','An independent fan reconstruction of Boom-Boom from Titipo Titipo, with original manufacturing geometry. The character belongs to its rights holders. Fits, clearances and the coupling are checked digitally; printed fit, glue strength and clip life are not yet tested.');
+ section.append(heading,grid,tips,credit);return section;
 }
 
 export function buildBoomProject(root,content,project){
- const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href=new URL('../boom.css?v=a23d27ac47',import.meta.url).href;document.head.append(sheet);
+ const sheet=document.createElement('link');sheet.rel='stylesheet';sheet.href=new URL('../boom.css?v=705a3346ae',import.meta.url).href;document.head.append(sheet);
  document.querySelector('meta[name="description"]')?.setAttribute('content',project.summary);
  buildHero(content,project);
- root.append(buildGlance(),buildFeatures(),buildKit(),buildPrinting(),buildFiles(project));
+ root.append(buildGlance(),buildFeatures(),buildKit(),buildPrinting());
 }
